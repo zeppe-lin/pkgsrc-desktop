@@ -1,0 +1,17 @@
+# Description: Trinity icon theme
+# URL:         https://github.com/zeppe-lin/trinity-icon-theme
+# Depends on:  librsvg-compat hicolor-icon-theme
+
+name=trinity-icon-theme
+version=0.1-82062a5
+release=1
+source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
+
+build() {
+	mkdir -p $PKG/usr/share/icons
+	cp -Pr $name-${version#*-}* $PKG/usr/share/icons/trinity
+
+	# remove junk
+	cd $PKG/usr/share/icons/trinity
+	rm LICENSE.* README.md preview.png
+}

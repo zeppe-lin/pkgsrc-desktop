@@ -1,0 +1,28 @@
+# Description: Flexible frontend for optical disc authoring
+# URL:         http://www.xcdroast.org/
+# Depends on:  alsa-lib cdrtools gtk
+
+name=xcdroast
+version=1.19
+release=2
+source="https://downloads.sourceforge.net/project/$name/$name-$version.tar.gz
+	change_font_defs.patch"
+
+build() {
+	# use Iosevka font instead of Terminus
+	sed -e 's/xos4 Terminus 9/Iosevka Term 10/g'           \
+	    -e 's/xos4 Terminus Bold 9/Iosevka Term Bold 10/g' \
+	    -i $SRC/change_font_defs.patch
+
+	patch -p6 -d $name-$version -i $SRC/change_font_defs.patch
+
+	mkdir build; cd build
+
+	../$name-$version/configure  \
+		--prefix=/usr        \
+		--sysconfdir=/etc    \
+		--disable-nls        \
+
+	make V=1
+	make DESTDIR=$PKG install
+}

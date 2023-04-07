@@ -1,0 +1,17 @@
+# Description: Trinitize look and feel of various applications
+# URL:         https://github.com/zeppe-lin/trinity-extra-theme
+
+name=trinity-extra-theme
+version=0.1-3cbcb8b
+release=1
+source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
+
+build() {
+	cd $name-${version#*-}*
+
+	install -m 0644 -Dt $PKG/usr/share/$name/ *
+
+	# remove junk
+	cd $PKG/usr/share/$name
+	rm LICENSE Makefile README
+}

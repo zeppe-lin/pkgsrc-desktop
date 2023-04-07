@@ -1,0 +1,24 @@
+# Description: Text-based web browser
+# URL:         https://lynx.invisible-island.net/
+# Depends on:  ncurses openssl zlib
+
+name=lynx
+version=2.9.0dev.12
+release=1
+source=https://invisible-mirror.net/archives/lynx/tarballs/lynx${version}.tar.bz2
+
+build() {
+	mkdir build; cd build
+
+	../lynx${version}/configure     \
+		--prefix=/usr           \
+		--disable-nls           \
+		--enable-color-style    \
+		--enable-default-colors \
+		--enable-ipv6           \
+		--with-ssl              \
+		--with-zlib             \
+
+	make V=1
+	make DESTDIR=$PKG install
+}

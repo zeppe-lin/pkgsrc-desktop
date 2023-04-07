@@ -1,0 +1,27 @@
+# Description: Music player for large collection (Zeppe-Lin fork)
+# URL:         https://github.com/zeppe-lin/jukebox
+# Depends on:  p5-gtk2 p5-net-dbus
+
+name=jukebox
+version=1.1.16zpln-6d7f506
+release=1
+source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
+
+build() {
+	mkdir -p $PKG/usr/bin
+	mkdir -p $PKG/usr/share
+	cp -Pr $name-${version#*-}* $PKG/usr/share/jukebox
+	ln -s /usr/share/jukebox/jukebox.pl   $PKG/usr/bin/jukebox
+	ln -s /usr/share/jukebox/iceserver.pl $PKG/usr/bin/iceserver
+
+	cd $PKG/usr/share/jukebox
+
+	mkdir -p $PKG/usr/share/man/man1
+	mkdir -p $PKG/usr/share/applications
+	mv jukebox.1       $PKG/usr/share/man/man1/
+	mv jukebox.desktop $PKG/usr/share/applications
+
+	# remove junk
+	rm AUTHORS COPYING README.md TODO Makefile \
+		pix/LICENSE pix/README layout_doc.mkd
+}

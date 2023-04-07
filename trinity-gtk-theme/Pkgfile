@@ -1,0 +1,17 @@
+# Description:  Trinity GTK+2 and GTK+3 theme
+# URL:          https://github.com/zeppe-lin/trinity-gtk-theme
+# Depends on:   gtk-engines
+
+name=trinity-gtk-theme
+version=0.1-327e490
+release=1
+source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
+
+build() {
+	mkdir -p $PKG/usr/share/themes
+	cp -Pr $name-${version#*-}* $PKG/usr/share/themes/trinity
+
+	# remove junk
+	cd $PKG/usr/share/themes/trinity
+	rm COPY* *.sh Makefile README.md preview.png
+}

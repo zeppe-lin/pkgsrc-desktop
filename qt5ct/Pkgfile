@@ -1,0 +1,20 @@
+# Description: Qt5 Configuration Utility
+# URL:         https://sourceforge.net/projects/qt5ct/
+# Depends on:  libpcre2 qt5 zstd
+
+name=qt5ct
+version=1.7
+release=1
+source=https://downloads.sourceforge.net/project/$name/$name-$version.tar.bz2
+
+build() {
+	cmake -S $name-$version -B build -G Ninja       \
+		-D CMAKE_INSTALL_PREFIX=/usr            \
+		-D CMAKE_INSTALL_LIBDIR=lib             \
+		-D CMAKE_BUILD_TYPE=None                \
+		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS"      \
+		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS"  \
+
+	ninja -C build -j ${JOBS:-1} -v
+	DESTDIR=$PKG ninja -C build install
+}

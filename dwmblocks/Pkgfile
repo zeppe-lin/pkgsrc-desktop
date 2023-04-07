@@ -1,0 +1,24 @@
+# Description: Modular status bar for dwm or similar programs
+# URL:         https://github.com/zeppe-lin/dwmblocks
+# Depends on:  libbsd xorg-libx11
+
+name=dwmblocks
+version=0.2zpln-defb188
+release=1
+source="https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
+	config.def.h"
+
+build() {
+	cd $name-${version#*-}*
+
+	# override default configuration
+	cp -f $SRC/config.def.h .
+
+	# apply user-defined configuration if exists
+	[ -f $PKGMK_ROOT/config.h ] && cp $PKGMK_ROOT/config.h .
+
+	# pick up system flags
+	sed -i '/^\(C\|LD\)FLAGS/s/ = /+=/g' config.mk
+
+	make PREFIX=/usr DESTDIR=$PKG install
+}
