@@ -3,7 +3,7 @@
 # Depends on:  ncurses
 
 name=vifm
-version=0.12.1
+version=0.13
 release=1
 source=https://prdownloads.sourceforge.net/$name/$name-$version.tar.bz2
 
