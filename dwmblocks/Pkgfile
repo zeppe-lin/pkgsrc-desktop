@@ -3,7 +3,7 @@
 # Depends on:  libbsd xorg-libx11
 
 name=dwmblocks
-version=0.2zpln-7258331
+version=0.2z1-5084b2a
 release=1
 source="https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
 	config.def.h"
