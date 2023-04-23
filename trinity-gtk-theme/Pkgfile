@@ -3,15 +3,12 @@
 # Depends on:   gtk-engines
 
 name=trinity-gtk-theme
-version=0.1-327e490
+version=1.0-38ca0b8
 release=1
 source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
 
 build() {
-	mkdir -p $PKG/usr/share/themes
-	cp -Pr $name-${version#*-}* $PKG/usr/share/themes/trinity
+	cd $name-${version#*-}*
 
-	# remove junk
-	cd $PKG/usr/share/themes/trinity
-	rm COPY* *.sh Makefile README.md preview.png
+	make PREFIX=/usr DESTDIR=$PKG install
 }
