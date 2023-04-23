@@ -3,15 +3,12 @@
 # Depends on:  librsvg-compat hicolor-icon-theme
 
 name=trinity-icon-theme
-version=0.1-82062a5
+version=1.0-f9caa99
 release=1
 source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
 
 build() {
-	mkdir -p $PKG/usr/share/icons
-	cp -Pr $name-${version#*-}* $PKG/usr/share/icons/trinity
+	cd $name-${version#*-}*
 
-	# remove junk
-	cd $PKG/usr/share/icons/trinity
-	rm LICENSE.* README.md preview.png
+	make PREFIX=/usr DESTDIR=$PKG install
 }
