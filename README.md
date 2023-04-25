@@ -3,8 +3,8 @@ OVERVIEW
 This directory contains desktop pkgsrc collection.  This collection
 contains build scripts and files for the packages typically used on a
 desktop: web-browser, music/video player, file manager, chat
-messenger, etc. Packages in this collection depends
-**only** on the xorg, system and core pkgsrc collections.
+messenger, etc. Packages in this collection depends **only** on the
+xorg, system and core pkgsrc collections.
 
 This distribution was originally forked from CRUX ports as of version
 3.6 and rewritten in POSIX sh(1p).  Also, the Zeppe-Lin has its own
