@@ -1,15 +1,14 @@
 # Description: Qt Free Edition, version 5.x
-# URL:         https://www.qt.io/
+# URL:         https://www.qt.io
 # Depends on:  bluez gtk3 libinput libpcre2 libxkbcommon mysql postgresql xorg-libsm xorg-xcb-util-image xorg-xcb-util-keysyms xorg-xcb-util-renderutil xorg-xcb-util-wm
 # Optional:    bluez postgresql mysql
 
 name=qt5
-version=5.15.8
-release=2
+version=5.15.9
+release=1
 source="https://download.qt.io/archive/qt/5.15/$version/single/qt-everywhere-opensource-src-$version.tar.xz
 	qt-everywhere-opensource-src-$version-kf5-1.patch
 	qt5-cflags.patch
-	qtbase-everywhere-src-5.11.1-python3.patch
 	qtbase-everywhere-src-5.14.2-no_relocatable.patch
 	qtbase-everywhere-src-5.15.2-libglvnd.patch
 	qtbase-use-wayland-on-gnome.patch
@@ -19,7 +18,6 @@ build() {
 	cd qt-everywhere-src-$version
 
 	patch -d qtbase -p1 -i $SRC/qt5-cflags.patch
-	patch -d qtbase -p1 -i $SRC/qtbase-everywhere-src-5.11.1-python3.patch
 	patch -d qtbase -p1 -i $SRC/qtbase-everywhere-src-5.14.2-no_relocatable.patch
 	patch -d qtbase -p1 -i $SRC/qtbase-everywhere-src-5.15.2-libglvnd.patch
 	patch -d qtbase -p1 -i $SRC/qtbase-use-wayland-on-gnome.patch
@@ -107,8 +105,10 @@ build() {
 	# install useful symlinks
 	install -d $PKG/usr/bin
 	for file in $PKG/usr/lib/qt5/bin/*; do
-		ln -s ../lib/qt5/bin/$(basename $file) $PKG/usr/bin/$(basename $file)-qt5
-		ln -s ../lib/qt5/bin/$(basename $file) $PKG/usr/bin/$(basename $file)
+		ln -s ../lib/qt5/bin/"$(basename $file)" \
+			$PKG/usr/bin/"$(basename $file)-qt5"
+		ln -s ../lib/qt5/bin/"$(basename $file)" \
+			$PKG/usr/bin/"$(basename $file)"
 	done
 
 	# remove junk
