@@ -1,6 +1,6 @@
 # Description: General Purpose video player based on MPlayer and mplayer2
 # URL:         https://mpv.io
-# Depends on:  ffmpeg mesa xorg-libxinerama xorg-libxscrnsaver
+# Depends on:  ffmpeg libarchive libjpeg-turbo libpcre2 mesa xorg-libxinerama xorg-libxscrnsaver
 
 name=mpv
 version=0.35.1
