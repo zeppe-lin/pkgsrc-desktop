@@ -3,7 +3,7 @@
 # Depends on:  freetype giflib libbsd libid3tag libjpeg-turbo xorg-libxext
 
 name=imlib2
-version=1.11.0
+version=1.11.1
 release=1
 source=https://download.sourceforge.net/enlightenment/$name-$version.tar.gz
 
