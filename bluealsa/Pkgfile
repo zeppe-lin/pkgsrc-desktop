@@ -3,7 +3,7 @@
 # Depends on:  bluez fdk-aac lame libldac mpg123 sbc
 
 name=bluealsa
-version=4.0.0
+version=4.1.0
 release=1
 source="https://github.com/Arkq/bluez-alsa/archive/v$version/bluez-alsa-$version.tar.gz
 	bluealsa.conf
