@@ -3,7 +3,7 @@
 # Depends on:  chrpath libbsd libjpeg-turbo libpng libtool libxml2 perl xorg-libxext xorg-libxt
 
 name=imagemagick
-version=7.1.1-10
+version=7.1.1-11
 release=1
 source=https://imagemagick.org/archive/releases/ImageMagick-$version.tar.xz
 
@@ -37,7 +37,13 @@ build() {
 
 	# remove junk
 	rm -r $PKG/usr/share/doc
-	find $PKG -regex '.*\(ChangeLog\|LICENSE\|NEWS\.txt\)$'   -delete
-	find $PKG -regex '.*\(\.packlist\|perllocal.pod\|\.bs\)$' -delete
-	find $PKG -type d -empty -delete
+	find $PKG -depth \
+		-type f \( -name perllocal.pod  \
+			-o -name \*.bs          \
+			-o -name .packlist      \
+			-o -name ChangeLog      \
+			-o -name LICENSE        \
+			-o -name NEWS.txt       \
+			\) -delete ,            \
+		-type d -empty -delete
 }
