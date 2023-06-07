@@ -3,7 +3,7 @@
 # Depends on:  libbsd xorg-libx11
 
 name=dbus
-version=1.14.6
+version=1.14.8
 release=1
 source="https://dbus.freedesktop.org/releases/dbus/$name-$version.tar.xz
 	30-dbus.launch rc.dbus"
