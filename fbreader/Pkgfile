@@ -1,6 +1,6 @@
 # Description: E-book reader (epub, mobi, fb2)
 # URL:         http://www.fbreader.org/
-# Depends on:  libunibreak qt5
+# Depends on:  fribidi libunibreak qt5
 
 name=fbreader
 version=0.99.4
