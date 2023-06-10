@@ -1,6 +1,6 @@
 # Description: Portable library for SSA/ASS subtitles rendering
 # URL:         https://github.com/libass/libass
-# Depends on:  harfbuzz libunibreak
+# Depends on:  harfbuzz libpcre2 libunibreak
 
 name=libass
 version=0.17.1
