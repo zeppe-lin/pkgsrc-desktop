@@ -3,7 +3,7 @@
 # Depends on:  cairo curl libjpeg-turbo
 
 name=poppler
-version=22.12.0
+version=23.06.0
 release=1
 source=https://$name.freedesktop.org/$name-$version.tar.xz
 
