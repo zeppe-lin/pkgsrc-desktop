@@ -1,6 +1,6 @@
 # Description: PDF rendering library based on xpdf 3.0
 # URL:         https://poppler.freedesktop.org/
-# Depends on:  cairo curl libjpeg-turbo
+# Depends on:  curl harfbuzz libjpeg-turbo libpcre2
 
 name=poppler
 version=23.06.0
@@ -24,7 +24,10 @@ build() {
 		-D ENABLE_QT6=OFF                       \
 		-D ENABLE_ZLIB=ON                       \
 		-D ENABLE_LIBOPENJPEG=none              \
+		-D ENABLE_GOBJECT_INTROSPECTION=OFF     \
 		-D WITH_NSS3=OFF                        \
+		-D WITH_GObjectIntrospection=OFF        \
+		-D WITH_Gpgmepp=OFF                     \
 		-D RUN_GPERF_IF_PRESENT=OFF             \
 
 	ninja -C build -j ${JOBS:-1} -v
