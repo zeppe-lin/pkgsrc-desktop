@@ -3,14 +3,14 @@
 # Depends on:  libogg
 
 name=flac
-version=1.4.2
+version=1.4.3
 release=1
-source=https://downloads.xiph.org/releases/flac/$name-$version.tar.xz
+source=https://downloads.xiph.org/releases/flac/flac-$version.tar.xz
 
 build() {
 	mkdir build; cd build
 
-	../$name-$version/configure         \
+	../flac-$version/configure          \
 		--prefix=/usr               \
 		--disable-doxygen-docs      \
 		--disable-examples          \
