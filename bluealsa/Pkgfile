@@ -3,7 +3,7 @@
 # Depends on:  bluez fdk-aac lame libldac mpg123 sbc
 
 name=bluealsa
-version=4.1.0
+version=4.1.1
 release=1
 source="https://github.com/Arkq/bluez-alsa/archive/v$version/bluez-alsa-$version.tar.gz
 	bluealsa.conf
@@ -14,8 +14,8 @@ build() {
 		&& PKGMK_BLUEALSA="$PKGMK_BLUEALSA --enable-hcitop"   \
 		|| PKGMK_BLUEALSA="$PKGMK_BLUEALSA --disable-hcitop"
 	pkgman isinst lame     \
-		&& PKGMK_BLUEALSA="$PKGMK_BLUEALSA --enable-lame"     \
-		|| PKGMK_BLUEALSA="$PKGMK_BLUEALSA --disable-lame"
+		&& PKGMK_BLUEALSA="$PKGMK_BLUEALSA --enable-mp3lame"  \
+		|| PKGMK_BLUEALSA="$PKGMK_BLUEALSA --disable-mp3lame"
 	pkgman isinst libldac  \
 		&& PKGMK_BLUEALSA="$PKGMK_BLUEALSA --enable-ldac"     \
 		|| PKGMK_BLUEALSA="$PKGMK_BLUEALSA --disable-ldac"
@@ -28,16 +28,17 @@ build() {
 
 	mkdir build; cd build
 
-	autoreconf --install --symlink ../bluez-alsa-$version
-	../bluez-alsa-$version/configure \
-		--prefix=/usr            \
-		--enable-cli             \
-		--enable-aac             \
-		--enable-rfcomm          \
-		--enable-a2dpconf        \
-		--enable-ofono           \
-		$PKGMK_BLUEALSA          \
-		--with-bash-completion=/usr/share/bash-completion/completions/
+	_BASHCOMPDIR=/usr/share/bash-completion/completions
+	autoreconf -fis ../bluez-alsa-$version
+	../bluez-alsa-$version/configure              \
+		--prefix=/usr                         \
+		--enable-cli                          \
+		--enable-aac                          \
+		--enable-rfcomm                       \
+		--enable-a2dpconf                     \
+		--enable-ofono                        \
+		--with-bash-completion=$_BASHCOMPDIR  \
+		$PKGMK_BLUEALSA                       \
 
 	make V=1 all
 	make DESTDIR=$PKG install
