@@ -4,7 +4,7 @@
 # Optional:    bluez postgresql mysql
 
 name=qt5
-version=5.15.9
+version=5.15.10
 release=1
 source="https://download.qt.io/archive/qt/5.15/$version/single/qt-everywhere-opensource-src-$version.tar.xz
 	qt-everywhere-opensource-src-$version-kf5-1.patch
@@ -39,6 +39,9 @@ build() {
 		PATH="$(echo $PATH \
 			| awk -v RS=: -v ORS=: '/ccache/{next}{print}' \
 			| sed 's/:*$//')"
+	fi
+	if ! pkgman isinst dbus; then
+		PKGMK_QT5="$PKGMK_QT5 -no-dbus"
 	fi
 
 	sed -i '/utility/a     #include <limits>' \
@@ -93,7 +96,6 @@ build() {
 		QMAKE_CFLAGS_RELEASE="$CFLAGS -Wno-enum-constexpr-conversion"     \
 		QMAKE_CXXFLAGS_RELEASE="$CXXFLAGS -Wno-enum-constexpr-conversion" \
 		QMAKE_LFLAGS_RELEASE="$LDFLAGS -fuse-ld=gold"                     \
-		#-no-dbus                                    \
 
 	make V=1
 	make -j1 INSTALL_ROOT=$PKG install
