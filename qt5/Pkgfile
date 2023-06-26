@@ -90,6 +90,9 @@ build() {
 		-system-pcre                                 \
 		-system-zlib                                 \
 		-skip qtwebengine                            \
+		QMAKE_CFLAGS_RELEASE="$CFLAGS -Wno-enum-constexpr-conversion"     \
+		QMAKE_CXXFLAGS_RELEASE="$CXXFLAGS -Wno-enum-constexpr-conversion" \
+		QMAKE_LFLAGS_RELEASE="$LDFLAGS -fuse-ld=gold"                     \
 		#-no-dbus                                    \
 
 	make V=1
