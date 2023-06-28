@@ -2,7 +2,7 @@
 # URL:         http://www.videolan.org/developers/x264.html
 
 name=x264
-version=20190812-2245
+version=20191217-2245
 release=1
 source="https://download.videolan.org/pub/videolan/x264/snapshots/x264-snapshot-$version-stable.tar.bz2
 	0001-no-bash.patch
