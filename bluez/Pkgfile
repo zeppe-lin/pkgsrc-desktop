@@ -1,10 +1,10 @@
 # Description: Bluetooth libraries and utilities
-# URL:         http://www.bluez.org/
+# URL:         http://www.bluez.org
 # Depends on:  alsa-lib dbus glib docutils libical
 # Optional:    cups docutils libical
 
 name=bluez
-version=5.66
+version=5.67
 release=1
 source="https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-$version.tar.xz
   	rc.bluetoothd"

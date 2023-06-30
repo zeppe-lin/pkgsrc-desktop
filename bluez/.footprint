@@ -37,9 +37,9 @@ drwxr-xr-x	root/root	usr/lib/bluetooth/
 -rwxr-xr-x	root/root	usr/lib/bluetooth/obexctl
 -rwxr-xr-x	root/root	usr/lib/bluetooth/obexd
 -rwxr-xr-x	root/root	usr/lib/libbluetooth.la
-lrwxrwxrwx	root/root	usr/lib/libbluetooth.so -> libbluetooth.so.3.19.8
-lrwxrwxrwx	root/root	usr/lib/libbluetooth.so.3 -> libbluetooth.so.3.19.8
--rwxr-xr-x	root/root	usr/lib/libbluetooth.so.3.19.8
+lrwxrwxrwx	root/root	usr/lib/libbluetooth.so -> libbluetooth.so.3.19.9
+lrwxrwxrwx	root/root	usr/lib/libbluetooth.so.3 -> libbluetooth.so.3.19.9
+-rwxr-xr-x	root/root	usr/lib/libbluetooth.so.3.19.9
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/bluez.pc
 drwxr-xr-x	root/root	usr/share/
