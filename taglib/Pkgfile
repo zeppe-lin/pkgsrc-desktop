@@ -1,5 +1,6 @@
 # Description: Library to read/edit the meta-data of popular audio formats
 # URL:         https://taglib.github.io
+# Depends on:  zlib
 
 name=taglib
 version=1.13.1
