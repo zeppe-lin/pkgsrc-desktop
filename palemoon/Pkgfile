@@ -5,9 +5,10 @@
 name=palemoon
 version=32.1.0
 _upxrel=20230320
-release=1
+release=2
 source="https://repo.palemoon.org/MoonchildProductions/Pale-Moon/archive/${version}_Release.tar.gz
 	https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_${_upxrel}.tar.gz
+	$name.desktop
 	mozconfig.in"
 
 build() {
@@ -27,6 +28,11 @@ build() {
 
 	./mach build
 	DESTDIR=$PKG ./mach install
+
+	# install freedesktop launcher without i18n
+	install -d $PKG/usr/share/applications
+	sed -r '/\[.+\]=/d' $SRC/$name.desktop > \
+		$PKG/usr/share/applications/$name.desktop
 
 	# revdep additional library directories
 	install -d $PKG/etc/revdep.d
