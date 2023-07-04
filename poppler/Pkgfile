@@ -3,7 +3,7 @@
 # Depends on:  curl harfbuzz libjpeg-turbo libpcre2
 
 name=poppler
-version=23.06.0
+version=23.07.0
 release=1
 source=https://$name.freedesktop.org/$name-$version.tar.xz
 
