@@ -1,14 +1,14 @@
 # Description: ID3 tag manipulation library
-# URL:         https://github.com/tenacityteam/libid3tag
+# URL:         https://codeberg.org/tenacityteam/libid3tag
 # Depends on:  zlib
 
 name=libid3tag
 version=0.16.2
 release=1
-source=https://github.com/tenacityteam/$name/archive/$version/$name-$version.tar.gz
+source=https://distfiles.gentoo.org/distfiles/$name-$version.codeberg.tar.gz
 
 build() {
-	cmake -S $name-$version -B build -G Ninja       \
+	cmake -S $name -B build -G Ninja                \
 		-D CMAKE_INSTALL_PREFIX=/usr            \
 		-D CMAKE_INSTALL_LIBDIR=lib             \
 		-D CMAKE_BUILD_TYPE=Release             \
