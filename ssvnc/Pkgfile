@@ -1,5 +1,5 @@
 # Description: SSL/SSH VNC viewer
-# URL:         http://www.karlrunge.com/x11vnc/ssvnc.html
+# URL:         https://ssvnc.sourceforge.net/
 # Depends on:  jdk11-bin libjpeg-turbo tk xorg-libxaw
 
 name=ssvnc
