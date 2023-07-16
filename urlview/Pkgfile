@@ -5,14 +5,17 @@
 name=urlview
 version=0.9
 release=1
-_patchlevel=23
-source="http://deb.debian.org/debian/pool/main/u/$name/urlview_$version.orig.tar.gz
-	http://deb.debian.org/debian/pool/main/u/$name/urlview_$version-$_patchlevel.diff.gz"
+_patchlevel=23.1
+source="http://deb.debian.org/debian/pool/main/u/urlview/urlview_$version.orig.tar.gz
+	http://deb.debian.org/debian/pool/main/u/$name/urlview_$version-$_patchlevel.debian.tar.xz"
 
 build() {
 	cd $name-$version.orig
 
-	zcat ../urlview_${version}-${_patchlevel}.diff.gz | patch -Np1
+	# Apply bundled patches via series.
+	while IFS= read -r _patch || [ -n "$_patch" ]; do
+		patch -p1 -i "$SRC/debian/patches/$_patch"
+	done < "$SRC/debian/patches/series"
 
 	aclocal
 	automake --foreign --ignore-deps --add-missing
