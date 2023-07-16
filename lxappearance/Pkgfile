@@ -1,5 +1,5 @@
 # Description: Enables change of themes, icons, and fonts used by applications
-# URL:         https://wiki.lxde.org/en/LXAppearance
+# URL:         https://github.com/lxde/lxappearance
 # Depends on:  gtk gtk3
 
 name=lxappearance
