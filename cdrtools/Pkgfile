@@ -1,5 +1,5 @@
 # Description: Original cdrtools supporting CD, DVD and BluRay burning
-# URL:         http://cdrecord.org/
+# URL:         https://cdrtools.sourceforge.net/private/cdrtools.html
 # Depends on:  acl libcap
 
 name=cdrtools
