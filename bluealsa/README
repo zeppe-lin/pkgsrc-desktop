@@ -48,7 +48,7 @@ CONFIGURATION & USAGE
 	In addition to A2DP profile, used for high quality audio, BlueALSA
 	also allows to use phone audio connection via SCO link.  One can use
 	either build-in HSP/HFP support, which implements only audio related
-	part of the specification, or use oFono (https://01.org/ofono) service
+	part of the specification, or use oFono https://01.org/ofono service
 	as a back-end.  In order to open SCO audio connection one shall switch
 	to sco profile like follows:
 
@@ -58,7 +58,7 @@ CONFIGURATION & USAGE
 	The list of available BlueALSA PCMs (provided by connected Bluetooth
 	devices with audio capabilities) can be obtained directly from
 	BlueALSA D-Bus API
-	(https://github.com/Arkq/bluez-alsa/blob/master/doc/bluealsa-api.txt)
+	https://github.com/Arkq/bluez-alsa/blob/master/doc/bluealsa-api.txt
 	or using bluealsa-aplay as a convenient wrapper as follows:
 
 		bluealsa-aplay -L
@@ -75,9 +75,8 @@ CONFIGURATION & USAGE
 		amixer -D bluealsa sset 'Jabra MOVE v2.3.0 - A2DP' 50%
 
 	For more advanced ALSA configuration, consult the asoundrc on-line
-	documentation provided
-	(https://www.alsa-project.org/main/index.php/Asoundrc) by the
-	AlsaProject wiki page.
+	documentation provided by the AlsaProject wiki page:
+	https://www.alsa-project.org/main/index.php/Asoundrc
 
 TROUBLESHOOTING
 
@@ -127,7 +126,7 @@ TROUBLESHOOTING
 	devices), run the following command:
 
 		bluealsa-aplay --list-devices
-	
+
 	The common misconception is an attempt to use A2DP playback device as
 	a capture one in case where A2DP is not listed in the "List of CAPTURE
 	Bluetooth Devices" section.
