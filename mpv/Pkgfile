@@ -3,8 +3,8 @@
 # Depends on:  ffmpeg libarchive libjpeg-turbo libpcre2 mesa xorg-libxinerama xorg-libxscrnsaver xorg-libxpresent
 
 name=mpv
-version=0.35.1
-release=2
+version=0.36.0
+release=1
 source=https://github.com/mpv-player/mpv/archive/v$version/mpv-v$version.tar.gz
 
 build() {
