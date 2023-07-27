@@ -5,15 +5,15 @@
 name=p5-extutils-config
 version=0.008
 release=1
-source=https://www.cpan.org/modules/by-module/ExtUtils/ExtUtils-Config-$version.tar.gz
+source=https://cpan.metacpan.org/authors/id/L/LE/LEONT/ExtUtils-Config-$version.tar.gz
 
 build() {
 	cd ExtUtils-Config-$version
 
 	PERL_MM_USE_DEFAULT=1 perl Makefile.PL INSTALLDIRS=vendor
 
-	make V=1
-	make install DESTDIR=$PKG
+	make
+	make DESTDIR=$PKG install
 
 	# remove junk and empty dirs
 	find $PKG -depth \
