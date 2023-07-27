@@ -6,7 +6,7 @@
 # https://repo.palemoon.org/MoonchildProductions/UXP/releases
 
 name=palemoon
-version=32.3.0
+version=32.3.1
 _upxrel=20230711
 release=1
 source="https://repo.palemoon.org/MoonchildProductions/Pale-Moon/archive/${version}_Release.tar.gz
