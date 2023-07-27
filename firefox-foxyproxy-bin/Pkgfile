@@ -8,6 +8,7 @@ release=1
 source=https://github.com/foxyproxy/firefox-extension/releases/download/$version/foxyproxy_standard-$version-an+fx.xpi
 
 build() {
+	local _DESTDIR=$PKG/opt/firefox/distribution/extensions
 	install -m 0644 -D foxyproxy_standard-$version-an+fx.xpi \
-		$PKG/opt/firefox/distribution/extensions/foxyproxy@eric.h.jung.xpi
+		$_DESTDIR/foxyproxy@eric.h.jung.xpi
 }
