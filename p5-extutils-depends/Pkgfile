@@ -1,19 +1,19 @@
-# Description: Perl bindings for depends
-# URL:         https://www.cpan.org/
+# Description: Easily build XS extensions that depend on XS extensions
+# URL:         https://metacpan.org/pod/ExtUtils::Depends
 # Depends on:  p5-xml-parser
 
 name=p5-extutils-depends
 version=0.8001
 release=1
-source=https://www.cpan.org/modules/by-module/ExtUtils/ExtUtils-Depends-$version.tar.gz
+source=https://cpan.metacpan.org/authors/id/X/XA/XAOC/ExtUtils-Depends-$version.tar.gz
 
 build() {
 	cd ExtUtils-Depends-$version
 
 	PERL_MM_USE_DEFAULT=1 perl Makefile.PL INSTALLDIRS=vendor
 
-	make OPTIMIZE="$CFLAGS"
-	make install DESTDIR=$PKG
+	make
+	make DESTDIR=$PKG install
 
 	# remove junk and empty dirs
 	find $PKG -depth \
