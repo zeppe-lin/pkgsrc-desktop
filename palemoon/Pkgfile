@@ -1,11 +1,14 @@
 # Description: Pale Moon is what FireFox Web Browser ought to have been
-# URL:         https://www.palemoon.org
+# URL:         https://www.palemoon.org/
 # Depends on:  alsa-lib autoconf-2.13 gtk python unzip xorg-libxdamage xorg-libxt yasm zip
 
+# https://repo.palemoon.org/MoonchildProductions/Pale-Moon/releases
+# https://repo.palemoon.org/MoonchildProductions/UXP/releases
+
 name=palemoon
-version=32.1.0
-_upxrel=20230320
-release=2
+version=32.3.0
+_upxrel=20230711
+release=1
 source="https://repo.palemoon.org/MoonchildProductions/Pale-Moon/archive/${version}_Release.tar.gz
 	https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_${_upxrel}.tar.gz
 	$name.desktop
