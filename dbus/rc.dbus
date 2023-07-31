@@ -10,9 +10,7 @@ OPTS="--system"
 
 case $1 in
 start)
-	if [ ! -f /var/lib/dbus/machine-id ]; then
-		/usr/bin/dbus-uuidgen --ensure
-	fi
+	[ -f /var/lib/dbus/machine-id ] || /usr/bin/dbus-uuidgen --ensure
 	$SSD --start --pidfile=$PID --exec $PROG -- $OPTS
 	;;
 stop)
