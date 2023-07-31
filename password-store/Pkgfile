@@ -1,5 +1,5 @@
 # Description: Standard unix password manager
-# URL:         https://www.passwordstore.org
+# URL:         https://www.passwordstore.org/
 # Depends on:  git gnupg tree xclip
 # Optional:    git xclip qrencode
 
@@ -10,9 +10,9 @@ source="https://git.zx2c4.com/$name/snapshot/$name-$version.tar.xz
 	ensure_compat_with_tree_2.0.patch"
 
 build() {
-	export WITH_BASHCOMP=yes
-	export WITH_ZSHCOMP=no
-	export WITH_FISHCOMP=no
+	export WITH_BASHCOMP=yes # enable  bash completion
+	export WITH_ZSHCOMP=no   # disable  zsh completion
+	export WITH_FISHCOMP=no  # disable fish completion
 
 	cd password-store-$version
 

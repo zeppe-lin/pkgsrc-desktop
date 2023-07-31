@@ -8,13 +8,13 @@ release=1
 source=https://github.com/derf/feh/archive/$version/feh-$version.tar.gz
 
 build() {
-	local _BUILDOPTS='curl=1 exif=1 xinerama=1 inotify=1 stat64=1'
+	local _CONF='curl=1 exif=1 xinerama=1 inotify=1 stat64=1'
 
 	cd feh-$version
 
-	make PREFIX=/usr VERSION=$version $_BUILDOPTS
+	make PREFIX=/usr VERSION=$version $_CONF
 	make PREFIX=/usr VERSION=$version DESTDIR=$PKG install
 
 	# remove junk
-	rm -r $PKG/usr/share/doc/
+	rm -r $PKG/usr/share/doc
 }

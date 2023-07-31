@@ -1,5 +1,5 @@
 # Description: Library implementation of the Media Transfer Protocol (MTP)
-# URL:         http://libmtp.sourceforge.net
+# URL:         https://libmtp.sourceforge.net/
 # Depends on:  libgcrypt libusb
 
 name=libmtp

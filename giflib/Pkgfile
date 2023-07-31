@@ -1,5 +1,5 @@
 # Description: Compressed GIF library compatible with libungif
-# URL:         https://giflib.sourceforge.net
+# URL:         https://giflib.sourceforge.net/
 
 name=giflib
 version=5.2.1

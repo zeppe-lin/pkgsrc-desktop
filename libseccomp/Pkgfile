@@ -9,7 +9,7 @@ source=https://github.com/seccomp/$name/releases/download/v$version/$name-$versi
 build() {
 	mkdir build; cd build
 
-	# --disable-python: since requires cython
+	# --disable-python: otherwise, requires cython
 	../$name-$version/configure  \
 		--prefix=/usr        \
 		--disable-python     \

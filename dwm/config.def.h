@@ -4,7 +4,7 @@
  *                                                                   *
  * Copy this file (or config.def.h from sources) to config.h and     *
  * adjust conform to your needs to override this customization.      *
- ********************************************************************/
+ *********************************************************************/
 
 /*********************************************************************
  * Appearance.

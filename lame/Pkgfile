@@ -1,16 +1,16 @@
 # Description: MP3 encoder
-# URL:         http://lame.sourceforge.net/
+# URL:         https://lame.sourceforge.io/
 # Depends on:  ncurses
 
 name=lame
 version=3.100
 release=1
-source=http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz
+source=https://downloads.sourceforge.net/project/lame/lame/$version/lame-$version.tar.gz
 
 build() {
 	mkdir build; cd build
 
-	../$name-$version/configure       \
+	../lame-$version/configure        \
 		--prefix=/usr             \
 		--disable-analyzer-hooks  \
 		--disable-gtktest         \

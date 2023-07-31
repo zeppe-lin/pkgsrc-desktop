@@ -1,5 +1,5 @@
 # Description: D-Bus GLib bindings
-# URL:         http://freedesktop.org/wiki/Software/DBusBindings
+# URL:         https://freedesktop.org/wiki/Software/DBusBindings/
 # Depends on:  dbus glib
 
 name=dbus-glib

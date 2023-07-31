@@ -1,11 +1,11 @@
 # Description: Library to read/edit the meta-data of popular audio formats
-# URL:         https://taglib.github.io
+# URL:         https://taglib.org/
 # Depends on:  zlib
 
 name=taglib
 version=1.13.1
 release=1
-source=https://taglib.github.io/releases/$name-$version.tar.gz
+source=https://taglib.org/releases/$name-$version.tar.gz
 
 build() {
 	cmake -S $name-$version -B build -G Ninja  \
