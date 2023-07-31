@@ -4,8 +4,9 @@
 
 name=xcdroast
 version=1.19
-release=2
+release=3
 source="https://downloads.sourceforge.net/project/$name/$name-$version.tar.gz
+	http://www.xcdroast.org/release/patches/$name-$version-Patches.tar.gz
 	change_font_defs.patch"
 
 build() {
@@ -13,8 +14,16 @@ build() {
 	sed -e 's/xos4 Terminus 9/Iosevka Term 10/g'           \
 	    -e 's/xos4 Terminus Bold 9/Iosevka Term Bold 10/g' \
 	    -i $SRC/change_font_defs.patch
-
 	patch -p6 -d $name-$version -i $SRC/change_font_defs.patch
+
+	# apply upstream patches
+	cd $name-$version
+	patch -p0 -i $SRC/"$version Patch"/'DBG1:reading titles from.patch'
+	patch -p0 -i $SRC/"$version Patch"/xcdroast_manpage.patch
+	patch -p0 -i $SRC/"$version Patch"/edit_cddb.patch
+	patch -p0 -i $SRC/"$version Patch"/inf_xinf-defaults.patch
+	patch -p0 -i $SRC/"$version Patch"/edit_cd-text.patch
+	cd -
 
 	mkdir build; cd build
 
