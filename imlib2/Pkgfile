@@ -1,5 +1,5 @@
 # Description: Fast image manipulation library
-# URL:         http://freshmeat.net/projects/imlib2/
+# URL:         http://docs.enlightenment.org/api/imlib2/html/
 # Depends on:  freetype giflib libbsd libid3tag libjpeg-turbo xorg-libxext
 
 name=imlib2
@@ -10,10 +10,14 @@ source=https://download.sourceforge.net/enlightenment/$name-$version.tar.gz
 build() {
 	mkdir build; cd build
 
+	# --disable-doc-build: otherwise, requires doxygen
+	# --without-tiff:      otherwise, requires libtiff
+	# --without-webp:      otherwise, requires webp
 	../$name-$version/configure  \
 		--prefix=/usr        \
 		--without-tiff       \
 		--without-webp       \
+		--disable-doc-build  \
 
 	make V=1
 	make DESTDIR=$PKG install
