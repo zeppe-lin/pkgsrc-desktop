@@ -1,23 +1,18 @@
-# Description: Library for encoding H264/AVC video streams (snapshot)
+# Description: Library for encoding H264/AVC video streams
 # URL:         http://www.videolan.org/developers/x264.html
 
 name=x264
-version=20191217-2245
+version=20230402-a8b68eb
 release=1
-source="https://download.videolan.org/pub/videolan/x264/snapshots/x264-snapshot-$version-stable.tar.bz2
-	0001-no-bash.patch
+source="https://code.videolan.org/videolan/x264/-/archive/${version#*-}/x264-$version.tar.gz
 	0002-adjust-to-sbase-od.patch"
 
 build() {
-	patch -d $name-snapshot-$version-stable \
-		-p1 -i $SRC/0001-no-bash.patch
-
-	patch -d $name-snapshot-$version-stable \
-		-p0 -i $SRC/0002-adjust-to-sbase-od.patch
+	patch -d $name* -p0 -i $SRC/0002-adjust-to-sbase-od.patch
 
 	mkdir $SRC/build-1; cd $SRC/build-1
 
-	../$name-snapshot-$version-stable/configure          \
+	../$name*/configure                                  \
 		--prefix=/usr                                \
 		--libdir=/usr/lib/libx264-10bit              \
 		--includedir=/usr/lib/libx264-10bit/include  \
@@ -33,7 +28,7 @@ build() {
 
 	mkdir $SRC/build-2; cd $SRC/build-2
 
-	../$name-snapshot-$version-stable/configure          \
+	../$name*/configure                                  \
 		--prefix=/usr                                \
 		--enable-pic                                 \
 		--enable-shared                              \

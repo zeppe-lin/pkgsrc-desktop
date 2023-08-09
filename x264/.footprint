@@ -7,11 +7,11 @@ drwxr-xr-x	root/root	usr/lib/libx264-10bit/
 drwxr-xr-x	root/root	usr/lib/libx264-10bit/include/
 -rw-r--r--	root/root	usr/lib/libx264-10bit/include/x264.h
 -rw-r--r--	root/root	usr/lib/libx264-10bit/include/x264_config.h
-lrwxrwxrwx	root/root	usr/lib/libx264-10bit/libx264.so -> libx264.so.157
--rw-r--r--	root/root	usr/lib/libx264-10bit/libx264.so.157
+lrwxrwxrwx	root/root	usr/lib/libx264-10bit/libx264.so -> libx264.so.164
+-rw-r--r--	root/root	usr/lib/libx264-10bit/libx264.so.164
 drwxr-xr-x	root/root	usr/lib/libx264-10bit/pkgconfig/
 -rw-r--r--	root/root	usr/lib/libx264-10bit/pkgconfig/x264.pc
-lrwxrwxrwx	root/root	usr/lib/libx264.so -> libx264.so.157
--rw-r--r--	root/root	usr/lib/libx264.so.157
+lrwxrwxrwx	root/root	usr/lib/libx264.so -> libx264.so.164
+-rw-r--r--	root/root	usr/lib/libx264.so.164
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/x264.pc
