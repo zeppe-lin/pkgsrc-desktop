@@ -3,22 +3,43 @@
 # Depends on:  alsa-lib flac lame libvorbis opus python3
 
 name=libsndfile
-version=1.2.0
+version=1.2.1
 release=1
-source=https://github.com/$name/$name/releases/download/$version/$name-$version.tar.xz
+#source=https://github.com/$name/$name/releases/download/$version/$name-$version.tar.xz
+source=$name-$version.tar.gz::https://github.com/$name/$name/archive/refs/tags/$version.tar.gz
 
 build() {
 	export PYTHON=python3
 
-	mkdir build; cd build
+	# Disable system optimization flag, since libsndfile's default
+	# is -O3.
+	CFLAGS="$(echo $CFLAGS | sed 's/-O. //g')"
 
-	../$name-$version/configure  \
-		--prefix=/usr        \
-		--enable-static      \
+	# Disable /usr/share/doc documentation.
+	sed -ri '/^install .* \$\{dist_doc_DATA\}/d'  \
+		$name-$version/CMakeLists.txt
 
-	make V=1
-	make DESTDIR=$PKG install
+	# -D ENABLE_EXTERNAL_LIBS=ON:
+	#    Enable Ogg, Vorbis, FLAC and Opus support.
+	# -D ENABLE_MPEG=ON:
+	#    Enable MP3 support.
+	cmake -S $name-$version -B build -G Ninja  \
+		-D CMAKE_BUILD_TYPE=Release        \
+		-D CMAKE_C_FLAGS="$CFLAGS"         \
+		-D CMAKE_INSTALL_PREFIX=/usr       \
+		-D CMAKE_INSTALL_LIBDIR=/usr/lib   \
+		-D BUILD_EXAMPLES=OFF              \
+		-D BUILD_PROGRAMS=ON               \
+		-D BUILD_SHARED_LIBS=ON            \
+		-D BUILD_TESTING=OFF               \
+		-D ENABLE_CPACK=ON                 \
+		-D ENABLE_EXPERIMENTAL=OFF         \
+		-D ENABLE_EXTERNAL_LIBS=ON         \
+		-D ENABLE_MPEG=ON                  \
+		-D ENABLE_PACKAGE_CONFIG=ON        \
+		-D INSTALL_MANPAGES=ON             \
+		-D INSTALL_PKGCONFIG_MODULE=ON     \
 
-	# remove junk
-	rm -r $PKG/usr/share/doc
+	ninja -C build -j ${JOBS:-1} -v
+	DESTDIR=$PKG ninja -C build install
 }
