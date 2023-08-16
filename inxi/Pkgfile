@@ -3,7 +3,7 @@
 # Optional:    xorg-xprop xorg-xdpyinfo xorg-xrandr lm-sensors
 
 name=inxi
-version=3.3.28-1
+version=3.3.29-1
 release=1
 source=https://github.com/smxi/inxi/archive/$version/inxi-$version.tar.gz
 
