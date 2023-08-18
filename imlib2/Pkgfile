@@ -3,7 +3,7 @@
 # Depends on:  freetype giflib libbsd libid3tag libjpeg-turbo xorg-libxext
 
 name=imlib2
-version=1.11.1
+version=1.12.0
 release=1
 source=https://download.sourceforge.net/enlightenment/$name-$version.tar.gz
 
@@ -15,9 +15,9 @@ build() {
 	# --without-webp:      otherwise, requires webp
 	../$name-$version/configure  \
 		--prefix=/usr        \
+		--disable-doc-build  \
 		--without-tiff       \
 		--without-webp       \
-		--disable-doc-build  \
 
 	make V=1
 	make DESTDIR=$PKG install
