@@ -1,6 +1,6 @@
 # Description: Modular status bar for dwm or similar programs
 # URL:         https://github.com/zeppe-lin/dwmblocks
-# Depends on:  libbsd xorg-libx11
+# Depends on:  xorg-libx11
 
 name=dwmblocks
 version=0.2.2z-14822f0
