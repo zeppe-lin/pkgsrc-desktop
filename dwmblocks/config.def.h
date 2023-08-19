@@ -2,11 +2,12 @@
  * dwmblocks customization adjusted for Zeppe-Lin.                  *
  * See dwmblocks LICENSE file for copyright and license details.    *
  *                                                                  *
- * Copy this file (or config.def.h from sources) to config.h and    *
- * adjust conform to your needs to override this customization.     *
+ * Copy this file (or config.def.h from dwmblocks' sources archive) *
+ * to config.h and adjust conform to your needs to override this    *
+ * customization.                                                   *
  ********************************************************************/
 
-/* Hack! Increase statusbar output. Normally shouldn't be redefined.
+/* Hack!  Increase statusbar output.  Normally shouldn't be redefined.
  * */
 #define CMDLENGTH 100
 
@@ -30,5 +31,5 @@ static const Block blocks[] = {
 static char delim[] = " | ";
 static unsigned int delimLen = 5;
 
-/* vim:sw=2:ts=2:sts=2:et:cc=72:tw=70
+/* vim: sw=2 ts=2 sts=2 et cc=72 tw=70
  * End of file. */

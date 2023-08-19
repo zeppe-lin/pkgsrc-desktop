@@ -3,7 +3,7 @@
 # Depends on:  libbsd xorg-libx11
 
 name=dwmblocks
-version=0.2z1-5084b2a
+version=0.2.2z-14822f0
 release=1
 source="https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
 	config.def.h"
@@ -15,10 +15,12 @@ build() {
 	cp -f $SRC/config.def.h .
 
 	# apply user-defined configuration if exists
-	[ -f $PKGMK_ROOT/config.h ] && cp $PKGMK_ROOT/config.h .
+	if [ -f $PKGMK_ROOT/config.h ]; then
+		cp $PKGMK_ROOT/config.h .
+	fi
 
 	# pick up system flags
-	sed -i '/^\(C\|LD\)FLAGS/s/ = /+=/g' config.mk
+	sed -ri '/^(C|LD)FLAGS/s/ = /+=/g' config.mk
 
 	make PREFIX=/usr DESTDIR=$PKG install
 }
