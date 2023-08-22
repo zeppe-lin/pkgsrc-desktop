@@ -3,14 +3,14 @@
 # Depends on:  gnupg
 
 name=gpgme
-version=1.21.0
+version=1.22.0
 release=1
-source=https://www.gnupg.org/ftp/gcrypt/$name/$name-$version.tar.bz2
+source=https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-$version.tar.bz2
 
 build() {
 	mkdir build; cd build
 
-	../$name-$version/configure       \
+	../gpgme-$version/configure       \
 		--prefix=/usr             \
 		--disable-fd-passing      \
 		--disable-g13-test        \
