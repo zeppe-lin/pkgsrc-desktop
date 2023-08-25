@@ -1,11 +1,11 @@
-# Description: Standard theme engines for GTK+2 (HighContrast only)
-# URL:         https://wiki.gnome.org/action/show/Design?action=show&redirect=GnomeArt
+# Description: Standard theme engines for GTK+2 (HighContrast engine only)
+# URL:         https://download.gnome.org/sources/gtk-engines/
 # Depends on:  gtk
 
 name=gtk-engines
 version=2.20.2
 release=1
-source=https://ftp.gnome.org/pub/GNOME/sources/$name/2.20/$name-$version.tar.bz2
+source=https://download.gnome.org/sources/$name/2.20/$name-$version.tar.bz2
 
 build() {
 	# disable i18n
@@ -16,6 +16,7 @@ build() {
 
 	mkdir build; cd build
 
+	# --enable-hc, --disable-all:
 	# build only HighContrast engine for trinity-gtk-theme
 	../$name-$version/configure  \
 		--prefix=/usr        \
