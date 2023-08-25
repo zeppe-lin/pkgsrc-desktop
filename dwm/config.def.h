@@ -148,6 +148,7 @@ static const Rule rules[] = {
 
 static const char *drun_cmd[] = {
   "dmenu_run",
+    "-i",
     "-p", "Run:",
     "-fn", font,
     "-nb", normbgcolor,
@@ -158,6 +159,7 @@ static const char *drun_cmd[] = {
 };
 static const char *pass_cmd[] = {
   "passmenu",
+    "-i",
     "-p", "Password:",
     "-fn", font,
     "-nb", normbgcolor,
@@ -168,6 +170,7 @@ static const char *pass_cmd[] = {
 };
 static const char *lswmenu_cmd[] = {
   "lswmenu",
+    "-i",
     "-p", "Go to Window:",
     "-fn", font,
     "-nb", normbgcolor,
