@@ -84,7 +84,7 @@ static CustomTagLayout tags[][TAGS] = {
     * definition value (declared above) if you want more tags.
     */
   }
-  
+
   /*
    * Monitor 1.
    */
@@ -166,6 +166,16 @@ static const char *pass_cmd[] = {
     "-sf", selfgcolor,
     NULL
 };
+static const char *lswmenu_cmd[] = {
+  "lswmenu",
+    "-p", "Go to Window:",
+    "-fn", font,
+    "-nb", normbgcolor,
+    "-nf", normfgcolor,
+    "-sb", selbgcolor,
+    "-sf", selfgcolor,
+    NULL
+};
 static const char *lock_cmd[] = { "slock", NULL };
 static const char *term_cmd[] = { "st", NULL };
 
@@ -212,7 +222,7 @@ static Key keys[] = {
  */
  { MODKEY,                      XK_r,                     spawn,            {.v = drun_cmd}         },
  { MODKEY,                      XK_p,                     spawn,            {.v = pass_cmd}         },
-
+ { MODKEY,                      XK_w,                     spawn,            {.v = lswmenu_cmd}      },
  { MODKEY,                      XK_l,                     spawn,            {.v = lock_cmd}         },
  { MODKEY|ShiftMask,            XK_Return,                spawn,            {.v = term_cmd}         },
 
@@ -322,5 +332,5 @@ static Button buttons[] = {
 #undef STR_HELPER
 #undef STR
 
-/* vim:sw=2:ts=2:sts=2:et:cc=140
+/* vim: sw=2 ts=2 sts=2 et cc=140
  * End of file. */
