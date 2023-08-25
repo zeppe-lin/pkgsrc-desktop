@@ -1,0 +1,15 @@
+# Description: List X11 windows to stdout (Zeppe-Lin fork)
+# URL:         https://github.com/zeppe-lin/lsw
+# Depends on:  xorg-libx11 wmctrl
+
+name=lsw
+version=0.3-4f0bf48
+release=1
+source=https://github.com/zeppe-lin/lsw/archive/${version#*-}/lsw-$version.tar.gz
+
+build() {
+	# pick up system flags
+	sed -ri '/^(C|LD)FLAGS/s/ = /+=/g' lsw*/config.mk
+
+	make -C lsw* PREFIX=/usr DESTDIR=$PKG install
+}
