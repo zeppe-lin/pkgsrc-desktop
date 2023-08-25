@@ -4,7 +4,7 @@
 
 name=dwm
 version=6.0z1-f14a4e8
-release=1
+release=2
 source="https://github.com/zeppe-lin/dwm/archive/${version#*-}/dwm-$version.tar.gz
 	config.def.h"
 
@@ -18,7 +18,7 @@ build() {
 	[ -f $PKGMK_ROOT/config.h ] && cp $PKGMK_ROOT/config.h .
 
 	# pick up system flags
-	sed -i '/^\(C\|LD\)FLAGS/s/ = /+=/g' config.mk
+	sed -ri '/^(C|LD)FLAGS/s/ = /+=/g' config.mk
 
 	make PREFIX=/usr DESTDIR=$PKG install
 }
