@@ -3,12 +3,10 @@
 # Depends on:   gtk-engines
 
 name=trinity-gtk-theme
-version=1.0-38ca0b8
+version=1.0-076489f
 release=1
 source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
 
 build() {
-	cd $name-${version#*-}*
-
-	make PREFIX=/usr DESTDIR=$PKG install
+	make -C $name-* PREFIX=/usr DESTDIR=$PKG gtk.gresource install
 }
