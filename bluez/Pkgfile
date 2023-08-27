@@ -1,9 +1,9 @@
 # Description: Bluetooth libraries and utilities
-# URL:         http://www.bluez.org
+# URL:         http://www.bluez.org/
 # Depends on:  alsa-lib dbus glib docutils libical
 
 name=bluez
-version=5.68
+version=5.69
 release=1
 source="https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-$version.tar.xz
   	rc.bluetoothd"
@@ -11,7 +11,7 @@ source="https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-$version.tar.x
 build() {
 	mkdir build; cd build
 
-	# --disable-cups:    otherwise, requires cups
+	# --disable-cups:    requires cups otherwise
 	# --enable-manpages: requires docutils
 	# --enable-obex:     requires libical
 	../bluez-$version/configure    \
