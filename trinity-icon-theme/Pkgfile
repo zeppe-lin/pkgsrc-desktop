@@ -3,12 +3,10 @@
 # Depends on:  librsvg-compat hicolor-icon-theme
 
 name=trinity-icon-theme
-version=1.0-f9caa99
+version=1.0-3f0fac9
 release=1
 source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
 
 build() {
-	cd $name-${version#*-}*
-
-	make PREFIX=/usr DESTDIR=$PKG install
+	make -C $name-* PREFIX=/usr DESTDIR=$PKG install
 }
