@@ -2,7 +2,7 @@
 # URL:         https://github.com/zeppe-lin/qemuconf
 
 name=qemuconf
-version=0.4.3z-6922e46
+version=0.4.3z-ced09c6
 release=1
 source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
 
