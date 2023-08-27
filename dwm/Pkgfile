@@ -3,8 +3,8 @@
 # Depends on:  xorg-libxft xorg-libxinerama
 
 name=dwm
-version=6.0z1-f14a4e8
-release=2
+version=6.0z1-78afc27
+release=1
 source="https://github.com/zeppe-lin/dwm/archive/${version#*-}/dwm-$version.tar.gz
 	config.def.h"
 
@@ -15,7 +15,9 @@ build() {
 	cp -f $SRC/config.def.h .
 
 	# apply user-defined configuration if exists
-	[ -f $PKGMK_ROOT/config.h ] && cp $PKGMK_ROOT/config.h .
+	if [ -f $PKGMK_ROOT/config.h ]; then
+		cp $PKGMK_ROOT/config.h .
+	fi
 
 	# pick up system flags
 	sed -ri '/^(C|LD)FLAGS/s/ = /+=/g' config.mk
