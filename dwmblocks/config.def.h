@@ -7,8 +7,8 @@
  * customization.                                                   *
  ********************************************************************/
 
-/* Hack!  Increase statusbar output.  Normally shouldn't be redefined.
- * */
+/* Increase statusbar output (default is 50).
+ */
 #define CMDLENGTH 100
 
 /* Modify this file to change what commands output to your statusbar,
