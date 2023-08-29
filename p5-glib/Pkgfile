@@ -3,7 +3,7 @@
 # Depends on:  glib p5-extutils-depends p5-extutils-pkgconfig
 
 name=p5-glib
-version=1.3293
+version=1.3294
 release=1
 source=https://cpan.metacpan.org/authors/id/X/XA/XAOC/Glib-$version.tar.gz
 
