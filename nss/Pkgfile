@@ -3,11 +3,10 @@
 # Depends on:  nspr sqlite3
 
 name=nss
-version=3.92
+version=3.93
 release=1
 source="https://ftp.mozilla.org/pub/security/nss/releases/NSS_$(
-		echo $version | tr . _
-	)_RTM/src/nss-$version.tar.gz
+	echo $version | tr . _)_RTM/src/nss-$version.tar.gz
 	nss-3.54-standalone-2.patch
 	nss-config.in
 	nss.pc.in
@@ -46,13 +45,12 @@ build() {
 	install -t $PKG/usr/include/nss/private -m 644 blapi.h alghmac.h
 	install -m 0755 $SRC/nss-config.in $PKG/usr/bin/nss-config
 
-	local _VERSION=$(printf "%i.%i.%i" $(echo $version | tr . ' '))
-	sed -i "s/@VERSION@/$_VERSION/" $PKG/usr/bin/nss-config
+	_NSS_VERSION=$(printf "%i.%i.%i" $(echo $version | tr . ' '))
+	sed -i "s/@VERSION@/$_NSS_VERSION/" $PKG/usr/bin/nss-config
 
-	local _MODULE
-	local _NSS_LIBS=$($PKG/usr/bin/nss-config --libs)
-	local _NSS_CFLAGS=$($PKG/usr/bin/nss-config --cflags)
-	local _NSPR_VERSION=$(pkg-config --modversion nspr)
+	_NSS_LIBS=$($PKG/usr/bin/nss-config --libs)
+	_NSS_CFLAGS=$($PKG/usr/bin/nss-config --cflags)
+	_NSPR_VERSION=$(pkg-config --modversion nspr)
 	for _MODULE in nss nss-util nss-softokn; do
 		sed $SRC/$_MODULE.pc.in                          \
 			-e "s,%libdir%,/usr/lib,"                \
