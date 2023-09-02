@@ -1,6 +1,6 @@
 # Description: Message bus system (with X)
 # URL:         https://freedesktop.org/wiki/Software/dbus
-# Depends on:  libbsd xorg-libx11
+# Depends on:  xorg-libx11
 
 name=dbus
 version=1.14.10
