@@ -3,15 +3,16 @@
 # Depends on:  libbsd xorg-libx11
 
 name=dbus
-version=1.14.8
-release=2
-source="https://dbus.freedesktop.org/releases/dbus/$name-$version.tar.xz
-	30-dbus.launch rc.dbus"
+version=1.14.10
+release=1
+source="https://dbus.freedesktop.org/releases/dbus/dbus-$version.tar.xz
+	30-dbus.launch
+	rc.dbus"
 
 build() {
 	mkdir build; cd build
 
-	../$name-$version/configure                              \
+	../dbus-$version/configure                               \
 		--prefix=/usr                                    \
 		--libexecdir=/usr/lib/dbus                       \
 		--localstatedir=/var                             \
