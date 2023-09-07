@@ -2,12 +2,9 @@
 # URL:         https://www.palemoon.org/
 # Depends on:  alsa-lib autoconf-2.13 gtk python unzip xorg-libxdamage xorg-libxt yasm zip
 
-# https://repo.palemoon.org/MoonchildProductions/Pale-Moon/releases
-# https://repo.palemoon.org/MoonchildProductions/UXP/releases
-
 name=palemoon
-version=32.3.1
-_upxrel=20230711
+version=32.4.0
+_upxrel=20230904
 release=1
 source="https://repo.palemoon.org/MoonchildProductions/Pale-Moon/archive/${version}_Release.tar.gz
 	https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_${_upxrel}.tar.gz
