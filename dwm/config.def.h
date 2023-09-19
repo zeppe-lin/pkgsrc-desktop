@@ -124,6 +124,15 @@ static const Rule rules[] = {
   { "moc",                "moc",            "mocp",                   NULL,                     256,      false,      false,      0  },
   { "Jukebox",            "jukebox",        NULL,                     NULL,                     256,      false,      false,      0  },
   { "Jukebox",            "jukebox",        "Progress",               "Progress",               256,      true,       true,       0  },
+  { "Jukebox",            "jukebox",        "Settings",               "Pref",                   256,      true,       true,       0  },
+  { "Jukebox",            "jukebox",        "About jukebox",          NULL,                     256,      true,       true,       0  },
+  { "Jukebox",            "jukebox",        "License",                NULL,                     256,      true,       true,       0  },
+  { "Jukebox",            "jukebox",        "ReplayGain options",     NULL,                     256,      true,       true,       0  },
+  { "Jukebox",            "jukebox",        "Equalizer",              "Equalizer",              256,      true,       true,       0  },
+  { "Jukebox",            "jukebox",        "Choose folder to add",   "ChooseDir",              256,      true,       true,       0  },
+  { "Jukebox",            "jukebox",        "Mass Renaming",          "MassRename",             256,      true,       true,       0  },
+  { "Jukebox",            "jukebox",        "Update tags",            NULL,                     256,      true,       true,       0  },
+  { "Jukebox",            "jukebox",        "Player mounted on :",    NULL,                     256,      true,       true,       0  },
 
   /*
    * Current active monitor.
