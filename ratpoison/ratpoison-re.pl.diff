@@ -1,0 +1,38 @@
+diff --git a/src/actions.c b/src/actions.c
+index e65ca0c..f7df19d 100644
+--- a/src/actions.c
++++ b/src/actions.c
+@@ -340,6 +340,7 @@ static void
+ init_set_vars (void)
+ {
+   /* Keep this sorted alphabetically. */
++  /*@begin vars (tag required for genrpbindings) */
+   add_set_var ("barborder", set_barborder, 1, "", arg_NUMBER);
+   add_set_var ("bargravity", set_bargravity, 1, "", arg_GRAVITY);
+   add_set_var ("barinpadding", set_barinpadding, 1, "", arg_NUMBER);
+@@ -375,6 +376,7 @@ init_set_vars (void)
+   add_set_var ("wingravity", set_wingravity, 1, "", arg_GRAVITY);
+   add_set_var ("winliststyle", set_winliststyle, 1, "", arg_STRING);
+   add_set_var ("winname", set_winname, 1, "", arg_STRING);
++  /*@end vars (tag required for genrpbindings) */
+ }
+ 
+ /* i_nrequired is the number required when called
+@@ -419,7 +421,7 @@ user_command_free(struct user_command *cmd)
+ void
+ init_user_commands(void)
+ {
+-  /*@begin (tag required for genrpbindings) */
++  /*@begin commands (tag required for genrpbindings) */
+   add_command ("abort",         cmd_abort,      0, 0, 0);
+   add_command ("addhook",       cmd_addhook,    2, 2, 2,
+                "Hook: ", arg_HOOK,
+@@ -616,7 +618,7 @@ init_user_commands(void)
+                "Text: ", arg_RAW);
+   add_command ("getsel",        cmd_getsel,     0, 0, 0);
+   add_command ("commands",      cmd_commands,   0, 0, 0);
+-  /*@end (tag required for genrpbindings) */
++  /*@end commands (tag required for genrpbindings) */
+ 
+   /*
+     The following screen commands may or may not be able to be

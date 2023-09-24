@@ -1,0 +1,92 @@
+# Description: Keystroke-driven window manager
+# URL:         https://www.nongnu.org/ratpoison/
+# Depends on:  readline bash
+
+name=ratpoison
+version=1.4.9-db94d49
+release=1
+source="ctrlwasbackspace-20180528-b42faf8.diff
+	fixdedicate-20180514-b42faf8.diff
+	fixfindframex-20190524-b42faf8.diff
+	obeyresizehints-20180507-b42faf8.diff
+	ratpoison-re.pl.diff
+	genratpoison-re.pl"
+	
+
+download_git() {
+	# arg $1: git URL
+	# arg $2: branch
+	if [ -d $PKGMK_SOURCE_DIR/$name ]; then
+		git -C $PKGMK_SOURCE_DIR/$name fetch --depth=1
+		git -C $PKGMK_SOURCE_DIR/$name clean -f
+		git -C $PKGMK_SOURCE_DIR/$name reset --hard origin/$2
+	else
+		git -C $PKGMK_SOURCE_DIR clone --depth=1 $1 -b $2 $name
+	fi
+
+	cp -r $PKGMK_SOURCE_DIR/$name $PKGMK_WORK_DIR/src/$name
+}
+
+build() {
+	download_git https://git.savannah.nongnu.org/git/ratpoison.git master
+
+	cd ratpoison
+
+	# switch to the latest commit on top of which we apply the
+	# patches included in this package
+	git checkout ${version#*-}
+
+	# https://lists.nongnu.org/archive/html/ratpoison-devel/2018-05/msg00000.html
+	patch -p1 -i $SRC/obeyresizehints-20180507-b42faf8.diff
+
+	# https://lists.nongnu.org/archive/html/ratpoison-devel/2018-05/msg00002.html
+	patch -p1 -i $SRC/fixdedicate-20180514-b42faf8.diff
+
+	# https://lists.nongnu.org/archive/html/ratpoison-devel/2019-05/msg00000.html
+	patch -p1 -i $SRC/fixfindframex-20190524-b42faf8.diff
+
+	# https://lists.nongnu.org/archive/html/ratpoison-devel/2018-05/msg00003.html
+	patch -p1 -i $SRC/ctrlwasbackspace-20180528-b42faf8.diff
+
+	# needed for our genratpoison-re.pl
+	patch -p1 -i $SRC/ratpoison-re.pl.diff
+
+	# skip build info documentation
+	sed -e '/^info_TEXINFOS/d' \
+	    -e 's/ fdl.text//g'    \
+	    -e 's/ texinfo.tex//g' \
+	    -i doc/Makefile.am
+
+	cd -
+
+	mkdir build; cd build
+
+	autoreconf -i ../ratpoison
+	../ratpoison/configure   \
+		--prefix=/usr    \
+		--enable-history \
+
+	make MAKEINFO=: CFLAGS="$CFLAGS -DHAVE_GETLINE" V=1
+	make MAKEINFO=: DESTDIR=$PKG install
+
+	# ratpoison-re.pl
+	perl $SRC/genratpoison-re.pl         \
+	     $SRC/ratpoison/src/actions.c    \
+	   > $PKG/usr/bin/ratpoison-re.pl
+	chmod 0755 $PKG/usr/bin/ratpoison-re.pl
+
+	# ratpoison-re.pl manual page
+	pod2man -r "ratpoison-re.pl 0.1"     \
+		-c " "                       \
+		-n "ratpoison-re.pl"         \
+		-s 1                         \
+		$PKG/usr/bin/ratpoison-re.pl \
+		> $PKG/usr/share/man/man1/ratpoison-re.pl.1
+	chmod 0644 $PKG/usr/share/man/man1/ratpoison-re.pl.1
+
+	# remove junk and unused stuff
+	rm -r $PKG/usr/share/doc       \
+	      $PKG/usr/bin/rpws        \
+	      $PKG/usr/share/ratpoison \
+	      $PKG/usr/share/emacs
+}

@@ -1,0 +1,23 @@
+---
+ src/editor.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/editor.c b/src/editor.c
+index b1beebc..45d0a3d 100644
+--- a/src/editor.c
++++ b/src/editor.c
+@@ -84,6 +84,7 @@ static edit_binding edit_bindings[] =
+      {{XK_BackSpace,    0},             editor_backward_delete_char},
+      {{XK_h,            RP_CONTROL_MASK},       editor_backward_delete_char},
+      {{XK_BackSpace,    RP_META_MASK},          editor_backward_kill_word},
++     {{XK_w,            RP_CONTROL_MASK},       editor_backward_kill_word},
+      {{XK_d,            RP_META_MASK},          editor_kill_word},
+      {{XK_k,            RP_CONTROL_MASK},       editor_kill_line},
+      {{XK_u,            RP_CONTROL_MASK},       editor_backward_kill_line},
+-- 
+2.16.2
+
+
+-- 
+address@hidden
+SDF Public Access UNIX System - http://sdf.org
