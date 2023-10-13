@@ -140,6 +140,7 @@ static const Rule rules[] = {
 
   /* class                instance          title                     role                      tag mask  isfloating  iscentered  monitor
    */
+  { "SCRATCHPAD",         NULL,             NULL,                     NULL,                     0,        true,       true,       -1 },
   { "Ktsuss",             "ktsuss",         NULL,                     NULL,                     0,        true,       true,       -1 },
   { "Zim",                "zim",            "Zim - Web Server",       NULL,                     0,        true,       true,       -1 },
   { "todo.txt",           "todo.txt",       NULL,                     NULL,                     0,        true,       true,       -1 },
