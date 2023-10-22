@@ -1,0 +1,21 @@
+# Description: ALSA plugins
+# URL:         https://www.alsa-project.org/main/index.php/Main_Page
+# Depends on:  ffmpeg
+
+name=alsa-plugins
+version=1.2.7.1
+release=1
+source=http://www.alsa-project.org/files/pub/plugins/$name-$version.tar.bz2
+
+build() {
+	mkdir build; cd build
+
+	../$name-$version/configure      \
+		--prefix=/usr            \
+		--sysconfdir=/etc        \
+		--mandir=/usr/share/man  \
+		--localstatedir=/var     \
+
+	make V=1
+	make DESTDIR=$PKG install
+}
