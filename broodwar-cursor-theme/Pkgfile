@@ -1,0 +1,18 @@
+# Description: StarCraft Brood War cursor theme
+# URL:         https://www.gnome-look.org/p/1680392/
+
+name=broodwar-cursor-theme
+version=1.0-20220109
+release=1
+source=broodwar-$version.orig.tar.gz
+
+build() {
+	mkdir -p $PKG/usr/share/icons
+
+	mv broodwar $PKG/usr/share/icons/
+	cat <<EOF > $PKG/usr/share/icons/broodwar/index.theme
+[Icon Theme]
+Name=StarCraft Brood War
+Comment=Original Brood War cursor extended
+EOF
+}

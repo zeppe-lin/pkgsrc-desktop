@@ -1,0 +1,84 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/icons/
+drwxr-xr-x	root/root	usr/share/icons/broodwar/
+drwxr-xr-x	root/root	usr/share/icons/broodwar/cursors/
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/00000000000000020006000e7e9ffc3f -> half-busy
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/00008160000006810000408080010102 -> size_ver
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/03b6e0fcb3499374a867c041f52298f0 -> circle
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/08e8e1c95fe2fc01f976f1e063a24ccd -> half-busy
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/1081e37283d90000800003c07f3ef6bf -> copy
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/3085a0e285430894940527032f8b26df -> link
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/3ecb610c1bf2410f44200f48c40d3599 -> half-busy
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/5c6cd98b3f3ebcb1f9c7f1c204630408 -> help
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/6407b0e94181790501fd1e167b474872 -> copy
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/640fb0e74195791501fd1ed57b41487f -> link
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/9d800788f1b08800ae810202380a0822 -> pointing_hand
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/a2a266d0498c3104214a47bd64ab0fc8 -> link
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/alias -> link
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/all-scroll -> fleur
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/b66166c04f8c3109214a4fbd64a50fc8 -> copy
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/bottom_left_corner
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/bottom_right_corner
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/bottom_side -> down_Frame
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/circle
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/closedhand
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/col-resize -> split_h
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/color-picker
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/copy
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/cross
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/crossed_circle -> circle
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/d9ce0ab605698f320427677b458ad60b -> help
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/dnd-copy -> copy
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/dnd-link -> link
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/dnd-no-drop -> forbidden
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/down_Frame
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/e-resize -> size_hor
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/e29285e634086352946a0e7090d73106 -> pointing_hand
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/fleur
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/forbidden
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/grabbing -> closedhand
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/half-busy
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/hand1 -> pointing_hand
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/hand2 -> pointing_hand
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/help
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/ibeam -> text
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/left_Frame
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/left_ptr
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/left_ptr_watch -> half-busy
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/left_side -> left_Frame
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/link
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/n-resize -> size_ver
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/not-allowed -> forbidden
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/openhand
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/pencil
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/plus
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/pointer -> pointing_hand
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/pointing_hand
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/progress -> half-busy
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/question_arrow -> help
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/right_Frame
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/right_side -> right_Frame
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/row-resize -> split_v
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/s-resize -> size_ver
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/sb_h_double_arrow -> size_hor
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/sb_v_double_arrow -> size_ver
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/size_all -> fleur
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/size_bdiag
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/size_fdiag
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/size_hor
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/size_ver
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/split_h
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/split_v
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/text
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/top_Frame
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/top_left_corner
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/top_right_corner
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/top_side -> top_Frame
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/v_double_arrow -> size_ver
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/w-resize -> size_hor
+-rw-r--r--	root/root	usr/share/icons/broodwar/cursors/wait
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/watch -> wait
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/whats_this -> help
+lrwxrwxrwx	root/root	usr/share/icons/broodwar/cursors/xterm -> text
+-rw-r--r--	root/root	usr/share/icons/broodwar/index.theme
