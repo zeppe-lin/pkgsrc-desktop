@@ -3,9 +3,9 @@
 # Depends on:  zlib
 
 name=libid3tag
-version=0.16.2
+version=0.16.3
 release=1
-source=https://distfiles.gentoo.org/distfiles/$name-$version.codeberg.tar.gz
+source=$name-$version.tar.gz::https://codeberg.org/tenacityteam/$name/archive/$version.tar.gz
 
 build() {
 	cmake -S $name -B build -G Ninja                \
