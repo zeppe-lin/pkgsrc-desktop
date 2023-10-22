@@ -1,0 +1,28 @@
+# Description: Firmware binaries for loader programs in alsa-tools and hotplug firmware loader
+# URL:         https://alsa-project.org/
+
+name=alsa-firmware
+version=1.2.4
+release=1
+source=https://www.alsa-project.org/files/pub/firmware/$name-$version.tar.bz2
+
+build() {
+	# build in separate dir is broken
+	cd $name-$version
+
+	autoreconf -fiv
+	./configure \
+		--prefix=/usr                    \
+		--enable-buildfw                 \
+		--with-hotplugdir=/lib/firmware  \
+
+	make V=1
+	make DESTDIR=$PKG install
+
+	ls $PKG
+	# conflicts with linux-firmware
+	cd $PKG/lib/firmware
+	rm -r ctefx.bin ctspeq.bin ess korg sb16 yamaha
+	# broken symlinks (broken upstream)
+	rm -r turtlebeach
+}
