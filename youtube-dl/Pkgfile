@@ -5,9 +5,11 @@
 name=youtube-dl
 version=2021.12.17
 release=1
-source=https://youtube-dl.org/downloads/$version/$name-$version.tar.gz
+source=https://github.com/ytdl-org/$name/releases/download/$version/$name-$version.tar.gz
 
 build() {
+	export TMPDIR=$PKGMK_WORK_DIR
+
 	cd $name
 
 	# fix completion dir
