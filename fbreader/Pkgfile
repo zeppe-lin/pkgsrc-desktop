@@ -5,7 +5,7 @@
 name=fbreader
 version=0.99.4
 release=1
-source="https://distfiles.gentoo.org/distfiles/$name-sources-$version.tgz
+source="$name-sources-$version.tgz
 	$name-$version.patch
 	$name-gcc6.patch
 	$name-qt5.patch"
