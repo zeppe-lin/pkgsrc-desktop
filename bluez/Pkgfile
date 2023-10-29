@@ -3,7 +3,7 @@
 # Depends on:  alsa-lib dbus glib docutils libical
 
 name=bluez
-version=5.69
+version=5.70
 release=1
 source="https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-$version.tar.xz
   	rc.bluetoothd"
