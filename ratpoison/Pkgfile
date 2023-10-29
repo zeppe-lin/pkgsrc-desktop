@@ -1,6 +1,6 @@
 # Description: Keystroke-driven window manager
 # URL:         https://www.nongnu.org/ratpoison/
-# Depends on:  readline bash
+# Depends on:  readline bash xorg-libx11
 
 name=ratpoison
 version=1.4.9-db94d49
