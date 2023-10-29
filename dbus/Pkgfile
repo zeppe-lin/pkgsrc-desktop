@@ -4,7 +4,7 @@
 
 name=dbus
 version=1.14.10
-release=1
+release=2
 source="https://dbus.freedesktop.org/releases/dbus/dbus-$version.tar.xz
 	30-dbus.launch
 	rc.dbus"
