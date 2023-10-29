@@ -1,8 +1,6 @@
 # Description: Perl extension for the DBus message system
 # URL:         https://metacpan.org/pod/Net::DBus
-# Depends on:  p5-xml-twig
-
-# TODO: fix dependencies
+# Depends on:  p5-xml-twig dbus
 
 name=p5-net-dbus
 version=1.2.0
