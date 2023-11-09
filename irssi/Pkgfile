@@ -1,6 +1,6 @@
 # Description: Terminal based IRC client
 # URL:         https://irssi.org/
-# Depends on:  glib openssl perl
+# Depends on:  glib libpcre2 openssl perl
 
 name=irssi
 version=1.4.5
