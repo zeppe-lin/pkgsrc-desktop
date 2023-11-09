@@ -1,6 +1,6 @@
 # Description: Image manipulation wizard
 # URL:         https://imagemagick.org/
-# Depends on:  chrpath libbsd libjpeg-turbo libpng libtool libxml2 perl xorg-libxext xorg-libxt
+# Depends on:  chrpath libjpeg-turbo libpng libtool libxml2 perl xorg-libxext xorg-libxt
 
 name=imagemagick
 version=7.1.1-21
