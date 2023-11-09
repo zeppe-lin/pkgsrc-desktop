@@ -1,6 +1,6 @@
 # Description: PDF rendering library based on xpdf 3.0
 # URL:         https://poppler.freedesktop.org/
-# Depends on:  curl harfbuzz libjpeg-turbo libpcre2
+# Depends on:  curl gpgme harfbuzz libjpeg-turbo nss
 
 name=poppler
 version=23.11.0
