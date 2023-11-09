@@ -1,6 +1,6 @@
 # Description: iCalendar protocols and protocol data units
 # URL:         https://github.com/libical/libical
-# Depends on:  db glib libxml2
+# Depends on:  db glib libpcre2 libxml2
 
 name=libical
 version=3.0.17
