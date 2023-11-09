@@ -3,7 +3,7 @@
 # Depends on:  curl harfbuzz libjpeg-turbo libpcre2
 
 name=poppler
-version=23.09.0
+version=23.11.0
 release=1
 source=https://$name.freedesktop.org/$name-$version.tar.xz
 
@@ -24,6 +24,8 @@ build() {
 		-D ENABLE_QT6=OFF                       \
 		-D ENABLE_ZLIB=ON                       \
 		-D ENABLE_LIBOPENJPEG=none              \
+		-D ENABLE_LIBTIFF=OFF                   \
+		-D ENABLE_LCMS=OFF                      \
 		-D ENABLE_GOBJECT_INTROSPECTION=OFF     \
 		-D WITH_NSS3=OFF                        \
 		-D WITH_GObjectIntrospection=OFF        \
