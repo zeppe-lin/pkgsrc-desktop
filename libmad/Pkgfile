@@ -2,9 +2,10 @@
 # URL:         http://www.underbit.com/products/mad/
 
 name=libmad
-version=0.16.3
+version=0.16.4
 release=1
-source=https://distfiles.icmpv6.org/distfiles/$name-$version.tar.gz
+#source=https://distfiles.icmpv6.org/distfiles/$name-$version.tar.gz
+source=$name-$version.tar.gz::https://codeberg.org/tenacityteam/$name/archive/$version.tar.gz
 
 build() {
 	cmake -S $name -B build -G Ninja                 \
