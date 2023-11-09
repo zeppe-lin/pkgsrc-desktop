@@ -3,16 +3,16 @@
 # Depends on:  freetype giflib libbsd libid3tag libjpeg-turbo xorg-libxext
 
 name=imlib2
-version=1.12.0
+version=1.12.1
 release=1
 source=https://download.sourceforge.net/enlightenment/$name-$version.tar.gz
 
 build() {
 	mkdir build; cd build
 
-	# --disable-doc-build: otherwise, requires doxygen
-	# --without-tiff:      otherwise, requires libtiff
-	# --without-webp:      otherwise, requires webp
+	# --disable-doc-build: otherwise requires doxygen
+	# --without-tiff:      otherwise requires libtiff
+	# --without-webp:      otherwise requires webp
 	../$name-$version/configure  \
 		--prefix=/usr        \
 		--disable-doc-build  \
