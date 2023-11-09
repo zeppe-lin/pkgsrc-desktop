@@ -1,6 +1,6 @@
 # Description: Fast image manipulation library
 # URL:         http://docs.enlightenment.org/api/imlib2/html/
-# Depends on:  freetype giflib libbsd libid3tag libjpeg-turbo xorg-libxext
+# Depends on:  giflib harfbuzz libid3tag libjpeg-turbo
 
 name=imlib2
 version=1.12.1
