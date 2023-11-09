@@ -3,7 +3,7 @@
 # Depends on:  gnupg
 
 name=gpgme
-version=1.22.0
+version=1.23.1
 release=1
 source=https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-$version.tar.bz2
 
@@ -24,7 +24,7 @@ build() {
 	make V=1
 	make DESTDIR=$PKG install
 
-	install -d $PKG/usr/etc/gpgme
+	mkdir -p $PKG/usr/etc/gpgme
 	echo 'c cpp' > $PKG/usr/etc/gpgme/base
 
 	# remove junk
