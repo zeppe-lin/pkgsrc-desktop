@@ -1,6 +1,6 @@
 # Description: Qt5 Configuration Utility
 # URL:         https://sourceforge.net/projects/qt5ct/
-# Depends on:  libpcre2 qt5 zstd
+# Depends on:  qt5
 
 name=qt5ct
 version=1.8
