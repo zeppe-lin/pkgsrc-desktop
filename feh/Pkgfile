@@ -1,6 +1,6 @@
 # Description: Fast and light imlib2-based image viewer
 # URL:         https://feh.finalrewind.org/
-# Depends on:  curl harfbuzz imlib2 libexif libpcre2 xorg-libxinerama
+# Depends on:  curl harfbuzz imlib2 libexif xorg-libxinerama
 
 name=feh
 version=3.10.1
