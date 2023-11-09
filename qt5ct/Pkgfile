@@ -3,12 +3,12 @@
 # Depends on:  libpcre2 qt5 zstd
 
 name=qt5ct
-version=1.7
+version=1.8
 release=1
-source=https://downloads.sourceforge.net/project/$name/$name-$version.tar.bz2
+source=https://downloads.sourceforge.net/project/qt5ct/qt5ct-$version.tar.bz2
 
 build() {
-	cmake -S $name-$version -B build -G Ninja       \
+	cmake -S qt5ct-$version -B build -G Ninja       \
 		-D CMAKE_INSTALL_PREFIX=/usr            \
 		-D CMAKE_INSTALL_LIBDIR=lib             \
 		-D CMAKE_BUILD_TYPE=None                \
