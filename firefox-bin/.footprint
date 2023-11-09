@@ -39,6 +39,7 @@ drwxr-xr-x	root/root	opt/firefox/gmp-clearkey/0.1/
 drwxr-xr-x	root/root	opt/firefox/icons/
 -rw-r--r--	root/root	opt/firefox/icons/updater.png
 -rwxr-xr-x	root/root	opt/firefox/libfreeblpriv3.so
+-rwxr-xr-x	root/root	opt/firefox/libgkcodecs.so
 -rwxr-xr-x	root/root	opt/firefox/libipcclientcerts.so
 -rwxr-xr-x	root/root	opt/firefox/liblgpllibs.so
 -rwxr-xr-x	root/root	opt/firefox/libmozavcodec.so
@@ -62,8 +63,6 @@ drwxr-xr-x	root/root	opt/firefox/icons/
 -rw-r--r--	root/root	opt/firefox/omni.ja
 -rwxr-xr-x	root/root	opt/firefox/pingsender
 -rw-r--r--	root/root	opt/firefox/platform.ini
--rwxr-xr-x	root/root	opt/firefox/plugin-container
--rw-r--r--	root/root	opt/firefox/plugin-container.sig
 -rw-r--r--	root/root	opt/firefox/precomplete
 -rw-r--r--	root/root	opt/firefox/removed-files (EMPTY)
 -rw-r--r--	root/root	opt/firefox/update-settings.ini

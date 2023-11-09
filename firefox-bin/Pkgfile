@@ -3,7 +3,7 @@
 # Depends on:  alsa-lib dbus-glib gtk3 nss xorg-libxtst
 
 name=firefox-bin
-version=117.0.1
+version=119.0.1
 release=1
 source="https://ftp.mozilla.org/pub/firefox/releases/$version/linux-x86_64/en-US/firefox-$version.tar.bz2
 	firefox.sh
@@ -23,7 +23,7 @@ build() {
 		firefox.desktop
 
 	# add icon to standard path (desktop file refers to it)
-	install -d $PKG/usr/share/pixmaps
+	mkdir -p $PKG/usr/share/pixmaps
 	ln -s /opt/firefox/browser/chrome/icons/default/default32.png \
 		$PKG/usr/share/pixmaps/firefox.png
 
@@ -35,6 +35,6 @@ build() {
 		policies.json
 
 	# revdep configuration
-	install -d $PKG/etc/revdep.d
+	mkdir -p $PKG/etc/revdep.d
 	echo "/opt/firefox" > $PKG/etc/revdep.d/$name
 }
