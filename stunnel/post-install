@@ -1,6 +1,14 @@
 #!/bin/sh -ex
 export PATH="/sbin:/usr/sbin:/bin:/usr/bin"
-getent group  stunnel || groupadd -r stunnel
-getent passwd stunnel || useradd -g stunnel -r \
-	-d /var/empty -s /bin/false stunnel
+
+if ! getent group  stunnel; then
+	groupadd -r stunnel
+fi
+
+if ! getent passwd stunnel; then
+	useradd -g stunnel -r -d /var/empty -s /bin/false stunnel
+fi
+
 passwd -l stunnel
+
+# End of file.
