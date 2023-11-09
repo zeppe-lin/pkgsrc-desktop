@@ -1,18 +1,18 @@
 # Description: Terminal based IRC client
-# URL:         https://irssi.org
+# URL:         https://irssi.org/
 # Depends on:  glib openssl perl
 
 name=irssi
-version=1.4.4
+version=1.4.5
 release=1
-source=https://github.com/irssi-import/irssi/releases/download/$version/$name-$version.tar.xz
+source=https://github.com/irssi/irssi/releases/download/$version/irssi-$version.tar.xz
 
 build() {
 	export CFLAGS="$CFLAGS -Wno-deprecated-declarations"
 
 	mkdir build; cd build
 
-	../$name-$version/configure   \
+	../irssi-$version/configure   \
 		--prefix=/usr         \
 		--enable-true-color   \
 		--with-perl-lib=site  \
