@@ -3,7 +3,7 @@
 # Depends on:  db glib libxml2
 
 name=libical
-version=3.0.16
+version=3.0.17
 release=1
 source=https://github.com/$name/$name/archive/v$version/$name-$version.tar.gz
 
