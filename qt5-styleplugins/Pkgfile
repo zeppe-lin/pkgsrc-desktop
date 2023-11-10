@@ -4,7 +4,7 @@
 
 name=qt5-styleplugins
 version=5.0.0-335dbec
-release=2
+release=3
 source="https://github.com/qt/qtstyleplugins/archive/${version#*-}/$name-$version.tar.gz
 	qt5.15.patch"
 
