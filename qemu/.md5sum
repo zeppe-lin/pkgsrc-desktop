@@ -1,5 +1,5 @@
 b0d46ed66d9b2ad07bd5ec3eeabf7fcb  60-kvm.rules
 91b5fed04f4c4438c8718e8d8f5b7c72  qemu-5.2.0-disable-keymap.patch
-2db2834d3bca8e8f49a6d7562b95eb4a  qemu-7.2.5.tar.xz
+ab16bd86d5e5bc392efb0712eb9796b6  qemu-7.2.6.tar.xz
 aa49de19b898bbd34caa718faeefcbbf  qemu-man-7.0.0.tar.xz
 52afb159100c4e2227fea6c34de76e55  tricore_feature.patch
