@@ -5,7 +5,7 @@
 name=firefox-darkreader-bin
 version=4.9.67
 release=1
-# URL changes on each version, see:
+# The source URL changes on each version, see:
 # https://addons.mozilla.org/en-US/firefox/addon/darkreader/
 source=https://addons.mozilla.org/firefox/downloads/file/4175386/darkreader-$version.xpi
 
