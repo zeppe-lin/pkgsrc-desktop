@@ -3,14 +3,12 @@
 # Depends on:  firefox-bin
 
 name=firefox-darkreader-bin
-version=4.9.67
+version=4.9.68
 release=1
-# The source URL changes on each version, see:
-# https://addons.mozilla.org/en-US/firefox/addon/darkreader/
-source=https://addons.mozilla.org/firefox/downloads/file/4175386/darkreader-$version.xpi
+source=$name-$version.xpi::https://github.com/darkreader/darkreader/releases/download/v$version/darkreader-firefox.xpi
 
 build() {
 	local _DESTDIR=$PKG/opt/firefox/distribution/extensions
-	install -m 0644 -D darkreader-$version.xpi \
+	install -m 0644 -D $name-$version.xpi \
 		$_DESTDIR/addon@darkreader.org.xpi
 }
