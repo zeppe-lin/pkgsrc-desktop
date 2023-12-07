@@ -10,7 +10,7 @@
  * Appearance.
  */
 
-static const char          font[]             = "Iosevka Term:style=Regular:size=10";
+static const char          font[]             = "JetBrainsMono Nerd Font:style=Regular:size=10";
 #if 0
 static const char          font[]             = "Sans Mono:size=9";
 static const char          font[]             = "xos4 Terminus:style=Regular:size=9";
@@ -83,11 +83,37 @@ static CustomTagLayout tags[][TAGS] = {
     * Don't exceed "Number of tags per monitor" or change TAGS
     * definition value (declared above) if you want more tags.
     */
-  }
+  },
 
   /*
    * Monitor 1.
    */
+
+  {{"1",       0},
+   {"2",       0},
+   {"3",       0},
+   {"4",       0},
+   {"5",       0},
+   {"6",       0},
+   {"7",       0},
+   {"8",       0},
+   {"9",       0},
+  },
+
+  /*
+   * Monitor 2.
+   */
+
+  {{"1",       0},
+   {"2",       0},
+   {"3",       0},
+   {"4",       0},
+   {"5",       0},
+   {"6",       0},
+   {"7",       0},
+   {"8",       0},
+   {"9",       0},
+  },
 
   /* ... */
 };
