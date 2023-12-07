@@ -2,6 +2,8 @@
 # URL:         https://mpv.io/
 # Depends on:  ffmpeg libarchive libjpeg-turbo libpcre2 mesa xorg-libxinerama xorg-libxscrnsaver xorg-libxpresent
 
+# The version 0.37.0 requires libplacebo.
+
 name=mpv
 version=0.36.0
 release=1
