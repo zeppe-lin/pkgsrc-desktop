@@ -3,7 +3,7 @@
 # Depends on:  girara libseccomp
 
 name=zathura
-version=0.5.2
+version=0.5.4
 release=1
 source="https://pwmt.org/projects/$name/download/$name-$version.tar.xz
 	remove_gettext.patch"
@@ -23,7 +23,7 @@ build() {
 		-D b_pie=true            \
 		-D synctex=disabled      \
 		-D sqlite=disabled       \
-		-D seccomp=enabled       \
+		-D seccomp=disabled      \
 		-D tests=disabled        \
 		-D manpages=disabled     \
 		-D convert-icon=enabled  \
