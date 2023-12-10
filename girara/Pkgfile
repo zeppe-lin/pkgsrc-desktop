@@ -1,10 +1,10 @@
 # Description: UI library focusing on simplicity and minimalism
 # URL:         https://pwmt.org/projects/girara
 # Depends on:  gtk3
-# Optional:    libnotify
+# Optional:    libnotify json-glib
 
 name=girara
-version=0.4.0
+version=0.4.1
 release=1
 source=https://pwmt.org/projects/$name/download/$name-$version.tar.xz
 
@@ -15,6 +15,10 @@ build() {
 	    -e "/^subdir('po')/d"       \
 	    -i $name-$version/meson.build
 
+	# -D docs=disabled:   doxygen API docs
+	# -D json=disabled:   dump configuration using JSON,
+	#                     requires json-glib
+	# -D notify=disabled: notifications using libnotify
 	meson build $name-$version      \
 		--prefix=/usr           \
 		--sysconfdir=/usr/etc   \
