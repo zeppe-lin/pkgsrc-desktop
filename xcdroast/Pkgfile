@@ -4,16 +4,13 @@
 
 name=xcdroast
 version=1.19
-release=3
+release=4
 source="https://downloads.sourceforge.net/project/$name/$name-$version.tar.gz
 	http://www.xcdroast.org/release/patches/$name-$version-Patches.tar.gz
 	change_font_defs.patch"
 
 build() {
-	# use Iosevka font instead of Terminus
-	sed -e 's/xos4 Terminus 9/Iosevka Term 10/g'           \
-	    -e 's/xos4 Terminus Bold 9/Iosevka Term Bold 10/g' \
-	    -i $SRC/change_font_defs.patch
+	# use JetBrains Mono font
 	patch -p6 -d $name-$version -i $SRC/change_font_defs.patch
 
 	# apply upstream patches

@@ -8,9 +8,9 @@ diff '--color=always' -pruN '--color=never' /var/cache/pkgmk/sources/xcdroast-1.
 -#define PANGO_MONOSPACE "Monospace 10"
 -#define PANGO_BOLD "Normal Bold"
 -#define PANGO_BIG "Normal 18"
-+#define PANGO_MONOSPACE "xos4 Terminus 9"
-+#define PANGO_BOLD "xos4 Terminus Bold 9"
-+#define PANGO_BIG "xos4 Terminus 9"
++#define PANGO_MONOSPACE "JetBrains Mono NL 9"
++#define PANGO_BOLD "JetBrains Mono NL Bold 9"
++#define PANGO_BIG "JetBrains Mono NL 10"
  #define PANGO_ITALIC "Italic"
  
  /*
