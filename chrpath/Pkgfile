@@ -1,17 +1,16 @@
 # Description: Change or delete the rpath or runpath in ELF files
-# URL:         https://directory.fsf.org/project/chrpath/
+# URL:         https://codeberg.org/pere/chrpath
 
 name=chrpath
-version=0.16
+version=0.17
 release=1
-source=http://http.debian.net/debian/pool/main/c/chrpath/chrpath_$version.orig.tar.gz
+source=$name-$version.tar.gz::https://codeberg.org/pere/$name/archive/release-$version.tar.gz
 
 build() {
-	mkdir build; cd build
+	cd $name
 
-	../$name-$version/configure      \
-		--prefix=/usr            \
-		--mandir=/usr/share/man  \
+	./bootstrap
+	./configure --prefix=/usr
 
 	make V=1
 	make DESTDIR=$PKG install
