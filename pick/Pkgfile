@@ -1,0 +1,15 @@
+# Description: Fuzzy search tool for the command-line
+# URL:         https://github.com/mptre/pick
+# Depends on:  ncurses
+
+name=pick
+version=4.0.0
+release=1
+source=https://github.com/mptre/pick/releases/download/v$version/pick-$version.tar.gz
+
+build() {
+	cd $name-$version
+
+	./configure
+	make BINDIR=/usr/bin MANDIR=/usr/share/man DESTDIR=$PKG install
+}
