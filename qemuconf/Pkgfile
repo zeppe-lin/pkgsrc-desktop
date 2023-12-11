@@ -1,8 +1,8 @@
-# Description: Qemu launcher with config file support
+# Description: Qemu launcher with config file support (Zeppe-Lin fork)
 # URL:         https://github.com/zeppe-lin/qemuconf
 
 name=qemuconf
-version=0.4.3z-5bc4160
+version=0.4.4-e81db8a
 release=1
 source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
 
