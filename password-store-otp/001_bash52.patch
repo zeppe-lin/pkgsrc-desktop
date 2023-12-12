@@ -1,0 +1,12 @@
+diff '--color=auto' -pruN ../pass-otp-1.2.0.orig/otp.bash ./otp.bash
+--- ../pass-otp-1.2.0.orig/otp.bash	2023-12-12 18:32:27.979105219 +0200
++++ ./otp.bash	2023-12-12 18:43:07.190587605 +0200
+@@ -357,7 +357,7 @@ cmd_otp_code() {
+ 
+   if [[ "$otp_type" == "hotp" ]]; then
+     # Increment HOTP counter in-place
+-    local line replaced uri=${otp_uri/&counter=$otp_counter/&counter=$counter}
++    local line replaced uri=${otp_uri/&counter=$otp_counter/\&counter=$counter}
+     while IFS= read -r line; do
+       [[ "$line" == otpauth://* ]] && line="$uri"
+       [[ -n "$replaced" ]] && replaced+=$'\n'

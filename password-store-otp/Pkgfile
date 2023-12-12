@@ -1,0 +1,27 @@
+# Description: Password-store extension for managing OTP tokens
+# URL:         https://github.com/tadfisher/pass-otp
+# Depends on:  oath-toolkit password-store qrencode
+
+name=password-store-otp
+version=1.2.0
+release=1
+source="https://github.com/tadfisher/pass-otp/archive/v$version/pass-otp-$version.tar.gz
+	001_bash52.patch
+	002_manpage.patch
+	003_time.patch"
+
+
+build() {
+	# fix broken HOTP counter updating with bash 5.2
+	patch -d pass-otp-$version -p0 -i $SRC/001_bash52.patch
+
+	# add EXAMPLES section to the man page
+	patch -d pass-otp-$version -p0 -i $SRC/002_manpage.patch
+
+	# add TOTP time remaining calc and printout
+	patch -d pass-otp-$version -p0 -i $SRC/003_time.patch
+
+	make -C pass-otp-$version                                   \
+		BASHCOMPDIR=/usr/share/bash-completion/completions  \
+		DESTDIR=$PKG install
+}

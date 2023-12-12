@@ -1,0 +1,26 @@
+diff '--color=auto' -pruN ../pass-otp-1.2.0.orig/otp.bash ./otp.bash
+--- ../pass-otp-1.2.0.orig/otp.bash	2023-12-12 18:32:27.979105219 +0200
++++ ./otp.bash	2023-12-12 20:24:56.111479580 +0200
+@@ -334,9 +334,12 @@ cmd_otp_code() {
+   local cmd
+   case "$otp_type" in
+     totp)
++      curr_time=$(date +%s)
++      totp_time_remaining=$((30 - (curr_time % 30)))
+       cmd="$OATH -b --totp"
+       [[ -n "$otp_algorithm" ]] && cmd+=$(echo "=${otp_algorithm}"|tr "[:upper:]" "[:lower:]")
+       [[ -n "$otp_period" ]] && cmd+=" --time-step-size=$otp_period"s
++      [[ -n "$otp_period" ]] && cmd+=" --time-step-size=$otp_period"s && totp_time_remaining=$((otp_period - (curr_time % otp_period)))
+       [[ -n "$otp_digits" ]] && cmd+=" --digits=$otp_digits"
+       cmd+=" $otp_secret"
+       ;;
+@@ -372,6 +375,9 @@ cmd_otp_code() {
+   else
+     echo "$out"
+   fi
++  if [[ -n "$totp_time_remaining" ]]; then
++    echo >&2 "Expires in: $totp_time_remaining seconds"
++  fi
+ }
+ 
+ cmd_otp_uri() {
