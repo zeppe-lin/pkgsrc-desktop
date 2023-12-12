@@ -1,0 +1,20 @@
+# Description: OATH one-time password toolkit
+# URL:         https://www.nongnu.org/oath-toolkit/
+# Depends on:  linux-pam xmlsec
+
+name=oath-toolkit
+version=2.6.9
+release=1
+source=https://download.savannah.nongnu.org/releases/$name/$name-$version.tar.gz
+
+build() {
+	mkdir build; cd build
+
+	../$name-$version/configure  \
+		--prefix=/usr        \
+		--enable-pam         \
+		--enable-pskc        \
+
+	make V=1
+	make DESTDIR=$PKG install
+}
