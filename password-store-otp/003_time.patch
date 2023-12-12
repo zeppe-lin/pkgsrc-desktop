@@ -19,7 +19,7 @@ diff '--color=auto' -pruN ../pass-otp-1.2.0.orig/otp.bash ./otp.bash
      echo "$out"
    fi
 +  if [[ -n "$totp_time_remaining" ]]; then
-+    echo >&2 "Expires in: $totp_time_remaining seconds"
++    echo >&2 "OTP code expires in: $totp_time_remaining seconds"
 +  fi
  }
  
