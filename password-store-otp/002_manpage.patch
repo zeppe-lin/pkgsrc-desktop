@@ -16,7 +16,7 @@ diff '--color=auto' -pruN ../pass-otp-1.2.0.orig/pass-otp.1 ./pass-otp.1
  \fI--force\fP or \fI-f\fP is specified. This command is alternatively named
  \fBadd\fP.
  
-@@ -120,6 +120,97 @@ was written by
+@@ -120,6 +120,101 @@ was written by
  Tad Fisher
  .ME .
  
@@ -74,7 +74,11 @@ diff '--color=auto' -pruN ../pass-otp-1.2.0.orig/pass-otp.1 ./pass-otp.1
 +$ wl-paste | zbarimg -q --raw - | pass otp append google/example@gmail.com
 +.fi
 +.RE
-+
++.IP
++Or just select the region on the screen through \fBimagemagick(1)\fR and pipe it:
++.nf
++$ import -quality 100 png:- | zbarimg -q --raw - | pass ...
++.fi
 +.RE
 +
 +
