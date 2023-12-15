@@ -3,10 +3,11 @@
 # Depends on:  alsa-lib dbus glib docutils libical
 
 name=bluez
-version=5.70
+version=5.71
 release=1
 source="https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-$version.tar.xz
-  	rc.bluetoothd"
+  	rc.bluetoothd
+	modprobe.bluetooth"
 
 build() {
 	mkdir build; cd build
@@ -36,6 +37,7 @@ build() {
 		$PKG/etc/bluetooth/main.conf
 
 	install -m 0755 -D $SRC/rc.bluetoothd $PKG/etc/rc.d/bluetoothd
+	install -m 0644 -D $SRC/modprobe.bluetooth $PKG/etc/modprobe.d/bluetooth
 
 	# libical-related file
 	install -m 0755 -Dt $PKG/usr/lib/bluetooth/ tools/obexctl
