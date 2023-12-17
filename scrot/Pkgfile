@@ -1,0 +1,23 @@
+# Description: Command-line screenshot utility for X
+# URL:         https://github.com/resurrecting-open-source-projects/scrot
+# Depends on:  autoconf-archive imlib2 xorg-libxcomposite xorg-libxinerama
+
+name=scrot
+version=1.10
+release=1
+source=https://github.com/resurrecting-open-source-projects/scrot/archive/$version/scrot-$version.tar.gz
+
+build() {
+	mkdir build; cd build
+
+	autoreconf -fi ../$name-$version
+	../$name-$version/configure      \
+		--prefix=/usr            \
+		--mandir=/usr/share/man  \
+
+	make V=1
+	make DESTDIR=$PKG install
+
+	# remove junk
+	rm -r $PKG/usr/share/doc
+}
