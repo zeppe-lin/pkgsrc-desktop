@@ -5,20 +5,25 @@
 
 name=password-store
 version=1.7.4
-release=1
+release=2
 source="https://git.zx2c4.com/$name/snapshot/$name-$version.tar.xz
-	ensure_compat_with_tree_2.0.patch"
+	passmenu.1
+	gnupg1-support.patch
+	tree-2.0-compat.patch"
 
 build() {
 	export WITH_BASHCOMP=yes # enable  bash completion
 	export WITH_ZSHCOMP=no   # disable  zsh completion
 	export WITH_FISHCOMP=no  # disable fish completion
 
-	cd password-store-$version
+	patch -d $name-$version -p1 -i $SRC/gnupg1-support.patch
+	patch -d $name-$version -p1 -i $SRC/tree-2.0-compat.patch
 
-	patch -Np1 -i $SRC/ensure_compat_with_tree_2.0.patch
+	make -C $name-$version PREFIX=/usr DESTDIR=$PKG install
 
-	make PREFIX=/usr DESTDIR=$PKG install
-
-	install -m 0755 -Dt $PKG/usr/bin/ contrib/dmenu/passmenu
+	# passmenu
+	install -m 0755 -Dt $PKG/usr/bin/ \
+		$name-$version/contrib/dmenu/passmenu
+	install -m 0644 -Dt $PKG/usr/share/man/man1/ \
+		$SRC/passmenu.1
 }

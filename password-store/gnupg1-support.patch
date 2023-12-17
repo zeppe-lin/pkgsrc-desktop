@@ -1,0 +1,48 @@
+From 79cedccb9d7027275124d6a1b2140d774c2e24d0 Mon Sep 17 00:00:00 2001
+From: Helmut Grohne <helmut@subdivi.de>
+Date: Sat, 4 Jan 2014 15:05:05 +0000
+Subject: Support gnupg1 as an alternative to gnupg2
+
+This also deals with systems where "gpg" is GnuPG 2.
+
+Bug-Debian: http://bugs.debian.org/701845
+Forwarded: no
+Last-Update: 2021-06-13
+
+Patch-Name: gnupg1-support.patch
+---
+ src/completion/pass.fish-completion | 4 +++-
+ src/completion/pass.zsh-completion  | 4 +++-
+ 2 files changed, 6 insertions(+), 2 deletions(-)
+
+diff --git a/src/completion/pass.fish-completion b/src/completion/pass.fish-completion
+index 38a4865..e6d7ed7 100644
+--- a/src/completion/pass.fish-completion
++++ b/src/completion/pass.fish-completion
+@@ -28,7 +28,9 @@ function __fish_pass_uses_command
+ end
+ 
+ function __fish_pass_print_gpg_keys
+-    gpg2 --list-keys | grep uid | sed 's/.*<\(.*\)>/\1/'
++    set -l gpg gpg2
++    command -sq $gpg; or set gpg gpg
++    $gpg --list-keys | grep uid | sed 's/.*<\(.*\)>/\1/'
+ end
+ 
+ function __fish_pass_print
+diff --git a/src/completion/pass.zsh-completion b/src/completion/pass.zsh-completion
+index d911e12..59fdfa2 100644
+--- a/src/completion/pass.zsh-completion
++++ b/src/completion/pass.zsh-completion
+@@ -137,8 +137,10 @@ _pass_complete_entries () {
+ 
+ _pass_complete_keys () {
+ 	local IFS=$'\n'
++	local GPG=gpg2
++	which $GPG >/dev/null || GPG=gpg
+ 	# Extract names and email addresses from gpg --list-keys
+-	_values 'gpg keys' $(gpg2 --list-secret-keys --with-colons | cut -d : -f 10 | sort -u | sed '/^$/d')
++	_values 'gpg keys' $($GPG --list-secret-keys --with-colons | cut -d : -f 10 | sort -u | sed '/^$/d')
+ }
+ 
+ _pass

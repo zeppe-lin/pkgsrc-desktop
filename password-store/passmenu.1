@@ -1,0 +1,40 @@
+.\" passmenu(1) manual page
+.Dd December 17, 2023
+.Dt PASSMENU 1
+.Os
+.Sh NAME
+.Nm passmenu
+.Nd dmenu-based interface to pass
+.Sh SYNOPSIS
+.Nm passmenu
+.Op Fl \-type
+.Op Ar dmenu arguments ...
+.Sh DESCRIPTION
+.Sy passmenu
+is a dmenu-based interface to
+.Xr pass 1 ,
+the standard Unix password manager.
+This design allows you to quickly copy a password to the clipboard without
+having to open up a terminal window if you don't already have one open.
+If
+.Fl \-type
+is specified, the password is typed using
+.Xr xdotool 1
+instead of copied to the clipboard.
+.Pp
+On wayland
+.Sy dmenu-wl
+is used to replace
+.Xr dmenu 1
+and
+.Sy ydotool
+to replace
+.Xr xdotool 1 .
+Note that the latter requires access to the
+.Sy uinput
+device, so you'll probably need to add an extra udev rule or similar to give
+certain non-root users permission.
+.Sh SEE ALSO
+.Xr pass 1 ,
+.Xr dmenu 1 ,
+.Xr xdotool 1

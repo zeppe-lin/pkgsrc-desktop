@@ -1,2 +1,4 @@
-576cc1b0b6a4cab73e14f58790c7fc31  ensure_compat_with_tree_2.0.patch
+f350b558110d3150b723d6b08699ccfa  gnupg1-support.patch
+b5675c1fabe366a2f4254a3b8bcc3b54  passmenu.1
 56b918982fd80bedba6590059c332c6d  password-store-1.7.4.tar.xz
+4957703ea9ee88823031b11d382307d2  tree-2.0-compat.patch

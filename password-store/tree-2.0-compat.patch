@@ -1,4 +1,4 @@
-From eea24967a002a2a81ae9b97a1fe972b5287f3a09 Mon Sep 17 00:00:00 2001
+From 7453f40c3f6491a48566869d1f4fffe386d2cd81 Mon Sep 17 00:00:00 2001
 From: Marius Bakke <marius@gnu.org>
 Date: Mon, 17 Jan 2022 17:54:32 +0100
 Subject: Ensure compatibility with tree 2.0
@@ -7,12 +7,18 @@ Tree 2.0 and later will unconditionally ignore all options and write
 JSON data on file descriptor 3 when available, which causes problems
 for the test harness and other scripts that use FD 3.  Work around by
 closing descriptor 3 for the 'tree' command.
+
+Origin: upstream, https://git.zx2c4.com/password-store/commit/?id=eea24967a002a2a81ae9b97a1fe972b5287f3a09
+Bug-Debian: https://bugs.debian.org/1005550
+Last-Update: 2022-02-13
+
+Patch-Name: tree-2.0-compat.patch
 ---
  src/password-store.sh | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/src/password-store.sh b/src/password-store.sh
-index aef8d72..22e818f 100755
+index 6f9d2d5..e0fc984 100755
 --- a/src/password-store.sh
 +++ b/src/password-store.sh
 @@ -402,7 +402,7 @@ cmd_show() {
@@ -33,6 +39,3 @@ index aef8d72..22e818f 100755
  }
  
  cmd_grep() {
--- 
-cgit v1.2.3-11-g984f
-
