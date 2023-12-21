@@ -1,0 +1,93 @@
+=pod
+
+=encoding UTF-8
+
+=head1 NAME
+
+grabc - identify a pixel color of an X Window
+
+=head1 SYNOPSIS
+
+B<grabc> [OPTIONS]
+
+=head1 DESCRIPTION
+
+grabc is a simple but very useful program to determine the color string in hex
+(or in RGB components) by clicking on a pixel on the screen.
+
+When this program is run, the mouse pointer is grabbed and changed to a cross
+hair and when the mouse is clicked, the color of the clicked pixel is written
+to stdout in hex prefixed with #.
+
+=head1 OPTIONS
+
+=over 10
+
+=item B<-hex>
+
+Print pixel value as HEX on stdout.
+
+=item B<-rgb>
+
+Print pixel value as RGB on stderr.
+
+=item B<-W>
+
+Print the Window id at mouse click.
+
+=item B<-w> I<id>
+
+Window id in hex, use B<-l> I<+x+y>.
+
+=item B<-l> I<+x+y>
+
+Pixel co-ordinate.
+Requires Window id.
+
+=item B<-d>
+
+Show debug messages.
+
+=item B<-a>
+
+Print all 16 bits of color.
+Default is high order 8 bits.
+
+=item B<-v>
+
+Print version and exit.
+
+=item B<-h>
+
+Print help and exit.
+
+=back
+
+=head1 EXAMPLES
+
+=over
+
+=item Print pixel color in hex on stdout:
+
+  $ grabc
+
+=item Print Window id (Note the upper case W):
+
+  $ grabc -W
+
+=item Print pixel color of Window with id 0x12345 at location 10,20:
+
+  $ grabc -w 0x12345 -l +10+20
+
+=back
+
+=head1 LICENSE
+
+MIT.
+
+=head1 AUTHOR
+
+B<grabc> is written by Muhammad Muquit L<mailto:muquit@muquit.com>.
+Homepage: L<https://www.miquit.com/>.
+
+=cut

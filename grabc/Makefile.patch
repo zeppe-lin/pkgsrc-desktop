@@ -1,0 +1,22 @@
+diff --git a/Makefile b/Makefile
+index 5de8e52..c9e4cf2 100644
+--- a/Makefile
++++ b/Makefile
+@@ -18,7 +18,7 @@ mandir=/usr/local/share/man/man1
+ # replace -O with -g in order to debug
+ 
+ DEFINES= $(INCLUDES) $(DEFS) -D__USE_FIXED_PROTOTYPES__ -DSYS_UNIX=1
+-CFLAGS= -O $(DEFINES)
++CFLAGS+= $(DEFINES)
+ 
+ SRCS = grabc.c
+ 
+@@ -34,7 +34,7 @@ $(PROGNAME) : $(OBJS)
+ 	$(CC) $(CFLAGS) -o $(PROGNAME) $(OBJS) $(LIBS)
+ 
+ doc:
+-	pod2man grabc.pod > grabc.1
++	pod2man -c " " -r "grabc 1.0.2" grabc.pod > grabc.1
+ 
+ install: installdirs install-bin install-man
+ 

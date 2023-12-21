@@ -1,0 +1,39 @@
+diff --git a/grabc.c b/grabc.c
+index 91a5ec0..de7384c 100644
+--- a/grabc.c
++++ b/grabc.c
+@@ -84,25 +84,15 @@ static void show_usage(void)
+ 
+     static char *options[]=
+     {
+-" -v      - show version info",
+-" -h      - show this usage",
+-" -hex    - print pixel value as Hex on stdout",
+-" -rgb    - print pixel value as RGB on stderr",
+-" -W      - print the Window id at mouse click",
+-" -w id   - window id in hex, use -l +x+y",
+-" -l +x+y - pixel co-ordinate. requires window id",
+-" -d      - show debug messages",
+-" -a      - Print all 16 bits RGB components of color",
+-"           Default is high order 8 bits of components",
+-"Example:",
+-"* Print pixel color in hex on stdout:",
+-"   $ grabc",
+-"* Show usage:",
+-"   $ grabc -h",
+-"* Print Window Id (Note the upper case W):",
+-"   $ grabc -W",    
+-"* Print pixel color of Window iwith id 0x13234 at location 10,20",
+-"   $ grabc -w 0x13234 -l +10+20",
++" -hex     print pixel value as hex on output",
++" -rgb     print pixel value as rgb on stderr",
++" -W       print the window id at mouse click",
++" -w id    window id in hex, use -l +x+y",
++" -l +x+y  pixel co-ordinate (requires window id)",
++" -d       show debug messages",
++" -a       print all 16 bits of color",
++" -v       print version and exit",
++" -h       print help and exit",
+ (char *) NULL
+ 
+     };

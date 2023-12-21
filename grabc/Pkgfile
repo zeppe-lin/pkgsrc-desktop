@@ -4,14 +4,21 @@
 
 name=grabc
 version=1.0.2
-release=1
-source=https://github.com/muquit/grabc/archive/v$version/grabc-$version.tar.gz
+release=2
+source="https://github.com/muquit/grabc/archive/v$version/grabc-$version.tar.gz
+	Makefile.patch
+	grabc.c.patch
+	grabc.pod.patch"
 
 build() {
-	cd grabc-$version
+	patch -d grabc-$version -p1 -i $SRC/Makefile.patch
+	patch -d grabc-$version -p1 -i $SRC/grabc.c.patch
+	patch -d grabc-$version -p1 -i $SRC/grabc.pod.patch
 
-	sed -i 's/^CFLAGS=/CFLAGS+=/' Makefile
-	make
-	install -m 0755 -Dt $PKG/usr/bin/             grabc
-	install -m 0644 -Dt $PKG/usr/share/man/man1/  grabc.1
+	make -C grabc-$version all doc
+
+	install -m 0755 -Dt $PKG/usr/bin/ \
+		grabc-$version/grabc
+	install -m 0644 -Dt $PKG/usr/share/man/man1/ \
+		grabc-$version/grabc.1
 }
