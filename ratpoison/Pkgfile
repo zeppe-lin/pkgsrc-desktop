@@ -4,14 +4,14 @@
 
 name=ratpoison
 version=1.4.9-db94d49
-release=1
+release=2
 source="ctrlwasbackspace-20180528-b42faf8.diff
 	fixdedicate-20180514-b42faf8.diff
 	fixfindframex-20190524-b42faf8.diff
 	obeyresizehints-20180507-b42faf8.diff
+	8c5258e6db91222efd0b97b8843f85a122fa1d2d.patch
 	ratpoison-re.pl.diff
 	genratpoison-re.pl"
-	
 
 download_git() {
 	# arg $1: git URL
@@ -47,6 +47,9 @@ build() {
 
 	# https://lists.nongnu.org/archive/html/ratpoison-devel/2018-05/msg00003.html
 	patch -p1 -i $SRC/ctrlwasbackspace-20180528-b42faf8.diff
+
+	# https://github.com/svenssonaxel/ratpoison/commit/8c5258e6db91222efd0b97b8843f85a122fa1d2d
+	patch -p1 -i $SRC/8c5258e6db91222efd0b97b8843f85a122fa1d2d.patch
 
 	# needed for our genratpoison-re.pl
 	patch -p1 -i $SRC/ratpoison-re.pl.diff
