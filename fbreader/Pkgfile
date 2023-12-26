@@ -4,7 +4,7 @@
 
 name=fbreader
 version=0.99.4
-release=1
+release=2
 source="$name-sources-$version.tgz
 	$name-$version.patch
 	$name-gcc6.patch
@@ -38,4 +38,7 @@ build() {
 	make DESTDIR=$PKG install
 
 	ln -s FBReader $PKG/usr/bin/fbreader
+
+	# remove i18n entries
+	sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/FBReader.desktop
 }
