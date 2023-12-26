@@ -41,4 +41,10 @@ build() {
 
 	# remove i18n entries
 	sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/FBReader.desktop
+
+	# remove i18n helps and resources
+	find $PKG/usr/share/FBReader/help \( \
+	    -name MiniHelp.??.fb2 -a ! -name MiniHelp.en.fb2 \) -delete
+	find $PKG/usr/share/FBReader/resources \( \
+	    -name ??.xml -a ! -name en.xml \) -delete
 }
