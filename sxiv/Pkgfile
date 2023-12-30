@@ -3,17 +3,16 @@
 # Depends on:  imlib2 libexif xorg-libxft
 
 name=sxiv
-version=31
+version=32
 release=1
-source=nsxiv-$version.tar.gz::https://codeberg.org/nsxiv/nsxiv/archive/v31.tar.gz
+source=nsxiv-$version.tar.gz::https://codeberg.org/nsxiv/nsxiv/archive/v$version.tar.gz
 
 build() {
-	sed -ri '/^CFLAGS/s/ = /+=/;s/-O2//' nsxiv/Makefile
+	make -C nsxiv HAVE_LIBWEBP=0 CFLAGS="$CFLAGS -DNDEBUG" all
+	make -C nsxiv HAVE_LIBWEBP=0 CFLAGS="$CFLAGS -DNDEBUG" \
+		PREFIX=/usr DESTDIR=$PKG install
 
-	make -C nsxiv HAVE_LIBWEBP=0 all
-	make -C nsxiv HAVE_LIBWEBP=0 PREFIX=/usr DESTDIR=$PKG install
-
-	ln -s /usr/bin/nsxiv $PKG/usr/bin/sxiv
+	ln -s /usr/bin/nsxiv              $PKG/usr/bin/sxiv
 	ln -s /usr/share/man/man1/nsxiv.1 $PKG/usr/share/man/man1/sxiv.1
 
 	# remove junk
