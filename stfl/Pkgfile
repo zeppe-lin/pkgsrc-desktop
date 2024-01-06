@@ -1,5 +1,5 @@
 # Description: Curses-based widget set for text terminals
-# URL:         http://www.clifford.at/stfl
+# URL:         UNMAINTAINED
 # Depends on:  ncurses
 
 name=stfl
