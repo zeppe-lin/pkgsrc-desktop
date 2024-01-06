@@ -1,5 +1,5 @@
 # Description: RSS/Atom feed reader for text terminals
-# URL:         http://www.newsboat.org/
+# URL:         UNMAINTAINED
 # Depends on:  json-c libxml2 sqlite3 stfl
 
 name=newsboat213
