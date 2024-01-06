@@ -1,0 +1,23 @@
+# Description: RSS feed reader for the command-line
+# URL:         https://sourceforge.net/projects/snownews
+# Depends on:  curl libxml2 ncurses
+
+name=snownews
+version=1.11
+release=1
+source=https://sourceforge.net/projects/$name/files/$name-$version.tar.gz
+
+build() {
+	# workaround for GCC 12
+	export CFLAGS="$CFLAGS -Wno-stringop-truncation -Wno-error=format-security"
+
+	# build in separate dir is broken
+	cd $name-$version
+
+	./configure            \
+		--prefix=/usr  \
+		--without-nls  \
+
+	make V=1
+	make DESTDIR=$PKG install
+}
