@@ -3,7 +3,7 @@
 # Depends on:  imagemagick xorg-libxv
 
 name=zbar
-version=0.23.92
+version=0.23.93
 release=1
 source=https://github.com/mchehab/zbar/archive/$version/zbar-$version.tar.gz
 
@@ -21,7 +21,6 @@ build() {
 		--without-gir       \
 		--without-python    \
 		--without-qt        \
-		--without-qt5       \
 		--without-java      \
 
 	make V=1
