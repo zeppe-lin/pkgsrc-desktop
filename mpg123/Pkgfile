@@ -12,6 +12,7 @@ build() {
 
 	../$name-$version/configure  \
 		--prefix=/usr        \
+		--with-audio=alsa    \
 
 	make V=1
 	make DESTDIR=$PKG install
