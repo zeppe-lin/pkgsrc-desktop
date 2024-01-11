@@ -1,0 +1,57 @@
+From 5d4ec642056ee5c7348c00a5b18e9ddf3b81c785 Mon Sep 17 00:00:00 2001
+From: Mike Sharov <msharov@users.sourceforge.net>
+Date: Tue, 14 Nov 2023 08:39:34 -0500
+Subject: [PATCH 2/2] Create parent dirs during snownews dirs setup
+
+---
+ setup.c | 21 +++++++++++++++++++--
+ 1 file changed, 19 insertions(+), 2 deletions(-)
+
+diff --git a/setup.c b/setup.c
+index d0563fd..8a97670 100644
+--- a/setup.c
++++ b/setup.c
+@@ -53,6 +53,23 @@ void CacheFilePath (const char* filename, char* path, size_t pathsz)
+ 	path[pathlen-1] = 0;
+ }
+ 
++// Creates all directories in path
++int mkpath (const char* path, mode_t mode)
++{
++    char pbuf [PATH_MAX], *pbe = pbuf;
++    do {
++	if (*path == '/' || !*path) {
++	    *pbe = '\0';
++	    if (pbuf[0] && 0 > mkdir (pbuf, mode) && errno != EEXIST)
++		return -1;
++	}
++	*pbe++ = *path;
++	if ((size_t)(pbe - pbuf) >= sizeof(pbuf)-1)
++	    return ENAMETOOLONG;
++    } while (*path++);
++    return 0;
++}
++
+ static char* LoadFile (const char* filename)
+ {
+     struct stat st;
+@@ -441,14 +458,14 @@ unsigned Config (void)
+     ConfigFilePath ("", dirname, sizeof(dirname));
+     struct stat dirtest;
+     if (0 > stat (dirname, &dirtest)) {
+-	if (0 > mkdir (dirname, S_IRWXU))
++	if (0 > mkpath (dirname, S_IRWXU))
+ 	    MainQuit (dirname, strerror (errno));
+     } else if (!S_ISDIR (dirtest.st_mode))
+ 	MainQuit (dirname, "is a file");
+ 
+     CacheFilePath ("", dirname, sizeof(dirname));
+     if (0 > stat (dirname, &dirtest)) {
+-	if (0 > mkdir (dirname, S_IRWXU))
++	if (0 > mkpath (dirname, S_IRWXU))
+ 	    MainQuit (dirname, strerror (errno));
+     } else if (!S_ISDIR (dirtest.st_mode))
+ 	MainQuit (dirname, "is a file");
+-- 
+2.43.0
+

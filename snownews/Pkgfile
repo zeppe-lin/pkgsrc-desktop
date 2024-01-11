@@ -4,10 +4,15 @@
 
 name=snownews
 version=1.11
-release=1
-source=https://sourceforge.net/projects/$name/files/$name-$version.tar.gz
+release=2
+source="https://sourceforge.net/projects/$name/files/$name-$version.tar.gz
+	0001-Replace-deprecated-xmlRecoverMemory-call.patch
+	0002-Create-parent-dirs-during-snownews-dirs-setup.patch"
 
 build() {
+	patch -d $name-$version -p1 -i $SRC/0001-Replace-deprecated-xmlRecoverMemory-call.patch
+	patch -d $name-$version -p1 -i $SRC/0002-Create-parent-dirs-during-snownews-dirs-setup.patch
+
 	# workaround for GCC 12
 	export CFLAGS="$CFLAGS -Wno-stringop-truncation -Wno-error=format-security"
 
