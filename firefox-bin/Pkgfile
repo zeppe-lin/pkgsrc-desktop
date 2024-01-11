@@ -1,9 +1,9 @@
-# Description: Firefox web browser
+# Description: Standalone web browser from mozilla.org
 # URL:         https://www.mozilla.org/en-US/firefox/
 # Depends on:  alsa-lib dbus-glib gtk3 nss xorg-libxtst
 
 name=firefox-bin
-version=121.0
+version=121.0.1
 release=1
 source="https://ftp.mozilla.org/pub/firefox/releases/$version/linux-x86_64/en-US/firefox-$version.tar.bz2
 	firefox.sh
