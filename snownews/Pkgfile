@@ -7,11 +7,22 @@ version=1.11
 release=2
 source="https://sourceforge.net/projects/$name/files/$name-$version.tar.gz
 	0001-Replace-deprecated-xmlRecoverMemory-call.patch
-	0002-Create-parent-dirs-during-snownews-dirs-setup.patch"
+	0002-Create-parent-dirs-during-snownews-dirs-setup.patch
+	patch-Config_mk_in
+	patch-Makefile
+	patch-man_Module_mk
+	patch-po_Module_mk"
 
 build() {
+	# some patches from git branch
 	patch -d $name-$version -p1 -i $SRC/0001-Replace-deprecated-xmlRecoverMemory-call.patch
 	patch -d $name-$version -p1 -i $SRC/0002-Create-parent-dirs-during-snownews-dirs-setup.patch
+
+	# openbsd patches to make clear the build process
+	patch -d $name-$version -p0 -i $SRC/patch-Config_mk_in
+	patch -d $name-$version -p0 -i $SRC/patch-Makefile
+	patch -d $name-$version -p0 -i $SRC/patch-man_Module_mk
+	patch -d $name-$version -p0 -i $SRC/patch-po_Module_mk
 
 	# workaround for GCC 12
 	export CFLAGS="$CFLAGS -Wno-stringop-truncation -Wno-error=format-security"

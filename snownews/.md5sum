@@ -1,3 +1,7 @@
 6da352c99b0d62f918428eb435dbdb7f  0001-Replace-deprecated-xmlRecoverMemory-call.patch
 e6617febf5f49a08be5649a642a424a1  0002-Create-parent-dirs-during-snownews-dirs-setup.patch
+20ad1f49c0897dfdadfea23254dca843  patch-Config_mk_in
+da5d5ad6f60d41e8dc5b9091fc0ef52d  patch-Makefile
+f429e442b7dd7fe844930ce1db03ad55  patch-man_Module_mk
+b851c3069c9b8b459e5994b2a1dc7a11  patch-po_Module_mk
 f80f329422556e055395845ad2110b6f  snownews-1.11.tar.gz
