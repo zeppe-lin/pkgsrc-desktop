@@ -7,8 +7,7 @@ etc.  Packages in this collection depends **only** on the
 **xorg**, **system** and **core** pkgsrc collections.
 
 This distribution was originally forked from CRUX ports as of version
-3.6 and rewritten in POSIX sh(1p).  Also, the Zeppe-Lin has its own
-criteria for what packages should be in desktop collection.
+3.6 and rewritten in POSIX sh(1p).
 
 The original sources can be downloaded from:
 1. https://crux.nu/gitweb/?p=ports/opt.git;a=summary
