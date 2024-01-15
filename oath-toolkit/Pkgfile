@@ -3,7 +3,7 @@
 # Depends on:  linux-pam xmlsec
 
 name=oath-toolkit
-version=2.6.10
+version=2.6.11
 release=1
 source=https://download.savannah.nongnu.org/releases/$name/$name-$version.tar.gz
 
