@@ -1,9 +1,0 @@
-README zbar
-
-HINTS
-
-	Select region on screen, scan and decode bar codes:
-
-		import -quality 100 png:- | zbarimg -q --raw -
-
-End of file.
