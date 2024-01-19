@@ -9,7 +9,7 @@ REQUIREMENTS
 		* xorg-xrandr    single screen resolution
 		* lm-sensors     sensors output
 
-	To see more optional requirements, type:
+	To see more optional requirements, run:
 
 		inxi --recommends
 
