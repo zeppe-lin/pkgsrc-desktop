@@ -19,10 +19,10 @@ build() {
 	make V=1
 	make DESTDIR=$PKG install
 
-	ls $PKG
 	# conflicts with linux-firmware
 	cd $PKG/lib/firmware
 	rm -r ctefx.bin ctspeq.bin ess korg sb16 yamaha
+
 	# broken symlinks (broken upstream)
 	rm -r turtlebeach
 }
