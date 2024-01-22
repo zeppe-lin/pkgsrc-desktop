@@ -4,7 +4,7 @@
 
 name=vifm
 version=0.13
-release=1
+release=2
 source=https://prdownloads.sourceforge.net/$name/$name-$version.tar.bz2
 
 build() {
@@ -38,4 +38,9 @@ build() {
 
 	# remove junk
 	rm -r $PKG/usr/share/doc/
+	rm -r $PKG/usr/etc/vifm/colors
+
+	# make colorschemes available
+	ln -s /usr/share/vifm/colors $PKG/usr/etc/vifm/colors
+	#rmdir $PKG/usr/etc/vifm $PKG/usr/etc
 }
