@@ -1,0 +1,15 @@
+# Description: Various colorschemes for vifm file explorer
+# URL:         https://github.com/vifm/vifm-colors
+# Depends on:  vifm
+
+name=vifm-colors
+version=0.13
+release=1
+source=$name-$version.tar.gz::https://github.com/vifm/vifm-colors/archive/refs/tags/v$version.tar.gz
+
+build() {
+	# conflicts with vifm
+	rm $name-$version/reicheltd-light.vifm
+
+	install -m 0644 -Dt $PKG/usr/share/vifm/colors/ $name-$version/*.vifm
+}
