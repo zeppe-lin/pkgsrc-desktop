@@ -1,5 +1,5 @@
 # Description: Dynamic window manager for X (Zeppe-Lin Fork)
-# URL:         https://github.com/zeppe-lin/dwm
+# URL:         UNMAINTAINED
 # Depends on:  xorg-libxft xorg-libxinerama
 
 name=dwm
