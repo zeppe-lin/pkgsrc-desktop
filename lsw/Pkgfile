@@ -1,5 +1,5 @@
 # Description: List X11 windows to stdout (Zeppe-Lin fork)
-# URL:         https://github.com/zeppe-lin/lsw
+# URL:         UNMAINTAINTED
 # Depends on:  xorg-libx11 wmctrl
 
 name=lsw
