@@ -3,7 +3,7 @@
 # Depends on:  librsvg-compat hicolor-icon-theme
 
 name=trinity-icon-theme
-version=1.0-3f0fac9
+version=1.0-241a784
 release=1
 source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
 
