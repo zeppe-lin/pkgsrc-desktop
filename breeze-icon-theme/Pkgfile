@@ -1,0 +1,16 @@
+# Description: Breeze icon theme
+# URL:         https://community.kde.org/Frameworks
+
+name=breeze-icon-theme
+version=5.114.0
+release=1
+source=https://archive.archlinux.org/packages/b/breeze-icons/breeze-icons-$version-1-any.pkg.tar.zst
+
+build() {
+	mkdir -p $PKG/usr/share/icons
+	mv usr/share/icons/breeze usr/share/icons/breeze-dark \
+		$PKG/usr/share/icons/
+
+	touch $PKG/usr/share/icons/breeze/icon-theme.cache
+	touch $PKG/usr/share/icons/breeze-dark/icon-theme.cache
+}
