@@ -15,7 +15,7 @@ build(){
 
 	# install
 	install -d $PKG/usr/bin $PKG/usr/lib/jdk11 $PKG/usr/share
-	mv man $PKG/usr/share/
+	#mv man $PKG/usr/share/ (conflicts with jdk17-bin)
 	mv *   $PKG/usr/lib/jdk11/
 
 	# symlinks
