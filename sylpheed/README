@@ -2,7 +2,8 @@ README sylpheed
 
 TRINITY ICONS
 
-	Add PKGMK_SYLPHEED="+TRINITY+" into your /etc/pkgmk.conf.
+	To enable Trinity-like icons, add PKGMK_SYLPHEED="+TRINITY+" to
+	your /etc/pkgmk.conf.
 
 URGENT WINDOW NOTIFY (requires xdotool)
 
