@@ -1,5 +1,9 @@
 README sylpheed
 
+TRINITY ICONS
+
+	Add PKGMK_SYLPHEED="+TRINITY+" into your /etc/pkgmk.conf.
+
 URGENT WINDOW NOTIFY (requires xdotool)
 
 	Since the notifications in the Sylpheed are pretty ugly, and the
