@@ -4,7 +4,7 @@
 
 name=jdk11-bin
 version=11.0.22.7.1
-release=1
+release=2
 source=https://corretto.aws/downloads/resources/$version/amazon-corretto-$version-linux-x64.tar.gz
 
 build(){
@@ -14,29 +14,29 @@ build(){
 	chmod -R o-w,g-w .
 
 	# install
-	install -d $PKG/usr/bin $PKG/usr/lib/jdk $PKG/usr/share
+	install -d $PKG/usr/bin $PKG/usr/lib/jdk11 $PKG/usr/share
 	mv man $PKG/usr/share/
-	mv *   $PKG/usr/lib/jdk/
+	mv *   $PKG/usr/lib/jdk11/
 
 	# symlinks
-	ln -s jdk                       $PKG/usr/lib/java
-	ln -s ../lib/jdk/bin/java       $PKG/usr/bin/java
-	ln -s ../lib/jdk/bin/javac      $PKG/usr/bin/javac
-	#ln -s ../lib/jdk/bin/javah      $PKG/usr/bin/javah
-	ln -s ../lib/jdk/bin/javap      $PKG/usr/bin/javap
-	ln -s ../lib/jdk/bin/jar        $PKG/usr/bin/jar
-	ln -s ../lib/jdk/bin/keytool    $PKG/usr/bin/keytool
-	ln -s ../lib/jdk/bin/jarsigner  $PKG/usr/bin/jarsigner
+	ln -s jdk11                       $PKG/usr/lib/java11
+	ln -s ../lib/jdk11/bin/java       $PKG/usr/bin/java11
+	ln -s ../lib/jdk11/bin/javac      $PKG/usr/bin/javac11
+	#ln -s ../lib/jdk11/bin/javah     $PKG/usr/bin/javah11
+	ln -s ../lib/jdk11/bin/javap      $PKG/usr/bin/javap11
+	ln -s ../lib/jdk11/bin/jar        $PKG/usr/bin/jar11
+	ln -s ../lib/jdk11/bin/keytool    $PKG/usr/bin/keytool11
+	ln -s ../lib/jdk11/bin/jarsigner  $PKG/usr/bin/jarsigner11
 
 	# revdep
 	install -d $PKG/etc/revdep.d
 	cat > $PKG/etc/revdep.d/jdk11-bin <<EOF
-/usr/lib/jdk/lib
-/usr/lib/jdk/lib/server
+/usr/lib/jdk11/lib
+/usr/lib/jdk11/lib/server
 EOF
 
 	# remove junk
-	cd $PKG/usr/lib/jdk
+	cd $PKG/usr/lib/jdk11
 	rm ASSEMBLY_EXCEPTION ADDITIONAL_LICENSE_INFO LICENSE \
 		README.md conf/security/policy/README.txt
 }
