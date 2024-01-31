@@ -1,0 +1,43 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/backgrounds/
+drwxr-xr-x	root/root	usr/share/backgrounds/Windows95/
+drwxr-xr-x	root/root	usr/share/backgrounds/Windows95/Patterns/
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Patterns/Bricks.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Patterns/Buttons.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Patterns/Cargo Net.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Patterns/Circuits.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Patterns/Cobblestones.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Patterns/Colosseum.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Patterns/Daisies.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Patterns/Dizzy.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Patterns/Field Effect.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Patterns/Key.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Patterns/Klingon's.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Patterns/Live Wire.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Patterns/Plaid.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Patterns/Rounder.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Patterns/Scaled.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Patterns/Starfleet.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Patterns/Stone.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Patterns/Thatches.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Patterns/Tile.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Patterns/Triangles.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Patterns/Waffle's Revenge.png
+drwxr-xr-x	root/root	usr/share/backgrounds/Windows95/Wallpapers/
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Wallpapers/Black Thatch.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Wallpapers/Blue Rivets.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Wallpapers/Bubbles.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Wallpapers/Carved Stone.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Wallpapers/Circles.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Wallpapers/Houndstooth.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Wallpapers/Metal_Links.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Wallpapers/Pinstripe.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Wallpapers/Red_Blocks.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Wallpapers/Sandstone.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Wallpapers/Setup.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Wallpapers/Stitches.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Wallpapers/Straw Mat.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Wallpapers/Tiles.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Wallpapers/Triangles.png
+-rw-r--r--	root/root	usr/share/backgrounds/Windows95/Wallpapers/Waves.png

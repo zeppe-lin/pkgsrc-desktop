@@ -1,0 +1,24 @@
+# Description: Windows95 tile patterns and wallpapers
+# URL:         https://github.com/grassmunk/Chicago95/tree/master/Extras/Backgrounds
+
+name=win95-backgrounds
+version=3.0-fb0f72e
+release=1
+source="Metal_Links.png Red_Blocks.png Sandstone.png Stitches.png"
+
+build() {
+	git clone --filter=blob:none --sparse \
+		https://github.com/grassmunk/Chicago95
+
+	cd Chicago95
+
+	git sparse-checkout add Extras/Backgrounds
+	git checkout ${version#*-}
+
+	mkdir -p $PKG/usr/share/backgrounds
+	mv Extras/Backgrounds $PKG/usr/share/backgrounds/Windows95
+	mv $PKG/usr/share/backgrounds/Windows95/Wallpaper \
+		$PKG/usr/share/backgrounds/Windows95/Wallpapers
+
+	mv $SRC/*.png $PKG/usr/share/backgrounds/Windows95/Wallpapers/
+}
