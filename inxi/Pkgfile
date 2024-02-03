@@ -3,13 +3,11 @@
 # Optional:    xorg-xprop xorg-xdpyinfo xorg-xrandr lm-sensors
 
 name=inxi
-version=3.3.31-2
+version=3.3.32-1
 release=1
-source=https://github.com/smxi/inxi/archive/$version/inxi-$version.tar.gz
+source=inxi-$version.tar.gz::https://codeberg.org/smxi/inxi/archive/$version.tar.gz
 
 build() {
-	cd inxi-$version
-
-	install -m 0755 -Dt $PKG/usr/bin/            inxi
-	install -m 0644 -Dt $PKG/usr/share/man/man1/ inxi.1
+	install -m 0755 -Dt $PKG/usr/bin/            inxi/inxi
+	install -m 0644 -Dt $PKG/usr/share/man/man1/ inxi/inxi.1
 }
