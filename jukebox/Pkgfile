@@ -1,5 +1,5 @@
 # Description: Music player for large collection (Zeppe-Lin fork)
-# URL:         https://github.com/zeppe-lin/jukebox
+# URL:         UNMAINTAINED
 # Depends on:  p5-gtk2 p5-net-dbus
 
 name=jukebox
