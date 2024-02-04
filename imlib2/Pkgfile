@@ -3,7 +3,7 @@
 # Depends on:  giflib harfbuzz libid3tag libjpeg-turbo
 
 name=imlib2
-version=1.12.1
+version=1.12.2
 release=1
 source=https://download.sourceforge.net/enlightenment/$name-$version.tar.gz
 
