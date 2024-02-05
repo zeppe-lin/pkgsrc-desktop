@@ -1,15 +1,30 @@
-# Description: Standard theme engines for GTK2
-# URL:         UNMAINTAINED
-
-# !!! IMPORTANT !!!
-# This package will be removed soon.
-# Use specified gtk-engine-* packages instead.
+# Description: Standard theme engines for GTK+2 (HighContrast engine only)
+# URL:         https://download.gnome.org/sources/gtk-engines/
+# Depends on:  gtk
 
 name=gtk-engines
 version=2.20.2
-release=2
-source=/dev/null
+release=1
+source=https://download.gnome.org/sources/$name/2.20/$name-$version.tar.bz2
 
 build() {
-	mkdir $PKG/usr
+	# disable i18n
+	export LINGUAS=' '
+
+	sed -i 's|<glib/.*\.h>|<glib.h>|' \
+		$name-$version/engines/clearlooks/src/animation.c
+
+	mkdir build; cd build
+
+	# --enable-hc, --disable-all:
+	# build only HighContrast engine for trinity-gtk-theme
+	../$name-$version/configure  \
+		--prefix=/usr        \
+		--enable-animation   \
+		--enable-hc          \
+		--disable-all        \
+		--disable-nls        \
+
+	make V=1
+	make DESTDIR=$PKG install
 }
