@@ -4,7 +4,7 @@
 
 name=gtk-engines
 version=2.20.2
-release=1
+release=2
 source=https://download.gnome.org/sources/$name/2.20/$name-$version.tar.bz2
 
 build() {
@@ -16,12 +16,9 @@ build() {
 
 	mkdir build; cd build
 
-	# --enable-hc, --disable-all:
-	# build only HighContrast engine for trinity-gtk-theme
 	../$name-$version/configure  \
 		--prefix=/usr        \
 		--enable-animation   \
-		--enable-hc          \
 		--disable-all        \
 		--disable-nls        \
 
