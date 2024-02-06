@@ -1,9 +1,9 @@
 # Description: Wraps normal socket connections with SSL/TLS
-# URL:         https://www.stunnel.org/
+# URL:         UNMAINTAINED
 # Depends on:  libnsl openssl
 
 name=stunnel
-version=5.71
+version=5.72
 release=1
 source="https://ftp.nluug.nl/pub/networking/$name/archive/${version%%.*}.x/$name-$version.tar.gz
 	rc.$name $name.conf"
@@ -13,6 +13,7 @@ build() {
 
 	../$name-$version/configure   \
 		--prefix=/usr         \
+		--bindir=/usr/sbin    \
 		--sysconfdir=/etc     \
 		--localstatedir=/var  \
 		--runstatedir=/run    \
@@ -23,15 +24,20 @@ build() {
 		--enable-ipv6         \
 
 	make V=1
-
-	install -m 0755 -Dt $PKG/usr/sbin/            src/$name
-	install -m 0644 -Dt $PKG/usr/share/man/man8/  doc/$name.8
-	install -m 0644 -Dt $PKG/etc/                 $SRC/$name.conf
+	make DESTDIR=$PKG install
+	
+	# config
+	install -m 0644 -Dt $PKG/etc/stunnel/ $SRC/$name.conf
 
 	# service
 	install -m 0755 -D $SRC/rc.$name $PKG/etc/rc.d/$name
 
-	install -d $PKG/etc/ssl/certs $PKG/etc/ssl/keys
-	touch $PKG/etc/ssl/certs/stunnel.crt $PKG/etc/ssl/keys/stunnel.key
+	mkdir -p $PKG/etc/ssl/certs
+	mkdir -p $PKG/etc/ssl/keys
+	touch $PKG/etc/ssl/certs/stunnel.crt
+	touch $PKG/etc/ssl/keys/stunnel.key
 	chmod 0600 $PKG/etc/ssl/keys/stunnel.key
+
+	# remove junk
+	rm -r $PKG/usr/share/doc
 }

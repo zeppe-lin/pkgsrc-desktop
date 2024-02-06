@@ -7,7 +7,7 @@ SSD=/sbin/start-stop-daemon
 PROG=/usr/sbin/stunnel
 NAME=stunnel
 PID=/run/stunnel/stunnel.pid
-CFG=/etc/stunnel.conf
+CFG=/etc/stunnel/stunnel.conf
 
 CRT=/etc/ssl/certs/stunnel.crt
 KEY=/etc/ssl/keys/stunnel.key
