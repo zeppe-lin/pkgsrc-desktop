@@ -1,0 +1,20 @@
+# Description: Cursor theme for X inspired by Windows 3.x and OS X cursors
+# URL:         https://github.com/mdomlop/retrosmart-x11-cursors
+# Depends on:  imagemagick xorg-xcursorgen
+
+name=retrosmart-cursor-theme
+version=3.0-d3b4c15
+release=1
+source=https://github.com/mdomlop/retrosmart-x11-cursors/archive/${version#*-}/$name-$version.tar.gz
+
+build() {
+	cd retrosmart-x11-cursors-*
+
+	make
+	make DESTDIR=$PKG install
+
+	# remove junk
+	rm -r $PKG/usr/share/icons/share/doc \
+	      $PKG/usr/share/icons/share/licenses
+	rmdir $PKG/usr/share/icons/share
+}
