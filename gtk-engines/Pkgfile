@@ -1,4 +1,4 @@
-# Description: Standard theme engines for GTK+2 (HighContrast engine only)
+# Description: Support for standard theme engines for GTK2
 # URL:         https://download.gnome.org/sources/gtk-engines/
 # Depends on:  gtk
 
