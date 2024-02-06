@@ -3,17 +3,19 @@
 # Depends on:  gtk-engine-redmond95
 
 name=win3x-gtk-theme
-version=0.1-7e33210
+version=0.1-8531f67
 release=1
 source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
 
 build() {
 	mkdir -p $PKG/usr/share/themes
 
-	cp -r $name-*/* $PKG/usr/share/themes/
+	# remove junk and unnecessary files before installing
+	rm -r $name-*/*/xfwm4
+	rm -r $name-*/Fluxbox-Win3x
+	rm -r $name-*/screenshots
+	rm    $name-*/COPY*
+	rm    $name-*/README.md
 
-	# remove junk and unnecessary files
-	rm -r $PKG/usr/share/themes/*/xfwm4
-	rm $PKG/usr/share/themes/COPY*
-	rm $PKG/usr/share/themes/README.md
+	cp -r $name-*/* $PKG/usr/share/themes/
 }
