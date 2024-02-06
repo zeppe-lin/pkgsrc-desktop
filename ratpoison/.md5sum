@@ -1,7 +1,10 @@
-9b93b6b2b9a0bf0d452c518aa4fb2ad6  8c5258e6db91222efd0b97b8843f85a122fa1d2d.patch
-7577ce3ead8f6f8e4b53a63df3a377b1  ctrlwasbackspace-20180528-b42faf8.diff
-6b96fcd4fbce6869dfbc5e3b2b9382fb  fixdedicate-20180514-b42faf8.diff
-6bc0819c4f083952801b303ca20274be  fixfindframex-20190524-b42faf8.diff
+6d78f8e1aa453f9d900c93e854b815f7  0001-ignore-resize-hints.patch
+a8d25f70c2305b526dfa8bba97a2e21c  0002-fix-dedicate-frame.patch
+d02c7d1bd94026408ca025184d3aa551  0003-fix-edge-case-for-find_frame_-left-right-up-down-fun.patch
+d8e22af3c4fd84f6c229165e6c36dde3  0004-ctrl-w-as-backspace.patch
+c631078970543cc4873beb94f5f921bf  0005-Fix-only-set-active-frame-when-needed-in-sync_wins.patch
+ea2c7319497b9c8da84bf5be6b445aa0  0006-Fix-don-t-draw-help-window-beyond-screen-height.patch
+826c32897e108c439eb275cfd518e34d  0007-Fix-draw-the-license-text-centered-on-multi-screen-s.patch
+5c6b09831831bbd0ef40455b07e0f53f  0008-Fix-exclude-degenerate-case-from-frame-overlap.patch
 63afedddd7897bb248cf6eea2b7f560e  genratpoison-re.pl
-31c2183169fdd43fb112ba4af2c26f99  obeyresizehints-20180507-b42faf8.diff
 de38668b1fa3d65821c1da2e35c52cd3  ratpoison-re.pl.diff
