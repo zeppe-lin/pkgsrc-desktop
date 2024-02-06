@@ -1,10 +1,10 @@
 # Description: SSL/SSH VNC viewer
 # URL:         https://ssvnc.sourceforge.net/
-# Depends on:  jdk11-bin libjpeg-turbo tk xorg-libxaw
+# Depends on:  libjpeg-turbo tk xorg-libxaw
 
 name=ssvnc
 version=1.0.29
-release=1
+release=2
 source="http://downloads.sf.net/sourceforge/$name/$name-$version.src.tar.gz
 	Makefile.libvncauth
 	Makefile.vncviewer
@@ -27,10 +27,8 @@ build() {
 
 	sed -i -e "/^LIB/s:lib/:lib/:" Makefile
 
-	# ultraftp
-	if ! pkgman isinst jdk11-bin; then
-		sed -i Makefile -e '/^JSRC/s:=.*:=:'
-	fi
+	# disable ultraftp
+	sed -i Makefile -e '/^JSRC/s:=.*:=:'
 
 	sed -i -e '/^CC/s:=.*:+= $(CFLAGS) $(CPPFLAGS) $(LDFLAGS):' \
 		vncstorepw/Makefile

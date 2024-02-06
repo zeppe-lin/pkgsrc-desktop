@@ -17,7 +17,6 @@ drwxr-xr-x	root/root	usr/lib/ssvnc/util/
 -rwxr-xr-x	root/root	usr/lib/ssvnc/util/ss_vncviewer
 -rwxr-xr-x	root/root	usr/lib/ssvnc/util/ssvnc.tcl
 -rw-r--r--	root/root	usr/lib/ssvnc/util/stunnel-server.conf
--rw-r--r--	root/root	usr/lib/ssvnc/util/ultraftp.jar
 -rwxr-xr-x	root/root	usr/lib/ssvnc/vncstorepw
 -rwxr-xr-x	root/root	usr/lib/ssvnc/vncviewer
 drwxr-xr-x	root/root	usr/share/
