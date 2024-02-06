@@ -1,0 +1,39 @@
+From ea4ca118251160965057c12283297267670d61e4 Mon Sep 17 00:00:00 2001
+From: Antoine Busque <antoinebusque@gmail.com>
+Date: Thu, 21 Sep 2017 20:16:06 -0400
+Subject: [PATCH 7/8] Fix: draw the license text centered on multi-screen setup
+
+The current implementation of the license command uses the `s->top`
+and `s->left` values, combined with the screen's height and width to
+compute the center of the screen to draw on. This is erroneous since
+the x and y values of the text being drawn are already relative to the
+current screen, causing the text to be rendered off-screen.
+
+Simply removing the top and left values from the computation fixes
+this issue and allows the license text to be drawn centered on the
+current screen, even in multi-screen setups with differently sized
+screens.
+
+Signed-off-by: Antoine Busque <antoinebusque@gmail.com>
+---
+ src/actions.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/actions.c b/src/actions.c
+index a568717..7e15462 100644
+--- a/src/actions.c
++++ b/src/actions.c
+@@ -3600,8 +3600,8 @@ cmd_license (int interactive UNUSED, struct cmdarg **args UNUSED)
+     }
+ 
+   /* Offset the text so its in the center. */
+-  x = s->left + (s->width - max_width) / 2;
+-  y = s->top + (s->height - i * FONT_HEIGHT (s)) / 2;
++  x = (s->width - max_width) / 2;
++  y = (s->height - i * FONT_HEIGHT (s)) / 2;
+   if (x < 0) x = 0;
+   if (y < 0) y = 0;
+ 
+-- 
+2.43.0
+

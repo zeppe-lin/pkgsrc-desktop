@@ -1,3 +1,25 @@
+From b6d36019dfaa4568ffb2e7d36715c2347ce4e06e Mon Sep 17 00:00:00 2001
+From: Alexandr Savca <alexandr.savca89@gmail.com>
+Date: Sat, 3 Feb 2024 02:57:54 +0200
+Subject: [PATCH 1/8] ignore resize hints
+
+Mujo:
+>> I wrote a patch to ignore resize hints so there would not be a gap
+>> between my term windows and the frame. The patch also includes a
+>> new setting to toggle this behaviour and changes to the manpage to
+>> describe it. I've not fixed the info page because I have no
+>> familiarity with it.
+>> Currently this applies only to normal windows, not transient ones.
+
+Reference: https://lists.nongnu.org/archive/html/ratpoison-devel/2018-05/msg00000.html
+---
+ doc/ratpoison.mdoc.1 |  9 +++++++++
+ src/actions.c        | 26 ++++++++++++++++++++++++++
+ src/data.h           |  1 +
+ src/main.c           |  1 +
+ src/manage.c         |  2 +-
+ 5 files changed, 38 insertions(+), 1 deletion(-)
+
 diff --git a/doc/ratpoison.mdoc.1 b/doc/ratpoison.mdoc.1
 index 4db1a7d..c791317 100644
 --- a/doc/ratpoison.mdoc.1
@@ -106,3 +128,6 @@ index 510f730..78be591 100644
      {
        int amount;
        int delta;
+-- 
+2.43.0
+

@@ -1,0 +1,30 @@
+From 7e40b0709e9959b93ac0bd40a758a6b930315516 Mon Sep 17 00:00:00 2001
+From: Alexandr Savca <alexandr.savca89@gmail.com>
+Date: Sat, 3 Feb 2024 03:01:01 +0200
+Subject: [PATCH 2/8] fix dedicate frame
+
+Mujo:
+>> I noticed the dedicate frame functionality to toggle promiscuous
+>> and chaste modes was broken.
+
+Reference: https://lists.nongnu.org/archive/html/ratpoison-devel/2018-05/msg00002.html
+---
+ src/window.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/window.c b/src/window.c
+index dd65a93..12f9f96 100644
+--- a/src/window.c
++++ b/src/window.c
+@@ -410,7 +410,7 @@ find_frame_non_dedicated(rp_screen *current_screen)
+ 
+   list_for_each_entry (screen, &rp_screens, node)
+     {
+-      if (current_screen == screen)
++      if (current_screen != screen)
+         continue;
+ 
+       list_for_each_entry (cur, &screen->frames, node)
+-- 
+2.43.0
+

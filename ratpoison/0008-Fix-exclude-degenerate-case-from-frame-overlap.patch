@@ -1,0 +1,101 @@
+From b798f26c04ab955d0aae8be545a92179decc8479 Mon Sep 17 00:00:00 2001
+From: Antoine Busque <antoinebusque@gmail.com>
+Date: Sun, 4 Feb 2018 22:08:30 -0500
+Subject: [PATCH 8/8] Fix: exclude degenerate case from frame overlap
+
+The current implementation of the find_frame_* functions considered
+the degenerate case of frame overlap (i.e. a single pixel overlap, or
+in other words, one frame beginning where the other ends) as valid.
+
+This led to issues where certain frames would be impossible to reach
+via focus* commands, since another frame with single pixel overlap
+would be focused onto instead.
+
+An easy way to reproduce such a case is to split one screen into 4
+frames, by doing one vertical split and then two horizontal splits, or
+vice versa. In the current implementation, the bottom-right frame is
+unreachable via directional focus commands, since either the top-right
+(when trying to focusright from the bottom-left) or bottom-left (when
+trying to focusdown from the top-right) frames are focused onto, due
+to a single pixel overlap.
+
+Therefore, this patch excludes the degenerate case from being
+considered as a valid frame overlap.
+
+Signed-off-by: Antoine Busque <antoinebusque@gmail.com>
+---
+ src/split.c | 30 ++++++++++++++++++++++++++----
+ 1 file changed, 26 insertions(+), 4 deletions(-)
+
+diff --git a/src/split.c b/src/split.c
+index a652eaf..27610e2 100644
+--- a/src/split.c
++++ b/src/split.c
+@@ -1000,6 +1000,28 @@ show_frame_message (char *msg)
+   sbuf_free (msgbuf);
+ }
+ 
++static int
++frames_overlap_horizontal (rp_frame *f1, rp_frame *f2)
++{
++  int f1_right = frame_right_abs (f1);
++  int f2_right = frame_right_abs (f2);
++  int f1_left = frame_left_abs (f1);
++  int f2_left = frame_left_abs (f2);
++
++  return f1_left < f2_right && f2_left < f1_right;
++}
++
++static int
++frames_overlap_vertical (rp_frame *f1, rp_frame *f2)
++{
++  int f1_bottom = frame_bottom_abs (f1);
++  int f2_bottom = frame_bottom_abs (f2);
++  int f1_top = frame_top_abs (f1);
++  int f2_top = frame_top_abs (f2);
++
++  return f1_top < f2_bottom && f2_top < f1_bottom;
++}
++
+ rp_frame *
+ find_frame_up (rp_frame *frame)
+ {
+@@ -1016,7 +1038,7 @@ find_frame_up (rp_frame *frame)
+       list_for_each_entry (cur, &s->frames, node)
+         {
+           if (frame_top_abs (frame) == frame_bottom_abs (cur))
+-            if (frame_right_abs (frame) >= frame_left_abs (cur) && frame_left_abs (frame) <= frame_right_abs (cur))
++            if (frames_overlap_horizontal (frame, cur))
+               return cur;
+         }
+     }
+@@ -1040,7 +1062,7 @@ find_frame_down (rp_frame *frame)
+       list_for_each_entry (cur, &s->frames, node)
+         {
+           if (frame_bottom_abs (frame) == frame_top_abs (cur))
+-            if (frame_right_abs (frame) >= frame_left_abs (cur) && frame_left_abs (frame) <= frame_right_abs (cur))
++            if (frames_overlap_horizontal (frame, cur))
+               return cur;
+         }
+     }
+@@ -1064,7 +1086,7 @@ find_frame_left (rp_frame *frame)
+       list_for_each_entry (cur, &s->frames, node)
+         {
+           if (frame_left_abs (frame) == frame_right_abs (cur))
+-            if (frame_bottom_abs (frame) >= frame_top_abs (cur) && frame_top_abs (frame) <= frame_bottom_abs (cur))
++            if (frames_overlap_vertical (frame, cur))
+               return cur;
+         }
+     }
+@@ -1088,7 +1110,7 @@ find_frame_right (rp_frame *frame)
+       list_for_each_entry (cur, &s->frames, node)
+         {
+           if (frame_right_abs (frame) == frame_left_abs (cur))
+-            if (frame_bottom_abs (frame) >= frame_top_abs (cur) && frame_top_abs (frame) <= frame_bottom_abs (cur))
++            if (frames_overlap_vertical (frame, cur))
+               return cur;
+         }
+     }
+-- 
+2.43.0
+

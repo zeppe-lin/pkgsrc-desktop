@@ -1,3 +1,38 @@
+From 064b9208c09ddf1cc787fedfab788d5d929dec0b Mon Sep 17 00:00:00 2001
+From: Alexandr Savca <alexandr.savca89@gmail.com>
+Date: Sat, 3 Feb 2024 03:05:57 +0200
+Subject: [PATCH 3/8] fix edge case for find_frame_[left,right,up,down]
+ function
+
+Daniel Maturana:
+>>Hi all, I've noticed what seems to a bug in the latest version (master
+>>branch) of ratpoison.
+>>
+>>When I have two identical screens, each of them with an identical
+>>split (e.g., two screens with a horizontal split across the middle)
+>>and I use the "focusdown"/"focusup" commands, the focus will often
+>>change to the upper/lower frame, but to the opposite screen of the
+>>currently focused frame. Looking at the source code, I can see that
+>>the "find_frame_*" functions, e.g. "find_frame_down", don't check
+>>whether the frame to be focused to belongs to the same screen as the
+>>current frame, resulting in this behavior when the dimensions of the
+>>frames are identical across the two screens (and at least for me, this
+>>is a common scenario).
+>>
+>>Here's a patch with a simple fix: check whether the candidate target
+>>frame for the "find_frame_*" functions belongs to the same screen as
+>>the current frame. For me this has fixed the issue. I didn't find this
+>>addressed before in these archives, so apologies if it has been raised
+>>before.
+>>
+>>best,
+>>Daniel
+
+Reference: https://lists.nongnu.org/archive/html/ratpoison-devel/2019-05/msg00000.html
+---
+ src/split.c | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+
 diff --git a/src/split.c b/src/split.c
 index eed0f50..a652eaf 100644
 --- a/src/split.c
@@ -62,3 +97,6 @@ index eed0f50..a652eaf 100644
        list_for_each_entry (cur, &s->frames, node)
          {
            if (frame_right_abs (frame) == frame_left_abs (cur))
+-- 
+2.43.0
+

@@ -1,3 +1,9 @@
+From 12892030a08828d7cb364f36e4af946ceb2cac27 Mon Sep 17 00:00:00 2001
+From: Alexandr Savca <alexandr.savca89@gmail.com>
+Date: Sat, 3 Feb 2024 03:11:04 +0200
+Subject: [PATCH 4/8] ctrl-w as backspace
+
+Reference: https://lists.nongnu.org/archive/html/ratpoison-devel/2018-05/msg00003.html
 ---
  src/editor.c | 1 +
  1 file changed, 1 insertion(+)
@@ -15,9 +21,5 @@ index b1beebc..45d0a3d 100644
       {{XK_k,            RP_CONTROL_MASK},       editor_kill_line},
       {{XK_u,            RP_CONTROL_MASK},       editor_backward_kill_line},
 -- 
-2.16.2
+2.43.0
 
-
--- 
-address@hidden
-SDF Public Access UNIX System - http://sdf.org

@@ -1,0 +1,32 @@
+From 7044d27be30f133019bd9ae3298cd91a4155ee90 Mon Sep 17 00:00:00 2001
+From: Antoine Busque <antoinebusque@gmail.com>
+Date: Wed, 2 Aug 2017 01:45:58 -0400
+Subject: [PATCH 5/8] Fix: only set active frame when needed in sync_wins
+
+Only set the active frame after destryoing a normal window in
+`sync_wins` if this window was on the current screen. This mirrors the
+behaviour already found in other functions like `unmap_notify`,
+`destroy_notify`, etc.
+
+Signed-off-by: Antoine Busque <antoinebusque@gmail.com>
+---
+ src/actions.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/src/actions.c b/src/actions.c
+index b4f18a1..1208902 100644
+--- a/src/actions.c
++++ b/src/actions.c
+@@ -5049,7 +5049,8 @@ sync_wins (void)
+               if (frame)
+                 {
+                   cleanup_frame (frame);
+-                  if (frame->number == win->scr->current_frame)
++                  if (frame->number == win->scr->current_frame
++                      && rp_current_screen == win->scr)
+                     set_active_frame (frame, 0);
+                 }
+               withdraw_window (win);
+-- 
+2.43.0
+

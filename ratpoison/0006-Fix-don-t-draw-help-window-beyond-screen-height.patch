@@ -1,0 +1,36 @@
+From 2ca71fef6a59b15fae1b30802f391586a1e30ca3 Mon Sep 17 00:00:00 2001
+From: Antoine Busque <antoinebusque@gmail.com>
+Date: Thu, 21 Sep 2017 20:01:53 -0400
+Subject: [PATCH 6/8] Fix: don't draw help window beyond screen height
+
+The current computation for the drawing of the help window uses the
+value `s->top + s->height` as the bottom edge of the screen, even
+though the y values of the help strings being drawn are already
+relative to the top of the screen. This results in some help strings
+being drawn beyond the true edge of the screen, and therefore cut off.
+
+Simply using `s->height` corrects this issue, and the help window gets
+drawn properly even on multi-screen setups with differently sized
+screens.
+
+Signed-off-by: Antoine Busque <antoinebusque@gmail.com>
+---
+ src/actions.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/actions.c b/src/actions.c
+index 1208902..a568717 100644
+--- a/src/actions.c
++++ b/src/actions.c
+@@ -3718,7 +3718,7 @@ cmd_help (int interactive, struct cmdarg **args)
+ 
+           y += FONT_HEIGHT (s);
+           /* Make sure the next line fits entirely within the window. */
+-          if (y + FONT_HEIGHT (s) >= (s->top + s->height))
++          if (y + FONT_HEIGHT (s) >= s->height)
+             {
+               if (drawing_keys)
+                 {
+-- 
+2.43.0
+
