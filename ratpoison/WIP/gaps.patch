@@ -1,0 +1,239 @@
+diff --git a/src/actions.c b/src/actions.c
+index 7e15462..68f7de6 100644
+--- a/src/actions.c
++++ b/src/actions.c
+@@ -183,6 +183,7 @@ static cmdret * set_framemsgwait(struct cmdarg **args);
+ static cmdret * set_startupmessage(struct cmdarg **args);
+ static cmdret * set_warp(struct cmdarg **args);
+ static cmdret * set_rudeness(struct cmdarg **args);
++static cmdret * set_gap(struct cmdarg **args);
+ 
+ /* command function prototypes. */
+ static cmdret *cmd_abort (int interactive, struct cmdarg **args);
+@@ -355,6 +356,7 @@ init_set_vars (void)
+   add_set_var ("framemsgwait", set_framemsgwait, 1, "", arg_NUMBER);
+   add_set_var ("framesels", set_framesels, 1, "", arg_STRING);
+   add_set_var ("fwcolor", set_fwcolor, 1, "", arg_STRING);
++  add_set_var ("gap", set_gap, 1, "", arg_NUMBER);
+   add_set_var ("historycompaction", set_historycompaction, 1, "", arg_NUMBER);
+   add_set_var ("historyexpansion", set_historyexpansion, 1, "", arg_NUMBER);
+   add_set_var ("historysize", set_historysize, 1, "", arg_NUMBER);
+@@ -3829,6 +3831,31 @@ cmd_rudeness (int interactive UNUSED, struct cmdarg **args)
+   return set_rudeness (args);
+ }
+ 
++cmdret *
++set_gap (struct cmdarg **args)
++{
++  rp_window *win;
++  int num;
++
++  if (args[0] == NULL)
++    return cmdret_new (RET_SUCCESS, "%d", defaults.gap);
++
++  num = ARG(0,number);
++  if (num < 0)
++    return cmdret_new (RET_FAILURE, "gap: invalid argument '%s'", ARG_STRING(0));
++
++  defaults.gap = num;
++
++  /* Update all the visible windows. */
++  list_for_each_entry (win,&rp_mapped_window,node)
++    {
++      if (win_get_frame (win))
++        maximize (win);
++    }
++
++  return cmdret_new (RET_SUCCESS, NULL);
++}
++
+ char *
+ wingravity_to_string (int g)
+ {
+diff --git a/src/data.h b/src/data.h
+index 0a2b53f..9ba2cdc 100644
+--- a/src/data.h
++++ b/src/data.h
+@@ -244,6 +244,7 @@ struct rp_defaults
+   int input_window_size;
+   int window_border_width;
+   int only_border;
++  int gap;
+   int obey_resize_hints;
+ 
+   int bar_x_padding;
+diff --git a/src/frame.c b/src/frame.c
+index 9ba7178..1e9db00 100644
+--- a/src/frame.c
++++ b/src/frame.c
+@@ -285,10 +285,10 @@ frame_read (char *str, rp_screen *screen)
+     f->x = 0;
+   if (f->y <= 0)
+     f->y = 0;
+-  if (f->width <= defaults.window_border_width*2)
+-    f->width = defaults.window_border_width*2 + 1;
+-  if (f->height <= defaults.window_border_width*2)
+-    f->height = defaults.window_border_width*2 + 1;
++  if (f->width <= defaults.window_border_width*2 + defaults.gap*2)
++    f->width = defaults.window_border_width*2 + defaults.gap*2 + 1;
++  if (f->height <= defaults.window_border_width*2 + defaults.gap*2)
++    f->height = defaults.window_border_width*2 + defaults.gap*2 + 1;
+   if (f->last_access < 0)
+     f->last_access = 0;
+ 
+diff --git a/src/main.c b/src/main.c
+index 0dbac74..0998eff 100644
+--- a/src/main.c
++++ b/src/main.c
+@@ -228,6 +228,7 @@ init_defaults (void)
+   defaults.input_window_size   = 200;
+   defaults.window_border_width = 1;
+   defaults.only_border         = 1;
++  defaults.gap                 = 0;
+   defaults.obey_resize_hints   = 1;
+   defaults.bar_x_padding       = 4;
+   defaults.bar_y_padding       = 0;
+diff --git a/src/manage.c b/src/manage.c
+index 78be591..438036f 100644
+--- a/src/manage.c
++++ b/src/manage.c
+@@ -551,17 +551,17 @@ move_window (rp_window *win)
+     case NorthWestGravity:
+     case WestGravity:
+     case SouthWestGravity:
+-      win->x = frame->x;
++      win->x = frame->x + defaults.gap;
+       break;
+     case NorthGravity:
+     case CenterGravity:
+     case SouthGravity:
+-      win->x = frame->x + (frame->width - win->border * 2) / 2 - win->width / 2;
++      win->x = frame->x + (frame->width - win->border*2 - defaults.gap*2)/2 - win->width/2;
+       break;
+     case NorthEastGravity:
+     case EastGravity:
+     case SouthEastGravity:
+-      win->x = frame->x + frame->width - win->width - win->border;
++      win->x = frame->x + frame->width - win->width - win->border - defaults.gap;
+       break;
+     }
+ 
+@@ -571,19 +571,30 @@ move_window (rp_window *win)
+     case NorthEastGravity:
+     case NorthGravity:
+     case NorthWestGravity:
+-      win->y = frame->y;
++      win->y = frame->y + defaults.gap;
+       break;
+     case EastGravity:
+     case CenterGravity:
+     case WestGravity:
+-      win->y = frame->y + (frame->height - win->border * 2) / 2 - win->height / 2;
++      win->y = frame->y + (frame->height - win->border*2 - defaults.gap*2)/2 - win->height/2;
+       break;
+     case SouthEastGravity:
+     case SouthGravity:
+     case SouthWestGravity:
+-      win->y = frame->y + frame->height - win->height - win->border;
++      win->y = frame->y + frame->height - win->height - win->border - defaults.gap;
+       break;
+     }
++
++
++  if (win->x < frame->x + defaults.gap)
++    win->x = frame->x + defaults.gap;
++  if (win->y < frame->y + defaults.gap)
++    win->y = frame->y + defaults.gap;
++
++  if (frame->x == defaults.padding_left)
++    win->x += defaults.gap;
++  if (frame->y == defaults.padding_top)
++    win->y += defaults.gap;
+ }
+ 
+ /* Set a transient window's x,y,width,height fields to maximize the
+@@ -657,7 +668,7 @@ static void
+ maximize_normal (rp_window *win)
+ {
+   rp_frame *frame;
+-  int maxx, maxy;
++  int maxx, maxy, gapx, gapy;
+ 
+   frame = win_get_frame (win);
+ 
+@@ -681,8 +692,8 @@ maximize_normal (rp_window *win)
+     }
+   else
+     {
+-      maxx = frame->width - win->border * 2;
+-      maxy = frame->height - win->border * 2;
++      maxx = frame->width - win->border*2 - defaults.gap*2;
++      maxy = frame->height - win->border*2 - defaults.gap*2;
+     }
+ 
+   /* Honour the window's aspect ratio. */
+@@ -710,8 +721,20 @@ maximize_normal (rp_window *win)
+       PRINT_DEBUG (("frame width=%d height=%d\n",
+                    frame->width, frame->height));
+ 
+-      if (maxx > frame->width) maxx = frame->width - win->border * 2;
+-      if (maxy > frame->height) maxy = frame->height - win->border * 2;
++      gapx = gapy = 2;
++      if (frame->x == defaults.padding_left)
++        gapx++;
++      if (frame->x + frame->width == win->scr->width - defaults.padding_right)
++        gapx++;
++      if (frame->y == defaults.padding_top)
++        gapy++;
++      if (frame->y + frame->height == win->scr->height - defaults.padding_bottom)
++        gapy++;
++
++      if (maxx > frame->width - win->border*2 - defaults.gap*gapx)
++        maxx = frame->width - win->border*2 - defaults.gap*gapx;
++      if (maxy > frame->height - win->border*2 - defaults.gap*gapy)
++        maxy = frame->height - win->border*2 - defaults.gap*gapy;
+     }
+ 
+   /* Make sure we maximize to the nearest Resize Increment specified
+diff --git a/src/split.c b/src/split.c
+index 27610e2..3cfd21a 100644
+--- a/src/split.c
++++ b/src/split.c
+@@ -412,8 +412,8 @@ resize_shrink_to_window (rp_frame *frame)
+ 
+   win = find_window_number (frame->win_number);
+ 
+-  resize_frame_horizontally (frame, win->width + win->border*2 - frame->width);
+-  resize_frame_vertically (frame, win->height + win->border*2 - frame->height);
++  resize_frame_horizontally (frame, win->width + win->border*2 - defaults.gap*2 - frame->width);
++  resize_frame_vertically (frame, win->height + win->border*2 - defaults.gap*2 - frame->height);
+ }
+ 
+ /* resize_frame is a generic frame resizer that can resize vertically,
+@@ -442,7 +442,7 @@ resize_frame (rp_frame *frame, rp_frame *pusher, int diff,
+         {
+           /* If the frame can't get any smaller, then fail. */
+           if (diff > 0
+-              && abs ((*c3)(cur) - (*c1)(cur)) - diff <= defaults.window_border_width * 2)
++              && abs ((*c3)(cur) - (*c1)(cur)) - diff <= defaults.gap*2 + defaults.window_border_width*2)
+             return -1;
+           /* Test for this circumstance:
+              --+
+@@ -539,7 +539,7 @@ resize_frame_horizontally (rp_frame *frame, int diff)
+   if (num_frames (s) < 2 || diff == 0)
+     return;
+ 
+-  if (frame_width (frame) + diff <= defaults.window_border_width * 2)
++  if (frame_width (frame) + diff <= defaults.gap*2 + defaults.window_border_width*2)
+     return;
+ 
+   /* Find out which resize function to use. */
+@@ -585,7 +585,7 @@ resize_frame_vertically (rp_frame *frame, int diff)
+   if (num_frames (s) < 2 || diff == 0)
+     return;
+ 
+-  if (frame_height (frame) + diff <= defaults.window_border_width * 2)
++  if (frame_height (frame) + diff <= defaults.gap*2 + defaults.window_border_width*2)
+     return;
+ 
+   /* Find out which resize function to use. */

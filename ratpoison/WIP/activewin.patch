@@ -1,0 +1,45 @@
+diff --git a/src/globals.c b/src/globals.c
+index 55f97b9..497afba 100644
+--- a/src/globals.c
++++ b/src/globals.c
+@@ -75,6 +75,7 @@ Atom xa_utf8_string;
+ /* netwm atoms */
+ Atom _net_wm_pid;
+ Atom _net_supported;
++Atom _net_active_window;
+ Atom _net_wm_window_type;
+ Atom _net_wm_window_type_dialog;
+ Atom _net_wm_name;
+@@ -284,6 +285,8 @@ set_rp_window_focus (rp_window *win)
+   PRINT_DEBUG (("Giving focus to '%s'\n", window_name (win)));
+   XSetInputFocus (dpy, win->w,
+                   RevertToPointerRoot, CurrentTime);
++  XChangeProperty (dpy, win->scr->root, _net_active_window, XA_WINDOW, 32,
++                   PropModeReplace, (unsigned char *)&win->w, 1);
+ }
+ 
+ void
+diff --git a/src/globals.h b/src/globals.h
+index 4f96667..226f124 100644
+--- a/src/globals.h
++++ b/src/globals.h
+@@ -136,6 +136,7 @@ extern Atom xa_utf8_string;
+ /* netwm atoms. */
+ extern Atom _net_wm_pid;
+ extern Atom _net_supported;
++extern Atom _net_active_window;
+ extern Atom _net_wm_window_type;
+ extern Atom _net_wm_window_type_dialog;
+ extern Atom _net_wm_name;
+diff --git a/src/main.c b/src/main.c
+index 0998eff..7ac43c8 100644
+--- a/src/main.c
++++ b/src/main.c
+@@ -402,6 +402,7 @@ main (int argc, char *argv[])
+   PRINT_DEBUG (("_NET_WM_PID = %ld\n", _net_wm_pid));
+   _net_supported = XInternAtom(dpy, "_NET_SUPPORTED", False);
+   PRINT_DEBUG (("_NET_SUPPORTED = %ld\n", _net_supported));
++  _net_active_window = XInternAtom(dpy, "_NET_ACTIVE_WINDOW", False);
+   _net_wm_window_type = XInternAtom(dpy, "_NET_WM_WINDOW_TYPE", False);
+   _net_wm_window_type_dialog = XInternAtom(dpy, "_NET_WM_WINDOW_TYPE_DIALOG", False);
+   _net_wm_name = XInternAtom(dpy, "_NET_WM_NAME", False);
