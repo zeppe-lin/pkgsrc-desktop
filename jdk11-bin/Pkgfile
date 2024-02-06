@@ -1,5 +1,5 @@
 # Description: Java 11 Software Development Kit (amazon-corretto)
-# URL:         https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/what-is-corretto-8.html
+# URL:         UNMAINTAINED
 # Depends on:  alsa-lib xorg-libxrender xorg-libxtst
 
 name=jdk11-bin
