@@ -1,9 +1,9 @@
 # Description: System information script
-# URL:         https://github.com/smxi/inxi
+# URL:         https://codeberg.org/smxi/inxi
 # Optional:    xorg-xprop xorg-xdpyinfo xorg-xrandr lm-sensors
 
 name=inxi
-version=3.3.32-1
+version=3.3.33-1
 release=1
 source=inxi-$version.tar.gz::https://codeberg.org/smxi/inxi/archive/$version.tar.gz
 
