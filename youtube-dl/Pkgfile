@@ -1,5 +1,5 @@
 # Description: Download videos from YouTube and others site
-# URL:         https://youtube-dl.org
+# URL:         OBSOLETE
 # Depends on:  py3-setuptools
 
 name=youtube-dl
