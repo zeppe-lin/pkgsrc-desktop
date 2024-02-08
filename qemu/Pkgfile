@@ -3,21 +3,13 @@
 # Depends on:  alsa-lib capstone curl e2fsprogs gnutls gtk3 libaio libseccomp libssh linux-pam usbredir xorg-libxcb libcap-ng
 
 name=qemu
-version=7.2.6
+version=7.2.9
 release=1
 source="https://download.qemu.org/$name-$version.tar.xz
 	qemu-man-7.0.0.tar.xz
-	qemu-5.2.0-disable-keymap.patch
-	tricore_feature.patch
 	60-kvm.rules"
 
 build() {
-	# disable libxkbcommon dependency
-	patch -d $name-$version -p1 -i $SRC/qemu-5.2.0-disable-keymap.patch
-
-	# fix capstone>=5.0 build
-	patch -d $name-$version -p1 -i $SRC/tricore_feature.patch
-
 	# fix include issues with libcap
 	sed -e '/#include "qemu\/xattr.h"/d' \
 	    -e 's|#include <sys/resource.h>|#include <sys/resource.h>\r\n#include "qemu\/xattr.h"|g' \
@@ -25,22 +17,27 @@ build() {
 
 	mkdir build; cd build
 
+	# --disable-xkbcommon: use prebuilt keymaps
+	# bug: https://bugs.gentoo.org/759604
 	../$name-$version/configure         \
 		--prefix=/usr               \
 		--sysconfdir=/etc           \
 		--libexecdir=/usr/lib/qemu  \
 		--localstatedir=/var        \
+		--python=/usr/bin/python3   \
+		--disable-brlapi            \
 		--disable-docs              \
 		--disable-gettext           \
+		--disable-oss               \
+		--disable-pa                \
 		--disable-sdl               \
 		--disable-sdl-image         \
-		--disable-xkbcommon         \
-		--enable-gtk                \
-		--enable-alsa               \
-		--enable-usb-redir          \
-		--python=/usr/bin/python3   \
-		--enable-virtfs             \
 		--disable-werror            \
+		--disable-xkbcommon         \
+		--enable-alsa               \
+		--enable-gtk                \
+		--enable-usb-redir          \
+		--enable-virtfs             \
 
 	make V=1 ${MAKEFLAGS:=}
 	make DESTDIR=$PKG install
