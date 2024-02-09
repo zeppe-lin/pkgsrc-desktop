@@ -1,5 +1,5 @@
 # Description: Download videos from YouTube and others site
-# URL:         OBSOLETE
+# URL:         UNMAINTAINED
 # Depends on:  py3-setuptools
 
 name=youtube-dl
