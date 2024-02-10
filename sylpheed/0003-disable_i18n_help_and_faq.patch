@@ -1,0 +1,21 @@
+diff '--color=auto' -pruN /var/cache/pkgmk/sources/sylpheed-3.7.0.orig/src/mainwindow.c ../src/mainwindow.c
+--- /var/cache/pkgmk/sources/sylpheed-3.7.0.orig/src/mainwindow.c	2024-02-10 14:44:39.382202394 +0200
++++ ../src/mainwindow.c	2024-02-10 14:46:22.931714048 +0200
+@@ -902,15 +902,8 @@ static GtkItemFactoryEntry mainwin_entri
+ 						NULL, NULL, 0, "<Branch>"},
+ 
+ 	{N_("/_Help"),				NULL, NULL, 0, "<Branch>"},
+-	{N_("/_Help/_Manual"),			NULL, NULL, 0, "<Branch>"},
+-	{N_("/_Help/_Manual/_English"),		NULL, manual_open_cb, MANUAL_LANG_EN, NULL},
+-	{N_("/_Help/_Manual/_Japanese"),	NULL, manual_open_cb, MANUAL_LANG_JA, NULL},
+-	{N_("/_Help/_FAQ"),			NULL, NULL, 0, "<Branch>"},
+-	{N_("/_Help/_FAQ/_English"),		NULL, faq_open_cb, MANUAL_LANG_EN, NULL},
+-	{N_("/_Help/_FAQ/_German"),		NULL, faq_open_cb, MANUAL_LANG_DE, NULL},
+-	{N_("/_Help/_FAQ/_Spanish"),		NULL, faq_open_cb, MANUAL_LANG_ES, NULL},
+-	{N_("/_Help/_FAQ/_French"),		NULL, faq_open_cb, MANUAL_LANG_FR, NULL},
+-	{N_("/_Help/_FAQ/_Italian"),		NULL, faq_open_cb, MANUAL_LANG_IT, NULL},
++	{N_("/_Help/_Manual"),			NULL, manual_open_cb, MANUAL_LANG_EN, NULL},
++	{N_("/_Help/_FAQ"),			NULL, faq_open_cb, MANUAL_LANG_EN, NULL},
+ 	{N_("/_Help/_Command line options"),	NULL, help_cmdline_cb, 0, NULL},
+ #if USE_UPDATE_CHECK
+ 	{N_("/_Help/---"),			NULL, NULL, 0, "<Separator>"},

@@ -1,0 +1,89 @@
+diff '--color=auto' -pruN /var/cache/pkgmk/sources/sylpheed-3.7.0.orig/src/manual.c ../src/manual.c
+--- /var/cache/pkgmk/sources/sylpheed-3.7.0.orig/src/manual.c	2024-02-10 14:44:39.389202428 +0200
++++ ../src/manual.c	2024-02-10 15:10:52.675983418 +0200
+@@ -30,83 +30,18 @@
+ #include "manual.h"
+ #include "utils.h"
+ 
+-static gchar *get_lang_str(ManualLang lang);
+-
+-static gchar *get_lang_str(ManualLang lang)
+-{
+-	switch (lang) {
+-	case MANUAL_LANG_DE:
+-		return "de";
+-	case MANUAL_LANG_EN:
+-		return "en";
+-	case MANUAL_LANG_ES:
+-		return "es";
+-	case MANUAL_LANG_FR:
+-		return "fr";
+-	case MANUAL_LANG_IT:
+-		return "it";
+-	case MANUAL_LANG_JA:
+-		return "ja";
+-	default:
+-		return NULL;
+-	}
+-}
+-
+ void manual_open(ManualLang lang)
+ {
+-	gchar *lang_str;
+-	gchar *file_uri;
+-
+-	lang_str = get_lang_str(lang);
+-	if (!lang_str) return;
++	const gchar *file_uri = "https://sylpheed.sraoss.jp/doc/manual/en/sylpheed.html";
+ 
+-	file_uri = g_strconcat("file://",
+-#ifdef G_OS_WIN32
+-			       get_startup_dir(),
+-			       G_DIR_SEPARATOR_S "doc" G_DIR_SEPARATOR_S
+-			       "manual",
+-#elif defined(__APPLE__)
+-			       get_startup_dir(),
+-			       G_DIR_SEPARATOR_S "Contents" G_DIR_SEPARATOR_S
+-			       "Resources" G_DIR_SEPARATOR_S
+-			       "share" G_DIR_SEPARATOR_S
+-			       "sylpheed" G_DIR_SEPARATOR_S
+-			       "manual",
+-#else
+-			       MANUALDIR,
+-#endif
+-			       G_DIR_SEPARATOR_S, lang_str, G_DIR_SEPARATOR_S,
+-			       MANUAL_HTML_INDEX, NULL);
+ 	debug_print("Opening manual: %s\n", file_uri);
+ 	open_uri(file_uri, prefs_common.uri_cmd);
+-	g_free(file_uri);
+ }
+ 
+ void faq_open(ManualLang lang)
+ {
+-	gchar *lang_str;
+-	gchar *file_uri;
+-
+-	lang_str = get_lang_str(lang);
+-	if (!lang_str) return;
++	const gchar *file_uri = "https://sylpheed.sraoss.jp/doc/faq/en/sylpheed-faq.html";
+ 
+-	file_uri = g_strconcat("file://",
+-#ifdef G_OS_WIN32
+-			       get_startup_dir(),
+-			       G_DIR_SEPARATOR_S "doc" G_DIR_SEPARATOR_S "faq",
+-#elif defined(__APPLE__)
+-			       get_startup_dir(),
+-			       G_DIR_SEPARATOR_S "Contents" G_DIR_SEPARATOR_S
+-			       "Resources" G_DIR_SEPARATOR_S
+-			       "share" G_DIR_SEPARATOR_S
+-			       "sylpheed" G_DIR_SEPARATOR_S
+-			       "faq",
+-#else
+-			       FAQDIR,
+-#endif
+-			       G_DIR_SEPARATOR_S, lang_str, G_DIR_SEPARATOR_S,
+-			       FAQ_HTML_INDEX, NULL);
+ 	debug_print("Opening FAQ: %s\n", file_uri);
+ 	open_uri(file_uri, prefs_common.uri_cmd);
+-	g_free(file_uri);
+ }
