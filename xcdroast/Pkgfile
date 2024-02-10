@@ -4,14 +4,13 @@
 
 name=xcdroast
 version=1.19
-release=4
+release=5
 source="https://downloads.sourceforge.net/project/$name/$name-$version.tar.gz
 	http://www.xcdroast.org/release/patches/$name-$version-Patches.tar.gz
-	change_font_defs.patch"
+	respect-system-fonts.patch"
 
 build() {
-	# use JetBrains Mono font
-	patch -p6 -d $name-$version -i $SRC/change_font_defs.patch
+	patch -p6 -d $name-$version -i $SRC/respect-system-fonts.patch
 
 	# apply upstream patches
 	cd $name-$version
