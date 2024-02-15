@@ -6,7 +6,7 @@
 
 name=mpv
 version=0.36.0
-release=1
+release=2
 source=https://github.com/mpv-player/mpv/archive/v$version/mpv-v$version.tar.gz
 
 build() {
@@ -30,6 +30,9 @@ build() {
 
 	ninja -C build -j ${JOBS:-1} -v
 	DESTDIR=$PKG ninja -C build install
+
+	# remove i18n entries from desktop file
+	sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/*.desktop
 
 	# remove junk & zsh completion
 	rm -r $PKG/usr/share/doc/ $PKG/usr/share/zsh
