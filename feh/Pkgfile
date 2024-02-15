@@ -4,7 +4,7 @@
 
 name=feh
 version=3.10.2
-release=1
+release=2
 source=https://github.com/derf/feh/archive/$version/feh-$version.tar.gz
 
 build() {
@@ -14,6 +14,9 @@ build() {
 
 	make PREFIX=/usr VERSION=$version $_CONF
 	make PREFIX=/usr VERSION=$version DESTDIR=$PKG install
+
+	# remove i18n entries
+	sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/feh.desktop
 
 	# remove junk
 	rm -r $PKG/usr/share/doc
