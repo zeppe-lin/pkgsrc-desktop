@@ -4,9 +4,10 @@
 
 name=xcdroast
 version=1.19
-release=5
+release=6
 source="https://downloads.sourceforge.net/project/$name/$name-$version.tar.gz
 	http://www.xcdroast.org/release/patches/$name-$version-Patches.tar.gz
+	xcdroast.desktop
 	respect-system-fonts.patch"
 
 build() {
@@ -25,9 +26,15 @@ build() {
 
 	../$name-$version/configure  \
 		--prefix=/usr        \
+		--libdir=/usr/lib    \
 		--sysconfdir=/etc    \
 		--disable-nls        \
 
-	make V=1
-	make DESTDIR=$PKG install
+	make XCDRLIB_PREFIX=/usr/lib/xcdroast V=1
+	make XCDRLIB_PREFIX=/usr/lib/xcdroast DESTDIR=$PKG install
+
+	install -m 0644 -D $SRC/xcdroast.desktop \
+		$PKG/usr/share/applications/xcdroast.desktop
+	install -m 0644 -D ../$name-$version/xpms/ico_cdwriter.xpm \
+		$PKG/usr/share/pixmaps/xcdroast.xpm
 }
