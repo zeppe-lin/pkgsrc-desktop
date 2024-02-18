@@ -1,0 +1,52 @@
+.\" Manual page for notification-daemon(8)
+.Dd February 17, 2024
+.Dt NOTIFICATION-DAEMON 8
+.Os
+.Sh NAME
+.Nm notification-daemon
+.Nd FIXME
+.Sh SYNOPSIS
+.Nm %%PREFIX%%/libexec/notification-daemon
+.Op Ar OPTION ...
+.Sh DESCRIPTION
+.Nm notification-daemon
+displays passive pop-up notifications, as per the Desktop Notifications
+Specifications.
+.Pp
+The Desktop Notifications Specifications provides a standard way of doing
+passive pop-up notifications on the desktop.
+These are designed to notify the user of something without interrupting
+their work with a dialog box that they must close.
+Passive popups can automatically disappear after a short period of time.
+.Sh OPTIONS
+.Ss Help Options
+.Bl -tag -width Ds
+.It Fl h , Fl \-help
+Show help options.
+.It Fl \-help-all
+Show all help options.
+.It Fl \-help-gtk
+Show GTK+ options.
+.El
+.Ss GTK+ Options
+.Bl -tag -width Ds
+.It Fl \-class Ns = Ns Ar CLASS
+Program class as used by the window manager.
+.It Fl \-name Ns = Ns Ar NAME
+Program name as used by the window manager.
+.It Fl \-gtk-module Ns = Ns Ar MODULES
+Load additional GTK+ modules.
+.It Fl \-g-fatal-warnings
+Make all warnings fatal.
+.El
+.Ss Applications Options
+.Bl -tag -width Ds
+.It Fl \-debug
+Enable debugging code.
+.It Fl r , Fl \-replace
+Replace a currently running application.
+.It Fl \-display Ns = Ns Ar DISPLAY
+X display to use.
+.El
+.Sh SEE ALSO
+.Xr notify-send 1

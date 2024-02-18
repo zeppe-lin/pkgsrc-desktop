@@ -1,0 +1,78 @@
+Binary files ../notification-daemon-3.20.0.orig/src/.nd-bubble.c.un~ and ./src/.nd-bubble.c.un~ differ
+diff '--color=auto' -pruN ../notification-daemon-3.20.0.orig/src/nd-notification-box.c ./src/nd-notification-box.c
+--- ../notification-daemon-3.20.0.orig/src/nd-notification-box.c	2024-02-17 01:02:13.184026201 +0200
++++ ./src/nd-notification-box.c	2024-02-17 07:18:02.796562101 +0200
+@@ -42,6 +42,7 @@ struct NdNotificationBoxPrivate
+         GtkWidget      *close_button;
+         GtkWidget      *summary_label;
+         GtkWidget      *body_label;
++        GtkWidget      *timestamp_label;
+ 
+         GtkWidget      *main_hbox;
+         GtkWidget      *content_hbox;
+@@ -204,7 +205,8 @@ update_notification_box (NdNotificationB
+ 
+         /* summary */
+         quoted = g_markup_escape_text (nd_notification_get_summary (notification_box->priv->notification), -1);
+-        str = g_strdup_printf ("<b><big>%s</big></b>", quoted);
++        str = g_strdup_printf ("<i><small>%s</small></i>\n<b><big>%s</big></b>",
++			nd_notification_get_dt (notification_box->priv->notification), quoted);
+         g_free (quoted);
+ 
+         gtk_label_set_markup (GTK_LABEL (notification_box->priv->summary_label), str);
+Binary files ../notification-daemon-3.20.0.orig/src/.nd-notification-box.c.un~ and ./src/.nd-notification-box.c.un~ differ
+diff '--color=auto' -pruN ../notification-daemon-3.20.0.orig/src/nd-notification.c ./src/nd-notification.c
+--- ../notification-daemon-3.20.0.orig/src/nd-notification.c	2024-02-17 01:02:13.184026201 +0200
++++ ./src/nd-notification.c	2024-02-17 06:53:07.859082748 +0200
+@@ -53,6 +53,7 @@ struct _NdNotification {
+         char        **actions;
+         GHashTable   *hints;
+         int           timeout;
++	gchar        *dt;
+ };
+ 
+ static void nd_notification_finalize     (GObject      *object);
+@@ -126,6 +127,7 @@ nd_notification_init (NdNotification *no
+                                                      g_str_equal,
+                                                      g_free,
+                                                      (GDestroyNotify) g_variant_unref);
++	notification->dt = g_date_time_format (g_date_time_new_now_local (), "%c");
+ }
+ 
+ static void
+@@ -140,6 +142,7 @@ nd_notification_finalize (GObject *objec
+         g_free (notification->icon);
+         g_free (notification->summary);
+         g_free (notification->body);
++	g_free (notification->dt);
+         g_strfreev (notification->actions);
+ 
+         if (notification->hints != NULL) {
+@@ -341,6 +344,14 @@ nd_notification_get_body (NdNotification
+ }
+ 
+ const char *
++nd_notification_get_dt (NdNotification *notification)
++{
++        g_return_val_if_fail (ND_IS_NOTIFICATION (notification), NULL);
++
++        return notification->dt;
++}
++
++const char *
+ nd_notification_get_icon (NdNotification *notification)
+ {
+         g_return_val_if_fail (ND_IS_NOTIFICATION (notification), NULL);
+Binary files ../notification-daemon-3.20.0.orig/src/.nd-notification.c.un~ and ./src/.nd-notification.c.un~ differ
+diff '--color=auto' -pruN ../notification-daemon-3.20.0.orig/src/nd-notification.h ./src/nd-notification.h
+--- ../notification-daemon-3.20.0.orig/src/nd-notification.h	2024-02-17 01:02:13.184026201 +0200
++++ ./src/nd-notification.h	2024-02-17 06:53:39.318239328 +0200
+@@ -71,6 +71,7 @@ const char *          nd_notification_ge
+ const char *          nd_notification_get_icon            (NdNotification *notification);
+ const char *          nd_notification_get_summary         (NdNotification *notification);
+ const char *          nd_notification_get_body            (NdNotification *notification);
++const char *          nd_notification_get_dt              (NdNotification *notification);
+ char **               nd_notification_get_actions         (NdNotification *notification);
+ GHashTable *          nd_notification_get_hints           (NdNotification *notification);
+ 
+Binary files ../notification-daemon-3.20.0.orig/src/.nd-notification.h.un~ and ./src/.nd-notification.h.un~ differ
