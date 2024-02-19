@@ -7,7 +7,5 @@ release=1
 source=https://github.com/zlin/$name/archive/$version/$name-$version.tar.gz
 
 build() {
-	cd $name-$version
-
-	install -m 0755 -Dt $PKG/usr/bin/ $name
+	install -m 0755 -Dt $PKG/usr/bin/  $name-$version/wgetpaste
 }
