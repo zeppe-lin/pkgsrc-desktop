@@ -7,7 +7,7 @@ TIMESYNC
 	the time based OTPs will not validate.  For example, chrony package
 	can synchronize your clock:
 
-		# pkgman install --deps --group chrony
-		# /etc/rc.d/chronyd start
+		sudo pkgman install --deps --group chrony
+		sudo /etc/rc.d/chronyd start
 
 End of file.
