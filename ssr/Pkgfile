@@ -8,9 +8,6 @@ release=1
 source=ssr-$version.tar.gz::https://github.com/MaartenBaert/ssr/archive/$version.tar.gz
 
 build() {
-	# show build options
-	#cmake -S $name-$version -LAH | awk '{if(f)print} /-- Cache values/{f=1}'
-
 	cmake -S ssr-$version -B build -G Ninja         \
 		-D CMAKE_INSTALL_PREFIX=/usr            \
 		-D CMAKE_INSTALL_LIBDIR=lib             \
