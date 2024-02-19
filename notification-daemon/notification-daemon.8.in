@@ -4,7 +4,7 @@
 .Os
 .Sh NAME
 .Nm notification-daemon
-.Nd FIXME
+.Nd a daemon that displays passive pop-up notifications
 .Sh SYNOPSIS
 .Nm %%PREFIX%%/libexec/notification-daemon
 .Op Ar OPTION ...
