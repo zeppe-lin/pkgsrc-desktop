@@ -22,10 +22,13 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/gifclrmp.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/gifcolor.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/gifecho.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/giffilter.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/giffix.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/gifhisto.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/gifinto.1.gz
--rw-r--r--	root/root	usr/share/man/man1/giflib.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/gifsponge.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/giftext.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/giftool.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/gifwedge.1.gz
+drwxr-xr-x	root/root	usr/share/man/man7/
+-rw-r--r--	root/root	usr/share/man/man7/giflib.7.gz

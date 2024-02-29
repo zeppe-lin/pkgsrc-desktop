@@ -2,7 +2,7 @@
 # URL:         https://giflib.sourceforge.net/
 
 name=giflib
-version=5.2.1
+version=5.2.2
 release=1
 source=https://download.sourceforge.net/$name/$name-$version.tar.gz
 
@@ -10,5 +10,10 @@ build() {
 	cd $name-$version
 
 	make OFLAGS="$CFLAGS"
-	make PREFIX=$PKG/usr install
+
+	# man pages installation is broken: skip it and install manually
+	make PREFIX=$PKG/usr install-bin install-include install-lib
+
+	install -m 0644 -Dt $PKG/usr/share/man/man1/ doc/*.1
+	install -m 0644 -Dt $PKG/usr/share/man/man7/ doc/*.7
 }
