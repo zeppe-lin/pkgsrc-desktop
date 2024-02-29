@@ -3,7 +3,7 @@
 # Depends on:  imagemagick xorg-xcursorgen
 
 name=retrosmart-cursor-theme
-version=3.0-d3b4c15
+version=3.1a-1841301
 release=1
 source=https://github.com/mdomlop/retrosmart-x11-cursors/archive/${version#*-}/$name-$version.tar.gz
 
