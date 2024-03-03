@@ -1,5 +1,6 @@
 # Description: Customizable and lightweight notification-daemon
 # URL:         https://dunst-project.org/
+# Maintainer:  UNMAINTAINED
 # Depends on:  dbus gdk-pixbuf pango xorg-libxinerama xorg-libxrandr xorg-libxscrnsaver libnotify
 
 name=dunst
