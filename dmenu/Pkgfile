@@ -1,5 +1,6 @@
 # Description: Dynamic menu for X
 # URL:         https://tools.suckless.org/dmenu/
+# Maintainer:  UNMAINTAINED
 # Depends on:  xorg-libxft xorg-libxinerama
 
 name=dmenu
