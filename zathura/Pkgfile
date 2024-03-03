@@ -3,13 +3,16 @@
 # Depends on:  girara json-glib
 
 name=zathura
-version=0.5.4
+version=0.5.5
 release=1
-source="https://pwmt.org/projects/$name/download/$name-$version.tar.xz
+source="$name-$version.tar.gz::https://github.com/pwmt/$name/archive/refs/tags/$version.tar.gz
 	remove_gettext.patch"
 
 build() {
+	# remove gettext dependency
 	patch -p0 -d $name-$version -i $SRC/remove_gettext.patch
+
+	# disable building doc and tests
 	sed -e "/^subdir('doc')/d"       \
 	    -e "/^subdir('tests')/d"     \
 	    -i $name-$version/meson.build
@@ -22,11 +25,10 @@ build() {
 		-D b_lto=true            \
 		-D b_pie=true            \
 		-D synctex=disabled      \
-		-D sqlite=disabled       \
 		-D seccomp=disabled      \
 		-D tests=disabled        \
 		-D manpages=disabled     \
-		-D convert-icon=enabled  \
+		-D convert-icon=disabled \
 
 	ninja -C build -j ${JOBS:-1} -v
 	DESTDIR=$PKG ninja -C build install
