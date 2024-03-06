@@ -2,9 +2,9 @@
 # URL:         https://www.opus-codec.org/
 
 name=opus
-version=1.4
+version=1.5.1
 release=1
-source=https://github.com/xiph/opus/releases/download/v$version/opus-$version.tar.gz
+source=https://downloads.xiph.org/releases/opus/opus-$version.tar.gz
 
 build() {
 	meson setup build opus-$version     \
