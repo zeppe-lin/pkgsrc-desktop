@@ -1,6 +1,6 @@
 # Description: Text-based web browser
 # URL:         https://lynx.invisible-island.net/
-# Depends on:  ncurses openssl zlib
+# Depends on:  bzip2 libbsd libidn2 ncurses openssl zlib
 
 name=lynx
 version=2.9.0
