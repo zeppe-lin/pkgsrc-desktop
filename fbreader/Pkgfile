@@ -4,7 +4,7 @@
 
 name=fbreader
 version=0.99.4
-release=2
+release=3
 source="$name-sources-$version.tgz
 	$name-$version.patch
 	$name-gcc6.patch
