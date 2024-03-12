@@ -2,10 +2,10 @@
 # URL:         https://github.com/zlin/wgetpaste
 
 name=wgetpaste
-version=2.33
+version=2.34
 release=1
 source=https://github.com/zlin/$name/archive/$version/$name-$version.tar.gz
 
 build() {
-	install -m 0755 -Dt $PKG/usr/bin/  $name-$version/wgetpaste
+	install -m 0755 -Dt $PKG/usr/bin/ $name-$version/$name
 }
