@@ -1,7 +1,7 @@
-From ea4ca118251160965057c12283297267670d61e4 Mon Sep 17 00:00:00 2001
+From 1aec970783b369d66d4fa788237975ca177fbba6 Mon Sep 17 00:00:00 2001
 From: Antoine Busque <antoinebusque@gmail.com>
 Date: Thu, 21 Sep 2017 20:16:06 -0400
-Subject: [PATCH 7/8] Fix: draw the license text centered on multi-screen setup
+Subject: [PATCH 7/9] Fix: draw the license text centered on multi-screen setup
 
 The current implementation of the license command uses the `s->top`
 and `s->left` values, combined with the screen's height and width to
@@ -35,5 +35,5 @@ index a568717..7e15462 100644
    if (y < 0) y = 0;
  
 -- 
-2.43.0
+2.44.0
 

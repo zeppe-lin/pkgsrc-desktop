@@ -1,7 +1,7 @@
-From 2ca71fef6a59b15fae1b30802f391586a1e30ca3 Mon Sep 17 00:00:00 2001
+From a84ec10a2ce5e4fd9d144d60e82da532cf72c588 Mon Sep 17 00:00:00 2001
 From: Antoine Busque <antoinebusque@gmail.com>
 Date: Thu, 21 Sep 2017 20:01:53 -0400
-Subject: [PATCH 6/8] Fix: don't draw help window beyond screen height
+Subject: [PATCH 6/9] Fix: don't draw help window beyond screen height
 
 The current computation for the drawing of the help window uses the
 value `s->top + s->height` as the bottom edge of the screen, even
@@ -32,5 +32,5 @@ index 1208902..a568717 100644
                if (drawing_keys)
                  {
 -- 
-2.43.0
+2.44.0
 

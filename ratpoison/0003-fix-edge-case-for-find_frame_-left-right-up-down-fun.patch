@@ -1,7 +1,7 @@
-From 064b9208c09ddf1cc787fedfab788d5d929dec0b Mon Sep 17 00:00:00 2001
+From 93ddcc51a10ccdf99830d6ede4e293ccfc448027 Mon Sep 17 00:00:00 2001
 From: Alexandr Savca <alexandr.savca89@gmail.com>
 Date: Sat, 3 Feb 2024 03:05:57 +0200
-Subject: [PATCH 3/8] fix edge case for find_frame_[left,right,up,down]
+Subject: [PATCH 3/9] fix edge case for find_frame_[left,right,up,down]
  function
 
 Daniel Maturana:
@@ -98,5 +98,5 @@ index eed0f50..a652eaf 100644
          {
            if (frame_right_abs (frame) == frame_left_abs (cur))
 -- 
-2.43.0
+2.44.0
 

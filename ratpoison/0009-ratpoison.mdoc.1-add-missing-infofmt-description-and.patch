@@ -1,0 +1,225 @@
+From 1b3d2cd883325aba982c0086d8a95358ab5cffb2 Mon Sep 17 00:00:00 2001
+From: Alexandr Savca <alexandr.savca89@gmail.com>
+Date: Fri, 15 Mar 2024 16:04:59 +0200
+Subject: [PATCH 9/9] ratpoison.mdoc.1: add missing infofmt description and
+ cleanup
+
+* Normalize date format to bypass mdoc -T lint warnings.
+* Add infofmt variable description.
+* Reword info command description
+* Move format description from windows command to winfmt variable.
+* Typo fix.
+---
+ doc/ratpoison.mdoc.1 | 171 ++++++++++++++++++++++++-------------------
+ 1 file changed, 95 insertions(+), 76 deletions(-)
+
+diff --git a/doc/ratpoison.mdoc.1 b/doc/ratpoison.mdoc.1
+index c791317..72c466d 100644
+--- a/doc/ratpoison.mdoc.1
++++ b/doc/ratpoison.mdoc.1
+@@ -22,7 +22,7 @@
+ .\" [2] http://mdocml.bsd.lv/
+ .\" [3] http://mdocml.bsd.lv/mdoc.7.html
+ .\"
+-.Dd Aug 22, 2017
++.Dd March 15, 2024
+ .Dt RATPOISON 1
+ .Os
+ .Sh NAME
+@@ -470,13 +470,21 @@ but switch to the next window with the same resource class as the
+ current one.
+ (That means the next window belonging to the same application
+ as the current one.)
+-.It Ic info Pq Ic C\-t i
+-Output the current the width, height, window number and window name of
+-the current window.
+-.Po
+-What name means is chosen by
+-.Dq Ic set Ar winname .
+-.Pc
++.It Ic info Oo Ar format Oc Pq Ic C\-t i
++In interactive mode, show the information about the current window
++for the duration specified by the variable
++.Va msgwait .
++If
++.Va msgwait
++was zero, toggle between indefinitely showing and not showing.
++.Pp
++The messages are shown in the format set by
++.Ic set Ar infofmt .
++.Pp
++In non\-interactive mode, output the information about the current
++window.
++The format string can be overwritten by the optional parameter
++.Ar format .
+ .It Ic iprev
+ Like
+ .Ic prev
+@@ -855,73 +863,6 @@ The messages are shown in columns or rows depending on the value of
+ .Va winliststyle
+ in the format set by
+ .Ic set Ar winfmt .
+-The following substitutions happen in format:
+-.Pp
+-.Bl -tag -offset 2n -width 2n -compact
+-.It Li %a
+-application name (resource name)
+-.It Li %c
+-resource class
+-.It Li %f
+-frame number
+-.It Li %g
+-gravity of the window
+-.It Li %h
+-height of the window
+-.It Li %H
+-unit to resize the window vertically (height_inc)
+-.It Li %i
+-X Window ID
+-.It Li %p
+-process ID
+-.It Li %l
+-last access number
+-.It Li %M
+-string
+-.Li Maxsize ,
+-if it specifies a maximum size
+-.It Li %n
+-window number
+-.It Li %s
+-window status
+-.Po
+-.Ql *
+-is active window,
+-.Ql +
+-would be chosen by
+-.Ic other ,
+-.Ql \-
+-otherwise
+-.Pc
+-.It Li %S
+-screen number
+-.It Li %t
+-window name
+-.Po see
+-.Ic set Ar winname
+-.Pc ,
+-.It Li \&%T
+-the string
+-.Dq Li Transient ,
+-if it is a transient window
+-.It Li %w
+-width of the window
+-.It Li %W
+-unit to resize the window horizontally (width_inc)
+-.It Li %x
+-xrandr screen number
+-.It Li %%
+-litteral
+-.Ql %
+-.El
+-.Pp
+-Additionally there can be a positive decimal integer number between the
+-percent sign and the format string to specify the length this value
+-should be truncated to if longer.
+-.Po
+-For example:
+-.Li %20t
+-.Pc
+ .Pp
+ In non\-interactive mode, output the list of windows in the current group
+ line by line.
+@@ -1047,11 +988,89 @@ and
+ .Pp
+ Default is
+ .Li 1 .
++.It Ic infofmt Ar format
++Choose the default window format for the
++.Ic info
++command.
++See
++.Ic set Ar winfmt
++for accepted format characters.
++.Pp
++Default is
++.Li (%H, %W) %n(%t) .
+ .It Cm winfmt Ar format
+-Choose the default format for the the
++Choose the default format for the
+ .Ic windows
+ command.
+ .Pp
++The following substitutions happen in format:
++.Pp
++.Bl -tag -offset 2n -width 2n -compact
++.It Li %a
++application name (resource name)
++.It Li %c
++resource class
++.It Li %f
++frame number
++.It Li %g
++gravity of the window
++.It Li %h
++height of the window
++.It Li %H
++unit to resize the window vertically (height_inc)
++.It Li %i
++X Window ID
++.It Li %p
++process ID
++.It Li %l
++last access number
++.It Li %M
++string
++.Li Maxsize ,
++if it specifies a maximum size
++.It Li %n
++window number
++.It Li %s
++window status
++.Po
++.Ql *
++is active window,
++.Ql +
++would be chosen by
++.Ic other ,
++.Ql \-
++otherwise
++.Pc
++.It Li %S
++screen number
++.It Li %t
++window name
++.Po see
++.Ic set Ar winname
++.Pc ,
++.It Li \&%T
++the string
++.Dq Li Transient ,
++if it is a transient window
++.It Li %w
++width of the window
++.It Li %W
++unit to resize the window horizontally (width_inc)
++.It Li %x
++xrandr screen number
++.It Li %%
++litteral
++.Ql %
++.El
++.Pp
++Additionally there can be a positive decimal integer number between the
++percent sign and the format string to specify the length this value
++should be truncated to if longer.
++.Po
++For example:
++.Li %20t
++.Pc
++.Pp
+ Default is
+ .Li %n%s%t .
+ .It Cm winname Li title | name | class
+-- 
+2.44.0
+

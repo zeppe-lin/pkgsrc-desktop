@@ -1,7 +1,7 @@
-From 7e40b0709e9959b93ac0bd40a758a6b930315516 Mon Sep 17 00:00:00 2001
+From 341e67eaa0fa631c41c78ad165d575d2b28592ee Mon Sep 17 00:00:00 2001
 From: Alexandr Savca <alexandr.savca89@gmail.com>
 Date: Sat, 3 Feb 2024 03:01:01 +0200
-Subject: [PATCH 2/8] fix dedicate frame
+Subject: [PATCH 2/9] fix dedicate frame
 
 Mujo:
 >> I noticed the dedicate frame functionality to toggle promiscuous
@@ -26,5 +26,5 @@ index dd65a93..12f9f96 100644
  
        list_for_each_entry (cur, &screen->frames, node)
 -- 
-2.43.0
+2.44.0
 

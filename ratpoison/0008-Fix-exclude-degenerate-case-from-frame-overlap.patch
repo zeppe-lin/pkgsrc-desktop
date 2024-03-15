@@ -1,7 +1,7 @@
-From b798f26c04ab955d0aae8be545a92179decc8479 Mon Sep 17 00:00:00 2001
+From f1efc75d171259a7f41d30cbad3b02583521a28d Mon Sep 17 00:00:00 2001
 From: Antoine Busque <antoinebusque@gmail.com>
 Date: Sun, 4 Feb 2018 22:08:30 -0500
-Subject: [PATCH 8/8] Fix: exclude degenerate case from frame overlap
+Subject: [PATCH 8/9] Fix: exclude degenerate case from frame overlap
 
 The current implementation of the find_frame_* functions considered
 the degenerate case of frame overlap (i.e. a single pixel overlap, or
@@ -97,5 +97,5 @@ index a652eaf..27610e2 100644
          }
      }
 -- 
-2.43.0
+2.44.0
 

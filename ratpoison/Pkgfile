@@ -4,15 +4,16 @@
 
 name=ratpoison
 version=1.4.9-db94d49
-release=2
-source="0001-ignore-resize-hints.patch
+release=3
+source="0001-obeyresizehints-option-to-dis-obey-ICCCM-window-resi.patch
 	0002-fix-dedicate-frame.patch
 	0003-fix-edge-case-for-find_frame_-left-right-up-down-fun.patch
-	0004-ctrl-w-as-backspace.patch
+	0004-editor-support-C-w-for-backward-kill-word.patch
 	0005-Fix-only-set-active-frame-when-needed-in-sync_wins.patch
 	0006-Fix-don-t-draw-help-window-beyond-screen-height.patch
 	0007-Fix-draw-the-license-text-centered-on-multi-screen-s.patch
 	0008-Fix-exclude-degenerate-case-from-frame-overlap.patch
+	0009-ratpoison.mdoc.1-add-missing-infofmt-description-and.patch
 
 	ratpoison-re.pl.diff
 	genratpoison-re.pl"
@@ -40,14 +41,9 @@ build() {
 	# patches included in this package
 	git checkout ${version#*-}
 
-	patch -p1 -i $SRC/0001-ignore-resize-hints.patch
-	patch -p1 -i $SRC/0002-fix-dedicate-frame.patch
-	patch -p1 -i $SRC/0003-fix-edge-case-for-find_frame_-left-right-up-down-fun.patch
-	patch -p1 -i $SRC/0004-ctrl-w-as-backspace.patch
-	patch -p1 -i $SRC/0005-Fix-only-set-active-frame-when-needed-in-sync_wins.patch
-	patch -p1 -i $SRC/0006-Fix-don-t-draw-help-window-beyond-screen-height.patch
-	patch -p1 -i $SRC/0007-Fix-draw-the-license-text-centered-on-multi-screen-s.patch
-	patch -p1 -i $SRC/0008-Fix-exclude-degenerate-case-from-frame-overlap.patch
+	for p in $SRC/000*.patch; do
+		patch -p1 -i $SRC/$p
+	done
 
 	# needed for our genratpoison-re.pl
 	patch -p1 -i $SRC/ratpoison-re.pl.diff

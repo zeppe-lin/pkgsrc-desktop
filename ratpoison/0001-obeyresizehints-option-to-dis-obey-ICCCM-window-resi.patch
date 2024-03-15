@@ -1,24 +1,28 @@
-From b6d36019dfaa4568ffb2e7d36715c2347ce4e06e Mon Sep 17 00:00:00 2001
+From 60ad9145e88478cd6f285a40f6cb89df46e94ba8 Mon Sep 17 00:00:00 2001
 From: Alexandr Savca <alexandr.savca89@gmail.com>
 Date: Sat, 3 Feb 2024 02:57:54 +0200
-Subject: [PATCH 1/8] ignore resize hints
+Subject: [PATCH 1/9] obeyresizehints: option to dis(obey) ICCCM window resize
+ hints
 
-Mujo:
+Initial patch commit message (by Mujo):
 >> I wrote a patch to ignore resize hints so there would not be a gap
 >> between my term windows and the frame. The patch also includes a
 >> new setting to toggle this behaviour and changes to the manpage to
 >> describe it. I've not fixed the info page because I have no
 >> familiarity with it.
 >> Currently this applies only to normal windows, not transient ones.
+>> Reference: https://lists.nongnu.org/archive/html/ratpoison-devel/2018-05/msg00000.html
 
-Reference: https://lists.nongnu.org/archive/html/ratpoison-devel/2018-05/msg00000.html
+Updates:
+- Added the info page documentation to the initial patch.
 ---
  doc/ratpoison.mdoc.1 |  9 +++++++++
+ doc/ratpoison.texi   | 12 ++++++++++++
  src/actions.c        | 26 ++++++++++++++++++++++++++
  src/data.h           |  1 +
  src/main.c           |  1 +
  src/manage.c         |  2 +-
- 5 files changed, 38 insertions(+), 1 deletion(-)
+ 6 files changed, 50 insertions(+), 1 deletion(-)
 
 diff --git a/doc/ratpoison.mdoc.1 b/doc/ratpoison.mdoc.1
 index 4db1a7d..c791317 100644
@@ -40,6 +44,36 @@ index 4db1a7d..c791317 100644
  .It Cm rudeness Ar number
  Show or set what kind of windows are allowed to jostle into the
  foreground.
+diff --git a/doc/ratpoison.texi b/doc/ratpoison.texi
+index 165e715..dee9e30 100644
+--- a/doc/ratpoison.texi
++++ b/doc/ratpoison.texi
+@@ -330,6 +330,17 @@ find this counter-intuitive, set this variable to @code{0}.
+ When called with no arguments, the current setting is returned.
+ @end deffn
+ 
++@deffn Command {set obeyresizehints} @var{n}
++Obey ICCCM window resize hints. By default this variable is set
++(@code{1}) and ratpoison obeys resize hints, which can result in a
++gap between windows and the frame. Set this variable to @code{0} if
++you want to force windows to be the exact sizes of their containing
++frame. Currently this applies only to normal windows, not transient
++ones.
++
++When called with no arguments, the current setting is returned.
++@end deffn
++
+ @deffn Command {set winname} @var{name}
+ There are three resources ratpoison can get a window's name from: the
+ WMNAME hint, the res_name from the WMCLASS hint, or the res_class from
+@@ -1682,6 +1693,7 @@ Here is a list of variables that can be set:
+ @item framemsgwait
+ @item startupmessage
+ @item warp
++@item obeyresizehints
+ @end itemize
+ 
+ @end deffn
 diff --git a/src/actions.c b/src/actions.c
 index e65ca0c..b4f18a1 100644
 --- a/src/actions.c
@@ -129,5 +163,5 @@ index 510f730..78be591 100644
        int amount;
        int delta;
 -- 
-2.43.0
+2.44.0
 

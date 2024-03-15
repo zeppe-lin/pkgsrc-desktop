@@ -1,7 +1,7 @@
-From 7044d27be30f133019bd9ae3298cd91a4155ee90 Mon Sep 17 00:00:00 2001
+From 5698c69e8d76986f05e9f9407f8e19659c12c45b Mon Sep 17 00:00:00 2001
 From: Antoine Busque <antoinebusque@gmail.com>
 Date: Wed, 2 Aug 2017 01:45:58 -0400
-Subject: [PATCH 5/8] Fix: only set active frame when needed in sync_wins
+Subject: [PATCH 5/9] Fix: only set active frame when needed in sync_wins
 
 Only set the active frame after destryoing a normal window in
 `sync_wins` if this window was on the current screen. This mirrors the
@@ -28,5 +28,5 @@ index b4f18a1..1208902 100644
                  }
                withdraw_window (win);
 -- 
-2.43.0
+2.44.0
 
