@@ -42,7 +42,7 @@ build() {
 	git checkout ${version#*-}
 
 	for p in $SRC/000*.patch; do
-		patch -p1 -i $SRC/$p
+		patch -p1 -i $p
 	done
 
 	# needed for our genratpoison-re.pl
