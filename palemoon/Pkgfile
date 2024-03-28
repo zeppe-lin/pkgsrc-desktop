@@ -3,8 +3,8 @@
 # Depends on:  alsa-lib autoconf-2.13 gtk python unzip xorg-libxdamage xorg-libxt yasm zip
 
 name=palemoon
-version=33.0.1
-_upxrel=20240227
+version=33.0.2
+_upxrel=20240326
 release=1
 source="https://repo.palemoon.org/MoonchildProductions/Pale-Moon/archive/${version}_Release.tar.gz
 	https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_${_upxrel}.tar.gz
@@ -12,9 +12,9 @@ source="https://repo.palemoon.org/MoonchildProductions/Pale-Moon/archive/${versi
 	mozconfig.in"
 
 build() {
-	(cd uxp; cp -R . $SRC/pale-moon/platform/)
+	cd uxp; cp -R . $SRC/pale-moon/platform/
 	
-	cd pale-moon
+	cd $SRC/pale-moon
 
 	sed -e "s|%SRCDIR%|$SRC|g"      \
 	    -e "s|%NAME%|$name|g"       \
