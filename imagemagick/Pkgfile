@@ -3,7 +3,7 @@
 # Depends on:  chrpath libjpeg-turbo libpng libtool libxml2 perl xorg-libxext xorg-libxt
 
 name=imagemagick
-version=7.1.1-29
+version=7.1.1-30
 release=1
 source=https://imagemagick.org/archive/releases/ImageMagick-$version.tar.gz
 
@@ -31,6 +31,9 @@ build() {
 
 	make V=1
 	make DESTDIR=$PKG install
+
+	# fix man paths
+	mv $PKG/usr/man/man* $PKG/usr/share/man/
 
 	# remove bogus workdir rpath from perl modules
 	find $PKG/usr/lib/perl5 -name '*.so' -exec chrpath -d {} +
