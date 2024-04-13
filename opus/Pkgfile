@@ -2,7 +2,7 @@
 # URL:         https://www.opus-codec.org/
 
 name=opus
-version=1.5.1
+version=1.5.2
 release=1
 source=https://downloads.xiph.org/releases/opus/opus-$version.tar.gz
 
