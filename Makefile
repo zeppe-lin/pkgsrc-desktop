@@ -1,5 +1,5 @@
 # This Makefile is for automated checking of this pkgsrc collection
-# fir various programmatic and stylistic errors.
+# for various programmatic and stylistic errors.
 
 include ${CURDIR}/../pkgsrc-core/Makefile
 
