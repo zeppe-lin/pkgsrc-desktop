@@ -454,9 +454,11 @@ drwxr-xr-x	root/root	usr/lib/perl5/linux-thread-multi/Image/Magick/
 drwxr-xr-x	root/root	usr/lib/perl5/linux-thread-multi/auto/
 drwxr-xr-x	root/root	usr/lib/perl5/linux-thread-multi/auto/Image/
 drwxr-xr-x	root/root	usr/lib/perl5/linux-thread-multi/auto/Image/Magick/
+-r-xr-xr-x	root/root	usr/lib/perl5/linux-thread-multi/auto/Image/Magick/Magick.so
 drwxr-xr-x	root/root	usr/lib/perl5/linux-thread-multi/auto/Image/Magick/Q16HDRI/
 -r-xr-xr-x	root/root	usr/lib/perl5/linux-thread-multi/auto/Image/Magick/Q16HDRI/Q16HDRI.so
 -r--r--r--	root/root	usr/lib/perl5/linux-thread-multi/auto/Image/Magick/Q16HDRI/autosplit.ix
+-r--r--r--	root/root	usr/lib/perl5/linux-thread-multi/auto/Image/Magick/autosplit.ix
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/ImageMagick-7.Q16HDRI.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/ImageMagick.pc

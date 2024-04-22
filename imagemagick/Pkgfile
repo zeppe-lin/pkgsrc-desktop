@@ -3,9 +3,10 @@
 # Depends on:  chrpath libjpeg-turbo libpng libtool libxml2 perl xorg-libxext xorg-libxt
 
 name=imagemagick
-version=7.1.1-30
+version=7.1.1-31
 release=1
-source=https://imagemagick.org/archive/releases/ImageMagick-$version.tar.gz
+source=$name-$version.tar.gz::https://github.com/ImageMagick/ImageMagick/archive/refs/tags/$version.tar.gz
+#source=https://imagemagick.org/archive/releases/ImageMagick-$version.tar.gz
 
 build() {
 	mkdir build; cd build
