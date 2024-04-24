@@ -3,10 +3,13 @@
 # Depends on:   gtk-engine-hc
 
 name=trinity-gtk-theme
-version=1.0-076489f
+version=1.1-9cae5a4
 release=1
 source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
 
 build() {
 	make -C $name-* PREFIX=/usr DESTDIR=$PKG gtk.gresource install
+
+	# remove xfwm4 theme
+	rm -r $PKG/usr/share/themes/Trinity/xfwm4
 }
