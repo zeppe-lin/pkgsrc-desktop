@@ -19,6 +19,11 @@ drwxr-xr-x	root/root	usr/include/taglib/
 -rw-r--r--	root/root	usr/include/taglib/audioproperties.h
 -rw-r--r--	root/root	usr/include/taglib/chapterframe.h
 -rw-r--r--	root/root	usr/include/taglib/commentsframe.h
+-rw-r--r--	root/root	usr/include/taglib/dsdiffdiintag.h
+-rw-r--r--	root/root	usr/include/taglib/dsdifffile.h
+-rw-r--r--	root/root	usr/include/taglib/dsdiffproperties.h
+-rw-r--r--	root/root	usr/include/taglib/dsffile.h
+-rw-r--r--	root/root	usr/include/taglib/dsfproperties.h
 -rw-r--r--	root/root	usr/include/taglib/eventtimingcodesframe.h
 -rw-r--r--	root/root	usr/include/taglib/fileref.h
 -rw-r--r--	root/root	usr/include/taglib/flacfile.h
@@ -47,6 +52,7 @@ drwxr-xr-x	root/root	usr/include/taglib/
 -rw-r--r--	root/root	usr/include/taglib/mp4coverart.h
 -rw-r--r--	root/root	usr/include/taglib/mp4file.h
 -rw-r--r--	root/root	usr/include/taglib/mp4item.h
+-rw-r--r--	root/root	usr/include/taglib/mp4itemfactory.h
 -rw-r--r--	root/root	usr/include/taglib/mp4properties.h
 -rw-r--r--	root/root	usr/include/taglib/mp4tag.h
 -rw-r--r--	root/root	usr/include/taglib/mpcfile.h
@@ -75,7 +81,6 @@ drwxr-xr-x	root/root	usr/include/taglib/
 -rw-r--r--	root/root	usr/include/taglib/tag.h
 -rw-r--r--	root/root	usr/include/taglib/tag_c.h
 -rw-r--r--	root/root	usr/include/taglib/taglib.h
--rw-r--r--	root/root	usr/include/taglib/taglib_config.h
 -rw-r--r--	root/root	usr/include/taglib/taglib_export.h
 -rw-r--r--	root/root	usr/include/taglib/tbytevector.h
 -rw-r--r--	root/root	usr/include/taglib/tbytevectorlist.h
@@ -89,12 +94,14 @@ drwxr-xr-x	root/root	usr/include/taglib/
 -rw-r--r--	root/root	usr/include/taglib/tlist.tcc
 -rw-r--r--	root/root	usr/include/taglib/tmap.h
 -rw-r--r--	root/root	usr/include/taglib/tmap.tcc
+-rw-r--r--	root/root	usr/include/taglib/tpicturetype.h
 -rw-r--r--	root/root	usr/include/taglib/tpropertymap.h
--rw-r--r--	root/root	usr/include/taglib/trefcounter.h
 -rw-r--r--	root/root	usr/include/taglib/trueaudiofile.h
 -rw-r--r--	root/root	usr/include/taglib/trueaudioproperties.h
 -rw-r--r--	root/root	usr/include/taglib/tstring.h
 -rw-r--r--	root/root	usr/include/taglib/tstringlist.h
+-rw-r--r--	root/root	usr/include/taglib/tvariant.h
+-rw-r--r--	root/root	usr/include/taglib/tversionnumber.h
 -rw-r--r--	root/root	usr/include/taglib/uniquefileidentifierframe.h
 -rw-r--r--	root/root	usr/include/taglib/unknownframe.h
 -rw-r--r--	root/root	usr/include/taglib/unsynchronizedlyricsframe.h
@@ -110,12 +117,18 @@ drwxr-xr-x	root/root	usr/include/taglib/
 -rw-r--r--	root/root	usr/include/taglib/xmfile.h
 -rw-r--r--	root/root	usr/include/taglib/xmproperties.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/libtag.so -> libtag.so.1
-lrwxrwxrwx	root/root	usr/lib/libtag.so.1 -> libtag.so.1.19.1
--rwxr-xr-x	root/root	usr/lib/libtag.so.1.19.1
-lrwxrwxrwx	root/root	usr/lib/libtag_c.so -> libtag_c.so.0
-lrwxrwxrwx	root/root	usr/lib/libtag_c.so.0 -> libtag_c.so.0.0.0
--rwxr-xr-x	root/root	usr/lib/libtag_c.so.0.0.0
+drwxr-xr-x	root/root	usr/lib/cmake/
+drwxr-xr-x	root/root	usr/lib/cmake/taglib/
+-rw-r--r--	root/root	usr/lib/cmake/taglib/taglib-config-version.cmake
+-rw-r--r--	root/root	usr/lib/cmake/taglib/taglib-config.cmake
+-rw-r--r--	root/root	usr/lib/cmake/taglib/taglib-targets-noconfig.cmake
+-rw-r--r--	root/root	usr/lib/cmake/taglib/taglib-targets.cmake
+lrwxrwxrwx	root/root	usr/lib/libtag.so -> libtag.so.2
+lrwxrwxrwx	root/root	usr/lib/libtag.so.2 -> libtag.so.2.0.1
+-rwxr-xr-x	root/root	usr/lib/libtag.so.2.0.1
+lrwxrwxrwx	root/root	usr/lib/libtag_c.so -> libtag_c.so.2
+lrwxrwxrwx	root/root	usr/lib/libtag_c.so.2 -> libtag_c.so.2.0.1
+-rwxr-xr-x	root/root	usr/lib/libtag_c.so.2.0.1
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/taglib.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/taglib_c.pc
