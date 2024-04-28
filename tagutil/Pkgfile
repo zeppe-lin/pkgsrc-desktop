@@ -5,17 +5,24 @@
 
 name=tagutil
 version=3.1
-release=1
-source=https://github.com/kaworu/$name/archive/v$version/$name-v$version.tar.gz
+release=2
+source="https://github.com/kaworu/$name/archive/v$version/$name-v$version.tar.gz
+	cmake.patch"
 
 build() {
-	mkdir build; cd build
+	patch -d $name-$version -p0 -i $SRC/cmake.patch
 
-	cmake ../$name-$version/src          \
-		-D PREFIX=/usr               \
-		-D CMAKE_BUILD_TYPE=Release  \
-		-D WITHOUT_JSON=yes          \
+	cmake -S $name-$version/src -B build           \
+		-D PREFIX=/usr                         \
+		-D CMAKE_BUILD_TYPE=Release            \
+		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS"     \
+		-D WITH_TAGLIB=yes                     \
+		-D WITH_FLAC=yes                       \
+		-D WITH_OGGVORBIS=yes                  \
+		-D WITH_ID3V1=yes                      \
+		-D WITH_JSON=no                        \
+		-Wno-dev                               \
 
-	make VERBOSE=1
-	make DESTDIR=$PKG install
+	make -C build VERBOSE=1
+	make -C build DESTDIR=$PKG install
 }
