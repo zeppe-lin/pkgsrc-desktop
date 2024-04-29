@@ -3,8 +3,8 @@
 
 name=gsm
 version=1.0.22
-release=1
-source="http://www.quut.com/$name/$name-$version.tar.gz
+release=2
+source="http://www.quut.com/gsm/gsm-$version.tar.gz
 	gsm-shared.patch"
 
 build() {
@@ -13,8 +13,10 @@ build() {
 	# patch to build shared library instead of static
 	patch -p0 -i $SRC/gsm-shared.patch
 
-	install -d $PKG/usr/bin $PKG/usr/include/gsm $PKG/usr/lib \
-		$PKG/usr/share/man/man1 $PKG/usr/share/man/man3
+	# install prerequisites directories
+	for d in bin include/gsm lib share/man/man1 share/man/man3; do
+		mkdir -p $PKG/usr/$d
+	done
 
 	make CCFLAGS="-c $CFLAGS -fPIC"
 	make -j1 install INSTALL_ROOT=$PKG/usr              \
@@ -22,6 +24,9 @@ build() {
 		 GSM_INSTALL_MAN=$PKG/usr/share/man/man3    \
 		 TOAST_INSTALL_MAN=$PKG/usr/share/man/man1  \
 
-	ln -sf toast $PKG/usr/bin/tcat
-	ln -sf toast $PKG/usr/bin/untoast
+	# symlinks
+	ln -sf toast   $PKG/usr/bin/tcat
+	ln -sf toast.1 $PKG/usr/share/man/man1/tcat.1
+	ln -sf toast   $PKG/usr/bin/untoast
+	ln -sf toast.1 $PKG/usr/share/man/man1/untoast.1
 }
