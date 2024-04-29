@@ -2,7 +2,6 @@ README firefox-bin
 
 REQUIREMENTS
 
-	* pulseaudio  (optional)  for audio support
-	* apulse      (optional)  for audio support
+	The apulse or pulseaudio are required for audio support.
 
 End of file.
