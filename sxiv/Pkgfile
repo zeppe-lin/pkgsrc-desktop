@@ -4,7 +4,7 @@
 
 name=sxiv
 version=32
-release=1
+release=2
 source=nsxiv-$version.tar.gz::https://codeberg.org/nsxiv/nsxiv/archive/v$version.tar.gz
 
 build() {
@@ -12,8 +12,8 @@ build() {
 	make -C nsxiv HAVE_LIBWEBP=0 CFLAGS="$CFLAGS -DNDEBUG" \
 		PREFIX=/usr DESTDIR=$PKG install
 
-	ln -s /usr/bin/nsxiv              $PKG/usr/bin/sxiv
-	ln -s /usr/share/man/man1/nsxiv.1 $PKG/usr/share/man/man1/sxiv.1
+	ln -s nsxiv    $PKG/usr/bin/sxiv
+	ln -s nsxiv.1  $PKG/usr/share/man/man1/sxiv.1
 
 	# remove junk
 	rm -r $PKG/usr/share/doc
