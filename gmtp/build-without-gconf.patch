@@ -1,0 +1,54 @@
+From: Jeremy Bicha <jeremy.bicha@canonical.com>
+Date: Sun, 11 Sep 2022 19:23:21 -0400
+Subject: build without gconf
+
+Allow running autoreconf without a build-depends on libgconf2-dev
+---
+ configure.ac     |  8 ++++----
+ misc/Makefile.am | 10 +++++-----
+ 2 files changed, 9 insertions(+), 9 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index c7b6e08..b1c6047 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -68,8 +68,8 @@ AS_IF([test "x$with_gtk2" = "xno"] ,[
+ 				# GTK3 not found, try GTK2
+ 				PKG_CHECK_MODULES([GTK2], [gtk+-2.0 >= 2.4.9])
+ 				PKG_CHECK_MODULES([GCONF], [gconf-2.0])
+-				AM_GCONF_SOURCE_2
+-				AC_PATH_PROG(GCONFTOOL, gconftool-2)
++#				AM_GCONF_SOURCE_2
++#				AC_PATH_PROG(GCONFTOOL, gconftool-2)
+ 
+ 			])
+ 	])
+@@ -79,8 +79,8 @@ AS_IF([test "x$with_gtk2" = "xyes"], [
+ 	AC_DEFINE([HAVE_GTK3], [0], [Define if using GTK+3])
+ 	PKG_CHECK_MODULES([GTK2], [gtk+-2.0 >= 2.4.9])
+ 	PKG_CHECK_MODULES([GCONF], [gconf-2.0])
+-	AM_GCONF_SOURCE_2
+-	AC_PATH_PROG(GCONFTOOL, gconftool-2)
++#	AM_GCONF_SOURCE_2
++#	AC_PATH_PROG(GCONFTOOL, gconftool-2)
+ ])
+ 
+ # Common libraries
+diff --git a/misc/Makefile.am b/misc/Makefile.am
+index 1baf341..e1824ff 100644
+--- a/misc/Makefile.am
++++ b/misc/Makefile.am
+@@ -30,8 +30,8 @@ register-gsettings-schemas:
+ register-gconf-schemas: 
+ 	GCONF_CONFIG_SOURCE=`$(GCONFTOOL) --get-default-source` $(GCONFTOOL) --makefile-install-rule $(DESTDIR)$(PREFIX)/share/gconf/schemas/gmtp.schemas
+ 
+-if GCONF_SCHEMAS_INSTALL
+-install-local-data:
+-	GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) \
+-			    $(GCONFTOOL) --makefile-install-rule $(schemas_DATA)
+-endif
++#if GCONF_SCHEMAS_INSTALL
++#install-local-data:
++#	GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) \
++#			    $(GCONFTOOL) --makefile-install-rule $(schemas_DATA)
++#endif

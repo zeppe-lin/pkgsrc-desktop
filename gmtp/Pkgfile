@@ -4,14 +4,18 @@
 
 name=gmtp
 version=1.3.11
-release=2
-source=https://sourceforge.net/projects/gmtp/files/gMTP-$version/gmtp-$version.tar.gz
+release=3
+source="https://sourceforge.net/projects/gmtp/files/gMTP-$version/gmtp-$version.tar.gz
+	build-without-gconf.patch"
 
 build() {
+	patch -d $name-$version -p1 -i $SRC/build-without-gconf.patch
+
 	export CFLAGS="$CFLAGS -fcommon"
 
 	mkdir build; cd build
 
+	autoreconf -fi ../$name-$version
 	../$name-$version/configure  \
 		--prefix=/usr        \
 		--with-gtk3          \
