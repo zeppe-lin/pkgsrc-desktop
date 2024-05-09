@@ -1,9 +1,11 @@
 README cdrtools
 
-KERNEL CONFIGURATION
 
-	Configure the kernel to support the filesystems necessary for reading
-	and writing ISO disks.
+KERNEL CONFIGURATION
+====================
+
+Configure the kernel to support the filesystems necessary for reading and
+writing ISO disks.
 
 	File systems  --->
 	  CD-ROM/DVD Filesystems  --->
@@ -12,12 +14,15 @@ KERNEL CONFIGURATION
 	    [*]   Transparent decompression extension
 	    <*> UDF file system support
 
+
 KERNEL MODULE
+=============
 
-	Add the following lines to /etc/rc.modules to autoload module
-	needed by cdrecord:
+Add the following lines to /etc/rc.modules to autoload module needed by
+cdrecord:
 
-		# Generic SCSI support for SATA DVD-RW
-		/sbin/modprobe sg
+	# Generic SCSI support for SATA DVD-RW
+	/sbin/modprobe sg
+
 
 End of file.
