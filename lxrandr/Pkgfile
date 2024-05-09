@@ -4,12 +4,17 @@
 
 name=lxrandr
 version=0.3.2
-release=1
+release=2
 source=https://downloads.sourceforge.net/lxde/$name-$version.tar.xz
 
 build() {
 	# disable i18n
 	export LINGUAS=' '
+
+	# Don't place OnlyShowIn=LXDE into ~/.config/autostart/lxrandr.desktop.
+	# That allows to run autostart entries by dapper.
+	sed -i '/g_key_file_set_string( kf, grp, "OnlyShowIn", "LXDE" )/d' \
+		$name-$version/src/lxrandr.c
 
 	for _DIR in gtk gtk3; do
 		mkdir $_DIR; cd $_DIR
