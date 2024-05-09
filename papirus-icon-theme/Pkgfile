@@ -3,11 +3,20 @@
 
 name=papirus-icon-theme
 version=20240501
-release=1
-source=https://github.com/PapirusDevelopmentTeam/$name/archive/$version/$name-$version.tar.gz
+release=2
+source="https://github.com/PapirusDevelopmentTeam/$name/archive/$version/$name-$version.tar.gz
+	ePapirus.cache
+	Papirus.cache
+	Papirus-Dark.cache
+	Papirus-Light.cache"
 
 build() {
 	make -C $name-$version DESTDIR=$PKG install
+
+	for i in ePapirus Papirus Papirus-Dark Papirus-Light; do
+		install -m 0644 -D $SRC/$i.cache \
+			$PKG/usr/share/icons/$i/index-theme.cache
+	done
 
 	# remove junk
 	find $PKG -type f \( -name AUTHORS -o -name README \) -delete
