@@ -3,7 +3,7 @@
 # Depends on:  fontconfig freetype xorg-libx11 xorg-libxext xorg-libxft
 
 name=st
-version=0.8.4z1-8cec163
+version=0.8.4z1-9771f17
 release=1
 source="https://github.com/zeppe-lin/st/archive/${version#*-}/st-$version.tar.gz
 	config.def.h"
