@@ -1,6 +1,6 @@
 # Description: Bluetooth Audio ALSA Backend (for users in "audio" group)
 # URL:         https://github.com/Arkq/bluez-alsa
-# Depends on:  bluez fdk-aac lame libldac mpg123 sbc
+# Depends on:  bluez fdk-aac lame libbsd libldac mpg123 sbc
 
 name=bluealsa
 version=4.2.0
