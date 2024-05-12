@@ -3,16 +3,17 @@
 # Depends on:  bluez fdk-aac lame libldac mpg123 sbc
 
 name=bluealsa
-version=4.1.1
+version=4.2.0
 release=1
 source="https://github.com/Arkq/bluez-alsa/archive/v$version/bluez-alsa-$version.tar.gz
 	bluealsa.conf
 	rc.bluealsa"
 
 build() {
+	local _bashcompdir=/usr/share/bash-completion/completions
+
 	mkdir build; cd build
 
-	local _BASHCOMPDIR=/usr/share/bash-completion/completions
 	autoreconf -fis ../bluez-alsa-$version
 
 	# --enable-hcitop:   requires libbsd
@@ -32,11 +33,11 @@ build() {
 		--enable-ldac                         \
 		--enable-mpg123                       \
 		--enable-manpages                     \
-		--with-bash-completion=$_BASHCOMPDIR  \
+		--with-bash-completion=$_bashcompdir  \
 
 	make V=1 all
 	make DESTDIR=$PKG install
 
-	install -D -m 755 $SRC/rc.$name   $PKG/etc/rc.d/$name
-	install -D -m 644 $SRC/$name.conf $PKG/etc/dbus-1/system.d/$name.conf
+	install -m 755 -D $SRC/rc.$name   $PKG/etc/rc.d/$name
+	install -m 644 -D $SRC/$name.conf $PKG/usr/share/dbus-1/system.d/$name.conf
 }
