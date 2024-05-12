@@ -7,5 +7,6 @@ a8da2c3fa7027924308ff32015c39e17  0006-Fix-don-t-draw-help-window-beyond-screen-
 4e5e803df9eae0683cec89182e6c46cf  0007-Fix-draw-the-license-text-centered-on-multi-screen-s.patch
 be4ad9e2d3afbe4f1b7e7ce336b05a3b  0008-Fix-exclude-degenerate-case-from-frame-overlap.patch
 21b1fb165c64945114bbfb2dfa76e425  0009-ratpoison.mdoc.1-add-missing-infofmt-description-and.patch
+886d58ca00f8f776c8124cad5a2f78a4  0010-Notification-on-urgency-flag.patch
 63afedddd7897bb248cf6eea2b7f560e  genratpoison-re.pl
 de38668b1fa3d65821c1da2e35c52cd3  ratpoison-re.pl.diff

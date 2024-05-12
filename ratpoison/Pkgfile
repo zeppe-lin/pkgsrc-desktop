@@ -4,7 +4,7 @@
 
 name=ratpoison
 version=1.4.9-db94d49
-release=3
+release=4
 source="0001-obeyresizehints-option-to-dis-obey-ICCCM-window-resi.patch
 	0002-fix-dedicate-frame.patch
 	0003-fix-edge-case-for-find_frame_-left-right-up-down-fun.patch
@@ -14,6 +14,7 @@ source="0001-obeyresizehints-option-to-dis-obey-ICCCM-window-resi.patch
 	0007-Fix-draw-the-license-text-centered-on-multi-screen-s.patch
 	0008-Fix-exclude-degenerate-case-from-frame-overlap.patch
 	0009-ratpoison.mdoc.1-add-missing-infofmt-description-and.patch
+	0010-Notification-on-urgency-flag.patch
 
 	ratpoison-re.pl.diff
 	genratpoison-re.pl"
@@ -41,7 +42,7 @@ build() {
 	# patches included in this package
 	git checkout ${version#*-}
 
-	for p in $SRC/000*.patch; do
+	for p in $SRC/00*.patch; do
 		patch -p1 -i $p
 	done
 
