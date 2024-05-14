@@ -15,13 +15,13 @@ Since the notifications in the Sylpheed are pretty ugly, and the current build
 is not patched for libnotify support, Tile-WM-Users can use the standard tag
 notifications:
 
-	Sylpheed -> Configuration -> Common preferences ...
-	* Execute command when new messages arrive
-	xdotool search --class Sylpheed set_window -urgency 1
+	Configuration
+	`-- Common preferences
+	    `-- [v] Execute command when new messages arrive
 
-If the last command not working, try this:
+		xdotool search --name "Sylpheed 3.7.0" set_window --urgency 1
 
-	xdotool search --name Sylpheed set_window --urgency 1
+See xdotool(1) or wmctrl(1).
 
 
 End of file.
