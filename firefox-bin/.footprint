@@ -3,7 +3,6 @@ drwxr-xr-x	root/root	etc/revdep.d/
 -rw-r--r--	root/root	etc/revdep.d/firefox-bin
 drwxr-xr-x	root/root	opt/
 drwxr-xr-x	root/root	opt/firefox/
--rw-r--r--	root/root	opt/firefox/Throbber-small.gif
 -rw-r--r--	root/root	opt/firefox/application.ini
 drwxr-xr-x	root/root	opt/firefox/browser/
 drwxr-xr-x	root/root	opt/firefox/browser/chrome/
@@ -14,10 +13,8 @@ drwxr-xr-x	root/root	opt/firefox/browser/chrome/icons/default/
 -rw-r--r--	root/root	opt/firefox/browser/chrome/icons/default/default32.png
 -rw-r--r--	root/root	opt/firefox/browser/chrome/icons/default/default48.png
 -rw-r--r--	root/root	opt/firefox/browser/chrome/icons/default/default64.png
--rw-r--r--	root/root	opt/firefox/browser/crashreporter-override.ini
 -rw-r--r--	root/root	opt/firefox/browser/omni.ja
 -rwxr-xr-x	root/root	opt/firefox/crashreporter
--rw-r--r--	root/root	opt/firefox/crashreporter.ini
 drwxr-xr-x	root/root	opt/firefox/defaults/
 drwxr-xr-x	root/root	opt/firefox/defaults/pref/
 -rw-r--r--	root/root	opt/firefox/defaults/pref/channel-prefs.js
