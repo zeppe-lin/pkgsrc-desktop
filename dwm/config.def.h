@@ -269,7 +269,7 @@ static Key keys[] = {
  { MODKEY,                      XK_r,                     spawn,            {.v = drun_cmd}         },
  { MODKEY,                      XK_p,                     spawn,            {.v = pass_cmd}         },
  { MODKEY,                      XK_w,                     spawn,            {.v = lswmenu_cmd}      },
- { MODKEY,                      XK_l,                     spawn,            {.v = lock_cmd}         },
+ { ControlMask|MODKEY,          XK_Delete,                spawn,            {.v = lock_cmd}         },
  { MODKEY|ShiftMask,            XK_Return,                spawn,            {.v = term_cmd}         },
 
  { MODKEY,                      XK_b,                     togglebar,        {0}                     },
