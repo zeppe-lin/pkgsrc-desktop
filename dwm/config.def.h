@@ -10,7 +10,7 @@
  * Appearance.
  */
 
-static const char          font[]             = "JetBrainsMono Nerd Font:style=Regular:size=10";
+static const char          font[]             = "JetBrainsMono Nerd Font:style=Regular:size=9";
 #if 0
 static const char          font[]             = "Sans Mono:size=9";
 static const char          font[]             = "xos4 Terminus:style=Regular:size=9";
@@ -213,6 +213,7 @@ static const char *pass_cmd[] = {
 static const char *lswmenu_cmd[] = {
   "lswmenu",
     "-i",
+    "-l", "50",
     "-p", "Go to Window:",
     "-fn", font,
     "-nb", normbgcolor,
