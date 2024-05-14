@@ -16,13 +16,13 @@
  */
 static const Block blocks[] = {
 /*
- * Icon       Command                     Update Interval  Update Signal
+ * Icon        Command                     Update Interval  Update Signal
  */
-  {"",        "dwmblocks-battery.sh",     2,               0},
-  {"",        "dwmblocks-audiovol.sh",    2,               0},
-  {"\uf85a ", "dwmblocks-cpumem.sh",      2,               0},
-  {"\uf7c9 ", "dwmblocks-diskfree.sh",    15,              0},
-  {"\uf5ef ", "date '+%b %d (%a) %H:%M'", 5,               0},
+  {"",         "dwmblocks-battery.sh",     2,               0},
+  {"",         "dwmblocks-audiovol.sh",    2,               0},
+  {" ",       "dwmblocks-cpumem.sh",      2,               0},
+  {" ",       "dwmblocks-diskfree.sh",    15,              0},
+  {"󰃰 ",       "date '+%b %d (%a) %H:%M'", 5,               0},
 }; /* NOTE! "\ufXXX" requires ttf-font-iosevka-nerd */
 
 /* Sets delimiter between status commands.
