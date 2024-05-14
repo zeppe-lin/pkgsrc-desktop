@@ -1,9 +1,9 @@
-# Description: Dynamic window manager for X (Zeppe-Lin Fork)
-# URL:         UNMAINTAINED
+# Description: Dynamic window manager for X (sighook's fork)
+# URL:         https://github.com/zeppe-lin/dwm
 # Depends on:  xorg-libxft xorg-libxinerama
 
 name=dwm
-version=6.0z1-66da28e
+version=6.0z1-e973ea8
 release=1
 source="https://github.com/zeppe-lin/dwm/archive/${version#*-}/dwm-$version.tar.gz
 	config.def.h"
@@ -19,7 +19,6 @@ build() {
 		cp $PKGMK_ROOT/config.h .
 	fi
 
-	export CFLAGS="-g3 -O0"
 	# pick up system flags
 	sed -ri '/^(C|LD)FLAGS/s/ = /+=/g' config.mk
 
