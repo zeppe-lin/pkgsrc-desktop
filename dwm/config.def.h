@@ -31,6 +31,12 @@ static const unsigned int  borderpx           = 2;          // border pixel of w
 static const unsigned int  snap               = 32;         // snap pixel
 static const bool          showbar            = true;       // false means no bar
 static const bool          topbar             = false;      // false means bottom bar
+
+#ifdef DWM_SYSTRAY
+static const unsigned int  systrayspacing     = 2;          // systray spacing
+static const Bool          showsystray        = True;       // False means no systray
+#endif
+
 static const double        defaultopacity     = DEFAULT_OPACITY;
 
 /*********************************************************************
@@ -70,13 +76,13 @@ static CustomTagLayout tags[][TAGS] = {
    * Tag name  Layout idx (see "layouts" above)
    */
   {{"1/",     2}, // monocle
-   {"2/",     0},
+   {"2/󰛮",     0},
    {"3/",     5}, // gaplessgrid
    {"4/",     0},
    {"5",       0},
    {"6",       0},
    {"7",       0},
-   {"8/",     0},
+   {"8",       0},
    {"9/",     2}, // monocle
 
    /*
