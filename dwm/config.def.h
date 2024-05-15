@@ -32,10 +32,10 @@ static const unsigned int  snap               = 32;         // snap pixel
 static const bool          showbar            = true;       // false means no bar
 static const bool          topbar             = false;      // false means bottom bar
 
-#ifdef DWM_SYSTRAY
+#ifdef SYSTRAY
 static const unsigned int  systrayspacing     = 2;          // systray spacing
 static const Bool          showsystray        = True;       // False means no systray
-#endif
+#endif /* SYSTRAY */
 
 static const double        defaultopacity     = DEFAULT_OPACITY;
 
@@ -172,8 +172,10 @@ static const Rule rules[] = {
 
   /* class                instance          title                     role                      tag mask  isfloating  iscentered  monitor
    */
+  { "pinentry-gtk-2",     NULL,             NULL,                     NULL,                     0,        true,       true,       -1 },
+  { "Pinentry-gtk-2",     NULL,             NULL,                     NULL,                     0,        true,       true,       -1 },
+  { "Ktsuss",             NULL,             NULL,                     NULL,                     0,        true,       true,       -1 },
   { "SCRATCHPAD",         NULL,             NULL,                     NULL,                     0,        true,       true,       -1 },
-  { "Ktsuss",             "ktsuss",         NULL,                     NULL,                     0,        true,       true,       -1 },
   { "Zim",                "zim",            "Zim - Web Server",       NULL,                     0,        true,       true,       -1 },
   { "todo.txt",           "todo.txt",       NULL,                     NULL,                     0,        true,       true,       -1 },
   { "notes.txt",          "notes.txt",      NULL,                     NULL,                     0,        true,       true,       -1 },
@@ -362,9 +364,11 @@ static Button buttons[] = {
  */
  { ClkLtSymbol,         0,              Button1,          setlayout,        {0}                     },
  { ClkLtSymbol,         0,              Button3,          setlayout,        {.v = &layouts[2]}      },
+
 #ifdef WINTITLE
  { ClkWinTitle,         0,              Button2,          zoom,             {0}                     },
-#endif
+#endif /* WINTITLE */
+
  { ClkStatusText,       0,              Button2,          spawn,            {.v = term_cmd}         },
  { ClkClientWin,        MODKEY,         Button1,          movemouse,        {0}                     },
  { ClkClientWin,        MODKEY,         Button2,          togglefloating,   {0}                     },
