@@ -1,7 +1,7 @@
-From 809f81ba75cb8e0b134f9dacfb027c7a9ec6d292 Mon Sep 17 00:00:00 2001
+From 3e303a26053fa5e865d8285b58f9951bb3482829 Mon Sep 17 00:00:00 2001
 From: Alexandr Savca <alexandr.savca89@gmail.com>
 Date: Sun, 12 May 2024 18:46:35 +0300
-Subject: [PATCH] Notification on urgency flag
+Subject: [PATCH 10/10] Notification on urgency flag
 
 Slightly modified original patch by Eoin McLoughlin (see below).
 
@@ -24,16 +24,16 @@ Reference:
 https://lists.nongnu.org/archive/html/ratpoison-devel/2009-11/msg00004.htm
 https://lists.nongnu.org/archive/html/ratpoison-devel/2009-11/msg00005.htm
 ---
- src/events.c | 14 ++++++++++++++
- src/manage.c | 10 ++++++++++
+ src/events.c | 20 ++++++++++++++++++++
+ src/manage.c | 16 ++++++++++++++++
  src/manage.h |  1 +
- 3 files changed, 25 insertions(+)
+ 3 files changed, 37 insertions(+)
 
 diff --git a/src/events.c b/src/events.c
-index 4808d29..8031d3d 100644
+index 4808d29..9aac114 100644
 --- a/src/events.c
 +++ b/src/events.c
-@@ -632,6 +632,20 @@ property_notify (XEvent *ev)
+@@ -632,6 +632,26 @@ property_notify (XEvent *ev)
              win->transient = XGetTransientForHint (dpy, win->w, &win->transient_for);
              break;
  
@@ -42,12 +42,18 @@ index 4808d29..8031d3d 100644
 +
 +            if (has_urgency_flag (win))
 +              {
-+                rp_group *g = groups_find_group_by_window (win);
-+                rp_window_elem *elem = group_find_window (&g->mapped_windows, win);
-+                char* commandStr = xsprintf ("echo Window %i (%s) in group %i wants attention",
-+                                             elem->number, win->wm_name, g->number);
-+                command (0, commandStr);
-+                free (commandStr);
++                rp_group *group = groups_find_group_by_window (win);
++                rp_window_elem *win_elem;
++
++                if (group != NULL)
++                  win_elem = group_find_window (&group->mapped_windows, win);
++
++                if (!win_elem && group != NULL)
++                  win_elem = group_find_window (&group->unmapped_windows, win);
++
++                if (win_elem)
++                  marked_message_printf (0, 0, "Window %i (%s) in group %i wants attention",
++                                         win_elem->number, window_name (win), group->number);
 +              }
 +            break;
 +
@@ -55,10 +61,10 @@ index 4808d29..8031d3d 100644
              PRINT_DEBUG (("Unhandled property notify event: %ld\n", ev->xproperty.atom));
              break;
 diff --git a/src/manage.c b/src/manage.c
-index 78be591..9cc428f 100644
+index 78be591..06e5442 100644
 --- a/src/manage.c
 +++ b/src/manage.c
-@@ -173,6 +173,16 @@ update_normal_hints (rp_window *win)
+@@ -173,6 +173,22 @@ update_normal_hints (rp_window *win)
  #endif
  }
  
@@ -66,11 +72,17 @@ index 78be591..9cc428f 100644
 +int
 +has_urgency_flag (rp_window *win)
 +{
-+  XWMHints *hints = XGetWMHints (dpy, win->w);
-+  int has_urgency = (hints->flags & XUrgencyHint) == XUrgencyHint;
++  XWMHints *wmh;
++  int urgency_flag = 0;
 +
-+  XFree (hints);
-+  return has_urgency;
++  if (!(wmh = XGetWMHints (dpy, win->w)))
++    return 0;
++
++  if (wmh->flags & XUrgencyHint)
++    urgency_flag = 1;
++
++  XFree (wmh);
++  return urgency_flag;
 +}
  
  static char *
@@ -88,5 +100,5 @@ index 8001e09..ed80179 100644
  void set_state (rp_window *win, int state);
  long get_state (rp_window *win);
 -- 
-2.45.0
+2.45.1
 
