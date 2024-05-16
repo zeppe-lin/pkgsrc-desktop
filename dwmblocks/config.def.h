@@ -22,7 +22,7 @@ static const Block blocks[] = {
   {"",         "dwmblocks-audiovol.sh",    2,               0},
   {" ",       "dwmblocks-cpumem.sh",      2,               0},
   {" ",       "dwmblocks-diskfree.sh",    15,              0},
-  {"󰃰 ",       "date '+%b %d (%a) %H:%M'", 5,               0},
+  {"󰃰 ",       "date '+%a %b %d %H:%M'",   5,               0},
 }; /* NOTE! "\ufXXX" requires ttf-font-iosevka-nerd */
 
 /* Sets delimiter between status commands.
