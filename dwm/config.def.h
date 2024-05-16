@@ -31,13 +31,13 @@ static const unsigned int  borderpx           = 2;          // border pixel of w
 static const unsigned int  snap               = 32;         // snap pixel
 static const bool          showbar            = true;       // false means no bar
 static const bool          topbar             = false;      // false means bottom bar
+static const double        defaultopacity     = DEFAULT_OPACITY; // transparency for X11 compositor
 
 #ifdef SYSTRAY
 static const unsigned int  systrayspacing     = 2;          // systray spacing
-static const Bool          showsystray        = True;       // False means no systray
+static const Bool          showsystray        = true;       // False means no systray
 #endif /* SYSTRAY */
 
-static const double        defaultopacity     = DEFAULT_OPACITY;
 
 /*********************************************************************
  * Layout(s).
@@ -138,6 +138,7 @@ static const Rule rules[] = {
   { "Claws-mail",         "claws-mail",     "Input password",         NULL,                     2,        true,       true,       0  },
 
   { "Sylpheed",           NULL,             NULL,                     NULL,                     2,        false,      false,      0  },
+  { "Sylpheed",           "sylpheed",       "Common Preferences",     NULL,                     2,        true,       true,       0  },
   { "Sylpheed",           "sylpheed",       "Input password",         NULL,                     2,        true,       true,       0  },
   { "Sylpheed",           "sylpheed",       "Warning",                NULL,                     2,        true,       true,       0  },
   { "Sylpheed",           "sylpheed",       "About",                  NULL,                     2,        true,       true,       0  },
