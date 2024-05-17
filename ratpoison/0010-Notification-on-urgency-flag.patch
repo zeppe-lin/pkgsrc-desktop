@@ -51,7 +51,7 @@ index 4808d29..9aac114 100644
 +                if (!win_elem && group != NULL)
 +                  win_elem = group_find_window (&group->unmapped_windows, win);
 +
-+                if (win_elem)
++                if (win_elem && group)
 +                  marked_message_printf (0, 0, "Window %i (%s) in group %i wants attention",
 +                                         win_elem->number, window_name (win), group->number);
 +              }
