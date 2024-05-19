@@ -1,0 +1,15 @@
+# Description: Equalizer presets for Music on Console
+# URL:         http://www.informatik.uni-bremen.de/~hiben/moc
+# Depends on:  moc
+
+name=moc-eqsets
+version=20120621
+release=1
+source=$name-$version.tar.gz::http://web.archive.org/web/20120621042346/http://www.informatik.uni-bremen.de/~hiben/moc/eqsets.tar.gz
+
+build() {
+	mkdir -p $PKG/usr/share/moc
+
+	find eqsets -type f -exec chmod 0644 {} \;
+	mv eqsets $PKG/usr/share/moc/
+}
