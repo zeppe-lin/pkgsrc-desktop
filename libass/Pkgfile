@@ -1,20 +1,13 @@
 # Description: Portable library for SSA/ASS subtitles rendering
 # URL:         https://github.com/libass/libass
-# Depends on:  harfbuzz libpcre2 libunibreak
+# Depends on:  fribidi harfbuzz libunibreak
 
 name=libass
-version=0.17.1
-release=3
-source="https://github.com/$name/$name/releases/download/$version/$name-$version.tar.gz
-	no-fribidi.patch"
+version=0.17.2
+release=1
+source=https://github.com/$name/$name/releases/download/$version/$name-$version.tar.gz
 
 build() {
-	# Remove fribidi dependency.
-	patch -p1 -d $name-$version -i $SRC/no-fribidi.patch
-	sed -e 's/as_fn_error.*fribidi/: 0 "/'  \
-	    -e '/pkg_requires="fribidi >= .*/d' \
-	    -i $name-$version/configure
-
 	mkdir build; cd build
 
 	../$name-$version/configure  \
