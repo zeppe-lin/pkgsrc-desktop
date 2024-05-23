@@ -131,12 +131,12 @@ static const Rule rules[] = {
 
   /* class                instance          title                     role                      tag mask  isfloating  iscentered  monitor
    */
-  { "Firefox",            NULL,             NULL,                     NULL,                     0,        false,      false,      0  },
+  { "firefox",            "Firefox",        "Firefox - Choose User Profile",  "Dialog",         0,        true,       true,       0  },
+  { "firefox",            "Navigator",      NULL,                     "browser",                0,        false,      false,      0  },
   { "Navigator",          NULL,             NULL,                     NULL,                     0,        false,      false,      0  },
 
   { "Claws-mail",         NULL,             NULL,                     NULL,                     2,        false,      false,      0  },
   { "Claws-mail",         "claws-mail",     "Input password",         NULL,                     2,        true,       true,       0  },
-
   { "Sylpheed",           NULL,             NULL,                     NULL,                     2,        false,      false,      0  },
   { "Sylpheed",           "sylpheed",       "Common Preferences",     NULL,                     2,        true,       true,       0  },
   { "Sylpheed",           "sylpheed",       "Input password",         NULL,                     2,        true,       true,       0  },
@@ -167,21 +167,24 @@ static const Rule rules[] = {
   { "Jukebox",            "jukebox",        "Update tags",            NULL,                     256,      true,       true,       0  },
   { "Jukebox",            "jukebox",        "Player mounted on :",    NULL,                     256,      true,       true,       0  },
 
+  /* v1r91n only */
+  { "mpv",                NULL,             NULL,                     NULL,                     0,        false,      false,      1  },
+
   /*
    * Current active monitor.
    */
 
   /* class                instance          title                     role                      tag mask  isfloating  iscentered  monitor
    */
-  { "pinentry-gtk-2",     NULL,             NULL,                     NULL,                     0,        true,       true,       -1 },
-  { "Pinentry-gtk-2",     NULL,             NULL,                     NULL,                     0,        true,       true,       -1 },
+  { "Pinentry-gtk-2",     "pinentry-gtk-2", NULL,                     NULL,                     0,        true,       true,       -1 },
   { "Ktsuss",             NULL,             NULL,                     NULL,                     0,        true,       true,       -1 },
   { "SCRATCHPAD",         NULL,             NULL,                     NULL,                     0,        true,       true,       -1 },
   { "Zim",                "zim",            "Zim - Web Server",       NULL,                     0,        true,       true,       -1 },
   { "todo.txt",           "todo.txt",       NULL,                     NULL,                     0,        true,       true,       -1 },
   { "notes.txt",          "notes.txt",      NULL,                     NULL,                     0,        true,       true,       -1 },
   { "mixer",              "mixer",          "mixer",                  NULL,                     0,        true,       true,       -1 },
-  { "Sxiv",               "xbackground-w",  "sxiv",                   NULL,                     0,        true,       true,       -1 },
+  { "Nsxiv",              "xbackgrounds",   "nsxiv",                  NULL,                     0,        true,       true,       -1 },
+  { "Sxiv",               "xbackgrounds",   "sxiv",                   NULL,                     0,        true,       true,       -1 },
 };
 
 /*********************************************************************

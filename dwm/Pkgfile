@@ -1,22 +1,18 @@
-# Description: Dynamic window manager for X (sighook's fork)
+# Description: Dynamic window manager for X (zpln fork)
 # URL:         https://github.com/zeppe-lin/dwm
 # Depends on:  xorg-libxft xorg-libxinerama
 
 name=dwm
 version=6.0z1-7f4b74c
-release=1
-source="https://github.com/zeppe-lin/dwm/archive/${version#*-}/dwm-$version.tar.gz
-	config.def.h"
+release=2
+source=https://github.com/zeppe-lin/dwm/archive/${version#*-}/dwm-$version.tar.gz
 
 build() {
 	cd dwm-${version#*-}*
 
-	# override default configuration
-	cp -f $SRC/config.def.h .
-
 	# apply user-defined configuration if exists
 	if [ -f $PKGMK_ROOT/config.h ]; then
-		cp $PKGMK_ROOT/config.h .
+		cp -v $PKGMK_ROOT/config.h .
 	fi
 
 	# pick up system flags
