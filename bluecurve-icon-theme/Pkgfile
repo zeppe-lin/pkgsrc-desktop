@@ -1,0 +1,13 @@
+# Description: Red Hat Bluecurve icon theme
+# URL:         https://github.com/neeeeow/Bluecurve
+# Depends on:  gtk3
+
+name=bluecurve-icon-theme
+version=0.1-6acf3fe
+release=1
+source=https://github.com/neeeeow/Bluecurve/archive/${version#*-}/Bluecurve-$version.tar.gz
+
+build() {
+	mkdir -p $PKG/usr/share/icons
+	cp -Pr Bluecurve-*/icons/Bluecurve $PKG/usr/share/icons/
+}
