@@ -1,22 +1,18 @@
-# Description: Modular status bar for dwm or similar programs
-# URL:         UNMAINTAINED
+# Description: Modular status bar for dwm or similar programs (zpln fork)
+# URL:         https://github.com/zeppe-lin/dwmblocks
 # Depends on:  xorg-libx11
 
 name=dwmblocks
 version=0.2.2z-ea705bd
-release=1
-source="https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
-	config.def.h"
+release=2
+source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
 
 build() {
 	cd $name-${version#*-}*
 
-	# override default configuration
-	cp -f $SRC/config.def.h .
-
 	# apply user-defined configuration if exists
 	if [ -f $PKGMK_ROOT/config.h ]; then
-		cp $PKGMK_ROOT/config.h .
+		cp -v $PKGMK_ROOT/config.h .
 	fi
 
 	# pick up system flags
