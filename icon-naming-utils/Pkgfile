@@ -1,0 +1,22 @@
+# Description: Script for migrating to the Icon Naming Specification
+# URL:         http://tango-project.org/
+# Depends on:  p5-xml-simple
+
+name=icon-naming-utils
+version=0.8.90
+release=1
+source=http://tango.freedesktop.org/releases/$name-$version.tar.gz
+
+build() {
+	mkdir build; cd build
+
+	../$name-$version/configure          \
+		--prefix=/usr                \
+		--sysconfdir=/etc            \
+		--mandir=/usr/share/man      \
+		--libexecdir=/usr/lib/$name  \
+		--localstatedir=/var         \
+
+	make V=1
+	make pkgconfigdir=/usr/lib/pkgconfig DESTDIR=$PKG install
+}
