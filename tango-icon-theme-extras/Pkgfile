@@ -1,0 +1,19 @@
+# Description: Extra icons for Tango
+# URL:         http://tango.freedesktop.org/
+# Depends on:  icon-naming-utils imagemagick intltool
+
+name=tango-icon-theme-extras
+version=0.1.0
+release=1
+source=http://tango.freedesktop.org/releases/$name-$version.tar.gz
+
+build() {
+	mkdir build; cd build
+
+	autoreconf -fi ../$name-$version
+	../$name-$version/configure    \
+		--prefix=/usr          \
+
+	make V=1
+	make DESTDIR=$PKG install
+}
