@@ -1,0 +1,23 @@
+# Description: Bluecurve GTK2 engine from Fedora
+# URL:         https://fedoraproject.org/wiki/Design
+# Depends on:  gtk
+
+name=gtk-engine-bluecurve
+version=1.0.0
+release=1
+source=https://src.fedoraproject.org/repo/pkgs/bluecurve-gtk-themes/bluecurve-gtk-themes-$version.tar.bz2/5eb884cbe86e40e52127222400477f03/bluecurve-gtk-themes-$version.tar.bz2
+
+build() {
+	mkdir build; cd build
+
+	../bluecurve-gtk-themes-$version/configure --prefix=/usr
+
+	make V=1
+	make prefix=$PKG/usr install
+
+	# provided by bluecurve-gtk-theme
+	rm -r $PKG/usr/share/themes
+
+	# remove junk
+	rm -r $PKG/usr/share/locale
+}

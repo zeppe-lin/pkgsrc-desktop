@@ -1,0 +1,9 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/lib/
+drwxr-xr-x	root/root	usr/lib/gtk-2.0/
+drwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/
+drwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/engines/
+-rw-r--r--	root/root	usr/lib/gtk-2.0/2.10.0/engines/libbluecurve.a
+-rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/engines/libbluecurve.la
+-rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/engines/libbluecurve.so
+drwxr-xr-x	root/root	usr/share/
