@@ -1,0 +1,22 @@
+# Description: Desktop Applications Autostarter
+# URL:         https://github.com/jjk-jacky/dapper
+
+name=dapper
+version=1.0.0-e326132
+release=1
+source=https://github.com/jjk-jacky/$name/archive/${version#*-}/$name-$version.tar.gz
+
+build() {
+	# build in separate dir is broken
+	cd $name-*
+
+	bash ./autogen.sh
+
+	../$name-*/configure --prefix=/usr
+
+	make V=1
+	make DESTDIR=$PKG install
+
+	# remove junk
+	rm -r $PKG/usr/share/doc
+}
