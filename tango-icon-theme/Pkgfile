@@ -1,18 +1,24 @@
 # Description: Icon theme that follows the Tango visual guidelines
 # URL:         http://tango.freedesktop.org/
-# Depends on:  icon-naming-utils imagemagick intltool
+# Depends on:  icon-naming-utils imagemagick intltool librsvg-compat
 
 name=tango-icon-theme
 version=0.8.90
 release=1
-source=http://tango.freedesktop.org/releases/$name-$version.tar.bz2
+source="http://tango.freedesktop.org/releases/$name-$version.tar.bz2
+	rsvg.patch"
 
 build() {
+	patch -d $name-$version -p0 -i $SRC/rsvg.patch
+
 	mkdir build; cd build
 
 	autoreconf -fi ../$name-$version
+
+	# --enable-png-creation: enable creating png images from svg
 	../$name-$version/configure    \
 		--prefix=/usr          \
+		#--enable-png-creation
 
 	make V=1
 	make DESTDIR=$PKG install
