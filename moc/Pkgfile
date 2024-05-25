@@ -10,8 +10,8 @@ source="http://ftp.daper.net/pub/soft/moc/stable/moc-$version.tar.bz2
 	moc-ffmpeg4.patch moc-https.patch"
 
 build() {
-	patch -p0 -d $name-$version -i $SRC/moc-ffmpeg4.patch
-	patch -p0 -d $name-$version -i $SRC/moc-https.patch
+	patch -d moc-$version -p0 -i $SRC/moc-ffmpeg4.patch
+	patch -d moc-$version -p0 -i $SRC/moc-https.patch
 
 	mkdir build; cd build
 
