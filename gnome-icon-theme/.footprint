@@ -5464,6 +5464,7 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/8x8/emblems/emblem-nowrite.png -> emb
 -rw-r--r--	root/root	usr/share/icons/gnome/8x8/emblems/emblem-readonly.png
 -rw-r--r--	root/root	usr/share/icons/gnome/8x8/emblems/emblem-symbolic-link.png
 -rw-r--r--	root/root	usr/share/icons/gnome/8x8/emblems/emblem-unreadable.png
+-rw-r--r--	root/root	usr/share/icons/gnome/icon-theme.cache
 -rw-r--r--	root/root	usr/share/icons/gnome/index.theme
 drwxr-xr-x	root/root	usr/share/icons/gnome/scalable/
 drwxr-xr-x	root/root	usr/share/icons/gnome/scalable/actions/

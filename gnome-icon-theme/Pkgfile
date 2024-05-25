@@ -1,16 +1,17 @@
-# Description: The last good GNOME icons
+# Description: Last good GNOME icons
 # URL:         https://www.gnome.org/
 # Depends on:  gtk icon-naming-utils
 
 name=gnome-icon-theme
 version=2.27.90
 release=1
-source=https://download.gnome.org/sources/$name/${version%.*}/$name-$version.tar.gz
+source="https://download.gnome.org/sources/$name/${version%.*}/$name-$version.tar.gz
+	icon-theme.cache"
 
 build() {
 	mkdir build; cd build
 
-	# --disable-icon-mapping: disable compatibility symlinks
+	# --enable-icon-mapping: enable compatibility symlinks
 	../$name-$version/configure     \
 		--prefix=/usr           \
 		--disable-nls           \
@@ -18,6 +19,9 @@ build() {
 
 	make V=1
 	make DESTDIR=$PKG install
+
+	install -m 0644 $SRC/icon-theme.cache  \
+		$PKG/usr/share/icons/gnome/icon-theme.cache
 
 	# remove junk
 	rm -rf $PKG/usr/share/locale
