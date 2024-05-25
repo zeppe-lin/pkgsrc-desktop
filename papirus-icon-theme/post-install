@@ -2,8 +2,8 @@
 
 export PATH="/sbin:/usr/sbin:/bin:/usr/bin"
 
-for i in ePapirus Papirus Papirus-Dark Papirus-Light; do
-	gtk-update-icon-cache -f -t /usr/share/icons/$i
+for d in ePapirus Papirus Papirus-Dark Papirus-Light; do
+	gtk-update-icon-cache -f -t -q /usr/share/icons/$d
 done
 
 # End of file.

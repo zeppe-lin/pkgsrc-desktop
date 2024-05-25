@@ -13,9 +13,9 @@ source="https://github.com/PapirusDevelopmentTeam/$name/archive/$version/$name-$
 build() {
 	make -C $name-$version DESTDIR=$PKG install
 
-	for i in ePapirus Papirus Papirus-Dark Papirus-Light; do
-		install -m 0644 -D $SRC/$i.cache \
-			$PKG/usr/share/icons/$i/index-theme.cache
+	for t in ePapirus Papirus Papirus-Dark Papirus-Light; do
+		install -m 0644 $SRC/$t.cache \
+			$PKG/usr/share/icons/$t/index-theme.cache
 	done
 
 	# remove junk
