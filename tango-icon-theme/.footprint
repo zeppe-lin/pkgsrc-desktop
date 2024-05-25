@@ -3415,6 +3415,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Tango/32x32/status/trashcan_full.png -> use
 -rw-r--r--	root/root	usr/share/icons/Tango/32x32/status/weather-snow.png
 -rw-r--r--	root/root	usr/share/icons/Tango/32x32/status/weather-storm.png
 lrwxrwxrwx	root/root	usr/share/icons/Tango/32x32/status/xfce-trash_full.png -> user-trash-full.png
+-rw-r--r--	root/root	usr/share/icons/Tango/icon-theme.cache
 -rw-r--r--	root/root	usr/share/icons/Tango/index.theme
 drwxr-xr-x	root/root	usr/share/icons/Tango/scalable/
 drwxr-xr-x	root/root	usr/share/icons/Tango/scalable/actions/
