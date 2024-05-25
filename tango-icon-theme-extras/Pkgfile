@@ -1,18 +1,24 @@
 # Description: Extra icons for Tango
 # URL:         http://tango.freedesktop.org/
-# Depends on:  icon-naming-utils imagemagick intltool
+# Depends on:  icon-naming-utils imagemagick intltool rsvg-compat
 
 name=tango-icon-theme-extras
 version=0.1.0
 release=1
-source=http://tango.freedesktop.org/releases/$name-$version.tar.gz
+source="http://tango.freedesktop.org/releases/$name-$version.tar.gz
+	rsvg.patch"
 
 build() {
+	patch -d $name-$version -p0 -i $SRC/rsvg.patch
+
 	mkdir build; cd build
 
 	autoreconf -fi ../$name-$version
+
+	# --enable-png-creation: enable creating png images from svg
 	../$name-$version/configure    \
 		--prefix=/usr          \
+		#--enable-png-creation
 
 	make V=1
 	make DESTDIR=$PKG install
