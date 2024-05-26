@@ -7,8 +7,10 @@ drwxr-xr-x	root/root	usr/share/icons/Bluecurve/16x16/actions/
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/about_kde.png -> ../../16x16/stock/help-about.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/actions/attach.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/back.png -> ../../16x16/stock/go-previous.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/bookmark-new.png -> ../../16x16/actions/bookmark_add.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/actions/bookmark.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/actions/bookmark_add.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/bookmarks_list_add.png -> ../../16x16/actions/bookmark_add.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/bottom.png -> ../../16x16/stock/go-bottom.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/button_cancel.png -> ../../16x16/stock/dialog-cancel.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/button_ok.png -> ../../16x16/stock/dialog-ok.png
@@ -23,6 +25,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/contents.png -> ../
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/contents2.png -> ../../16x16/stock/help-contents.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/actions/document-print-preview.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/actions/document-print.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/document-revert-rtl.png -> ../../16x16/stock/gtk-revert-to-saved-ltr.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/document-revert.png -> ../../16x16/stock/gtk-revert-to-saved-ltr.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/actions/document-save-as.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/actions/document-save.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/down.png -> ../../16x16/stock/go-down.png
@@ -57,6 +61,9 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/frameprint.png -> .
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/actions/go-home.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/gohome.png -> ../../16x16/actions/go-home.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/goto.png -> ../../16x16/stock/go-jump.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/gtk-cancel.png -> ../../16x16/actions/stop.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/gtk-close.png -> ../../16x16/stock/dialog-close.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/gtk-stop.png -> ../../16x16/actions/stop.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/actions/help.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/actions/history.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/actions/khtml_kget.png
@@ -72,16 +79,20 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/player_play.png -> 
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/player_rew.png -> ../../16x16/stock/media-seek-backward.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/player_start.png -> ../../16x16/stock/media-skip-backward.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/player_stop.png -> ../../16x16/stock/media-playback-stop.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/process-stop.png -> ../../16x16/actions/stop.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/redo.png -> ../../16x16/actions/edit-redo.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/actions/reload.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/run.png -> ../../16x16/actions/exec.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/actions/spellcheck.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/start.png -> ../../16x16/stock/go-first.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/stock_stop.png -> ../../16x16/actions/stop.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/actions/stop.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/actions/system-lock-screen.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/system-run.png -> ../../16x16/apps/gnome-run.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/system-search.png -> ../../16x16/apps/gnome-searchtool.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/system-shutdown.png -> ../../16x16/actions/connect_no.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/tab-new.png -> ../../16x16/stock/epiphany-new-tab.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/tab_new.png -> ../../16x16/stock/epiphany-new-tab.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/text-left.png -> ../../16x16/stock/format-justify-left.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/text_block.png -> ../../16x16/stock/format-justify-fill.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/text_bold.png -> ../../16x16/stock/format-text-bold.png
@@ -98,6 +109,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/view-refresh.png ->
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/actions/viewmag-.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/actions/viewmag1.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/viewmagfit.png -> ../../16x16/stock/zoom-best-fit.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/actions/window-close.png -> ../../16x16/stock/dialog-close.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/actions/window_fullscreen.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/actions/zoom-in.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/actions/zoom-original.png
@@ -138,6 +150,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/default-applications-c
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/apps/disks.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/apps/display-capplet.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/display.png -> ../../16x16/apps/display-capplet.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/dnfdragora.png -> ../../16x16/apps/icon-packages.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/apps/eclipse.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/emacs.png -> ../../16x16/apps/accessories-text-editor.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/apps/email.png
@@ -145,6 +158,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/evolution.png -> ../..
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/apps/file-manager.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/apps/file-roller.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/firefox.png -> ../../16x16/apps/galeon.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/firewall-applet.png -> ../../16x16/apps/icon-network-firewall.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/firewall-config.png -> ../../16x16/apps/icon-network-firewall.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/font-capplet.png -> ../../16x16/apps/preferences-desktop-font.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/fonts.png -> ../../16x16/apps/preferences-desktop-font.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/apps/gaim.png
@@ -343,6 +358,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/inkscape.png -> ../../
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/apps/input-gaming.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/apps/input-keyboard.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/apps/input-mouse.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/io.github.Hexchat.png -> ../../16x16/apps/icon-groupchat.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/kaboodle.png -> ../../16x16/apps/icon-audio.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/kappfinder.png -> ../../16x16/apps/gnome-searchtool.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/kate.png -> ../../16x16/apps/gnome-word.png
@@ -394,12 +410,11 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/launcher-program.png -
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/apps/libreoffice-math.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/apps/libreoffice-writer.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/lightdm-gtk-greeter-settings.png -> ../../16x16/apps/gdm.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/lightdm-settings.png -> ../../16x16/apps/gdm.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/login-photo.png -> ../../16x16/apps/icon-user-id.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/logviewer.png -> ../../16x16/apps/gnome-log.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/mate-brightness-applet.png -> ../../16x16/apps/gpm-brightness.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/mate-cpu-frequency-applet.png -> ../../16x16/apps/icon-memory-profile.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/mate-eyes-applet.png -> ../../16x16/stock/panel-amusements.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/mate-inhibit-applet.png -> ../../16x16/actions/gpm-suspend.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/mate-invest-applet.png -> ../../16x16/apps/utilities-system-monitor.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/mate-netspeed-applet.png -> ../../16x16/apps/icon-traceroute.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/mate-network-properties.png -> ../../16x16/apps/icon-network-systems.png
@@ -409,12 +424,10 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/mate-panel-drawer.png 
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/mate-panel-fish.png -> ../../16x16/stock/panel-amusements.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/mate-panel-force-quit.png -> ../../16x16/stock/dialog-cancel.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/mate-panel-launcher.png -> ../../16x16/apps/icon-launcher.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/mate-panel-notification-area.png -> ../../16x16/stock/dialog-information.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/mate-panel-window-list.png -> ../../16x16/apps/gnome-ccwindowmanager.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/mate-panel-window-menu.png -> ../../16x16/apps/gnome-ccwindowmanager.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/mate-panel-workspace-switcher.png -> ../../16x16/apps/display-capplet.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/mate-panel.png -> ../../16x16/apps/gnome-panel.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/mate-power-manager.png -> ../../16x16/status/gpm-primary-100-charging.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/mate-power-statistics.png -> ../../16x16/apps/utilities-system-monitor.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/mate-preferences-desktop-display.png -> ../../16x16/apps/display-capplet.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/mate-run.png -> ../../16x16/apps/gnome-run.png
@@ -462,6 +475,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/packages_games.png -> 
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/passwd.png -> ../../16x16/apps/gnome-lockscreen.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/password.png -> ../../16x16/apps/icon-security-keys.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/personal.png -> ../../16x16/apps/preferences-desktop-personal.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/pidgin.png -> ../../16x16/apps/gaim.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/apps/preferences-desktop-accessibility.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/preferences-desktop-default-applications.png -> ../../16x16/apps/500_setup.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/preferences-desktop-display.png -> ../../16x16/apps/display-capplet.png
@@ -476,6 +490,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/preferences-desktop-pe
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/apps/preferences-desktop-wallpaper.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/apps/preferences-desktop.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/apps/preferences-system-network.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/preferences-system-time.png -> ../../16x16/apps/clock.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/preferences-system-windows.png -> ../../16x16/apps/gnome-ccwindowmanager.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/apps/preferences-system.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/apps/print-manager.png
@@ -508,6 +523,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/redhat-word-processor.
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/rhythmbox.png -> ../../16x16/apps/icon-audio.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/root-password.png -> ../../16x16/apps/gnome-lokkit-logo.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/samba.png -> ../../16x16/apps/icon-fileshare-smb.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/seamonkey-mail.png -> ../../16x16/apps/email.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/seamonkey.png -> ../../16x16/apps/galeon.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/shell-output-logo.png -> ../../16x16/apps/gnome-run.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/sound-capplet.png -> ../../16x16/apps/preferences-desktop-multimedia.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/sound-juicer.png -> ../../16x16/apps/grip.png
@@ -566,8 +583,6 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/devices/3floppy_mount.png -
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/devices/3floppy_unmount.png -> ../../16x16/mimetypes/media-floppy.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/devices/5floppy_mount.png -> ../../16x16/mimetypes/media-floppy.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/devices/5floppy_unmount.png -> ../../16x16/mimetypes/media-floppy.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/devices/ac-adapter.png -> ../../16x16/apps/gpm-ac-adapter.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/devices/battery.png -> ../../16x16/status/gpm-primary-100-charging.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/devices/gnome-dev-cdrom-audio.png -> ../../16x16/apps/gnome-cdplayer-icon.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/devices/gnome-dev-cdrom.png -> ../../16x16/mimetypes/drive-optical.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/devices/gnome-dev-disc-cdr.png -> ../../16x16/mimetypes/drive-optical.png
@@ -1569,15 +1584,6 @@ drwxr-xr-x	root/root	usr/share/icons/Bluecurve/16x16/status/
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/status/audio-volume-muted.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/status/battery-caution-charging.png -> ../../16x16/stock/printer-broken.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/status/battery-caution.png -> ../../16x16/stock/printer-broken.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/status/battery-empty.png -> ../../16x16/status/gpm-primary-010.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/status/battery-full-charged.png -> ../../16x16/status/gpm-primary-100-charged.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/status/battery-full-charging.png -> ../../16x16/status/gpm-primary-100-charging.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/status/battery-full.png -> ../../16x16/status/gpm-primary-100.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/status/battery-good-charging.png -> ../../16x16/status/gpm-primary-080-charging.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/status/battery-good.png -> ../../16x16/status/gpm-primary-080.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/status/battery-low-charging.png -> ../../16x16/status/gpm-primary-020-charging.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/status/battery-low.png -> ../../16x16/status/gpm-primary-020.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/status/battery-missing.png -> ../../16x16/status/gpm-primary-missing.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/status/folder-drag-accept.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/status/folder-open.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/16x16/status/user-trash-full.png
@@ -1947,8 +1953,10 @@ drwxr-xr-x	root/root	usr/share/icons/Bluecurve/20x20/actions/
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/about_kde.png -> ../../20x20/stock/help-about.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/20x20/actions/attach.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/back.png -> ../../20x20/stock/go-previous.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/bookmark-new.png -> ../../20x20/actions/bookmark_add.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/20x20/actions/bookmark.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/20x20/actions/bookmark_add.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/bookmarks_list_add.png -> ../../20x20/actions/bookmark_add.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/bottom.png -> ../../20x20/stock/go-bottom.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/button_cancel.png -> ../../20x20/stock/dialog-cancel.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/button_ok.png -> ../../20x20/stock/dialog-ok.png
@@ -1962,6 +1970,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/configure_toolbars.
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/contents.png -> ../../20x20/stock/help-contents.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/contents2.png -> ../../20x20/stock/help-contents.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/20x20/actions/document-print-preview.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/document-revert-rtl.png -> ../../20x20/stock/gtk-revert-to-saved-ltr.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/document-revert.png -> ../../20x20/stock/gtk-revert-to-saved-ltr.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/20x20/actions/document-save-as.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/20x20/actions/document-save.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/down.png -> ../../20x20/stock/go-down.png
@@ -1995,6 +2005,9 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/frameprint.png -> .
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/20x20/actions/go-home.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/gohome.png -> ../../20x20/actions/go-home.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/goto.png -> ../../20x20/stock/go-jump.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/gtk-cancel.png -> ../../20x20/actions/stop.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/gtk-close.png -> ../../20x20/stock/dialog-close.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/gtk-stop.png -> ../../20x20/actions/stop.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/20x20/actions/help.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/20x20/actions/history.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/20x20/actions/khtml_kget.png
@@ -2010,13 +2023,17 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/player_play.png -> 
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/player_rew.png -> ../../20x20/stock/media-seek-backward.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/player_start.png -> ../../20x20/stock/media-skip-backward.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/player_stop.png -> ../../20x20/stock/media-playback-stop.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/process-stop.png -> ../../20x20/actions/stop.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/redo.png -> ../../20x20/actions/edit-redo.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/20x20/actions/reload.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/run.png -> ../../20x20/actions/exec.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/20x20/actions/spellcheck.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/start.png -> ../../20x20/stock/go-first.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/stock_stop.png -> ../../20x20/actions/stop.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/20x20/actions/stop.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/20x20/actions/system-lock-screen.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/tab-new.png -> ../../20x20/stock/epiphany-new-tab.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/tab_new.png -> ../../20x20/stock/epiphany-new-tab.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/text-left.png -> ../../20x20/stock/format-justify-left.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/text_block.png -> ../../20x20/stock/format-justify-fill.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/text_bold.png -> ../../20x20/stock/format-text-bold.png
@@ -2033,6 +2050,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/view-refresh.png ->
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/20x20/actions/viewmag-.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/20x20/actions/viewmag1.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/viewmagfit.png -> ../../20x20/stock/zoom-best-fit.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/20x20/actions/window-close.png -> ../../20x20/stock/dialog-close.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/20x20/actions/window_fullscreen.png
 drwxr-xr-x	root/root	usr/share/icons/Bluecurve/20x20/apps/
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/20x20/apps/applets-screenshooter.png
@@ -2389,8 +2407,10 @@ drwxr-xr-x	root/root	usr/share/icons/Bluecurve/24x24/actions/
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/about_kde.png -> ../../24x24/stock/help-about.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/actions/attach.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/back.png -> ../../24x24/stock/go-previous.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/bookmark-new.png -> ../../24x24/actions/bookmark_add.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/actions/bookmark.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/actions/bookmark_add.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/bookmarks_list_add.png -> ../../24x24/actions/bookmark_add.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/bottom.png -> ../../24x24/stock/go-bottom.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/button_cancel.png -> ../../24x24/stock/dialog-cancel.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/button_ok.png -> ../../24x24/stock/dialog-ok.png
@@ -2405,6 +2425,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/contents.png -> ../
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/contents2.png -> ../../24x24/stock/help-contents.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/actions/document-print-preview.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/actions/document-print.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/document-revert-rtl.png -> ../../24x24/stock/gtk-revert-to-saved-ltr.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/document-revert.png -> ../../24x24/stock/gtk-revert-to-saved-ltr.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/actions/document-save-as.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/actions/document-save.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/down.png -> ../../24x24/stock/go-down.png
@@ -2441,6 +2463,9 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/gohome.png -> ../..
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/goto.png -> ../../24x24/stock/go-jump.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/actions/gpm-hibernate.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/actions/gpm-suspend.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/gtk-cancel.png -> ../../24x24/actions/stop.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/gtk-close.png -> ../../24x24/stock/dialog-close.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/gtk-stop.png -> ../../24x24/actions/stop.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/actions/help.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/actions/history.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/actions/khtml_kget.png
@@ -2456,16 +2481,20 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/player_play.png -> 
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/player_rew.png -> ../../24x24/stock/media-seek-backward.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/player_start.png -> ../../24x24/stock/media-skip-backward.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/player_stop.png -> ../../24x24/stock/media-playback-stop.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/process-stop.png -> ../../24x24/actions/stop.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/redo.png -> ../../24x24/actions/edit-redo.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/actions/reload.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/run.png -> ../../24x24/actions/exec.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/actions/spellcheck.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/start.png -> ../../24x24/stock/go-first.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/stock_stop.png -> ../../24x24/actions/stop.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/actions/stop.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/actions/system-lock-screen.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/system-run.png -> ../../24x24/apps/gnome-run.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/system-search.png -> ../../24x24/apps/gnome-searchtool.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/system-shutdown.png -> ../../24x24/actions/connect_no.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/tab-new.png -> ../../24x24/stock/epiphany-new-tab.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/tab_new.png -> ../../24x24/stock/epiphany-new-tab.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/text-left.png -> ../../24x24/stock/format-justify-left.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/text_block.png -> ../../24x24/stock/format-justify-fill.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/text_bold.png -> ../../24x24/stock/format-text-bold.png
@@ -2482,6 +2511,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/viewmag+.png -> ../
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/viewmag-.png -> ../../24x24/actions/zoom-out.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/actions/viewmag1.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/viewmagfit.png -> ../../24x24/stock/zoom-best-fit.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/actions/window-close.png -> ../../24x24/stock/dialog-close.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/actions/window_fullscreen.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/actions/zoom-in.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/actions/zoom-original.png
@@ -2522,6 +2552,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/default-applications-c
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/apps/disks.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/apps/display-capplet.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/display.png -> ../../24x24/apps/display-capplet.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/dnfdragora.png -> ../../24x24/apps/icon-packages.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/apps/eclipse.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/emacs.png -> ../../24x24/apps/accessories-text-editor.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/apps/email.png
@@ -2529,6 +2560,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/evolution.png -> ../..
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/apps/file-manager.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/apps/file-roller.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/firefox.png -> ../../24x24/apps/galeon.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/firewall-applet.png -> ../../24x24/apps/icon-network-firewall.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/firewall-config.png -> ../../24x24/apps/icon-network-firewall.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/font-capplet.png -> ../../24x24/apps/preferences-desktop-font.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/fonts.png -> ../../24x24/apps/preferences-desktop-font.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/apps/gaim.png
@@ -2728,6 +2761,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/inkscape.png -> ../../
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/apps/input-gaming.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/apps/input-keyboard.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/apps/input-mouse.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/io.github.Hexchat.png -> ../../24x24/apps/icon-groupchat.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/kaboodle.png -> ../../24x24/apps/icon-audio.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/kappfinder.png -> ../../24x24/apps/gnome-searchtool.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/kate.png -> ../../24x24/apps/gnome-word.png
@@ -2779,6 +2813,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/launcher-program.png -
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/apps/libreoffice-math.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/apps/libreoffice-writer.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/lightdm-gtk-greeter-settings.png -> ../../24x24/apps/gdm.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/lightdm-settings.png -> ../../24x24/apps/gdm.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/login-photo.png -> ../../24x24/apps/icon-user-id.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/logviewer.png -> ../../24x24/apps/gnome-log.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/mate-brightness-applet.png -> ../../24x24/apps/gpm-brightness.png
@@ -2794,7 +2829,6 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/mate-panel-drawer.png 
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/mate-panel-fish.png -> ../../24x24/stock/panel-amusements.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/mate-panel-force-quit.png -> ../../24x24/stock/dialog-cancel.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/mate-panel-launcher.png -> ../../24x24/apps/icon-launcher.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/mate-panel-notification-area.png -> ../../24x24/stock/dialog-information.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/mate-panel-window-list.png -> ../../24x24/apps/gnome-ccwindowmanager.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/mate-panel-window-menu.png -> ../../24x24/apps/gnome-ccwindowmanager.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/mate-panel-workspace-switcher.png -> ../../24x24/apps/display-capplet.png
@@ -2847,6 +2881,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/packages_games.png -> 
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/passwd.png -> ../../24x24/apps/gnome-lockscreen.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/password.png -> ../../24x24/apps/icon-security-keys.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/personal.png -> ../../24x24/apps/preferences-desktop-personal.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/pidgin.png -> ../../24x24/apps/gaim.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/apps/preferences-desktop-accessibility.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/preferences-desktop-default-applications.png -> ../../24x24/apps/500_setup.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/preferences-desktop-display.png -> ../../24x24/apps/display-capplet.png
@@ -2861,6 +2896,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/preferences-desktop-pe
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/apps/preferences-desktop-wallpaper.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/apps/preferences-desktop.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/apps/preferences-system-network.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/preferences-system-time.png -> ../../24x24/apps/clock.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/preferences-system-windows.png -> ../../24x24/apps/gnome-ccwindowmanager.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/apps/preferences-system.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/24x24/apps/print-manager.png
@@ -2893,6 +2929,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/redhat-word-processor.
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/rhythmbox.png -> ../../24x24/apps/icon-audio.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/root-password.png -> ../../24x24/apps/gnome-lokkit-logo.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/samba.png -> ../../24x24/apps/icon-fileshare-smb.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/seamonkey-mail.png -> ../../24x24/apps/email.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/seamonkey.png -> ../../24x24/apps/galeon.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/shell-output-logo.png -> ../../24x24/apps/gnome-run.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/sound-capplet.png -> ../../24x24/apps/preferences-desktop-multimedia.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/sound-juicer.png -> ../../24x24/apps/grip.png
@@ -2951,7 +2989,6 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/devices/3floppy_mount.png -
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/devices/3floppy_unmount.png -> ../../24x24/mimetypes/media-floppy.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/devices/5floppy_mount.png -> ../../24x24/mimetypes/media-floppy.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/devices/5floppy_unmount.png -> ../../24x24/mimetypes/media-floppy.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/devices/ac-adapter.png -> ../../24x24/apps/gpm-ac-adapter.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/devices/battery.png -> ../../24x24/status/gpm-primary-100-charging.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/devices/gnome-dev-cdrom-audio.png -> ../../24x24/apps/gnome-cdplayer-icon.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/devices/gnome-dev-cdrom.png -> ../../24x24/mimetypes/drive-optical.png
@@ -3971,7 +4008,6 @@ drwxr-xr-x	root/root	usr/share/icons/Bluecurve/24x24/status/
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/status/battery-caution-charging.png -> ../../24x24/stock/printer-broken.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/status/battery-caution.png -> ../../24x24/stock/printer-broken.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/status/battery-empty.png -> ../../24x24/status/gpm-primary-010.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/status/battery-full-charged.png -> ../../24x24/status/gpm-primary-100-charged.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/status/battery-full-charging.png -> ../../24x24/status/gpm-primary-100-charging.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/status/battery-full.png -> ../../24x24/status/gpm-primary-100.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/status/battery-good-charging.png -> ../../24x24/status/gpm-primary-080-charging.png
@@ -4415,8 +4451,10 @@ drwxr-xr-x	root/root	usr/share/icons/Bluecurve/32x32/actions/
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/about_kde.png -> ../../32x32/stock/help-about.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/actions/attach.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/back.png -> ../../32x32/stock/go-previous.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/bookmark-new.png -> ../../32x32/actions/bookmark_add.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/actions/bookmark.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/actions/bookmark_add.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/bookmarks_list_add.png -> ../../32x32/actions/bookmark_add.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/bottom.png -> ../../32x32/stock/go-bottom.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/button_cancel.png -> ../../32x32/stock/dialog-cancel.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/button_ok.png -> ../../32x32/stock/dialog-ok.png
@@ -4430,6 +4468,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/configure_toolbars.
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/contents.png -> ../../32x32/stock/help-contents.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/contents2.png -> ../../32x32/stock/help-contents.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/actions/document-print-preview.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/document-revert-rtl.png -> ../../32x32/stock/gtk-revert-to-saved-ltr.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/document-revert.png -> ../../32x32/stock/gtk-revert-to-saved-ltr.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/actions/document-save-as.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/actions/document-save.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/down.png -> ../../32x32/stock/go-down.png
@@ -4463,6 +4503,9 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/frameprint.png -> .
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/actions/go-home.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/gohome.png -> ../../32x32/actions/go-home.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/goto.png -> ../../32x32/stock/go-jump.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/gtk-cancel.png -> ../../32x32/actions/stop.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/gtk-close.png -> ../../32x32/stock/dialog-close.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/gtk-stop.png -> ../../32x32/actions/stop.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/actions/help.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/actions/history.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/actions/khtml_kget.png
@@ -4478,16 +4521,20 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/player_play.png -> 
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/player_rew.png -> ../../32x32/stock/media-seek-backward.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/player_start.png -> ../../32x32/stock/media-skip-backward.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/player_stop.png -> ../../32x32/stock/media-playback-stop.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/process-stop.png -> ../../32x32/actions/stop.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/redo.png -> ../../32x32/actions/edit-redo.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/actions/reload.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/run.png -> ../../32x32/actions/exec.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/actions/spellcheck.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/start.png -> ../../32x32/stock/go-first.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/stock_stop.png -> ../../32x32/actions/stop.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/actions/stop.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/actions/system-lock-screen.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/system-run.png -> ../../32x32/apps/gnome-run.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/system-search.png -> ../../32x32/apps/gnome-searchtool.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/system-shutdown.png -> ../../32x32/actions/connect_no.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/tab-new.png -> ../../32x32/stock/epiphany-new-tab.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/tab_new.png -> ../../32x32/stock/epiphany-new-tab.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/text-left.png -> ../../32x32/stock/format-justify-left.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/text_block.png -> ../../32x32/stock/format-justify-fill.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/text_bold.png -> ../../32x32/stock/format-text-bold.png
@@ -4504,6 +4551,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/view-refresh.png ->
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/actions/viewmag-.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/actions/viewmag1.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/viewmagfit.png -> ../../32x32/stock/zoom-best-fit.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/actions/window-close.png -> ../../32x32/stock/dialog-close.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/actions/window_fullscreen.png
 drwxr-xr-x	root/root	usr/share/icons/Bluecurve/32x32/apps/
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/apps/500_setup.png
@@ -4527,7 +4575,6 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/applications-science.p
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/apps/applications-system.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/apps/bug-buddy.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/caja.png -> ../../32x32/apps/file-manager.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/caja_home.png -> ../../32x32/mimetypes/user-home.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/apps/camera-photo.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/camera.png -> ../../32x32/apps/camera-photo.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/apps/clock.png
@@ -4540,6 +4587,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/default-applications-c
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/apps/disks.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/apps/display-capplet.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/display.png -> ../../32x32/apps/display-capplet.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/dnfdragora.png -> ../../32x32/apps/icon-packages.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/apps/eclipse.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/emacs.png -> ../../32x32/apps/accessories-text-editor.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/apps/email.png
@@ -4547,6 +4595,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/evolution.png -> ../..
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/apps/file-manager.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/apps/file-roller.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/firefox.png -> ../../32x32/apps/galeon.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/firewall-applet.png -> ../../32x32/apps/icon-network-firewall.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/firewall-config.png -> ../../32x32/apps/icon-network-firewall.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/font-capplet.png -> ../../32x32/apps/preferences-desktop-font.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/fonts.png -> ../../32x32/apps/preferences-desktop-font.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/apps/gaim.png
@@ -4741,6 +4791,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/inkscape.png -> ../../
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/apps/input-gaming.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/apps/input-keyboard.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/apps/input-mouse.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/io.github.Hexchat.png -> ../../32x32/apps/icon-groupchat.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/kaboodle.png -> ../../32x32/apps/icon-audio.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/kappfinder.png -> ../../32x32/apps/gnome-searchtool.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/kate.png -> ../../32x32/apps/gnome-word.png
@@ -4787,12 +4838,11 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/launcher-program.png -
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/apps/libreoffice-math.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/apps/libreoffice-writer.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/lightdm-gtk-greeter-settings.png -> ../../32x32/apps/gdm.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/lightdm-settings.png -> ../../32x32/apps/gdm.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/login-photo.png -> ../../32x32/apps/icon-user-id.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/logviewer.png -> ../../32x32/apps/gnome-log.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/mate-brightness-applet.png -> ../../32x32/apps/gpm-brightness.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/mate-cpu-frequency-applet.png -> ../../32x32/apps/icon-memory-profile.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/mate-eyes-applet.png -> ../../32x32/stock/panel-amusements.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/mate-inhibit-applet.png -> ../../32x32/actions/gpm-suspend.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/mate-invest-applet.png -> ../../32x32/apps/utilities-system-monitor.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/mate-netspeed-applet.png -> ../../32x32/apps/icon-traceroute.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/mate-network-properties.png -> ../../32x32/apps/icon-network-systems.png
@@ -4802,12 +4852,10 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/mate-panel-drawer.png 
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/mate-panel-fish.png -> ../../32x32/stock/panel-amusements.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/mate-panel-force-quit.png -> ../../32x32/stock/dialog-cancel.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/mate-panel-launcher.png -> ../../32x32/apps/icon-launcher.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/mate-panel-notification-area.png -> ../../32x32/stock/dialog-information.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/mate-panel-window-list.png -> ../../32x32/apps/gnome-ccwindowmanager.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/mate-panel-window-menu.png -> ../../32x32/apps/gnome-ccwindowmanager.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/mate-panel-workspace-switcher.png -> ../../32x32/apps/display-capplet.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/mate-panel.png -> ../../32x32/apps/gnome-panel.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/mate-power-manager.png -> ../../32x32/status/gpm-primary-100-charging.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/mate-power-statistics.png -> ../../32x32/apps/utilities-system-monitor.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/mate-preferences-desktop-display.png -> ../../32x32/apps/display-capplet.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/mate-run.png -> ../../32x32/apps/gnome-run.png
@@ -4851,6 +4899,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/packages_games.png -> 
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/passwd.png -> ../../32x32/apps/gnome-lockscreen.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/password.png -> ../../32x32/apps/icon-security-keys.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/personal.png -> ../../32x32/apps/preferences-desktop-personal.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/pidgin.png -> ../../32x32/apps/gaim.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/apps/preferences-desktop-accessibility.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/preferences-desktop-default-applications.png -> ../../32x32/apps/500_setup.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/preferences-desktop-display.png -> ../../32x32/apps/display-capplet.png
@@ -4865,6 +4914,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/preferences-desktop-pe
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/apps/preferences-desktop-wallpaper.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/apps/preferences-desktop.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/apps/preferences-system-network.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/preferences-system-time.png -> ../../32x32/apps/clock.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/preferences-system-windows.png -> ../../32x32/apps/gnome-ccwindowmanager.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/apps/preferences-system.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/apps/printer.png
@@ -4895,6 +4945,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/redhat-word-processor.
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/rhythmbox.png -> ../../32x32/apps/icon-audio.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/root-password.png -> ../../32x32/apps/gnome-lokkit-logo.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/samba.png -> ../../32x32/apps/icon-fileshare-smb.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/seamonkey-mail.png -> ../../32x32/apps/email.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/seamonkey.png -> ../../32x32/apps/galeon.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/shell-output-logo.png -> ../../32x32/apps/gnome-run.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/sound-capplet.png -> ../../32x32/apps/preferences-desktop-multimedia.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/sound-juicer.png -> ../../32x32/apps/grip.png
@@ -4947,9 +4999,6 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/xine.png -> ../../32x3
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/xine_48x48.png -> ../../32x32/apps/applications-multimedia.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/xmms.png -> ../../32x32/apps/icon-audio.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/xscreensaver.png -> ../../32x32/apps/icon-xscreensaver.png
-drwxr-xr-x	root/root	usr/share/icons/Bluecurve/32x32/devices/
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/devices/ac-adapter.png -> ../../32x32/apps/gpm-ac-adapter.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/devices/battery.png -> ../../32x32/status/gpm-primary-100-charging.png
 drwxr-xr-x	root/root	usr/share/icons/Bluecurve/32x32/filesystems/
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/filesystems/gnome-fs-client.png -> ../../32x32/apps/computer.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/filesystems/gnome-fs-desktop.png -> ../../32x32/apps/desktop.png
@@ -4966,15 +5015,6 @@ drwxr-xr-x	root/root	usr/share/icons/Bluecurve/32x32/status/
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/status/audio-volume-muted.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/status/battery-caution-charging.png -> ../../32x32/stock/printer-broken.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/status/battery-caution.png -> ../../32x32/stock/printer-broken.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/status/battery-empty.png -> ../../32x32/status/gpm-primary-010.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/status/battery-full-charged.png -> ../../32x32/status/gpm-primary-100-charged.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/status/battery-full-charging.png -> ../../32x32/status/gpm-primary-100-charging.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/status/battery-full.png -> ../../32x32/status/gpm-primary-100.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/status/battery-good-charging.png -> ../../32x32/status/gpm-primary-080-charging.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/status/battery-good.png -> ../../32x32/status/gpm-primary-080.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/status/battery-low-charging.png -> ../../32x32/status/gpm-primary-020-charging.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/status/battery-low.png -> ../../32x32/status/gpm-primary-020.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/status/battery-missing.png -> ../../32x32/status/gpm-primary-missing.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/status/folder-open.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/status/weather-clear.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/32x32/status/weather-few-clouds.png
@@ -5342,7 +5382,6 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/alacarte.png -> ../../
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/36x36/apps/applications-system.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/36x36/apps/bug-buddy.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/caja.png -> ../../36x36/apps/file-manager.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/caja_home.png -> ../../36x36/mimetypes/user-home.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/36x36/apps/camera-photo.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/camera.png -> ../../36x36/apps/camera-photo.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/36x36/apps/clock.png
@@ -5355,6 +5394,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/default-applications-c
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/36x36/apps/disks.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/36x36/apps/display-capplet.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/display.png -> ../../36x36/apps/display-capplet.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/dnfdragora.png -> ../../36x36/apps/icon-packages.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/36x36/apps/eclipse.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/emacs.png -> ../../36x36/apps/accessories-text-editor.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/36x36/apps/email.png
@@ -5362,6 +5402,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/evolution.png -> ../..
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/36x36/apps/file-manager.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/36x36/apps/file-roller.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/firefox.png -> ../../36x36/apps/galeon.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/firewall-applet.png -> ../../36x36/apps/icon-network-firewall.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/firewall-config.png -> ../../36x36/apps/icon-network-firewall.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/font-capplet.png -> ../../36x36/apps/preferences-desktop-font.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/fonts.png -> ../../36x36/apps/preferences-desktop-font.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/36x36/apps/gaim.png
@@ -5555,6 +5597,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/inkscape.png -> ../../
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/36x36/apps/input-gaming.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/36x36/apps/input-keyboard.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/36x36/apps/input-mouse.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/io.github.Hexchat.png -> ../../36x36/apps/icon-groupchat.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/kaboodle.png -> ../../36x36/apps/icon-audio.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/kappfinder.png -> ../../36x36/apps/gnome-searchtool.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/kate.png -> ../../36x36/apps/gnome-word.png
@@ -5595,11 +5638,10 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/kword.png -> ../../36x
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/kwrite.png -> ../../36x36/apps/gnome-word.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/launcher-program.png -> ../../36x36/apps/icon-launcher.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/lightdm-gtk-greeter-settings.png -> ../../36x36/apps/gdm.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/lightdm-settings.png -> ../../36x36/apps/gdm.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/login-photo.png -> ../../36x36/apps/icon-user-id.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/logviewer.png -> ../../36x36/apps/gnome-log.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/mate-brightness-applet.png -> ../../36x36/apps/gpm-brightness.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/mate-cpu-frequency-applet.png -> ../../36x36/apps/icon-memory-profile.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/mate-inhibit-applet.png -> ../../36x36/actions/gpm-suspend.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/mate-invest-applet.png -> ../../36x36/apps/utilities-system-monitor.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/mate-netspeed-applet.png -> ../../36x36/apps/icon-traceroute.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/mate-network-properties.png -> ../../36x36/apps/icon-network-systems.png
@@ -5610,7 +5652,6 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/mate-panel-window-list
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/mate-panel-window-menu.png -> ../../36x36/apps/gnome-ccwindowmanager.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/mate-panel-workspace-switcher.png -> ../../36x36/apps/display-capplet.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/mate-panel.png -> ../../36x36/apps/gnome-panel.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/mate-power-manager.png -> ../../36x36/status/gpm-primary-100-charging.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/mate-power-statistics.png -> ../../36x36/apps/utilities-system-monitor.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/mate-preferences-desktop-display.png -> ../../36x36/apps/display-capplet.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/mate-run.png -> ../../36x36/apps/gnome-run.png
@@ -5649,6 +5690,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/packages_games.png -> 
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/passwd.png -> ../../36x36/apps/gnome-lockscreen.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/password.png -> ../../36x36/apps/icon-security-keys.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/personal.png -> ../../36x36/apps/preferences-desktop-personal.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/pidgin.png -> ../../36x36/apps/gaim.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/36x36/apps/preferences-desktop-accessibility.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/preferences-desktop-default-applications.png -> ../../36x36/apps/500_setup.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/preferences-desktop-display.png -> ../../36x36/apps/display-capplet.png
@@ -5663,6 +5705,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/preferences-desktop-pe
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/36x36/apps/preferences-desktop-wallpaper.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/36x36/apps/preferences-desktop.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/36x36/apps/preferences-system-network.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/preferences-system-time.png -> ../../36x36/apps/clock.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/preferences-system-windows.png -> ../../36x36/apps/gnome-ccwindowmanager.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/36x36/apps/preferences-system.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/36x36/apps/printer.png
@@ -5693,6 +5736,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/redhat-word-processor.
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/rhythmbox.png -> ../../36x36/apps/icon-audio.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/root-password.png -> ../../36x36/apps/gnome-lokkit-logo.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/samba.png -> ../../36x36/apps/icon-fileshare-smb.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/seamonkey-mail.png -> ../../36x36/apps/email.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/seamonkey.png -> ../../36x36/apps/galeon.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/shell-output-logo.png -> ../../36x36/apps/gnome-run.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/sound-capplet.png -> ../../36x36/apps/preferences-desktop-multimedia.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/sound-juicer.png -> ../../36x36/apps/grip.png
@@ -5745,9 +5790,6 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/xine.png -> ../../36x3
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/xine_48x48.png -> ../../36x36/apps/applications-multimedia.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/xmms.png -> ../../36x36/apps/icon-audio.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/xscreensaver.png -> ../../36x36/apps/icon-xscreensaver.png
-drwxr-xr-x	root/root	usr/share/icons/Bluecurve/36x36/devices/
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/devices/ac-adapter.png -> ../../36x36/apps/gpm-ac-adapter.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/devices/battery.png -> ../../36x36/status/gpm-primary-100-charging.png
 drwxr-xr-x	root/root	usr/share/icons/Bluecurve/36x36/filesystems/
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/filesystems/gnome-fs-client.png -> ../../36x36/apps/computer.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/filesystems/gnome-fs-desktop.png -> ../../36x36/apps/desktop.png
@@ -5758,23 +5800,15 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/filesystems/network-workgro
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/filesystems/user-desktop.png -> ../../36x36/apps/desktop.png
 drwxr-xr-x	root/root	usr/share/icons/Bluecurve/36x36/mimetypes/
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/36x36/mimetypes/text-html.png
-drwxr-xr-x	root/root	usr/share/icons/Bluecurve/36x36/status/
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/status/battery-empty.png -> ../../36x36/status/gpm-primary-010.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/status/battery-full-charged.png -> ../../36x36/status/gpm-primary-100-charged.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/status/battery-full-charging.png -> ../../36x36/status/gpm-primary-100-charging.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/status/battery-full.png -> ../../36x36/status/gpm-primary-100.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/status/battery-good-charging.png -> ../../36x36/status/gpm-primary-080-charging.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/status/battery-good.png -> ../../36x36/status/gpm-primary-080.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/status/battery-low-charging.png -> ../../36x36/status/gpm-primary-020-charging.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/status/battery-low.png -> ../../36x36/status/gpm-primary-020.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/status/battery-missing.png -> ../../36x36/status/gpm-primary-missing.png
 drwxr-xr-x	root/root	usr/share/icons/Bluecurve/48x48/
 drwxr-xr-x	root/root	usr/share/icons/Bluecurve/48x48/actions/
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/about_kde.png -> ../../48x48/stock/help-about.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/actions/attach.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/back.png -> ../../48x48/stock/go-previous.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/bookmark-new.png -> ../../48x48/actions/bookmark_add.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/actions/bookmark.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/actions/bookmark_add.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/bookmarks_list_add.png -> ../../48x48/actions/bookmark_add.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/bottom.png -> ../../48x48/stock/go-bottom.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/button_cancel.png -> ../../48x48/stock/dialog-cancel.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/button_ok.png -> ../../48x48/stock/dialog-ok.png
@@ -5788,6 +5822,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/configure_toolbars.
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/contents.png -> ../../48x48/stock/help-contents.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/contents2.png -> ../../48x48/stock/help-contents.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/actions/document-print-preview.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/document-revert-rtl.png -> ../../48x48/stock/gtk-revert-to-saved-ltr.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/document-revert.png -> ../../48x48/stock/gtk-revert-to-saved-ltr.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/actions/document-save-as.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/actions/document-save.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/down.png -> ../../48x48/stock/go-down.png
@@ -5823,6 +5859,9 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/gohome.png -> ../..
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/goto.png -> ../../48x48/stock/go-jump.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/actions/gpm-hibernate.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/actions/gpm-suspend.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/gtk-cancel.png -> ../../48x48/actions/stop.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/gtk-close.png -> ../../48x48/stock/dialog-close.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/gtk-stop.png -> ../../48x48/actions/stop.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/actions/help.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/actions/history.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/actions/khtml_kget.png
@@ -5838,16 +5877,20 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/player_play.png -> 
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/player_rew.png -> ../../48x48/stock/media-seek-backward.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/player_start.png -> ../../48x48/stock/media-skip-backward.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/player_stop.png -> ../../48x48/stock/media-playback-stop.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/process-stop.png -> ../../48x48/actions/stop.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/redo.png -> ../../48x48/actions/edit-redo.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/actions/reload.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/run.png -> ../../48x48/actions/exec.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/actions/spellcheck.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/start.png -> ../../48x48/stock/go-first.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/stock_stop.png -> ../../48x48/actions/stop.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/actions/stop.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/actions/system-lock-screen.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/system-run.png -> ../../48x48/apps/gnome-run.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/system-search.png -> ../../48x48/apps/gnome-searchtool.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/system-shutdown.png -> ../../48x48/actions/connect_no.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/tab-new.png -> ../../48x48/stock/epiphany-new-tab.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/tab_new.png -> ../../48x48/stock/epiphany-new-tab.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/text-left.png -> ../../48x48/stock/format-justify-left.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/text_block.png -> ../../48x48/stock/format-justify-fill.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/text_bold.png -> ../../48x48/stock/format-text-bold.png
@@ -5864,6 +5907,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/view-refresh.png ->
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/actions/viewmag-.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/actions/viewmag1.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/viewmagfit.png -> ../../48x48/stock/zoom-best-fit.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/actions/window-close.png -> ../../48x48/stock/dialog-close.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/actions/window_fullscreen.png
 drwxr-xr-x	root/root	usr/share/icons/Bluecurve/48x48/apps/
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/apps/500_setup.png
@@ -5901,6 +5945,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/default-applications-c
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/apps/disks.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/apps/display-capplet.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/display.png -> ../../48x48/apps/display-capplet.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/dnfdragora.png -> ../../48x48/apps/icon-packages.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/apps/eclipse.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/emacs.png -> ../../48x48/apps/accessories-text-editor.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/apps/email.png
@@ -5908,6 +5953,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/evolution.png -> ../..
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/apps/file-manager.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/apps/file-roller.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/firefox.png -> ../../48x48/apps/galeon.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/firewall-applet.png -> ../../48x48/apps/icon-network-firewall.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/firewall-config.png -> ../../48x48/apps/icon-network-firewall.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/font-capplet.png -> ../../48x48/apps/preferences-desktop-font.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/fonts.png -> ../../48x48/apps/preferences-desktop-font.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/apps/gaim.png
@@ -6107,6 +6154,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/inkscape.png -> ../../
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/apps/input-gaming.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/apps/input-keyboard.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/apps/input-mouse.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/io.github.Hexchat.png -> ../../48x48/apps/icon-groupchat.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/kaboodle.png -> ../../48x48/apps/icon-audio.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/kappfinder.png -> ../../48x48/apps/gnome-searchtool.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/kate.png -> ../../48x48/apps/gnome-word.png
@@ -6158,6 +6206,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/launcher-program.png -
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/apps/libreoffice-math.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/apps/libreoffice-writer.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/lightdm-gtk-greeter-settings.png -> ../../48x48/apps/gdm.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/lightdm-settings.png -> ../../48x48/apps/gdm.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/login-photo.png -> ../../48x48/apps/icon-user-id.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/logviewer.png -> ../../48x48/apps/gnome-log.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/mate-brightness-applet.png -> ../../48x48/apps/gpm-brightness.png
@@ -6226,6 +6275,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/packages_games.png -> 
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/passwd.png -> ../../48x48/apps/gnome-lockscreen.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/password.png -> ../../48x48/apps/icon-security-keys.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/personal.png -> ../../48x48/apps/preferences-desktop-personal.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/pidgin.png -> ../../48x48/apps/gaim.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/apps/preferences-desktop-accessibility.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/preferences-desktop-default-applications.png -> ../../48x48/apps/500_setup.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/preferences-desktop-display.png -> ../../48x48/apps/display-capplet.png
@@ -6240,6 +6290,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/preferences-desktop-pe
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/apps/preferences-desktop-wallpaper.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/apps/preferences-desktop.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/apps/preferences-system-network.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/preferences-system-time.png -> ../../48x48/apps/clock.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/preferences-system-windows.png -> ../../48x48/apps/gnome-ccwindowmanager.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/apps/preferences-system.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/48x48/apps/print-manager.png
@@ -6272,6 +6323,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/redhat-word-processor.
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/rhythmbox.png -> ../../48x48/apps/icon-audio.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/root-password.png -> ../../48x48/apps/gnome-lokkit-logo.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/samba.png -> ../../48x48/apps/icon-fileshare-smb.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/seamonkey-mail.png -> ../../48x48/apps/email.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/seamonkey.png -> ../../48x48/apps/galeon.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/shell-output-logo.png -> ../../48x48/apps/gnome-run.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/sound-capplet.png -> ../../48x48/apps/preferences-desktop-multimedia.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/sound-juicer.png -> ../../48x48/apps/grip.png
@@ -6330,7 +6383,6 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/devices/3floppy_mount.png -
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/devices/3floppy_unmount.png -> ../../48x48/mimetypes/media-floppy.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/devices/5floppy_mount.png -> ../../48x48/mimetypes/media-floppy.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/devices/5floppy_unmount.png -> ../../48x48/mimetypes/media-floppy.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/devices/ac-adapter.png -> ../../48x48/apps/gpm-ac-adapter.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/devices/battery.png -> ../../48x48/status/gpm-primary-100-charging.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/devices/gnome-dev-cdrom-audio.png -> ../../48x48/apps/gnome-cdplayer-icon.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/devices/gnome-dev-cdrom.png -> ../../48x48/mimetypes/drive-optical.png
@@ -7113,7 +7165,6 @@ drwxr-xr-x	root/root	usr/share/icons/Bluecurve/48x48/status/
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/status/battery-caution-charging.png -> ../../48x48/stock/printer-broken.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/status/battery-caution.png -> ../../48x48/stock/printer-broken.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/status/battery-empty.png -> ../../48x48/status/gpm-primary-010.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/status/battery-full-charged.png -> ../../48x48/status/gpm-primary-100-charged.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/status/battery-full-charging.png -> ../../48x48/status/gpm-primary-100-charging.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/status/battery-full.png -> ../../48x48/status/gpm-primary-100.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/status/battery-good-charging.png -> ../../48x48/status/gpm-primary-080-charging.png
@@ -7568,8 +7619,10 @@ drwxr-xr-x	root/root	usr/share/icons/Bluecurve/64x64/actions/
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/about_kde.png -> ../../64x64/stock/help-about.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/64x64/actions/attach.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/back.png -> ../../64x64/stock/go-previous.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/bookmark-new.png -> ../../64x64/actions/bookmark_add.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/64x64/actions/bookmark.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/64x64/actions/bookmark_add.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/bookmarks_list_add.png -> ../../64x64/actions/bookmark_add.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/bottom.png -> ../../64x64/stock/go-bottom.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/button_cancel.png -> ../../64x64/stock/dialog-cancel.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/button_ok.png -> ../../64x64/stock/dialog-ok.png
@@ -7583,6 +7636,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/configure_toolbars.
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/contents.png -> ../../64x64/stock/help-contents.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/contents2.png -> ../../64x64/stock/help-contents.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/64x64/actions/document-print-preview.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/document-revert-rtl.png -> ../../64x64/stock/gtk-revert-to-saved-ltr.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/document-revert.png -> ../../64x64/stock/gtk-revert-to-saved-ltr.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/64x64/actions/document-save-as.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/64x64/actions/document-save.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/down.png -> ../../64x64/stock/go-down.png
@@ -7616,6 +7671,9 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/frameprint.png -> .
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/64x64/actions/go-home.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/gohome.png -> ../../64x64/actions/go-home.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/goto.png -> ../../64x64/stock/go-jump.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/gtk-cancel.png -> ../../64x64/actions/stop.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/gtk-close.png -> ../../64x64/stock/dialog-close.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/gtk-stop.png -> ../../64x64/actions/stop.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/64x64/actions/help.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/64x64/actions/history.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/64x64/actions/khtml_kget.png
@@ -7631,13 +7689,17 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/player_play.png -> 
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/player_rew.png -> ../../64x64/stock/media-seek-backward.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/player_start.png -> ../../64x64/stock/media-skip-backward.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/player_stop.png -> ../../64x64/stock/media-playback-stop.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/process-stop.png -> ../../64x64/actions/stop.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/redo.png -> ../../64x64/actions/edit-redo.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/64x64/actions/reload.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/run.png -> ../../64x64/actions/exec.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/64x64/actions/spellcheck.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/start.png -> ../../64x64/stock/go-first.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/stock_stop.png -> ../../64x64/actions/stop.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/64x64/actions/stop.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/64x64/actions/system-lock-screen.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/tab-new.png -> ../../64x64/stock/epiphany-new-tab.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/tab_new.png -> ../../64x64/stock/epiphany-new-tab.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/text-left.png -> ../../64x64/stock/format-justify-left.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/text_block.png -> ../../64x64/stock/format-justify-fill.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/text_bold.png -> ../../64x64/stock/format-text-bold.png
@@ -7654,6 +7716,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/view-refresh.png ->
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/64x64/actions/viewmag-.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/64x64/actions/viewmag1.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/viewmagfit.png -> ../../64x64/stock/zoom-best-fit.png
+lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/64x64/actions/window-close.png -> ../../64x64/stock/dialog-close.png
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/64x64/actions/window_fullscreen.png
 drwxr-xr-x	root/root	usr/share/icons/Bluecurve/64x64/apps/
 -rw-r--r--	root/root	usr/share/icons/Bluecurve/64x64/apps/applets-screenshooter.png
