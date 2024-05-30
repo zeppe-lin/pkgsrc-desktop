@@ -9,7 +9,8 @@ source="https://github.com/nomius/$name/archive/$version/$name-$version.tar.gz
 	3584ce168196bd7262d542332d318706edc741fd.patch"
 
 build() {
-	patch -p1 -d $name-$version -i $SRC/3584ce168196bd7262d542332d318706edc741fd.patch
+	patch -d $name-$version -p1 \
+		-i $SRC/3584ce168196bd7262d542332d318706edc741fd.patch
 
 	mkdir build; cd build
 
