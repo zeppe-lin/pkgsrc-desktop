@@ -3,13 +3,14 @@
 # Depends on:  alsa-lib autoconf-2.13 gtk python unzip xorg-libxdamage xorg-libxt yasm zip
 
 name=palemoon
-version=33.1.0
-_upxrel=20240419
+version=33.1.1
+_upxrel=20240528
 release=1
 source="https://repo.palemoon.org/MoonchildProductions/Pale-Moon/archive/${version}_Release.tar.gz
 	https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_${_upxrel}.tar.gz
-	$name.desktop
-	mozconfig.in"
+	palemoon.desktop
+	mozconfig.in
+	revdep.palemoon.in"
 
 build() {
 	cd uxp; cp -R . $SRC/pale-moon/platform/
@@ -29,17 +30,14 @@ build() {
 	./mach build
 	DESTDIR=$PKG ./mach install
 
-	# install freedesktop launcher without i18n
-	install -d $PKG/usr/share/applications
-	sed -r '/\[.+\]=/d' $SRC/$name.desktop > \
-		$PKG/usr/share/applications/$name.desktop
+	# install desktop launcher
+	install -m 0644 -D $SRC/palemoon.desktop \
+		$PKG/usr/share/applications/palemoon.desktop
 
 	# revdep additional library directories
-	install -d $PKG/etc/revdep.d
-	cat > $PKG/etc/revdep.d/palemoon <<EOF
-/usr/lib/$name-$version/
-/usr/lib/$name-$version/browser/components/
-EOF
+	mkdir -p $PKG/etc/revdep.d
+	sed "s:@VERSION@:$version:g" $SRC/revdep.palemoon.in \
+		> $PKG/etc/revdep.d/palemoon
 
 	# remove junk:
 	# we don't need these (just symlink anyway)
