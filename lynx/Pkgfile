@@ -3,7 +3,7 @@
 # Depends on:  bzip2 libbsd libidn2 ncurses openssl zlib
 
 name=lynx
-version=2.9.1
+version=2.9.2
 release=1
 source=https://invisible-mirror.net/archives/lynx/tarballs/lynx$version.tar.bz2
 
