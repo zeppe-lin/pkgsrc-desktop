@@ -4,7 +4,7 @@
 
 name=tango-icon-theme
 version=0.8.90
-release=1
+release=2
 source="http://tango.freedesktop.org/releases/$name-$version.tar.bz2
 	rsvg.patch
 	icon-theme.cache"
