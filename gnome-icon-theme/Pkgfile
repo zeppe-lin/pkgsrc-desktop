@@ -4,7 +4,7 @@
 
 name=gnome-icon-theme
 version=2.27.90
-release=1
+release=2
 source="https://download.gnome.org/sources/$name/${version%.*}/$name-$version.tar.gz
 	icon-theme.cache"
 

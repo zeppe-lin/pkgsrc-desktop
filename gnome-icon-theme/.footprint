@@ -74,6 +74,7 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/actions/gnome-lockscreen.png ->
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/actions/gnome-logout.png -> system-log-out.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/actions/gnome-run.png -> system-run.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/actions/gnome-searchtool.png -> system-search.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/actions/gnome-session-logout.png -> system-log-out.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/actions/gnome-shutdown.png -> system-shutdown.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/actions/gnome-stock-mail-fwd.png -> mail-forward.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/actions/gnome-stock-mail-new.png -> mail-message-new.png
@@ -432,10 +433,13 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/apps/update-manager.png -> syst
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/apps/volume-knob.png -> multimedia-volume-control.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/apps/wallpaper.png -> preferences-desktop-wallpaper.png
 -rw-r--r--	root/root	usr/share/icons/gnome/16x16/apps/web-browser.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/apps/xfce-edit.png -> accessories-text-editor.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/apps/xfce-filemanager.png -> system-file-manager.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/apps/xfce-man.png -> help-browser.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/apps/xfce-terminal.png -> utilities-terminal.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/apps/xfce4-backdrop.png -> preferences-desktop-wallpaper.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/apps/xfce4-mixer.png -> multimedia-volume-control.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/apps/xfce4-ui.png -> preferences-desktop-theme.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/apps/xfwm4.png -> preferences-system-windows.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/apps/xscreensaver.png -> preferences-desktop-screensaver.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/apps/zen-icon.png -> system-software-update.png
@@ -493,12 +497,14 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/categories/redhat-system_settin
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/categories/redhat-system_tools.png -> applications-system.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/categories/stock_internet.png -> applications-internet.png
 -rw-r--r--	root/root	usr/share/icons/gnome/16x16/categories/system-help.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/categories/xfce-devel.png -> applications-development.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/categories/xfce-games.png -> applications-games.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/categories/xfce-graphics.png -> applications-graphics.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/categories/xfce-internet.png -> applications-internet.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/categories/xfce-multimedia.png -> applications-multimedia.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/categories/xfce-office.png -> applications-office.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/categories/xfce-system-settings.png -> preferences-system.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/categories/xfce-system.png -> applications-system.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/categories/xfce-utils.png -> applications-accessories.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/categories/xfce4-settings.png -> preferences-desktop.png
 drwxr-xr-x	root/root	usr/share/icons/gnome/16x16/devices/
@@ -580,6 +586,9 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/devices/mouse.png -> input-mous
 -rw-r--r--	root/root	usr/share/icons/gnome/16x16/devices/multimedia-player.png
 -rw-r--r--	root/root	usr/share/icons/gnome/16x16/devices/network-wired.png
 -rw-r--r--	root/root	usr/share/icons/gnome/16x16/devices/network-wireless.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/devices/nm-adhoc.png -> network-wireless.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/devices/nm-device-wired.png -> network-wired.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/devices/nm-device-wireless.png -> network-wireless.png
 -rw-r--r--	root/root	usr/share/icons/gnome/16x16/devices/pda.png
 -rw-r--r--	root/root	usr/share/icons/gnome/16x16/devices/phone.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/devices/printer-remote.png -> printer.png
@@ -909,6 +918,7 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/status/gtk-dialog-error.png -> 
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/status/gtk-dialog-info.png -> dialog-information.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/status/gtk-dialog-question.png -> dialog-question.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/status/gtk-dialog-warning.png -> dialog-warning.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/status/gtk-directory.png -> folder-open.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/status/gtk-missing-image.png -> image-missing.png
 -rw-r--r--	root/root	usr/share/icons/gnome/16x16/status/image-loading.png
 -rw-r--r--	root/root	usr/share/icons/gnome/16x16/status/image-missing.png
@@ -932,9 +942,6 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/status/messagebox_warning.png -
 -rw-r--r--	root/root	usr/share/icons/gnome/16x16/status/network-transmit-receive.png
 -rw-r--r--	root/root	usr/share/icons/gnome/16x16/status/network-transmit.png
 -rw-r--r--	root/root	usr/share/icons/gnome/16x16/status/network-wireless-encrypted.png
-lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/status/nm-adhoc.png -> network-idle.png
-lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/status/nm-device-wired.png -> network-idle.png
-lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/status/nm-device-wireless.png -> network-idle.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/16x16/status/nm-no-connection.png -> network-offline.png
 -rw-r--r--	root/root	usr/share/icons/gnome/16x16/status/printer-error.png
 -rw-r--r--	root/root	usr/share/icons/gnome/16x16/status/printer-printing.png
@@ -1846,6 +1853,7 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/actions/gnome-lockscreen.png ->
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/actions/gnome-logout.png -> system-log-out.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/actions/gnome-run.png -> system-run.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/actions/gnome-searchtool.png -> system-search.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/actions/gnome-session-logout.png -> system-log-out.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/actions/gnome-shutdown.png -> system-shutdown.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/actions/gnome-stock-mail-fwd.png -> mail-forward.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/actions/gnome-stock-mail-new.png -> mail-message-new.png
@@ -2203,10 +2211,13 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/apps/update-manager.png -> syst
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/apps/volume-knob.png -> multimedia-volume-control.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/apps/wallpaper.png -> preferences-desktop-wallpaper.png
 -rw-r--r--	root/root	usr/share/icons/gnome/22x22/apps/web-browser.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/apps/xfce-edit.png -> accessories-text-editor.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/apps/xfce-filemanager.png -> system-file-manager.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/apps/xfce-man.png -> help-browser.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/apps/xfce-terminal.png -> utilities-terminal.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/apps/xfce4-backdrop.png -> preferences-desktop-wallpaper.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/apps/xfce4-mixer.png -> multimedia-volume-control.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/apps/xfce4-ui.png -> preferences-desktop-theme.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/apps/xfwm4.png -> preferences-system-windows.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/apps/xscreensaver.png -> preferences-desktop-screensaver.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/apps/zen-icon.png -> system-software-update.png
@@ -2264,12 +2275,14 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/categories/redhat-system_settin
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/categories/redhat-system_tools.png -> applications-system.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/categories/stock_internet.png -> applications-internet.png
 -rw-r--r--	root/root	usr/share/icons/gnome/22x22/categories/system-help.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/categories/xfce-devel.png -> applications-development.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/categories/xfce-games.png -> applications-games.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/categories/xfce-graphics.png -> applications-graphics.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/categories/xfce-internet.png -> applications-internet.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/categories/xfce-multimedia.png -> applications-multimedia.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/categories/xfce-office.png -> applications-office.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/categories/xfce-system-settings.png -> preferences-system.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/categories/xfce-system.png -> applications-system.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/categories/xfce-utils.png -> applications-accessories.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/categories/xfce4-settings.png -> preferences-desktop.png
 drwxr-xr-x	root/root	usr/share/icons/gnome/22x22/devices/
@@ -2351,6 +2364,9 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/devices/mouse.png -> input-mous
 -rw-r--r--	root/root	usr/share/icons/gnome/22x22/devices/multimedia-player.png
 -rw-r--r--	root/root	usr/share/icons/gnome/22x22/devices/network-wired.png
 -rw-r--r--	root/root	usr/share/icons/gnome/22x22/devices/network-wireless.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/devices/nm-adhoc.png -> network-wireless.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/devices/nm-device-wired.png -> network-wired.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/devices/nm-device-wireless.png -> network-wireless.png
 -rw-r--r--	root/root	usr/share/icons/gnome/22x22/devices/pda.png
 -rw-r--r--	root/root	usr/share/icons/gnome/22x22/devices/phone.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/devices/printer-remote.png -> printer.png
@@ -2677,6 +2693,7 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/status/gtk-dialog-error.png -> 
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/status/gtk-dialog-info.png -> dialog-information.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/status/gtk-dialog-question.png -> dialog-question.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/status/gtk-dialog-warning.png -> dialog-warning.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/status/gtk-directory.png -> folder-open.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/status/gtk-missing-image.png -> image-missing.png
 -rw-r--r--	root/root	usr/share/icons/gnome/22x22/status/image-loading.png
 -rw-r--r--	root/root	usr/share/icons/gnome/22x22/status/image-missing.png
@@ -2700,9 +2717,6 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/status/messagebox_warning.png -
 -rw-r--r--	root/root	usr/share/icons/gnome/22x22/status/network-transmit-receive.png
 -rw-r--r--	root/root	usr/share/icons/gnome/22x22/status/network-transmit.png
 -rw-r--r--	root/root	usr/share/icons/gnome/22x22/status/network-wireless-encrypted.png
-lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/status/nm-adhoc.png -> network-idle.png
-lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/status/nm-device-wired.png -> network-idle.png
-lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/status/nm-device-wireless.png -> network-idle.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/22x22/status/nm-no-connection.png -> network-offline.png
 -rw-r--r--	root/root	usr/share/icons/gnome/22x22/status/printer-error.png
 -rw-r--r--	root/root	usr/share/icons/gnome/22x22/status/printer-printing.png
@@ -2833,6 +2847,7 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/actions/gnome-lockscreen.png ->
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/actions/gnome-logout.png -> system-log-out.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/actions/gnome-run.png -> system-run.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/actions/gnome-searchtool.png -> system-search.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/actions/gnome-session-logout.png -> system-log-out.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/actions/gnome-shutdown.png -> system-shutdown.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/actions/gnome-stock-mail-fwd.png -> mail-forward.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/actions/gnome-stock-mail-new.png -> mail-message-new.png
@@ -3187,10 +3202,13 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/apps/update-manager.png -> syst
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/apps/volume-knob.png -> multimedia-volume-control.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/apps/wallpaper.png -> preferences-desktop-wallpaper.png
 -rw-r--r--	root/root	usr/share/icons/gnome/24x24/apps/web-browser.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/apps/xfce-edit.png -> accessories-text-editor.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/apps/xfce-filemanager.png -> system-file-manager.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/apps/xfce-man.png -> help-browser.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/apps/xfce-terminal.png -> utilities-terminal.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/apps/xfce4-backdrop.png -> preferences-desktop-wallpaper.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/apps/xfce4-mixer.png -> multimedia-volume-control.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/apps/xfce4-ui.png -> preferences-desktop-theme.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/apps/xfwm4.png -> preferences-system-windows.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/apps/xscreensaver.png -> preferences-desktop-screensaver.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/apps/zen-icon.png -> system-software-update.png
@@ -3248,12 +3266,14 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/categories/redhat-system_settin
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/categories/redhat-system_tools.png -> applications-system.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/categories/stock_internet.png -> applications-internet.png
 -rw-r--r--	root/root	usr/share/icons/gnome/24x24/categories/system-help.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/categories/xfce-devel.png -> applications-development.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/categories/xfce-games.png -> applications-games.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/categories/xfce-graphics.png -> applications-graphics.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/categories/xfce-internet.png -> applications-internet.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/categories/xfce-multimedia.png -> applications-multimedia.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/categories/xfce-office.png -> applications-office.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/categories/xfce-system-settings.png -> preferences-system.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/categories/xfce-system.png -> applications-system.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/categories/xfce-utils.png -> applications-accessories.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/categories/xfce4-settings.png -> preferences-desktop.png
 drwxr-xr-x	root/root	usr/share/icons/gnome/24x24/devices/
@@ -3335,6 +3355,9 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/devices/mouse.png -> input-mous
 -rw-r--r--	root/root	usr/share/icons/gnome/24x24/devices/multimedia-player.png
 -rw-r--r--	root/root	usr/share/icons/gnome/24x24/devices/network-wired.png
 -rw-r--r--	root/root	usr/share/icons/gnome/24x24/devices/network-wireless.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/devices/nm-adhoc.png -> network-wireless.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/devices/nm-device-wired.png -> network-wired.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/devices/nm-device-wireless.png -> network-wireless.png
 -rw-r--r--	root/root	usr/share/icons/gnome/24x24/devices/pda.png
 -rw-r--r--	root/root	usr/share/icons/gnome/24x24/devices/phone.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/devices/printer-remote.png -> printer.png
@@ -3668,6 +3691,7 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/status/gtk-dialog-error.png -> 
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/status/gtk-dialog-info.png -> dialog-information.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/status/gtk-dialog-question.png -> dialog-question.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/status/gtk-dialog-warning.png -> dialog-warning.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/status/gtk-directory.png -> folder-open.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/status/gtk-missing-image.png -> image-missing.png
 -rw-r--r--	root/root	usr/share/icons/gnome/24x24/status/image-loading.png
 -rw-r--r--	root/root	usr/share/icons/gnome/24x24/status/image-missing.png
@@ -3691,9 +3715,6 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/status/messagebox_warning.png -
 -rw-r--r--	root/root	usr/share/icons/gnome/24x24/status/network-transmit-receive.png
 -rw-r--r--	root/root	usr/share/icons/gnome/24x24/status/network-transmit.png
 -rw-r--r--	root/root	usr/share/icons/gnome/24x24/status/network-wireless-encrypted.png
-lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/status/nm-adhoc.png -> network-idle.png
-lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/status/nm-device-wired.png -> network-idle.png
-lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/status/nm-device-wireless.png -> network-idle.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/24x24/status/nm-no-connection.png -> network-offline.png
 -rw-r--r--	root/root	usr/share/icons/gnome/24x24/status/printer-error.png
 -rw-r--r--	root/root	usr/share/icons/gnome/24x24/status/printer-printing.png
@@ -4455,6 +4476,7 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/actions/gnome-lockscreen.png ->
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/actions/gnome-logout.png -> system-log-out.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/actions/gnome-run.png -> system-run.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/actions/gnome-searchtool.png -> system-search.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/actions/gnome-session-logout.png -> system-log-out.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/actions/gnome-stock-mail-fwd.png -> mail-forward.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/actions/gnome-stock-mail-new.png -> mail-message-new.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/actions/gnome-stock-mail-rpl.png -> mail-reply-sender.png
@@ -4794,10 +4816,13 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/apps/update-manager.png -> syst
 -rw-r--r--	root/root	usr/share/icons/gnome/32x32/apps/utilities-terminal.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/apps/volume-knob.png -> multimedia-volume-control.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/apps/wallpaper.png -> preferences-desktop-wallpaper.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/apps/xfce-edit.png -> accessories-text-editor.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/apps/xfce-filemanager.png -> system-file-manager.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/apps/xfce-man.png -> help-browser.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/apps/xfce-terminal.png -> utilities-terminal.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/apps/xfce4-backdrop.png -> preferences-desktop-wallpaper.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/apps/xfce4-mixer.png -> multimedia-volume-control.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/apps/xfce4-ui.png -> preferences-desktop-theme.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/apps/xfwm4.png -> preferences-system-windows.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/apps/xscreensaver.png -> preferences-desktop-screensaver.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/apps/zen-icon.png -> system-software-update.png
@@ -4855,12 +4880,14 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/categories/redhat-system_settin
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/categories/redhat-system_tools.png -> applications-system.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/categories/stock_internet.png -> applications-internet.png
 -rw-r--r--	root/root	usr/share/icons/gnome/32x32/categories/system-help.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/categories/xfce-devel.png -> applications-development.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/categories/xfce-games.png -> applications-games.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/categories/xfce-graphics.png -> applications-graphics.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/categories/xfce-internet.png -> applications-internet.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/categories/xfce-multimedia.png -> applications-multimedia.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/categories/xfce-office.png -> applications-office.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/categories/xfce-system-settings.png -> preferences-system.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/categories/xfce-system.png -> applications-system.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/categories/xfce-utils.png -> applications-accessories.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/categories/xfce4-settings.png -> preferences-desktop.png
 drwxr-xr-x	root/root	usr/share/icons/gnome/32x32/devices/
@@ -4942,6 +4969,9 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/devices/mouse.png -> input-mous
 -rw-r--r--	root/root	usr/share/icons/gnome/32x32/devices/multimedia-player.png
 -rw-r--r--	root/root	usr/share/icons/gnome/32x32/devices/network-wired.png
 -rw-r--r--	root/root	usr/share/icons/gnome/32x32/devices/network-wireless.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/devices/nm-adhoc.png -> network-wireless.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/devices/nm-device-wired.png -> network-wired.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/devices/nm-device-wireless.png -> network-wireless.png
 -rw-r--r--	root/root	usr/share/icons/gnome/32x32/devices/pda.png
 -rw-r--r--	root/root	usr/share/icons/gnome/32x32/devices/phone.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/devices/printer-remote.png -> printer.png
@@ -5267,6 +5297,7 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/status/gtk-dialog-error.png -> 
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/status/gtk-dialog-info.png -> dialog-information.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/status/gtk-dialog-question.png -> dialog-question.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/status/gtk-dialog-warning.png -> dialog-warning.png
+lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/status/gtk-directory.png -> folder-open.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/status/gtk-missing-image.png -> image-missing.png
 -rw-r--r--	root/root	usr/share/icons/gnome/32x32/status/image-loading.png
 -rw-r--r--	root/root	usr/share/icons/gnome/32x32/status/image-missing.png
@@ -5287,9 +5318,6 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/status/messagebox_warning.png -
 -rw-r--r--	root/root	usr/share/icons/gnome/32x32/status/network-receive.png
 -rw-r--r--	root/root	usr/share/icons/gnome/32x32/status/network-transmit-receive.png
 -rw-r--r--	root/root	usr/share/icons/gnome/32x32/status/network-transmit.png
-lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/status/nm-adhoc.png -> network-idle.png
-lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/status/nm-device-wired.png -> network-idle.png
-lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/status/nm-device-wireless.png -> network-idle.png
 lrwxrwxrwx	root/root	usr/share/icons/gnome/32x32/status/nm-no-connection.png -> network-offline.png
 -rw-r--r--	root/root	usr/share/icons/gnome/32x32/status/printer-error.png
 -rw-r--r--	root/root	usr/share/icons/gnome/32x32/status/printer-printing.png
@@ -5538,6 +5566,7 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/actions/gnome-lockscreen.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/actions/gnome-logout.svg -> system-log-out.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/actions/gnome-run.svg -> system-run.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/actions/gnome-searchtool.svg -> system-search.svg
+lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/actions/gnome-session-logout.svg -> system-log-out.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/actions/gnome-shutdown.svg -> system-shutdown.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/actions/gnome-stock-mail-fwd.svg -> mail-forward.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/actions/gnome-stock-mail-new.svg -> mail-message-new.svg
@@ -5883,10 +5912,13 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/apps/update-manager.svg -> s
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/apps/volume-knob.svg -> multimedia-volume-control.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/apps/wallpaper.svg -> preferences-desktop-wallpaper.svg
 -rw-r--r--	root/root	usr/share/icons/gnome/scalable/apps/web-browser.svg
+lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/apps/xfce-edit.svg -> accessories-text-editor.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/apps/xfce-filemanager.svg -> system-file-manager.svg
+lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/apps/xfce-man.svg -> help-browser.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/apps/xfce-terminal.svg -> utilities-terminal.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/apps/xfce4-backdrop.svg -> preferences-desktop-wallpaper.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/apps/xfce4-mixer.svg -> multimedia-volume-control.svg
+lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/apps/xfce4-ui.svg -> preferences-desktop-theme.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/apps/xfwm4.svg -> preferences-system-windows.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/apps/xscreensaver.svg -> preferences-desktop-screensaver.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/apps/zen-icon.svg -> system-software-update.svg
@@ -5944,12 +5976,14 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/categories/redhat-system_set
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/categories/redhat-system_tools.svg -> applications-system.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/categories/stock_internet.svg -> applications-internet.svg
 -rw-r--r--	root/root	usr/share/icons/gnome/scalable/categories/system-help.svg
+lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/categories/xfce-devel.svg -> applications-development.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/categories/xfce-games.svg -> applications-games.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/categories/xfce-graphics.svg -> applications-graphics.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/categories/xfce-internet.svg -> applications-internet.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/categories/xfce-multimedia.svg -> applications-multimedia.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/categories/xfce-office.svg -> applications-office.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/categories/xfce-system-settings.svg -> preferences-system.svg
+lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/categories/xfce-system.svg -> applications-system.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/categories/xfce-utils.svg -> applications-accessories.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/categories/xfce4-settings.svg -> preferences-desktop.svg
 drwxr-xr-x	root/root	usr/share/icons/gnome/scalable/devices/
@@ -6031,6 +6065,9 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/devices/mouse.svg -> input-m
 -rw-r--r--	root/root	usr/share/icons/gnome/scalable/devices/multimedia-player.svg
 -rw-r--r--	root/root	usr/share/icons/gnome/scalable/devices/network-wired.svg
 -rw-r--r--	root/root	usr/share/icons/gnome/scalable/devices/network-wireless.svg
+lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/devices/nm-adhoc.svg -> network-wireless.svg
+lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/devices/nm-device-wired.svg -> network-wired.svg
+lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/devices/nm-device-wireless.svg -> network-wireless.svg
 -rw-r--r--	root/root	usr/share/icons/gnome/scalable/devices/pda.svg
 -rw-r--r--	root/root	usr/share/icons/gnome/scalable/devices/phone.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/devices/printer-remote.svg -> printer.svg
@@ -6390,6 +6427,8 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/status/gtk-dialog-error.svg 
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/status/gtk-dialog-info.svg -> dialog-information.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/status/gtk-dialog-question.svg -> dialog-question.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/status/gtk-dialog-warning.svg -> dialog-warning.svg
+lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/status/gtk-directory.icon -> folder-open.icon
+lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/status/gtk-directory.svg -> folder-open.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/status/gtk-missing-image.svg -> image-missing.svg
 -rw-r--r--	root/root	usr/share/icons/gnome/scalable/status/image-loading.svg
 -rw-r--r--	root/root	usr/share/icons/gnome/scalable/status/image-missing.svg
@@ -6410,9 +6449,6 @@ lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/status/messagebox_warning.sv
 -rw-r--r--	root/root	usr/share/icons/gnome/scalable/status/network-receive.svg
 -rw-r--r--	root/root	usr/share/icons/gnome/scalable/status/network-transmit-receive.svg
 -rw-r--r--	root/root	usr/share/icons/gnome/scalable/status/network-transmit.svg
-lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/status/nm-adhoc.svg -> network-idle.svg
-lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/status/nm-device-wired.svg -> network-idle.svg
-lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/status/nm-device-wireless.svg -> network-idle.svg
 lrwxrwxrwx	root/root	usr/share/icons/gnome/scalable/status/nm-no-connection.svg -> network-offline.svg
 -rw-r--r--	root/root	usr/share/icons/gnome/scalable/status/printer-error.svg
 -rw-r--r--	root/root	usr/share/icons/gnome/scalable/status/printer-printing.svg
