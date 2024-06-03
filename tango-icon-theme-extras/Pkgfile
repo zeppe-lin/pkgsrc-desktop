@@ -1,6 +1,6 @@
 # Description: Extra icons for Tango
 # URL:         http://tango.freedesktop.org/
-# Depends on:  icon-naming-utils imagemagick intltool rsvg-compat
+# Depends on:  icon-naming-utils imagemagick intltool librsvg-compat
 
 name=tango-icon-theme-extras
 version=0.1.0
