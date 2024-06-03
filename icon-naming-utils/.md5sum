@@ -1,1 +1,7 @@
+d6b6322b3446f48b16b496c7f2ec972a  01_fix_dtd_path.patch
+e1472f07c6603e1ba233b80f1d279dac  02_add_more_xfce_links.patch
+6b39f8bbb55d36cdaa0bb221dc86f38e  03_gtk_apply_close_ok.patch
+f2182a1f3c01325c887d5be10fa4a107  04_add_gtk_stock_directory.patch
+7e64cbf4b3cf654ebb5e58dc9b6aa33d  05_add_missing_links.patch
+a07d0e1c43ca5171d56d20b60bf57c55  06_nm_icons.patch
 2c5c7a418e5eb3268f65e21993277fba  icon-naming-utils-0.8.90.tar.gz

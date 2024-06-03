@@ -4,10 +4,20 @@
 
 name=icon-naming-utils
 version=0.8.90
-release=1
-source=http://tango.freedesktop.org/releases/$name-$version.tar.gz
+release=2
+source="http://tango.freedesktop.org/releases/$name-$version.tar.gz
+	01_fix_dtd_path.patch
+	02_add_more_xfce_links.patch
+	03_gtk_apply_close_ok.patch
+	04_add_gtk_stock_directory.patch
+	05_add_missing_links.patch
+	06_nm_icons.patch"
 
 build() {
+	for p in $SRC/*.patch; do
+		patch -d $name-$version -p1 -i $p
+	done
+
 	mkdir build; cd build
 
 	../$name-$version/configure          \
