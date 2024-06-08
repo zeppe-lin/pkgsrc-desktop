@@ -4,15 +4,11 @@
 
 name=st
 version=0.8.4z1-9771f17
-release=1
-source="https://github.com/zeppe-lin/st/archive/${version#*-}/st-$version.tar.gz
-	config.def.h"
+release=2
+source=https://github.com/zeppe-lin/st/archive/${version#*-}/st-$version.tar.gz
 
 build() {
 	cd st-${version#*-}*
-
-	# override default configuration
-	cp -f $SRC/config.def.h .
 
 	# apply user-defined configuration if exists
 	if [ -f $PKGMK_ROOT/config.h ]; then
