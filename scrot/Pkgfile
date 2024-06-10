@@ -3,20 +3,24 @@
 # Depends on:  autoconf-archive imlib2 xorg-libxcomposite xorg-libxinerama
 
 name=scrot
-version=1.10
+version=1.11
 release=1
 source=https://github.com/resurrecting-open-source-projects/scrot/archive/$version/scrot-$version.tar.gz
 
 build() {
 	mkdir build; cd build
 
-	autoreconf -fi ../$name-$version
-	../$name-$version/configure      \
+	autoreconf -fi ../scrot-$version
+	../scrot-$version/configure      \
 		--prefix=/usr            \
 		--mandir=/usr/share/man  \
 
 	make V=1
 	make DESTDIR=$PKG install
+
+	# bash completion
+	install -m 0644 -D ../scrot-$version/etc/bash-completion/scrot \
+		$PKG/usr/share/bash-completion/completions/scrot
 
 	# remove junk
 	rm -r $PKG/usr/share/doc
