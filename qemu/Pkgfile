@@ -3,7 +3,7 @@
 # Depends on:  alsa-lib capstone curl e2fsprogs gnutls gtk3 libaio libseccomp libssh linux-pam usbredir xorg-libxcb libcap-ng
 
 name=qemu
-version=7.2.11
+version=7.2.12
 release=1
 source="https://download.qemu.org/$name-$version.tar.xz
 	qemu-man-7.0.0.tar.xz
