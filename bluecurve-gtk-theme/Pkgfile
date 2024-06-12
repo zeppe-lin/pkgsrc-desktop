@@ -1,9 +1,9 @@
-# Description: Red Hat Bluecurve theme for GTK 2/3 
+# Description: Red Hat Bluecurve theme for GTK 2/3/4
 # URL:         https://github.com/neeeeow/Bluecurve
 # Depends on:  gtk-engine-bluecurve
 
 name=bluecurve-gtk-theme
-version=0.1-e058330
+version=0.1-bd0303b
 release=1
 source=https://github.com/neeeeow/Bluecurve/archive/${version#*-}/Bluecurve-$version.tar.gz
 
