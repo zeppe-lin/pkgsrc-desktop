@@ -3,8 +3,8 @@
 # Depends on:  xorg-libx11
 
 name=dwmblocks
-version=0.2.2z-ea705bd
-release=2
+version=0.2.2z-be74dec
+release=1
 source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
 
 build() {
