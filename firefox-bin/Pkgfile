@@ -3,7 +3,7 @@
 # Depends on:  alsa-lib dbus-glib gtk3 nss xorg-libxtst
 
 name=firefox-bin
-version=127.0
+version=127.0.1
 release=1
 source="https://ftp.mozilla.org/pub/firefox/releases/$version/linux-x86_64/en-US/firefox-$version.tar.bz2
 	firefox.sh
@@ -31,8 +31,7 @@ build() {
 	rm -r $PKG/opt/firefox/browser/features
 
 	# disable autoupdate
-	install -m 0644 -Dt $PKG/opt/firefox/distribution/ \
-		policies.json
+	install -m 0644 -Dt $PKG/opt/firefox/distribution/ policies.json
 
 	# revdep configuration
 	mkdir -p $PKG/etc/revdep.d
