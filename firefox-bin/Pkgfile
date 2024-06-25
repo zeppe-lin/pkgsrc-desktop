@@ -3,7 +3,7 @@
 # Depends on:  alsa-lib dbus-glib gtk3 nss xorg-libxtst
 
 name=firefox-bin
-version=127.0.1
+version=127.0.2
 release=1
 source="https://ftp.mozilla.org/pub/firefox/releases/$version/linux-x86_64/en-US/firefox-$version.tar.bz2
 	firefox.sh
@@ -19,8 +19,7 @@ build() {
 	install -m 0755 -D firefox.sh $PKG/usr/bin/firefox
 
 	# add custom .desktop file
-	install -m 0644 -Dt $PKG/usr/share/applications/ \
-		firefox.desktop
+	install -m 0644 -Dt $PKG/usr/share/applications/ firefox.desktop
 
 	# add icon to standard path (desktop file refers to it)
 	mkdir -p $PKG/usr/share/pixmaps
