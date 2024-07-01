@@ -3,17 +3,20 @@
 # Depends on:  curl imlib2 libexif xorg-libxinerama
 
 name=feh
-version=3.10.2
-release=2
+version=3.10.3
+release=1
 source=https://github.com/derf/feh/archive/$version/feh-$version.tar.gz
 
 build() {
-	local _CONF='curl=1 exif=1 xinerama=1 inotify=1 stat64=1'
+	export curl=1     # use libcurl to view https:// and similar images
+	export exif=1     # builtin EXIF tag display support
+	export help=1     # include help text (refers to man page otherwise)
+	export inotify=1  # enable inotify, needed for --auto-reload
+	export xinerama=1 # support Xinerama/XRandR multiscreen setups
+	export stat64=1   # support cifs shares from 64bit hosts on 32bit machines
 
-	cd feh-$version
-
-	make PREFIX=/usr VERSION=$version $_CONF
-	make PREFIX=/usr VERSION=$version DESTDIR=$PKG install
+	make -C feh-$version PREFIX=/usr VERSION=$version
+	make -C feh-$version PREFIX=/usr VERSION=$version DESTDIR=$PKG install
 
 	# remove i18n entries
 	sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/feh.desktop
