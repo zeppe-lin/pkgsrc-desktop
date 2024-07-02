@@ -4,7 +4,7 @@
 
 name=sylpheed
 version=3.7.0
-release=3
+release=4
 source="https://sylpheed.sraoss.jp/$name/v${version%.*}/$name-$version.tar.xz
 	0001-fix_widget_style_for_dark_theme.patch
 	0001-trinity-icon-theme.patch
