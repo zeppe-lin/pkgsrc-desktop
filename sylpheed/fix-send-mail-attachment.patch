@@ -1,0 +1,59 @@
+From 8f19d425f1c27e50e7ad9b75a63b126e91edd0c2 Mon Sep 17 00:00:00 2001
+From: shuiqucheng <shuiqucheng@uniontech.com>
+Date: Fri, 19 Mar 2021 09:43:33 +0800
+Subject: [PATCH] When sending an email with an email format file as an
+ attachment, the attachment is empty after successful sending. BUG URL:
+ https://sylpheed.sraoss.jp/redmine/issues/327
+ https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=985425
+
+---
+ .../patches/08fix-send-mail-attachment.patch  | 37 +++++++++++++++++++
+ 1 file changed, 37 insertions(+)
+ create mode 100644 debian/patches/08fix-send-mail-attachment.patch
+
+diff --git a/debian/patches/08fix-send-mail-attachment.patch b/debian/patches/08fix-send-mail-attachment.patch
+new file mode 100644
+index 00000000..76922987
+--- /dev/null
++++ b/debian/patches/08fix-send-mail-attachment.patch
+@@ -0,0 +1,37 @@
++From: Shui Qucheng <shuiqucheng@uniontech.com>
++Date: Thu, 11 Mar 2021 11:23:30 +0800
++Subject: Fixed the problem that when sending e-mail with e-mail format file as attachment, the attachment was empty after successful sending.
++     https://sylpheed.sraoss.jp/redmine/issues/327
++
++---
++ src/compose.c | 10 ++++++-
++ 1 file changed, 8 insertions(+), 2 deletion(-)
++
++Index: src/compose.c
++===================================================================
++--- a/src/compose.c
+++++ b/src/compose.c
++@@ -4571,7 +4571,7 @@
++ {
++ 	GtkTreeModel *model = GTK_TREE_MODEL(compose->attach_store);
++ 	GtkTreeIter iter;
++-	gboolean valid;
+++	gboolean valid,bmail;
++ 	AttachInfo *ainfo;
++ 	FILE *attach_fp;
++ 	gint len;
++@@ -4604,7 +4604,13 @@
++ 
++ 		encoding = ainfo->encoding;
++ 
++-		if (!g_ascii_strncasecmp(ainfo->content_type, "message/", 8)) {
+++        if (!g_ascii_strncasecmp(ainfo->content_type, "message/rfc822", 14)) {
+++			bmail=TRUE;
+++            ainfo->encoding = ENC_BASE64;
+++		}else{
+++			bmail=FALSE;
+++		} 
+++		if (!bmail&&!g_ascii_strncasecmp(ainfo->content_type, "message/", 8)) {
++ 			fprintf(fp, "Content-Type: %s\n", ainfo->content_type);
++ 			fprintf(fp, "Content-Disposition: inline\n");
++ 
+-- 
+GitLab
+

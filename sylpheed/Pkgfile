@@ -4,13 +4,14 @@
 
 name=sylpheed
 version=3.7.0
-release=4
+release=5
 source="https://sylpheed.sraoss.jp/$name/v${version%.*}/$name-$version.tar.xz
 	0001-fix_widget_style_for_dark_theme.patch
 	0001-trinity-icon-theme.patch
 	0002-fix_summary_font_size_4_8px.patch
 	0003-disable_i18n_help_and_faq.patch
-	0004-refer_to_online_help_and_faq.patch"
+	0004-refer_to_online_help_and_faq.patch
+	fix-send-mail-attachment.patch"
 
 build() {
 	export LINGUAS=' '
@@ -27,6 +28,7 @@ build() {
 	patch -p1 -i $SRC/0002-fix_summary_font_size_4_8px.patch
 	patch -p1 -i $SRC/0003-disable_i18n_help_and_faq.patch
 	patch -p1 -i $SRC/0004-refer_to_online_help_and_faq.patch
+	patch -p1 -i $SRC/fix-send-mail-attachment.patch
 
 	# Add patch for trinity icons if +TRINITY+ specified in
 	# PKGMK_SYLPHEED var.  You may declare it in /etc/pkgmk.conf.
