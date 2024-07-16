@@ -3,8 +3,8 @@
 # Depends on:  alsa-lib autoconf-2.13 gtk python unzip xorg-libxdamage xorg-libxt yasm zip
 
 name=palemoon
-version=33.2.0
-_upxrel=20240618
+version=33.2.1
+_upxrel=20240715
 release=1
 source="https://repo.palemoon.org/MoonchildProductions/Pale-Moon/archive/${version}_Release.tar.gz
 	https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_${_upxrel}.tar.gz
