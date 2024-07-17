@@ -159,6 +159,7 @@ drwxr-xr-x	root/root	usr/lib/jdk11/legal/java.base/
 -r--r--r--	root/root	usr/lib/jdk11/legal/java.base/cldr.md
 -r--r--r--	root/root	usr/lib/jdk11/legal/java.base/icu.md
 -r--r--r--	root/root	usr/lib/jdk11/legal/java.base/public_suffix.md
+-r--r--r--	root/root	usr/lib/jdk11/legal/java.base/siphash.md
 -r--r--r--	root/root	usr/lib/jdk11/legal/java.base/unicode.md
 drwxr-xr-x	root/root	usr/lib/jdk11/legal/java.compiler/
 -r--r--r--	root/root	usr/lib/jdk11/legal/java.compiler/ADDITIONAL_LICENSE_INFO

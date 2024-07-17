@@ -3,7 +3,7 @@
 # Depends on:  alsa-lib xorg-libxrender xorg-libxtst
 
 name=jdk11-bin
-version=11.0.23.9.1
+version=11.0.24.8.1
 release=1
 source=https://corretto.aws/downloads/resources/$version/amazon-corretto-$version-linux-x64.tar.gz
 
@@ -14,9 +14,9 @@ build(){
 	chmod -R o-w,g-w .
 
 	# install
-	install -d $PKG/usr/bin $PKG/usr/lib/jdk11 $PKG/usr/share
+	mkdir -p $PKG/usr/bin $PKG/usr/lib/jdk11 $PKG/usr/share
 	#mv man $PKG/usr/share/ (conflicts with jdk17-bin)
-	mv *   $PKG/usr/lib/jdk11/
+	mv * $PKG/usr/lib/jdk11/
 
 	# symlinks
 	ln -s jdk11                       $PKG/usr/lib/java11
