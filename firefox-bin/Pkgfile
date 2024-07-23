@@ -4,7 +4,7 @@
 
 name=firefox-bin
 version=128.0
-release=1
+release=2
 source="https://ftp.mozilla.org/pub/firefox/releases/$version/linux-x86_64/en-US/firefox-$version.tar.bz2
 	firefox.sh
 	firefox.desktop

@@ -6,4 +6,5 @@ Exec=firefox %U
 Terminal=false
 Type=Application
 Icon=firefox
-Categories=Network;
+Categories=Network;WebBrowser;
+StartupNotify=true
