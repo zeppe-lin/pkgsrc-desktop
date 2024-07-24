@@ -4,7 +4,7 @@
 # Depends on:  dbus gdk-pixbuf pango xorg-libxinerama xorg-libxrandr xorg-libxscrnsaver libnotify
 
 name=dunst
-version=1.9.2
+version=1.11.0
 release=1
 source=https://github.com/dunst-project/dunst/archive/v$version/dunst-$version.tar.gz
 
@@ -20,4 +20,7 @@ build() {
 
 	make PREFIX=/usr SYSCONFDIR=/etc DESTDIR=$PKG V=1
 	make PREFIX=/usr SYSCONFDIR=/etc DESTDIR=$PKG install
+
+	# remove fish and zsh completions
+	cd $PKG/usr/share/ && rm -r zsh fish
 }
