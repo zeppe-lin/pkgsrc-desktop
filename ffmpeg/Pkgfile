@@ -3,7 +3,7 @@
 # Depends on:  alsa-lib dav1d fdk-aac gnutls gsm lame libass libtheora libva libvdpau opus x264 xorg-libxv
 
 name=ffmpeg
-version=4.4.4
+version=4.4.5
 release=1
 source="https://ffmpeg.org/releases/$name-$version.tar.bz2
 	ffmpeg-x264-10bit.sh CVE-2018-6621.patch"
