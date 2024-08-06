@@ -3,8 +3,8 @@
 # Depends on:  djvulibre zathura
 
 name=zathura-djvu
-version=0.2.9
-release=2
+version=0.2.10
+release=1
 source=https://pwmt.org/projects/$name/download/$name-$version.tar.xz
 
 build() {
