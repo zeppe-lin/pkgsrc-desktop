@@ -2,6 +2,9 @@
 # URL:         http://freedesktop.org/wiki/Software/vaapi
 # Depends on:  libva libvdpau
 
+# TODO: 1. switch to https://github.com/arekinath/libva-vdpau-driver
+# TODO: 2. https://github.com/arekinath/libva-vdpau-driver/issues/1
+
 name=libva-vdpau-driver
 version=0.7.4
 release=1
