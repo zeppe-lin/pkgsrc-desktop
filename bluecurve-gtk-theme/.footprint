@@ -8,66 +8,68 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/gtk-style.css -> ../../Bluecurve/gtk-3.0/gtk-style.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/arrow-down-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/arrow-down.png -> ../../../Bluecurve/gtk-3.0/img/arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/arrow-left-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-left-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/arrow-left-hover.png -> ../../../Bluecurve/gtk-3.0/img/arrow-left-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/arrow-left.png -> ../../../Bluecurve/gtk-3.0/img/arrow-left.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/arrow-right-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-right-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/arrow-right-hover.png -> ../../../Bluecurve/gtk-3.0/img/arrow-right-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/arrow-right.png -> ../../../Bluecurve/gtk-3.0/img/arrow-right.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/arrow-up-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-up-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/arrow-up.png -> ../../../Bluecurve/gtk-3.0/img/arrow-up.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/arrow-left-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/arrow-left-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/arrow-left.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/arrow-right-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/arrow-right-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/arrow-right.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/arrow-up-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/arrow-up.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/check.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/combobox-arrow-down-disabled.png -> ../../../Bluecurve/gtk-3.0/img/combobox-arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/combobox-arrow-down.png -> ../../../Bluecurve/gtk-3.0/img/combobox-arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/mate-panel-separator.png -> ../../../Bluecurve/gtk-3.0/img/mate-panel-separator.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/menuitem-check-checked-disabled.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-check-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/menuitem-check-checked-hover.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-check-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/menuitem-check-checked.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-check-checked.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/menuitem-radio-checked-disabled.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-radio-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/menuitem-radio-checked-hover.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-radio-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/menuitem-radio-checked.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-radio-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/combobox-arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/combobox-arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/mate-panel-separator.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/menuitem-check-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/menuitem-check-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/menuitem-check-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/menuitem-radio-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/menuitem-radio-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/menuitem-radio-checked.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/radio.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/scale_thumb.png -> ../../../Bluecurve/gtk-3.0/img/scale_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/scale_thumb_horizontal.png -> ../../../Bluecurve/gtk-3.0/img/scale_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/scrollbar_thumb.png -> ../../../Bluecurve/gtk-3.0/img/scrollbar_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/scrollbar_thumb_horizontal.png -> ../../../Bluecurve/gtk-3.0/img/scrollbar_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/separator_horizontal.png -> ../../../Bluecurve/gtk-3.0/img/separator_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/separator_vertical.png -> ../../../Bluecurve/gtk-3.0/img/separator_vertical.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/scale_thumb.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/scale_thumb_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/scrollbar_thumb.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/scrollbar_thumb_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/separator_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/separator_vertical.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/mate.css -> ../../Bluecurve/gtk-3.0/mate.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/xfce.css -> ../../Bluecurve/gtk-3.0/xfce.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/gtk-style.css -> ../../Bluecurve/gtk-4.0/gtk-style.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/gtk.css -> ../gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/arrow-down-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/arrow-down.png -> ../../../Bluecurve/gtk-4.0/img/arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/arrow-left-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-left-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/arrow-left-hover.png -> ../../../Bluecurve/gtk-4.0/img/arrow-left-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/arrow-left.png -> ../../../Bluecurve/gtk-4.0/img/arrow-left.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/arrow-right-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-right-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/arrow-right-hover.png -> ../../../Bluecurve/gtk-4.0/img/arrow-right-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/arrow-right.png -> ../../../Bluecurve/gtk-4.0/img/arrow-right.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/arrow-up-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-up-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/arrow-up.png -> ../../../Bluecurve/gtk-4.0/img/arrow-up.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/arrow-left-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/arrow-left-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/arrow-left.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/arrow-right-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/arrow-right-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/arrow-right.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/arrow-up-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/arrow-up.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/check.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../../Bluecurve/gtk-4.0/img/combobox-arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/combobox-arrow-down.png -> ../../../Bluecurve/gtk-4.0/img/combobox-arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/mate-panel-separator.png -> ../../../Bluecurve/gtk-4.0/img/mate-panel-separator.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/menuitem-check-checked-disabled.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-check-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/menuitem-check-checked-hover.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-check-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/menuitem-check-checked.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-check-checked.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/menuitem-radio-checked-disabled.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-radio-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/menuitem-radio-checked-hover.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-radio-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/menuitem-radio-checked.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-radio-checked.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../gtk-3.0/img/combobox-arrow-down-disabled.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/combobox-arrow-down.png -> ../../gtk-3.0/img/combobox-arrow-down.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/mate-panel-separator.png -> ../../gtk-3.0/img/mate-panel-separator.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/menuitem-check-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/menuitem-check-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/menuitem-check-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/menuitem-radio-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/menuitem-radio-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/menuitem-radio-checked.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/radio.png -> ../../gtk-3.0/img/radio.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/scale_thumb.png -> ../../../Bluecurve/gtk-4.0/img/scale_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/scale_thumb_horizontal.png -> ../../../Bluecurve/gtk-4.0/img/scale_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/scrollbar_thumb.png -> ../../../Bluecurve/gtk-4.0/img/scrollbar_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/scrollbar_thumb_horizontal.png -> ../../../Bluecurve/gtk-4.0/img/scrollbar_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/separator_horizontal.png -> ../../../Bluecurve/gtk-4.0/img/separator_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/separator_vertical.png -> ../../../Bluecurve/gtk-4.0/img/separator_vertical.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/scale_thumb.png -> ../../gtk-3.0/img/scale_thumb.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/scale_thumb_horizontal.png -> ../../gtk-3.0/img/scale_thumb_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/scrollbar_thumb.png -> ../../gtk-3.0/img/scrollbar_thumb.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/scrollbar_thumb_horizontal.png -> ../../gtk-3.0/img/scrollbar_thumb_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/separator_horizontal.png -> ../../gtk-3.0/img/separator_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/separator_vertical.png -> ../../gtk-3.0/img/separator_vertical.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/mate.css -> ../../Bluecurve/gtk-4.0/mate.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/xfce.css -> ../../Bluecurve/gtk-4.0/xfce.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/index.theme
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-BerriesAndCream/xfwm4/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/xfwm4/bottom-active.xpm
@@ -110,35 +112,119 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-BerriesAndCream/xfwm4/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/xfwm4/top-left-inactive.xpm
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/xfwm4/top-right-active.xpm
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/xfwm4/top-right-inactive.xpm
-drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic/
-drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic/gtk-2.0/
--rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic/gtk-2.0/gtkrc
-drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic/gtk-3.0/
--rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic/gtk-3.0/classic-tweaks.css
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic/gtk-3.0/gtk-style.css -> ../../Bluecurve/gtk-3.0/gtk-style.css
--rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic/gtk-3.0/gtk.css
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic/gtk-3.0/img -> ../../Bluecurve/gtk-3.0/img
--rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic/gtk-3.0/mate.css
-drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic/gtk-4.0/
--rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic/gtk-4.0/classic-tweaks.css
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic/gtk-4.0/gtk-style.css -> ../../Bluecurve/gtk-4.0/gtk-style.css
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic/gtk-4.0/gtk.css -> ../gtk-3.0/gtk.css
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic/gtk-4.0/img -> ../../Bluecurve/gtk-4.0/img
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic/gtk-4.0/mate.css -> ../../Bluecurve/gtk-4.0/mate.css
--rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic/index.theme
-drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic/metacity-1/
--rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic/metacity-1/bottom_left.png
--rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic/metacity-1/bottom_right.png
--rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic/metacity-1/close.png
--rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic/metacity-1/maximize.png
--rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic/metacity-1/menu.png
--rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic/metacity-1/metacity-theme-1.xml
--rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic/metacity-1/minimize.png
--rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic/metacity-1/restore.png
--rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic/metacity-1/title-blocker-bottom.png
--rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic/metacity-1/title-blocker-right.png
--rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic/metacity-1/title-gradient-bottom.png
--rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic/metacity-1/white_stripes_tile.png
+drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic-RH8/
+drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-2.0/
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-2.0/gtkrc
+drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/classic-tweaks.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/gtk-style.css -> ../../Bluecurve/gtk-3.0/gtk-style.css
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/gtk.css
+drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/arrow-left-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/arrow-left-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/arrow-left.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/arrow-right-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/arrow-right-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/arrow-right.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/arrow-up-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/arrow-up.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/check.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/combobox-arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/combobox-arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/mate-panel-separator.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/menuitem-check-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/menuitem-check-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/menuitem-check-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/menuitem-radio-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/menuitem-radio-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/menuitem-radio-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/radio.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/scale_thumb.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/scale_thumb_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/scrollbar_thumb.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/scrollbar_thumb_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/separator_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/separator_vertical.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/mate.css -> ../../Bluecurve/gtk-3.0/mate.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/xfce.css -> ../../Bluecurve/gtk-3.0/xfce.css
+drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/classic-tweaks.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/gtk-style.css -> ../../Bluecurve/gtk-4.0/gtk-style.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/gtk.css -> ../gtk-3.0/gtk.css
+drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/arrow-left-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/arrow-left-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/arrow-left.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/arrow-right-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/arrow-right-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/arrow-right.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/arrow-up-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/arrow-up.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/check.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../gtk-3.0/img/combobox-arrow-down-disabled.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/combobox-arrow-down.png -> ../../gtk-3.0/img/combobox-arrow-down.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/mate-panel-separator.png -> ../../gtk-3.0/img/mate-panel-separator.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/menuitem-check-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/menuitem-check-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/menuitem-check-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/menuitem-radio-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/menuitem-radio-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/menuitem-radio-checked.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/radio.png -> ../../gtk-3.0/img/radio.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/scale_thumb.png -> ../../gtk-3.0/img/scale_thumb.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/scale_thumb_horizontal.png -> ../../gtk-3.0/img/scale_thumb_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/scrollbar_thumb.png -> ../../gtk-3.0/img/scrollbar_thumb.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/scrollbar_thumb_horizontal.png -> ../../gtk-3.0/img/scrollbar_thumb_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/separator_horizontal.png -> ../../gtk-3.0/img/separator_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/separator_vertical.png -> ../../gtk-3.0/img/separator_vertical.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/mate.css -> ../../Bluecurve/gtk-4.0/mate.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/xfce.css -> ../../Bluecurve/gtk-4.0/xfce.css
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/index.theme
+drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic-RH8/metacity-1/
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/metacity-1/bottom_left.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/metacity-1/bottom_right.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/metacity-1/close.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/metacity-1/maximize.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/metacity-1/menu.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/metacity-1/metacity-theme-1.xml
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/metacity-1/minimize.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/metacity-1/restore.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/metacity-1/white_stripes_tile.png
+drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic-RH9/
+drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-2.0/
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-2.0/gtkrc
+drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-3.0/
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-3.0/classic-tweaks.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-3.0/gtk-style.css -> ../../Bluecurve/gtk-3.0/gtk-style.css
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-3.0/gtk.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-3.0/img -> ../../Bluecurve/gtk-3.0/img
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-3.0/mate.css -> ../../Bluecurve/gtk-3.0/mate.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-3.0/xfce.css -> ../../Bluecurve/gtk-3.0/xfce.css
+drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-4.0/
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-4.0/classic-tweaks.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-4.0/gtk-style.css -> ../../Bluecurve/gtk-4.0/gtk-style.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-4.0/gtk.css -> ../gtk-3.0/gtk.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-4.0/img -> ../../Bluecurve/gtk-4.0/img
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-4.0/mate.css -> ../../Bluecurve/gtk-4.0/mate.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-4.0/xfce.css -> ../../Bluecurve/gtk-4.0/xfce.css
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH9/index.theme
+drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic-RH9/metacity-1/
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH9/metacity-1/bottom_left.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH9/metacity-1/bottom_right.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH9/metacity-1/close.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH9/metacity-1/maximize.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH9/metacity-1/menu.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH9/metacity-1/metacity-theme-1.xml
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH9/metacity-1/minimize.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH9/metacity-1/restore.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH9/metacity-1/title-blocker-bottom.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH9/metacity-1/title-blocker-right.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH9/metacity-1/title-gradient-bottom.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH9/metacity-1/white_stripes_tile.png
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Gnome/
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Gnome/gtk-2.0/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-2.0/gtkrc
@@ -146,66 +232,68 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/gtk-style.css -> ../../Bluecurve/gtk-3.0/gtk-style.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/arrow-down-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/arrow-down.png -> ../../../Bluecurve/gtk-3.0/img/arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/arrow-left-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-left-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/arrow-left-hover.png -> ../../../Bluecurve/gtk-3.0/img/arrow-left-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/arrow-left.png -> ../../../Bluecurve/gtk-3.0/img/arrow-left.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/arrow-right-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-right-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/arrow-right-hover.png -> ../../../Bluecurve/gtk-3.0/img/arrow-right-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/arrow-right.png -> ../../../Bluecurve/gtk-3.0/img/arrow-right.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/arrow-up-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-up-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/arrow-up.png -> ../../../Bluecurve/gtk-3.0/img/arrow-up.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/arrow-left-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/arrow-left-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/arrow-left.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/arrow-right-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/arrow-right-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/arrow-right.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/arrow-up-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/arrow-up.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/check.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/combobox-arrow-down-disabled.png -> ../../../Bluecurve/gtk-3.0/img/combobox-arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/combobox-arrow-down.png -> ../../../Bluecurve/gtk-3.0/img/combobox-arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/mate-panel-separator.png -> ../../../Bluecurve/gtk-3.0/img/mate-panel-separator.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/menuitem-check-checked-disabled.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-check-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/menuitem-check-checked-hover.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-check-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/menuitem-check-checked.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-check-checked.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/menuitem-radio-checked-disabled.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-radio-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/menuitem-radio-checked-hover.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-radio-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/menuitem-radio-checked.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-radio-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/combobox-arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/combobox-arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/mate-panel-separator.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/menuitem-check-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/menuitem-check-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/menuitem-check-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/menuitem-radio-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/menuitem-radio-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/menuitem-radio-checked.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/radio.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/scale_thumb.png -> ../../../Bluecurve/gtk-3.0/img/scale_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/scale_thumb_horizontal.png -> ../../../Bluecurve/gtk-3.0/img/scale_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/scrollbar_thumb.png -> ../../../Bluecurve/gtk-3.0/img/scrollbar_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/scrollbar_thumb_horizontal.png -> ../../../Bluecurve/gtk-3.0/img/scrollbar_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/separator_horizontal.png -> ../../../Bluecurve/gtk-3.0/img/separator_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/separator_vertical.png -> ../../../Bluecurve/gtk-3.0/img/separator_vertical.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/scale_thumb.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/scale_thumb_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/scrollbar_thumb.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/scrollbar_thumb_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/separator_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/separator_vertical.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/mate.css -> ../../Bluecurve/gtk-3.0/mate.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/xfce.css -> ../../Bluecurve/gtk-3.0/xfce.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/gtk-style.css -> ../../Bluecurve/gtk-4.0/gtk-style.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/gtk.css -> ../gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/arrow-down-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/arrow-down.png -> ../../../Bluecurve/gtk-4.0/img/arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/arrow-left-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-left-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/arrow-left-hover.png -> ../../../Bluecurve/gtk-4.0/img/arrow-left-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/arrow-left.png -> ../../../Bluecurve/gtk-4.0/img/arrow-left.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/arrow-right-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-right-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/arrow-right-hover.png -> ../../../Bluecurve/gtk-4.0/img/arrow-right-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/arrow-right.png -> ../../../Bluecurve/gtk-4.0/img/arrow-right.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/arrow-up-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-up-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/arrow-up.png -> ../../../Bluecurve/gtk-4.0/img/arrow-up.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/arrow-left-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/arrow-left-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/arrow-left.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/arrow-right-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/arrow-right-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/arrow-right.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/arrow-up-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/arrow-up.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/check.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../../Bluecurve/gtk-4.0/img/combobox-arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/combobox-arrow-down.png -> ../../../Bluecurve/gtk-4.0/img/combobox-arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/mate-panel-separator.png -> ../../../Bluecurve/gtk-4.0/img/mate-panel-separator.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/menuitem-check-checked-disabled.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-check-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/menuitem-check-checked-hover.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-check-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/menuitem-check-checked.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-check-checked.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/menuitem-radio-checked-disabled.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-radio-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/menuitem-radio-checked-hover.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-radio-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/menuitem-radio-checked.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-radio-checked.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../gtk-3.0/img/combobox-arrow-down-disabled.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/combobox-arrow-down.png -> ../../gtk-3.0/img/combobox-arrow-down.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/mate-panel-separator.png -> ../../gtk-3.0/img/mate-panel-separator.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/menuitem-check-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/menuitem-check-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/menuitem-check-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/menuitem-radio-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/menuitem-radio-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/menuitem-radio-checked.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/radio.png -> ../../gtk-3.0/img/radio.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/scale_thumb.png -> ../../../Bluecurve/gtk-4.0/img/scale_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/scale_thumb_horizontal.png -> ../../../Bluecurve/gtk-4.0/img/scale_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/scrollbar_thumb.png -> ../../../Bluecurve/gtk-4.0/img/scrollbar_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/scrollbar_thumb_horizontal.png -> ../../../Bluecurve/gtk-4.0/img/scrollbar_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/separator_horizontal.png -> ../../../Bluecurve/gtk-4.0/img/separator_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/separator_vertical.png -> ../../../Bluecurve/gtk-4.0/img/separator_vertical.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/scale_thumb.png -> ../../gtk-3.0/img/scale_thumb.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/scale_thumb_horizontal.png -> ../../gtk-3.0/img/scale_thumb_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/scrollbar_thumb.png -> ../../gtk-3.0/img/scrollbar_thumb.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/scrollbar_thumb_horizontal.png -> ../../gtk-3.0/img/scrollbar_thumb_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/separator_horizontal.png -> ../../gtk-3.0/img/separator_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/separator_vertical.png -> ../../gtk-3.0/img/separator_vertical.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/mate.css -> ../../Bluecurve/gtk-4.0/mate.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/xfce.css -> ../../Bluecurve/gtk-4.0/xfce.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/index.theme
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Gnome/xfwm4/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/xfwm4/bottom-active.xpm
@@ -255,66 +343,68 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/gtk-style.css -> ../../Bluecurve/gtk-3.0/gtk-style.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/arrow-down-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/arrow-down.png -> ../../../Bluecurve/gtk-3.0/img/arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/arrow-left-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-left-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/arrow-left-hover.png -> ../../../Bluecurve/gtk-3.0/img/arrow-left-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/arrow-left.png -> ../../../Bluecurve/gtk-3.0/img/arrow-left.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/arrow-right-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-right-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/arrow-right-hover.png -> ../../../Bluecurve/gtk-3.0/img/arrow-right-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/arrow-right.png -> ../../../Bluecurve/gtk-3.0/img/arrow-right.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/arrow-up-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-up-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/arrow-up.png -> ../../../Bluecurve/gtk-3.0/img/arrow-up.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/arrow-left-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/arrow-left-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/arrow-left.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/arrow-right-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/arrow-right-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/arrow-right.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/arrow-up-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/arrow-up.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/check.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/combobox-arrow-down-disabled.png -> ../../../Bluecurve/gtk-3.0/img/combobox-arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/combobox-arrow-down.png -> ../../../Bluecurve/gtk-3.0/img/combobox-arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/mate-panel-separator.png -> ../../../Bluecurve/gtk-3.0/img/mate-panel-separator.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/menuitem-check-checked-disabled.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-check-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/menuitem-check-checked-hover.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-check-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/menuitem-check-checked.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-check-checked.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/menuitem-radio-checked-disabled.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-radio-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/menuitem-radio-checked-hover.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-radio-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/menuitem-radio-checked.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-radio-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/combobox-arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/combobox-arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/mate-panel-separator.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/menuitem-check-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/menuitem-check-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/menuitem-check-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/menuitem-radio-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/menuitem-radio-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/menuitem-radio-checked.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/radio.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/scale_thumb.png -> ../../../Bluecurve/gtk-3.0/img/scale_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/scale_thumb_horizontal.png -> ../../../Bluecurve/gtk-3.0/img/scale_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/scrollbar_thumb.png -> ../../../Bluecurve/gtk-3.0/img/scrollbar_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/scrollbar_thumb_horizontal.png -> ../../../Bluecurve/gtk-3.0/img/scrollbar_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/separator_horizontal.png -> ../../../Bluecurve/gtk-3.0/img/separator_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/separator_vertical.png -> ../../../Bluecurve/gtk-3.0/img/separator_vertical.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/scale_thumb.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/scale_thumb_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/scrollbar_thumb.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/scrollbar_thumb_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/separator_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/separator_vertical.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/mate.css -> ../../Bluecurve/gtk-3.0/mate.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/xfce.css -> ../../Bluecurve/gtk-3.0/xfce.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/gtk-style.css -> ../../Bluecurve/gtk-4.0/gtk-style.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/gtk.css -> ../gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/arrow-down-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/arrow-down.png -> ../../../Bluecurve/gtk-4.0/img/arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/arrow-left-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-left-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/arrow-left-hover.png -> ../../../Bluecurve/gtk-4.0/img/arrow-left-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/arrow-left.png -> ../../../Bluecurve/gtk-4.0/img/arrow-left.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/arrow-right-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-right-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/arrow-right-hover.png -> ../../../Bluecurve/gtk-4.0/img/arrow-right-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/arrow-right.png -> ../../../Bluecurve/gtk-4.0/img/arrow-right.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/arrow-up-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-up-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/arrow-up.png -> ../../../Bluecurve/gtk-4.0/img/arrow-up.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/arrow-left-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/arrow-left-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/arrow-left.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/arrow-right-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/arrow-right-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/arrow-right.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/arrow-up-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/arrow-up.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/check.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../../Bluecurve/gtk-4.0/img/combobox-arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/combobox-arrow-down.png -> ../../../Bluecurve/gtk-4.0/img/combobox-arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/mate-panel-separator.png -> ../../../Bluecurve/gtk-4.0/img/mate-panel-separator.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/menuitem-check-checked-disabled.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-check-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/menuitem-check-checked-hover.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-check-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/menuitem-check-checked.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-check-checked.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/menuitem-radio-checked-disabled.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-radio-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/menuitem-radio-checked-hover.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-radio-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/menuitem-radio-checked.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-radio-checked.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../gtk-3.0/img/combobox-arrow-down-disabled.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/combobox-arrow-down.png -> ../../gtk-3.0/img/combobox-arrow-down.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/mate-panel-separator.png -> ../../gtk-3.0/img/mate-panel-separator.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/menuitem-check-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/menuitem-check-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/menuitem-check-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/menuitem-radio-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/menuitem-radio-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/menuitem-radio-checked.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/radio.png -> ../../gtk-3.0/img/radio.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/scale_thumb.png -> ../../../Bluecurve/gtk-4.0/img/scale_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/scale_thumb_horizontal.png -> ../../../Bluecurve/gtk-4.0/img/scale_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/scrollbar_thumb.png -> ../../../Bluecurve/gtk-4.0/img/scrollbar_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/scrollbar_thumb_horizontal.png -> ../../../Bluecurve/gtk-4.0/img/scrollbar_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/separator_horizontal.png -> ../../../Bluecurve/gtk-4.0/img/separator_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/separator_vertical.png -> ../../../Bluecurve/gtk-4.0/img/separator_vertical.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/scale_thumb.png -> ../../gtk-3.0/img/scale_thumb.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/scale_thumb_horizontal.png -> ../../gtk-3.0/img/scale_thumb_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/scrollbar_thumb.png -> ../../gtk-3.0/img/scrollbar_thumb.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/scrollbar_thumb_horizontal.png -> ../../gtk-3.0/img/scrollbar_thumb_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/separator_horizontal.png -> ../../gtk-3.0/img/separator_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/separator_vertical.png -> ../../gtk-3.0/img/separator_vertical.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/mate.css -> ../../Bluecurve/gtk-4.0/mate.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/xfce.css -> ../../Bluecurve/gtk-4.0/xfce.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/index.theme
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Grape/xfwm4/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/xfwm4/bottom-active.xpm
@@ -364,67 +454,110 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/gtk-style.css -> ../../Bluecurve/gtk-3.0/gtk-style.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/arrow-down-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/arrow-down.png -> ../../../Bluecurve/gtk-3.0/img/arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/arrow-left-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-left-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/arrow-left-hover.png -> ../../../Bluecurve/gtk-3.0/img/arrow-left-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/arrow-left.png -> ../../../Bluecurve/gtk-3.0/img/arrow-left.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/arrow-right-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-right-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/arrow-right-hover.png -> ../../../Bluecurve/gtk-3.0/img/arrow-right-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/arrow-right.png -> ../../../Bluecurve/gtk-3.0/img/arrow-right.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/arrow-up-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-up-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/arrow-up.png -> ../../../Bluecurve/gtk-3.0/img/arrow-up.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/arrow-left-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/arrow-left-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/arrow-left.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/arrow-right-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/arrow-right-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/arrow-right.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/arrow-up-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/arrow-up.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/check.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/combobox-arrow-down-disabled.png -> ../../../Bluecurve/gtk-3.0/img/combobox-arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/combobox-arrow-down.png -> ../../../Bluecurve/gtk-3.0/img/combobox-arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/mate-panel-separator.png -> ../../../Bluecurve/gtk-3.0/img/mate-panel-separator.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/menuitem-check-checked-disabled.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-check-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/menuitem-check-checked-hover.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-check-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/menuitem-check-checked.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-check-checked.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/menuitem-radio-checked-disabled.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-radio-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/menuitem-radio-checked-hover.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-radio-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/menuitem-radio-checked.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-radio-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/combobox-arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/combobox-arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/mate-panel-separator.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/menuitem-check-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/menuitem-check-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/menuitem-check-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/menuitem-radio-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/menuitem-radio-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/menuitem-radio-checked.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/radio.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/scale_thumb.png -> ../../../Bluecurve/gtk-3.0/img/scale_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/scale_thumb_horizontal.png -> ../../../Bluecurve/gtk-3.0/img/scale_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/scrollbar_thumb.png -> ../../../Bluecurve/gtk-3.0/img/scrollbar_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/scrollbar_thumb_horizontal.png -> ../../../Bluecurve/gtk-3.0/img/scrollbar_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/separator_horizontal.png -> ../../../Bluecurve/gtk-3.0/img/separator_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/separator_vertical.png -> ../../../Bluecurve/gtk-3.0/img/separator_vertical.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/scale_thumb.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/scale_thumb_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/scrollbar_thumb.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/scrollbar_thumb_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/separator_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/separator_vertical.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/mate.css -> ../../Bluecurve/gtk-3.0/mate.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/xfce.css -> ../../Bluecurve/gtk-3.0/xfce.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/gtk-style.css -> ../../Bluecurve/gtk-4.0/gtk-style.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/gtk.css -> ../gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/arrow-down-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/arrow-down.png -> ../../../Bluecurve/gtk-4.0/img/arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/arrow-left-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-left-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/arrow-left-hover.png -> ../../../Bluecurve/gtk-4.0/img/arrow-left-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/arrow-left.png -> ../../../Bluecurve/gtk-4.0/img/arrow-left.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/arrow-right-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-right-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/arrow-right-hover.png -> ../../../Bluecurve/gtk-4.0/img/arrow-right-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/arrow-right.png -> ../../../Bluecurve/gtk-4.0/img/arrow-right.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/arrow-up-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-up-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/arrow-up.png -> ../../../Bluecurve/gtk-4.0/img/arrow-up.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/arrow-left-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/arrow-left-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/arrow-left.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/arrow-right-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/arrow-right-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/arrow-right.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/arrow-up-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/arrow-up.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/check.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../../Bluecurve/gtk-4.0/img/combobox-arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/combobox-arrow-down.png -> ../../../Bluecurve/gtk-4.0/img/combobox-arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/mate-panel-separator.png -> ../../../Bluecurve/gtk-4.0/img/mate-panel-separator.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/menuitem-check-checked-disabled.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-check-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/menuitem-check-checked-hover.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-check-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/menuitem-check-checked.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-check-checked.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/menuitem-radio-checked-disabled.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-radio-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/menuitem-radio-checked-hover.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-radio-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/menuitem-radio-checked.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-radio-checked.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../gtk-3.0/img/combobox-arrow-down-disabled.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/combobox-arrow-down.png -> ../../gtk-3.0/img/combobox-arrow-down.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/mate-panel-separator.png -> ../../gtk-3.0/img/mate-panel-separator.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/menuitem-check-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/menuitem-check-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/menuitem-check-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/menuitem-radio-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/menuitem-radio-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/menuitem-radio-checked.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/radio.png -> ../../gtk-3.0/img/radio.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/scale_thumb.png -> ../../../Bluecurve/gtk-4.0/img/scale_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/scale_thumb_horizontal.png -> ../../../Bluecurve/gtk-4.0/img/scale_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/scrollbar_thumb.png -> ../../../Bluecurve/gtk-4.0/img/scrollbar_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/scrollbar_thumb_horizontal.png -> ../../../Bluecurve/gtk-4.0/img/scrollbar_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/separator_horizontal.png -> ../../../Bluecurve/gtk-4.0/img/separator_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/separator_vertical.png -> ../../../Bluecurve/gtk-4.0/img/separator_vertical.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/scale_thumb.png -> ../../gtk-3.0/img/scale_thumb.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/scale_thumb_horizontal.png -> ../../gtk-3.0/img/scale_thumb_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/scrollbar_thumb.png -> ../../gtk-3.0/img/scrollbar_thumb.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/scrollbar_thumb_horizontal.png -> ../../gtk-3.0/img/scrollbar_thumb_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/separator_horizontal.png -> ../../gtk-3.0/img/separator_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/separator_vertical.png -> ../../gtk-3.0/img/separator_vertical.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/mate.css -> ../../Bluecurve/gtk-4.0/mate.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/xfce.css -> ../../Bluecurve/gtk-4.0/xfce.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/index.theme
+drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/bottom-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/bottom-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/bottom-left-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/bottom-left-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/bottom-right-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/bottom-right-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/close-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/close-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/close-pressed.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/hide-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/hide-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/hide-pressed.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/left-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/left-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/maximize-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/maximize-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/maximize-pressed.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/maximize-toggled-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/maximize-toggled-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/maximize-toggled-pressed.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/menu-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/menu-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/menu-pressed.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/right-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/right-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/themerc
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/title-1-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/title-1-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/title-2-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/title-2-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/title-3-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/title-3-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/title-4-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/title-4-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/title-5-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/title-5-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/top-left-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/top-left-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/top-right-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/xfwm4/top-right-inactive.xpm
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Slate/
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Slate/gtk-2.0/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-2.0/gtkrc
@@ -432,67 +565,110 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/gtk-style.css -> ../../Bluecurve/gtk-3.0/gtk-style.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/arrow-down-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/arrow-down.png -> ../../../Bluecurve/gtk-3.0/img/arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/arrow-left-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-left-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/arrow-left-hover.png -> ../../../Bluecurve/gtk-3.0/img/arrow-left-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/arrow-left.png -> ../../../Bluecurve/gtk-3.0/img/arrow-left.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/arrow-right-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-right-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/arrow-right-hover.png -> ../../../Bluecurve/gtk-3.0/img/arrow-right-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/arrow-right.png -> ../../../Bluecurve/gtk-3.0/img/arrow-right.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/arrow-up-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-up-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/arrow-up.png -> ../../../Bluecurve/gtk-3.0/img/arrow-up.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/arrow-left-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/arrow-left-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/arrow-left.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/arrow-right-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/arrow-right-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/arrow-right.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/arrow-up-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/arrow-up.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/check.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/combobox-arrow-down-disabled.png -> ../../../Bluecurve/gtk-3.0/img/combobox-arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/combobox-arrow-down.png -> ../../../Bluecurve/gtk-3.0/img/combobox-arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/mate-panel-separator.png -> ../../../Bluecurve/gtk-3.0/img/mate-panel-separator.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/menuitem-check-checked-disabled.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-check-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/menuitem-check-checked-hover.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-check-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/menuitem-check-checked.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-check-checked.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/menuitem-radio-checked-disabled.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-radio-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/menuitem-radio-checked-hover.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-radio-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/menuitem-radio-checked.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-radio-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/combobox-arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/combobox-arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/mate-panel-separator.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/menuitem-check-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/menuitem-check-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/menuitem-check-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/menuitem-radio-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/menuitem-radio-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/menuitem-radio-checked.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/radio.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/scale_thumb.png -> ../../../Bluecurve/gtk-3.0/img/scale_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/scale_thumb_horizontal.png -> ../../../Bluecurve/gtk-3.0/img/scale_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/scrollbar_thumb.png -> ../../../Bluecurve/gtk-3.0/img/scrollbar_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/scrollbar_thumb_horizontal.png -> ../../../Bluecurve/gtk-3.0/img/scrollbar_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/separator_horizontal.png -> ../../../Bluecurve/gtk-3.0/img/separator_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/separator_vertical.png -> ../../../Bluecurve/gtk-3.0/img/separator_vertical.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/scale_thumb.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/scale_thumb_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/scrollbar_thumb.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/scrollbar_thumb_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/separator_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/separator_vertical.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/mate.css -> ../../Bluecurve/gtk-3.0/mate.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/xfce.css -> ../../Bluecurve/gtk-3.0/xfce.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/gtk-style.css -> ../../Bluecurve/gtk-4.0/gtk-style.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/gtk.css -> ../gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/arrow-down-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/arrow-down.png -> ../../../Bluecurve/gtk-4.0/img/arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/arrow-left-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-left-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/arrow-left-hover.png -> ../../../Bluecurve/gtk-4.0/img/arrow-left-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/arrow-left.png -> ../../../Bluecurve/gtk-4.0/img/arrow-left.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/arrow-right-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-right-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/arrow-right-hover.png -> ../../../Bluecurve/gtk-4.0/img/arrow-right-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/arrow-right.png -> ../../../Bluecurve/gtk-4.0/img/arrow-right.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/arrow-up-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-up-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/arrow-up.png -> ../../../Bluecurve/gtk-4.0/img/arrow-up.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/arrow-left-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/arrow-left-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/arrow-left.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/arrow-right-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/arrow-right-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/arrow-right.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/arrow-up-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/arrow-up.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/check.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../../Bluecurve/gtk-4.0/img/combobox-arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/combobox-arrow-down.png -> ../../../Bluecurve/gtk-4.0/img/combobox-arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/mate-panel-separator.png -> ../../../Bluecurve/gtk-4.0/img/mate-panel-separator.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/menuitem-check-checked-disabled.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-check-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/menuitem-check-checked-hover.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-check-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/menuitem-check-checked.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-check-checked.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/menuitem-radio-checked-disabled.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-radio-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/menuitem-radio-checked-hover.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-radio-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/menuitem-radio-checked.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-radio-checked.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../gtk-3.0/img/combobox-arrow-down-disabled.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/combobox-arrow-down.png -> ../../gtk-3.0/img/combobox-arrow-down.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/mate-panel-separator.png -> ../../gtk-3.0/img/mate-panel-separator.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/menuitem-check-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/menuitem-check-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/menuitem-check-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/menuitem-radio-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/menuitem-radio-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/menuitem-radio-checked.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/radio.png -> ../../gtk-3.0/img/radio.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/scale_thumb.png -> ../../../Bluecurve/gtk-4.0/img/scale_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/scale_thumb_horizontal.png -> ../../../Bluecurve/gtk-4.0/img/scale_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/scrollbar_thumb.png -> ../../../Bluecurve/gtk-4.0/img/scrollbar_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/scrollbar_thumb_horizontal.png -> ../../../Bluecurve/gtk-4.0/img/scrollbar_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/separator_horizontal.png -> ../../../Bluecurve/gtk-4.0/img/separator_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/separator_vertical.png -> ../../../Bluecurve/gtk-4.0/img/separator_vertical.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/scale_thumb.png -> ../../gtk-3.0/img/scale_thumb.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/scale_thumb_horizontal.png -> ../../gtk-3.0/img/scale_thumb_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/scrollbar_thumb.png -> ../../gtk-3.0/img/scrollbar_thumb.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/scrollbar_thumb_horizontal.png -> ../../gtk-3.0/img/scrollbar_thumb_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/separator_horizontal.png -> ../../gtk-3.0/img/separator_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/separator_vertical.png -> ../../gtk-3.0/img/separator_vertical.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/mate.css -> ../../Bluecurve/gtk-4.0/mate.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/xfce.css -> ../../Bluecurve/gtk-4.0/xfce.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/index.theme
+drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/bottom-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/bottom-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/bottom-left-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/bottom-left-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/bottom-right-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/bottom-right-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/close-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/close-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/close-pressed.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/hide-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/hide-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/hide-pressed.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/left-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/left-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/maximize-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/maximize-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/maximize-pressed.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/maximize-toggled-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/maximize-toggled-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/maximize-toggled-pressed.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/menu-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/menu-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/menu-pressed.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/right-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/right-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/themerc
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/title-1-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/title-1-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/title-2-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/title-2-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/title-3-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/title-3-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/title-4-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/title-4-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/title-5-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/title-5-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/top-left-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/top-left-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/top-right-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/xfwm4/top-right-inactive.xpm
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Strawberry/
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-2.0/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-2.0/gtkrc
@@ -500,66 +676,68 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/gtk-style.css -> ../../Bluecurve/gtk-3.0/gtk-style.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/arrow-down-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/arrow-down.png -> ../../../Bluecurve/gtk-3.0/img/arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/arrow-left-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-left-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/arrow-left-hover.png -> ../../../Bluecurve/gtk-3.0/img/arrow-left-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/arrow-left.png -> ../../../Bluecurve/gtk-3.0/img/arrow-left.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/arrow-right-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-right-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/arrow-right-hover.png -> ../../../Bluecurve/gtk-3.0/img/arrow-right-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/arrow-right.png -> ../../../Bluecurve/gtk-3.0/img/arrow-right.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/arrow-up-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-up-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/arrow-up.png -> ../../../Bluecurve/gtk-3.0/img/arrow-up.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/arrow-left-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/arrow-left-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/arrow-left.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/arrow-right-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/arrow-right-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/arrow-right.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/arrow-up-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/arrow-up.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/check.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/combobox-arrow-down-disabled.png -> ../../../Bluecurve/gtk-3.0/img/combobox-arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/combobox-arrow-down.png -> ../../../Bluecurve/gtk-3.0/img/combobox-arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/mate-panel-separator.png -> ../../../Bluecurve/gtk-3.0/img/mate-panel-separator.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/menuitem-check-checked-disabled.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-check-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/menuitem-check-checked-hover.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-check-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/menuitem-check-checked.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-check-checked.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/menuitem-radio-checked-disabled.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-radio-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/menuitem-radio-checked-hover.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-radio-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/menuitem-radio-checked.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-radio-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/combobox-arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/combobox-arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/mate-panel-separator.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/menuitem-check-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/menuitem-check-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/menuitem-check-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/menuitem-radio-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/menuitem-radio-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/menuitem-radio-checked.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/radio.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/scale_thumb.png -> ../../../Bluecurve/gtk-3.0/img/scale_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/scale_thumb_horizontal.png -> ../../../Bluecurve/gtk-3.0/img/scale_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/scrollbar_thumb.png -> ../../../Bluecurve/gtk-3.0/img/scrollbar_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/scrollbar_thumb_horizontal.png -> ../../../Bluecurve/gtk-3.0/img/scrollbar_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/separator_horizontal.png -> ../../../Bluecurve/gtk-3.0/img/separator_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/separator_vertical.png -> ../../../Bluecurve/gtk-3.0/img/separator_vertical.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/scale_thumb.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/scale_thumb_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/scrollbar_thumb.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/scrollbar_thumb_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/separator_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/separator_vertical.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/mate.css -> ../../Bluecurve/gtk-3.0/mate.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/xfce.css -> ../../Bluecurve/gtk-3.0/xfce.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/gtk-style.css -> ../../Bluecurve/gtk-4.0/gtk-style.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/gtk.css -> ../gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/arrow-down-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/arrow-down.png -> ../../../Bluecurve/gtk-4.0/img/arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/arrow-left-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-left-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/arrow-left-hover.png -> ../../../Bluecurve/gtk-4.0/img/arrow-left-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/arrow-left.png -> ../../../Bluecurve/gtk-4.0/img/arrow-left.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/arrow-right-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-right-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/arrow-right-hover.png -> ../../../Bluecurve/gtk-4.0/img/arrow-right-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/arrow-right.png -> ../../../Bluecurve/gtk-4.0/img/arrow-right.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/arrow-up-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-up-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/arrow-up.png -> ../../../Bluecurve/gtk-4.0/img/arrow-up.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/arrow-left-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/arrow-left-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/arrow-left.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/arrow-right-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/arrow-right-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/arrow-right.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/arrow-up-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/arrow-up.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/check.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../../Bluecurve/gtk-4.0/img/combobox-arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/combobox-arrow-down.png -> ../../../Bluecurve/gtk-4.0/img/combobox-arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/mate-panel-separator.png -> ../../../Bluecurve/gtk-4.0/img/mate-panel-separator.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/menuitem-check-checked-disabled.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-check-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/menuitem-check-checked-hover.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-check-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/menuitem-check-checked.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-check-checked.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/menuitem-radio-checked-disabled.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-radio-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/menuitem-radio-checked-hover.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-radio-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/menuitem-radio-checked.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-radio-checked.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../gtk-3.0/img/combobox-arrow-down-disabled.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/combobox-arrow-down.png -> ../../gtk-3.0/img/combobox-arrow-down.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/mate-panel-separator.png -> ../../gtk-3.0/img/mate-panel-separator.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/menuitem-check-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/menuitem-check-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/menuitem-check-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/menuitem-radio-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/menuitem-radio-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/menuitem-radio-checked.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/radio.png -> ../../gtk-3.0/img/radio.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/scale_thumb.png -> ../../../Bluecurve/gtk-4.0/img/scale_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/scale_thumb_horizontal.png -> ../../../Bluecurve/gtk-4.0/img/scale_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/scrollbar_thumb.png -> ../../../Bluecurve/gtk-4.0/img/scrollbar_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/scrollbar_thumb_horizontal.png -> ../../../Bluecurve/gtk-4.0/img/scrollbar_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/separator_horizontal.png -> ../../../Bluecurve/gtk-4.0/img/separator_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/separator_vertical.png -> ../../../Bluecurve/gtk-4.0/img/separator_vertical.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/scale_thumb.png -> ../../gtk-3.0/img/scale_thumb.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/scale_thumb_horizontal.png -> ../../gtk-3.0/img/scale_thumb_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/scrollbar_thumb.png -> ../../gtk-3.0/img/scrollbar_thumb.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/scrollbar_thumb_horizontal.png -> ../../gtk-3.0/img/scrollbar_thumb_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/separator_horizontal.png -> ../../gtk-3.0/img/separator_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/separator_vertical.png -> ../../gtk-3.0/img/separator_vertical.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/mate.css -> ../../Bluecurve/gtk-4.0/mate.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/xfce.css -> ../../Bluecurve/gtk-4.0/xfce.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/index.theme
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Strawberry/xfwm4/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/xfwm4/bottom-active.xpm
@@ -609,67 +787,110 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/gtk-style.css -> ../../Bluecurve/gtk-3.0/gtk-style.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/arrow-down-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/arrow-down.png -> ../../../Bluecurve/gtk-3.0/img/arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/arrow-left-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-left-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/arrow-left-hover.png -> ../../../Bluecurve/gtk-3.0/img/arrow-left-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/arrow-left.png -> ../../../Bluecurve/gtk-3.0/img/arrow-left.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/arrow-right-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-right-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/arrow-right-hover.png -> ../../../Bluecurve/gtk-3.0/img/arrow-right-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/arrow-right.png -> ../../../Bluecurve/gtk-3.0/img/arrow-right.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/arrow-up-disabled.png -> ../../../Bluecurve/gtk-3.0/img/arrow-up-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/arrow-up.png -> ../../../Bluecurve/gtk-3.0/img/arrow-up.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/arrow-left-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/arrow-left-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/arrow-left.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/arrow-right-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/arrow-right-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/arrow-right.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/arrow-up-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/arrow-up.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/check.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/combobox-arrow-down-disabled.png -> ../../../Bluecurve/gtk-3.0/img/combobox-arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/combobox-arrow-down.png -> ../../../Bluecurve/gtk-3.0/img/combobox-arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/mate-panel-separator.png -> ../../../Bluecurve/gtk-3.0/img/mate-panel-separator.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/menuitem-check-checked-disabled.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-check-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/menuitem-check-checked-hover.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-check-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/menuitem-check-checked.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-check-checked.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/menuitem-radio-checked-disabled.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-radio-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/menuitem-radio-checked-hover.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-radio-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/menuitem-radio-checked.png -> ../../../Bluecurve/gtk-3.0/img/menuitem-radio-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/combobox-arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/combobox-arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/mate-panel-separator.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/menuitem-check-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/menuitem-check-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/menuitem-check-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/menuitem-radio-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/menuitem-radio-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/menuitem-radio-checked.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/radio.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/scale_thumb.png -> ../../../Bluecurve/gtk-3.0/img/scale_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/scale_thumb_horizontal.png -> ../../../Bluecurve/gtk-3.0/img/scale_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/scrollbar_thumb.png -> ../../../Bluecurve/gtk-3.0/img/scrollbar_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/scrollbar_thumb_horizontal.png -> ../../../Bluecurve/gtk-3.0/img/scrollbar_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/separator_horizontal.png -> ../../../Bluecurve/gtk-3.0/img/separator_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/separator_vertical.png -> ../../../Bluecurve/gtk-3.0/img/separator_vertical.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/scale_thumb.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/scale_thumb_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/scrollbar_thumb.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/scrollbar_thumb_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/separator_horizontal.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/separator_vertical.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/mate.css -> ../../Bluecurve/gtk-3.0/mate.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/xfce.css -> ../../Bluecurve/gtk-3.0/xfce.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/gtk-style.css -> ../../Bluecurve/gtk-4.0/gtk-style.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/gtk.css -> ../gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/arrow-down-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/arrow-down.png -> ../../../Bluecurve/gtk-4.0/img/arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/arrow-left-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-left-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/arrow-left-hover.png -> ../../../Bluecurve/gtk-4.0/img/arrow-left-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/arrow-left.png -> ../../../Bluecurve/gtk-4.0/img/arrow-left.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/arrow-right-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-right-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/arrow-right-hover.png -> ../../../Bluecurve/gtk-4.0/img/arrow-right-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/arrow-right.png -> ../../../Bluecurve/gtk-4.0/img/arrow-right.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/arrow-up-disabled.png -> ../../../Bluecurve/gtk-4.0/img/arrow-up-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/arrow-up.png -> ../../../Bluecurve/gtk-4.0/img/arrow-up.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/arrow-down-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/arrow-left-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/arrow-left-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/arrow-left.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/arrow-right-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/arrow-right-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/arrow-right.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/arrow-up-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/arrow-up.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/check.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../../Bluecurve/gtk-4.0/img/combobox-arrow-down-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/combobox-arrow-down.png -> ../../../Bluecurve/gtk-4.0/img/combobox-arrow-down.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/mate-panel-separator.png -> ../../../Bluecurve/gtk-4.0/img/mate-panel-separator.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/menuitem-check-checked-disabled.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-check-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/menuitem-check-checked-hover.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-check-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/menuitem-check-checked.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-check-checked.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/menuitem-radio-checked-disabled.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-radio-checked-disabled.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/menuitem-radio-checked-hover.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-radio-checked-hover.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/menuitem-radio-checked.png -> ../../../Bluecurve/gtk-4.0/img/menuitem-radio-checked.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../gtk-3.0/img/combobox-arrow-down-disabled.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/combobox-arrow-down.png -> ../../gtk-3.0/img/combobox-arrow-down.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/mate-panel-separator.png -> ../../gtk-3.0/img/mate-panel-separator.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/menuitem-check-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/menuitem-check-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/menuitem-check-checked.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/menuitem-radio-checked-disabled.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/menuitem-radio-checked-hover.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/menuitem-radio-checked.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/radio.png -> ../../gtk-3.0/img/radio.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/scale_thumb.png -> ../../../Bluecurve/gtk-4.0/img/scale_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/scale_thumb_horizontal.png -> ../../../Bluecurve/gtk-4.0/img/scale_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/scrollbar_thumb.png -> ../../../Bluecurve/gtk-4.0/img/scrollbar_thumb.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/scrollbar_thumb_horizontal.png -> ../../../Bluecurve/gtk-4.0/img/scrollbar_thumb_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/separator_horizontal.png -> ../../../Bluecurve/gtk-4.0/img/separator_horizontal.png
-lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/separator_vertical.png -> ../../../Bluecurve/gtk-4.0/img/separator_vertical.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/scale_thumb.png -> ../../gtk-3.0/img/scale_thumb.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/scale_thumb_horizontal.png -> ../../gtk-3.0/img/scale_thumb_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/scrollbar_thumb.png -> ../../gtk-3.0/img/scrollbar_thumb.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/scrollbar_thumb_horizontal.png -> ../../gtk-3.0/img/scrollbar_thumb_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/separator_horizontal.png -> ../../gtk-3.0/img/separator_horizontal.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/separator_vertical.png -> ../../gtk-3.0/img/separator_vertical.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/mate.css -> ../../Bluecurve/gtk-4.0/mate.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/xfce.css -> ../../Bluecurve/gtk-4.0/xfce.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/index.theme
+drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/bottom-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/bottom-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/bottom-left-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/bottom-left-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/bottom-right-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/bottom-right-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/close-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/close-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/close-pressed.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/hide-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/hide-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/hide-pressed.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/left-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/left-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/maximize-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/maximize-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/maximize-pressed.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/maximize-toggled-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/maximize-toggled-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/maximize-toggled-pressed.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/menu-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/menu-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/menu-pressed.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/right-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/right-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/themerc
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/title-1-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/title-1-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/title-2-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/title-2-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/title-3-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/title-3-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/title-4-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/title-4-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/title-5-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/title-5-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/top-left-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/top-left-inactive.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/top-right-active.xpm
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/xfwm4/top-right-inactive.xpm
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve/
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve/gtk-2.0/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve/gtk-2.0/gtkrc
@@ -705,6 +926,7 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve/gtk-3.0/img/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve/gtk-3.0/img/separator_horizontal.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve/gtk-3.0/img/separator_vertical.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve/gtk-3.0/mate.css
+-rw-r--r--	root/root	usr/share/themes/Bluecurve/gtk-3.0/xfce.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve/gtk-4.0/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve/gtk-4.0/gtk-style.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve/gtk-4.0/gtk.css -> ../gtk-3.0/gtk.css
@@ -737,6 +959,7 @@ lrwxrwxrwx	root/root	usr/share/themes/Bluecurve/gtk-4.0/img/scrollbar_thumb_hori
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve/gtk-4.0/img/separator_horizontal.png -> ../../gtk-3.0/img/separator_horizontal.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve/gtk-4.0/img/separator_vertical.png -> ../../gtk-3.0/img/separator_vertical.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve/gtk-4.0/mate.css -> ../gtk-3.0/mate.css
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve/gtk-4.0/xfce.css -> ../gtk-3.0/xfce.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve/index.theme
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve/metacity-1/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve/metacity-1/bottom_left.png
