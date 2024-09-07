@@ -10,6 +10,9 @@ PID=/var/run/bluetoothd.pid
 
 case $1 in
 start)
+	if [ ! -e /run/bluez ]; then
+		mkdir -p /run/bluez
+	fi
         $SSD --start --background --make-pidfile --pidfile $PID \
 		--exec $PROG -- $OPTS
         ;;
@@ -23,14 +26,12 @@ restart)
         ;;
 status)
         $SSD --status --pidfile $PID --exec $PROG
-        e=$?
         case $e in
         0) echo "$PROG is running with pid $(cat $PID)" ;;
         1) echo "$PROG is not running but the pid file $PID exists" ;;
         3) echo "$PROG is not running" ;;
         4) echo "Unable to determine the program status" ;;
         esac
-        exit $e
         ;;
 *)
         echo "usage: $0 [start|stop|restart|status]"
