@@ -3,7 +3,7 @@
 # Depends on:  gtk-engine-bluecurve
 
 name=bluecurve-gtk-theme
-version=2.2.0-ac638b8
+version=2.2.1-881da4a
 release=1
 source=https://github.com/neeeeow/Bluecurve/archive/${version#*-}/Bluecurve-$version.tar.gz
 
@@ -11,6 +11,9 @@ build() {
 	mkdir -p $PKG/usr/share/themes
 	cp -Pr Bluecurve-*/themes/* $PKG/usr/share/themes/
 
+	# remove xfwm4 themes
+	rm -r $PKG/usr/share/themes/*/xfwm4
+
 	# remove junk
-	rm $PKG/usr/share/themes/*/xfwm4/README
+	#rm $PKG/usr/share/themes/*/xfwm4/README
 }
