@@ -1,0 +1,31 @@
+# Description: Clearlooks themes engine for GTK2
+# URL:         https://download.gnome.org/sources/gtk-engines/
+# Depends on:  gtk-engines
+
+name=gtk-engine-clearlooks
+version=2.20.2
+release=1
+source=https://download.gnome.org/sources/gtk-engines/2.20/gtk-engines-$version.tar.bz2
+
+build() {
+	# disable i18n
+	export LINGUAS=' '
+
+	sed -i 's|<glib/.*\.h>|<glib.h>|'  \
+		gtk-engines-$version/engines/clearlooks/src/animation.c
+
+	mkdir build; cd build
+
+	../gtk-engines-$version/configure  \
+		--prefix=/usr              \
+		--enable-animation         \
+		--enable-clearlooks        \
+		--disable-all              \
+		--disable-nls              \
+
+	make V=1
+	make DESTDIR=$PKG install
+
+	# conflicts with gtk-engines
+	rm -r $PKG/usr/lib/pkgconfig
+}
