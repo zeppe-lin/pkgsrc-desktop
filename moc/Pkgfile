@@ -7,7 +7,8 @@ name=moc
 version=2.5.2
 release=1
 source="http://ftp.daper.net/pub/soft/moc/stable/moc-$version.tar.bz2
-	moc-ffmpeg4.patch moc-https.patch"
+	moc-ffmpeg4.patch
+	moc-https.patch"
 
 build() {
 	patch -d moc-$version -p0 -i $SRC/moc-ffmpeg4.patch
