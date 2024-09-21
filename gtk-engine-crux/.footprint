@@ -1,0 +1,14 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/lib/
+drwxr-xr-x	root/root	usr/lib/gtk-2.0/
+drwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/
+drwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/engines/
+-rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/engines/libcrux-engine.la
+-rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/engines/libcrux-engine.so
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/gtk-engines/
+-rw-r--r--	root/root	usr/share/gtk-engines/crux-engine.xml
+drwxr-xr-x	root/root	usr/share/themes/
+drwxr-xr-x	root/root	usr/share/themes/Crux/
+drwxr-xr-x	root/root	usr/share/themes/Crux/gtk-2.0/
+-rw-r--r--	root/root	usr/share/themes/Crux/gtk-2.0/gtkrc
