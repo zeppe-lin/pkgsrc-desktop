@@ -13,6 +13,7 @@ build() {
 
 	patch -p1 -i $SRC/fix-memleak-in-plugin-scanning.patch
 
+	# avoid xorg-imake dependency
 	sed -i 's/mkdirhier/mkdir -p/' Makefile
 
 	make targets
