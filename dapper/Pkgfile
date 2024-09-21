@@ -12,7 +12,7 @@ build() {
 
 	bash ./autogen.sh
 
-	../$name-*/configure --prefix=/usr
+	./configure --prefix=/usr
 
 	make V=1
 	make DESTDIR=$PKG install
