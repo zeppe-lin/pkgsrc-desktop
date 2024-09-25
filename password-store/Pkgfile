@@ -5,9 +5,10 @@
 
 name=password-store
 version=1.7.4
-release=2
+release=3
 source="https://git.zx2c4.com/$name/snapshot/$name-$version.tar.xz
 	passmenu.1
+	dynamic-load-ext.patch
 	gnupg1-support.patch
 	tree-2.0-compat.patch"
 
@@ -16,6 +17,7 @@ build() {
 	export WITH_ZSHCOMP=no   # disable  zsh completion
 	export WITH_FISHCOMP=no  # disable fish completion
 
+	patch -d $name-$version -p1 -i $SRC/dynamic-load-ext.patch
 	patch -d $name-$version -p1 -i $SRC/gnupg1-support.patch
 	patch -d $name-$version -p1 -i $SRC/tree-2.0-compat.patch
 

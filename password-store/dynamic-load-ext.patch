@@ -1,0 +1,26 @@
+From 3cd5641eab95714ba65b960a4d74111b95e1486a Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Jakobus=20Sch=C3=BCrz?= <jakobus.schuerz@home.arpa>
+Date: Wed, 21 Jun 2023 23:35:00 +0200
+Subject: [PATCH] add functionality for dynamic loading completions for modules
+
+this fixes https://github.com/tadfisher/pass-otp/issues/28
+---
+ src/completion/pass.bash-completion | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/src/completion/pass.bash-completion b/src/completion/pass.bash-completion
+index 2d23cbf..2648a61 100644
+--- a/src/completion/pass.bash-completion
++++ b/src/completion/pass.bash-completion
+@@ -83,6 +83,11 @@ _pass_complete_keys () {
+ _pass()
+ {
+ 	COMPREPLY=()
++        local COMPLETION_DIR=/usr/share/bash-completion/completions
++        for f in ${COMPLETION_DIR}/pass-*
++        do
++            . ${f}
++        done
+ 	local cur="${COMP_WORDS[COMP_CWORD]}"
+ 	local commands="init ls find grep show insert generate edit rm mv cp git help version ${PASSWORD_STORE_EXTENSION_COMMANDS[*]}"
+ 	if [[ $COMP_CWORD -gt 1 ]]; then
