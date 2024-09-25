@@ -3,16 +3,18 @@
 # Depends on:  p5-gtk2 p5-net-dbus
 
 name=jukebox
-version=1.1.16z1-9cb04db
+version=1.1.16z1-b569c7f
 release=1
 source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
 
 build() {
 	mkdir -p $PKG/usr/bin
 	mkdir -p $PKG/usr/share
+	mkdir -p $PKG/usr/share/pixmaps
 	cp -Pr $name-${version#*-}* $PKG/usr/share/jukebox
 	ln -s /usr/share/jukebox/jukebox.pl   $PKG/usr/bin/jukebox
 	ln -s /usr/share/jukebox/iceserver.pl $PKG/usr/bin/iceserver
+	ln -s /usr/share/jukebox/pix/jukebox.svg $PKG/usr/share/pixmaps/jukebox.svg
 
 	cd $PKG/usr/share/jukebox
 
