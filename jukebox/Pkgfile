@@ -3,7 +3,7 @@
 # Depends on:  p5-gtk2 p5-net-dbus
 
 name=jukebox
-version=1.1.16z1-b569c7f
+version=1.1.16z1-75efe6f
 release=1
 source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
 
@@ -21,7 +21,7 @@ build() {
 	mkdir -p $PKG/usr/share/man/man1
 	mkdir -p $PKG/usr/share/applications
 	mv jukebox.1       $PKG/usr/share/man/man1/
-	mv jukebox.desktop $PKG/usr/share/applications
+	mv jukebox.desktop $PKG/usr/share/applications/
 
 	# remove junk
 	rm AUTHORS COPYING README.md TODO.md Makefile \
