@@ -3,7 +3,7 @@
 # Depends on:  nspr sqlite3
 
 name=nss
-version=3.104
+version=3.105
 release=1
 source="https://ftp.mozilla.org/pub/security/nss/releases/NSS_$(
 	echo $version | tr . _)_RTM/src/nss-$version.tar.gz
