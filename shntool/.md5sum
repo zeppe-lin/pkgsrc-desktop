@@ -1,0 +1,5 @@
+a3aa5b817cedb4226fa32340609a5995  debian_patches_950803.patch
+596398b13e02b243078320ebde4743fb  debian_patches_no-cdquality-check.patch
+4265935ef1d684a4b49041278ffda7de  shntool-3.0.10-large-size.diff
+6f0d61ddbf8cbee5c0b51a99e987ddda  shntool-3.0.10-large-times.diff
+5d41f8f42c3c15e3145a7a43539c3eae  shntool-3.0.10.tar.gz

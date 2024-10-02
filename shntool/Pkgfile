@@ -1,0 +1,37 @@
+# Description: Multi-purpose WAVE data processing and reporting utility
+# URL:         http://shnutils.freeshell.org/shntool/
+# Depends on:  flac mac wavpack
+# Optional:    flac mac wavpack
+
+name=shntool
+version=3.0.10
+release=1
+source="http://shnutils.freeshell.org/$name/dist/src/$name-$version.tar.gz
+	debian_patches_950803.patch
+	debian_patches_no-cdquality-check.patch
+	shntool-3.0.10-large-size.diff
+	shntool-3.0.10-large-times.diff"
+
+build() {
+	# Patches taken from:
+	# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=684600
+	# https://salsa.debian.org/debian/shntool/-/tree/master/debian/patches
+	patch -d $name-$version -p1 -i $SRC/debian_patches_950803.patch
+	patch -d $name-$version -p1 -i $SRC/debian_patches_no-cdquality-check.patch
+	patch -d $name-$version -p1 -i $SRC/shntool-3.0.10-large-size.diff
+	patch -d $name-$version -p1 -i $SRC/shntool-3.0.10-large-times.diff
+
+	mkdir build; cd build
+
+	../$name-$version/configure --prefix=/usr
+
+	make V=1
+	make DESTDIR=$PKG install
+
+	# create man page symlinks
+	cd $PKG/usr/share/man/man1
+	for m in $PKG/usr/bin/*; do
+		case $m in $PKG/usr/bin/shntool) continue ;; esac
+		ln -s shntool.1 $(basename $m).1
+	done
+}
