@@ -1,0 +1,11 @@
+diff -pruN Gtk2-Notify-0.05.orig/Makefile.PL Gtk2-Notify-0.05/Makefile.PL
+--- Gtk2-Notify-0.05.orig/Makefile.PL	2018-05-14 20:33:31.119797217 +0300
++++ Gtk2-Notify-0.05/Makefile.PL	2018-05-14 20:34:08.183797089 +0300
+@@ -1,6 +1,6 @@
+ use strict;
+ use warnings;
+-use lib 'ext';
++use lib qw/. ext/;
+ use inc::Module::Install;
+ 
+ name 'Gtk2-Notify';

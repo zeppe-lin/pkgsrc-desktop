@@ -1,0 +1,33 @@
+# Description:  Perl interface to libnotify
+# URL:          https://metacpan.org/pod/Gtk2::Notify
+# Depends on:   libnotify p5-gtk2 p5-net-dbus
+
+name=p5-gtk2-notify
+version=0.05
+release=1
+source="https://cpan.metacpan.org/authors/id/F/FL/FLORA/Gtk2-Notify-$version.tar.gz
+	libnotify.patch
+	makefile.patch"
+
+build() {
+	cd Gtk2-Notify-$version
+
+	patch -p0 -i $SRC/libnotify.patch
+	patch -p1 -i $SRC/makefile.patch
+
+	PERL_MM_USE_DEFAULT=1 perl Makefile.PL INSTALLDIRS=vendor
+
+	make OPTIMIZE="$CFLAGS"
+	make DESTDIR=$PKG install
+
+	# remove junk and empty dirs
+	find $PKG -depth \
+		-type f \( -name perllocal.pod  \
+			-o -name \*.bs          \
+			-o -name .packlist      \
+			\) -delete ,            \
+		-type d -empty -delete
+
+	# fix perms
+	find $PKG -type f -a -perm -u-w | xargs chmod u+w
+}
