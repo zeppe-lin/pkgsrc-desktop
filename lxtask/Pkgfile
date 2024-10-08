@@ -1,0 +1,27 @@
+# Description: Task manager
+# URL:         https://github.com/lxde/lxtask
+# Depends on:  gtk
+# Optional:    gtk3
+
+name=lxtask
+version=0.1.10
+release=1
+source=https://downloads.sourceforge.net/lxde/$name-$version.tar.xz
+
+build() {
+	# disable i18n
+	export LINGUAS=' '
+
+	mkdir build; cd build
+
+	autoreconf -fi ../$name-$version
+	../$name-$version/configure  \
+		--prefix=/usr        \
+		--sysconfdir=/etc    \
+		--disable-nls        \
+		--enable-man         \
+		#--enable-gtk3
+
+	make V=1
+	make DESTDIR=$PKG install
+}
