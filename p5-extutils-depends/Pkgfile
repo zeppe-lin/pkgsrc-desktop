@@ -4,7 +4,7 @@
 
 name=p5-extutils-depends
 version=0.8001
-release=1
+release=2
 source=https://cpan.metacpan.org/authors/id/X/XA/XAOC/ExtUtils-Depends-$version.tar.gz
 
 build() {
