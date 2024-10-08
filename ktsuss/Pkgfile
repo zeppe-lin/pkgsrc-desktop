@@ -4,11 +4,14 @@
 
 name=ktsuss
 version=2.1
-release=2
+release=3
 source="https://github.com/nomius/$name/archive/$version/$name-$version.tar.gz
 	3584ce168196bd7262d542332d318706edc741fd.patch"
 
 build() {
+	# fix build with gcc 14
+	export CFLAGS="$CFLAGS -Wno-implicit-function-declaration"
+
 	patch -d $name-$version -p1 \
 		-i $SRC/3584ce168196bd7262d542332d318706edc741fd.patch
 
