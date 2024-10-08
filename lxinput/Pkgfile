@@ -1,6 +1,6 @@
 # Description: Keyboard and mouse configuration tool
 # URL:         https://github.com/lxde/lxinput
-# Depends on:  gtk xorg-xrandr
+# Depends on:  gtk
 # Optional:    gtk3
 
 name=lxinput
