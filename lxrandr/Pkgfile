@@ -1,5 +1,5 @@
 # Description: Monitor configuration tool
-# URL:         https://lxde.org/
+# URL:         https://github.com/lxde/lxrandr
 # Depends on:  gtk gtk3 xorg-xrandr
 
 name=lxrandr
