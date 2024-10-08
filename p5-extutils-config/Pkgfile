@@ -4,7 +4,7 @@
 
 name=p5-extutils-config
 version=0.010
-release=1
+release=2
 source=https://cpan.metacpan.org/authors/id/L/LE/LEONT/ExtUtils-Config-$version.tar.gz
 
 build() {
