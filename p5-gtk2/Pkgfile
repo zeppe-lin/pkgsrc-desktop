@@ -4,7 +4,7 @@
 
 name=p5-gtk2
 version=1.24993
-release=1
+release=2
 source=https://www.cpan.org/modules/by-module/Gtk2/Gtk2-$version.tar.gz
 
 build() {
