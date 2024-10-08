@@ -4,7 +4,7 @@
 
 name=p5-xml-twig
 version=3.52
-release=1
+release=2
 source=https://search.cpan.org/CPAN/authors/id/M/MI/MIROD/XML-Twig-$version.tar.gz
 
 build() {
