@@ -4,10 +4,13 @@
 
 name=librsvg-compat
 version=2.40.20
-release=1
+release=2
 source=https://download.gnome.org/sources/librsvg/${version%.*}/librsvg-$version.tar.xz
 
 build() {
+	# fix build with gcc 14
+	export CFLAGS="$CFLAGS -Wno-incompatible-pointer-types"
+
 	mkdir build; cd build
 
 	../librsvg-$version/configure      \
