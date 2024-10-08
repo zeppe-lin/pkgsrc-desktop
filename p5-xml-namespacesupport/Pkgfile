@@ -4,7 +4,7 @@
 
 name=p5-xml-namespacesupport
 version=1.12_9
-release=1
+release=2
 source=https://www.cpan.org/authors/id/P/PE/PERIGRIN/XML-NamespaceSupport-$version.tar.gz
 
 build() {
