@@ -4,7 +4,7 @@
 
 name=p5-extutils-pkgconfig
 version=1.16
-release=1
+release=2
 source=https://cpan.metacpan.org/authors/id/X/XA/XAOC/ExtUtils-PkgConfig-$version.tar.gz
 
 build() {
