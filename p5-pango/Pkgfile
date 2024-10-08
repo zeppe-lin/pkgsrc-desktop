@@ -4,7 +4,7 @@
 
 name=p5-pango
 version=1.227
-release=1
+release=2
 source=https://search.cpan.org/CPAN/authors/id/X/XA/XAOC/Pango-$version.tar.gz
 
 build() {
