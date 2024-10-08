@@ -1,0 +1,30 @@
+# Description: Lightweight image viewer
+# URL:         https://github.com/lxde/gpicview
+# Depends on:  gtk
+# Optional:    gtk3
+
+name=gpicview
+version=0.2.6
+release=1
+source="$name-$version.tar.gz::https://github.com/lxde/$name/archive/refs/tags/$version.tar.gz
+	10.patch"
+
+build() {
+	# disable i18n
+	export LINGUAS=' '
+
+	# allow copy to clipboard using Ctrl+C
+	patch -d $name-$version -p1 -i $SRC/10.patch
+
+	mkdir build; cd build
+
+	autoreconf -fi ../$name-$version
+	../$name-$version/configure  \
+		--prefix=/usr        \
+		--sysconfdir=/etc    \
+		--disable-nls        \
+		#--enable-gtk3
+
+	make V=1
+	make DESTDIR=$PKG install
+}
