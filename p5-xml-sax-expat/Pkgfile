@@ -4,7 +4,7 @@
 
 name=p5-xml-sax-expat
 version=0.51
-release=1
+release=2
 source=https://cpan.metacpan.org/authors/id/B/BJ/BJOERN/XML-SAX-Expat-$version.tar.gz
 
 build() {
