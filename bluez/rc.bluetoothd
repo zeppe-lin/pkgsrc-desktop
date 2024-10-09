@@ -26,7 +26,7 @@ restart)
         ;;
 status)
         $SSD --status --pidfile $PID --exec $PROG
-        case $e in
+        case $? in
         0) echo "$PROG is running with pid $(cat $PID)" ;;
         1) echo "$PROG is not running but the pid file $PID exists" ;;
         3) echo "$PROG is not running" ;;

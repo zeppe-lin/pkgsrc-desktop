@@ -4,7 +4,7 @@
 
 name=bluez
 version=5.71
-release=1
+release=2
 source="https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-$version.tar.xz
   	rc.bluetoothd
 	modprobe.bluetooth"
