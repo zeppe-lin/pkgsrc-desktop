@@ -4,7 +4,7 @@
 
 name=libmtp
 version=1.1.21
-release=1
+release=2
 source=https://downloads.sourceforge.net/$name/$name-$version.tar.gz
 
 build() {
@@ -12,7 +12,7 @@ build() {
 
 	../$name-$version/configure     \
 		--prefix=/usr           \
-		--with-udev=/etc/udev/  \
+		--with-udev=/lib/udev   \
 
 	make V=1
 	make DESTDIR=$PKG install
