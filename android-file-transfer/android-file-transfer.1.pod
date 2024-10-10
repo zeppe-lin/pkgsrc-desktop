@@ -1,0 +1,119 @@
+=pod
+
+=encoding utf8
+
+=head1 NAME
+
+android-file-transfer - reliable MTP client with minimalistic UI
+
+=head1 SYNOPSIS
+
+B<android-file-transfer> [B<-Rv>]
+
+=head1 DESCRIPTION
+
+B<android-file-transfer> is a reliable MTP client with minimalistic UI.
+
+Its features are:
+
+=over
+
+=item *
+
+Simple Qt UI with progress dialogs.
+
+=item *
+
+FUSE wrapper, supporting partial read/writes, allowing instant access to your files.
+
+=item *
+
+No file size limits.
+
+=item *
+
+Automatically renames album cover to make it visible from media player.
+
+=item *
+
+Supports Zune and Zune HD.
+
+=item *
+
+USB L<Zerocopy|https://docs.kernel.org/networking/msg_zerocopy.html>
+support found in recent Linux kernel (no user/kernel data copying).
+
+=item *
+
+No extra dependencies (e.g. libptp/libmtp).
+
+=item *
+
+Available as static/shared library.
+
+=item *
+
+Command line tool (aft-mtp-cli(1)).
+
+=back
+
+=head1 OPTIONS
+
+=over
+
+=item B<-R>
+
+Reset device.
+
+=item B<-v>
+
+Debug/verbose output.
+
+=back
+
+=head1 SEE ALSO
+
+=over
+
+=item B<FAQ>:
+
+L<https://whoozle.github.io/android-file-transfer-linux/FAQ.html>
+
+=item B<Issues>:
+
+L<https://github.com/whoozle/android-file-transfer-linux/issues>
+
+=item B<Homepage>:
+
+L<https://whoozle.github.io/android-file-transfer-linux/>
+
+=back
+
+=head1 AUTHOR
+
+android-file-transfer was written by Vladimir Menshakov <mailto:vladimir.menshakov@gmail.com>.
+
+This manual page was written by Alexandr Savca <mailto:alexandr.savca89@gmail.com>.
+
+=head1 CAVEATS
+
+=over
+
+=item *
+
+Samsung removed Android extensions from MTP, so FUSE will be available read-only, sorry.
+Feel free to post your complaints to L<https://forum.developer.samsung.com/>.
+
+=item *
+
+Sometimes downloading fails with a USB timeout, after which the phone becomes unresponsive:
+L<Android bug #75259|https://code.google.com/p/android/issues/detail?id=75259>.
+
+=item *
+
+Objects created in the UI will not show up in the FUSE filesystem:
+L<Android bug #169547|https://code.google.com/p/android/issues/detail?id=169547>.
+
+=back
+
+=cut

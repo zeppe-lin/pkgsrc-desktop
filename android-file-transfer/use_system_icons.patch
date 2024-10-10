@@ -1,0 +1,24 @@
+diff '--color=auto' -pruN android-file-transfer-linux-2a48d30eb1d471ebc2465ff5459bc321b8daa58b.orig/qt/mainwindow.cpp android-file-transfer-linux-2a48d30eb1d471ebc2465ff5459bc321b8daa58b/qt/mainwindow.cpp
+--- android-file-transfer-linux-2a48d30eb1d471ebc2465ff5459bc321b8daa58b.orig/qt/mainwindow.cpp	2024-05-07 10:15:22.891796845 +0300
++++ android-file-transfer-linux-2a48d30eb1d471ebc2465ff5459bc321b8daa58b/qt/mainwindow.cpp	2024-05-07 10:40:01.376617786 +0300
+@@ -74,10 +74,19 @@ MainWindow::MainWindow(QWidget *parent)
+ 		theme = value > 128? "dark": "light";
+ 		qDebug() << "current text color value: " << value << ", guessed theme: " << theme;
+ 	}
++	_ui->actionBack->setIcon(QIcon::fromTheme("go-previous"));
++	_ui->actionGoDown->setIcon(QIcon::fromTheme("go-next"));
++	_ui->actionCreateDirectory->setIcon(QIcon::fromTheme("folder-new"));
++	_ui->actionRefresh->setIcon(QIcon::fromTheme("view-refresh"));
++	_ui->actionPaste->setIcon(QIcon::fromTheme("edit-paste"));
++	_ui->actionDelete->setIcon(QIcon::fromTheme("edit-delete"));
++	_ui->actionExit->setIcon(QIcon::fromTheme("application-exit"));
++	/*
+ 	_ui->actionBack->setIcon(QIcon(":/icons/" + theme + "/go-previous.svg"));
+ 	_ui->actionGoDown->setIcon(QIcon(":/icons/" + theme + "/go-next.svg"));
+ 	_ui->actionCreateDirectory->setIcon(QIcon(":/icons/" + theme + "/folder-new.svg"));
+ 	_ui->actionRefresh->setIcon(QIcon(":/icons/" + theme + "/view-refresh.svg"));
++	*/
+ 
+ 	_ui->listView->setModel(_proxyModel);
+ 
+Binary files android-file-transfer-linux-2a48d30eb1d471ebc2465ff5459bc321b8daa58b.orig/qt/.mainwindow.cpp.un~ and android-file-transfer-linux-2a48d30eb1d471ebc2465ff5459bc321b8daa58b/qt/.mainwindow.cpp.un~ differ

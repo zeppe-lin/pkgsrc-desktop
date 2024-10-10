@@ -1,0 +1,66 @@
+=pod
+
+=encoding utf8
+
+=head1 NAME
+
+aft-mtp-mount - mount MTP based devices
+
+=head1 SYNOPSIS
+
+=over
+
+=item B<mounting>:
+
+B<aft-mtp-mount> [B<-vRC>] [B<-d> | B<-o> debug] [B<-D> I<name>] I<mountpoint>
+
+=item B<unmounting>:
+
+B<fusermount> B<-u> I<mountpoint>
+
+=back
+
+=head1 DESCRIPTION
+
+B<aft-mtp-mount> is a FUSE wrapper (if you prefer mounting your device),
+supporting partial read/writes, allowing instant access to your files.
+
+=head1 OPTIONS
+
+=over
+
+=item B<-R>
+
+Reset device.
+
+=item B<-C>
+
+Do not claim USB interface.
+
+=item B<-d>, B<-o> debug
+
+Show MTP debug output.
+
+=item B<-D> I<name>
+
+Filter by manufacturer/model/serial.
+
+=item B<-v>
+
+Verbose output.
+
+=back
+
+=head1 SEE ALSO
+
+L<android-file-transfer(1)>, L<aft-mtp-cli(1)>
+
+=head1 AUTHOR
+
+B<aft-mtp-mount> is part of B<android-file-transfer> written by Vladimir
+Menshakov L<mailto:vladimir.menshakov@gmail.com>.
+
+This manual page was written by Alexandr Savca
+L<mailto:alexandr.savca89@gmail.com>.
+
+=cut
