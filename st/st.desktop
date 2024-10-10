@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=st
+Comment=Terminal emulator for X with vim-like interface
+Exec=st
+Terminal=false
+Type=Application
+Icon=gnome-terminal
+Categories=System;TerminalEmulator;

@@ -1,11 +1,12 @@
-# Description: Terminal emulator for X (zeppe-lin fork)
+# Description: Terminal emulator for X (Zeppe-Lin fork)
 # URL:         https://github.com/zeppe-lin/st
 # Depends on:  fontconfig freetype xorg-libx11 xorg-libxext xorg-libxft
 
 name=st
-version=0.8.4z1-9771f17
-release=2
-source=https://github.com/zeppe-lin/st/archive/${version#*-}/st-$version.tar.gz
+version=0.8.5.0-0996aba
+release=1
+source="https://github.com/zeppe-lin/st/archive/${version#*-}/st-$version.tar.gz
+	st.desktop"
 
 build() {
 	cd st-${version#*-}*
@@ -23,4 +24,7 @@ build() {
 	sed -ri '/^(C|LD)FLAGS/s/ = /+=/g' config.mk
 
 	make PREFIX=/usr DESTDIR=$PKG install
+
+	install -m 0644 -D $SRC/st.desktop \
+		$PKG/usr/share/applications/st.desktop
 }
