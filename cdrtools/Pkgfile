@@ -4,7 +4,7 @@
 
 name=cdrtools
 version=3.02a09
-release=1
+release=2
 source=https://downloads.sourceforge.net/$name/$name-$version.tar.bz2
 
 build() {
@@ -17,6 +17,8 @@ build() {
 	sed -i 's|INSDIR=.*|INSDIR=bin|'         rscsi/Makefile
 
 	export GMAKE_NOWARN=true
+
+	export CFLAGS="$CFLAGS -std=gnu89 -fno-strict-aliasing"
 
 	# parallel build is broken (cdda2wav)
 	make -j1 INS_BASE=/usr INS_RBASE=/ VERSION_OS="_zpln" LDOPTX="$LDFLAGS"
