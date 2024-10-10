@@ -5,8 +5,8 @@
 
 SSD=/sbin/start-stop-daemon
 PROG=/usr/lib/bluetooth/bluetoothd
-PID=/var/run/bluetoothd.pid
-#OPTS="-d"
+PID=/run/bluez/bluetoothd.pid
+OPTS="--experimental --kernel"
 
 case $1 in
 start)
