@@ -1,0 +1,45 @@
+# Description: Office productivity suite
+# URL:         https://www.libreoffice.org/
+# Depends on:  gtk3 freetype cups nss nspr krb5
+# Optional:    avahi qt5 sane
+
+name=libreoffice-bin
+version=24.8.2
+release=1
+source=https://mirrors.hostico.ro/tdf/libreoffice/stable/$version/rpm/x86_64/LibreOffice_${version}_Linux_x86-64_rpm.tar.gz
+
+build() {
+	cd LibreOffice*/RPMS
+
+	for RPM in *.rpm; do
+		case $RPM in
+		           *-firebird-*)  ;;
+		     *-report-builder-*)  ;;
+		          *-mediawiki-*)  ;;
+		       *-onlineupdate-*)  ;;
+		    *-kde-integration-*)  ;;
+		         *-postgresql-*)  ;;
+		          *-nlpsolver-*)  ;;
+		           *-ooofonts-*)  ;;
+		      *-ooolinguistic-*)  ;;
+		           *-ogltrans-*)  ;;
+		         *-javascript-*)  ;;
+		          *-beanshell-*)  ;;
+		            *-dict-es-*)  ;;
+		            *-dict-fr-*)  ;;
+		          *-dict-en-*|*)  bsdtar -p -C $PKG -xf "$RPM"  ;;
+		esac
+	done
+
+	find $PKG -type d -perm 700 -exec chmod 755 {} +
+
+	# clean up junk files
+	rm -rf $PKG/opt/libreoffice7.6/readmes
+	find $PKG -type f \(         \
+		   -name "README*"   \
+		-o -name "LICENSE*"  \
+		-o -name "NOTICE*"   \
+		-o -name "COPYING*"  \
+		\) -delete
+	find $PKG -name "wininst*.exe" -delete
+}
