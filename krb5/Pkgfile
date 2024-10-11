@@ -1,0 +1,54 @@
+# Description: Network Authentication Protocol
+# URL:         https://web.mit.edu/kerberos
+# Depends on:  e2fsprogs openssl
+# Optional:    keyutils openldap
+
+name=krb5
+version=1.21.3
+release=1
+source="https://kerberos.org/dist/krb5/${version%.*}/krb5-$version.tar.gz
+	rc.krb5"
+
+build() {
+	cd $name-$version/src
+
+	sed -i "/KRB5ROOT=/s/\/local//" util/ac_check_krb5.m4
+
+	pkgman isinst openldap && PKGMK_KRB5="$PKGMK_KRB5 --with-ldap"
+	pkgman isinst keyutils || PKGMK_KRB5="$PKGMK_KRB5 --without-keyutils"
+
+	./configure $PKGMK_KRB5          \
+		--prefix=/usr            \
+		--localstatedir=/var     \
+		--runstatedir=/run       \
+		--enable-shared          \
+		--disable-rpath          \
+		--disable-nls            \
+		--without-tcl            \
+		--with-system-et         \
+		--with-system-ss         \
+		--without-system-verto   \
+		--enable-dns-for-realm   \
+
+	make V=1
+	make DESTDIR=$PKG install
+
+	# move essential libs and the ksu binary to /lib resp. /bin
+	mkdir -p $PKG/bin $PKG/lib
+	mv $PKG/usr/bin/ksu                   $PKG/bin
+	mv $PKG/usr/lib/libkrb5.so.3*         $PKG/lib
+	mv $PKG/usr/lib/libk5crypto.so.3*     $PKG/lib
+	mv $PKG/usr/lib/libkrb5support.so.0*  $PKG/lib
+
+	ln -sf ../../lib/$(readlink $PKG/usr/lib/libkrb5.so)        $PKG/usr/lib/libkrb5.so
+	ln -sf ../../lib/$(readlink $PKG/usr/lib/libk5crypto.so)    $PKG/usr/lib/libk5crypto.so
+	ln -sf ../../lib/$(readlink $PKG/usr/lib/libkrb5support.so) $PKG/usr/lib/libkrb5support.so
+
+	install -m 0644 -Dt $PKG/usr/share/aclocal util/ac_check_krb5.m4
+
+	# service
+	install -m 0755 -D $SRC/rc.krb5 $PKG/etc/rc.d/krb5
+
+	# cleanup
+	rm -r $PKG/usr/share/examples $PKG/usr/share/man/cat* $PKG/run
+}
