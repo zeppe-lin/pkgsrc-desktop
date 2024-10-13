@@ -1,0 +1,22 @@
+# Description: Buuf Deuce icon theme
+# URL:         https://github.com/robson-66/Buuf
+# Depends on:  hicolor-icon-theme
+
+name=buuf-icon-theme
+version=20220927-ee032cb
+release=1
+source="https://github.com/robson-66/Buuf/archive/${version#*-}/$name-$version.tar.gz
+	icon-theme.cache"
+
+build() {
+	mkdir -p $PKG/usr/share/icons
+	mv Buuf-* $PKG/usr/share/icons/Buuf
+
+	sed -i '/^Inherits=Buuf/d' $PKG/usr/share/icons/Buuf/index.theme
+
+	install -m 0644 $SRC/icon-theme.cache $PKG/usr/share/icons/Buuf/
+
+	# remove junk
+	rm $PKG/usr/share/icons/Buuf/screenshot.jpg
+	rm $PKG/usr/share/icons/Buuf/README.md
+}
