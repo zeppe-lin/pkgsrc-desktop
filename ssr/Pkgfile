@@ -4,7 +4,7 @@
 
 name=ssr
 version=0.4.4
-release=1
+release=2
 source=ssr-$version.tar.gz::https://github.com/MaartenBaert/ssr/archive/$version.tar.gz
 
 build() {
@@ -18,9 +18,13 @@ build() {
 		-D WITH_PULSEAUDIO=off                  \
 		-D WITH_JACK=off                        \
 		-D WITH_V4L2=off                        \
+		-Wno-dev
 
 	ninja -C build -j ${JOBS:-1} -v
 	DESTDIR=$PKG ninja -C build install
+
+        # remove i18n entries
+        sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/*.desktop
 
 	# remove translations
 	rm -r $PKG/usr/share/simplescreenrecorder/translations
