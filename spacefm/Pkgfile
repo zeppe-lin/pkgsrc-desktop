@@ -1,0 +1,41 @@
+# Description: Multi-panel tabbed file manager
+# URL:         https://ignorantguru.github.io/spacefm/
+# Depends on:  ffmpegthumbnailer gtk
+
+name=spacefm
+version=1.0.6
+release=1
+source="$name-$version.tar.gz::https://github.com/IgnorantGuru/$name/archive/$version.tar.gz
+	0001-glibc-2.28-compatibility.patch
+	add_optional_close_last_tab.patch
+	drop-gnome-common-macros.patch
+	drop_spacefm-installer.patch
+	fix-ftbfs-gcc14.patch
+	fix-gcc10-fno-common.patch
+	fix-spelling-error.patch
+	fix_thumbnails.patch
+	update_desktop_files.patch"
+
+build() {
+	cd $name-$version
+
+	for f in $SRC/*.patch; do
+		patch -Np1 -i $f
+	done
+
+	export LINGUAS=' '
+
+	CONFIG_SHELL=/bin/bash \
+	./configure \
+		--prefix=/usr \
+		--with-gtk2 \
+		--disable-nls \
+		--disable-desktop-integration \
+
+	make V=1
+	make DESTDIR=$PKG install
+
+	# remove junk
+	#rm $PKG/usr/bin/spacefm-installer (disabled by patch)
+	rm -r $PKG/usr/share/doc
+}
