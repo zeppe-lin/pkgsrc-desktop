@@ -1,0 +1,32 @@
+From 82713bb0bd0a7f119397139ce363ba162d832875 Mon Sep 17 00:00:00 2001
+From: yut23 <yut23@gvljohnsons.com>
+Date: Sat, 28 Sep 2024 17:00:58 -0400
+Subject: [PATCH] Fix crash when unmounting volumes
+
+---
+ src/vfs/vfs-file-monitor.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+diff --git a/src/vfs/vfs-file-monitor.c b/src/vfs/vfs-file-monitor.c
+index 184ecc844..3ae694ee2 100644
+--- a/src/vfs/vfs-file-monitor.c
++++ b/src/vfs/vfs-file-monitor.c
+@@ -405,11 +405,17 @@ static void dispatch_event( VFSFileMonitor * monitor,
+     VFSFileMonitorCallbackEntry * cb;
+     VFSFileMonitorCallback func;
+     int i;
++    int num_callbacks;
+     /* Call the callback functions */
+     if ( monitor->callbacks && monitor->callbacks->len )
+     {
+         cb = ( VFSFileMonitorCallbackEntry* ) monitor->callbacks->data;
+-        for ( i = 0; i < monitor->callbacks->len; ++i )
++        /*
++          Store the number of callbacks beforehand, as monitor may be destroyed
++          during the last iteration
++        */
++        num_callbacks = monitor->callbacks->len;
++        for ( i = 0; i < num_callbacks; ++i )
+         {
+             func = cb[ i ].callback;
+             func( monitor, evt, file_name, cb[ i ].user_data );
