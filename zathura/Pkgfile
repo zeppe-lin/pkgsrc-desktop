@@ -4,7 +4,7 @@
 
 name=zathura
 version=0.5.8
-release=1
+release=2
 source="$name-$version.tar.gz::https://github.com/pwmt/$name/archive/refs/tags/$version.tar.gz
 	remove_gettext.patch"
 
@@ -37,5 +37,5 @@ build() {
 	rm -r $PKG/usr/share/fish $PKG/usr/share/zsh
 
 	# remove unnecessary dbus junk and icons for desktop file
-	rm -r $PKG/usr/share/dbus-1 $PKG/usr/share/icons
+	#rm -r $PKG/usr/share/dbus-1 $PKG/usr/share/icons
 }
