@@ -1,0 +1,39 @@
+Description: remove unneeded comparisons
+ Removes two instances of "warning: the comparison will always evaluate
+ as 'true' for the address of '...' will never be NULL [-Waddress]"
+Author: Ricardo Mones <mones@debian.org>
+Forwarded: no
+
+diff --git a/options.c b/options.c
+index 7257091..ce16676 100644
+--- a/options.c
++++ b/options.c
+@@ -174,24 +174,16 @@ get_options (int argc, char **argv)
+   if (strcmp (rc_file, "") == 0)
+     {
+       home = getenv ("HOME");
+-
+-      if (rc_file != NULL)
+-	{
+-	  strncpy (rc_file, home, sizeof (rc_file) - 20);
+-	  strncat (rc_file, "/.xbindkeysrc", 20);
+-	}
++      strncpy (rc_file, home, sizeof (rc_file) - 20);
++      strncat (rc_file, "/.xbindkeysrc", 20);
+     }
+ 
+ #ifdef GUILE_FLAG
+   if (strcmp (rc_guile_file, "") == 0)
+     {
+       home = getenv ("HOME");
+-
+-      if (rc_guile_file != NULL)
+-	{
+-	  strncpy (rc_guile_file, home, sizeof (rc_guile_file) - 20);
+-	  strncat (rc_guile_file, "/.xbindkeysrc.scm", 20);
+-	}
++      strncpy (rc_guile_file, home, sizeof (rc_guile_file) - 20);
++      strncat (rc_guile_file, "/.xbindkeysrc.scm", 20);
+     }
+ #endif
+ }

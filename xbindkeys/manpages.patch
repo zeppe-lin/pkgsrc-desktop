@@ -1,0 +1,31 @@
+Description: update homepage in man pages
+Bug-Debian: https://bugs.debian.org/640477
+Forwarded: not-needed
+Author: Joerg Jaspert <joerg@debian.org>
+
+diff --git a/xbindkeys.1 b/xbindkeys.1
+index a329cae..4bb12ad 100644
+--- a/xbindkeys.1
++++ b/xbindkeys.1
+@@ -172,7 +172,7 @@ If you find a bug, please send mail to <xbindkeys-devel@nongnu.org>
+ .LP
+ .SH "HOMEPAGE"
+ .nf
+-http://www.nongnu.org/xbindkeys/
++https://www.nongnu.org/xbindkeys/
+ .fi
+ 
+ .LP
+diff --git a/xbindkeys_show.1 b/xbindkeys_show.1
+index 09889f6..cc82970 100644
+--- a/xbindkeys_show.1
++++ b/xbindkeys_show.1
+@@ -24,7 +24,7 @@ If you find a bug, please send a mail to <hocwp@free.fr>
+ .LP
+ .SH "HOMEPAGE"
+ .nf
+-http://hocwp.free.fr/xbindkeys
++https://www.nongnu.org/xbindkeys/
+ .fi
+ 
+ .LP

@@ -1,0 +1,63 @@
+--- xbindkeys.1	2024-10-15 14:19:03.441862326 +0300
++++ xbindkeys.1	2024-10-15 14:18:52.056837363 +0300
+@@ -44,16 +44,6 @@ size and position of window with -k|-mk
+ \fB-n, --nodaemon\fP
+ don't start as daemon
+ 
+-.LP
+-If guile support has not been disabled:
+-.TP
+-\fB-dg, --defaults-guile\fP
+-Print a default guile configuration file
+-
+-.TP
+-\fB-fg, --file-guile\fP
+-Use an alternative guile configuration file
+-
+ .SH "XBINDKEYSRC"
+ XBindKeys default configuration file is at $HOME/.xbindkeysrc,
+ used only for one user.
+@@ -140,24 +130,6 @@ attention to them.
+ .nf
+   Control + b:2 + Release
+ 
+-.SH "SCHEME CONFIGURATION STYLE"
+-A scheme configuration can be used if guile support has not been disabled.
+-The standard configuration is loaded only if the scheme configuration is not
+-available.
+-.LP
+-For more details, please see here
+-.nf
+-  http://www.gnu.org/software/guile/guile.html
+-.LP
+-\fBNote: The guile configuration file is prefered for non trivial
+-configurations, for example double click, timed click or key combinations.\fP
+-.LP
+-The default location is ~/.xbindkeysrc.scm
+-.LP
+-Use xbindkeys --defaults-guile for more details.
+-.LP
+-And xbindkeys --defaults-guile > ~/.xbindkeysrc.scm to use this method.
+-
+ .SH "NOTE"
+ xbindkeys reloads the configuration file if modified.
+ Send a HUP signal to force reloading:
+@@ -186,18 +158,12 @@ Marcello Mathias Herreshoff for guile su
+ .nf
+ $HOME/.xbindkeysrc
+         The users configuration file.
+-.LP
+-$HOME/.xbindkeysrc.scm
+-        The users configuration file in scheme
+-        (if guile support has not been disabled).
+ .fi
+ 
+ .LP
+ .SH "SEE ALSO"
+ .nf
+ 
+-\fBxbindkeys_show\fP
+-    Utility for showing the actual keybinding with xbindkeys
+ \fBxmodmap(1x)\fP
+     Utility for modifying keymap & button mappings in X.
+ \fBxev(1x)\fP

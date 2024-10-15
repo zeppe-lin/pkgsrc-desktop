@@ -1,0 +1,31 @@
+# Description:  Bind keys to shell scripts in X
+# URL:          https://www.nongnu.org/xbindkeys/xbindkeys.html
+# Depends on:   xorg-libx11
+
+name=xbindkeys
+version=1.8.7
+release=1
+source="https://www.nongnu.org/$name/$name-$version.tar.gz
+	dupchecks.patch
+	examples.patch
+	manpages.patch
+	trueifs.patch
+	xbindkeys.1-no-guile.patch"
+
+build() {
+	patch -d $name-$version -Np1 -i $SRC/manpages.patch
+	patch -d $name-$version -Np1 -i $SRC/examples.patch
+	patch -d $name-$version -Np1 -i $SRC/dupchecks.patch
+	patch -d $name-$version -Np1 -i $SRC/trueifs.patch
+	patch -d $name-$version -Np0 -i $SRC/xbindkeys.1-no-guile.patch
+
+	mkdir build; cd build
+
+	../$name-$version/configure  \
+		--prefix=/usr        \
+		--disable-tk         \
+		--disable-guile      \
+
+	make V=1
+	make DESTDIR=$PKG install
+}

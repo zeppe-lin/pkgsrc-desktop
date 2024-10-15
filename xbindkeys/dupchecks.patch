@@ -1,0 +1,38 @@
+Description: check result of dup() calls
+ Removes two instances of "warning: ignoring return value of 'dup'
+ declared with attribute 'warn_unused_result' [-Wunused-result]"
+Author: Ricardo Mones <mones@debian.org>
+Forwarded: no
+
+diff --git a/xbindkeys.c b/xbindkeys.c
+index 5b1b86b..e1fcfb7 100644
+--- a/xbindkeys.c
++++ b/xbindkeys.c
+@@ -524,7 +524,7 @@ static void
+ start_as_daemon (void)
+ {
+   pid_t pid;
+-  int i;
++  int i, j;
+ 
+   pid = fork ();
+   if (pid < 0)
+@@ -554,8 +554,16 @@ start_as_daemon (void)
+     }
+ 
+   i = open ("/dev/null", O_RDWR);
+-  dup (i);
+-  dup (i);
++  j = dup (i);
++  if (j < 0)
++    {
++      perror ("Could not duplicate handle");
++    }
++  j = dup (i);
++  if (j < 0)
++    {
++      perror ("Could not duplicate handle again");
++    }
+ 
+ /*   umask (022); */
+ /*   chdir ("/tmp"); */

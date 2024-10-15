@@ -1,0 +1,335 @@
+Description: defaults file should only be examples
+Bug-Debian: https://bugs.debian.org/657965
+Forwarded: not-needed
+Author: Joerg Jaspert <joerg@debian.org>
+
+--- xbindkeys-1.8.6.orig/options.c
++++ xbindkeys-1.8.6/options.c
+@@ -300,12 +300,12 @@
+   printf ("  control+shift + q\n");
+   printf ("\n");
+   printf ("# set directly keycode (here control + f with my keyboard)\n");
+-  printf ("\"xterm\"\n");
+-  printf ("  c:41 + m:0x4\n");
++  printf ("#\"xterm\"\n");
++  printf ("#  c:41 + m:0x4\n");
+   printf ("\n");
+   printf ("# specify a mouse button\n");
+-  printf ("\"xterm\"\n");
+-  printf ("  control + b:2\n");
++  printf ("#\"xterm\"\n");
++  printf ("#  control + b:2\n");
+   printf ("\n");
+   printf ("#\"xterm -geom 50x20+20+20\"\n");
+   printf ("#   Shift+Mod2+alt + s\n");
+@@ -405,10 +405,10 @@
+   printf ("(xbindkey '(control shift q) \"xbindkeys_show\")\n");
+   printf ("\n");
+   printf (";; set directly keycode (here control + f with my keyboard)\n");
+-  printf ("(xbindkey '(\"m:0x4\" \"c:41\") \"xterm\")\n");
++  printf (";; (xbindkey '(\"m:0x4\" \"c:41\") \"xterm\")\n");
+   printf ("\n");
+   printf (";; specify a mouse button\n");
+-  printf ("(xbindkey '(control \"b:2\") \"xterm\")\n");
++  printf (";; (xbindkey '(control \"b:2\") \"xterm\")\n");
+   printf ("\n");
+   printf (";;(xbindkey '(shift mod2 alt s) \"xterm -geom 50x20+20+20\")\n");
+   printf ("\n");
+@@ -423,41 +423,41 @@
+   printf ("\n");
+   printf ("\n");
+   printf (";; Extra features\n");
+-  printf ("(xbindkey-function '(control a)\n");
+-  printf ("		   (lambda ()\n");
+-  printf ("		     (display \"Hello from Scheme!\")\n");
+-  printf ("		     (newline)))\n");
+-  printf ("\n");
+-  printf ("(xbindkey-function '(shift p)\n");
+-  printf ("		   (lambda ()\n");
+-  printf ("		     (run-command \"xterm\")))\n");
++  printf (";; (xbindkey-function '(control a)\n");
++  printf (";;      	   (lambda ()\n");
++  printf (";;      	     (display \"Hello from Scheme!\")\n");
++  printf (";;      	     (newline)))\n");
++  printf ("\n");
++  printf (";; (xbindkey-function '(shift p)\n");
++  printf (";;      	   (lambda ()\n");
++  printf (";;      	     (run-command \"xterm\")))\n");
+   printf ("\n");
+   printf ("\n");
+   printf (";; Double click test\n");
+-  printf ("(xbindkey-function '(control w)\n");
+-  printf ("		   (let ((count 0))\n");
+-  printf ("		     (lambda ()\n");
+-  printf ("		       (set! count (+ count 1))\n");
+-  printf ("		       (if (> count 1)\n");
+-  printf ("			   (begin\n");
+-  printf ("			    (set! count 0)\n");
+-  printf ("			    (run-command \"xterm\"))))))\n");
++  printf (";; (xbindkey-function '(control w)\n");
++  printf (";;      	   (let ((count 0))\n");
++  printf (";;      	     (lambda ()\n");
++  printf (";;      	       (set! count (+ count 1))\n");
++  printf (";;      	       (if (> count 1)\n");
++  printf (";;      		   (begin\n");
++  printf (";;      		    (set! count 0)\n");
++  printf (";;      		    (run-command \"xterm\"))))))\n");
+   printf ("\n");
+   printf (";; Time double click test:\n");
+   printf (";;  - short double click -> run an xterm\n");
+   printf (";;  - long  double click -> run an rxvt\n");
+-  printf ("(xbindkey-function '(shift w)\n");
+-  printf ("		   (let ((time (current-time))\n");
+-  printf ("			 (count 0))\n");
+-  printf ("		     (lambda ()\n");
+-  printf ("		       (set! count (+ count 1))\n");
+-  printf ("		       (if (> count 1)\n");
+-  printf ("			   (begin\n");
+-  printf ("			    (if (< (- (current-time) time) 1)\n");
+-  printf ("				(run-command \"xterm\")\n");
+-  printf ("				(run-command \"rxvt\"))\n");
+-  printf ("			    (set! count 0)))\n");
+-  printf ("		       (set! time (current-time)))))\n");
++  printf (";; (xbindkey-function '(shift w)\n");
++  printf (";;      	   (let ((time (current-time))\n");
++  printf (";;      		 (count 0))\n");
++  printf (";;      	     (lambda ()\n");
++  printf (";;      	       (set! count (+ count 1))\n");
++  printf (";;      	       (if (> count 1)\n");
++  printf (";;      		   (begin\n");
++  printf (";;      		    (if (< (- (current-time) time) 1)\n");
++  printf (";;      			(run-command \"xterm\")\n");
++  printf (";;      			(run-command \"rxvt\"))\n");
++  printf (";;      		    (set! count 0)))\n");
++  printf (";;      	       (set! time (current-time)))))\n");
+   printf ("\n");
+   printf ("\n");
+   printf (";; Chording keys test: Start differents program if only one key is\n");
+@@ -466,23 +466,23 @@
+   printf (";; If key2 is pressed start cmd-k2\n");
+   printf (";; If both are pressed start cmd-k1-k2 or cmd-k2-k1 following the\n");
+   printf (";;   release order\n");
+-  printf ("(define (define-chord-keys key1 key2 cmd-k1 cmd-k2 cmd-k1-k2 cmd-k2-k1)\n");
+-  printf ("    \"Define chording keys\"\n");
+-  printf ("  (let ((k1 #f) (k2 #f))\n");
+-  printf ("    (xbindkey-function key1 (lambda () (set! k1 #t)))\n");
+-  printf ("    (xbindkey-function key2 (lambda () (set! k2 #t)))\n");
+-  printf ("    (xbindkey-function (cons 'release key1)\n");
+-  printf ("		       (lambda ()\n");
+-  printf ("			 (if (and k1 k2)\n");
+-  printf ("			     (run-command cmd-k1-k2)\n");
+-  printf ("			     (if k1 (run-command cmd-k1)))\n");
+-  printf ("			 (set! k1 #f) (set! k2 #f)))\n");
+-  printf ("    (xbindkey-function (cons 'release key2)\n");
+-  printf ("		       (lambda ()\n");
+-  printf ("			 (if (and k1 k2)\n");
+-  printf ("			     (run-command cmd-k2-k1)\n");
+-  printf ("			     (if k2 (run-command cmd-k2)))\n");
+-  printf ("			 (set! k1 #f) (set! k2 #f)))))\n");
++  printf (";; (define (define-chord-keys key1 key2 cmd-k1 cmd-k2 cmd-k1-k2 cmd-k2-k1)\n");
++  printf (";;     \"Define chording keys\"\n");
++  printf (";;   (let ((k1 #f) (k2 #f))\n");
++  printf (";;     (xbindkey-function key1 (lambda () (set! k1 #t)))\n");
++  printf (";;     (xbindkey-function key2 (lambda () (set! k2 #t)))\n");
++  printf (";;     (xbindkey-function (cons 'release key1)\n");
++  printf (";;      	       (lambda ()\n");
++  printf (";;      		 (if (and k1 k2)\n");
++  printf (";;      		     (run-command cmd-k1-k2)\n");
++  printf (";;      		     (if k1 (run-command cmd-k1)))\n");
++  printf (";;      		 (set! k1 #f) (set! k2 #f)))\n");
++  printf (";;     (xbindkey-function (cons 'release key2)\n");
++  printf (";;      	       (lambda ()\n");
++  printf (";;      		 (if (and k1 k2)\n");
++  printf (";;      		     (run-command cmd-k2-k1)\n");
++  printf (";;      		     (if k2 (run-command cmd-k2)))\n");
++  printf (";;      		 (set! k1 #f) (set! k2 #f)))))\n");
+   printf ("\n");
+   printf ("\n");
+   printf (";; Example:\n");
+@@ -491,13 +491,13 @@
+   printf (";;   Shift + b:1 then Shift + b:3  start gv\n");
+   printf (";;   Shift + b:3 then Shift + b:1  start xpdf\n");
+   printf ("\n");
+-  printf ("(define-chord-keys '(shift \"b:1\") '(shift \"b:3\")\n");
+-  printf ("  \"xterm\" \"rxvt\" \"gv\" \"xpdf\")\n");
++  printf (";; (define-chord-keys '(shift \"b:1\") '(shift \"b:3\")\n");
++  printf (";;   \"xterm\" \"rxvt\" \"gv\" \"xpdf\")\n");
+   printf ("\n");
+   printf (";; Here the release order have no importance\n");
+   printf (";; (the same program is started in both case)\n");
+-  printf ("(define-chord-keys '(alt \"b:1\") '(alt \"b:3\")\n");
+-  printf ("  \"gv\" \"xpdf\" \"xterm\" \"xterm\")\n");
++  printf (";; (define-chord-keys '(alt \"b:1\") '(alt \"b:3\")\n");
++  printf (";;   \"gv\" \"xpdf\" \"xterm\" \"xterm\")\n");
+   printf ("\n");
+   printf ("\n");
+   printf (";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n");
+--- xbindkeys-1.8.6.orig/xbindkeysrc
++++ xbindkeys-1.8.6/xbindkeysrc
+@@ -43,12 +43,12 @@
+   control+shift + q
+ 
+ # set directly keycode (here control + f with my keyboard)
+-"xterm"
+-  c:41 + m:0x4
++#"xterm"
++#  c:41 + m:0x4
+ 
+ # specify a mouse button
+-"xterm"
+-  control + b:2
++#"xterm"
++#  control + b:2
+ 
+ #"xterm -geom 50x20+20+20"
+ #   Shift+Mod2+alt + s
+--- xbindkeys-1.8.6.orig/xbindkeysrc.scm
++++ xbindkeys-1.8.6/xbindkeysrc.scm
+@@ -67,15 +67,15 @@
+ (xbindkey '(control shift q) "xbindkeys_show")
+ 
+ ;; set directly keycode (here control + f with my keyboard)
+-(xbindkey '("m:0x4" "c:41") "xterm")
++;; (xbindkey '("m:0x4" "c:41") "xterm")
+ 
+ ;; specify a mouse button
+-(xbindkey '(control "b:2") "xterm")
++;; (xbindkey '(control "b:2") "xterm")
+ 
+ ;;(xbindkey '(shift mod2 alt s) "xterm -geom 50x20+20+20")
+ 
+ ;; set directly keycode (control+alt+mod2 + f with my keyboard)
+-(xbindkey '(alt "m:4" mod2 "c:0x29") "xterm")
++;; (xbindkey '(alt "m:4" mod2 "c:0x29") "xterm")
+ 
+ ;; Control+Shift+a  release event starts rxvt
+ ;;(xbindkey '(release control shift a) "rxvt")
+@@ -85,41 +85,41 @@
+ 
+ 
+ ;; Extra features
+-(xbindkey-function '(control a)
+-		   (lambda ()
+-		     (display "Hello from Scheme!")
+-		     (newline)))
+-
+-(xbindkey-function '(shift p)
+-		   (lambda ()
+-		     (run-command "xterm")))
++;; (xbindkey-function '(control a)
++;; 		   (lambda ()
++;; 		     (display "Hello from Scheme!")
++;; 		     (newline)))
++
++;; (xbindkey-function '(shift p)
++;; 		   (lambda ()
++;; 		     (run-command "xterm")))
+ 
+ 
+ ;; Double click test
+-(xbindkey-function '(control w)
+-		   (let ((count 0))
+-		     (lambda ()
+-		       (set! count (+ count 1))
+-		       (if (> count 1)
+-			   (begin
+-			    (set! count 0)
+-			    (run-command "xterm"))))))
++;; (xbindkey-function '(control w)
++;; 		   (let ((count 0))
++;; 		     (lambda ()
++;; 		       (set! count (+ count 1))
++;; 		       (if (> count 1)
++;; 			   (begin
++;; 			    (set! count 0)
++;; 			    (run-command "xterm"))))))
+ 
+ ;; Time double click test:
+ ;;  - short double click -> run an xterm
+ ;;  - long  double click -> run an rxvt
+-(xbindkey-function '(shift w)
+-		   (let ((time (current-time))
+-			 (count 0))
+-		     (lambda ()
+-		       (set! count (+ count 1))
+-		       (if (> count 1)
+-			   (begin
+-			    (if (< (- (current-time) time) 1)
+-				(run-command "xterm")
+-				(run-command "rxvt"))
+-			    (set! count 0)))
+-		       (set! time (current-time)))))
++;; (xbindkey-function '(shift w)
++;; 		   (let ((time (current-time))
++;; 			 (count 0))
++;; 		     (lambda ()
++;; 		       (set! count (+ count 1))
++;; 		       (if (> count 1)
++;; 			   (begin
++;; 			    (if (< (- (current-time) time) 1)
++;; 				(run-command "xterm")
++;; 				(run-command "rxvt"))
++;; 			    (set! count 0)))
++;; 		       (set! time (current-time)))))
+ 
+ 
+ ;; Chording keys test: Start differents program if only one key is
+@@ -128,23 +128,23 @@
+ ;; If key2 is pressed start cmd-k2
+ ;; If both are pressed start cmd-k1-k2 or cmd-k2-k1 following the
+ ;;   release order
+-(define (define-chord-keys key1 key2 cmd-k1 cmd-k2 cmd-k1-k2 cmd-k2-k1)
+-    "Define chording keys"
+-  (let ((k1 #f) (k2 #f))
+-    (xbindkey-function key1 (lambda () (set! k1 #t)))
+-    (xbindkey-function key2 (lambda () (set! k2 #t)))
+-    (xbindkey-function (cons 'release key1)
+-		       (lambda ()
+-			 (if (and k1 k2)
+-			     (run-command cmd-k1-k2)
+-			     (if k1 (run-command cmd-k1)))
+-			 (set! k1 #f) (set! k2 #f)))
+-    (xbindkey-function (cons 'release key2)
+-		       (lambda ()
+-			 (if (and k1 k2)
+-			     (run-command cmd-k2-k1)
+-			     (if k2 (run-command cmd-k2)))
+-			 (set! k1 #f) (set! k2 #f)))))
++;; (define (define-chord-keys key1 key2 cmd-k1 cmd-k2 cmd-k1-k2 cmd-k2-k1)
++;;     "Define chording keys"
++;;   (let ((k1 #f) (k2 #f))
++;;     (xbindkey-function key1 (lambda () (set! k1 #t)))
++;;     (xbindkey-function key2 (lambda () (set! k2 #t)))
++;;     (xbindkey-function (cons 'release key1)
++;; 		       (lambda ()
++;; 			 (if (and k1 k2)
++;; 			     (run-command cmd-k1-k2)
++;; 			     (if k1 (run-command cmd-k1)))
++;; 			 (set! k1 #f) (set! k2 #f)))
++;;     (xbindkey-function (cons 'release key2)
++;; 		       (lambda ()
++;; 			 (if (and k1 k2)
++;; 			     (run-command cmd-k2-k1)
++;; 			     (if k2 (run-command cmd-k2)))
++;; 			 (set! k1 #f) (set! k2 #f)))))
+ 
+ 
+ ;; Example:
+@@ -153,13 +153,13 @@
+ ;;   Shift + b:1 then Shift + b:3  start gv
+ ;;   Shift + b:3 then Shift + b:1  start xpdf
+ 
+-(define-chord-keys '(shift "b:1") '(shift "b:3")
+-  "xterm" "rxvt" "gv" "xpdf")
++;; (define-chord-keys '(shift "b:1") '(shift "b:3")
++;;   "xterm" "rxvt" "gv" "xpdf")
+ 
+ ;; Here the release order have no importance
+ ;; (the same program is started in both case)
+-(define-chord-keys '(alt "b:1") '(alt "b:3")
+-  "gv" "xpdf" "xterm" "xterm")
++;; (define-chord-keys '(alt "b:1") '(alt "b:3")
++;;   "gv" "xpdf" "xterm" "xterm")
+ 
+ 
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
