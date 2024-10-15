@@ -4,7 +4,7 @@
 
 name=coolreader
 version=3.2.59
-release=1
+release=2
 source=https://github.com/buggins/$name/archive/cr$version/$name-$version.tar.gz
 
 build() {
@@ -22,6 +22,9 @@ build() {
 
 	ninja -C build -j ${JOBS:-1} -v
 	DESTDIR=$PKG ninja -C build install
+
+	# remove i18n entries
+	sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/cr3.desktop
 
 	# remove junk
 	rm -r $PKG/usr/share/doc
