@@ -1,6 +1,6 @@
 # Description: E-book reader using crengine-ng
 # URL:         https://gitlab.com/coolreader-ng/crqt-ng
-# Depends on:  crengine-ng qt5
+# Depends on:  crengine-ng desktop-file-utils qt5
 
 name=crqt-ng
 version=1.0.14
