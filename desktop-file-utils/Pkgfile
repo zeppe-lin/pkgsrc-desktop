@@ -4,10 +4,13 @@
 
 name=desktop-file-utils
 version=0.27
-release=1
-source=http://freedesktop.org/software/$name/releases/$name-$version.tar.xz
+release=2
+source="http://freedesktop.org/software/$name/releases/$name-$version.tar.xz
+	manpages.patch"
 
 build() {
+	patch -d $name-$version -Np1 -i $SRC/manpages.patch
+
 	meson setup build $name-$version  \
 		--prefix=/usr             \
 		--buildtype=plain         \
