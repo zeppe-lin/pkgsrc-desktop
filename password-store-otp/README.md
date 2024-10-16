@@ -1,16 +1,20 @@
 README password-store-otp
 
+---
+
 
 TIMESYNC
 ========
 
 It would not be amiss to recall that time based OTPs are based off of the
 current time.  So, make sure the time is accurate on your host, or the time
-based OTPs will not validate.  For example, chrony package can synchronize
-your clock:
+based OTPs will not validate.  For example, chrony package can synchronize your
+clock:
 
-	sudo pkgman install --deps --group chrony
-	sudo /etc/rc.d/chronyd start
+    sudo pkgman install --deps --group chrony
+    sudo /etc/rc.d/chronyd start
 
+
+---
 
 End of file.
