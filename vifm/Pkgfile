@@ -4,7 +4,7 @@
 
 name=vifm
 version=0.13
-release=2
+release=3
 source=https://prdownloads.sourceforge.net/$name/$name-$version.tar.bz2
 
 build() {
@@ -23,6 +23,8 @@ build() {
 
 	make V=1
 	make DESTDIR="$PKG" install
+
+	sed -i '/^TryExec=/d' $PKG/usr/share/applications/*.desktop
 
 	# remove zsh and fish completion
 	rm -r $PKG/usr/share/zsh $PKG/usr/share/fish
