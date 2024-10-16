@@ -4,7 +4,7 @@
 
 name=crqt-ng
 version=1.0.14
-release=1
+release=2
 source=https://gitlab.com/coolreader-ng/$name/-/archive/$version/$name-$version.tar.gz
 
 build() {
