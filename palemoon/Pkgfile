@@ -1,6 +1,6 @@
 # Description: Pale Moon is what FireFox Web Browser ought to have been
 # URL:         https://www.palemoon.org/
-# Depends on:  alsa-lib autoconf-2.13 gtk python unzip xorg-libxdamage xorg-libxt yasm zip
+# Depends on:  alsa-lib autoconf-2.13 desktop-file-utils gtk python unzip xorg-libxt yasm zip
 
 name=palemoon
 version=33.4.0.1
