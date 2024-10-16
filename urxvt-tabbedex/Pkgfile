@@ -1,0 +1,14 @@
+# Description: Tabbed plugin for rxvt-unicode with many enhancements
+# URL:         https://github.com/mina86/urxvt-tabbedex
+# Depends on:  rxvt-unicode perl
+
+name=urxvt-tabbedex
+version=22.32
+release=1
+source=https://github.com/mina86/$name/releases/download/v$version/$name-$version.tar.bz2
+
+build() {
+	# don't generate docs
+	sed -i '/^install: /s/.*/install: man/' $name-$version/Makefile
+	make -C $name-$version DOCDIR= PREFIX=/usr DESTDIR=$PKG install
+}

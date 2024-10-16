@@ -1,0 +1,13 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/lib/
+drwxr-xr-x	root/root	usr/lib/urxvt/
+drwxr-xr-x	root/root	usr/lib/urxvt/perl/
+-rw-r--r--	root/root	usr/lib/urxvt/perl/tabbedex
+-rw-r--r--	root/root	usr/lib/urxvt/tabbedex-command-runner.sample
+-rwxr-xr-x	root/root	usr/lib/urxvt/tabbedex-pgid-cd
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/man/
+drwxr-xr-x	root/root	usr/share/man/man1/
+-rw-r--r--	root/root	usr/share/man/man1/tabbedex-command-runner.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/tabbedex-pgid-cd.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/urxvt-tabbedex.1.gz
