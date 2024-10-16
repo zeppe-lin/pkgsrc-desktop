@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Xpdf
+Comment=X PDF Viewer
+Exec=xpdf %f
+Icon=xpdf
+Categories=Office;Viewer;
+Keywords=pdf;viewer;
+MimeType=application/pdf;

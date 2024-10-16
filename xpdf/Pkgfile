@@ -1,0 +1,49 @@
+# Description: PDF viewer
+# URL:         https://www.xpdfreader.com/
+# Depends on:  desktop-file-utils qt5
+# Optional:    cups paper
+
+name=xpdf
+version=4.04
+release=1
+source="https://dl.xpdfreader.com/old/xpdf-$version.tar.gz
+        xpdf-automagic.patch
+        xpdf-visibility.patch
+        xpdf-shared-libs.patch
+	xpdf.desktop
+	xpdf.png"
+
+build() {
+	CXXFLAGS="$CXXFLAGS -Wno-deprecated -Wno-deprecated-declarations"
+
+	patch -d xpdf-$version -Np1 -i $SRC/xpdf-automagic.patch
+	patch -d xpdf-$version -Np1 -i $SRC/xpdf-visibility.patch
+	patch -d xpdf-$version -Np1 -i $SRC/xpdf-shared-libs.patch
+
+	# WITH_LIBPAPER="$(prt-get isinst paper >/dev/null && echo ON || echo OFF)" 
+	# XPDFWIDGET_PRINTING="$(prt-get isinst cups >/dev/null && echo ON || echo OFF)"
+
+	# WITH_LIBPAPER=OFF: otherwise requires paper
+	# XPDFWIDGET_PRINTING=OFF: otherwise requires cups
+	cmake -S xpdf-$version -B build -G Ninja        \
+		-D A4_PAPER=ON                          \
+		-D CMAKE_BUILD_TYPE=Release             \
+		-D CMAKE_INSTALL_LIBDIR=lib             \
+		-D CMAKE_INSTALL_PREFIX=/usr            \
+		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS"  \
+		-D WITH_LIBPAPER=OFF                    \
+		-D XPDFWIDGET_PRINTING=OFF              \
+		-Wno-dev
+
+	ninja -C build -j ${JOBS:-1} -v
+	DESTDIR=$PKG ninja -C build install
+
+	install -m 0644 -Dt $PKG/usr/share/applications/ $SRC/xpdf.desktop
+	install -m 0644 -Dt $PKG/usr/share/pixmaps/      $SRC/xpdf.png
+
+	# conflicts with poppler
+	for f in detach fonts images info tohtml toppm tops totext; do
+		rm -v $PKG/usr/bin/pdf$f
+		rm -v $PKG/usr/share/man/man1/pdf$f.1
+	done
+}
