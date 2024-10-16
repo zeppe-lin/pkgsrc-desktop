@@ -1,6 +1,6 @@
 # Description: PDF support for zathura using poppler rendering library
 # URL:         https://pwmt.org/projects/zathura-pdf-poppler
-# Depends on:  poppler zathura
+# Depends on:  desktop-file-utils poppler zathura
 
 name=zathura-pdf-poppler
 version=0.3.3
