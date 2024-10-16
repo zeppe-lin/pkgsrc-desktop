@@ -1,6 +1,6 @@
 # Description: GTK+ based simple text editor
 # URL:         http://tarot.freeshell.org/leafpad
-# Depends on:  gtk
+# Depends on:  desktop-file-utils gtk
 
 name=leafpad
 version=0.8.19
