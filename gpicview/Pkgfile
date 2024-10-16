@@ -5,16 +5,16 @@
 
 name=gpicview
 version=0.2.6
-release=1
+release=2
 source="$name-$version.tar.gz::https://github.com/lxde/$name/archive/refs/tags/$version.tar.gz
-	10.patch"
+	copy-to-clipboard.patch"
 
 build() {
+	# allow copy to clipboard using Ctrl+C
+	patch -d $name-$version -Np1 -i $SRC/copy-to-clipboard.patch
+
 	# disable i18n
 	export LINGUAS=' '
-
-	# allow copy to clipboard using Ctrl+C
-	patch -d $name-$version -p1 -i $SRC/10.patch
 
 	mkdir build; cd build
 
