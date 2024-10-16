@@ -5,7 +5,7 @@
 
 name=libreoffice-bin
 version=24.8.2
-release=1
+release=2
 source=https://mirrors.hostico.ro/tdf/libreoffice/stable/$version/rpm/x86_64/LibreOffice_${version}_Linux_x86-64_rpm.tar.gz
 
 build() {
@@ -31,9 +31,13 @@ build() {
 		esac
 	done
 
+	# fix perms
 	find $PKG -type d -perm 700 -exec chmod 755 {} +
 
-	# clean up junk files
+	# remove i18n entries
+	sed -ri '/\[.+\]=/d' $PKG/opt/libreoffice*/share/xdg/*.desktop
+
+	# remove junk files
 	rm -rf $PKG/opt/libreoffice7.6/readmes
 	find $PKG -type f \(         \
 		   -name "README*"   \
