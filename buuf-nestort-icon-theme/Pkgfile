@@ -1,0 +1,28 @@
+# Description: Buuf Nestort aka Buuf For Many Desktops icon set
+# URL:         https://git.disroot.org/eudaimon/buuf-nestort
+# Depends on:  hicolor-icon-theme gnome-icon-theme
+
+name=buuf-nestort-icon-theme
+version=2.0-48cbf7b
+_commit=48cbf7b0c79c15055d25af9bfeb3d927deb5b808
+release=1
+source="$name-$version.tar.gz::https://git.disroot.org/eudaimon/buuf-nestort/archive/$_commit.tar.gz
+	icon-theme.cache"
+
+build() {
+	# remove junk before installing
+	rm buuf-nestort/*.sh buuf-nestort/*.md buuf-nestort/.git*
+
+	mkdir -p $PKG/usr/share/icons
+	mv buuf-nestort $PKG/usr/share/icons/Buuf-Nestort
+
+	#sed -i '/^Inherits=.*/d' $PKG/usr/share/icons/Buuf-Nestort/index.theme
+	sed -i '/^Inherits=/s/oxygen,//;s/,breeze//' \
+		$PKG/usr/share/icons/Buuf-Nestort/index.theme
+
+	# fix long-long-long name
+	sed -i 's/Name=Buuf For Many Desktops/Name=Buuf-Nestort/' \
+		$PKG/usr/share/icons/Buuf-Nestort/index.theme
+
+	install -m 0644 $SRC/icon-theme.cache $PKG/usr/share/icons/Buuf-Nestort/
+}
