@@ -15,6 +15,7 @@ build() {
 		cp -v $PKGMK_ROOT/config.h .
 	fi
 
+	# pick up system flags
 	sed -i "/^CFLAGS/s/-Os/$CFLAGS/" config.mk
 
 	make PREFIX=/usr DESTDIR=$PKG install
