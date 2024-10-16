@@ -1,6 +1,6 @@
 # Description: Multi-panel tabbed file manager
 # URL:         https://gitlab.com/skidoo/zzzfm
-# Depends on:  ffmpegthumbnailer gtk ktsuss
+# Depends on:  desktop-file-utils ffmpegthumbnailer gtk ktsuss
 # Optional:    ktsuss
 
 name=zzzfm
