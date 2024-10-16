@@ -1,0 +1,72 @@
+diff '--color=auto' -pruN zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7/data/ui/prefdlg2.ui zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7.new/data/ui/prefdlg2.ui
+--- zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7/data/ui/prefdlg2.ui	2021-06-01 00:10:28.000000000 +0300
++++ zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7.new/data/ui/prefdlg2.ui	2024-10-16 10:13:50.270747174 +0300
+@@ -165,7 +165,7 @@
+     </columns>
+     <data>
+       <row>
+-        <col id="0">/usr/bin/gksu</col>
++        <col id="0">/usr/bin/ktsuss</col>
+       </row>
+       <row>
+         <col id="0">/bin/su</col>
+diff '--color=auto' -pruN zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7/data/ui/prefdlg.ui zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7.new/data/ui/prefdlg.ui
+--- zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7/data/ui/prefdlg.ui	2021-06-01 00:10:28.000000000 +0300
++++ zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7.new/data/ui/prefdlg.ui	2024-10-16 10:13:50.269747172 +0300
+@@ -165,7 +165,7 @@
+     </columns>
+     <data>
+       <row>
+-        <col id="0">/usr/bin/gksu</col>
++        <col id="0">/usr/bin/ktsuss</col>
+       </row>
+       <row>
+         <col id="0">/bin/su</col>
+diff '--color=auto' -pruN zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7/etc/xdg/session zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7.new/etc/xdg/session
+--- zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7/etc/xdg/session	2021-06-01 00:10:28.000000000 +0300
++++ zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7.new/etc/xdg/session	2024-10-16 10:13:50.272747178 +0300
+@@ -302,7 +302,7 @@ panel2_detcol_datecreated-x=6
+ panel3_detcol_datecreated-x=6
+ panel4_detcol_datecreated-x=6
+ su_command-s=/usr/bin/su
+-gsu_command-s=/usr/bin/gksu
++gsu_command-s=/usr/bin/ktsuss
+ editor-s=geany %F
+ editor-b=2
+ book_new-key=100
+diff '--color=auto' -pruN zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7/src/settings.c zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7.new/src/settings.c
+--- zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7/src/settings.c	2021-06-01 00:10:28.000000000 +0300
++++ zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7.new/src/settings.c	2024-10-16 10:13:50.290747213 +0300
+@@ -2547,7 +2547,7 @@ void read_root_settings() {
+ //        howdy bub     this well-intended warning is firing based on an unreasonable expectation that the named prog will be    {su,sudo}[-]as-[-]root
+ //                       User can only select from picklist in app.
+ //                       Can a badActor inject /path/to/badprog into user's "session" file?
+-//                       Yes, can do...  ref  lines "su_command-s=/bin/su"  and  "gsu_command-s=/usr/bin/gksu"
++//                       Yes, can do...  ref  lines "su_command-s=/bin/su"  and  "gsu_command-s=/usr/bin/ktsuss"
+ //                       ...and no warning here, nor action taken in response to such warning, can thwart prospective session file tampering.
+     if ( !file )
+     {                    //      so why even bother testing existence of the file?
+diff '--color=auto' -pruN zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7/src/settings.h zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7.new/src/settings.h
+--- zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7/src/settings.h	2021-06-01 00:10:28.000000000 +0300
++++ zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7.new/src/settings.h	2024-10-16 10:13:50.290747213 +0300
+@@ -334,7 +334,7 @@ static const char* su_commands[] = // or
+ 
+ static const char* gsu_commands[] = // order and contents must match prefdlg.ui
+ {
+-    "/usr/bin/gksu",
++    "/usr/bin/ktsuss",
+     "/bin/su",
+     "/usr/bin/sudo"
+ };
+diff '--color=auto' -pruN zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7/src/vfs/vfs-file-task.c zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7.new/src/vfs/vfs-file-task.c
+--- zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7/src/vfs/vfs-file-task.c	2021-06-01 00:10:28.000000000 +0300
++++ zzzfm-c7e340fdeafc64229d5a6113ffbb27dad03efaa7.new/src/vfs/vfs-file-task.c	2024-10-16 10:13:50.295747222 +0300
+@@ -1677,7 +1677,7 @@ static void vfs_file_task_exec( char* sr
+             argv[a++] = g_strdup( task->exec_as_user );
+         }
+ 
+-        if ( !strcmp( use_su, "/usr/bin/gksu" ) ) {
++        if ( !strcmp( use_su, "/usr/bin/ktsuss" ) ) {
+             single_arg = TRUE;
+         }
+ 

@@ -1,0 +1,36 @@
+# Description: Multi-panel tabbed file manager
+# URL:         https://gitlab.com/skidoo/zzzfm
+# Depends on:  ffmpegthumbnailer gtk ktsuss
+# Optional:    ktsuss
+
+name=zzzfm
+version=1.0.7.5-c7e340f
+_commit=c7e340fdeafc64229d5a6113ffbb27dad03efaa7
+release=1
+source="$name-$version.tar.gz::https://gitlab.com/skidoo/zzzfm/-/archive/$_commit/zzzfm-$_commit.tar.gz
+	gksu-ktsuss.patch"
+
+build() {
+	# switch from default gksu to ktsuss
+	patch -d $name-$_commit -Np1 -i $SRC/gksu-ktsuss.patch
+
+	export LINGUAS=' '
+	export CONFIG_SHELL=/bin/bash
+
+	# fix build with gcc 14
+	export CFLAGS="$CFLAGS -Wno-incompatible-pointer-types"
+
+	mkdir build; cd build
+
+	NOCONFIGURE=1 ../$name-$_commit/autogen.sh
+	../$name-$_commit/configure  \
+		--prefix=/usr        \
+		--disable-nls        \
+		--with-gtk2          \
+
+	make V=1
+	make DESTDIR=$PKG install
+
+	# remove junk
+	rm -r $PKG/usr/share/doc
+}
