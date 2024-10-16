@@ -1,6 +1,6 @@
 # Description: DJVU plugin for zathura
 # URL:         https://pwmt.org/projects/zathura-djvu
-# Depends on:  djvulibre zathura
+# Depends on:  desktop-file-utils djvulibre zathura
 
 name=zathura-djvu
 version=0.2.10
