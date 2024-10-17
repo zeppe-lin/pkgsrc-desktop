@@ -6,11 +6,13 @@
 name=zzzfm
 version=1.0.7.5-c7e340f
 _commit=c7e340fdeafc64229d5a6113ffbb27dad03efaa7
-release=1
+release=2
 source="$name-$version.tar.gz::https://gitlab.com/skidoo/zzzfm/-/archive/$_commit/zzzfm-$_commit.tar.gz
+	fix-crash-on-umount.patch
 	gksu-ktsuss.patch"
 
 build() {
+	patch -d $name-$_commit -Np1 -i $SRC/fix-crash-on-umount.patch
 	# switch from default gksu to ktsuss
 	patch -d $name-$_commit -Np1 -i $SRC/gksu-ktsuss.patch
 
