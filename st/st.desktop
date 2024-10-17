@@ -1,8 +1,8 @@
 [Desktop Entry]
-Name=st Terminal Emulator
-Comment=Terminal emulator for X with vim-like interface
+Name=Suckless Terminal Emulator
+Comment=Terminal emulator for X
 Exec=st
 Terminal=false
 Type=Application
-Icon=gnome-terminal
+Icon=terminal
 Categories=System;TerminalEmulator;
