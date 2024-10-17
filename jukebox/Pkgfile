@@ -3,7 +3,7 @@
 # Depends on:  p5-gtk2 p5-net-dbus
 
 name=jukebox
-version=1.1.16z1-5529a28
+version=1.1.16z1-297d4f1
 release=1
 source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
 

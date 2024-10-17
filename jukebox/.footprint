@@ -7,6 +7,7 @@ drwxr-xr-x	root/root	usr/share/applications/
 -rw-r--r--	root/root	usr/share/applications/jukebox.desktop
 drwxr-xr-x	root/root	usr/share/jukebox/
 -rw-r--r--	root/root	usr/share/jukebox/.gitignore
+-rw-r--r--	root/root	usr/share/jukebox/Makefile.orig
 -rw-r--r--	root/root	usr/share/jukebox/apeheader.pm
 -rw-r--r--	root/root	usr/share/jukebox/config.mk
 -rw-r--r--	root/root	usr/share/jukebox/flacheader.pm
