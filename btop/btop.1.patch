@@ -1,0 +1,29 @@
+diff '--color=auto' -pruN btop.orig/CMakeLists.txt btop/CMakeLists.txt
+--- btop.orig/CMakeLists.txt	2024-04-30 05:58:39.008844596 +0300
++++ btop/CMakeLists.txt	2024-04-30 06:03:51.377135857 +0300
+@@ -211,19 +211,19 @@ elseif(CMAKE_SYSTEM_NAME STREQUAL "OpenB
+ endif()
+ 
+ 
+-# Check if lowdown is installed
+-find_program(LOWDOWN_EXECUTABLE lowdown)
++# Check if pod2man is installed
++find_program(POD2MAN_EXECUTABLE pod2man)
+ 
+-if(LOWDOWN_EXECUTABLE)
+-  # Custom target to compile Markdown to man page using lowdown
++if(POD2MAN_EXECUTABLE)
++  # Custom target to compile pod to man page using pod2man
+   add_custom_target(btop.1 ALL
+-      COMMAND lowdown -s -Tman -o btop.1 manpage.md
++      COMMAND pod2man -c ' ' -r ' ' -n btop -s 1 btop.1.pod btop.1
+       WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+   )
+   # Install the man page
+   install(FILES btop.1 DESTINATION "share/man/man1")
+ else()
+-  message(WARNING "Command 'lowdown' not found: skipping generating man page btop.1")
++  message(WARNING "Command 'pod2man' not found: skipping generating man page btop.1")
+ endif()
+ 
+ install(TARGETS btop RUNTIME)

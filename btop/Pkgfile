@@ -1,0 +1,23 @@
+# Description: Monitor of system resources
+# URL:         https://github.com/aristocratos/btop
+
+name=btop
+version=1.4.0-2e7208d
+release=1
+source="https://github.com/aristocratos/btop/archive/${version#*-}/btop-$version.tar.gz
+	btop.1.patch
+	btop.1.pod"
+
+build() {
+	# upstream man page is ugly as f*ck, we ship our version
+	(cd btop-*; cp $SRC/btop.1.pod .; patch -p1 -i $SRC/btop.1.patch)
+
+	cmake -S btop-* -B build -G Ninja     \
+		-D CMAKE_INSTALL_PREFIX=/usr  \
+
+	ninja -C build -j ${JOBS:-1} -v
+	DESTDIR=$PKG ninja -C build install
+
+	# remove i18n entries
+	sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/btop.desktop
+}
