@@ -5,9 +5,11 @@
 
 name=gpicview
 version=0.2.6
-release=2
+release=3
 source="$name-$version.tar.gz::https://github.com/lxde/$name/archive/refs/tags/$version.tar.gz
-	copy-to-clipboard.patch"
+	copy-to-clipboard.patch
+	Makefile.pod2man
+	gpicview.1.pod"
 
 build() {
 	# allow copy to clipboard using Ctrl+C
@@ -27,4 +29,8 @@ build() {
 
 	make V=1
 	make DESTDIR=$PKG install
+
+	# build and install our man page
+	make -C $SRC -f Makefile.pod2man VERSION=$version \
+		MANPREFIX=/usr/share/man DESTDIR=$PKG install
 }
