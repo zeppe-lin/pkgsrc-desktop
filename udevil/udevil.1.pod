@@ -1,0 +1,217 @@
+=pod
+
+=encoding utf8
+
+=head1 NAME
+
+udevil - mount, unmount, and monitor devices as a normal user
+
+=head1 SYNOPSIS
+
+B<udevil> [B<OPTIONS>] B<COMMAND> [B<COMMAND OPTIONS>] [B<COMMAND ARGUMENTS>]
+
+=head1 DESCRIPTION
+
+B<udevil> mounts and unmounts removable devices and networks without a password
+(set suid), shows device info, monitors device changes.  Emulates mount's and
+udisks's command line usage and udisks v1's output.  Includes the L<devmon(1)>
+automounting daemon.
+
+=head1 OPTIONS
+
+=over
+
+=item B<--verbose>
+
+Print details.
+
+=item B<--quiet>
+
+Minimal output.
+
+=back
+
+=head1 COMMANDS
+
+=over
+
+=item B<mount> | B<--mount> [I<MOUNT OPTIONS>] [[B<-b> | B<--block-device>] I<DEVICE>] [I<DIR>]
+
+Mount I<DEVICE> to mount point I<DIR> with specified I<MOUNT OPTIONS>.
+
+Mount options:
+
+=over
+
+=item B<-t> | B<--types> | B<--filesystem-type> | B<--mount-fstype> I<TYPE>
+
+See L<mount(1)> manual page.
+
+=item B<-o> | B<--options> | B<--mount-options> I<OPT>[,...]
+
+See L<mount(1)> manual page.
+
+=item B<--no-user-interaction>
+
+Ignored (for compatibility).
+
+=back
+
+=item B<umount> | B<unmount> | B<--umount> | B<--unmount> [I<UNMOUNT OPTIONS>] {[B<-b> | B<--block-device>] I<DEVICE>} | I<DIR>
+
+Unmount I<DEVICE> or I<DIR> with I<UNMOUNT OPTIONS>.
+
+Unmount options:
+
+=over
+
+=item B<-l>
+
+Lazy unmount.
+See L<umount(1)> manual page.
+
+=item B<-f>
+
+Force unmount.
+See L<umount(1)> manual page.
+
+=item B<--no-user-interaction>
+
+Ignored (for compatibility).
+
+=back
+
+=item B<info> | B<--show-info> | B<--info> [B<-b> | B<--block-device>] I<DEVICE>
+
+Show information about I<DEVICE> emulating udisks v1 output.
+
+=item B<monitor> | B<--monitor>
+
+Display device events emulating udisks v1 output.
+
+=item B<clean>
+
+Remove unmounted udevil-created mount dirs in media dirs.
+
+=item B<help> | B<--help> | B<-h>
+
+Show help message.
+
+=back
+
+=head1 EXAMPLES
+
+=head2 Mount
+
+=over
+
+=item Generic:
+
+  udevil mount /dev/sdd1
+  udevil mount -o ro,noatime /dev/sdd1
+  udevil mount -o ro,noatime /dev/sdd1 /media/usbdrive
+
+=item ISO file:
+
+  udevil mount /tmp/example.iso
+
+=item FTP site (requires curlftpfs or ftpfs):
+
+  udevil mount ftp://sys.domain
+
+=item FTP share with user and password:
+
+  udevil mount ftp://user:pass@sys.domain/share
+
+=item FTP share with port, user and password:
+
+  udevil mount ftp://user:pass@sys.domain:21/share
+
+=item FTP site with ftpfs:
+
+  udevil mount -t ftpfs sys.domain
+
+=item FTP site with curl:
+
+  udevil mount -t curlftpfs sys.domain
+
+=item FTP site with curl user and password:
+
+  udevil mount -t curlftpfs user:pass@sys.domain
+
+=item NFS share:
+
+  udevil mount nfs://sys.domain:/share
+  udevil mount sys.domain:/share
+
+=item SAMBA share with cifs:
+
+  udevil mount smb://sys.domain/share
+  udevil mount //sys.domain/share
+
+=item SAMBA share with port, user and password:
+
+  udevil mount smb://user:pass@10.0.0.1:50/share
+
+=item SAMBA share with workgroup:
+
+  udevil mount smb://WORKGROUP/user@sys.domain
+
+=item SAMBA share with smbfs:
+
+  udevil mount //sys.domain/share -t smbfs
+
+=item SSH with user (requires sshfs):
+
+  udevil mount ssh://user@sys.domain
+  udevil mount -t sshfs user@sys.domain
+
+=item WebDAV (requires davfs2):
+
+  udevil mount http://sys.domain/dav/
+
+=item Make a RAM drive:
+
+  udevil mount tmpfs
+
+=back
+
+=over
+
+=item B<WARNING>:
+
+A password on the command line is UNSAFE - see filesystem docs.
+
+=back
+
+=head2 Unmount
+
+=over
+
+=item Generic:
+
+  udevil umount /dev/sdd1
+  udevil umount /media/disk
+  udevil umount -l /media/disk
+  udevil umount /tmp/example.iso
+
+=back
+
+=head1 SEE ALSO
+
+=over
+
+=item L<devmon(1)>
+
+=item L<http://ignorantguru.github.io/udevil/>
+
+Homepage.
+
+=back
+
+=head1 AUTHORS
+
+This manual page was written by Alexandr Savca L<mailto:alexandr.savca89@gmail.com>
+for Zeppe-Lin system (but may be used by others).
+
+=cut
