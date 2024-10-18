@@ -1,0 +1,27 @@
+# Description: GTK2 theme matching the default GTK3 theme Adwaita
+# URL:         https://git.gnome.org/browse/gnome-themes-standard/
+# Depends on:  gtk gtk3 intltool librsvg
+# Optional:    gtk
+
+name=adwaita-gtk-theme
+version=3.27.90
+release=1
+source=http://ftp.gnome.org/pub/gnome/sources/gnome-themes-standard/${version%.*}/gnome-themes-standard-${version}.tar.xz
+
+build() {
+	if ! pkgman isinst gtk; then
+		PKGMK_GTK_THEME_ADWAITA="$PKGMK_THEME_ADWAITA --disable-gtk2-engine"
+	fi
+
+	sed -i "s/HighContrast//" gnome-themes-standard-$version/themes/Makefile.in
+
+	mkdir build; cd build
+
+	../gnome-themes-standard-$version/configure  \
+		--prefix=/usr \
+		--disable-glibtest \
+		--disable-nls \
+
+	make V=1
+	make DESTDIR=$PKG install
+}
