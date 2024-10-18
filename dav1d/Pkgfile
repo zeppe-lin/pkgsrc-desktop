@@ -3,7 +3,7 @@
 # Depends on:  nasm
 
 name=dav1d
-version=1.4.3
+version=1.5.0
 release=1
 source=https://code.videolan.org/videolan/dav1d/-/archive/$version/dav1d-$version.tar.gz
 
