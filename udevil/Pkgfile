@@ -3,14 +3,16 @@
 
 name=udevil
 version=0.4.4
-release=1
+release=2
 source="$name-$version.tar.gz::https://github.com/IgnorantGuru/$name/archive/$version.tar.gz
 	3dacdad457b3d859993709f0181021ff0c2a865a.patch
 	4f79ba4233bcbe9a2c9b8a799cd9dedba9534eaf.patch
 	6ac69ed255626192758ee851594928498d9c10de.patch
 	83b1254c2f1d778577324a341d43b83aca129822.patch
 	925fd6659fb7448ec96585bbf448c2e970b5ff04.patch
-	device-info-sys-stat.patch"
+	device-info-sys-stat.patch
+	devmon.1
+	udevil.1"
 
 build() {
 	for f in $SRC/*.patch; do
@@ -28,4 +30,6 @@ build() {
 
 	make V=1
 	make DESTDIR=$PKG install
+
+	install -m 0644 -Dt $PKG/usr/share/man/man1/ $SRC/*.1
 }
