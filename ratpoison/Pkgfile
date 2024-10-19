@@ -42,6 +42,12 @@ build() {
 	# patches included in this package
 	git checkout ${version#*-}
 
+	# ratpoison fills the system logs with
+	# ratpoison:manage.c:236: error: XGetWMName failed
+	# This appears to be due to a dev forgetting to set it to PRINT_DEBUG rather than PRINT_ERROR.
+	sed -i 's|PRINT_ERROR (("XGetWMName|PRINT_DEBUG (("XGetWMName|' \
+		src/manage.c
+
 	for p in $SRC/00*.patch; do
 		patch -p1 -i $p
 	done
