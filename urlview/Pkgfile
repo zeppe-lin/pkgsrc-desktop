@@ -1,37 +1,26 @@
 # Description: Curses URL parser for text files
-# URL:         http://packages.qa.debian.org/u/urlview.html
-# Depends on:  ncurses bash
+# URL:         https://git.sr.ht/~nabijaczleweli/urlview-ng
+# Depends on:  ncurses
 
 name=urlview
-version=0.9
+version=1e
 release=1
-_patchlevel=23.1
-source="http://deb.debian.org/debian/pool/main/u/urlview/urlview_$version.orig.tar.gz
-	http://deb.debian.org/debian/pool/main/u/$name/urlview_$version-$_patchlevel.debian.tar.xz"
+source=$name-$version.tar.gz::https://git.sr.ht/~nabijaczleweli/urlview-ng/archive/1e.tar.gz
 
 build() {
-	cd $name-$version.orig
+	export PREFIX=/usr
+	export DEFAULT_COMMAND=/etc/urlview/url_handler.sh
+	export SYSTEM_INITFILE=/etc/urlview/system.urlview
+	export VERSION=$version
+	export TZ=UTC0
+	export SOURCE_DATE_EPOCH=
 
-	# Apply bundled patches via series.
-	while IFS= read -r _patch || [ -n "$_patch" ]; do
-		patch -p1 -i "$SRC/debian/patches/$_patch"
-	done < "$SRC/debian/patches/series"
+	# skip locales generation
+	sed -i 's/^install: all/install: urlview urlview.1 sample.urlview/' \
+		$name-ng-$version/Makefile
 
-	aclocal
-	automake --foreign --ignore-deps --add-missing
+	make -C $name-ng-$version LOCALES= DESTDIR=$PKG install
 
-	./configure --prefix=/usr
-
-	make V=1
-
-	install -d $PKG/etc/$name/ $PKG/usr/share/man/man1/
-	make prefix=$PKG/usr mandir=$PKG/usr/share/man install
-
-	sed -i 's|/usr/X11R6/bin/netscape|/usr/bin/firefox|g' \
-		url_handler.sh
-	install -m 755 -D url_handler.sh $PKG/etc/$name/url_handler.sh
-	install -m 644 -D sample.$name   $PKG/etc/$name/system.$name
-
-	install -d $PKG/usr/bin
-	ln -fs /etc/$name/url_handler.sh $PKG/usr/bin/url_handler.sh
+	# remove junk
+	rmdir $PKG/usr/share/locale
 }
