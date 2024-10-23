@@ -59,7 +59,7 @@ drwxr-xr-x	root/root	usr/include/nspr/private/
 -rw-r--r--	root/root	usr/include/nspr/prtrace.h
 -rw-r--r--	root/root	usr/include/nspr/prtypes.h
 -rw-r--r--	root/root	usr/include/nspr/prvrsion.h
--rw-r--r--	root/root	usr/include/nspr/prwin16.h
+-rw-r--r--	root/root	usr/include/nspr/prwin.h
 drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/libnspr4.a
 -rwxr-xr-x	root/root	usr/lib/libnspr4.so

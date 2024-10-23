@@ -2,14 +2,11 @@
 # URL:         https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR
 
 name=nspr
-version=4.35
+version=4.36
 release=1
-source="https://ftp.mozilla.org/pub/nspr/releases/v$version/src/nspr-$version.tar.gz
-        nspr.pc.in"
+source=https://ftp.mozilla.org/pub/nspr/releases/v$version/src/nspr-$version.tar.gz
 
 build() {
-	unset -v NSPR_LIBS NSPR_CFLAGS NSPR_VERSION
-
 	cd nspr-$version/nspr
 
 	./configure                             \
@@ -23,21 +20,19 @@ build() {
 	make V=1
 	make DESTDIR=$PKG install
 
-	NSPR_LIBS=$(./config/nspr-config --libs)
-	NSPR_CFLAGS=$(./config/nspr-config --cflags)
-	NSPR_VERSION=$(./config/nspr-config --version)
+	mkdir -p $PKG/usr/lib/pkgconfig
+	cat > $PKG/usr/lib/pkgconfig/nspr.pc <<EOF
+prefix=/usr
+exec_prefix=/usr/bin
+libdir=/usr/lib
+includedir=/usr/include/nspr
 
-	install -d $PKG/usr/lib/pkgconfig
-
-	sed $SRC/nspr.pc.in                                \
-		-e "s,@libdir@,/usr/lib,"                  \
-		-e "s,@prefix@,/usr,"                      \
-		-e "s,@exec_prefix@,/usr/bin,"             \
-		-e "s,@includedir@,/usr/include/nspr,"     \
-		-e "s,@NSPR_VERSION@,$NSPR_VERSION,"       \
-		-e "s,@FULL_NSPR_LIBS@,$NSPR_LIBS,"        \
-		-e "s,@FULL_NSPR_CFLAGS@,$NSPR_CFLAGS,"    \
-		> $PKG/usr/lib/pkgconfig/nspr.pc
+Name: NSPR
+Description: The Netscape Portable Runtime
+Version: $(./config/nspr-config --version)
+Libs: $(./config/nspr-config --libs)
+Cflags: $(./config/nspr-config --cflags)
+EOF
 
 	# remove junk
 	rm -r $PKG/usr/bin/compile-et.pl     \
