@@ -37,7 +37,7 @@ On quest machine add the following line to `/etc/fstab`:
 
     host0 /mnt 9p trans=virtio,access=any,version=9p2000.L 0 0
 
-NOTE! Your current host's `uid:gid` on quest may be different.
+**NOTE**: Your current host's `uid:gid` on quest may be different.
 
 
 USB PASSTHROUGH
@@ -48,8 +48,8 @@ Execute qemu with the following options:
     -device usb-ehci,id=ehci \
     -device usb-host,bus=ehci.0,hostbus=1,hostaddr=18
 
-where hostbus and hostaddr is your device's corresponding values.  To obtain
-them use `lsusb(8)`.
+where `hostbus` and `hostaddr` is your device's corresponding values.
+To obtain them use `lsusb(8)`.
 
 
 CLIPBOARD SUPPORT
