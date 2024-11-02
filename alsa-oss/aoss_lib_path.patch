@@ -1,0 +1,20 @@
+Author: Jordi Mallach <jordi@debian.org>
+Description: Fix path to libaoss.so.
+ Fix path to libaoss.so using ${libdir} instead of ${exec_prefix}.
+ ${libdir} has the value given at configure time and works with Multiarch.
+Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=523101
+Forwarded: no
+
+--- a/alsa/aoss.in	2012-02-12 02:44:34.650718440 +0100
++++ b/alsa/aoss.in	2012-02-12 02:45:13.518716454 +0100
+@@ -6,8 +6,8 @@
+ 
+ if [ -d /proc/asound ]; then
+   prefix=@prefix@
+-  exec_prefix=@exec_prefix@
+-  LD_PRELOAD=${exec_prefix}/\$LIB/libaoss.so${LD_PRELOAD:+:$LD_PRELOAD} exec "$@"
++  libdir=@libdir@
++  LD_PRELOAD=${libdir}/libaoss.so${LD_PRELOAD:+:$LD_PRELOAD} exec "$@"
+ else
+   exec "$@"
+ fi

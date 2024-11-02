@@ -1,0 +1,25 @@
+# Description: ALSA OSS Emulation
+# URL:         http://www.alsa-project.org/
+# Depends on:  alsa-lib
+
+name=alsa-oss
+version=1.1.8
+release=1
+source="https://www.alsa-project.org/files/pub/oss-lib/$name-$version.tar.bz2
+	aoss_lib_path.patch
+	aoss_wrap_warning.patch"
+
+build() {
+	patch -d $name-$version -Np1 -i $SRC/aoss_lib_path.patch
+	patch -d $name-$version -Np1 -i $SRC/aoss_wrap_warning.patch
+
+	mkdir build; cd build
+
+	../$name-$version/configure  \
+		--prefix=/usr        \
+		--disable-alsatest   \
+		--with-aoss=yes      \
+
+	make V=1
+	make DESTDIR=$PKG install
+}
