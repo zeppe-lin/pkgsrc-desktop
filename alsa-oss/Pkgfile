@@ -2,6 +2,8 @@
 # URL:         http://www.alsa-project.org/
 # Depends on:  alsa-lib
 
+# requires bash for aoss script
+
 name=alsa-oss
 version=1.1.8
 release=1
@@ -19,6 +21,9 @@ build() {
 		--prefix=/usr        \
 		--disable-alsatest   \
 		--with-aoss=yes      \
+
+	# prevent excessive overlinking due to libtool
+	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
 
 	make V=1
 	make DESTDIR=$PKG install
