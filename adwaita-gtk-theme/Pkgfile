@@ -1,26 +1,28 @@
 # Description: GTK2 theme matching the default GTK3 theme Adwaita
-# URL:         https://git.gnome.org/browse/gnome-themes-standard/
+# URL:         https://gitlab.gnome.org/Archive/gnome-themes-extra
 # Depends on:  gtk gtk3 intltool librsvg-compat
 # Optional:    gtk
 
 name=adwaita-gtk-theme
-version=3.27.90
+version=3.27.92
 release=1
-source=http://ftp.gnome.org/pub/gnome/sources/gnome-themes-standard/${version%.*}/gnome-themes-standard-${version}.tar.xz
+#source=http://ftp.gnome.org/pub/gnome/sources/gnome-themes-standard/${version%.*}/gnome-themes-standard-${version}.tar.xz
+source=https://gitlab.gnome.org/Archive/gnome-themes-extra/-/archive/$version/gnome-themes-extra-$version.tar.gz
 
 build() {
 	if ! pkgman isinst gtk; then
 		PKGMK_GTK_THEME_ADWAITA="$PKGMK_THEME_ADWAITA --disable-gtk2-engine"
 	fi
 
-	sed -i 's/HighContrast//' gnome-themes-standard-$version/themes/Makefile.in
+	sed -i 's/HighContrast//' gnome-themes-extra-$version/themes/Makefile.am
 
 	mkdir build; cd build
 
-	../gnome-themes-standard-$version/configure  \
-		--prefix=/usr                        \
-		--disable-glibtest                   \
-		--disable-nls                        \
+	autoreconf -fi ../gnome-themes-extra-$version
+	../gnome-themes-extra-$version/configure  \
+		--prefix=/usr                     \
+		--disable-glibtest                \
+		--disable-nls                     \
 
 	make V=1
 	make DESTDIR=$PKG install
