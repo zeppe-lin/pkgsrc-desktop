@@ -1,9 +1,9 @@
-# Description: Console-based MP3 player 
+# Description: Console-based MP3 player
 # URL:         https://www.mpg123.de/
 # Depends on:  alsa-lib
 
 name=mpg123
-version=1.32.8
+version=1.32.9
 release=1
 source=https://www.mpg123.de/download/$name-$version.tar.bz2
 
