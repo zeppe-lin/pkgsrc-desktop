@@ -4,9 +4,8 @@
 # Optional:    gtk
 
 name=adwaita-gtk-theme
-version=3.27.92
+version=3.28
 release=1
-#source=http://ftp.gnome.org/pub/gnome/sources/gnome-themes-standard/${version%.*}/gnome-themes-standard-${version}.tar.xz
 source=https://gitlab.gnome.org/Archive/gnome-themes-extra/-/archive/$version/gnome-themes-extra-$version.tar.gz
 
 build() {
