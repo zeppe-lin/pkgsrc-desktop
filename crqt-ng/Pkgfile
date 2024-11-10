@@ -3,8 +3,8 @@
 # Depends on:  crengine-ng desktop-file-utils qt5
 
 name=crqt-ng
-version=1.0.14
-release=2
+version=1.0.15
+release=1
 source=https://gitlab.com/coolreader-ng/$name/-/archive/$version/$name-$version.tar.gz
 
 build() {
