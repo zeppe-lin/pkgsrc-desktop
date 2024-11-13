@@ -25,7 +25,7 @@ diff '--color=auto' -pruN desktop-file-utils-0.27.orig/man/meson.build desktop-f
 -desktop_file_edit_man = configure_file(
 -  input : 'desktop-file-install.1',
 -  output: 'desktop-file-edit.1',
--  copy: true,
+-  command: ['cp', '@INPUT@', '@OUTPUT@']
 -)
 -
  install_man([
