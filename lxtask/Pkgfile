@@ -4,9 +4,10 @@
 # Optional:    gtk3
 
 name=lxtask
-version=0.1.10
+version=0.1.11
 release=1
-source=https://downloads.sourceforge.net/lxde/$name-$version.tar.xz
+#source=https://downloads.sourceforge.net/lxde/$name-$version.tar.xz
+source=$name-$version.tar.gz::https://github.com/lxde/lxtask/archive/refs/tags/$version.tar.gz
 
 build() {
 	# disable i18n
