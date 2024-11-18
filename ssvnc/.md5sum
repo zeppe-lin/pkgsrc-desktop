@@ -9,6 +9,7 @@ a7fcab7810c1bbc4cbe08c60908e6114  0006-libvncclient_CVE-2018-20020.patch
 94844ae0d45e4e3a00065a31bd3e529b  0009-libvncclient_CVE-2018-20024.patch
 461189e45be93d4f1cd3be98450b04d5  0010-Makefile.patch
 6a119a5748a231f63c96044a2761845f  0011-openssl1.1.patch
+adb5f756f44423d6fa1e6b6967d8f828  0012-sendclipboard-fix.patch
 864991bfc879d49306d80e8dd5f4af88  Makefile.libvncauth
 7a5c3db8722a5b8747e84197b479503d  Makefile.vncviewer
 52201aeb0417c2a0fe83639e52da6ae5  ssvnc-1.0.29.src.tar.gz

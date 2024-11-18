@@ -4,7 +4,7 @@
 
 name=ssvnc
 version=1.0.29
-release=2
+release=3
 source="http://downloads.sf.net/sourceforge/$name/$name-$version.src.tar.gz
 	Makefile.libvncauth
 	Makefile.vncviewer
@@ -18,7 +18,8 @@ source="http://downloads.sf.net/sourceforge/$name/$name-$version.src.tar.gz
 	0008-libvncclient_CVE-2018-20022.patch
 	0009-libvncclient_CVE-2018-20024.patch
 	0010-Makefile.patch
-	0011-openssl1.1.patch"
+	0011-openssl1.1.patch
+	0012-sendclipboard-fix.patch"
 
 build() {
 	cd $name-$version
@@ -43,5 +44,5 @@ build() {
 	make DESTDIR=$PKG PREFIX=/usr install
 
 	# remove junk
-	rm -r $PKG/usr/share/applications
+	#rm -r $PKG/usr/share/applications
 }
