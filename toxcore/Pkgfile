@@ -1,7 +1,7 @@
-# Description:  Secure, configuration-free, P2P Skype replacement backend
-# URL:          https://github.com/TokTok/c-toxcore
-# Depends on:   libnsl libsodium
-# Optional:     libvpx opus
+# Description: Secure, configuration-free, P2P Skype replacement backend
+# URL:         https://github.com/TokTok/c-toxcore
+# Depends on:  libnsl libsodium
+# Optional:    libvpx opus
 
 name=toxcore
 version=0.2.20
