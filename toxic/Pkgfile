@@ -1,6 +1,6 @@
 # Description: CLI Tox client
 # URL:         https://github.com/JFreegman/toxic
-# Depends on:  curl libbsd libconfig toxcore xorg-libx11
+# Depends on:  curl libconfig toxcore xorg-libx11
 # Optional:    libnotify qrencode openal freealut python3 asciidoc
 
 name=toxic
