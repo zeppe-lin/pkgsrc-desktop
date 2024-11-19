@@ -5,9 +5,12 @@
 
 name=krb5
 version=1.21.3
-release=1
+release=2
 source="https://kerberos.org/dist/krb5/${version%.*}/krb5-$version.tar.gz
-	rc.krb5"
+	rc.kadmind
+	rc.kpropd
+	rc.krb5
+	rc.krb5kdc"
 
 build() {
 	cd $name-$version/src
@@ -24,7 +27,6 @@ build() {
 		--enable-shared          \
 		--disable-rpath          \
 		--disable-nls            \
-		--without-tcl            \
 		--with-system-et         \
 		--with-system-ss         \
 		--without-system-verto   \
@@ -33,7 +35,7 @@ build() {
 	make V=1
 	make DESTDIR=$PKG install
 
-	# move essential libs and the ksu binary to /lib resp. /bin
+	# move essential libs and the ksu binary from /usr to /
 	mkdir -p $PKG/bin $PKG/lib
 	mv $PKG/usr/bin/ksu                   $PKG/bin
 	mv $PKG/usr/lib/libkrb5.so.3*         $PKG/lib
@@ -46,8 +48,10 @@ build() {
 
 	install -m 0644 -Dt $PKG/usr/share/aclocal util/ac_check_krb5.m4
 
-	# service
-	install -m 0755 -D $SRC/rc.krb5 $PKG/etc/rc.d/krb5
+	# services
+	for f in kadmind kpropd krb5 krb5kdc; do
+		install -m 0755 -D $SRC/rc.$f $PKG/etc/rc.d/$f
+	done
 
 	# cleanup
 	rm -r $PKG/usr/share/examples $PKG/usr/share/man/cat* $PKG/run
