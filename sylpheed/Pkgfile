@@ -31,11 +31,12 @@ build() {
 	patch -p1 -i $SRC/0004-refer_to_online_help_and_faq.patch
 	patch -p1 -i $SRC/fix-send-mail-attachment.patch
 
-	# Add patch for trinity icons if +TRINITY+ specified in
-	# PKGMK_SYLPHEED var.  You may declare it in /etc/pkgmk.conf.
-	case $PKGMK_SYLPHEED in
-	*+TRINITY*) patch -p1 -i $SRC/0001-trinity-icon-theme.patch ;;
-	esac
+	# trinity icons
+	for use_flag in $PKGMK_SYLPHEED; do
+		case $use_flag in
+		+trinityicons) patch -p1 -i $SRC/0001-trinity-icons-theme.patch ;;
+		esac
+	done
 
 	cd -
 
