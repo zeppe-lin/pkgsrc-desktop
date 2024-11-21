@@ -17,22 +17,22 @@ RUN MTP AS A REGULAR USER
 
 1. Create the `plugdev` group and add your user name into it:
 
-```
-getent group plugdev >/dev/null || sudo groupadd -r plugdev
-sudo usermod -aG plugdev $USER
-newgrp plugdev
-```
+    ```
+    getent group plugdev >/dev/null || sudo groupadd -r plugdev
+    sudo usermod -aG plugdev $USER
+    newgrp plugdev
+    ```
 
 2. Find your device's `VendorId:ProductId` in the `lsusb` output.
 
 3. Add the following line (as one) to `/etc/udev/rules.d/70-libmtp.rules`:
 
-```
-SUBSYSTEM=="usb", ATTR{idVendor}=="...", \
-ATTR{idProduct}=="...", MODE="0666", GROUP="plugdev"
-```
+    ```
+    SUBSYSTEM=="usb", ATTR{idVendor}=="...", \
+    ATTR{idProduct}=="...", MODE="0666", GROUP="plugdev"
+    ```
 
-4. Reload the udev rules (as described in the [POST-INSTALL] section).
+4. Reload the udev rules (as described in the **[POST-INSTALL]** section).
 
 
 ---
