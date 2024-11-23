@@ -1,6 +1,6 @@
 # Description: General Purpose video player based on MPlayer and mplayer2
 # URL:         https://mpv.io/
-# Depends on:  ffmpeg libarchive libjpeg-turbo libplacebo mesa xorg-libxinerama xorg-libxpresent xorg-libxscrnsaver
+# Depends on:  docutils ffmpeg libarchive libjpeg-turbo libplacebo mesa xorg-libxinerama xorg-libxpresent xorg-libxscrnsaver
 
 name=mpv
 version=0.39.0
@@ -8,10 +8,11 @@ release=1
 source=https://github.com/mpv-player/mpv/archive/v$version/mpv-v$version.tar.gz
 
 build() {
-	# cdda=disabled:      otherwise, requires libcdio-paranoia
-	# dvdnav=disabled:    otherwise, requires libdvdnav
-	# lcms2=disabled:     otherwise, requires lcms2
-	# libarchive=enabled: requires libarchive
+	# cdda=disabled:         otherwise, requires libcdio-paranoia
+	# dvdnav=disabled:       otherwise, requires libdvdnav
+	# lcms2=disabled:        otherwise, requires lcms2
+	# libarchive=enabled:    requires libarchive
+	# manpage-build=enabled: requires docutils
 	meson setup build $name-$version  \
 		--prefix=/usr             \
 		--sysconfdir=/usr/etc     \
@@ -27,6 +28,7 @@ build() {
 		-D x11=enabled            \
 		-D tests=false            \
 		-D cplayer=true           \
+		-D manpage-build=enabled  \
 
 	ninja -C build -j ${JOBS:-1} -v
 	DESTDIR=$PKG ninja -C build install
