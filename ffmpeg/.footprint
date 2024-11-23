@@ -17,6 +17,7 @@ drwxr-xr-x	root/root	usr/include/libavcodec/
 -rw-r--r--	root/root	usr/include/libavcodec/codec_id.h
 -rw-r--r--	root/root	usr/include/libavcodec/codec_par.h
 -rw-r--r--	root/root	usr/include/libavcodec/d3d11va.h
+-rw-r--r--	root/root	usr/include/libavcodec/defs.h
 -rw-r--r--	root/root	usr/include/libavcodec/dirac.h
 -rw-r--r--	root/root	usr/include/libavcodec/dv_profile.h
 -rw-r--r--	root/root	usr/include/libavcodec/dxva2.h
@@ -24,31 +25,31 @@ drwxr-xr-x	root/root	usr/include/libavcodec/
 -rw-r--r--	root/root	usr/include/libavcodec/mediacodec.h
 -rw-r--r--	root/root	usr/include/libavcodec/packet.h
 -rw-r--r--	root/root	usr/include/libavcodec/qsv.h
--rw-r--r--	root/root	usr/include/libavcodec/vaapi.h
 -rw-r--r--	root/root	usr/include/libavcodec/vdpau.h
 -rw-r--r--	root/root	usr/include/libavcodec/version.h
+-rw-r--r--	root/root	usr/include/libavcodec/version_major.h
 -rw-r--r--	root/root	usr/include/libavcodec/videotoolbox.h
 -rw-r--r--	root/root	usr/include/libavcodec/vorbis_parser.h
--rw-r--r--	root/root	usr/include/libavcodec/xvmc.h
 drwxr-xr-x	root/root	usr/include/libavdevice/
 -rw-r--r--	root/root	usr/include/libavdevice/avdevice.h
 -rw-r--r--	root/root	usr/include/libavdevice/version.h
+-rw-r--r--	root/root	usr/include/libavdevice/version_major.h
 drwxr-xr-x	root/root	usr/include/libavfilter/
 -rw-r--r--	root/root	usr/include/libavfilter/avfilter.h
 -rw-r--r--	root/root	usr/include/libavfilter/buffersink.h
 -rw-r--r--	root/root	usr/include/libavfilter/buffersrc.h
 -rw-r--r--	root/root	usr/include/libavfilter/version.h
+-rw-r--r--	root/root	usr/include/libavfilter/version_major.h
 drwxr-xr-x	root/root	usr/include/libavformat/
 -rw-r--r--	root/root	usr/include/libavformat/avformat.h
 -rw-r--r--	root/root	usr/include/libavformat/avio.h
 -rw-r--r--	root/root	usr/include/libavformat/version.h
-drwxr-xr-x	root/root	usr/include/libavresample/
--rw-r--r--	root/root	usr/include/libavresample/avresample.h
--rw-r--r--	root/root	usr/include/libavresample/version.h
+-rw-r--r--	root/root	usr/include/libavformat/version_major.h
 drwxr-xr-x	root/root	usr/include/libavutil/
 -rw-r--r--	root/root	usr/include/libavutil/adler32.h
 -rw-r--r--	root/root	usr/include/libavutil/aes.h
 -rw-r--r--	root/root	usr/include/libavutil/aes_ctr.h
+-rw-r--r--	root/root	usr/include/libavutil/ambient_viewing_environment.h
 -rw-r--r--	root/root	usr/include/libavutil/attributes.h
 -rw-r--r--	root/root	usr/include/libavutil/audio_fifo.h
 -rw-r--r--	root/root	usr/include/libavutil/avassert.h
@@ -66,7 +67,9 @@ drwxr-xr-x	root/root	usr/include/libavutil/
 -rw-r--r--	root/root	usr/include/libavutil/common.h
 -rw-r--r--	root/root	usr/include/libavutil/cpu.h
 -rw-r--r--	root/root	usr/include/libavutil/crc.h
+-rw-r--r--	root/root	usr/include/libavutil/csp.h
 -rw-r--r--	root/root	usr/include/libavutil/des.h
+-rw-r--r--	root/root	usr/include/libavutil/detection_bbox.h
 -rw-r--r--	root/root	usr/include/libavutil/dict.h
 -rw-r--r--	root/root	usr/include/libavutil/display.h
 -rw-r--r--	root/root	usr/include/libavutil/dovi_meta.h
@@ -74,6 +77,7 @@ drwxr-xr-x	root/root	usr/include/libavutil/
 -rw-r--r--	root/root	usr/include/libavutil/encryption_info.h
 -rw-r--r--	root/root	usr/include/libavutil/error.h
 -rw-r--r--	root/root	usr/include/libavutil/eval.h
+-rw-r--r--	root/root	usr/include/libavutil/executor.h
 -rw-r--r--	root/root	usr/include/libavutil/ffversion.h
 -rw-r--r--	root/root	usr/include/libavutil/fifo.h
 -rw-r--r--	root/root	usr/include/libavutil/file.h
@@ -81,10 +85,12 @@ drwxr-xr-x	root/root	usr/include/libavutil/
 -rw-r--r--	root/root	usr/include/libavutil/frame.h
 -rw-r--r--	root/root	usr/include/libavutil/hash.h
 -rw-r--r--	root/root	usr/include/libavutil/hdr_dynamic_metadata.h
+-rw-r--r--	root/root	usr/include/libavutil/hdr_dynamic_vivid_metadata.h
 -rw-r--r--	root/root	usr/include/libavutil/hmac.h
 -rw-r--r--	root/root	usr/include/libavutil/hwcontext.h
 -rw-r--r--	root/root	usr/include/libavutil/hwcontext_cuda.h
 -rw-r--r--	root/root	usr/include/libavutil/hwcontext_d3d11va.h
+-rw-r--r--	root/root	usr/include/libavutil/hwcontext_d3d12va.h
 -rw-r--r--	root/root	usr/include/libavutil/hwcontext_drm.h
 -rw-r--r--	root/root	usr/include/libavutil/hwcontext_dxva2.h
 -rw-r--r--	root/root	usr/include/libavutil/hwcontext_mediacodec.h
@@ -94,6 +100,7 @@ drwxr-xr-x	root/root	usr/include/libavutil/
 -rw-r--r--	root/root	usr/include/libavutil/hwcontext_vdpau.h
 -rw-r--r--	root/root	usr/include/libavutil/hwcontext_videotoolbox.h
 -rw-r--r--	root/root	usr/include/libavutil/hwcontext_vulkan.h
+-rw-r--r--	root/root	usr/include/libavutil/iamf.h
 -rw-r--r--	root/root	usr/include/libavutil/imgutils.h
 -rw-r--r--	root/root	usr/include/libavutil/intfloat.h
 -rw-r--r--	root/root	usr/include/libavutil/intreadwrite.h
@@ -130,61 +137,61 @@ drwxr-xr-x	root/root	usr/include/libavutil/
 -rw-r--r--	root/root	usr/include/libavutil/tree.h
 -rw-r--r--	root/root	usr/include/libavutil/twofish.h
 -rw-r--r--	root/root	usr/include/libavutil/tx.h
+-rw-r--r--	root/root	usr/include/libavutil/uuid.h
 -rw-r--r--	root/root	usr/include/libavutil/version.h
 -rw-r--r--	root/root	usr/include/libavutil/video_enc_params.h
+-rw-r--r--	root/root	usr/include/libavutil/video_hint.h
 -rw-r--r--	root/root	usr/include/libavutil/xtea.h
 drwxr-xr-x	root/root	usr/include/libpostproc/
 -rw-r--r--	root/root	usr/include/libpostproc/postprocess.h
 -rw-r--r--	root/root	usr/include/libpostproc/version.h
+-rw-r--r--	root/root	usr/include/libpostproc/version_major.h
 drwxr-xr-x	root/root	usr/include/libswresample/
 -rw-r--r--	root/root	usr/include/libswresample/swresample.h
 -rw-r--r--	root/root	usr/include/libswresample/version.h
+-rw-r--r--	root/root	usr/include/libswresample/version_major.h
 drwxr-xr-x	root/root	usr/include/libswscale/
 -rw-r--r--	root/root	usr/include/libswscale/swscale.h
 -rw-r--r--	root/root	usr/include/libswscale/version.h
+-rw-r--r--	root/root	usr/include/libswscale/version_major.h
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libavcodec.a
-lrwxrwxrwx	root/root	usr/lib/libavcodec.so -> libavcodec.so.58.134.100
-lrwxrwxrwx	root/root	usr/lib/libavcodec.so.58 -> libavcodec.so.58.134.100
--rwxr-xr-x	root/root	usr/lib/libavcodec.so.58.134.100
+lrwxrwxrwx	root/root	usr/lib/libavcodec.so -> libavcodec.so.61.19.100
+lrwxrwxrwx	root/root	usr/lib/libavcodec.so.61 -> libavcodec.so.61.19.100
+-rwxr-xr-x	root/root	usr/lib/libavcodec.so.61.19.100
 -rw-r--r--	root/root	usr/lib/libavdevice.a
-lrwxrwxrwx	root/root	usr/lib/libavdevice.so -> libavdevice.so.58.13.100
-lrwxrwxrwx	root/root	usr/lib/libavdevice.so.58 -> libavdevice.so.58.13.100
--rwxr-xr-x	root/root	usr/lib/libavdevice.so.58.13.100
+lrwxrwxrwx	root/root	usr/lib/libavdevice.so -> libavdevice.so.61.3.100
+lrwxrwxrwx	root/root	usr/lib/libavdevice.so.61 -> libavdevice.so.61.3.100
+-rwxr-xr-x	root/root	usr/lib/libavdevice.so.61.3.100
 -rw-r--r--	root/root	usr/lib/libavfilter.a
-lrwxrwxrwx	root/root	usr/lib/libavfilter.so -> libavfilter.so.7.110.100
-lrwxrwxrwx	root/root	usr/lib/libavfilter.so.7 -> libavfilter.so.7.110.100
--rwxr-xr-x	root/root	usr/lib/libavfilter.so.7.110.100
+lrwxrwxrwx	root/root	usr/lib/libavfilter.so -> libavfilter.so.10.4.100
+lrwxrwxrwx	root/root	usr/lib/libavfilter.so.10 -> libavfilter.so.10.4.100
+-rwxr-xr-x	root/root	usr/lib/libavfilter.so.10.4.100
 -rw-r--r--	root/root	usr/lib/libavformat.a
-lrwxrwxrwx	root/root	usr/lib/libavformat.so -> libavformat.so.58.76.100
-lrwxrwxrwx	root/root	usr/lib/libavformat.so.58 -> libavformat.so.58.76.100
--rwxr-xr-x	root/root	usr/lib/libavformat.so.58.76.100
--rw-r--r--	root/root	usr/lib/libavresample.a
-lrwxrwxrwx	root/root	usr/lib/libavresample.so -> libavresample.so.4.0.0
-lrwxrwxrwx	root/root	usr/lib/libavresample.so.4 -> libavresample.so.4.0.0
--rwxr-xr-x	root/root	usr/lib/libavresample.so.4.0.0
+lrwxrwxrwx	root/root	usr/lib/libavformat.so -> libavformat.so.61.7.100
+lrwxrwxrwx	root/root	usr/lib/libavformat.so.61 -> libavformat.so.61.7.100
+-rwxr-xr-x	root/root	usr/lib/libavformat.so.61.7.100
 -rw-r--r--	root/root	usr/lib/libavutil.a
-lrwxrwxrwx	root/root	usr/lib/libavutil.so -> libavutil.so.56.70.100
-lrwxrwxrwx	root/root	usr/lib/libavutil.so.56 -> libavutil.so.56.70.100
--rwxr-xr-x	root/root	usr/lib/libavutil.so.56.70.100
+lrwxrwxrwx	root/root	usr/lib/libavutil.so -> libavutil.so.59.39.100
+lrwxrwxrwx	root/root	usr/lib/libavutil.so.59 -> libavutil.so.59.39.100
+-rwxr-xr-x	root/root	usr/lib/libavutil.so.59.39.100
 -rw-r--r--	root/root	usr/lib/libpostproc.a
-lrwxrwxrwx	root/root	usr/lib/libpostproc.so -> libpostproc.so.55.9.100
-lrwxrwxrwx	root/root	usr/lib/libpostproc.so.55 -> libpostproc.so.55.9.100
--rwxr-xr-x	root/root	usr/lib/libpostproc.so.55.9.100
+lrwxrwxrwx	root/root	usr/lib/libpostproc.so -> libpostproc.so.58.3.100
+lrwxrwxrwx	root/root	usr/lib/libpostproc.so.58 -> libpostproc.so.58.3.100
+-rwxr-xr-x	root/root	usr/lib/libpostproc.so.58.3.100
 -rw-r--r--	root/root	usr/lib/libswresample.a
-lrwxrwxrwx	root/root	usr/lib/libswresample.so -> libswresample.so.3.9.100
-lrwxrwxrwx	root/root	usr/lib/libswresample.so.3 -> libswresample.so.3.9.100
--rwxr-xr-x	root/root	usr/lib/libswresample.so.3.9.100
+lrwxrwxrwx	root/root	usr/lib/libswresample.so -> libswresample.so.5.3.100
+lrwxrwxrwx	root/root	usr/lib/libswresample.so.5 -> libswresample.so.5.3.100
+-rwxr-xr-x	root/root	usr/lib/libswresample.so.5.3.100
 -rw-r--r--	root/root	usr/lib/libswscale.a
-lrwxrwxrwx	root/root	usr/lib/libswscale.so -> libswscale.so.5.9.100
-lrwxrwxrwx	root/root	usr/lib/libswscale.so.5 -> libswscale.so.5.9.100
--rwxr-xr-x	root/root	usr/lib/libswscale.so.5.9.100
+lrwxrwxrwx	root/root	usr/lib/libswscale.so -> libswscale.so.8.3.100
+lrwxrwxrwx	root/root	usr/lib/libswscale.so.8 -> libswscale.so.8.3.100
+-rwxr-xr-x	root/root	usr/lib/libswscale.so.8.3.100
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libavcodec.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/libavdevice.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/libavfilter.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/libavformat.pc
--rw-r--r--	root/root	usr/lib/pkgconfig/libavresample.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/libavutil.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/libpostproc.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/libswresample.pc
