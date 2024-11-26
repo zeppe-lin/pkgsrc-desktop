@@ -56,7 +56,6 @@ drwxr-xr-x	root/root	opt/firefox/icons/
 -rwxr-xr-x	root/root	opt/firefox/libssl3.so
 -rwxr-xr-x	root/root	opt/firefox/libxul.so
 -rw-r--r--	root/root	opt/firefox/libxul.so.sig
--rwxr-xr-x	root/root	opt/firefox/minidump-analyzer
 -rw-r--r--	root/root	opt/firefox/omni.ja
 -rwxr-xr-x	root/root	opt/firefox/pingsender
 -rw-r--r--	root/root	opt/firefox/platform.ini
