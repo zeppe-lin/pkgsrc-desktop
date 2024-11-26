@@ -1,1 +1,7 @@
+c13aba3a56e840758996f5cbbd0c71eb  0010-plthook.patch
+8053c632703db826adace05660aff207  0020-ffmpeg-7.patch
+c0f12f90d12ac1f3518b9d3e109b41e9  1000-Fix-build-with-ffmpeg-5.0.patch
+9be0f2378dc05e5e7f8398b0c8ee3d89  1010-appstream-metadata-https-category.patch
+5a247d5fad7923f206346aa2293ab27c  1020-ffmpeg-7.patch
+8ea9024a4f2acfd2c90a5d21fc6528eb  2000-private-glinject.patch
 6360ff633bcb88b0c221d56fd52b7dac  ssr-0.4.4.tar.gz

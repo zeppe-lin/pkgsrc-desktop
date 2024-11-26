@@ -1,0 +1,37 @@
+Description: More fixes for ffmpeg 7.0
+ Use class method GetChannels() as a wrapper to get the ffmpeg version
+ dependent implementation instead of the channels method which
+ disappeared with ffmpeg 7.  This is realted to 0020-ffmpeg-7.patch
+ and https://github.com/MaartenBaert/ssr/pull/1031.  Various
+ approaches to fix the same issue is proposed upstream.
+Author: Petter Reinholdtsen
+Bug-Debian: https://bugs.debian.org/1072451
+Forwarded: https://github.com/MaartenBaert/ssr/pull/1039
+Last-Updated: 2024-08-12
+---
+Index: simplescreenrecorder-salsa/src/AV/Output/AudioEncoder.cpp
+===================================================================
+--- simplescreenrecorder-salsa.orig/src/AV/Output/AudioEncoder.cpp	2024-08-12 06:33:54.881267389 +0000
++++ simplescreenrecorder-salsa/src/AV/Output/AudioEncoder.cpp	2024-08-12 06:35:49.514541002 +0000
+@@ -42,7 +42,7 @@
+ 	if(GetCodecContext()->frame_size <= 1) {
+ 		// This is really weird, the old API uses the size of the *output* buffer to determine the number of
+ 		// input samples if the number of input samples (i.e. frame_size) is not fixed (i.e. frame_size <= 1).
+-		m_temp_buffer.resize(DEFAULT_FRAME_SAMPLES * GetCodecContext()->channels * av_get_bits_per_sample(GetCodecContext()->codec_id) / 8);
++		m_temp_buffer.resize(DEFAULT_FRAME_SAMPLES * GetChannels() * av_get_bits_per_sample(GetCodecContext()->codec_id) / 8);
+ 	} else {
+ 		m_temp_buffer.resize(std::max(FF_MIN_BUFFER_SIZE, 256 * 1024));
+ 	}
+@@ -166,7 +166,11 @@
+ 		assert((unsigned int) frame->GetFrame()->nb_samples == GetFrameSize());
+ #endif
+ #if SSR_USE_AVFRAME_CHANNELS
+-		assert(frame->GetFrame()->channels == GetCodecContext()->channels);
++#  if LIBAVCODEC_VERSION_MAJOR < 61
++		assert(frame->GetFrame()->channels == GetChannels());
++#  else
++		assert(frame->GetFrame()->ch_layout.nb_channels == GetChannels());
++#  endif /* LIBAVCODEC_VERSION_MAJOR < 61 */
+ #endif
+ #if SSR_USE_AVFRAME_SAMPLE_RATE
+ 		assert(frame->GetFrame()->sample_rate == GetCodecContext()->sample_rate);
