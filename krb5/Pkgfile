@@ -5,7 +5,7 @@
 
 name=krb5
 version=1.21.3
-release=2
+release=3
 source="https://kerberos.org/dist/krb5/${version%.*}/krb5-$version.tar.gz
 	rc.kadmind
 	rc.kpropd

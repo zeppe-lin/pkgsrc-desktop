@@ -19,9 +19,9 @@ restart)
 	$0 start
 	;;
 status)
-	/etc/rc.d/krb5kdc restart
-	/etc/rc.d/kadmind restart
-	/etc/rc.d/kpropd  restart
+	/etc/rc.d/krb5kdc status
+	/etc/rc.d/kadmind status
+	/etc/rc.d/kpropd  status
 	;;
 *)
 	echo "usage: $0 [start|stop|restart|status]"
