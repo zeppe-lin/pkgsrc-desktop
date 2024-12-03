@@ -5,7 +5,7 @@ export PATH="/sbin:/usr/sbin:/bin:/usr/bin"
 gdk-pixbuf-query-loaders --update-cache
 
 if command -v gtk-update-icon-cache; then
-        gtk-update-icon-cache -ftq /usr/share/icons/gnome
+        gtk-update-icon-cache -f -t -q /usr/share/icons/gnome
 fi
 
 # End of file.

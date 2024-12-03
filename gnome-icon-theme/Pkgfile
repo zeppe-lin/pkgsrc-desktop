@@ -12,16 +12,15 @@ build() {
 	mkdir build; cd build
 
 	# --enable-icon-mapping: enable compatibility symlinks
-	../$name-$version/configure     \
-		--prefix=/usr           \
-		--disable-nls           \
-		--enable-icon-mapping   \
+	../$name-$version/configure    \
+		--prefix=/usr          \
+		--disable-nls          \
+		--enable-icon-mapping  \
 
 	make V=1
 	make DESTDIR=$PKG install
 
-	install -m 0644 $SRC/icon-theme.cache  \
-		$PKG/usr/share/icons/gnome/icon-theme.cache
+	install -m 0644 -Dt $PKG/usr/share/icons/gnome $SRC/icon-theme.cache
 
 	# remove junk
 	rm -rf $PKG/usr/share/locale
