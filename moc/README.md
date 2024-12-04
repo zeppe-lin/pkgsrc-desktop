@@ -14,7 +14,7 @@ REQUIREMENTS
 * ffmpeg:           Library for decoding various audio formats (Opus, WMA,
                     ReadAudio, (.ra), AAC, MP4).
 * speex:            Patent-free audio compression format designed for speech.
-* musepack taglib:  Audio compression format with a strong emphasis on high
+* musepack, taglib: Audio compression format with a strong emphasis on high
                     quality.
 * libsndfile:       Library to read various audio formats like WAV, AIFF, SND,
                     etc.
