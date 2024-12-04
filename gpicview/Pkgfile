@@ -1,6 +1,6 @@
 # Description: Simple image viewer
 # URL:         https://github.com/lxde/gpicview
-# Depends on:  gtk3
+# Depends on:  desktop-file-utils gtk3
 
 name=gpicview
 version=0.2.6
