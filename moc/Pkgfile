@@ -1,7 +1,6 @@
 # Description: Console audio player
 # URL:         http://moc.daper.net/
-# Depends on:  curl db ffmpeg libid3tag libmad libsndfile libtool popt wavpack
-# Optional:    ffmpeg
+# Depends on:  curl db file libid3tag libmad libsndfile libtool popt wavpack
 
 name=moc
 version=2.6-alpha3
@@ -13,7 +12,6 @@ source="http://ftp.daper.net/pub/soft/moc/unstable/moc-$version.tar.xz
 	moc-https.patch"
 
 build() {
-	#patch -d moc-$version -p0 -i $SRC/moc-ffmpeg4.patch
 	patch -d moc-$version -p0 -i $SRC/moc-https.patch
 	patch -d moc-$version -p1 -i $SRC/moc-2.6_alpha3-stdint_uint_types.patch
 
