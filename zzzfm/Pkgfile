@@ -1,12 +1,12 @@
 # Description: Multi-panel tabbed file manager
 # URL:         https://gitlab.com/skidoo/zzzfm
-# Depends on:  desktop-file-utils ffmpegthumbnailer gtk ktsuss
+# Depends on:  desktop-file-utils ffmpegthumbnailer gtk3 ktsuss
 # Optional:    ktsuss
 
 name=zzzfm
 version=1.0.7.5-c7e340f
 _commit=c7e340fdeafc64229d5a6113ffbb27dad03efaa7
-release=2
+release=3
 source="$name-$version.tar.gz::https://gitlab.com/skidoo/zzzfm/-/archive/$_commit/zzzfm-$_commit.tar.gz
 	fix-crash-on-umount.patch
 	gksu-ktsuss.patch"
@@ -16,11 +16,13 @@ build() {
 	# switch from default gksu to ktsuss
 	patch -d $name-$_commit -Np1 -i $SRC/gksu-ktsuss.patch
 
+	if ! pkgman isinst ffmpegthumbnailer; then
+		PKGMK_ZZZFM="$PKGMK_ZZZFM --disable-video-thumbnails"
+	fi
+
 	export LINGUAS=' '
 	export CONFIG_SHELL=/bin/bash
-
-	# fix build with gcc 14
-	export CFLAGS="$CFLAGS -Wno-incompatible-pointer-types"
+	export CFLAGS="$CFLAGS -Wno-incompatible-pointer-types" # gcc14 fix
 
 	mkdir build; cd build
 
@@ -28,7 +30,8 @@ build() {
 	../$name-$_commit/configure  \
 		--prefix=/usr        \
 		--disable-nls        \
-		--with-gtk2          \
+		--with-gtk3          \
+		$PKGMK_ZZZFM         \
 
 	make V=1
 	make DESTDIR=$PKG install
