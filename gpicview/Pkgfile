@@ -1,20 +1,19 @@
-# Description: Lightweight image viewer
+# Description: Simple image viewer
 # URL:         https://github.com/lxde/gpicview
-# Depends on:  gtk
-# Optional:    gtk3
+# Depends on:  gtk3
 
 name=gpicview
 version=0.2.6
-release=3
+release=4
 source="$name-$version.tar.gz::https://github.com/lxde/$name/archive/refs/tags/$version.tar.gz
 	copy-to-clipboard.patch
-	Makefile.pod2man
-	gpicview.1.pod"
+	gpicview-gtk2.pod
+	gpicview-gtk3.pod
+	gpicview-pod2man.Makefile"
 
 build() {
-	# allow copy to clipboard using Ctrl+C
+	# allow copy to clipboard using ctrl+c
 	patch -d $name-$version -Np1 -i $SRC/copy-to-clipboard.patch
-
 	# disable i18n
 	export LINGUAS=' '
 
@@ -25,12 +24,15 @@ build() {
 		--prefix=/usr        \
 		--sysconfdir=/etc    \
 		--disable-nls        \
-		#--enable-gtk3
+		--enable-gtk3        \
 
 	make V=1
 	make DESTDIR=$PKG install
 
-	# build and install our man page
-	make -C $SRC -f Makefile.pod2man VERSION=$version \
-		MANPREFIX=/usr/share/man DESTDIR=$PKG install
+	# build and install man page
+	make -C $SRC -f gpicview-pod2man.Makefile  \
+		WITH_GTK=3                         \
+		VERSION=$version                   \
+		MANPREFIX=/usr/share/man           \
+		DESTDIR=$PKG install
 }

@@ -8,11 +8,11 @@ gpicview - lightweight image viewer
 
 =head1 SYNOPSIS
 
-B<gpicview> [I<OPTION...>] [I<file>]
+B<gpicview> [I<OPTION...>] [I<FILE>]
 
 =head1 DESCRIPTION
 
-B<gpicview> is a lightweight GTK+ 2.x/3.x based image viewer.
+B<gpicview> is a lightweight GTK+ 3.x based image viewer.
 
 =head1 OPTIONS
 
@@ -46,14 +46,6 @@ Program class as used by the window manager.
 
 Program name as used by the window manager.
 
-=item B<--screen>=I<SCREEN>
-
-X screen to use.
-
-=item B<--sync>
-
-Make X calls synchronous.
-
 =item B<--gtk-module>=I<MODULES>
 
 Load additional GTK+ modules.
@@ -84,8 +76,7 @@ Show GTK+ options and exit.
 
 =head1 AUTHORS
 
-This manual page was written by Alexandr Savca
-L<mailto:alexandr.savca89@gmail.com> for Zeppe-Lin system (but may be used by
-others).
+This manual page was written for Zeppe-Lin System by
+Alexandr Savca L<mailto:alexandr.savca89@gmail.com>.
 
 =cut

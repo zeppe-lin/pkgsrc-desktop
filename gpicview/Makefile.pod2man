@@ -1,9 +1,0 @@
-all: gpicview.1
-
-%: %.pod
-	pod2man -r "gpicview ${VERSION}" -c "" -n $(basename $@) \
-		-s $(subst .,,$(suffix $@)) $< > $@
-
-install: all
-	mkdir -p ${DESTDIR}${MANPREFIX}/man1
-	cp -f gpicview.1 ${DESTDIR}${MANPREFIX}/man1/
