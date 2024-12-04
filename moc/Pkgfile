@@ -4,22 +4,27 @@
 # Optional:    ffmpeg
 
 name=moc
-version=2.5.2
-release=2
-source="http://ftp.daper.net/pub/soft/moc/stable/moc-$version.tar.bz2
+version=2.6-alpha3
+release=1
+source="http://ftp.daper.net/pub/soft/moc/unstable/moc-$version.tar.xz
+	moc-2.6_alpha3-stdint_uint_types.patch
 	moc-ffmpeg4.patch
+	moc-ffmpeg6.patch
 	moc-https.patch"
 
 build() {
-	patch -d moc-$version -p0 -i $SRC/moc-ffmpeg4.patch
+	#patch -d moc-$version -p0 -i $SRC/moc-ffmpeg4.patch
 	patch -d moc-$version -p0 -i $SRC/moc-https.patch
+	patch -d moc-$version -p1 -i $SRC/moc-2.6_alpha3-stdint_uint_types.patch
 
 	mkdir build; cd build
 
-	../$name-$version/configure  \
-		--prefix=/usr        \
-		--disable-debug      \
-		--disable-nls        \
+	autoreconf -fi ../moc-$version
+	../moc-$version/configure  \
+		--prefix=/usr      \
+		--disable-debug    \
+		--disable-nls      \
+		--without-ffmpeg   \
 
 	make V=1
 	make DESTDIR=$PKG install

@@ -4,8 +4,6 @@ drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/moc/
 drwxr-xr-x	root/root	usr/lib/moc/decoder_plugins/
--rwxr-xr-x	root/root	usr/lib/moc/decoder_plugins/libffmpeg_decoder.la
--rwxr-xr-x	root/root	usr/lib/moc/decoder_plugins/libffmpeg_decoder.so
 -rwxr-xr-x	root/root	usr/lib/moc/decoder_plugins/libflac_decoder.la
 -rwxr-xr-x	root/root	usr/lib/moc/decoder_plugins/libflac_decoder.so
 -rwxr-xr-x	root/root	usr/lib/moc/decoder_plugins/libmp3_decoder.la

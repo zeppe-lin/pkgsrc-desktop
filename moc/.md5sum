@@ -1,3 +1,5 @@
-48e5abcd5ffc76921d4feea8a1fc2dbb  moc-2.5.2.tar.bz2
+1d828fda8e9cd0e2ba625457926aa6e4  moc-2.6-alpha3.tar.xz
+6e5f4f0746b4e506b85336960855e4d5  moc-2.6_alpha3-stdint_uint_types.patch
 099d843476168fac70f9ca71e4cc09e1  moc-ffmpeg4.patch
+a43bc2e6513fd0616667ab173a0ffb23  moc-ffmpeg6.patch
 f5f4855d736555d259f6b70b8731baf1  moc-https.patch
