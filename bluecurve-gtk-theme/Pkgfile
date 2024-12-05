@@ -3,7 +3,7 @@
 # Depends on:  gtk-engine-bluecurve
 
 name=bluecurve-gtk-theme
-version=2.2.2-5b588bb
+version=2.2.2-d6e5573
 release=1
 source=https://github.com/neeeeow/Bluecurve/archive/${version#*-}/Bluecurve-$version.tar.gz
 
