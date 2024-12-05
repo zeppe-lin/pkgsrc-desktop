@@ -49,10 +49,6 @@ No extra dependencies (e.g. libptp/libmtp).
 
 =item *
 
-Available as static/shared library.
-
-=item *
-
 Command line tool (aft-mtp-cli(1)).
 
 =back
@@ -91,9 +87,11 @@ L<https://whoozle.github.io/android-file-transfer-linux/>
 
 =head1 AUTHOR
 
-android-file-transfer was written by Vladimir Menshakov <mailto:vladimir.menshakov@gmail.com>.
+B<android-file-transfer> was written by Vladimir Menshakov
+<mailto:vladimir.menshakov@gmail.com>.
 
-This manual page was written by Alexandr Savca <mailto:alexandr.savca89@gmail.com>.
+This manual page was written for Zeppe-Lin System by Alexandr Savca
+<mailto:alexandr.savca89@gmail.com>.
 
 =head1 CAVEATS
 
@@ -101,13 +99,14 @@ This manual page was written by Alexandr Savca <mailto:alexandr.savca89@gmail.co
 
 =item *
 
-Samsung removed Android extensions from MTP, so FUSE will be available read-only, sorry.
-Feel free to post your complaints to L<https://forum.developer.samsung.com/>.
+Samsung removed Android extensions from MTP, so FUSE will be available
+read-only, sorry.  Feel free to post your complaints to
+L<https://forum.developer.samsung.com/>.
 
 =item *
 
-Sometimes downloading fails with a USB timeout, after which the phone becomes unresponsive:
-L<Android bug #75259|https://code.google.com/p/android/issues/detail?id=75259>.
+Sometimes downloading fails with a USB timeout, after which the phone becomes
+unresponsive: L<Android bug#75259|https://code.google.com/p/android/issues/detail?id=75259>.
 
 =item *
 

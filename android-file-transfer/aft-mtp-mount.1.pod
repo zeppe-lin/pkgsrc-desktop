@@ -57,10 +57,10 @@ L<android-file-transfer(1)>, L<aft-mtp-cli(1)>
 
 =head1 AUTHOR
 
-B<aft-mtp-mount> is part of B<android-file-transfer> written by Vladimir
+B<aft-mtp-mount> is part of B<android-file-transfer> tool written by Vladimir
 Menshakov L<mailto:vladimir.menshakov@gmail.com>.
 
-This manual page was written by Alexandr Savca
+This manual page was written for Zeppe-Lin System by Alexandr Savca
 L<mailto:alexandr.savca89@gmail.com>.
 
 =cut

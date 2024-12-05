@@ -1,5 +1,6 @@
-0a8938c4dccb2f292ea4c929e2a827e9  aft-mtp-cli.1.pod
-56fdfd8524d34a9fece7cb3b413d84fd  aft-mtp-mount.1.pod
+f8a5835d2a31dfe6c29b6768bc99b2ba  aft-mtp-cli.1.pod
+924d38eaeaa6c6b97f8d5a4d0b17d5e0  aft-mtp-mount.1.pod
 2757c3b7c29ebfb92985b0dc464d562d  android-file-transfer-4.4-2a48d30.tar.gz
-78e3200b2150b337d973cc7970a757b7  android-file-transfer.1.pod
+38d3b15b49d14b627b1f34d5244b3ad4  android-file-transfer.1.pod
+228a00543ebcb5211e0ded9637ab50b9  pod2man.Makefile
 111639f9b7140a8dc37625734b2713d0  use_system_icons.patch
