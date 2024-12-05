@@ -3,7 +3,7 @@
 
 name=mac
 version=10.76
-release=1
+release=2
 source="https://monkeysaudio.com/files/MAC_1076_SDK.zip
 	mac-10.18-linux.patch
 	mac-10.52-output.patch"
@@ -15,6 +15,7 @@ build() {
 	cmake -S . -B build -G Ninja          \
 		-D CMAKE_BUILD_TYPE=None      \
 		-D CMAKE_INSTALL_PREFIX=/usr  \
+		-D CMAKE_INSTALL_LIBDIR=lib   \
 		-Wno-dev
 
 	ninja -C build -j ${JOBS:-1} -v
