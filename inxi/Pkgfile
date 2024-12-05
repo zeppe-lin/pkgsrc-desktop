@@ -8,6 +8,6 @@ release=1
 source=inxi-$version.tar.gz::https://codeberg.org/smxi/inxi/archive/$version.tar.gz
 
 build() {
-	install -m 0755 -Dt $PKG/usr/bin/            inxi/inxi
-	install -m 0644 -Dt $PKG/usr/share/man/man1/ inxi/inxi.1
+	install -m 0755 -Dt $PKG/usr/bin            inxi/inxi
+	install -m 0644 -Dt $PKG/usr/share/man/man1 inxi/inxi.1
 }
