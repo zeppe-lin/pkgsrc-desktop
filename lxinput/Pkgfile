@@ -1,11 +1,11 @@
 # Description: Keyboard and mouse configuration tool
 # URL:         https://github.com/lxde/lxinput
-# Depends on:  gtk
-# Optional:    gtk3
+# Depends on:  gtk3
+# Optional:    gtk
 
 name=lxinput
 version=0.3.5
-release=1
+release=2
 source=https://downloads.sourceforge.net/lxde/$name-$version.tar.xz
 
 build() {
@@ -21,7 +21,7 @@ build() {
 		--sysconfdir=/etc  \
 		--disable-nls      \
 		--enable-man       \
-		#--enable-gtk3
+		--enable-gtk3      \
 
 	make V=1
 	make DESTDIR=$PKG install
