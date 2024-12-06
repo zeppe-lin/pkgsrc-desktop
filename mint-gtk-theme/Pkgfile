@@ -3,12 +3,12 @@
 # Depends on:  adwaita-gtk-theme gtk-engine-murrine
 
 name=mint-gtk-theme
-version=2.2.0-mint22
+version=2.2.1
 release=1
-source=$name-$version.tar.gz::https://github.com/linuxmint/mint-themes/releases/download/master.mint22/packages.tar.gz
+source=https://ftp5.gwdg.de/pub/linux/debian/mint/packages/pool/main/m/mint-themes/mint-themes_${version%%-*}_all.deb
 
 build() {
-	ar x packages/mint-themes_${version%%-*}_all.deb
+	ar x mint-themes_${version%%-*}_all.deb
 	bsdtar -p -o --no-acls --no-xattrs --no-mac-metadata --no-fflags \
 		--exclude usr/share/doc -C $PKG -xf data.tar.xz
 }
