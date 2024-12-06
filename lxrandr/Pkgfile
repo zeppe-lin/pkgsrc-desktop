@@ -1,10 +1,10 @@
 # Description: Monitor configuration tool
 # URL:         https://github.com/lxde/lxrandr
-# Depends on:  gtk gtk3 xorg-xrandr
+# Depends on:  gtk3 xorg-xrandr
 
 name=lxrandr
 version=0.3.2
-release=2
+release=3
 source=https://downloads.sourceforge.net/lxde/$name-$version.tar.xz
 
 build() {
@@ -16,21 +16,14 @@ build() {
 	sed -i '/g_key_file_set_string( kf, grp, "OnlyShowIn", "LXDE" )/d' \
 		$name-$version/src/lxrandr.c
 
-	for _DIR in gtk gtk3; do
-		mkdir $_DIR; cd $_DIR
+	mkdir build; cd build
 
-		../$name-$version/configure  \
-			--prefix=/usr        \
-			--sysconfdir=/etc    \
-			--disable-nls        \
-			$([ "$_DIR" = gtk3 ] && echo "--enable-gtk3")
+	../$name-$version/configure  \
+		--prefix=/usr        \
+		--sysconfdir=/etc    \
+		--disable-nls        \
+		--enable-gtk3        \
 
-		make V=1
-		case $_DIR in
-		gtk3) install -m 0755 src/$name $PKG/usr/bin/${name}3 ;;
-		   *) make DESTDIR=$PKG install ;;
-		esac
-
-		cd -
-	done
+	make V=1
+	make DESTDIR=$PKG install
 }
