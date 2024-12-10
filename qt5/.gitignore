@@ -1,0 +1,2 @@
+# ignore unstable footprint until we stabilize the deps
+.footprint
