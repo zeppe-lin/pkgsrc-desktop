@@ -1,0 +1,783 @@
+From 4c64861cbadce5232c8edb17f0274b59c3d00345 Mon Sep 17 00:00:00 2001
+From: borine <32966433+borine@users.noreply.github.com>
+Date: Wed, 23 Mar 2022 13:27:44 +0000
+Subject: [PATCH 1/4] Implement recovery from disconnected PCM
+
+Once in state SND_PCM_STATE_DISCONNECTED an ALSA pcm handle cannot
+be recovered; the only valid operation is to close it. This commit
+closes the handle, then attempts to re-open the same device. This
+allows temporary disconnections to be recovered (eg some devices
+when resuming from suspend require this).
+---
+ src/apulse-mainloop.c |  41 +++++++---
+ src/apulse-stream.c   | 172 +++++++++++++++++++++++++++---------------
+ src/apulse.h          |   6 +-
+ 3 files changed, 147 insertions(+), 72 deletions(-)
+
+diff --git a/src/apulse-mainloop.c b/src/apulse-mainloop.c
+index 5e92e6d..ddded02 100644
+--- a/src/apulse-mainloop.c
++++ b/src/apulse-mainloop.c
+@@ -130,7 +130,7 @@ ml_api_io_new(pa_mainloop_api *a, int fd, pa_io_event_flags_t events,
+     ioe->cb_userdata = userdata;
+     ioe->mainloop = ml;
+     ioe->pollfd = NULL;
+-    ioe->pcm = NULL;
++    ioe->s = NULL;
+ 
+     g_hash_table_replace(ml->events_ht, ioe, ioe);
+     ml->recreate_fds = 1;
+@@ -270,21 +270,26 @@ pa_mainloop_api_once(pa_mainloop_api *m,
+     pa_operation_launch(op);
+ }
+ 
+-static void
++static int
+ recover_pcm(snd_pcm_t *pcm)
+ {
++	int ret = 0;
+     switch (snd_pcm_state(pcm)) {
+     case SND_PCM_STATE_XRUN:
+-        snd_pcm_recover(pcm, -EPIPE, 1);
++        ret = snd_pcm_recover(pcm, -EPIPE, 1);
+         break;
+     case SND_PCM_STATE_SUSPENDED:
+-        snd_pcm_recover(pcm, -ESTRPIPE, 1);
++        ret = snd_pcm_recover(pcm, -ESTRPIPE, 1);
+         break;
++    case SND_PCM_STATE_DISCONNECTED:
++		ret = -1;
++		break;
+     default:
+         snd_pcm_drop(pcm);
+-        snd_pcm_prepare(pcm);
++        ret = snd_pcm_prepare(pcm);
+         break;
+     }
++	return ret;
+ }
+ 
+ static long
+@@ -294,6 +299,17 @@ microseconds_till_event(pa_usec_t now, const struct timeval *event_when)
+            now;
+ }
+ 
++static void
++deferred_stream_restart(pa_mainloop_api *a, pa_defer_event* e, void *userdata)
++{
++	(void) a;
++	(void) e;
++    struct pa_io_event *ioe = userdata;
++
++    if (apulse_stream_restart(ioe->s) < 0)
++        trace_error("Unrecoverable ALSA PCM error\n");
++}
++
+ APULSE_EXPORT
+ int
+ pa_mainloop_dispatch(pa_mainloop *m)
+@@ -312,14 +328,15 @@ pa_mainloop_dispatch(pa_mainloop *m)
+             unsigned short revents = 0;
+ 
+             if (0 < idx && idx <= m->alsa_special_cnt) {
+-                snd_pcm_poll_descriptors_revents(ioe->pcm, ioe->pollfd, 1,
++                snd_pcm_poll_descriptors_revents(ioe->s->ph, ioe->pollfd, 1,
+                                                  &revents);
+             } else {
+                 revents = ioe->pollfd->revents;
+             }
+ 
+             if (revents & (~(POLLOUT | POLLIN))) {
+-                recover_pcm(ioe->pcm);
++                if (recover_pcm(ioe->s->ph) < 0)
++                    ml_api_defer_new(&m->api, deferred_stream_restart, ioe);
+             } else {
+                 pa_io_event_flags_t eflags = to_pa_io_event_flags(revents);
+                 if (ioe->cb)
+@@ -429,6 +446,8 @@ pa_mainloop_new(void)
+     trace_info_f("F %s (void)\n", __func__);
+ 
+     pa_mainloop *m = calloc(1, sizeof(pa_mainloop));
++	if (m == NULL)
++		return NULL;
+ 
+     m->api.userdata = m;
+     m->api.io_new = ml_api_io_new;
+@@ -450,7 +469,10 @@ pa_mainloop_new(void)
+     m->events_ht = g_hash_table_new(g_direct_hash, g_direct_equal);
+     m->recreate_fds = 1;
+ 
+-    pipe(m->wakeup_pipe);
++    if (pipe(m->wakeup_pipe) == -1) {
++		free(m);
++		return NULL;
++	}
+     make_nonblock(m->wakeup_pipe[0]);
+     make_nonblock(m->wakeup_pipe[1]);
+ 
+@@ -607,5 +629,6 @@ pa_mainloop_wakeup(pa_mainloop *m)
+     trace_info_f("F %s m=%p\n", __func__, m);
+ 
+     char c = '!';
+-    write(m->wakeup_pipe[1], &c, 1);
++    if (write(m->wakeup_pipe[1], &c, 1) != 1)
++		trace_error("Unable to write to wakeup pipe: %s\n", strerror(errno));
+ }
+diff --git a/src/apulse-stream.c b/src/apulse-stream.c
+index e3ecfb5..5b08066 100644
+--- a/src/apulse-stream.c
++++ b/src/apulse-stream.c
+@@ -78,6 +78,15 @@ data_available_for_stream(pa_mainloop_api *a, pa_io_event *ioe, int fd,
+         frame_count = snd_pcm_avail_update(s->ph);
+ #endif
+ 
++		if (snd_pcm_state(s->ph) == SND_PCM_STATE_DISCONNECTED) {
++            if (apulse_stream_restart(s) < 0)
++                trace_error(
++                    "Stream '%s' of context '%s' have its associated device in "
++                    "SND_PCM_STATE_DISCONNECTED state. Giving up.",
++                    s->name ? s->name : "", s->c->name ? s->c->name : "");
++			return;
++		}
++
+         if (frame_count < 0) {
+             if (frame_count == -EBADFD) {
+                 // stream was closed
+@@ -141,12 +150,6 @@ data_available_for_stream(pa_mainloop_api *a, pa_io_event *ioe, int fd,
+                 snd_pcm_resume(s->ph);
+                 break;
+ 
+-            case SND_PCM_STATE_DISCONNECTED:
+-                trace_error(
+-                    "Stream '%s' of context '%s' have its associated device in "
+-                    "SND_PCM_STATE_DISCONNECTED state. Giving up.",
+-                    s->name ? s->name : "", s->c->name ? s->c->name : "");
+-                break;
+             default:
+                 // avoid compiler warnings of unhandled (library-private) enum values
+                 break;
+@@ -231,59 +234,39 @@ data_available_for_stream(pa_mainloop_api *a, pa_io_event *ioe, int fd,
+ }
+ 
+ static int
+-do_connect_pcm(pa_stream *s, snd_pcm_stream_t stream_direction)
+-{
++configure_stream_pcm(pa_stream *s, snd_pcm_stream_t stream_direction, int restarting) {
+     snd_pcm_hw_params_t *hw_params;
+     snd_pcm_sw_params_t *sw_params;
+     int errcode = 0;
+-    const char *device_name;
+-    const char *direction_name;
+-
+-    switch (stream_direction) {
+-    default:
+-    case SND_PCM_STREAM_PLAYBACK:
+-        device_name = getenv("APULSE_PLAYBACK_DEVICE");
+-        direction_name = "playback";
+-        break;
+-    case SND_PCM_STREAM_CAPTURE:
+-        device_name = getenv("APULSE_CAPTURE_DEVICE");
+-        direction_name = "capture";
+-        break;
+-    }
+-
+-    if (device_name == NULL)
+-        device_name = "default";
++    int retries = restarting ? 3 : 0;
+ 
+     char *device_description =
+-        g_strdup_printf("%s device \"%s\"", direction_name, device_name);
++        g_strdup_printf("%s device \"%s\"", stream_direction == SND_PCM_STREAM_PLAYBACK ? "playback" : "capture", s->requested_device_name);
+     if (!device_description) {
+         trace_error("%s: can't allocate memory for device description string\n",
+                     __func__);
+-        goto fatal_error;
++        return -1;
+     }
+ 
+-    errcode = snd_pcm_open(&s->ph, device_name, stream_direction, 0);
++	while ((errcode = snd_pcm_open(&s->ph, s->requested_device_name, stream_direction, 0)) < 0) {
++        if (retries-- == 0)
++            break;
++        usleep(50000);
++	}
+     if (errcode < 0) {
+         trace_error("%s: can't open %s. Error code %d (%s)\n", __func__,
+                     device_description, errcode, snd_strerror(errcode));
+-        goto fatal_error;
++        goto other_error;
+     }
+ 
+-    errcode = snd_pcm_hw_params_malloc(&hw_params);
+-    if (errcode < 0) {
+-        trace_error(
+-            "%s: can't allocate memory for hw parameters for %s. Error code %d "
+-            "(%s)\n",
+-            __func__, device_description, errcode, snd_strerror(errcode));
+-        goto fatal_error;
+-    }
++    snd_pcm_hw_params_alloca(&hw_params);
+ 
+     errcode = snd_pcm_hw_params_any(s->ph, hw_params);
+     if (errcode < 0) {
+         trace_error(
+             "%s: can't get initial hw parameters for %s. Error code %d (%s)\n",
+             __func__, device_description, errcode, snd_strerror(errcode));
+-        goto fatal_error;
++        goto other_error;
+     }
+ 
+     errcode = snd_pcm_hw_params_set_access(s->ph, hw_params,
+@@ -293,7 +276,7 @@ do_connect_pcm(pa_stream *s, snd_pcm_stream_t stream_direction)
+             "%s: can't select interleaved mode for %s. Error code %d (%s)\n",
+             __func__, device_description, errcode, snd_strerror(errcode));
+         // TODO: is it worth to support non-interleaved mode?
+-        goto fatal_error;
++        goto params_error;
+     }
+ 
+     errcode = snd_pcm_hw_params_set_format(s->ph, hw_params,
+@@ -305,7 +288,7 @@ do_connect_pcm(pa_stream *s, snd_pcm_stream_t stream_direction)
+             "(%s)\n",
+             __func__, alsa_format, snd_pcm_format_name(alsa_format),
+             device_description, errcode, snd_strerror(errcode));
+-        goto fatal_error;
++        goto params_error;
+     }
+ 
+     errcode = snd_pcm_hw_params_set_rate_resample(s->ph, hw_params, 1);
+@@ -325,7 +308,7 @@ do_connect_pcm(pa_stream *s, snd_pcm_stream_t stream_direction)
+         trace_error("%s: can't set sample rate for %s. Error code %d (%s)\n",
+                     __func__, device_description, errcode,
+                     snd_strerror(errcode));
+-        goto fatal_error;
++        goto params_error;
+     }
+ 
+     trace_info_f("%s: demanded %d Hz sample rate, got %d Hz for %s, dir = %d\n",
+@@ -343,7 +326,7 @@ do_connect_pcm(pa_stream *s, snd_pcm_stream_t stream_direction)
+             __func__, (int)s->ss.channels, device_description, errcode,
+             snd_strerror(errcode));
+         // TODO: channel count handling?
+-        goto fatal_error;
++        goto params_error;
+     }
+ 
+     const size_t frame_size = pa_frame_size(&s->ss);
+@@ -359,7 +342,7 @@ do_connect_pcm(pa_stream *s, snd_pcm_stream_t stream_direction)
+             "(%s)\n",
+             __func__, (int)requested_period_size, device_description, errcode,
+             snd_strerror(errcode));
+-        goto fatal_error;
++        goto params_error;
+     }
+ 
+     trace_info_f(
+@@ -380,7 +363,7 @@ do_connect_pcm(pa_stream *s, snd_pcm_stream_t stream_direction)
+             "(%s)\n",
+             __func__, (int)buffer_size, device_description, errcode,
+             snd_strerror(errcode));
+-        goto fatal_error;
++        goto params_error;
+     }
+ 
+     trace_info_f(
+@@ -392,30 +375,23 @@ do_connect_pcm(pa_stream *s, snd_pcm_stream_t stream_direction)
+     if (errcode < 0) {
+         trace_error("%s: can't apply configured hw parameter block for %s\n",
+                     __func__, device_description);
+-        goto fatal_error;
++        goto params_error;
+     }
+ 
+-    snd_pcm_hw_params_free(hw_params);
+-
+-    errcode = snd_pcm_sw_params_malloc(&sw_params);
+-    if (errcode < 0) {
+-        trace_error("%s: can't allocate memory for sw parameters for %s\n",
+-                    __func__, device_description);
+-        goto fatal_error;
+-    }
++    snd_pcm_sw_params_alloca(&sw_params);
+ 
+     errcode = snd_pcm_sw_params_current(s->ph, sw_params);
+     if (errcode < 0) {
+         trace_error("%s: can't acquire current sw parameters for %s\n",
+                     __func__, device_description);
+-        goto fatal_error;
++        goto other_error;
+     }
+ 
+     errcode = snd_pcm_sw_params_set_avail_min(s->ph, sw_params, period_size);
+     if (errcode < 0) {
+         trace_error("%s: can't set avail min for %s\n", __func__,
+                     device_description);
+-        goto fatal_error;
++        goto params_error;
+     }
+ 
+     // no period event requested
+@@ -424,16 +400,14 @@ do_connect_pcm(pa_stream *s, snd_pcm_stream_t stream_direction)
+     if (errcode < 0) {
+         trace_error("%s: can't apply sw parameters for %s\n", __func__,
+                     device_description);
+-        goto fatal_error;
++        goto params_error;
+     }
+ 
+-    snd_pcm_sw_params_free(sw_params);
+-
+     errcode = snd_pcm_prepare(s->ph);
+     if (errcode < 0) {
+         trace_error("%s: can't prepare PCM device to use for %s\n", __func__,
+                     device_description);
+-        goto fatal_error;
++        goto other_error;
+     }
+ 
+     int nfds = snd_pcm_poll_descriptors_count(s->ph);
+@@ -445,10 +419,67 @@ do_connect_pcm(pa_stream *s, snd_pcm_stream_t stream_direction)
+         pa_mainloop_api *api = s->c->mainloop_api;
+         s->ioe[k] = api->io_new(api, fds[k].fd, 0x80000000 | fds[k].events,
+                                 data_available_for_stream, s);
+-        s->ioe[k]->pcm = s->ph;
++        s->ioe[k]->s = s;
+     }
+     free(fds);
+ 
++    g_free(device_description);
++	return 0;
++
++params_error:
++    trace_error(
++        "%s: failed to open ALSA device. Apulse does no resampling or format "
++        "conversion, leaving that task to ALSA plugins. Ensure that selected "
++        "device is capable of playing a particular sample format at a "
++        "particular rate. They have to be supported by either hardware "
++        "directly, or by \"plug\" and \"dmix\" ALSA plugins which will perform "
++        "required conversions on CPU.\n",
++        __func__);
++
++other_error:
++    if (errcode == -EACCES) {
++        trace_error(
++            "%s: additionally, the error code is %d, which means access was "
++            "denied. That looks like access restriction in a sandbox. If the "
++            "app you are running uses sandboxing techniques, make sure "
++            "/dev/snd/ directory is added into the allowed list. Both reading "
++            "and writing access to the files in that directory are required.\n",
++            __func__, -EACCES);
++    }
++
++    g_free(device_description);
++    if (s->ph != NULL) {
++        snd_pcm_close(s->ph);
++        s->ph = NULL;
++	}
++    return -1;
++}
++
++static int
++do_connect_pcm(pa_stream *s, snd_pcm_stream_t stream_direction)
++{
++    int errcode = 0;
++    const char *device_name;
++
++    switch (stream_direction) {
++    default:
++    case SND_PCM_STREAM_PLAYBACK:
++        device_name = getenv("APULSE_PLAYBACK_DEVICE");
++        break;
++    case SND_PCM_STREAM_CAPTURE:
++        device_name = getenv("APULSE_CAPTURE_DEVICE");
++        break;
++    }
++
++    if (device_name == NULL)
++        device_name = "default";
++
++    s->requested_device_name = strdup(device_name);
++
++    if ((errcode = configure_stream_pcm(s, stream_direction, 0)) < 0)
++        goto fatal_error;
++
++    s->requested_device_name = strdup(device_name);
+     s->state = PA_STREAM_READY;
+     pa_stream_ref(s);
+     s->c->mainloop_api->defer_new(s->c->mainloop_api, deh_stream_state_changed,
+@@ -457,7 +488,6 @@ do_connect_pcm(pa_stream *s, snd_pcm_stream_t stream_direction)
+     s->c->mainloop_api->defer_new(s->c->mainloop_api,
+                                   deh_stream_first_readwrite_callback, s);
+ 
+-    g_free(device_description);
+     return 0;
+ 
+ fatal_error:
+@@ -480,10 +510,27 @@ do_connect_pcm(pa_stream *s, snd_pcm_stream_t stream_direction)
+             __func__, -EACCES);
+     }
+ 
+-    g_free(device_description);
+     return -1;
+ }
+ 
++APULSE_EXPORT
++int
++apulse_stream_restart(pa_stream *s) {
++    snd_pcm_stream_t stream_direction = snd_pcm_stream(s->ph);
++
++    for (int k = 0; k < s->nioe; k++) {
++        pa_mainloop_api *api = s->c->mainloop_api;
++        api->io_free(s->ioe[k]);
++    }
++    free(s->ioe);
++	s->ioe = NULL;
++	s->nioe = 0;
++    snd_pcm_close(s->ph);
++	s->ph = NULL;
++
++	return configure_stream_pcm(s, stream_direction, 1);
++}
++
+ APULSE_EXPORT
+ int
+ pa_stream_begin_write(pa_stream *p, void **data, size_t *nbytes)
+@@ -1024,6 +1071,7 @@ pa_stream_unref(pa_stream *s)
+         free(s->peek_buffer);
+         free(s->write_buffer);
+         free(s->name);
++        free(s->requested_device_name);
+         free(s);
+     }
+ }
+diff --git a/src/apulse.h b/src/apulse.h
+index 9256316..11e6ae8 100644
+--- a/src/apulse.h
++++ b/src/apulse.h
+@@ -55,7 +55,7 @@ struct pa_io_event {
+     pa_io_event_destroy_cb_t destroy_cb;
+     pa_mainloop *mainloop;
+     struct pollfd *pollfd;
+-    snd_pcm_t *pcm;
++    pa_stream *s;
+ };
+ 
+ struct pa_mainloop {
+@@ -95,6 +95,7 @@ struct pa_stream {
+     pa_context *c;
+     pa_stream_state_t state;
+     pa_stream_direction_t direction;
++    char *requested_device_name;
+     snd_pcm_t *ph;
+     pa_sample_spec ss;
+     pa_buffer_attr buffer_attr;
+@@ -178,3 +179,6 @@ pa_operation_launch(pa_operation *op);
+ 
+ void
+ pa_operation_done(pa_operation *op);
++
++int
++apulse_stream_restart(pa_stream *s);
+
+From 584a2ae40cae677cea383b2736e19c91bf5115d2 Mon Sep 17 00:00:00 2001
+From: borine <32966433+borine@users.noreply.github.com>
+Date: Wed, 23 Mar 2022 13:58:31 +0000
+Subject: [PATCH 2/4] Improve accuracy of latency reporting
+
+---
+ src/apulse-stream.c | 22 ++++++++++++++--------
+ 1 file changed, 14 insertions(+), 8 deletions(-)
+
+diff --git a/src/apulse-stream.c b/src/apulse-stream.c
+index 5b08066..2d8c7f1 100644
+--- a/src/apulse-stream.c
++++ b/src/apulse-stream.c
+@@ -771,19 +771,26 @@ pa_stream_get_index(pa_stream *s)
+     return s->idx;
+ }
+ 
+-APULSE_EXPORT
+-int
+-pa_stream_get_latency(pa_stream *s, pa_usec_t *r_usec, int *negative)
++static uint64_t
++latency_bytes(pa_stream *s)
+ {
+-    trace_info_f("F %s s=%p\n", __func__, s);
+-
+     snd_pcm_sframes_t delay;
+ 
+     if (snd_pcm_delay(s->ph, &delay) < 0)
+         delay = 0;
+ 
++    return ringbuffer_readable_size(s->rb) + delay * pa_frame_size(&s->ss);
++}
++
++APULSE_EXPORT
++int
++pa_stream_get_latency(pa_stream *s, pa_usec_t *r_usec, int *negative)
++{
++    trace_info_f("F %s s=%p\n", __func__, s);
++
+     if (r_usec)
+-        *r_usec = 1000 * 1000 * delay / s->ss.rate;
++        *r_usec = pa_bytes_to_usec(latency_bytes(s), &s->ss);
++
+     if (negative)
+         *negative = 0;
+     return 0;
+@@ -813,12 +820,11 @@ pa_stream_get_time(pa_stream *s, pa_usec_t *r_usec)
+ {
+     trace_info_f("F %s\n", __func__);
+ 
+-    // TODO: handle playback/capture delays?
+     int64_t data_index = s->timing_info.write_index;
+     if (data_index < 0)
+         data_index = 0;
+ 
+-    *r_usec = pa_bytes_to_usec(data_index, &s->ss);
++    *r_usec = pa_bytes_to_usec(data_index - latency_bytes(s), &s->ss);
+     return 0;
+ }
+ 
+
+From 8d018ef1032d6719640660530b5a7329e8e6c102 Mon Sep 17 00:00:00 2001
+From: borine <32966433+borine@users.noreply.github.com>
+Date: Mon, 28 Mar 2022 13:11:35 +0100
+Subject: [PATCH 3/4] fix use-after-free in apulse-stream.c
+
+---
+ src/apulse-stream.c | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/src/apulse-stream.c b/src/apulse-stream.c
+index 2d8c7f1..36154eb 100644
+--- a/src/apulse-stream.c
++++ b/src/apulse-stream.c
+@@ -932,6 +932,7 @@ pa_stream_new_with_proplist(pa_context *c, const char *name,
+ 
+     pa_stream *s = calloc(1, sizeof(pa_stream));
+     s->c = c;
++    pa_context_ref(c);
+     s->ref_cnt = 1;
+     s->state = PA_STREAM_UNCONNECTED;
+     s->ss = *ss;
+@@ -1073,6 +1074,7 @@ pa_stream_unref(pa_stream *s)
+     s->ref_cnt--;
+     if (s->ref_cnt == 0) {
+         g_hash_table_remove(s->c->streams_ht, GINT_TO_POINTER(s->idx));
++        pa_context_unref(s->c);
+         ringbuffer_free(s->rb);
+         free(s->peek_buffer);
+         free(s->write_buffer);
+
+From 8ffbe6c0be76d59e8484468e2ca83155ad150bb4 Mon Sep 17 00:00:00 2001
+From: borine <32966433+borine@users.noreply.github.com>
+Date: Fri, 29 Apr 2022 14:13:18 +0100
+Subject: [PATCH 4/4] Timeout pcm connection when corked
+
+Sending silence / dropping recieved frames when the stream is
+corked needlessly wastes battery charge for bluetooth devices.
+Limit the silence/drop time to 10 seconds, after which the pcm is
+closed; then re-open the pcm when the stream is uncorked.
+---
+ src/apulse-stream.c | 112 ++++++++++++++++++++++++++++++--------------
+ src/apulse.h        |   2 +
+ 2 files changed, 80 insertions(+), 34 deletions(-)
+
+diff --git a/src/apulse-stream.c b/src/apulse-stream.c
+index 36154eb..ca1c166 100644
+--- a/src/apulse-stream.c
++++ b/src/apulse-stream.c
+@@ -175,10 +175,12 @@ data_available_for_stream(pa_mainloop_api *a, pa_io_event *ioe, int fd,
+ 
+     if (events & PA_IO_EVENT_OUTPUT) {
+         if (paused) {
+-            // client stream is corked. Pass silence to ALSA
+-            size_t bytecnt = MIN(buf_size, frame_count * frame_size);
+-            memset(buf, 0, bytecnt);
+-            snd_pcm_writei(s->ph, buf, bytecnt / frame_size);
++            if (s->ph) {
++                // client stream is corked. Pass silence to ALSA
++                size_t bytecnt = MIN(buf_size, frame_count * frame_size);
++                memset(buf, 0, bytecnt);
++                snd_pcm_writei(s->ph, buf, bytecnt / frame_size);
++            }
+         } else {
+             size_t writable_size = pa_stream_writable_size(s);
+ 
+@@ -203,9 +205,11 @@ data_available_for_stream(pa_mainloop_api *a, pa_io_event *ioe, int fd,
+ 
+     if (events & PA_IO_EVENT_INPUT) {
+         if (paused) {
+-            // client stream is corked. Read data from ALSA and discard them
+-            size_t bytecnt = MIN(buf_size, frame_count * frame_size);
+-            snd_pcm_readi(s->ph, buf, bytecnt / frame_size);
++            if (s->ph) {
++                // client stream is corked. Read data from ALSA and discard them
++                size_t bytecnt = MIN(buf_size, frame_count * frame_size);
++                snd_pcm_readi(s->ph, buf, bytecnt / frame_size);
++            }
+         } else {
+             size_t bytecnt = ringbuffer_writable_size(s->rb);
+ 
+@@ -513,20 +517,26 @@ do_connect_pcm(pa_stream *s, snd_pcm_stream_t stream_direction)
+     return -1;
+ }
+ 
+-APULSE_EXPORT
+-int
+-apulse_stream_restart(pa_stream *s) {
+-    snd_pcm_stream_t stream_direction = snd_pcm_stream(s->ph);
+-
++static void
++do_close_pcm(pa_stream *s) {
+     for (int k = 0; k < s->nioe; k++) {
+         pa_mainloop_api *api = s->c->mainloop_api;
+         api->io_free(s->ioe[k]);
+     }
+     free(s->ioe);
+-	s->ioe = NULL;
+-	s->nioe = 0;
++    s->ioe = NULL;
++    s->nioe = 0;
++
+     snd_pcm_close(s->ph);
+ 	s->ph = NULL;
++}
++
++APULSE_EXPORT
++int
++apulse_stream_restart(pa_stream *s) {
++    snd_pcm_stream_t stream_direction = snd_pcm_stream(s->ph);
++
++	do_close_pcm(s);
+ 
+ 	return configure_stream_pcm(s, stream_direction, 1);
+ }
+@@ -658,10 +668,57 @@ pa_stream_connect_playback(pa_stream *s, const char *dev,
+     return -1;
+ }
+ 
++static uint64_t
++latency_bytes(pa_stream *s)
++{
++    snd_pcm_sframes_t delay;
++    if (s->ph == NULL)
++        return s->cork_latency_bytes;
++
++    if (snd_pcm_delay(s->ph, &delay) < 0)
++        delay = 0;
++
++    return ringbuffer_readable_size(s->rb) + delay * pa_frame_size(&s->ss);
++}
++
++static void
++cork_timeout_cb(pa_mainloop_api *a, pa_time_event* e, const struct timeval *tv, void *userdata) {
++	pa_stream *s = userdata;
++    if (s->ph == NULL)
++        return;
++    s->cork_latency_bytes = latency_bytes(s);
++    do_close_pcm(s);
++}
++
+ static void
+ pa_stream_cork_impl(pa_operation *op)
+ {
+-    g_atomic_int_set(&op->s->paused, !!(op->int_arg_1));
++    pa_stream *s = op->s;
++    pa_mainloop_api *api = op->api;
++    const int cork = !!(op->int_arg_1);
++    pa_usec_t now = pa_rtclock_now();
++
++    struct timeval tv = {
++        .tv_sec = 10 + now / (1000 * 1000),
++        .tv_usec = now % (1000 * 1000),
++    };
++
++    if (cork) {
++        if (s->cork_timer)
++            api->time_restart(s->cork_timer, &tv);
++       else
++          s->cork_timer = api->time_new(api, &tv, cork_timeout_cb, s);
++    }
++    else {
++        if (s->cork_timer)
++            s->cork_timer->enabled = 0;
++        if (s->ph == NULL) {
++            snd_pcm_stream_t stream_direction = s->direction == PA_STREAM_PLAYBACK ? SND_PCM_STREAM_PLAYBACK: SND_PCM_STREAM_CAPTURE;
++            configure_stream_pcm(s, stream_direction, 1);
++        }
++    }
++
++    g_atomic_int_set(&op->s->paused, cork);
+ 
+     if (op->stream_success_cb)
+         op->stream_success_cb(op->s, 1, op->cb_userdata);
+@@ -696,13 +753,9 @@ pa_stream_disconnect(pa_stream *s)
+     if (s->state != PA_STREAM_READY)
+         return PA_ERR_BADSTATE;
+ 
+-    for (int k = 0; k < s->nioe; k++) {
+-        pa_mainloop_api *api = s->c->mainloop_api;
+-        api->io_free(s->ioe[k]);
+-    }
+-    free(s->ioe);
++    if (s->ph)
++        do_close_pcm(s);
+ 
+-    snd_pcm_close(s->ph);
+     s->state = PA_STREAM_TERMINATED;
+ 
+     return PA_OK;
+@@ -771,17 +824,6 @@ pa_stream_get_index(pa_stream *s)
+     return s->idx;
+ }
+ 
+-static uint64_t
+-latency_bytes(pa_stream *s)
+-{
+-    snd_pcm_sframes_t delay;
+-
+-    if (snd_pcm_delay(s->ph, &delay) < 0)
+-        delay = 0;
+-
+-    return ringbuffer_readable_size(s->rb) + delay * pa_frame_size(&s->ss);
+-}
+-
+ APULSE_EXPORT
+ int
+ pa_stream_get_latency(pa_stream *s, pa_usec_t *r_usec, int *negative)
+@@ -834,9 +876,9 @@ pa_stream_get_timing_info(pa_stream *s)
+ {
+     trace_info_f("F %s s=%p\n", __func__, s);
+ 
+-    snd_pcm_sframes_t delay;
++    snd_pcm_sframes_t delay = 0;
+ 
+-    if (snd_pcm_delay(s->ph, &delay) < 0)
++    if (s->ph && snd_pcm_delay(s->ph, &delay) < 0)
+         delay = 0;
+     s->timing_info.read_index =
+         s->timing_info.write_index - delay * pa_frame_size(&s->ss);
+@@ -1080,6 +1122,8 @@ pa_stream_unref(pa_stream *s)
+         free(s->write_buffer);
+         free(s->name);
+         free(s->requested_device_name);
++		if (s->cork_timer)
++			s->cork_timer->mainloop->api.time_free(s->cork_timer);
+         free(s);
+     }
+ }
+diff --git a/src/apulse.h b/src/apulse.h
+index 11e6ae8..bac878f 100644
+--- a/src/apulse.h
++++ b/src/apulse.h
+@@ -119,6 +119,8 @@ struct pa_stream {
+     void *write_buffer;
+     volatile int paused;
+     pa_volume_t volume[PA_CHANNELS_MAX];
++	pa_time_event *cork_timer;
++	uint64_t cork_latency_bytes;
+ };
+ 
+ struct pa_operation {

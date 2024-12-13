@@ -2,17 +2,19 @@
 # URL:         https://github.com/i-rinat/apulse
 # Depends on:  alsa-lib glib
 
-# XXX:  Improve compatibilty with BlueALSA #123
-#	https://github.com/i-rinat/apulse/pull/123
-
 name=apulse
 version=0.1.13
-release=2
+release=3
 source="https://github.com/i-rinat/$name/archive/v$version/$name-$version.tar.gz
-	d0c4ba7e561953a54b91ead87a3ff6c9c90efcee.patch"
+	d0c4ba7e561953a54b91ead87a3ff6c9c90efcee.patch
+	123.patch"
 
 build() {
-	patch -d $name-$version -p1 -i $SRC/d0c4ba7e561953a54b91ead87a3ff6c9c90efcee.patch
+	# fix build with musl
+	patch -d $name-$version -Np1 -i $SRC/d0c4ba7e561953a54b91ead87a3ff6c9c90efcee.patch
+
+	# improve compatibility with bluealsa
+	patch -d $name-$version -Np1 -i $SRC/123.patch
 
 	cmake -S $name-$version -B build -G Ninja              \
 		-D CMAKE_INSTALL_PREFIX=/usr                   \
