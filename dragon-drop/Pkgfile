@@ -1,0 +1,14 @@
+# Description: Simple drag-and-drop source/sink for X or Wayland
+# URL:         https://github.com/mwh/dragon
+# Depends on:  gtk3
+
+name=dragon-drop
+version=1.2.0-0a56eb2
+release=1
+source="https://github.com/mwh/dragon/archive/${version#*-}/$name-$version.tar.gz
+	60.patch"
+
+build() {
+	patch -d dragon-* -Np1 -i $SRC/60.patch
+	make -C dragon-* NAME=$name PREFIX=/usr DESTDIR=$PKG install
+}
