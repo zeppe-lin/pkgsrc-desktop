@@ -1,0 +1,26 @@
+# Description: Lightweight GTK+ clipboard manager
+# URL:         https://github.com/ZaWertun/parcellite
+# Depends on:  gtk xorg-libsm
+
+name=parcellite
+version=1.2.6-0f43353
+release=1
+source="https://github.com/ZaWertun/$name/archive/${version#*-}/$name-$version.tar.gz
+	parcellite-startup.desktop"
+
+build() {
+	cmake -S $name-${version#*-}* -B build -G Ninja          \
+		-D CMAKE_INSTALL_PREFIX=/usr                     \
+		-D CMAKE_BUILD_TYPE=Release                      \
+		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS -DNDEBUG"      \
+		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS -DNDEBUG"  \
+		-Wno-dev
+
+	ninja -C build -j ${JOBS:-1} -v
+	DESTDIR=$PKG ninja -C build install
+
+	install -m 0655 -Dt $PKG/etc/xdg $SRC/$name-startup.desktop
+
+	# remove junk
+	rm -r $PKG/usr/share/locale
+}
