@@ -4,7 +4,7 @@
 
 name=sylpheed
 version=3.7.0
-release=6
+release=7
 source="https://sylpheed.sraoss.jp/$name/v${version%.*}/$name-$version.tar.xz
 	0001-fix_widget_style_for_dark_theme.patch
 	0001-trinity-icon-theme.patch
@@ -34,7 +34,7 @@ build() {
 	# trinity icons
 	for use_flag in $PKGMK_SYLPHEED; do
 		case $use_flag in
-		+trinityicons) patch -p1 -i $SRC/0001-trinity-icons-theme.patch ;;
+		+trinityicons) patch -p1 -i $SRC/0001-trinity-icon-theme.patch ;;
 		esac
 	done
 
