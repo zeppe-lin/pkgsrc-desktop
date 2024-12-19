@@ -221,6 +221,7 @@ build() {
 	CFLAGS="$CFLAGS -ffat-lto-objects"
 	CXXFLAGS="$CXXFLAGS -ffat-lto-objects"
 
+	# --disable-ffplay: otherwise requires libsdl2
 	../$name-$version/configure      \
 		--prefix=/usr            \
 		--disable-debug          \
