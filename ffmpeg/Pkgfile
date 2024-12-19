@@ -4,7 +4,7 @@
 
 name=ffmpeg
 version=7.1
-release=1
+release=2
 source="https://ffmpeg.org/releases/$name-$version.tar.bz2
 	gcc-14.patch
 	ffmpeg-x264-10bit.sh"
@@ -225,6 +225,7 @@ build() {
 		--prefix=/usr            \
 		--disable-debug          \
 		--disable-doc            \
+		--disable-ffplay         \
 		--disable-libcelt        \
 		--disable-libfontconfig  \
 		--disable-libfreetype    \
@@ -235,7 +236,6 @@ build() {
 		--disable-libxcb-xfixes  \
 		--disable-stripping      \
 		--enable-avfilter        \
-		--enable-ffplay          \
 		--enable-gpl             \
 		--enable-lto             \
 		--enable-pic             \
