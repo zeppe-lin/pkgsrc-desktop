@@ -1,5 +1,7 @@
 README trinity-extra-theme
 
+---
+
 
 CONFIGURATION
 =============
@@ -7,71 +9,73 @@ CONFIGURATION
 dircolors
 ---------
 
-	cp /usr/share/trinity/dircolors ~/.dircolors
+    cp /usr/share/trinity/dircolors ~/.dircolors
 
-	also, add the following lines to your .bashrc:
+also, add the following lines to your .bashrc:
 
-	if [ -r ~/.dircolors ]; then
-		eval "$(dircolors -b ~/.dircolors)"
-	else
-		eval "$(dircolors -b)"
-	fi
-	alias ls='ls --color=auto'
+    if [ -r ~/.dircolors ]; then
+        eval "$(dircolors -b ~/.dircolors)"
+    else
+        eval "$(dircolors -b)"
+    fi
+    alias ls='ls --color=auto'
 
 dunst
 -----
 
-	mkdir -p ~/.config/dunst
-	cp /usr/share/trinity/dunst ~/.config/dunst/dunstrc
-	killall dunst
+    mkdir -p ~/.config/dunst
+    cp /usr/share/trinity/dunst ~/.config/dunst/dunstrc
+    killall dunst
 
 gitk
 ----
 
-	mkdir -p ~/.config/git
-	cp /usr/share/trinity/gitk ~/.config/git/gitk
+    mkdir -p ~/.config/git
+    cp /usr/share/trinity/gitk ~/.config/git/gitk
 
-	... and restart gitk.
+    ... and restart gitk.
 
 hexchat
 -------
 
-	mkdir -p ~/.config/hexchat
-	cp /usr/share/trinity/hexchat ~/.config/hexchat/colors.conf
+    mkdir -p ~/.config/hexchat
+    cp /usr/share/trinity/hexchat ~/.config/hexchat/colors.conf
 
-	... and restart hexchat.
+    ... and restart hexchat.
 
 vifm
 ----
 
-	mkdir -p ~/.vifm/colors
-	cp /usr/share/trinity/vifm ~/.vifm/colors/trinity.vifm
+    mkdir -p ~/.vifm/colors
+    cp /usr/share/trinity/vifm ~/.vifm/colors/trinity.vifm
 
-	... and add ":colorscheme trinity" to ~/.vifm/vifmrc
+    ... and add ":colorscheme trinity" to ~/.vifm/vifmrc
 
 vim
 ---
 
-	mkdir -p ~/.vim/colors
-	cp /usr/share/trinity/vim ~/.vim/colors/trinity.vim
+    mkdir -p ~/.vim/colors
+    cp /usr/share/trinity/vim ~/.vim/colors/trinity.vim
 
-	... and add ":colorscheme trinity" to ~/.vimrc
+    ... and add ":colorscheme trinity" to ~/.vimrc
 
 xresources
 ----------
 
 Add the following line to ~/Xresources:
 
-	#include "/usr/share/trinity/xresources"
+    #include "/usr/share/trinity/xresources"
 
 ... and add the following line to ~/.xinitrc for persistent setting:
 
-	[ -f ~/.Xresources ] && xrdb -merge ~/.Xresources
+    [ -f ~/.Xresources ] && xrdb -merge ~/.Xresources
 
 zathura
 -------
 
-	cp /usr/share/trinity/zathurarc ~/.config/zathura/zathurarc
+    cp /usr/share/trinity/zathurarc ~/.config/zathura/zathurarc
 
+
+---
 
 End of file.
