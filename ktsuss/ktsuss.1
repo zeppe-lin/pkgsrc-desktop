@@ -1,0 +1,43 @@
+.\" ktsuss(1) manual page
+.Dd December 21, 2024
+.Dt KTSUSS 1
+.Os
+.\" ==================================================================
+.Sh NAME
+.Nm ktsuss
+.Nd run a command as another user
+.\" ==================================================================
+.Sh SYNOPSIS
+.Nm
+.Op Fl hmuv
+.Ar command
+.\" ==================================================================
+.Sh DESCRIPTION
+.Nm
+stands for
+.Dq keep the su simple, stupid ,
+and as the name says, is a graphical version (front-end) of
+.Xr su 1
+or
+.Xr sudo 8
+written in C and GTK+ 2.
+.Pp
+The options are as follows:
+.Bl -tag -width Ds
+.It Fl m Ar message , Fl \-message Ar message
+Change default message in
+.Nm
+window.
+.It Fl u Ar user , Fl \-user Ar user
+Runs the command as the given user.
+.It Fl v , Fl \-version
+Print version and exit.
+.It Fl h , Fl \-help
+Print help and exit.
+.El
+.\" ==================================================================
+.Sh AUTHORS
+This manual page was written for Zeppe-Lin System by
+.An Alexandr Savca Aq Mt alexandr.savca89@gmail.com .
+.\" vim: cc=72 tw=70
+.\" End of file.

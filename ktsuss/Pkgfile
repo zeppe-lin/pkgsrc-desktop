@@ -4,15 +4,16 @@
 
 name=ktsuss
 version=2.1
-release=3
+release=4
 source="https://github.com/nomius/$name/archive/$version/$name-$version.tar.gz
-	3584ce168196bd7262d542332d318706edc741fd.patch"
+	3584ce168196bd7262d542332d318706edc741fd.patch
+	ktsuss.1"
 
 build() {
 	# fix build with gcc 14
 	export CFLAGS="$CFLAGS -Wno-implicit-function-declaration"
 
-	patch -d $name-$version -p1 \
+	patch -d $name-$version -Np1 \
 		-i $SRC/3584ce168196bd7262d542332d318706edc741fd.patch
 
 	mkdir build; cd build
@@ -23,4 +24,6 @@ build() {
 
 	make V=1
 	make DESTDIR=$PKG install
+
+	install -m 0644 -Dt $PKG/usr/share/man/man1 $SRC/ktsuss.1
 }
