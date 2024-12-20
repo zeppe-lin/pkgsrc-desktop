@@ -26,9 +26,13 @@ build() {
 	make DESTDIR=$PKG install
 
 	# remove junk
-	rm -r $PKG/usr/share/doc/
-	find $PKG -type f \( -name perllocal.pod -o -name \*.bs \
-		-o -name autosplit.ix -o -name .packlist \) -delete
+	rm -r $PKG/usr/share/doc
+	find $PKG  -type f \(           \
+		   -name perllocal.pod  \
+		-o -name \*.bs          \
+		-o -name autosplit.ix   \
+		-o -name .packlist      \
+		\) -delete
 
 	# remove empty dirs
 	find $PKG -type d -empty -delete
