@@ -5,6 +5,7 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-BerriesAndCream/
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-2.0/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-2.0/gtkrc
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/applications.css -> ../../Bluecurve/gtk-3.0/applications.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/gtk-style.css -> ../../Bluecurve/gtk-3.0/gtk-style.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/
@@ -26,6 +27,7 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/checkbox-unchecked.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/combobox-arrow-down-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/combobox-arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/csd_stripes.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/mate-panel-separator.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/menuitem-check-checked-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/img/menuitem-check-checked-hover.png
@@ -52,6 +54,7 @@ lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/mate.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/shade.css -> ../../Bluecurve/gtk-3.0/shade.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-3.0/xfce.css -> ../../Bluecurve/gtk-3.0/xfce.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/applications.css -> ../../Bluecurve/gtk-4.0/applications.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/gtk-style.css -> ../../Bluecurve/gtk-4.0/gtk-style.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/gtk.css -> ../gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/
@@ -73,6 +76,7 @@ lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/chec
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/checkbox-unchecked.png -> ../../gtk-3.0/img/checkbox-unchecked.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../gtk-3.0/img/combobox-arrow-down-disabled.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/combobox-arrow-down.png -> ../../gtk-3.0/img/combobox-arrow-down.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/csd_stripes.png -> ../../gtk-3.0/img/csd_stripes.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/mate-panel-separator.png -> ../../gtk-3.0/img/mate-panel-separator.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/menuitem-check-checked-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-BerriesAndCream/gtk-4.0/img/menuitem-check-checked-hover.png
@@ -103,6 +107,7 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic-RH8/
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-2.0/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-2.0/gtkrc
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/applications.css -> ../../Bluecurve/gtk-3.0/applications.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/classic-tweaks.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/gtk-style.css -> ../../Bluecurve/gtk-3.0/gtk-style.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/gtk.css
@@ -125,6 +130,7 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/checkbox-unchecked.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/combobox-arrow-down-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/combobox-arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/csd_stripes.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/mate-panel-separator.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/menuitem-check-checked-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/img/menuitem-check-checked-hover.png
@@ -151,6 +157,7 @@ lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/mate.css -> 
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/shade.css -> ../../Bluecurve/gtk-3.0/shade.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-3.0/xfce.css -> ../../Bluecurve/gtk-3.0/xfce.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/applications.css -> ../../Bluecurve/gtk-4.0/applications.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/classic-tweaks.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/gtk-style.css -> ../../Bluecurve/gtk-4.0/gtk-style.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/gtk.css -> ../gtk-3.0/gtk.css
@@ -173,6 +180,7 @@ lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/checkbox
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/checkbox-unchecked.png -> ../../gtk-3.0/img/checkbox-unchecked.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../gtk-3.0/img/combobox-arrow-down-disabled.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/combobox-arrow-down.png -> ../../gtk-3.0/img/combobox-arrow-down.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/csd_stripes.png -> ../../gtk-3.0/img/csd_stripes.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/mate-panel-separator.png -> ../../gtk-3.0/img/mate-panel-separator.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/menuitem-check-checked-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH8/gtk-4.0/img/menuitem-check-checked-hover.png
@@ -213,6 +221,7 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic-RH9/
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-2.0/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-2.0/gtkrc
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-3.0/
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-3.0/applications.css -> ../../Bluecurve/gtk-3.0/applications.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-3.0/classic-tweaks.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-3.0/gtk-style.css -> ../../Bluecurve/gtk-3.0/gtk-style.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-3.0/gtk.css
@@ -221,6 +230,7 @@ lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-3.0/mate.css -> 
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-3.0/shade.css -> ../../Bluecurve/gtk-3.0/shade.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-3.0/xfce.css -> ../../Bluecurve/gtk-3.0/xfce.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-4.0/
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-4.0/applications.css -> ../../Bluecurve/gtk-4.0/applications.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-4.0/classic-tweaks.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-4.0/gtk-style.css -> ../../Bluecurve/gtk-4.0/gtk-style.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Classic-RH9/gtk-4.0/gtk.css -> ../gtk-3.0/gtk.css
@@ -246,6 +256,7 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Gnome/
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Gnome/gtk-2.0/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-2.0/gtkrc
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/applications.css -> ../../Bluecurve/gtk-3.0/applications.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/gtk-style.css -> ../../Bluecurve/gtk-3.0/gtk-style.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/
@@ -267,6 +278,7 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/checkbox-unchecked.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/combobox-arrow-down-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/combobox-arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/csd_stripes.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/mate-panel-separator.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/menuitem-check-checked-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/img/menuitem-check-checked-hover.png
@@ -293,6 +305,7 @@ lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/mate.css -> ../../
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/shade.css -> ../../Bluecurve/gtk-3.0/shade.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-3.0/xfce.css -> ../../Bluecurve/gtk-3.0/xfce.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/applications.css -> ../../Bluecurve/gtk-4.0/applications.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/gtk-style.css -> ../../Bluecurve/gtk-4.0/gtk-style.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/gtk.css -> ../gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/
@@ -314,6 +327,7 @@ lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/checkbox-unche
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/checkbox-unchecked.png -> ../../gtk-3.0/img/checkbox-unchecked.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../gtk-3.0/img/combobox-arrow-down-disabled.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/combobox-arrow-down.png -> ../../gtk-3.0/img/combobox-arrow-down.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/csd_stripes.png -> ../../gtk-3.0/img/csd_stripes.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/mate-panel-separator.png -> ../../gtk-3.0/img/mate-panel-separator.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/menuitem-check-checked-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Gnome/gtk-4.0/img/menuitem-check-checked-hover.png
@@ -344,6 +358,7 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Grape/
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Grape/gtk-2.0/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-2.0/gtkrc
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/applications.css -> ../../Bluecurve/gtk-3.0/applications.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/gtk-style.css -> ../../Bluecurve/gtk-3.0/gtk-style.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/
@@ -365,6 +380,7 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/checkbox-unchecked.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/combobox-arrow-down-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/combobox-arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/csd_stripes.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/mate-panel-separator.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/menuitem-check-checked-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/img/menuitem-check-checked-hover.png
@@ -391,6 +407,7 @@ lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/mate.css -> ../../
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/shade.css -> ../../Bluecurve/gtk-3.0/shade.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-3.0/xfce.css -> ../../Bluecurve/gtk-3.0/xfce.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/applications.css -> ../../Bluecurve/gtk-4.0/applications.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/gtk-style.css -> ../../Bluecurve/gtk-4.0/gtk-style.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/gtk.css -> ../gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/
@@ -412,6 +429,7 @@ lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/checkbox-unche
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/checkbox-unchecked.png -> ../../gtk-3.0/img/checkbox-unchecked.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../gtk-3.0/img/combobox-arrow-down-disabled.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/combobox-arrow-down.png -> ../../gtk-3.0/img/combobox-arrow-down.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/csd_stripes.png -> ../../gtk-3.0/img/csd_stripes.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/mate-panel-separator.png -> ../../gtk-3.0/img/mate-panel-separator.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/menuitem-check-checked-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Grape/gtk-4.0/img/menuitem-check-checked-hover.png
@@ -442,6 +460,7 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Lime/
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Lime/gtk-2.0/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-2.0/gtkrc
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/applications.css -> ../../Bluecurve/gtk-3.0/applications.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/gtk-style.css -> ../../Bluecurve/gtk-3.0/gtk-style.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/
@@ -463,6 +482,7 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/checkbox-unchecked.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/combobox-arrow-down-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/combobox-arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/csd_stripes.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/mate-panel-separator.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/menuitem-check-checked-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/img/menuitem-check-checked-hover.png
@@ -489,6 +509,7 @@ lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/mate.css -> ../../B
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/shade.css -> ../../Bluecurve/gtk-3.0/shade.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-3.0/xfce.css -> ../../Bluecurve/gtk-3.0/xfce.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/applications.css -> ../../Bluecurve/gtk-4.0/applications.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/gtk-style.css -> ../../Bluecurve/gtk-4.0/gtk-style.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/gtk.css -> ../gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/
@@ -510,6 +531,7 @@ lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/checkbox-unchec
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/checkbox-unchecked.png -> ../../gtk-3.0/img/checkbox-unchecked.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../gtk-3.0/img/combobox-arrow-down-disabled.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/combobox-arrow-down.png -> ../../gtk-3.0/img/combobox-arrow-down.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/csd_stripes.png -> ../../gtk-3.0/img/csd_stripes.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/mate-panel-separator.png -> ../../gtk-3.0/img/mate-panel-separator.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/menuitem-check-checked-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Lime/gtk-4.0/img/menuitem-check-checked-hover.png
@@ -540,6 +562,7 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Slate/
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Slate/gtk-2.0/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-2.0/gtkrc
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/applications.css -> ../../Bluecurve/gtk-3.0/applications.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/gtk-style.css -> ../../Bluecurve/gtk-3.0/gtk-style.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/
@@ -561,6 +584,7 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/checkbox-unchecked.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/combobox-arrow-down-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/combobox-arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/csd_stripes.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/mate-panel-separator.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/menuitem-check-checked-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/img/menuitem-check-checked-hover.png
@@ -587,6 +611,7 @@ lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/mate.css -> ../../
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/shade.css -> ../../Bluecurve/gtk-3.0/shade.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-3.0/xfce.css -> ../../Bluecurve/gtk-3.0/xfce.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/applications.css -> ../../Bluecurve/gtk-4.0/applications.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/gtk-style.css -> ../../Bluecurve/gtk-4.0/gtk-style.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/gtk.css -> ../gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/
@@ -608,6 +633,7 @@ lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/checkbox-unche
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/checkbox-unchecked.png -> ../../gtk-3.0/img/checkbox-unchecked.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../gtk-3.0/img/combobox-arrow-down-disabled.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/combobox-arrow-down.png -> ../../gtk-3.0/img/combobox-arrow-down.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/csd_stripes.png -> ../../gtk-3.0/img/csd_stripes.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/mate-panel-separator.png -> ../../gtk-3.0/img/mate-panel-separator.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/menuitem-check-checked-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Slate/gtk-4.0/img/menuitem-check-checked-hover.png
@@ -638,6 +664,7 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Strawberry/
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-2.0/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-2.0/gtkrc
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/applications.css -> ../../Bluecurve/gtk-3.0/applications.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/gtk-style.css -> ../../Bluecurve/gtk-3.0/gtk-style.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/
@@ -659,6 +686,7 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/checkbox-unchecked.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/combobox-arrow-down-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/combobox-arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/csd_stripes.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/mate-panel-separator.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/menuitem-check-checked-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/img/menuitem-check-checked-hover.png
@@ -685,6 +713,7 @@ lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/mate.css -> .
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/shade.css -> ../../Bluecurve/gtk-3.0/shade.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-3.0/xfce.css -> ../../Bluecurve/gtk-3.0/xfce.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/applications.css -> ../../Bluecurve/gtk-4.0/applications.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/gtk-style.css -> ../../Bluecurve/gtk-4.0/gtk-style.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/gtk.css -> ../gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/
@@ -706,6 +735,7 @@ lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/checkbox-
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/checkbox-unchecked.png -> ../../gtk-3.0/img/checkbox-unchecked.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../gtk-3.0/img/combobox-arrow-down-disabled.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/combobox-arrow-down.png -> ../../gtk-3.0/img/combobox-arrow-down.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/csd_stripes.png -> ../../gtk-3.0/img/csd_stripes.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/mate-panel-separator.png -> ../../gtk-3.0/img/mate-panel-separator.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/menuitem-check-checked-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Strawberry/gtk-4.0/img/menuitem-check-checked-hover.png
@@ -736,6 +766,7 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Tangerine/
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-2.0/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-2.0/gtkrc
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/applications.css -> ../../Bluecurve/gtk-3.0/applications.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/gtk-style.css -> ../../Bluecurve/gtk-3.0/gtk-style.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/
@@ -757,6 +788,7 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/checkbox-unchecked.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/combobox-arrow-down-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/combobox-arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/csd_stripes.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/mate-panel-separator.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/menuitem-check-checked-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/img/menuitem-check-checked-hover.png
@@ -783,6 +815,7 @@ lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/mate.css -> ..
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/shade.css -> ../../Bluecurve/gtk-3.0/shade.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-3.0/xfce.css -> ../../Bluecurve/gtk-3.0/xfce.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/applications.css -> ../../Bluecurve/gtk-4.0/applications.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/gtk-style.css -> ../../Bluecurve/gtk-4.0/gtk-style.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/gtk.css -> ../gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/
@@ -804,6 +837,7 @@ lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/checkbox-u
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/checkbox-unchecked.png -> ../../gtk-3.0/img/checkbox-unchecked.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../gtk-3.0/img/combobox-arrow-down-disabled.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/combobox-arrow-down.png -> ../../gtk-3.0/img/combobox-arrow-down.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/csd_stripes.png -> ../../gtk-3.0/img/csd_stripes.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/mate-panel-separator.png -> ../../gtk-3.0/img/mate-panel-separator.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/menuitem-check-checked-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve-Tangerine/gtk-4.0/img/menuitem-check-checked-hover.png
@@ -834,6 +868,7 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve/
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve/gtk-2.0/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve/gtk-2.0/gtkrc
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve/gtk-3.0/
+-rw-r--r--	root/root	usr/share/themes/Bluecurve/gtk-3.0/applications.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve/gtk-3.0/gtk-style.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve/gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve/gtk-3.0/img/
@@ -855,6 +890,7 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve/gtk-3.0/img/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve/gtk-3.0/img/checkbox-unchecked.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve/gtk-3.0/img/combobox-arrow-down-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve/gtk-3.0/img/combobox-arrow-down.png
+-rw-r--r--	root/root	usr/share/themes/Bluecurve/gtk-3.0/img/csd_stripes.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve/gtk-3.0/img/mate-panel-separator.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve/gtk-3.0/img/menuitem-check-checked-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve/gtk-3.0/img/menuitem-check-checked-hover.png
@@ -881,6 +917,7 @@ drwxr-xr-x	root/root	usr/share/themes/Bluecurve/gtk-3.0/img/
 -rw-r--r--	root/root	usr/share/themes/Bluecurve/gtk-3.0/shade.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve/gtk-3.0/xfce.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve/gtk-4.0/
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve/gtk-4.0/applications.css -> ../gtk-3.0/applications.css
 -rw-r--r--	root/root	usr/share/themes/Bluecurve/gtk-4.0/gtk-style.css
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve/gtk-4.0/gtk.css -> ../gtk-3.0/gtk.css
 drwxr-xr-x	root/root	usr/share/themes/Bluecurve/gtk-4.0/img/
@@ -902,6 +939,7 @@ lrwxrwxrwx	root/root	usr/share/themes/Bluecurve/gtk-4.0/img/checkbox-unchecked-a
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve/gtk-4.0/img/checkbox-unchecked.png -> ../../gtk-3.0/img/checkbox-unchecked.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve/gtk-4.0/img/combobox-arrow-down-disabled.png -> ../../gtk-3.0/img/combobox-arrow-down-disabled.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve/gtk-4.0/img/combobox-arrow-down.png -> ../../gtk-3.0/img/combobox-arrow-down.png
+lrwxrwxrwx	root/root	usr/share/themes/Bluecurve/gtk-4.0/img/csd_stripes.png -> ../../gtk-3.0/img/csd_stripes.png
 lrwxrwxrwx	root/root	usr/share/themes/Bluecurve/gtk-4.0/img/mate-panel-separator.png -> ../../gtk-3.0/img/mate-panel-separator.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve/gtk-4.0/img/menuitem-check-checked-disabled.png
 -rw-r--r--	root/root	usr/share/themes/Bluecurve/gtk-4.0/img/menuitem-check-checked-hover.png
