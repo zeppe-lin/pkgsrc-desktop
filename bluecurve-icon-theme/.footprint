@@ -471,7 +471,6 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/org.xfce.filemanager.p
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/org.xfce.genmon.png -> ../../16x16/apps/utilities-system-monitor.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/org.xfce.mailreader.png -> ../../16x16/apps/email.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/org.xfce.mousepad.png -> ../../16x16/apps/accessories-text-editor.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/org.xfce.panel.applicationsmenu.png -> ../../16x16/apps/redhat-icon-panel-menu.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/org.xfce.panel.clock.png -> ../../16x16/apps/gnome-clock.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/org.xfce.panel.directorymenu.png -> ../../16x16/stock/document-open.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/16x16/apps/org.xfce.panel.launcher.png -> ../../16x16/apps/icon-launcher.png
@@ -2945,7 +2944,6 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/org.xfce.filemanager.p
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/org.xfce.genmon.png -> ../../24x24/apps/utilities-system-monitor.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/org.xfce.mailreader.png -> ../../24x24/apps/email.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/org.xfce.mousepad.png -> ../../24x24/apps/accessories-text-editor.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/org.xfce.panel.applicationsmenu.png -> ../../24x24/apps/redhat-icon-panel-menu.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/org.xfce.panel.clock.png -> ../../24x24/apps/gnome-clock.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/org.xfce.panel.directorymenu.png -> ../../24x24/stock/document-open.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/24x24/apps/org.xfce.panel.launcher.png -> ../../24x24/apps/icon-launcher.png
@@ -5027,7 +5025,6 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/org.xfce.filemanager.p
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/org.xfce.genmon.png -> ../../32x32/apps/utilities-system-monitor.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/org.xfce.mailreader.png -> ../../32x32/apps/email.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/org.xfce.mousepad.png -> ../../32x32/apps/accessories-text-editor.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/org.xfce.panel.applicationsmenu.png -> ../../32x32/apps/redhat-icon-panel-menu.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/org.xfce.panel.clock.png -> ../../32x32/apps/gnome-clock.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/org.xfce.panel.directorymenu.png -> ../../32x32/stock/document-open.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/32x32/apps/org.xfce.panel.launcher.png -> ../../32x32/apps/icon-launcher.png
@@ -5866,7 +5863,6 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/org.xfce.filemanager.p
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/org.xfce.genmon.png -> ../../36x36/apps/utilities-system-monitor.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/org.xfce.mailreader.png -> ../../36x36/apps/email.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/org.xfce.mousepad.png -> ../../36x36/apps/accessories-text-editor.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/org.xfce.panel.applicationsmenu.png -> ../../36x36/apps/redhat-icon-panel-menu.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/org.xfce.panel.clock.png -> ../../36x36/apps/gnome-clock.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/org.xfce.panel.launcher.png -> ../../36x36/apps/icon-launcher.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/36x36/apps/org.xfce.panel.pager.png -> ../../36x36/apps/display-capplet.png
@@ -6497,7 +6493,6 @@ lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/org.xfce.filemanager.p
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/org.xfce.genmon.png -> ../../48x48/apps/utilities-system-monitor.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/org.xfce.mailreader.png -> ../../48x48/apps/email.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/org.xfce.mousepad.png -> ../../48x48/apps/accessories-text-editor.png
-lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/org.xfce.panel.applicationsmenu.png -> ../../48x48/apps/redhat-icon-panel-menu.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/org.xfce.panel.clock.png -> ../../48x48/apps/gnome-clock.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/org.xfce.panel.directorymenu.png -> ../../48x48/stock/document-open.png
 lrwxrwxrwx	root/root	usr/share/icons/Bluecurve/48x48/apps/org.xfce.panel.launcher.png -> ../../48x48/apps/icon-launcher.png

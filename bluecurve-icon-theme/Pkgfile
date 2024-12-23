@@ -3,7 +3,7 @@
 # Depends on:  gtk3
 
 name=bluecurve-icon-theme
-version=2.0.0-9fca9f2
+version=2.2.2-09a6f0d
 release=1
 source="https://github.com/neeeeow/Bluecurve/archive/${version#*-}/Bluecurve-$version.tar.gz
 	Bluecurve.cache"
