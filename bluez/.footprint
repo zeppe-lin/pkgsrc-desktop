@@ -4,7 +4,7 @@ dr-xr-xr-x	root/root	etc/bluetooth/
 -rw-r--r--	root/root	etc/bluetooth/main.conf
 -rw-r--r--	root/root	etc/bluetooth/network.conf
 drwxr-xr-x	root/root	etc/modprobe.d/
--rw-r--r--	root/root	etc/modprobe.d/bluetooth
+-rw-r--r--	root/root	etc/modprobe.d/bluetooth.conf
 drwxr-xr-x	root/root	etc/rc.d/
 -rwxr-xr-x	root/root	etc/rc.d/bluetoothd
 drwxr-xr-x	root/root	usr/

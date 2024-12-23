@@ -5,7 +5,7 @@
 
 name=bluez
 version=5.79
-release=1
+release=2
 source="https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-$version.tar.xz
   	rc.bluetoothd
 	modprobe.bluetooth"
@@ -43,10 +43,11 @@ build() {
 	install -m 0755 -D $SRC/rc.bluetoothd $PKG/etc/rc.d/bluetoothd
 
 	# modprobe
-	install -m 0644 -D $SRC/modprobe.bluetooth $PKG/etc/modprobe.d/bluetooth
+	install -m 0644 -D $SRC/modprobe.bluetooth \
+		$PKG/etc/modprobe.d/bluetooth.conf
 
 	# libical-related file
-	install -m 0755 -Dt $PKG/usr/lib/bluetooth/ tools/obexctl
+	install -m 0755 -Dt $PKG/usr/lib/bluetooth tools/obexctl
 
 	# remove zsh completion
 	rm -r $PKG/usr/share/zsh
