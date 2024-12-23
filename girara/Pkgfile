@@ -4,7 +4,7 @@
 # Optional:    json-glib
 
 name=girara
-version=0.4.4
+version=0.4.5
 release=1
 source=$name-$version.tar.gz::https://github.com/pwmt/$name/archive/refs/tags/$version.tar.gz
 
