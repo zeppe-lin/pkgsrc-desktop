@@ -1,9 +1,9 @@
-# Description: Modular status bar for dwm or similar programs (zpln fork)
+# Description: Modular status bar for dwm or similar programs (Zeppe-Lin fork)
 # URL:         https://github.com/zeppe-lin/dwmblocks
 # Depends on:  xorg-libx11
 
 name=dwmblocks
-version=0.2.2z-be74dec
+version=0.2.2z-eeb4bc2
 release=1
 source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
 
