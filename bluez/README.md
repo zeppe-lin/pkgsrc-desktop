@@ -15,18 +15,19 @@ need to be enabled, and the kernel rebuilt.
 
 1. A minimum of kernel version 4.9 or later is required.
 
-2. The kernel must at a minimum have the following .config options turned on:
+2. The kernel must at a minimum have the following `.config` options turned on:
 
-    CONFIG_CRYPTO_USER
-    CONFIG_CRYPTO_USER_API
-    CONFIG_CRYPTO_USER_API_AEAD
-    CONFIG_CRYPTO_USER_API_HASH
-    CONFIG_CRYPTO_USER_API_SKCIPHER
-    CONFIG_CRYPTO_AES
-    CONFIG_CRYPTO_CCM
-    CONFIG_CRYPTO_AEAD
-    CONFIG_CRYPTO_CMAC
-
+```
+CONFIG_CRYPTO_USER
+CONFIG_CRYPTO_USER_API
+CONFIG_CRYPTO_USER_API_AEAD
+CONFIG_CRYPTO_USER_API_HASH
+CONFIG_CRYPTO_USER_API_SKCIPHER
+CONFIG_CRYPTO_AES
+CONFIG_CRYPTO_CCM
+CONFIG_CRYPTO_AEAD
+CONFIG_CRYPTO_CMAC
+```
 
 ---
 
