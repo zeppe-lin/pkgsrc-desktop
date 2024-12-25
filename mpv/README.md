@@ -6,16 +6,16 @@ README mpv
 REQUIREMENTS
 ============
 
-For optical audio/dvd/blu-ray playback you need to install `libcdio-paranoia`,
-`libdvdnav` and `libbluray` respectively.
+* For optical audio/dvd/blu-ray playback you need to install
+  `libcdio-paranoia`, `libdvdnav` and `libbluray` respectively.
 
-For high quality pitch correction, install `rubberband`.
+* For high quality pitch correction, install `rubberband`.
 
-For nvidia hardware decoding x.264 support you need to install
-`ffnvcodec-headers`, then either force rebuild `ffmpeg` or compile `ffmpeg`.
+* For nvidia hardware decoding x.264 support you need to install
+  `ffnvcodec-headers`, then either force rebuild `ffmpeg` or compile `ffmpeg`.
 
-For Video Decode and Presentation API for Unix acceleration interface, install
-`vdpau`.
+* For Video Decode and Presentation API for Unix acceleration interface,
+  install `vdpau`.
 
 
 ---

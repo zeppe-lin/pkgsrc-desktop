@@ -20,11 +20,15 @@ THEME CUSTOMIZATION
 Qt5 can be forced to follow the theme of GTK-3.0.  Add the following line to
 your profile:
 
-    export QT_QPA_PLATFORMTHEME=gtk3
+```sh
+export QT_QPA_PLATFORMTHEME=gtk3
+```
 
 You may also wish to set the widget style:
 
-    export QT_STYLE_OVERRIDE=windows
+```sh
+export QT_STYLE_OVERRIDE=windows
+```
 
 
 ---

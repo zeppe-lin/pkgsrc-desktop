@@ -6,6 +6,9 @@ README inxi
 REQUIREMENTS
 ============
 
+Runtime
+-------
+
 To obtain more information about your system will be nice to have:
 
 * `xorg-xprop`:     Desktop data.
@@ -15,7 +18,9 @@ To obtain more information about your system will be nice to have:
 
 To see more optional requirements, run:
 
-    inxi --recommends
+```sh
+inxi --recommends
+```
 
 
 ---

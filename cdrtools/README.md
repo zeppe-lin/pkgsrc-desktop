@@ -21,11 +21,12 @@ KERNEL MODULE
 =============
 
 Add the following lines to `/etc/rc.modules` to autoload module needed by
-cdrecord:
+`cdrecord`:
 
-    # Generic SCSI support for SATA DVD-RW
-    /sbin/modprobe sg
-
+```sh
+# Generic SCSI support for SATA DVD-RW.
+/sbin/modprobe sg
+```
 
 ---
 

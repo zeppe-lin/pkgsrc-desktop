@@ -3,8 +3,11 @@ README bluez
 ---
 
 
-KERNEL CONFIGURATION (for Mesh)
-===============================
+KERNEL CONFIGURATION
+====================
+
+For Mesh
+--------
 
 The Mesh daemon uses kernel provided crypto utilities to perform security
 functions required of Bluetooth Mesh. Many standard distributions currently

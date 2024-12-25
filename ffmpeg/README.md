@@ -6,6 +6,9 @@ README ffmpeg
 REQUIREMENTS
 ============
 
+Optional
+--------
+
 Optional software for special features:
 
 * `alsa-lib`:          Support sound recording and playback using ALSA.
