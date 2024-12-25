@@ -9,7 +9,9 @@ POST-INSTALL
 After updating qt5 you may get the following error when launching qt5
 applications:
 
-    "Can't mix incompatible Qt library (5.15.x) with this library (5.15.y)"
+```sh
+Can't mix incompatible Qt library (5.15.x) with this library (5.15.y)
+```
 
 Just rebuild `qt5-styleplugins`.
 

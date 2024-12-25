@@ -6,7 +6,9 @@ README bluealsa
 ONLINE DOCUMENTATION
 ====================
 
-Wiki: https://github.com/arkq/bluez-alsa/wiki/
+* [Wiki][1]
+
+[1]: https://github.com/arkq/bluez-alsa/wiki/
 
 
 ---

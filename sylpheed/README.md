@@ -12,6 +12,7 @@ To enable trinity-like icons, add the following line to your `/etc/pkgmk.conf`:
 PKGMK_SYLPHEED="+trinityicons"
 ```
 
+
 URGENT WINDOW NOTIFICATION
 ==========================
 **Requires xdotool!**

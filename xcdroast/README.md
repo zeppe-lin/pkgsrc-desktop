@@ -18,7 +18,7 @@ CDDB-Server:  gnudb.gnudb.org  Port: 80    [x] Use HTTP
 via HTTP-Proxy:                Port: 8080
 ```
 
-[1]:  https://developers.slashdot.org/story/20/03/02/2245216/freedborg-is-shutting-down
+[1]: https://developers.slashdot.org/story/20/03/02/2245216/freedborg-is-shutting-down
 
 
 ---
