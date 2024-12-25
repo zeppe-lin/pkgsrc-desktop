@@ -3,7 +3,7 @@
 # Depends on:  xorg-libx11 wmctrl
 
 name=lsw
-version=0.3-2884abc
+version=0.3-812ab2b
 release=1
 source=https://github.com/zeppe-lin/lsw/archive/${version#*-}/lsw-$version.tar.gz
 
