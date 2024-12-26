@@ -1,0 +1,19 @@
+# Description: Utilities for managing XDG MIME Applications
+# URL:         https://www.freedesktop.org/wiki/Software/xdg-utils/
+# Depends on:  dash file xorg-xset xorg-xprop
+
+# xset + xprop needed inside xdg-screensaver
+
+# XXX: xdg-utils build dependencies is ugly as ~~f*ck~~ any other
+# freedesktop.org utility. So, given that xdg-utils are just a bunch of shell
+# scripts, download already built archlinux package.
+
+name=xdg-utils
+version=1.2.1
+release=1
+source=https://archive.archlinux.org/packages/x/$name/$name-$version-1-any.pkg.tar.zst
+
+build() {
+	rm -r $SRC/usr/share/licenses
+	mv $SRC/usr $PKG/
+}
