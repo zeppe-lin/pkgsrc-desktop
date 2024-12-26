@@ -1,29 +1,29 @@
-# Description: Suckless Terminal emulator for X
-# URL:         https://st.suckless.org/
+# Description: Terminal emulator for X (Zeppe-Lin fork)
+# URL:         https://github.com/zeppe-lin/st
 # Depends on:  fontconfig freetype xorg-libx11 xorg-libxext xorg-libxft
 
 name=st
-version=0.9.2
+version=0.8.5-1-ff586d8
 release=1
-source="https://dl.suckless.org/st/st-$version.tar.gz
-	xrdb-plus.patch
+source="https://github.com/zeppe-lin/st/archive/${version##*-}/st-$version.tar.gz
 	st.desktop"
 
 build() {
-	patch -d st-$version -Np1 -i $SRC/xrdb-plus.patch
+	cd st-${version##*-}*
 
-	sed -i '/tic/d' st-$version/Makefile
+	# apply user-defined configuration if exists
+	if [ -f $PKGMK_ROOT/config.h ]; then
+		cp $PKGMK_ROOT/config.h .
+	fi
+
+	# uncomment if you find a program that complains that st is
+	# unknown, or not recognised, or unsupported, etc
+	#make terminfo-entry
 
 	# pick up system flags
-	sed -ri '/^(C|LD)FLAGS/s/ = /+=/g' st-$version/config.mk
+	sed -ri '/^(C|LD)FLAGS/s/ = /+=/g' config.mk
 
-	make -C st-$version             \
-		CC="${CC:-cc}"          \
-		PREFIX=/usr             \
-		X11INC=/usr/include/X11 \
-		X11LIB=/usr/lib         \
-		DESTDIR=$PKG            \
-		all install
+	make PREFIX=/usr DESTDIR=$PKG install
 
-	install -m 0644 -Dt $PKG/usr/share/applications/ $SRC/st.desktop
+	install -m 0644 -Dt $PKG/usr/share/applications $SRC/st.desktop
 }
