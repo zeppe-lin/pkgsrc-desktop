@@ -1,9 +1,9 @@
-# Description: Music player for large collection
+# Description: Music player for large collection (fork of gmusicbrowser)
 # URL:         https://github.com/zeppe-lin/jukebox
 # Depends on:  p5-gtk2 p5-net-dbus
 
 name=jukebox
-version=1.1.16z1-627b05e
+version=1.1.16z1-e0b17b4
 release=1
 source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
 
