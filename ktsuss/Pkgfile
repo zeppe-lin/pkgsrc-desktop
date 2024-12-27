@@ -4,7 +4,7 @@
 
 name=ktsuss
 version=2.1
-release=4
+release=5
 source="https://github.com/nomius/$name/archive/$version/$name-$version.tar.gz
 	3584ce168196bd7262d542332d318706edc741fd.patch
 	ktsuss.1"
