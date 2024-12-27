@@ -1,0 +1,12 @@
+diff '--color=auto' -pruN parcellite-0f43353afcf86e98d0b0ebf8dc8992a8bbb4f038.orig/src/main.c parcellite-0f43353afcf86e98d0b0ebf8dc8992a8bbb4f038/src/main.c
+--- parcellite-0f43353afcf86e98d0b0ebf8dc8992a8bbb4f038.orig/src/main.c	2024-12-27 08:22:09.992277738 +0200
++++ parcellite-0f43353afcf86e98d0b0ebf8dc8992a8bbb4f038/src/main.c	2024-12-27 08:23:31.208542374 +0200
+@@ -1095,7 +1095,7 @@ static void show_about_dialog(GtkMenuIte
+       "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+       "GNU General Public License for more details.\n\n"
+       "You should have received a copy of the GNU General Public License\n"
+-      "along with this program.  If not, see <http://www.gnu.org/licenses/>.";
++      "along with this program; if not, see http://www.gnu.org/licenses/.";
+     
+     /* Create the about dialog */
+     GtkWidget* about_dialog = gtk_about_dialog_new();

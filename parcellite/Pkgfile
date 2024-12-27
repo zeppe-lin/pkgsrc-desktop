@@ -4,11 +4,14 @@
 
 name=parcellite
 version=1.2.6-0f43353
-release=1
+release=2
 source="https://github.com/ZaWertun/$name/archive/${version#*-}/$name-$version.tar.gz
+	fix-aboutdlg-link.patch
 	parcellite-startup.desktop"
 
 build() {
+	patch -d $name-${version#*-}* -Np1 -i $SRC/fix-aboutdlg-link.patch
+
 	cmake -S $name-${version#*-}* -B build -G Ninja          \
 		-D CMAKE_INSTALL_PREFIX=/usr                     \
 		-D CMAKE_BUILD_TYPE=Release                      \
