@@ -1,4 +1,4 @@
-# Description:  Bind keys to shell scripts in X
+# Description:  Bind keys to shell scripts in X (no-tk, no-guile)
 # URL:          https://www.nongnu.org/xbindkeys/xbindkeys.html
 # Depends on:   xorg-libx11
 
