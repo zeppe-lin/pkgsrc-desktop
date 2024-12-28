@@ -1,7 +1,6 @@
 # Description: File manager with curses UI & Vi[m]-like environment
 # URL:         https://vifm.info/
-# Depends on:  ncurses desktop-file-utils
-# Optional:    desktop-file-utils
+# Depends on:  ncurses
 
 name=vifm
 version=0.13

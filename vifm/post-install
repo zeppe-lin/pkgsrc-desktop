@@ -2,7 +2,22 @@
 
 export PATH="/sbin:/usr/sbin:/bin:/usr/bin"
 
-update-mime-database /usr/share/mime
-update-desktop-database -q
+# The following post-install commands are optional, as they are part
+# of other GUI packages that vifm itself does not depend on.  In other
+# words, avoid making vifm dependent on GUI packages (e.g.  for
+# console installations), and at the same time don't break
+# post-install script.
+
+if command -v gtk-update-icon-cache; then
+	gtk-update-icon-cache -f -t -q /usr/share/icons/hicolor
+fi
+
+if command -v update-mime-database; then
+	update-mime-database /usr/share/mime
+fi
+
+if command -v update-desktop-database; then
+	update-desktop-database -q
+fi
 
 # End of file.
