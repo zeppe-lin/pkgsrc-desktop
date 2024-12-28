@@ -19,8 +19,8 @@ build() {
 	make DESTDIR=$PKG install
 
 	# bash completion
-	install -m 0644 -D ../scrot-$version/etc/bash-completion/scrot \
-		$PKG/usr/share/bash-completion/completions/scrot
+	install -m 0644 -Dt $PKG/usr/share/bash-completion/completions \
+		../scrot-$version/etc/bash-completion/scrot
 
 	# remove junk
 	rm -r $PKG/usr/share/doc
