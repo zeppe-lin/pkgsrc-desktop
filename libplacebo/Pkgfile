@@ -5,11 +5,13 @@
 
 name=libplacebo
 version=7.349.0
-release=1
+release=2
 source="https://github.com/haasn/$name/archive/v$version/$name-$version.tar.gz
+	libplacebo-7.349.0-glslang-1.3.296.patch
 	no-vulkan-headers.patch"
 
 build() {
+	patch -d $name-$version -Np1 -i $SRC/$name-$version-glslang-1.3.296.patch
 	patch -d $name-$version -Np1 -i $SRC/no-vulkan-headers.patch
 
 	meson setup build $name-$version  \
