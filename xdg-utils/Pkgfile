@@ -5,7 +5,7 @@
 # xset + xprop needed inside xdg-screensaver
 
 # XXX: xdg-utils build dependencies is ugly as ~~f*ck~~ any other
-# freedesktop.org utility. So, given that xdg-utils are just a bunch of shell
+# freedesktop.org utility.  So, given that xdg-utils are just a bunch of shell
 # scripts, download already built archlinux package.
 
 name=xdg-utils
