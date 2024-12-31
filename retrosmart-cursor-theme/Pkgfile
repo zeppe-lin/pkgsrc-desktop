@@ -14,7 +14,5 @@ build() {
 	make DESTDIR=$PKG install
 
 	# remove junk
-	rm -r $PKG/usr/share/icons/share/doc \
-	      $PKG/usr/share/icons/share/licenses
-	rmdir $PKG/usr/share/icons/share
+	cd $PKG/usr/share/icons; rm -r share/doc share/licenses; rmdir share
 }
