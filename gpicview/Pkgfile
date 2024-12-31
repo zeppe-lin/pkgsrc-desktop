@@ -2,9 +2,8 @@
 # URL:         https://github.com/lxde/gpicview
 # Depends on:  desktop-file-utils gtk3 xdg-utils
 
-# * xdg-utils: needed by "Make GPicView the default viewer for images" setup
-#   functionality.
-# * desktop-file-utils: required by post-install scripts.
+# xdg-utils: required by "Make GPicView the default viewer for images" setup button
+# desktop-file-utils: required by post-install script
 
 name=gpicview
 version=0.2.6
