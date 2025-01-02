@@ -1,0 +1,16 @@
+# Description: Minimalistic personal calendar program
+# URL:         http://www.lightandmatter.com/when/when.html
+
+name=when
+version=1.1.45
+release=1
+source=when-$version.tar.gz::https://bitbucket.org/ben-crowell/when/get/$version.tar.gz
+
+build() {
+	cd ben-crowell-when-965b37762cc7
+
+	make when.1
+
+	install -m 0755 -Dt $PKG/usr/bin            when
+	install -m 0644 -Dt $PKG/usr/share/man/man1 when.1
+}
