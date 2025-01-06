@@ -8,7 +8,7 @@ aft-mtp-cli - command-line client utility for MTP based devices
 
 =head1 SYNOPSIS
 
-B<aft-mtp-cli> [B<-vibehlVC>] [B<-f> I<file>] [B<-d> I<name>]
+B<aft-mtp-cli> [B<-vibehlVC>] [B<-f> I<file>] [B<-d> I<name>] [I<COMMAND> I<ARGS>]
 
 =head1 DESCRIPTION
 
@@ -60,6 +60,150 @@ List devices.
 
 =back
 
+=head1 COMMANDS
+
+=over
+
+=item B<help>
+
+Show commands help.
+
+=item B<ls> [I<path>]
+
+List current directory or objects in I<path> if specified.
+
+=item B<ls-r> [I<path>]
+
+Recursive list current directory or objects in I<path> if specified.
+
+=item B<lsext> [I<path>]
+
+List current directory or objects in I<path> if specified and show extended information.
+
+=item B<lsext-r> [I<path>]
+
+Recursive list current directory or objects in I<path> if specified and show extended information.
+
+=item B<ls-objects> I<format>
+
+List objects specified in HEX I<format>.
+
+=item B<put> I<file> [I<dir>]
+
+Upload file (to I<dir> directory if specified).
+
+=item B<get> I<file> [I<dir>]
+
+Download file (to I<dir> directory if specified).
+
+=item B<get-id> I<id> [I<dest>]
+
+Get object by I<id> (to I<dest> if specified).
+
+=item B<get-thumb> I<file> [I<dest>]
+
+Download thumbnail (to I<dest> if specified).
+
+=item B<cat> I<file>
+
+Output I<file>.
+
+=item B<quit>
+
+Quit program.
+
+=item B<exit>
+
+Exit program.
+
+=item B<cd> I<path>
+
+Change directory to I<path>.
+
+=item B<storage> I<storage-name>
+
+Change storage to I<storage-name>.
+
+=item B<pwd>
+
+Resolve current object directory.
+
+=item B<rm> I<path>
+
+Remove object.
+
+B<WARNING: RECURSIVE, be careful!>
+
+=item B<rm-id> I<id>
+
+Remove object by I<id>.
+
+B<WARNING: RECURSIVE, be careful!>
+
+=item B<mkdir> I<path>
+
+Make directory I<path>.
+
+=item B<mkpath> I<path>
+
+Make directory structure specified in I<path>.
+
+=item B<type> I<path>
+
+Show type of file specified by I<path> (recognized by B<libmagic/extension>).
+
+=item B<rename> I<old> I<new>
+
+Rename object from I<old> to I<new>.
+
+=item B<storage-list>
+
+Show available MTP storages.
+
+=item B<properties> I<path>
+
+List properties for I<path>.
+
+=item B<device-properties>
+
+Show devices's MTP properties.
+
+=item B<device-info>
+
+Show device's information.
+
+=item B<storage-info> I<storage-id>
+
+Show storage information.
+
+=item B<get-refs> I<storage-id>
+
+Show object-associated refs for storage.
+
+=item B<test-property-list> I<path>
+
+Test B<GetObjectPropList> on given object.
+
+=item B<test-lexer>
+
+Test lexer.
+
+=back
+
+If library supports session:
+
+=over
+
+=item B<zune-init>
+
+Load media library.
+
+=item B<zune-import> I<file>
+
+Import I<file> using metadata.
+
+=back
+
 =head1 EXAMPLES
 
 It is possible to use B<aft-mtp-cli> for automated file management.
@@ -79,7 +223,9 @@ If you need quoted argument for commands, you have to escape them:
 
 =item 2.
 
-Pass B<-b> command line option and feed your script to stdin.
+Pass B<-b> command line option and feed your script to stdin:
+
+	aft-mtp-cli -b </path/to/myscript
 
 =back
 
