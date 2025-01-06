@@ -1,0 +1,238 @@
+From ca701d4f362abb7ee2711aa3561062114b24da5a Mon Sep 17 00:00:00 2001
+From: Alexis <flexibeast@gmail.com>
+Date: Fri, 11 Oct 2024 18:18:54 +1100
+Subject: [PATCH] Add wgetpaste.1 man page.
+
+---
+ wgetpaste.1 | 222 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 222 insertions(+)
+ create mode 100644 wgetpaste.1
+
+diff --git a/wgetpaste.1 b/wgetpaste.1
+new file mode 100644
+index 0000000..dad5a12
+--- /dev/null
++++ b/wgetpaste.1
+@@ -0,0 +1,222 @@
++.Dd October 11, 2024
++.Dt WGETPASTE 1
++.Os
++.Sh NAME
++.Nm wgetpaste
++.Nd upload file to pastebin service
++.Sh SYNOPSIS
++.Nm
++.Op Fl l Ar LANG | Fl \-language Ar LANG
++.Op Fl d Ar DESCRPTION | Fl \-description Ar DESCRIPTION
++.Op Fl n Ar NICK | Fl \-nick Ar NICK
++.Op Fl s Ar SERVICE | Fl \-service Ar SERVICE
++.Op Fl e Ar EXPIRATION | Fl \-expiration Ar EXPIRATION
++.Op Fl S | Fl \-list-services
++.Op Fl L | Fl \-list-languages
++.Op Fl E | Fl \-list-expiration
++.Op Fl u Ar URL | Fl \-tinyurl Ar URL
++.Op Fl c Ar COMMAND | Fl \-command Ar COMMAND
++.Op Fl i | Fl \-info
++.Op Fl I | Fl \-info-only
++.Op Fl x | Fl \-xcut
++.Op Fl X | Fl \-xpaste
++.Op Fl C | Fl \-xclippaste
++.Op Fl N | Fl \-no-ansi
++.Op Fl A | Fl \-ansi
++.Op Fl r | Fl \-raw
++.Op Fl t | Fl \-tee
++.Op Fl q | Fl \-quiet
++.Op Fl v | Fl \-verbose
++.Op Fl \-completions
++.Op Fl \-debug
++.Op Fl h | Fl \-help
++.Op Fl g | Fl \-ignore-configs
++.Op Fl \-version
++.Op Ar file(s)
++.Sh DESCRIPTION
++.Nm
++uploads one or more files to a pastebin service
++.Po
++by default,
++.Qq bpaste
++.Pc .
++.Pp
++An additional HTTP header can be passed by setting
++.Ev HEADER_ Ns Ar ${SERVICE}
++in any of the configuration files.
++For example, authenticating with GitHub gist:
++.Bd -literal -offset indent
++HEADER_gists="Authorization: token 1234abc56789..."
++.Ed
++.Pp
++or with GitLab snippets:
++.Bd -literal -offset indent
++HEADER_snippets="PRIVATE-TOKEN: 1234abc56789..."
++.Ed
++.Pp
++You can also set
++.Bd -literal -offset indent
++PUBLIC_gists='false'
++.Ed
++.Pp
++if you want to default to secret instead of public GitHub gists.
++In the case of GitLab, you can set
++.Ql VISIBILITY_snippets
++to
++.Ql 'public' ,
++.Ql 'private'
++or
++.Ql 'internal' .
++.Pp
++To change your GitLab server, you can override the default API URL setting:
++.Bd -literal -offset indent
++URL_snippets='https://gitlab.[server].com/api/v4/snippets'
++.Ed
++.Sh OPTIONS
++.Bl -tag -width 2n
++.It Op Fl l Ar LANG | Fl \-language Ar LANG
++Set language
++.Po
++defaults to
++.Qq text
++.Pc .
++.It Op Fl d Ar DESCRIPTION | Fl \-description Ar DESCRIPTION
++Set description
++.Po
++defaults to
++.Qq stdin
++or filename
++.Pc .
++.It Op Fl n Ar NICK | Fl \-nick Ar NICK
++Set nick
++.Po
++defaults to your username
++.Pc .
++.It Op Fl s Ar SERVICE | Fl \-service Ar SERVICE
++Set service to use
++.Po
++defaults to
++.Qq bpaste
++.Pc .
++.It Fl e Ar EXPIRATION | Fl \-expiration Ar EXPIRATION
++Set when it should expire
++.Po
++defaults to
++.Qq 1week
++.Pc .
++.It Fl S | Fl \-list-services
++List supported pastebin services.
++.It Fl L | Fl \-list-languages
++List languages supported by the specified service.
++.It Fl E | Fl \-list-expiration
++List expiration setting supported by the specified service.
++.It Fl u Ar URL | Fl \-tinyurl Ar URL
++Convert input URL to TinyURL.
++.It FL c Ar COMMAND | Fl \-command Ar COMMAND
++Paste
++.Ar COMMAND
++and the output of
++.Ar COMMAND .
++.It Fl i | Fl \-info
++Append the output of
++.Ql emerge --info .
++.It Fl I | Fl \-info-only
++Paste the output of
++.Ql emerge --info
++only.
++.It Fl x | Fl \-xcut
++Read input from clipboard
++.Po
++requires
++.Xr xclip 1
++.Pc .
++.It Fl X | Fl \-xpaste
++Write resulting URL to the X primary selection buffer
++.Po
++requires
++.Xr xclip 1
++.Pc .
++.It Fl C | Fl \-xclippaste
++Write resulting URL to the X clipboard selection buffer
++.Po
++requires
++.Xr xclip 1
++.Pc .
++.It Fl N | Fl \-no-ansi
++Strip ANSI codes such as colors before pasting
++.Po
++requires
++.Xr ansifilter 1
++.Pc .
++.It Fl A | Fl \-ansi
++Don't strip ANSI codes
++.Po
++useful for undoing
++.Ev NOANSI
++specified in a config file
++.Pc .
++.It Fl r | Fl \-raw
++Show URL for the raw paste
++.Po
++no syntax highlighting or HTML
++.Pc .
++.It Fl t | Fl \-tee
++Use
++.Xr tee 1
++to show what is being pasted.
++.It Fl q | Fl \-quiet
++Show the URL only.
++.It Fl v | Fl \-verbose
++Show
++.Xr wget 1
++stderr output if no URL is received.
++.It Fl \-completions
++Emit output suitable for shell completions
++.Po
++only affects
++.Fl \-list-*
++.Pc .
++.It Fl \-debug
++Be
++.Em very
++verbose
++.Po
++implies
++.Fl v
++.Pc .
++.It Fl h | Fl \-help
++Show help.
++.It Fl g | Fl \-ignore-configs
++Ignore
++.Pa "" /etc/wgetpaste.conf ,
++.Pa "" ~/.wgetpaste.conf ,
++etc.
++.It Fl \-version
++Show version information.
++.El
++.Sh ENVIRONMENT
++Any of the below variables can be overridden globally in any of the
++files described in the
++.Sx FILES
++section.
++.Bl -tag -width 2n
++.It Ev DEFAULT_NICK
++.It Ev DEFAULT_LANGUAGE
++.It Ev DEFAULT_EXPIRATION Ns Op _ Ns Ar ${SERVICE}
++.It DEFAULT_SERVICE
++.El
++.Sh FILES
++.Bl -bullet
++.It
++.Pa "" /etc/wgetpaste.conf
++.It
++.Pa "" /etc/wgetpaste.d/*.conf
++.It
++.Pa "" ~/.wgetpaste.conf
++.It
++.Pa "" ~/.wgetpaste.d/*.conf
++.El
++.Sh SEE ALSO
++.Xr wget 1
++.Sh AUTHORS
++.An \&Bo Ørsted Andresen Ao Mt bo.andresen@zlin.dk Ac

@@ -3,9 +3,14 @@
 
 name=wgetpaste
 version=2.34
-release=1
-source=https://github.com/zlin/$name/archive/$version/$name-$version.tar.gz
+release=2
+source="https://github.com/zlin/$name/archive/$version/$name-$version.tar.gz
+	55.patch"
 
 build() {
-	install -m 0755 -Dt $PKG/usr/bin/ $name-$version/$name
+	# add man page
+	patch -d $name-$version -Np1 -i $SRC/55.patch
+
+	install -m 0755 -Dt $PKG/usr/bin            $name-$version/$name
+	install -m 0644 -Dt $PKG/usr/share/man/man1 $name-$version/$name.1
 }
