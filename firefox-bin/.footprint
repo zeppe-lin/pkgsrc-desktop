@@ -88,3 +88,6 @@ lrwxrwxrwx	root/root	usr/share/icons/hicolor/48x48/apps/firefox.png -> /opt/fire
 drwxr-xr-x	root/root	usr/share/icons/hicolor/64x64/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/64x64/apps/
 lrwxrwxrwx	root/root	usr/share/icons/hicolor/64x64/apps/firefox.png -> /opt/firefox/browser/chrome/icons/default/default64.png
+drwxr-xr-x	root/root	usr/share/man/
+drwxr-xr-x	root/root	usr/share/man/man1/
+-rw-r--r--	root/root	usr/share/man/man1/firefox.1.gz

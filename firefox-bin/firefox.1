@@ -1,0 +1,176 @@
+.\" firefox(1) manual page
+.Dd January 7, 2025
+.Dt FIREFOX 1
+.Os
+.\" ==================================================================
+.Sh NAME
+.Nm firefox
+.Nd Web browser for X11 derived from the Mozilla browser
+.\" ==================================================================
+.Sh SYNOPSIS
+.Nm
+.Op Ar OPTIONS
+.Op Ar URL
+.Nm /opt/firefox/firefox
+.Op Ar OPTIONS
+.Op Ar URL
+.\" ==================================================================
+.Sh DESCRIPTION
+.Nm firefox
+is an open-source web browser, designed for standards compliance,
+performance and portability.
+.Pp
+If there is an firefox browser already running,
+.Nm
+will arrange for it to create a new browser window; otherwise it will
+start a new instance.
+.Pp
+The options are as follows:
+.\" ------------------------------------------------------------------
+.Ss X11 Options
+.Bl -tag -width Ds
+.It Fl \-display Ns = Ns Ar DISPLAY
+X display to use.
+.It Fl \-sync
+Make X calls synchronous.
+.It Fl \-g\-fatal\-warnings
+Make all warnings fatal.
+.El
+.\" ------------------------------------------------------------------
+.Ss Firefox Options
+.Bl -tag -width Ds
+.It Fl h , Fl \-help
+Print help message.
+.It Fl v , Fl \-version
+Print Firefox version.
+.It Fl \-full\-version
+Print Firefox version, build and platform build ids.
+.It Fl P Ar profile
+Start with
+.Ar profile .
+.It Fl \-profile Ar path
+Start with profile at
+.Ar path .
+.It Fl \-migration
+Start with migration wizard.
+.It Fl \-ProfileManager
+Start with ProfileManager.
+.It Fl \-origin\-to\-force\-quic\-on Ar origin
+Force to use QUIC for the specified origin.
+.It Fl \-new\-instance
+Open new instances, not a new window in running instance.
+.It Fl \-safe-mode
+Disables extensions and themes for this session.
+.It Fl \-allow\-downgrade
+Allows downgrading a profile.
+.It Fl \-MOZ_LOG Ns = Ns Ar modules
+Treated as
+.Fl \-MOZ_LOG Ns = Ns Ar modules
+environment variable, overrides it.
+.It Fl \-MOZ_LOG_FILE Ns = Ns file
+Treated as
+.Fl \-MOZ_LOG_FILE Ns = Ns Ar file
+environment variable, overrides it.
+If
+.Fl \-MOZ_LOG_FILE
+is not specified as an argument or as an environment variable,
+logging will be written to stdout.
+.It Fl \-dbus\-service Ar launcher
+Run as DBus service for
+.Sy org.freedesktop.Application
+and set a launcher (usually /usr/bin/appname script) for it.
+.It Fl \-browser
+Open a browser window.
+.It Fl \-new\-window Ar url
+Open
+.Ar url
+in a new window.
+.It Fl \-new\-tab Ar url
+Open
+.Ar url
+in a new tab.
+.It Fl \-private\-window Ar url
+Open
+.Ar url
+in a new private window.
+.It Fl \-preferences
+Open Preferences dialog.
+.It Fl \-screenshot Op Ar path
+Save screenshot to
+.Ar path
+or in working directory.
+.It Fl \-window\-size Ar width Ns [, Ns Ar height ]
+Width and optionally height of screenshot.
+.It Fl \-search Ar term
+Search
+.Ar term
+with your default search engine.
+.It Fl \-setDefaultBrowser
+Set this app as the default browser.
+.It Fl \-first\-startup
+Run post-install actions before opening a new window.
+.It Fl \-kiosk
+Start the browser in kiosk mode.
+.It Fl \-kiosk\-monitor Ar num
+Place kiosk browser window on given monitor.
+.It Fl \-disable\-pinch
+Disable touch-screen and touch-pad pinch gestures.
+.It Fl \-jsconsole
+Open the Browser Console.
+.It Fl \-devtools
+Open DevTools on initial load.
+.It Fl \-jsdebugger Op Ar path
+Open the Browser Toolbox.
+Defaults to the local build but can be overriden by a firefox path.
+.It Fl \-wait\-for\-jsdebugger
+Spin event loop until JS debugger connects.
+Enables debugging (some) application startup code paths.
+Only has an effect when
+.Dq \-jsdebugger
+is also supplied.
+.It Fl \-start\-debugger\-server [ Ar ws : ] Op Ar port | Ar path
+Start the devtools server on a TCP port or UNIX domain socket path.
+Defaults to TCP port 6000.
+Use WebSocket protocol if ws: prefix is specified.
+.It Fl \-remote\-allow\-hosts Ar hosts
+Values of the Host header to allow for incoming requests.
+.Pp
+Please read
+.Lk https://firefox\-source\-docs.mozilla.org/remote/Security.html \
+"security guidelines"
+.It Fl \-remote\-allow\-origins Ar origins
+Values of the Origin header to allow for incoming requests.
+.Pp
+Please read
+.Lk https://firefox\-source\-docs.mozilla.org/remote/Security.html \
+"security guidelines"
+.El
+.\" ==================================================================
+.\".Sh ENVIRONMENT
+.\" TODO
+.\" ==================================================================
+.Sh FILES
+.Bl -tag -width 25.n -compact
+.It Pa /usr/bin/firefox
+.\" symbolic link to
+.\" .Pa /opt/firefox/firefox .
+Firefox launcher script.
+.It Pa /opt/firefox/firefox
+Firefox executable.
+.It Pa /opt/firefox/firefox\-bin
+Legacy executable.
+.El
+.\" ==================================================================
+.Sh SEE ALSO
+.Lk http://www.mozilla.org/about.html "The Mozilla Organization"
+.\" ==================================================================
+.Sh BUGS
+This manual page describes command options obtained from the
+.Sy firefox \-\-help
+output.
+Unfortunately, these are not all the options available.
+See more here:
+.Lk https://wiki.mozilla.org/Firefox/CommandLineOptions%23Linux\-specific_options
+.Pp
+To report a bug, please visit
+.Lk http://bugzilla.mozilla.org/

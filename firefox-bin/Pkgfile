@@ -5,9 +5,10 @@
 
 name=firefox-bin
 version=134.0
-release=1
+release=2
 source="https://ftp.mozilla.org/pub/firefox/releases/$version/linux-x86_64/en-US/firefox-$version.tar.bz2
 	firefox.sh
+	firefox.1
 	firefox.desktop
 	policies.json"
 
@@ -15,7 +16,8 @@ build() {
 	mkdir -p $PKG/opt $PKG/usr/bin
 
 	mv $SRC/firefox $PKG/opt/firefox
-	install -m 0755 -D firefox.sh  $PKG/usr/bin/firefox
+	install -m 0755 -D firefox.sh                    $PKG/usr/bin/firefox
+	install -m 0644 -Dt $PKG/usr/share/man/man1      $SRC/firefox.1
 	install -m 0644 -Dt $PKG/usr/share/applications  $SRC/firefox.desktop
 
 	for x in 16 32 48 64 128; do
@@ -28,7 +30,7 @@ build() {
 	rm -r $PKG/opt/firefox/browser/features
 
 	# disable autoupdate
-	install -m 0644 -Dt $PKG/opt/firefox/distribution/ policies.json
+	install -m 0644 -Dt $PKG/opt/firefox/distribution policies.json
 
 	# revdep configuration
 	mkdir -p $PKG/etc/revdep.d
