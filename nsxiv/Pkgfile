@@ -2,18 +2,16 @@
 # URL:         https://codeberg.org/nsxiv/nsxiv
 # Depends on:  imlib2 libexif xorg-libxft
 
-name=sxiv
+name=nsxiv
 version=32
-release=2
+release=1
 source=nsxiv-$version.tar.gz::https://codeberg.org/nsxiv/nsxiv/archive/v$version.tar.gz
 
 build() {
-	make -C nsxiv HAVE_LIBWEBP=0 CFLAGS="$CFLAGS -DNDEBUG" all
-	make -C nsxiv HAVE_LIBWEBP=0 CFLAGS="$CFLAGS -DNDEBUG" \
-		PREFIX=/usr DESTDIR=$PKG install
-
-	ln -s nsxiv    $PKG/usr/bin/sxiv
-	ln -s nsxiv.1  $PKG/usr/share/man/man1/sxiv.1
+	make -C nsxiv CFLAGS="$CFLAGS -DNDEBUG" all
+	make -C nsxiv CFLAGS="$CFLAGS -DNDEBUG" \
+		PREFIX=/usr DESTDIR=$PKG \
+		install install-desktop install-icon
 
 	# remove junk
 	rm -r $PKG/usr/share/doc
