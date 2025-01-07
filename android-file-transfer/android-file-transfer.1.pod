@@ -90,8 +90,8 @@ L<https://whoozle.github.io/android-file-transfer-linux/>
 B<android-file-transfer> was written by Vladimir Menshakov
 <mailto:vladimir.menshakov@gmail.com>.
 
-This manual page was written for Zeppe-Lin System by Alexandr Savca
-<mailto:alexandr.savca89@gmail.com>.
+This manual page was written for Zeppe-Lin by Alexandr Savca
+<mailto:alexandr.savca89@gmail.com> and can be used by other projects as well.
 
 =head1 CAVEATS
 
