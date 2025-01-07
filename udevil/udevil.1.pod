@@ -211,7 +211,7 @@ Homepage.
 
 =head1 AUTHORS
 
-This manual page was written by Alexandr Savca L<mailto:alexandr.savca89@gmail.com>
-for Zeppe-Lin system (but may be used by others).
+This manual page was written for Zeppe-Lin by Alexandr Savca
+L<mailto:alexandr.savca89@gmail.com> and can be used by other projects as well.
 
 =cut
