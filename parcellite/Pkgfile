@@ -4,7 +4,7 @@
 
 name=parcellite
 version=1.2.6-0f43353
-release=2
+release=3
 source="https://github.com/ZaWertun/$name/archive/${version#*-}/$name-$version.tar.gz
 	fix-aboutdlg-link.patch
 	parcellite-startup.desktop"
@@ -22,7 +22,7 @@ build() {
 	ninja -C build -j ${JOBS:-1} -v
 	DESTDIR=$PKG ninja -C build install
 
-	install -m 0655 -Dt $PKG/etc/xdg $SRC/$name-startup.desktop
+	install -m 0644 -Dt $PKG/etc/xdg/autostart $SRC/$name-startup.desktop
 
 	# remove junk
 	rm -r $PKG/usr/share/locale
