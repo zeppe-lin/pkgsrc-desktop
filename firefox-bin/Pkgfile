@@ -4,8 +4,8 @@
 # Optional:    desktop-file-utils
 
 name=firefox-bin
-version=134.0
-release=2
+version=134.0.1
+release=1
 source="https://ftp.mozilla.org/pub/firefox/releases/$version/linux-x86_64/en-US/firefox-$version.tar.bz2
 	firefox.sh
 	firefox.1
