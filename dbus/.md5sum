@@ -1,3 +1,4 @@
-bcd27e5fdd38c6e769a6a78be35c2f0d  30-dbus.launch
-46070a3487817ff690981f8cd2ba9376  dbus-1.14.10.tar.xz
-a7b7226b77fab0510bf4e86576cfbb08  rc.dbus
+a33c24b6304ee946bf47cbf70fd0f93f  30-dbus.launch
+66bfcf1f42d4ebc634ca558d14335e92  dbus-1.16.0.tar.xz
+51a52d31f257ce19b1a4f8bd71a7de68  fix-daemon-location.patch
+9b6b57028991850a8dd6366697d2b9d8  rc.dbus

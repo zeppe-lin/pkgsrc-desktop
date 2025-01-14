@@ -11,7 +11,7 @@ OPTS="--system"
 case $1 in
 start)
 	[ -f /var/lib/dbus/machine-id ] || /usr/bin/dbus-uuidgen --ensure
-	[ -d /run/dbus ] || mkdir /run/dbus
+	mkdir -p /run/dbus
 	$SSD --start --pidfile=$PID --exec $PROG -- $OPTS
 	;;
 stop)

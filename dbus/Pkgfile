@@ -3,31 +3,43 @@
 # Depends on:  xorg-libx11
 
 name=dbus
-version=1.14.10
-release=2
+version=1.16.0
+release=1
 source="https://dbus.freedesktop.org/releases/dbus/dbus-$version.tar.xz
+	fix-daemon-location.patch
 	30-dbus.launch
 	rc.dbus"
 
 build() {
-	mkdir build; cd build
+	patch -d dbus-$version -Np1 -i $SRC/fix-daemon-location.patch
 
-	../dbus-$version/configure                               \
-		--prefix=/usr                                    \
-		--libexecdir=/usr/lib/dbus                       \
-		--localstatedir=/var                             \
-		--sysconfdir=/etc                                \
-		--disable-xml-docs                               \
-		--disable-doxygen-docs                           \
-		--disable-systemd                                \
-		--disable-tests                                  \
-		--with-dbus-daemondir=/usr/sbin                  \
-		--with-dbus-user=messagebus                      \
-		--with-system-pid-file=/run/dbus/pid             \
-		--with-system-socket=/run/dbus/system_bus_socket \
+	# skip building tests
+	sed -i "/^subdir('test')/d" dbus-$version/meson.build
 
-	make V=1
-	make DESTDIR=$PKG install
+	# -D xml_docs=disabled: otherwise requires xsltproc & docbook-* sh!t
+	meson setup build dbus-$version                       \
+		--prefix=/usr                                 \
+		--localstatedir=/var                          \
+		--sysconfdir=/etc                             \
+		--libexecdir=lib/dbus                         \
+		--buildtype=plain                             \
+		--wrap-mode=nodownload                        \
+		-D b_lto=true                                 \
+		-D b_pie=true                                 \
+		-D dbus_daemondir=/usr/sbin                   \
+		-D dbus_user=messagebus                       \
+		-D runtime_dir=/run                           \
+		-D system_pid_file=/run/dbus/pid              \
+		-D system_socket=/run/dbus/system_bus_socket  \
+		-D qt_help=disabled                           \
+		-D modular_tests=disabled                     \
+		-D libaudit=disabled                          \
+		-D doxygen_docs=disabled                      \
+		-D ducktype_docs=disabled                     \
+		-D xml_docs=disabled                          \
+
+	ninja -C build -j ${JOBS:-1} -v
+	DESTDIR=$PKG ninja -C build install
 
 	install -m 0755 -D $SRC/30-dbus.launch \
 		$PKG/etc/X11/xinit/xinitrc.d/30-dbus.launch.sh
@@ -36,5 +48,5 @@ build() {
 
 	# remove junk
 	rm -r $PKG/usr/share/doc $PKG/usr/share/xml \
-	      $PKG/usr/lib/cmake $PKG/var/run
+	      $PKG/usr/lib/cmake $PKG/run
 }
