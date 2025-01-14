@@ -3,7 +3,7 @@
 # Depends on:  xorg-libxft xorg-libxinerama
 
 name=dwm
-version=6.0z1-5696476
+version=6.0z2-3216799
 release=1
 source=https://github.com/zeppe-lin/dwm/archive/${version#*-}/dwm-$version.tar.gz
 
