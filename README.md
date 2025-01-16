@@ -1,8 +1,8 @@
 OVERVIEW
 ========
 
-This directory contains **desktop** pkgsrc collection: build scripts and
-files for the packages typically used on a desktop: web-browser,
+This repository contains **desktop** pkgsrc collection: build scripts
+and files for the packages typically used on a desktop: web browser,
 music/video player, file manager, chat messenger, etc.
 
 Packages in this collection must depend only on **xorg**, **system** and
