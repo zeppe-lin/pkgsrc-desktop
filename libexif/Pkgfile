@@ -2,7 +2,7 @@
 # URL:         https://libexif.github.io/
 
 name=libexif
-version=0.6.24
+version=0.6.25
 release=1
 source=https://github.com/$name/$name/releases/download/v$version/$name-$version.tar.bz2
 
@@ -19,6 +19,5 @@ build() {
 	make DESTDIR=$PKG install
 
 	# remove junk
-	rm -r $PKG/usr/share/doc
-	rmdir $PKG/usr/share/
+	rm -r $PKG/usr/share/doc; rmdir $PKG/usr/share
 }
