@@ -3,8 +3,8 @@
 # Depends on:  qt5
 
 name=qt5ct
-version=1.8
-release=3
+version=1.9
+release=1
 source=https://downloads.sourceforge.net/project/qt5ct/qt5ct-$version.tar.bz2
 
 build() {
@@ -17,6 +17,7 @@ build() {
 		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS"      \
 		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS"  \
 		-D DISABLE_DBUS=ON                      \
+		-Wno-dev
 
 	ninja -C build -j ${JOBS:-1} -v
 	DESTDIR=$PKG ninja -C build install
