@@ -71,7 +71,7 @@ Print help and exit.
 
   $ grabc
 
-=item Print Window id (Note the upper case W):
+=item Print Window id (Note the uppercase W):
 
   $ grabc -W
 

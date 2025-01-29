@@ -1,4 +1,4 @@
 c6526877eb7cda8bf405999d73317b75  Makefile.patch
 3a3f39a7ee35b140d82a97c3d78e74c4  grabc-1.0.2.tar.gz
 78dd318630d045d39ab914b2bf2576b6  grabc.c.patch
-ebfad44a95c3aabc49f8798458ac709a  grabc.pod.patch
+bc17b0f783148645303afebb1846f5cb  grabc.pod.patch
