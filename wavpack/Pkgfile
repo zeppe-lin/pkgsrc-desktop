@@ -2,7 +2,7 @@
 # URL:         https://www.wavpack.com/
 
 name=wavpack
-version=5.7.0
+version=5.8.1
 release=1
 source=https://github.com/dbry/WavPack/releases/download/$version/$name-$version.tar.xz
 
@@ -11,6 +11,7 @@ build() {
 
 	../$name-$version/configure  \
 		--prefix=/usr        \
+		--enable-legacy      \
 
 	make V=1
 	make DESTDIR=$PKG install
