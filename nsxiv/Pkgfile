@@ -3,7 +3,7 @@
 # Depends on:  imlib2 libexif xorg-libxft
 
 name=nsxiv
-version=32
+version=33
 release=1
 source=nsxiv-$version.tar.gz::https://codeberg.org/nsxiv/nsxiv/archive/v$version.tar.gz
 
