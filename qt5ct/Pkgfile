@@ -4,7 +4,7 @@
 
 name=qt5ct
 version=1.9
-release=1
+release=2
 source=https://downloads.sourceforge.net/project/qt5ct/qt5ct-$version.tar.bz2
 
 build() {
@@ -22,6 +22,7 @@ build() {
 	ninja -C build -j ${JOBS:-1} -v
 	DESTDIR=$PKG ninja -C build install
 
-	# remove i18n entries from desktop file
-	sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/*.desktop
+	# remove i18n entries and empty lines from desktop file
+	sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/qt5ct.desktop
+	sed -ri '/^$/d'      $PKG/usr/share/applications/qt5ct.desktop
 }
