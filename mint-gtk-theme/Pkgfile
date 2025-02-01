@@ -4,11 +4,16 @@
 
 name=mint-gtk-theme
 version=2.2.3
-release=1
+release=2
 source=https://ftp5.gwdg.de/pub/linux/debian/mint/packages/pool/main/m/mint-themes/mint-themes_${version%%-*}_all.deb
 
 build() {
 	ar x mint-themes_${version%%-*}_all.deb
 	bsdtar -p -o --no-acls --no-xattrs --no-mac-metadata --no-fflags \
 		--exclude usr/share/doc -C $PKG -xf data.tar.xz
+
+	# remove xfce4/metacity/cinnamon themes
+	rm -r $PKG/usr/share/themes/Mint-*/cinnamon    \
+	      $PKG/usr/share/themes/Mint-*/metacity-1  \
+	      $PKG/usr/share/themes/Mint-*/xfwm4
 }
