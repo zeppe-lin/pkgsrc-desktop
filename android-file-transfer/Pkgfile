@@ -3,7 +3,7 @@
 # Depends on:  fuse2 qt5 taglib xorg-libxkbfile
 
 name=android-file-transfer
-version=4.4-cf7036c
+version=4.4-b8ab1ec
 release=1
 source="https://github.com/whoozle/$name-linux/archive/${version#*-}/$name-$version.tar.gz
 	use_system_icons.patch
@@ -13,7 +13,7 @@ source="https://github.com/whoozle/$name-linux/archive/${version#*-}/$name-$vers
 	pod2man.Makefile"
 
 build() {
-	patch -d $name-linux-* -p1 -i $SRC/use_system_icons.patch
+	patch -d $name-linux-* -Np1 -i $SRC/use_system_icons.patch
 
 	export CXXFLAGS="$CXXFLAGS -ffat-lto-objects"
 
