@@ -4,7 +4,7 @@
 
 name=ratpoison
 version=1.4.9-db94d49
-release=5
+release=6
 source="0001-obeyresizehints-option-to-dis-obey-ICCCM-window-resi.patch
 	0002-fix-dedicate-frame.patch
 	0003-fix-edge-case-for-find_frame_-left-right-up-down-fun.patch
@@ -38,37 +38,54 @@ build() {
 
 	cd ratpoison
 
-	# switch to the latest commit on top of which we apply the
-	# patches included in this package
+	# Switch to the latest commit on top of which we apply the patches
+	# included in this package.
 	git checkout ${version#*-}
 
-	# ratpoison fills the system logs with
-	# ratpoison:manage.c:236: error: XGetWMName failed
-	# This appears to be due to a dev forgetting to set it to PRINT_DEBUG rather than PRINT_ERROR.
+	# Ratpoison fills the system logs with
+	#   ratpoison:manage.c:236: error: XGetWMName failed
+	# this appears to be due to a dev forgetting to set it to PRINT_DEBUG
+	# rather than PRINT_ERROR.
 	sed -i 's|PRINT_ERROR (("XGetWMName|PRINT_DEBUG (("XGetWMName|' \
 		src/manage.c
 
-	for p in $SRC/00*.patch; do
-		patch -p1 -i $p
+	for f in $SRC/00*.patch; do
+		patch -Np1 -i $f
 	done
 
-	# needed for our genratpoison-re.pl
-	patch -p1 -i $SRC/ratpoison-re.pl.diff
+	# Needed for our genratpoison-re.pl.
+	patch -Np1 -i $SRC/ratpoison-re.pl.diff
 
-	# skip build info documentation
+	# Skip building info documentation.
 	sed -e '/^info_TEXINFOS/d' \
 	    -e 's/ fdl.text//g'    \
 	    -e 's/ texinfo.tex//g' \
 	    -i doc/Makefile.am
+
+	# custom use flags
+	for f in ${PKGMK_RATPOISON_USE:--debug +history +xft +xkb -xrandr}; do
+		case $f in
+		  -debug) PKGMK_RATPOISON="$PKGMK_RATPOISON --disable-debug"   ;;
+		  +debug) PKGMK_RATPOISON="$PKGMK_RATPOISON --enable-debug"    ;;
+		-history) PKGMK_RATPOISON="$PKGMK_RATPOISON --disable-history" ;;
+		+history) PKGMK_RATPOISON="$PKGMK_RATPOISON --enable-history"  ;;
+		    -xft) PKGMK_RATPOISON="$PKGMK_RATPOISON --without-xft"     ;;
+		    +xft) PKGMK_RATPOISON="$PKGMK_RATPOISON --with-xft"        ;;
+		    -xkb) PKGMK_RATPOISON="$PKGMK_RATPOISON --without-xkb"     ;;
+		    +xkb) PKGMK_RATPOISON="$PKGMK_RATPOISON --with-xkb"        ;;
+		 -xrandr) PKGMK_RATPOISON="$PKGMK_RATPOISON --without-xrandr"  ;;
+		 +xrandr) PKGMK_RATPOISON="$PKGMK_RATPOISON --with-xrandr"     ;;
+		       *) echo "unknown use flag '$f' in PKGMK_RATPOISON_USE" >&2
+		          exit 1 ;;
+		esac
+	done
 
 	cd -
 
 	mkdir build; cd build
 
 	autoreconf -i ../ratpoison
-	../ratpoison/configure   \
-		--prefix=/usr    \
-		--enable-history \
+	../ratpoison/configure --prefix=/usr $PKGMK_RATPOISON
 
 	make MAKEINFO=: CFLAGS="$CFLAGS -DHAVE_GETLINE" V=1
 	make MAKEINFO=: DESTDIR=$PKG install
@@ -89,8 +106,8 @@ build() {
 	chmod 0644 $PKG/usr/share/man/man1/ratpoison-re.pl.1
 
 	# remove junk and unused stuff
-	rm -r $PKG/usr/share/doc       \
-	      $PKG/usr/bin/rpws        \
-	      $PKG/usr/share/ratpoison \
+	rm -r $PKG/usr/share/doc        \
+	      $PKG/usr/bin/rpws         \
+	      $PKG/usr/share/ratpoison  \
 	      $PKG/usr/share/emacs
 }
