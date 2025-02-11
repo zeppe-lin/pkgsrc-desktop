@@ -2,9 +2,9 @@
 # URL:         https://www.monkeysaudio.com/index.html
 
 name=mac
-version=10.85
+version=10.94
 release=1
-source="https://monkeysaudio.com/files/MAC_1076_SDK.zip
+source="https://monkeysaudio.com/files/MAC_$(echo $version | tr -d .)_SDK.zip
 	mac-10.18-linux.patch
 	mac-10.52-output.patch"
 

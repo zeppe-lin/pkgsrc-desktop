@@ -15,5 +15,5 @@ drwxr-xr-x	root/root	usr/include/MAC/
 -rw-r--r--	root/root	usr/include/MAC/Warnings.h
 -rw-r--r--	root/root	usr/include/MAC/WindowsEnvironment.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/libMAC.so -> libMAC.so.10
--rwxr-xr-x	root/root	usr/lib/libMAC.so.10
+lrwxrwxrwx	root/root	usr/lib/libMAC.so -> libMAC.so.12
+-rwxr-xr-x	root/root	usr/lib/libMAC.so.12
