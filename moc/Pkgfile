@@ -4,7 +4,7 @@
 
 name=moc
 version=2.6-alpha3
-release=1
+release=2
 source="http://ftp.daper.net/pub/soft/moc/unstable/moc-$version.tar.xz
 	moc-2.6_alpha3-stdint_uint_types.patch
 	moc-ffmpeg4.patch
