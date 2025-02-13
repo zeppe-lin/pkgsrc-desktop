@@ -1,15 +1,16 @@
 # Description: Free Lossless Audio Codec
-# URL:         https://xiph.org/flac/
+# URL:         https://github.com/xiph/flac
 # Depends on:  libogg
 
 name=flac
 version=1.5.0
-release=1
-source=https://downloads.xiph.org/releases/flac/flac-$version.tar.xz
+release=2
+source=https://github.com/xiph/flac/releases/download/$version/flac-$version.tar.xz
 
 build() {
 	mkdir build; cd build
 
+	CONFIG_SHELL=/bin/bash              \
 	../flac-$version/configure          \
 		--prefix=/usr               \
 		--disable-doxygen-docs      \
