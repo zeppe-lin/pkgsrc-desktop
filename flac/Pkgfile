@@ -3,7 +3,7 @@
 # Depends on:  libogg
 
 name=flac
-version=1.4.3
+version=1.5.0
 release=1
 source=https://downloads.xiph.org/releases/flac/flac-$version.tar.xz
 
