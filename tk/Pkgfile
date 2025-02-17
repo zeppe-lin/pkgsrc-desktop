@@ -3,10 +3,10 @@
 # Depends on:  tcl xorg-libxft xorg-libxscrnsaver
 
 name=tk
-version=8.6.14
+version=8.6.16
 _version=$(echo $version | awk -F'.' '{if (NF <= '2') {print $0} else {print $1 "." $2 "." $3}}')
 release=1
-source=https://downloads.sourceforge.net/project/tcl/Tcl/$_version/tk${version}-src.tar.gz
+source=https://downloads.sourceforge.net/project/tcl/Tcl/$_version/tk$version-src.tar.gz
 
 build() {
 	sed -e '/chmod/s:555:755:g' -i tk$_version/unix/Makefile.in
