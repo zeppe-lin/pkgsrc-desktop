@@ -3,7 +3,7 @@
 # Depends on:  xorg-libx11
 
 name=dbus
-version=1.16.0
+version=1.16.2
 release=1
 source="https://dbus.freedesktop.org/releases/dbus/dbus-$version.tar.xz
 	fix-daemon-location.patch
@@ -16,7 +16,8 @@ build() {
 	# skip building tests
 	sed -i "/^subdir('test')/d" dbus-$version/meson.build
 
-	# -D xml_docs=disabled: otherwise requires xsltproc & docbook-* sh!t
+	# -D xml_docs=disabled: otherwise requires xsltproc, docbook-xsl,
+	# docbook-xml and the whole bunch of dependency sh!t
 	meson setup build dbus-$version                       \
 		--prefix=/usr                                 \
 		--localstatedir=/var                          \
