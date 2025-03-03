@@ -3,8 +3,8 @@
 # Depends on:  alsa-lib dav1d fdk-aac gnutls gsm lame libass libtheora libva libvdpau opus x264 xorg-libxv
 
 name=ffmpeg
-version=7.1
-release=2
+version=7.1.1
+release=1
 source="https://ffmpeg.org/releases/$name-$version.tar.bz2
 	gcc-14.patch
 	ffmpeg-x264-10bit.sh"
