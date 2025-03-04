@@ -1,0 +1,64 @@
+diff '--color=auto' -pruN sylpheed-3.7.0.orig/src/main.c sylpheed-3.7.0/src/main.c
+--- sylpheed-3.7.0.orig/src/main.c	2025-03-04 03:37:27.019286865 +0200
++++ sylpheed-3.7.0/src/main.c	2025-03-04 07:02:20.436189117 +0200
+@@ -121,6 +121,7 @@ static GThread *main_thread;
+ #endif
+ 
+ static struct RemoteCmd {
++	gboolean show_toggle;
+ 	gboolean receive;
+ 	gboolean receive_all;
+ 	gboolean compose;
+@@ -591,6 +592,8 @@ static void parse_cmd_opt(int argc, char
+ 		} else if (!strncmp(argv[i], "--version", 9)) {
+ 			puts("Sylpheed version " VERSION);
+ 			exit(0);
++		} else if (!strncmp(argv[i], "--show-toggle", 13)) {
++			cmd.show_toggle = TRUE;
+ 		} else if (!strncmp(argv[i], "--status-full", 13)) {
+ 			const gchar *p = argv[i + 1];
+ 
+@@ -699,6 +702,7 @@ static void parse_cmd_opt(int argc, char
+ 			g_print("%s\n", _("  --exit                 exit Sylpheed"));
+ 			g_print("%s\n", _("  --debug                debug mode"));
+ 			g_print("%s\n", _("  --safe-mode            safe mode"));
++			g_print("%s\n", _("  --show-toggle          show toggle"));
+ 			g_print("%s\n", _("  --help                 display this help and exit"));
+ 			g_print("%s\n", _("  --version              output version information and exit"));
+ 
+@@ -1599,6 +1603,8 @@ static gint prohibit_duplicate_launch(vo
+ 		g_free(compose_str);
+ 	} else if (cmd.send) {
+ 		fd_write_all(sock, "send\n", 5);
++	} else if (cmd.show_toggle) {
++		fd_write_all(sock, "show-toggle\n", 12);
+ 	} else if (cmd.status || cmd.status_full) {
+ 		gchar buf[BUFFSIZE];
+ 		gint i;
+@@ -1752,6 +1758,11 @@ static gboolean lock_socket_input_cb(GIO
+ 		open_compose_new(buf + strlen("compose") + 1, NULL);
+ 	} else if (!strncmp(buf, "send", 4)) {
+ 		send_queue();
++	} else if (!strncmp(buf, "show-toggle", 11)) {
++		if (mainwin->window_hidden)
++			main_window_popup(mainwin);
++		else
++			gtk_window_iconify(GTK_WINDOW(mainwin->window));
+ 	} else if (!strncmp(buf, "status-full", 11) ||
+ 		   !strncmp(buf, "status", 6)) {
+ 		gchar *status;
+@@ -1820,7 +1831,12 @@ static void remote_command_exec(void)
+ 			inc_all_account_mail(mainwin, TRUE);
+ 		else if (cmd.receive)
+ 			inc_mail(mainwin);
+-
++		else if (cmd.show_toggle) {
++			if (mainwin->window_hidden)
++				main_window_popup(mainwin);
++			else
++				gtk_window_iconify(GTK_WINDOW(mainwin->window));
++		}
+ 		if (cmd.send)
+ 			send_queue();
+ 	}
+Binary files sylpheed-3.7.0.orig/src/.main.c.un~ and sylpheed-3.7.0/src/.main.c.un~ differ

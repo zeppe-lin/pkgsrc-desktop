@@ -4,4 +4,5 @@
 1145a94e1dbfa5c1465a62534a15b164  0003-disable_i18n_help_and_faq.patch
 2b009daaf5b36916160b89ccfa639c8e  0004-refer_to_online_help_and_faq.patch
 bb73807a23c45261c874e5214ec1a0c6  fix-send-mail-attachment.patch
+d7f722df804ae5b116c37e9da9a493c4  show-toggle.patch
 af1ea33e82050b8bd034b8cfbcd2f75e  sylpheed-3.7.0.tar.xz
