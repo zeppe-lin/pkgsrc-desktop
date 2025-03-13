@@ -3,14 +3,13 @@
 # Depends on:  alsa-lib autoconf-2.13 desktop-file-utils gtk python unzip xorg-libxt yasm zip
 
 name=palemoon
-version=33.6.0.1
-_upxrel=20250219
+version=33.6.1
+_upxrel=20250310
 release=1
 source="https://repo.palemoon.org/MoonchildProductions/Pale-Moon/archive/${version}_Release.tar.gz
 	https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_${_upxrel}.tar.gz
 	palemoon.desktop
-	mozconfig.in
-	revdep.palemoon.in"
+	mozconfig.in"
 
 build() {
 	cd uxp; cp -R . $SRC/pale-moon/platform/
@@ -34,8 +33,10 @@ build() {
 
 	# revdep additional library directories
 	mkdir -p $PKG/etc/revdep.d
-	sed "s:@VERSION@:$version:g" $SRC/revdep.palemoon.in \
-		> $PKG/etc/revdep.d/palemoon
+	cat > $PKG/etc/revdep.d/$name <<EOF
+/usr/lib/palemoon-$version
+/usr/lib/palemoon-$version/browser/components
+EOF
 
 	# remove junk:
 	# we don't need these (just symlink anyway)
