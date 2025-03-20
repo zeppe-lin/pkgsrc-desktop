@@ -3,9 +3,9 @@
 # Depends on:  p5-xml-parser
 
 name=p5-extutils-depends
-version=0.8001
-release=2
-source=https://cpan.metacpan.org/authors/id/X/XA/XAOC/ExtUtils-Depends-$version.tar.gz
+version=0.8002
+release=1
+source=https://cpan.metacpan.org/authors/id/E/ET/ETJ/ExtUtils-Depends-$version.tar.gz
 
 build() {
 	cd ExtUtils-Depends-$version
