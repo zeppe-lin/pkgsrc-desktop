@@ -4,7 +4,7 @@
 # Optional:    desktop-file-utils
 
 name=firefox-bin
-version=136.0.1
+version=136.0.2
 release=1
 source="https://ftp.mozilla.org/pub/firefox/releases/$version/linux-x86_64/en-US/firefox-$version.tar.xz
 	firefox.sh
@@ -26,13 +26,13 @@ build() {
 			$PKG/usr/share/icons/hicolor/${x}x${x}/apps/firefox.png
 	done
 
-	# we don't want these 'features'
+	# Remove unwanted features directory
 	rm -r $PKG/opt/firefox/browser/features
 
-	# disable autoupdate
+	# Disable automatic updates using policies
 	install -m 0644 -Dt $PKG/opt/firefox/distribution policies.json
 
-	# revdep configuration
+	# Configure revdep(1) additional directories
 	mkdir -p $PKG/etc/revdep.d
 	echo "/opt/firefox" > $PKG/etc/revdep.d/$name
 }
