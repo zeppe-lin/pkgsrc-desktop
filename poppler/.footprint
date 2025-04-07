@@ -148,14 +148,14 @@ drwxr-xr-x	root/root	usr/include/poppler/splash/
 -rw-r--r--	root/root	usr/include/poppler/splash/SplashTypes.h
 drwxr-xr-x	root/root	usr/lib/
 lrwxrwxrwx	root/root	usr/lib/libpoppler-cpp.so -> libpoppler-cpp.so.2
-lrwxrwxrwx	root/root	usr/lib/libpoppler-cpp.so.2 -> libpoppler-cpp.so.2.0.0
--rwxr-xr-x	root/root	usr/lib/libpoppler-cpp.so.2.0.0
+lrwxrwxrwx	root/root	usr/lib/libpoppler-cpp.so.2 -> libpoppler-cpp.so.2.1.0
+-rwxr-xr-x	root/root	usr/lib/libpoppler-cpp.so.2.1.0
 lrwxrwxrwx	root/root	usr/lib/libpoppler-glib.so -> libpoppler-glib.so.8
 lrwxrwxrwx	root/root	usr/lib/libpoppler-glib.so.8 -> libpoppler-glib.so.8.29.0
 -rwxr-xr-x	root/root	usr/lib/libpoppler-glib.so.8.29.0
-lrwxrwxrwx	root/root	usr/lib/libpoppler.so -> libpoppler.so.147
-lrwxrwxrwx	root/root	usr/lib/libpoppler.so.147 -> libpoppler.so.147.0.0
--rwxr-xr-x	root/root	usr/lib/libpoppler.so.147.0.0
+lrwxrwxrwx	root/root	usr/lib/libpoppler.so -> libpoppler.so.148
+lrwxrwxrwx	root/root	usr/lib/libpoppler.so.148 -> libpoppler.so.148.0.0
+-rwxr-xr-x	root/root	usr/lib/libpoppler.so.148.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/poppler-cpp.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/poppler-glib.pc
