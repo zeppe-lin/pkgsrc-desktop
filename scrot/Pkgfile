@@ -3,7 +3,7 @@
 # Depends on:  autoconf-archive imlib2 xorg-libxcomposite xorg-libxinerama
 
 name=scrot
-version=1.11.1
+version=1.12.1
 release=1
 source=https://github.com/resurrecting-open-source-projects/scrot/archive/$version/scrot-$version.tar.gz
 
