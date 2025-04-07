@@ -3,7 +3,7 @@
 # Depends on:  docutils ffmpeg libarchive libjpeg-turbo libplacebo mesa xorg-libxinerama xorg-libxpresent xorg-libxscrnsaver
 
 name=mpv
-version=0.39.0
+version=0.40.0
 release=1
 source=https://github.com/mpv-player/mpv/archive/v$version/mpv-v$version.tar.gz
 
@@ -37,6 +37,6 @@ build() {
 	sed -ri -e '/\[.+\]=/d' -e '/^TryExec=mpv/d' \
 		$PKG/usr/share/applications/*.desktop
 
-	# remove junk & zsh completion
-	rm -r $PKG/usr/share/doc/ $PKG/usr/share/zsh
+	# remove junk & fish/zsh completion
+	rm -r $PKG/usr/share/doc/ $PKG/usr/share/zsh $PKG/usr/share/fish
 }
