@@ -37,7 +37,6 @@ drwxr-xr-x	root/root	opt/firefox/icons/
 -rw-r--r--	root/root	opt/firefox/icons/updater.png
 -rwxr-xr-x	root/root	opt/firefox/libfreeblpriv3.so
 -rwxr-xr-x	root/root	opt/firefox/libgkcodecs.so
--rwxr-xr-x	root/root	opt/firefox/libipcclientcerts.so
 -rwxr-xr-x	root/root	opt/firefox/liblgpllibs.so
 -rwxr-xr-x	root/root	opt/firefox/libmozavcodec.so
 -rwxr-xr-x	root/root	opt/firefox/libmozavutil.so
@@ -47,7 +46,6 @@ drwxr-xr-x	root/root	opt/firefox/icons/
 -rwxr-xr-x	root/root	opt/firefox/libmozwayland.so
 -rwxr-xr-x	root/root	opt/firefox/libnspr4.so
 -rwxr-xr-x	root/root	opt/firefox/libnss3.so
--rwxr-xr-x	root/root	opt/firefox/libnssckbi.so
 -rwxr-xr-x	root/root	opt/firefox/libnssutil3.so
 -rwxr-xr-x	root/root	opt/firefox/libplc4.so
 -rwxr-xr-x	root/root	opt/firefox/libplds4.so
