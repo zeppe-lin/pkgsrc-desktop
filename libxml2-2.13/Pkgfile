@@ -1,0 +1,30 @@
+# Description: XML library, 2.13.x series
+# URL:         https://gitlab.gnome.org/GNOME/libxml2
+# Depends on:  xz zlib
+
+name=libxml2-2.13
+version=2.13.7
+release=1
+source=https://download.gnome.org/sources/libxml2/2.13/libxml2-$version.tar.xz
+
+build() {
+	mkdir build; cd build
+
+	#export PYTHON=/usr/bin/python3
+
+	../libxml2-$version/configure                   \
+		--prefix=/usr                           \
+		--without-debug                         \
+		--without-python                        \
+		--libdir=/usr/lib/libxml2-2.13          \
+		--includedir=/usr/include/libxml2-2.13  \
+
+	make V=1
+	make DESTDIR=$PKG install
+
+	# remove conflicts with libxml2
+	rm -r $PKG/usr/share/aclocal $PKG/usr/bin $PKG/usr/share/man
+
+	# remove junk
+	rm -r $PKG/usr/share/doc $PKG/usr/share/gtk-doc
+}
