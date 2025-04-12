@@ -4,7 +4,7 @@
 
 name=snownews
 version=1.11
-release=2
+release=3
 source="https://sourceforge.net/projects/$name/files/$name-$version.tar.gz
 	0001-Replace-deprecated-xmlRecoverMemory-call.patch
 	0002-Create-parent-dirs-during-snownews-dirs-setup.patch
@@ -23,6 +23,9 @@ build() {
 	patch -d $name-$version -p0 -i $SRC/patch-Makefile
 	patch -d $name-$version -p0 -i $SRC/patch-man_Module_mk
 	patch -d $name-$version -p0 -i $SRC/patch-po_Module_mk
+
+	# do not pollute the system TMPDIR
+	export TMPDIR=$PKGMK_WORK_DIR
 
 	# workaround for GCC 12
 	export CFLAGS="$CFLAGS -Wno-stringop-truncation -Wno-error=format-security"
