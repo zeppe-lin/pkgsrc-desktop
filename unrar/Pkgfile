@@ -2,12 +2,12 @@
 # URL:         https://www.rarlab.com/rar_add.htm
 
 name=unrar
-version=7.1.5
+version=7.1.6
 release=1
 source=https://www.rarlab.com/rar/unrarsrc-$version.tar.gz
 
 build() {
-	# parallel build is broken
+	# seems like parallel build is broken by design
 	make -C unrar -j1 CXXFLAGS="$CXXFLAGS" STRIP=:
 	make -C unrar DESTDIR=$PKG/usr install
 }
