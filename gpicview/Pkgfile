@@ -1,22 +1,22 @@
 # Description: Simple image viewer
 # URL:         https://github.com/lxde/gpicview
-# Depends on:  desktop-file-utils gtk3 xdg-utils
+# Depends on:  desktop-file-utils gtk xdg-utils
 
 # xdg-utils: required by "Make GPicView the default viewer for images" setup button
 # desktop-file-utils: required by post-install script
 
 name=gpicview
-version=0.2.6
-release=4
+version=0.3.1
+release=1
 source="$name-$version.tar.gz::https://github.com/lxde/$name/archive/refs/tags/$version.tar.gz
-	copy-to-clipboard.patch
+	copy-to-clipboard.diff
 	gpicview-gtk2.pod
 	gpicview-gtk3.pod
 	gpicview-pod2man.Makefile"
 
 build() {
 	# allow copy to clipboard using ctrl+c
-	patch -d $name-$version -Np1 -i $SRC/copy-to-clipboard.patch
+	patch -d $name-$version -Np1 -i $SRC/copy-to-clipboard.diff
 	# disable i18n
 	export LINGUAS=' '
 
@@ -27,14 +27,14 @@ build() {
 		--prefix=/usr        \
 		--sysconfdir=/etc    \
 		--disable-nls        \
-		--enable-gtk3        \
+		#--enable-gtk3        \
 
 	make V=1
 	make DESTDIR=$PKG install
 
 	# build and install man page
 	make -C $SRC -f gpicview-pod2man.Makefile  \
-		WITH_GTK=3                         \
+		WITH_GTK=2                         \
 		VERSION=$version                   \
 		MANPREFIX=/usr/share/man           \
 		DESTDIR=$PKG install

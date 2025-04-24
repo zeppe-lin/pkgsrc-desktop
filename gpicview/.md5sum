@@ -1,5 +1,5 @@
-f373456f7bb2f0e33ea922f2e6074bbb  copy-to-clipboard.patch
-fe2a25d01eb62b5a0819ae8f8f694a1f  gpicview-0.2.6.tar.gz
+642533d3cc141e9acd05c8d71b621fe3  copy-to-clipboard.diff
+e008968d0c7ddae81acdad9a82a2f10b  gpicview-0.3.1.tar.gz
 f421473d38673c8bf90ef5baa62fff9b  gpicview-gtk2.pod
 2d93425072046e6dc54b31c0e4c33dfd  gpicview-gtk3.pod
 f8ba9950a88c7855ec963f35aa5792af  gpicview-pod2man.Makefile
