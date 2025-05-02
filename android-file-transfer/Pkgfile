@@ -3,7 +3,7 @@
 # Depends on:  fuse2 qt5 taglib xorg-libxkbfile
 
 name=android-file-transfer
-version=4.4-b8ab1ec
+version=4.5-a1963af
 release=1
 source="https://github.com/whoozle/$name-linux/archive/${version#*-}/$name-$version.tar.gz
 	use_system_icons.patch
