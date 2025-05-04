@@ -1,16 +1,17 @@
 # Description: Monitor of system resources
 # URL:         https://github.com/aristocratos/btop
+# Depends on:  scdoc
 
 name=btop
-version=1.4.0-53df78d
+version=1.4.2-9bd618f
 release=1
 source="https://github.com/aristocratos/btop/archive/${version#*-}/btop-$version.tar.gz
 	btop.1.patch
-	btop.1.pod"
+	btop.1.scdoc"
 
 build() {
-	# upstream man page is ugly as f*ck, we ship our version
-	(cd btop-*; cp $SRC/btop.1.pod .; patch -p1 -i $SRC/btop.1.patch)
+	# ship out improved man page
+	(cd btop-*; cp $SRC/btop.1.scdoc .; patch -p1 -i $SRC/btop.1.patch)
 
 	cmake -S btop-* -B build -G Ninja     \
 		-D CMAKE_INSTALL_PREFIX=/usr  \

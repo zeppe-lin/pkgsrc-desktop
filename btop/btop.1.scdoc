@@ -1,0 +1,77 @@
+BTOP(1)
+
+# NAME
+
+btop - usage and stats for processor, gpu, memory, disks, network, and processes
+
+# SYNOPSIS
+
+*btop* \
+[*-c* _cfgfile_] \
+[*-lc*] \
+[*-t* | *+t*] \
+[*-p* _id_] \
+[*-u* _ms_] \
+[*--utf-force*] \
+[*--debug*] \
+[{*-h* | *--help*} | {*-v* | *--version*}]
+
+# DESCRIPTION
+
+*btop* is a program that shows usage and stats for processor, gpu,
+memory, disks, network, and processes.
+
+# OPTIONS
+
+The program follows the usual GNU command line syntax, with long
+options starting with two dashes ('*-*').
+
+A summary of options is included below.
+
+*-c* _cfgfile_, *--config* _cfgfile_
+	Path to an alternate config file instead of the default
+	~/.config/btop/btop.conf.
+
+*-lc*, *--low-color*
+	Disable truecolor, converts 24-bit colors to 256-color.
+
+*-t*, *--tty_on*
+	Force (ON) tty mode, max 16 colors and tty-friendly graph
+	symbols.
+
+*+t*, *--tty_off*
+	Force (OFF) tty mode.
+
+*-p* _id_, *--preset* _id_
+	Start with preset, integer value between 0-9.
+
+*-u*, *--update* _ms_
+	Set the program update rate in milliseconds.
+
+*--utf-force*
+	Force start even if no UTF-8 locale was detected.
+
+*--debug*
+	Start in DEBUG mode: shows microsecond timer for information
+	collect and screen draw functions and sets loglevel to DEBUG.
+
+*-h*, *--help*
+	Show summary of options.
+
+*-v*, *--version*
+	Show version of program.
+
+# BUGS
+	The upstream bug tracker can be found at
+	<https://github.com/aristocratos/btop/issues>.
+
+# SEE ALSO
+
+*top*(1),
+*htop*(1)
+
+# AUTHOR
+
+btop was written by Jakob P. Liljenberg a.k.a. "Aristocratos".
+
+; vim: ft=scdoc cc=72 tw=70

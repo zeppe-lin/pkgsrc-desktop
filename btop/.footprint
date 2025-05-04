@@ -8,6 +8,7 @@ drwxr-xr-x	root/root	usr/share/btop/
 drwxr-xr-x	root/root	usr/share/btop/themes/
 -rw-r--r--	root/root	usr/share/btop/themes/HotPurpleTrafficLight.theme
 -rw-r--r--	root/root	usr/share/btop/themes/adapta.theme
+-rw-r--r--	root/root	usr/share/btop/themes/adwaita-dark.theme
 -rw-r--r--	root/root	usr/share/btop/themes/adwaita.theme
 -rw-r--r--	root/root	usr/share/btop/themes/ayu.theme
 -rw-r--r--	root/root	usr/share/btop/themes/dracula.theme
@@ -24,6 +25,8 @@ drwxr-xr-x	root/root	usr/share/btop/themes/
 -rw-r--r--	root/root	usr/share/btop/themes/gruvbox_light.theme
 -rw-r--r--	root/root	usr/share/btop/themes/gruvbox_material_dark.theme
 -rw-r--r--	root/root	usr/share/btop/themes/horizon.theme
+-rw-r--r--	root/root	usr/share/btop/themes/kanagawa-lotus.theme
+-rw-r--r--	root/root	usr/share/btop/themes/kanagawa-wave.theme
 -rw-r--r--	root/root	usr/share/btop/themes/kyli0x.theme
 -rw-r--r--	root/root	usr/share/btop/themes/matcha-dark-sea.theme
 -rw-r--r--	root/root	usr/share/btop/themes/monokai.theme
