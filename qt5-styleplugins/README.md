@@ -6,11 +6,9 @@ README qt5-styleplugins
 GTK2 THEME
 ==========
 
-To make `qt5` use the `qt5ct` style, set this to your environment:
+To make Qt5 use the `qt5ct` style, set this in your environment:
 
-```sh
-QT_QPA_PLATFORMTHEME=gt5ct
-```
+    QT_QPA_PLATFORMTHEME=gt5ct
 
 
 ---
