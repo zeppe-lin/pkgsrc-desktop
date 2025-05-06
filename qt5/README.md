@@ -6,31 +6,24 @@ README qt5
 POST-INSTALL
 ============
 
-After updating qt5 you may get the following error when launching qt5
+After updating `qt5`, you might encounter this error when launching
 applications:
 
-```sh
-Can't mix incompatible Qt library (5.15.x) with this library (5.15.y)
-```
+`Can't mix incompatible Qt library (5.15.x) with this library (5.15.y)`
 
-Just rebuild `qt5-styleplugins`.
+Rebuild `qt5-styleplugins` to resolve the issue.
 
 
 THEME CUSTOMIZATION
 ===================
 
-Qt5 can be forced to follow the theme of GTK-3.0.  Add the following line to
-your profile:
+To make `qt5` follow the GTK-3.0 theme, add this to your profile:
 
-```sh
-export QT_QPA_PLATFORMTHEME=gtk3
-```
+    export QT_QPA_PLATFORMTHEME=gtk3
 
-You may also wish to set the widget style:
+For widget styling, you can also set:
 
-```sh
-export QT_STYLE_OVERRIDE=windows
-```
+    export QT_STYLE_OVERRIDE=windows
 
 
 ---
