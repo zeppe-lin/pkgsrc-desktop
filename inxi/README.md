@@ -18,9 +18,7 @@ To obtain more information about your system will be nice to have:
 
 To see more optional requirements, run:
 
-```sh
-inxi --recommends
-```
+    inxi --recommends
 
 
 ---
