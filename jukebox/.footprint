@@ -12,6 +12,8 @@ drwxr-xr-x	root/root	usr/share/jukebox/
 -rw-r--r--	root/root	usr/share/jukebox/config.mk
 -rw-r--r--	root/root	usr/share/jukebox/flacheader.pm
 -rwxr-xr-x	root/root	usr/share/jukebox/iceserver.pl
+-rw-r--r--	root/root	usr/share/jukebox/jukebox-layouts.7.pod
+-rw-r--r--	root/root	usr/share/jukebox/jukebox-plugins.7.pod
 -rwxr-xr-x	root/root	usr/share/jukebox/jukebox.pl
 -rw-r--r--	root/root	usr/share/jukebox/jukebox.pod
 -rw-r--r--	root/root	usr/share/jukebox/jukebox_123.pm
