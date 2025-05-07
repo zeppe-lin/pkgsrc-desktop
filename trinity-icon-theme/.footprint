@@ -249,13 +249,11 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/gtk-justify-fill.s
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/gtk-justify-left.svg -> format-justify-left.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/gtk-justify-right.svg -> format-justify-right.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/gtk-leave-fullscreen.svg -> view-restore.svg
-lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/gtk-media-next-ltr.png -> media-skip-forward.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/gtk-media-next-ltr.svg -> media-skip-forward.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/gtk-media-next-rtl.svg -> media-skip-backward.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/gtk-media-pause.svg -> media-playback-pause.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/gtk-media-play-ltr.svg -> media-playback-start.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/gtk-media-previous-ltr.svg -> media-skip-backward.svg
-lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/gtk-media-previous-rtl.png -> media-skip-forward.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/gtk-media-previous-rtl.svg -> media-skip-forward.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/gtk-media-record.svg -> media-record.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/gtk-media-stop.svg -> media-playback-stop.svg
@@ -427,7 +425,6 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/ok.svg -> dialog-o
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/pan-up-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/pan-up.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/player-eject.svg -> media-eject.svg
-lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/player_end.png -> media-skip-forward.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/player_end.svg -> media-skip-forward.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/player_pause.svg -> media-playback-pause.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/player_play.svg -> media-playback-start.svg
@@ -495,7 +492,6 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/stock_help-add-boo
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/stock_last.svg -> go-last.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/stock_leave-fullscreen.svg -> view-restore.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/stock_left.svg -> go-previous.svg
-lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/stock_media-next.png -> media-skip-forward.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/stock_media-next.svg -> media-skip-forward.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/stock_media-pause.svg -> media-playback-pause.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/stock_media-play.svg -> media-playback-start.svg
