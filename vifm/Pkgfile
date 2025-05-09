@@ -3,7 +3,7 @@
 # Depends on:  ncurses
 
 name=vifm
-version=0.14.1
+version=0.14.2
 release=1
 #source=https://prdownloads.sourceforge.net/$name/$name-$version.tar.bz2
 source=https://github.com/vifm/vifm/releases/download/v$version/vifm-$version.tar.bz2
@@ -23,7 +23,7 @@ build() {
 		--sysconfdir=/usr/etc  \
 
 	make V=1
-	make DESTDIR="$PKG" install
+	make DESTDIR=$PKG install
 
 	sed -i '/^TryExec=/d' $PKG/usr/share/applications/*.desktop
 
