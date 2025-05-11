@@ -1,6 +1,6 @@
 # Description: Wraps normal socket connections with SSL/TLS
 # URL:         https://www.stunnel.org/
-# Depends on:  libnsl openssl
+# Depends on:  libnsl openssl zlib
 
 name=stunnel
 version=5.74
