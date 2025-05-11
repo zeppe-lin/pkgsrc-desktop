@@ -14,8 +14,8 @@ drwxr-xr-x	root/root	usr/share/jukebox/
 -rwxr-xr-x	root/root	usr/share/jukebox/iceserver.pl
 -rw-r--r--	root/root	usr/share/jukebox/jukebox-layouts.7.pod
 -rw-r--r--	root/root	usr/share/jukebox/jukebox-plugins.7.pod
+-rw-r--r--	root/root	usr/share/jukebox/jukebox.1.pod
 -rwxr-xr-x	root/root	usr/share/jukebox/jukebox.pl
--rw-r--r--	root/root	usr/share/jukebox/jukebox.pod
 -rw-r--r--	root/root	usr/share/jukebox/jukebox_123.pm
 -rw-r--r--	root/root	usr/share/jukebox/jukebox_dbus.pm
 -rw-r--r--	root/root	usr/share/jukebox/jukebox_gstreamer-0.10.pm
