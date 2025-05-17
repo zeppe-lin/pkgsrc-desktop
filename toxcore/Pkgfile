@@ -4,7 +4,7 @@
 # Optional:    libvpx opus
 
 name=toxcore
-version=0.2.20
+version=0.2.21
 release=1
 source="https://github.com/TokTok/c-$name/archive/v$version/$name-$version.tar.gz
 	https://github.com/camgunz/cmp/archive/v20/cmp-20.tar.gz"
