@@ -3,7 +3,7 @@
 # Depends on:  gnupg
 
 name=gpgme
-version=1.24.2
+version=1.24.3
 release=1
 source=https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-$version.tar.bz2
 
