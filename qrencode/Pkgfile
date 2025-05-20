@@ -1,18 +1,28 @@
 # Description: C library for encoding data in a QR Code symbol
-# URL:         https://fukuchi.org/works/qrencode
+# URL:         https://github.com/fukuchi/libqrencode
 # Depends:     libpng
 
 name=qrencode
 version=4.1.1
-release=1
-source=https://fukuchi.org/works/$name/$name-$version.tar.bz2
+release=2
+source=https://github.com/fukuchi/libqrencode/archive/v$version/$name-$version.tar.gz
 
 build() {
-	mkdir build; cd build
+	for d in shared static; do
+		case ${d} in
+		shared) PKGMK_QRENCODE_SHARED="ON"  ;;
+		static) PKGMK_QRENCODE_SHARED="OFF" ;;
+		esac
 
-	../$name-$version/configure  \
-		--prefix=/usr        \
+		cmake -S libqrencode-$version -B build-${d} -G Ninja  \
+			-D CMAKE_INSTALL_PREFIX=/usr                  \
+			-D CMAKE_INSTALL_LIBDIR=lib                   \
+			-D CMAKE_BUILD_TYPE=Release                   \
+			-D CMAKE_C_FLAGS_RELEASE="$CFLAGS"            \
+			-D BUILD_SHARED_LIBS=$PKGMK_QRENCODE_SHARED   \
+			-W no-dev
 
-	make V=1
-	make DESTDIR=$PKG install
+		ninja -C build-${d} -j ${JOBS:-1} -v
+		DESTDIR=$PKG ninja -C build-${d} install
+	done
 }
