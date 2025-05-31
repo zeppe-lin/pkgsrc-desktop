@@ -3,8 +3,8 @@
 # Depends on:  hicolor-icon-theme gnome-icon-theme
 
 name=buuf-nestort-icon-theme
-version=2.0-48cbf7b
-_commit=48cbf7b0c79c15055d25af9bfeb3d927deb5b808
+version=2.0-f9af8f2
+_commit=f9af8f2c99205fff5743b6e2076126a195ca7357
 release=1
 source="$name-$version.tar.gz::https://git.disroot.org/eudaimon/buuf-nestort/archive/$_commit.tar.gz
 	icon-theme.cache"
