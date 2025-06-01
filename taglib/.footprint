@@ -74,6 +74,9 @@ drwxr-xr-x	root/root	usr/include/taglib/
 -rw-r--r--	root/root	usr/include/taglib/rifffile.h
 -rw-r--r--	root/root	usr/include/taglib/s3mfile.h
 -rw-r--r--	root/root	usr/include/taglib/s3mproperties.h
+-rw-r--r--	root/root	usr/include/taglib/shortenfile.h
+-rw-r--r--	root/root	usr/include/taglib/shortenproperties.h
+-rw-r--r--	root/root	usr/include/taglib/shortentag.h
 -rw-r--r--	root/root	usr/include/taglib/speexfile.h
 -rw-r--r--	root/root	usr/include/taglib/speexproperties.h
 -rw-r--r--	root/root	usr/include/taglib/synchronizedlyricsframe.h
@@ -81,6 +84,7 @@ drwxr-xr-x	root/root	usr/include/taglib/
 -rw-r--r--	root/root	usr/include/taglib/tag.h
 -rw-r--r--	root/root	usr/include/taglib/tag_c.h
 -rw-r--r--	root/root	usr/include/taglib/taglib.h
+-rw-r--r--	root/root	usr/include/taglib/taglib_config.h
 -rw-r--r--	root/root	usr/include/taglib/taglib_export.h
 -rw-r--r--	root/root	usr/include/taglib/tbytevector.h
 -rw-r--r--	root/root	usr/include/taglib/tbytevectorlist.h
@@ -124,11 +128,11 @@ drwxr-xr-x	root/root	usr/lib/cmake/taglib/
 -rw-r--r--	root/root	usr/lib/cmake/taglib/taglib-targets-noconfig.cmake
 -rw-r--r--	root/root	usr/lib/cmake/taglib/taglib-targets.cmake
 lrwxrwxrwx	root/root	usr/lib/libtag.so -> libtag.so.2
-lrwxrwxrwx	root/root	usr/lib/libtag.so.2 -> libtag.so.2.0.2
--rwxr-xr-x	root/root	usr/lib/libtag.so.2.0.2
+lrwxrwxrwx	root/root	usr/lib/libtag.so.2 -> libtag.so.2.1.0
+-rwxr-xr-x	root/root	usr/lib/libtag.so.2.1.0
 lrwxrwxrwx	root/root	usr/lib/libtag_c.so -> libtag_c.so.2
-lrwxrwxrwx	root/root	usr/lib/libtag_c.so.2 -> libtag_c.so.2.0.2
--rwxr-xr-x	root/root	usr/lib/libtag_c.so.2.0.2
+lrwxrwxrwx	root/root	usr/lib/libtag_c.so.2 -> libtag_c.so.2.1.0
+-rwxr-xr-x	root/root	usr/lib/libtag_c.so.2.1.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/taglib.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/taglib_c.pc
