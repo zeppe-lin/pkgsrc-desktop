@@ -3,9 +3,8 @@
 # Depends on:  ncurses
 
 name=vifm
-version=0.14.2
+version=0.14.3
 release=1
-#source=https://prdownloads.sourceforge.net/$name/$name-$version.tar.bz2
 source=https://github.com/vifm/vifm/releases/download/v$version/vifm-$version.tar.bz2
 
 build() {
@@ -18,6 +17,7 @@ build() {
 	mkdir build; cd build
 
 	autoreconf -fi ../$name-$version
+	CONFIG_SHELL=/bin/bash         \
 	../$name-$version/configure    \
 		--prefix=/usr          \
 		--sysconfdir=/usr/etc  \
