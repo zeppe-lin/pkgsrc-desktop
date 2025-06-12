@@ -3,13 +3,14 @@
 # Depends on:   p5-xml-parser
 
 name=p5-xml-twig
-version=3.53
+version=3.54
 release=1
 source=https://search.cpan.org/CPAN/authors/id/M/MI/MIROD/XML-Twig-$version.tar.gz
 
 build() {
 	cd XML-Twig-$version
 
+	command -v finddepsdistmeta && finddepsdistmeta
 	PERL_MM_USE_DEFAULT=1 perl Makefile.PL -n INSTALLDIRS=vendor
 
 	make V=1
