@@ -3,19 +3,22 @@
 # Depends on:  utf8cpp zlib
 
 name=taglib
-version=2.1
+version=2.1.1
 release=1
 source=https://taglib.org/releases/$name-$version.tar.gz
 
 build() {
-	cmake -S $name-$version -B build -G Ninja  \
-		-D CMAKE_INSTALL_PREFIX=/usr       \
-		-D CMAKE_INSTALL_LIBDIR=lib        \
-		-D CMAKE_RELEASE_TYPE=Release      \
-		-D BUILD_SHARED_LIBS=ON            \
-		-D BUILD_TESTING=OFF               \
-		-D WITH_MP4=ON                     \
-		-D WITH_ASF=ON                     \
+	cmake -S $name-$version -B build -G Ninja       \
+		-D CMAKE_INSTALL_PREFIX=/usr            \
+		-D CMAKE_INSTALL_LIBDIR=lib             \
+		-D CMAKE_RELEASE_TYPE=Release           \
+		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS"      \
+		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS"  \
+		-D BUILD_SHARED_LIBS=ON                 \
+		-D BUILD_TESTING=OFF                    \
+		-D WITH_MP4=ON                          \
+		-D WITH_ASF=ON                          \
+		-Wno-dev
 
 	ninja -C build -j ${JOBS:-1} -v
 	DESTDIR=$PKG ninja -C build install
