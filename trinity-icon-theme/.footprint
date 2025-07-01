@@ -99,7 +99,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/edit-redo-symbolic
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/edit-select-all.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/edit-select-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/edit-select.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/edit-undo-rtl-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/edit-undo-rtl-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/edit-redo-symbolic.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/edit-undo-rtl.svg -> edit-redo.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/edit-undo-symbolic-rtl.svg -> edit-redo.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/edit-undo.svg
@@ -137,10 +137,10 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/format-indent-less
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/format-indent-less-symbolic-rtl.svg -> format-indent-less-rtl-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/format-indent-less-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/format-indent-less.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/format-indent-more-rtl-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/format-indent-more-rtl-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/format-indent-less-symbolic.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/format-indent-more-rtl.svg -> format-indent-less.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/format-indent-more-symbolic-rtl.svg -> format-indent-more-rtl-symbolic.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/format-indent-more-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/format-indent-more-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/format-indent-less-rtl-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/format-indent-more.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/format-justify-center-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/format-justify-center.svg
@@ -192,17 +192,17 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/go-first-rtl.svg -
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/go-jump-rtl.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/go-jump-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/go-jump.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/go-last-rtl-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/go-last-rtl-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/go-first-symbolic.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/go-last-rtl.svg -> go-first.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/go-last-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/go-last-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/go-first-rtl-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/go-last.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/go-next-rtl-symbolic.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/go-next-rtl.svg -> go-previous.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/go-next-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/go-next.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/go-previous-rtl-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/go-previous-rtl-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/go-next-symbolic.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/go-previous-rtl.svg -> go-next.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/go-previous-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/go-previous-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/go-next-rtl-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/go-previous.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/go-top-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/go-top.svg
@@ -324,7 +324,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/libpeas.svg -> plu
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/list-add.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/list-remove-all-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/list-remove-all.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/list-remove-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/list-remove-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/application-exit-symbolic.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/list-remove.svg -> application-exit.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/location-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/location.svg
@@ -345,8 +345,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/mail-read.svg -> m
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/mail-reply-sender.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/mail-send-receive-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/mail-send-receive.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/mail-send-symbolic.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/mail-send.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/mail-send-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/document-send-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/mail-send.svg -> /usr/src/trinity-icon-theme/actions/scalable/document-send.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/mark-location-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/mark-location.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/media-eject-symbolic.svg
@@ -380,9 +380,9 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/media-seek-forward
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/media-skip-backward-rtl.svg -> media-skip-forward.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/media-skip-backward-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/media-skip-backward.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/media-skip-forward-rtl-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/media-skip-forward-rtl-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/media-skip-backward-symbolic.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/media-skip-forward-rtl.svg -> media-skip-backward.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/media-skip-forward-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/media-skip-forward-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/media-skip-backward-rtl-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/media-skip-forward.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/media-view-subtitles-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/music-library.svg
@@ -398,7 +398,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/next.svg -> go-nex
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/object-rotate-right-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/object-rotate-right.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/object-select-symbolic.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/object-select.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/object-select.svg -> /usr/src/trinity-icon-theme/actions/scalable/dialog-ok.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/ok.svg -> dialog-ok.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/open-menu-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/package-available-locked.svg
@@ -414,16 +414,16 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/ok.svg -> dialog-o
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/package-reinstall.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/package-remove.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/package-upgrade.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/pan-down-symbolic.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/pan-down.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/pan-down-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/go-bottom-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/pan-down.svg -> /usr/src/trinity-icon-theme/actions/scalable/go-bottom.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/pan-end-rtl.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/pan-end-symbolic-rtl.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/pan-end-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/pan-end.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/pan-start-symbolic.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/pan-start.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/pan-up-symbolic.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/pan-up.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/pan-start-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/pan-end-symbolic-rtl.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/pan-start.svg -> /usr/src/trinity-icon-theme/actions/scalable/pan-end-rtl.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/pan-up-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/go-top-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/pan-up.svg -> /usr/src/trinity-icon-theme/actions/scalable/go-top.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/player-eject.svg -> media-eject.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/player_end.svg -> media-skip-forward.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/player_pause.svg -> media-playback-pause.svg
@@ -438,7 +438,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/presence_online.sv
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/presence_unknown.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/preview-file.svg -> document-print-preview.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/previous.svg -> go-previous.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/process-stop-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/process-stop-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/action-unavailable-symbolic.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/process-stop.svg -> hb-canceled.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/redhat-home.svg -> go-home.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/redo.svg -> edit-redo.svg
@@ -458,7 +458,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/selection-start-sy
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/selection-start-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/selection-start.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/send-to-symbolic.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/share-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/share-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/send-to-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/share.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/sidebar-hide-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/sidebar-hide.svg
@@ -543,8 +543,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/stop.svg -> proces
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/system-restart-panel.svg -> system-shutdown-restart-panel.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/system-run-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/system-run.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/system-search-symbolic.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/system-search.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/system-search-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/edit-find-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/system-search.svg -> /usr/src/trinity-icon-theme/actions/scalable/edit-find.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/system-shutdown-panel-restart.svg -> system-shutdown-restart-panel.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/system-shutdown-panel.svg -> system-shutdown.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/system-shutdown-restart-panel.svg
@@ -593,7 +593,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/viewmag+.svg -> zo
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/viewmag-.svg -> zoom-out.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/viewmag1.svg -> zoom-original.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/viewmagfit.svg -> zoom-fit.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/window-close-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/window-close-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/application-exit-symbolic.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/window-close.svg -> application-exit.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/window-maximize-symbolic.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/window-maximize.svg -> xfce-wm-maximize.svg
@@ -620,7 +620,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/xfsm-logout.svg ->
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/zoom-fit-best-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/zoom-fit-best.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/zoom-fit.svg -> edit-find.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/zoom-in-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/actions/scalable/zoom-in-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/tab-new.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/zoom-in.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/zoom-original-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/actions/scalable/zoom-original.svg
@@ -739,6 +739,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/chromium-dev.svg -> c
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/apps/scalable/chromium-stock.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/chromium-unstable.svg -> chromium.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/apps/scalable/chromium.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/clipit.svg -> xfce4-clipman-plugin.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/apps/scalable/clock.svg
 -rw-r--r--	root/root	usr/share/icons/Trinity/apps/scalable/cmake.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/compiz -> preferences-system-windows.svg
@@ -839,7 +840,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/gnome-network-propert
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/apps/scalable/gnome-photos.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/apps/scalable/gnome-power-manager-symbolic.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/gnome-power-manager.svg -> preferences-system-power-management.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/apps/scalable/gnome-screenshot.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/gnome-screenshot.svg -> /usr/src/trinity-icon-theme/apps/scalable/gnome-photos.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/gnome-session-hibernate.svg -> system-hibernate.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/gnome-session-logout.svg -> system-log-out.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/gnome-session-reboot.svg -> system-shutdown-restart-panel.svg
@@ -913,6 +914,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/office-calendar.svg -
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/openterm.svg -> terminal.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/orage_globaltime.svg -> preferences-system-time.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/paprefs.svg -> ../../categories/scalable/preferences-desktop.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/parcellite.svg -> xfce4-clipman-plugin.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/apps/scalable/preferences-color.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/apps/scalable/preferences-desktop-accessibility-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/apps/scalable/preferences-desktop-accessibility.svg
@@ -975,7 +977,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/ristretto.svg -> shot
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/startup-manager.svg -> ../../categories/scalable/preferences-desktop.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/startupmanager.svg -> ../../categories/scalable/preferences-desktop.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/apps/scalable/stock-smart-playlist.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/apps/scalable/stock_keyring.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/stock_keyring.svg -> /usr/src/trinity-icon-theme/apps/scalable/seahorse.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/apps/scalable/sublime-text-flat.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/apps/scalable/sublime-text.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/system-config-displayca.svg -> preferences-desktop-display.svg
@@ -1082,7 +1084,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/xfce4-battery-missing
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/xfce4-battery-ok-charging.svg -> ../../status/scalable/battery-050-charging.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/xfce4-battery-ok.svg -> ../../status/scalable/battery-050.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/xfce4-battery-plugin.svg -> ../../status/scalable/battery-charged.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/apps/scalable/xfce4-clipman-plugin.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/xfce4-clipman-plugin.svg -> /usr/src/trinity-icon-theme/apps/scalable/evolution-tasks.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/xfce4-clock.svg -> preferences-system-time.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/xfce4-cpugraph-plugin.svg -> hardinfo.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/apps/scalable/xfce4-dict.svg -> accessories-dictionary.svg
@@ -1129,8 +1131,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/categories/scalable/applications-ch
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/categories/scalable/applications-debugging.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/categories/scalable/applications-development.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/categories/scalable/applications-drawing.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/categories/scalable/applications-electronics.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/categories/scalable/applications-filesharing.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/categories/scalable/applications-electronics.svg -> /usr/src/trinity-icon-theme/apps/scalable/hardinfo.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/categories/scalable/applications-filesharing.svg -> /usr/src/trinity-icon-theme/apps/scalable/transmission-tray-icon.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/categories/scalable/applications-fonts.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/categories/scalable/applications-games-symbolic.svg -> applications-games.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/categories/scalable/applications-games.svg
@@ -1150,9 +1152,9 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/categories/scalable/applications-of
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/categories/scalable/applications-other.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/categories/scalable/applications-painting.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/categories/scalable/applications-perl.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/categories/scalable/applications-photography.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/categories/scalable/applications-photography.svg -> /usr/src/trinity-icon-theme/apps/scalable/gnome-photos.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/categories/scalable/applications-publishing.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/categories/scalable/applications-puzzles.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/categories/scalable/applications-puzzles.svg -> /usr/src/trinity-icon-theme/actions/scalable/plugin.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/categories/scalable/applications-python.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/categories/scalable/applications-ruby.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/categories/scalable/applications-science-symbolic.svg
@@ -1234,7 +1236,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/audio-input-microp
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/audio-speakers.svg -> speaker.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/devices/scalable/battery.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/block-device.svg -> drive-harddisk.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/devices/scalable/camera-photo.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/camera-photo.svg -> /usr/src/trinity-icon-theme/apps/scalable/cheese.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/camera-video-symbolic.svg -> camera-web.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/camera-video.svg -> camera-web.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/camera-web-symbolic.svg -> camera-web.svg
@@ -1242,7 +1244,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/camera-web-symboli
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/cdrom_unmount.svg -> media-optical.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/cdwriter_unmount.svg -> media-optical.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/chardevice.svg -> video-display.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/devices/scalable/cloud.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/cloud.svg -> /usr/src/trinity-icon-theme/apps/scalable/xfce4-weather.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/computer-apple-ipad-symbolic.svg -> tablet_mac.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/computer-apple-ipad.svg -> tablet_mac.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/computer-symbolic.svg -> computer.svg
@@ -1262,7 +1264,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/drive-harddisk-sys
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/drive-harddisk-system-solidstate.svg -> drive-harddisk.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/drive-harddisk-system.svg -> drive-harddisk.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/devices/scalable/drive-harddisk.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/devices/scalable/drive-multidisk.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/drive-multidisk.svg -> /usr/src/trinity-icon-theme/apps/scalable/gnome-disks.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/drive-optical-symbolic.svg -> media-optical.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/drive-optical.svg -> media-optical.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/drive-removable-media-usb-symbolic.svg -> drive-removable-media-usb.svg
@@ -1279,7 +1281,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/folder-system-ubun
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/folder-system-xfce.svg -> ../../places/scalable/folder-xfce.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/folder-system-xubuntu.svg -> ../../places/scalable/folder-xubuntu.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/folder-system.svg -> folder-system-arch.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/devices/scalable/gamepad.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/gamepad.svg -> /usr/src/trinity-icon-theme/categories/scalable/applications-games.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/gnome-cd.svg -> media-optical.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/gnome-computer.svg -> computer.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/gnome-dev-cdrom-audio.svg -> radio.svg
@@ -1333,7 +1335,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/input-gaming.svg -
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/input-keyboard.svg -> keyboard.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/input-mouse.svg -> mouse.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/joystick.svg -> gamepad.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/devices/scalable/keyboard.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/keyboard.svg -> /usr/src/trinity-icon-theme/apps/scalable/preferences-desktop-keyboard.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/kjobviewer.svg -> printer.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/kxkb.svg -> keyboard.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/devices/scalable/laptop.svg
@@ -1365,7 +1367,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/media-optical-symb
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/devices/scalable/media-optical.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/media-removable-symbolic.svg -> media-removable.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/devices/scalable/media-removable.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/devices/scalable/memory.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/memory.svg -> /usr/src/trinity-icon-theme/apps/scalable/hardinfo.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/devices/scalable/modem.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/monitor.svg -> video-display.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/devices/scalable/mouse.svg
@@ -1378,7 +1380,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/multimedia-player-
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/multimedia-player.svg -> radio.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/devices/scalable/network-vpn.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/network-wired-symbolic.svg -> network-wired.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/devices/scalable/network-wired.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/network-wired.svg -> /usr/src/trinity-icon-theme/apps/scalable/transmission-tray-icon.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/network-wireless-symbolic.svg -> ../../status/scalable/network-wireless-signal-excellent-symbolic.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/network-wireless.svg -> ../../status/scalable/network-wireless-signal-excellent-symbolic.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/devices/scalable/network-workgroup.svg -> cloud.svg
@@ -1463,7 +1465,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-Danger.svg 
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-Money.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-Multimedia-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-Multimedia.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-New-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-New-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/list-add-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-New.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-OK-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-OK.svg
@@ -1481,7 +1483,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-Presentatio
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-Sales.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-Tux.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-Urgent.svg -> emblem-urgent.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-accessibility-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-accessibility-symbolic.svg -> /usr/src/trinity-icon-theme/apps/scalable/preferences-desktop-accessibility-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-accessibility.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-adb-dark.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-adb-symbolic.svg
@@ -1498,7 +1500,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-android-dar
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-archive-alt.svg
 -rw-r--r--	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-archive-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-archive.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-art-alt-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-art-alt-symbolic.svg -> /usr/src/trinity-icon-theme/categories/scalable/applications-graphics-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-art-alt.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-art-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-art.svg
@@ -1531,7 +1533,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-atom.svg ->
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-c.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-cache-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-cache.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-calendar-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-calendar-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/appointment-new-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-calendar.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-cart-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-cart.svg
@@ -1548,7 +1550,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-chrome-apps
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-cloud-upload.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-cloud.svg
 -rw-r--r--	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-cmake-official.svg
--rw-r--r--	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-cmake.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-cmake.svg -> /usr/src/trinity-icon-theme/apps/scalable/cmake.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-computer-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-computer.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-contacts-symbolic.svg
@@ -1646,13 +1648,13 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-google-chro
 -rw-r--r--	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-jquery.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-key-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-key.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-language-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-language-symbolic.svg -> /usr/src/trinity-icon-theme/apps/scalable/preferences-desktop-locale-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-language-translate-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-language-translate.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-language.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-library-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-library.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-link-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-link-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/insert-link-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-link.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-linux-mint-logo-color.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-linux-mint-logo-flat.svg
@@ -1685,7 +1687,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-new.svg -> 
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-nodejs-logo.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-ohno-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-ohno.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-ok-all-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-ok-all-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/object-select-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-ok-all.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-ok-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-ok.svg
@@ -1707,10 +1709,10 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-new.svg -> 
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-perl.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-phone-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-phone.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-photos-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-photos-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/insert-image-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-photos.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-php.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-place-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-place-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/mark-location-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-place.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-play-alt-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-play-alt.svg
@@ -1723,9 +1725,9 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-new.svg -> 
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-print-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-print.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-python.svg
--rw-r--r--	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-qt.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-readonly-symbolic.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-readonly.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-qt.svg -> /usr/src/trinity-icon-theme/apps/scalable/qt4-logo.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-readonly-symbolic.svg -> /usr/src/trinity-icon-theme/emblems/scalable/emblem-encrypted-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-readonly.svg -> /usr/src/trinity-icon-theme/emblems/scalable/emblem-encrypted.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-recent-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-recent.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-remote-symbolic.svg
@@ -1750,7 +1752,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-new.svg -> 
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-secure.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-security-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-security.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-shared-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-shared-symbolic.svg -> /usr/src/trinity-icon-theme/actions/scalable/send-to-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-shared.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-slideshow-emblem.svg -> emblem-slideshow.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-slideshow-symbolic.svg
@@ -1767,7 +1769,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-slideshow-e
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-symbolic-link.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-synchronizing-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-synchronizing.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-system-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-system-symbolic.svg -> /usr/src/trinity-icon-theme/categories/scalable/applications-utilities-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-system.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-tablet-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-tablet.svg
@@ -1809,7 +1811,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-ubuntuone-u
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-volume-alt.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-volume-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-volume.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-wallpapers-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-wallpapers-symbolic.svg -> /usr/src/trinity-icon-theme/apps/scalable/preferences-desktop-wallpaper-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-wallpapers.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-watch-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/emblems/scalable/emblem-watch.svg
@@ -1848,7 +1850,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-pgp-
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-pgp-keys.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-pkcs7-mime.svg -> application-pgp-keys.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-rss+xml-symbolic.svg -> application-rss+xml.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-rss+xml.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-rss+xml.svg -> /usr/src/trinity-icon-theme/apps/scalable/internet-feed-reader.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-rtf.svg -> text-richtext.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-text.svg -> text-plain.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-vnd.android.package-archive.svg -> application-apk.svg
@@ -1888,10 +1890,10 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-ap
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-arc.svg -> package-x-generic.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-archive.svg -> package-x-generic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-arj.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-bittorrent.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-bittorrent.svg -> /usr/src/trinity-icon-theme/apps/scalable/transmission-tray-icon.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-bzip-compressed-tar.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-bzip.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-cd-image.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-cd-image.svg -> /usr/src/trinity-icon-theme/devices/scalable/media-optical.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-class-file.svg -> text-x-java.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-compress.svg -> package-x-generic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-compressed-tar.svg
@@ -1904,7 +1906,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-ex
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-gnome-theme-package.svg -> application-x-theme.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-gnumeric.svg -> x-office-spreadsheet.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-go-lang.svg -> application-x-go.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-go.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-go.svg -> /usr/src/trinity-icon-theme/apps/scalable/liteide.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-golang.svg -> application-x-go.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-gzip.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-jar.svg
@@ -1942,7 +1944,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-sq
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-sz-compressed-tar.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-sz.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-tar.svg -> tar.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-theme.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-theme.svg -> /usr/src/trinity-icon-theme/apps/scalable/preferences-color.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-trash.svg -> text-x-bak.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-xz-compressed-tar.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/application-x-zip.svg -> application-zip.svg
@@ -1969,9 +1971,9 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/document.svg -> 
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/emblem-google-chrome.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/empty.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/encrypted.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/extension.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/extension.svg -> /usr/src/trinity-icon-theme/actions/scalable/plugin.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/folder_tar.svg -> tar.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/font-x-generic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/font-x-generic.svg -> /usr/src/trinity-icon-theme/categories/scalable/applications-fonts.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/font.svg -> font-x-generic.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/font_bitmap.svg -> font-x-generic.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/font_truetype.svg -> font-x-generic.svg
@@ -2159,17 +2161,17 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-draw
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-extension.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-formula.svg -> libreoffice-oasis-formula.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-master-document.svg -> libreoffice-oasis-text.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-oasis-database.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-oasis-database.svg -> /usr/src/trinity-icon-theme/apps/scalable/libreoffice-base.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-oasis-drawing-template.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-oasis-drawing.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-oasis-formula.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-oasis-drawing.svg -> /usr/src/trinity-icon-theme/apps/scalable/libreoffice-draw.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-oasis-formula.svg -> /usr/src/trinity-icon-theme/apps/scalable/libreoffice-math.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-oasis-master-document.svg -> libreoffice-oasis-text.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-oasis-presentation-template.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-oasis-presentation.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-oasis-presentation.svg -> /usr/src/trinity-icon-theme/apps/scalable/libreoffice-impress.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-oasis-spreadsheet-template.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-oasis-spreadsheet.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-oasis-spreadsheet.svg -> /usr/src/trinity-icon-theme/apps/scalable/libreoffice-calc.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-oasis-text-template.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-oasis-text.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-oasis-text.svg -> /usr/src/trinity-icon-theme/apps/scalable/libreoffice-writer.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-oasis-web-template.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-presentation -> libreoffice-oasis-presentation.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/libreoffice-presentation-template.svg -> libreoffice-oasis-presentation-template.svg
@@ -2182,7 +2184,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/media-audio.svg 
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/media-image.svg -> image-x-generic.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/media-video.svg -> video-x-generic.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/message-rfc822.svg -> message.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/message.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/message.svg -> /usr/src/trinity-icon-theme/categories/scalable/applications-mail.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/misc.svg -> text-plain.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/multipart-encrypted.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/none.svg -> unknown.svg
@@ -2252,7 +2254,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/text-x-markdown.
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/text-x-php.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/text-x-preview.svg -> empty.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/text-x-python.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/text-x-readme.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/text-x-readme.svg -> /usr/src/trinity-icon-theme/apps/scalable/evolution-tasks.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/text-x-ruby.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/text-x-script.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/text-x-sql.svg
@@ -2265,25 +2267,25 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/txt.svg -> text-
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/txt2.svg -> text-plain.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/unknown.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/vcalendar.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/video-x-generic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/video-x-generic.svg -> /usr/src/trinity-icon-theme/devices/scalable/movie.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/video.svg -> video-x-generic.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/vnd.oasis.opendocument.drawing.svg -> x-office-drawing.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/wordprocessing.svg -> x-office-document.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/www.svg -> text-html.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/x-office-address-book.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/x-office-document-template.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/x-office-document.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/x-office-document.svg -> /usr/src/trinity-icon-theme/mimetypes/scalable/application-msword.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/x-office-drawing-template.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/x-office-drawing.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/x-office-presentation-template.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/x-office-presentation.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/x-office-presentation.svg -> /usr/src/trinity-icon-theme/mimetypes/scalable/application-vnd.ms-powerpoint.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/x-office-spreadsheet-template.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/x-office-spreadsheet.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/mimetypes/scalable/x-office-spreadsheet.svg -> /usr/src/trinity-icon-theme/mimetypes/scalable/application-vnd.ms-excel.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/mimetypes/scalable/zip.svg
 drwxr-xr-x	root/root	usr/share/icons/Trinity/places/
 drwxr-xr-x	root/root	usr/share/icons/Trinity/places/scalable/
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/places/scalable/bookmark-missing.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/places/scalable/cloud.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/places/scalable/cloud.svg -> /usr/src/trinity-icon-theme/apps/scalable/xfce4-weather.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/places/scalable/desktop.svg -> user-desktop.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/places/scalable/distributor-logo-arch-linux.svg -> distributor-logo.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/places/scalable/distributor-logo-arch.svg -> distributor-logo.svg
@@ -2405,11 +2407,11 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/places/scalable/stock_folder.svg ->
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/places/scalable/stock_open.svg -> folder-visiting.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/places/scalable/stock_shared-by-me.svg -> folder-remote.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/places/scalable/stock_shared-to-me.svg -> folder-remote.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/places/scalable/stock_smart-playlist.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/places/scalable/stock_trash_full.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/places/scalable/stock_smart-playlist.svg -> /usr/src/trinity-icon-theme/mimetypes/scalable/audio-x-mp3-playlist.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/places/scalable/stock_trash_full.svg -> /usr/src/trinity-icon-theme/devices/scalable/gnome-dev-trash-full.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/places/scalable/trashcan_empty.svg -> user-trash.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/places/scalable/trashcan_full.svg -> stock_trash_full.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/places/scalable/user-bookmarks.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/places/scalable/user-bookmarks.svg -> /usr/src/trinity-icon-theme/apps/scalable/user-bookmarks-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/places/scalable/user-desktop.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/places/scalable/user-go.svg -> folder-go.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/places/scalable/user-home.svg -> folder-home.svg
@@ -2423,7 +2425,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/places/scalable/xfce-trash_full.svg
 drwxr-xr-x	root/root	usr/share/icons/Trinity/status/
 drwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/ac-adapter-symbolic.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/account-logged-in.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/account-logged-in.svg -> /usr/src/trinity-icon-theme/apps/scalable/preferences-desktop-default-applications.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/airplane-mode-symbolic.svg -> airplane-mode.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/airplane-mode.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/alarm-symbolic.svg -> alarm.svg
@@ -2445,7 +2447,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/appointment-soon.sv
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/audio-input-microphone-muted.svg -> audio-input-microphone-low-zero-panel.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/audio-output-none-panel.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/audio-output-none.svg -> audio-output-none-panel.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/audio-volume-high-panel.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/audio-volume-high-panel.svg -> /usr/src/trinity-icon-theme/devices/scalable/audio-speakers-symbolic.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/audio-volume-high-symbolic.svg -> audio-volume-high-panel.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/audio-volume-high.svg -> audio-volume-high-panel.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/audio-volume-low-panel.svg
@@ -2529,7 +2531,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/call-missed-symboli
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/changes-allow-symbolic.svg -> changes-allow.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/changes-allow.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/changes-prevent-symbolic.svg -> changes-prevent.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/changes-prevent.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/changes-prevent.svg -> /usr/src/trinity-icon-theme/mimetypes/scalable/encrypted.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/channel-insecure-symbolic.svg -> channel-insecure.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/channel-insecure.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/channel-secure-symbolic.svg -> changes-prevent.svg
@@ -2555,7 +2557,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/dialog-error.svg ->
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/dialog-info.svg -> dialog-information.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/dialog-information-symbolic.svg -> dialog-information.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/dialog-information.svg -> ../../actions/scalable/gtk-info.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/dialog-password-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/dialog-password-symbolic.svg -> /usr/src/trinity-icon-theme/apps/scalable/seahorse.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/dialog-password.svg -> dialog-password-symbolic.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/dialog-question-symbolic.svg -> dialog-question.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/dialog-question.svg
@@ -3285,7 +3287,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/network-idle-symbol
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/network-receive-symbolic.svg -> network-receive.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/network-receive.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/network-transmit-receive-symbolic.svg -> network-transmit-receive.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/network-transmit-receive.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/network-transmit-receive.svg -> /usr/src/trinity-icon-theme/apps/scalable/transmission-tray-icon.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/network-transmit-symbolic.svg -> network-transmit.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/network-transmit.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/network-wired-disconnected-symbolic.svg -> network-wired-disconnected.svg
@@ -3294,7 +3296,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/network-wired-offli
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/network-wired-offline.svg -> network-wired-disconnected.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/network-wired.svg -> network-transmit-receive.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/network-wireless-connected-symbolic.svg -> network-wireless-signal-excellent-symbolic.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/network-wireless-encrypted-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/network-wireless-encrypted-symbolic.svg -> /usr/src/trinity-icon-theme/devices/scalable/network-vpn.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/network-wireless-offline-symbolic.svg -> network-offline.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/network-wireless-offline.svg -> network-offline.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/network-wireless-signal-excellent-symbolic.svg
@@ -3303,7 +3305,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/network-wireless-of
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/network-wireless-signal-ok-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/network-wireless-signal-weak-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/new-messages-red.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/nm-adhoc.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/nm-adhoc.svg -> /usr/src/trinity-icon-theme/apps/scalable/gnome-obex-server.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/nm-device-wired-autoip.svg -> network-transmit-receive.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/nm-device-wired-secure.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/nm-device-wired-secure1.svg
@@ -3314,13 +3316,13 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/nm-no-connection.sv
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/nm-signal-0.svg -> network-wireless-signal-none-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/nm-signal-00-secure.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/nm-signal-00.svg -> network-wireless-signal-none-symbolic.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/nm-signal-100-secure.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/nm-signal-100-secure.svg -> /usr/src/trinity-icon-theme/animations/scalable/nm-vpn-connecting04.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/nm-signal-100.svg -> network-wireless-signal-excellent-symbolic.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/nm-signal-25-secure.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/nm-signal-25-secure.svg -> /usr/src/trinity-icon-theme/animations/scalable/nm-vpn-connecting01.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/nm-signal-25.svg -> network-wireless-signal-weak-symbolic.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/nm-signal-50-secure.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/nm-signal-50-secure.svg -> /usr/src/trinity-icon-theme/animations/scalable/nm-vpn-connecting02.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/nm-signal-50.svg -> network-wireless-signal-ok-symbolic.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/nm-signal-75-secure.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/nm-signal-75-secure.svg -> /usr/src/trinity-icon-theme/animations/scalable/nm-vpn-connecting03.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/nm-signal-75.svg -> network-wireless-signal-good-symbolic.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/nm-vpn-active-lock.svg -> nm-secure-lock.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/nm-vpn-lock.svg -> nm-secure-lock.svg
@@ -3367,14 +3369,14 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/notification-gpm-up
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/notification-gpm-ups-080.svg -> battery-080.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/notification-gpm-ups-100-charging.svg -> battery-100-charging.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/notification-gpm-ups-100.svg -> battery-100.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/notification-message-email.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/notification-message-email.svg -> /usr/src/trinity-icon-theme/categories/scalable/applications-mail.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/printer-error-symbolic.svg -> printer-error.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/printer-error.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/printer-printing-symbolic.svg -> printer-printing.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/printer-printing.svg -> ../../actions/scalable/document-print.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/progress-0-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/progress-10-symbolic.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/progress-100-symbolic.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/progress-100-symbolic.svg -> /usr/src/trinity-icon-theme/status/scalable/progress-0-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/progress-20-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/progress-30-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/progress-40-symbolic.svg
@@ -3383,14 +3385,14 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/printer-printing.sv
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/progress-70-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/progress-80-symbolic.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/progress-90-symbolic.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/rhythmbox-notplaying.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/rhythmbox-notplaying.svg -> /usr/src/trinity-icon-theme/apps/scalable/rhythmbox-notplaying.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/rhythmbox-panel.svg -> ../../apps/scalable/preferences-desktop-sound.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/security-high-symbolic.svg -> security.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/security-high.svg -> security.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/security-low.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/security-medium.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/security-symbolic.svg -> security.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/security.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/security.svg -> /usr/src/trinity-icon-theme/devices/scalable/security.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/semi-starred-rtl-symbolic.svg -> semi-starred-rtl.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/semi-starred-rtl.svg
 lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/semi-starred-symbolic.svg -> semi-starred.svg
@@ -3437,8 +3439,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/ums.svg -> ../../ap
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/user-available.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/user-busy.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/user-idle-panel.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/warning.svg
--rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/wb_cloudy.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/warning.svg -> /usr/src/trinity-icon-theme/status/scalable/apport.svg
+lrwxrwxrwx	root/root	usr/share/icons/Trinity/status/scalable/wb_cloudy.svg -> /usr/src/trinity-icon-theme/apps/scalable/xfce4-weather.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/wb_incandescent.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/wb_irradescent.svg
 -rwxr-xr-x	root/root	usr/share/icons/Trinity/status/scalable/wb_sunny.svg
