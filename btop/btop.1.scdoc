@@ -32,12 +32,18 @@ A summary of options is included below.
 	Path to an alternate config file instead of the default
 	~/.config/btop/btop.conf.
 
-*-lc*, *--low-color*
+*-f* _filter_, *--filter* _filter_
+	Set an initial process filter.
+
+*-l*, *--low-color*
 	Disable truecolor, converts 24-bit colors to 256-color.
 
-*-t*, *--tty_on*
+*-t*, *--tty*
 	Force (ON) tty mode, max 16 colors and tty-friendly graph
-	symbols.
+	symbols.  tty mode can't be set twice.
+
+*--no-tty*
+	OFF tty mode.
 
 *+t*, *--tty_off*
 	Force (OFF) tty mode.
@@ -45,20 +51,20 @@ A summary of options is included below.
 *-p* _id_, *--preset* _id_
 	Start with preset, integer value between 0-9.
 
-*-u*, *--update* _ms_
+*-u* _ms_, *--update* _ms_
 	Set the program update rate in milliseconds.
 
-*--utf-force*
+*--force-utf*
 	Force start even if no UTF-8 locale was detected.
 
-*--debug*
+*-d*, *--debug*
 	Start in DEBUG mode: shows microsecond timer for information
 	collect and screen draw functions and sets loglevel to DEBUG.
 
 *-h*, *--help*
 	Show summary of options.
 
-*-v*, *--version*
+*-v*, *-V*, *--version*
 	Show version of program.
 
 # BUGS
