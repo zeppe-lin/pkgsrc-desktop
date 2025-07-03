@@ -3,7 +3,7 @@
 # Depends on:  girara json-glib
 
 name=zathura
-version=0.5.11
+version=0.5.12
 release=1
 source="$name-$version.tar.gz::https://github.com/pwmt/$name/archive/refs/tags/$version.tar.gz
 	remove_gettext.patch"
@@ -17,6 +17,8 @@ build() {
 	    -e "/^subdir('tests')/d"      \
 	    -i $name-$version/meson.build
 
+	# -D manpages=disabled: otherwise requires sphinx
+	# -D convert-icon=disabled: otherwise requires librsvg-compat
 	meson setup build $name-$version  \
 		--prefix=/usr             \
 		--sysconfdir=/usr/etc     \
