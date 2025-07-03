@@ -26,9 +26,9 @@ drwxr-xr-x	root/root	usr/include/libdjvu/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libdjvulibre.a
 -rwxr-xr-x	root/root	usr/lib/libdjvulibre.la
-lrwxrwxrwx	root/root	usr/lib/libdjvulibre.so -> libdjvulibre.so.21.7.0
-lrwxrwxrwx	root/root	usr/lib/libdjvulibre.so.21 -> libdjvulibre.so.21.7.0
--rwxr-xr-x	root/root	usr/lib/libdjvulibre.so.21.7.0
+lrwxrwxrwx	root/root	usr/lib/libdjvulibre.so -> libdjvulibre.so.21.8.0
+lrwxrwxrwx	root/root	usr/lib/libdjvulibre.so.21 -> libdjvulibre.so.21.8.0
+-rwxr-xr-x	root/root	usr/lib/libdjvulibre.so.21.8.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/ddjvuapi.pc
 drwxr-xr-x	root/root	usr/share/
