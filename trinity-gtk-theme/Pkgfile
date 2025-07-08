@@ -1,11 +1,11 @@
 # Description:  GTK2/3 theme which emulates Matrix look and feel
-# URL:          https://github.com/zeppe-lin/trinity-gtk-theme
+# URL:          https://github.com/trinity-theme/trinity-gtk-theme
 # Depends on:   gtk-engine-hc
 
 name=trinity-gtk-theme
-version=1.1-9cae5a4
+version=1.1-ea40300
 release=1
-source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
+source=https://github.com/trinity-theme/$name/archive/${version#*-}/$name-$version.tar.gz
 
 build() {
 	make -C $name-* PREFIX=/usr DESTDIR=$PKG gtk.gresource install
