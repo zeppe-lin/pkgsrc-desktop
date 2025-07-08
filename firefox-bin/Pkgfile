@@ -3,8 +3,10 @@
 # Depends on:  alsa-lib dbus-glib desktop-file-utils gtk3 nss xorg-libxtst hicolor-icon-theme
 # Optional:    desktop-file-utils
 
+# desktop-file-utils: required by post-install script
+
 name=firefox-bin
-version=140.0.2
+version=140.0.4
 release=1
 source="https://ftp.mozilla.org/pub/firefox/releases/$version/linux-x86_64/en-US/firefox-$version.tar.xz
 	firefox.sh
