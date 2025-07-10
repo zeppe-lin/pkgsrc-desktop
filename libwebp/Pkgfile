@@ -1,10 +1,10 @@
 # Description: Library for a new image format comparable to JPEG
 # URL:         https://developers.google.com/speed/webp/
-# Depends on:  giflib libjpeg-turbo libpng 
+# Depends on:  giflib libjpeg-turbo libpng
 # Optional:    libjpeg-turbo libtiff freeglut libsdl
 
 name=libwebp
-version=1.5.0
+version=1.6.0
 release=1
 source=https://storage.googleapis.com/downloads.webmproject.org/releases/webp/$name-$version.tar.gz
 
