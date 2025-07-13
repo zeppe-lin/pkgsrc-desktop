@@ -1,11 +1,11 @@
 # Description: GTK2/3 theme which emulates Windows 3.x look and feel
-# URL:         https://github.com/zeppe-lin/win3x-gtk-theme
+# URL:         https://github.com/sighook/win3x-gtk-theme
 # Depends on:  gtk-engine-redmond95
 
 name=win3x-gtk-theme
 version=0.1-8531f67
 release=1
-source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
+source=https://github.com/sighook/$name/archive/${version#*-}/$name-$version.tar.gz
 
 build() {
 	mkdir -p $PKG/usr/share/themes
