@@ -2,7 +2,7 @@
 # URL:         https://www.monkeysaudio.com/index.html
 
 name=mac
-version=11.15
+version=11.20
 release=1
 source="https://monkeysaudio.com/files/MAC_$(echo $version | tr -d .)_SDK.zip
 	mac-10.18-linux.patch"
