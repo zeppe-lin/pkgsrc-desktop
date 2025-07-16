@@ -5,10 +5,10 @@
 
 name=bluez
 version=5.83
-release=1
+release=2
 source="https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-$version.tar.xz
   	rc.bluetoothd
-	modprobe.bluetooth"
+	modprobe.btusb.conf"
 
 build() {
 	mkdir build; cd build
@@ -40,11 +40,12 @@ build() {
 		$PKG/etc/bluetooth/main.conf
 
 	# service
-	install -m 0755 -D $SRC/rc.bluetoothd $PKG/etc/rc.d/bluetoothd
+	install -m 0755 -D $SRC/rc.bluetoothd \
+		$PKG/etc/rc.d/bluetoothd
 
 	# modprobe
-	install -m 0644 -D $SRC/modprobe.bluetooth \
-		$PKG/etc/modprobe.d/bluetooth.conf
+	install -m 0644 -D $SRC/modprobe.btusb.conf \
+		$PKG/lib/modprobe.d/btusb.conf
 
 	# libical-related file
 	install -m 0755 -Dt $PKG/usr/lib/bluetooth tools/obexctl

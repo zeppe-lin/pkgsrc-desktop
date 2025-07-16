@@ -13,29 +13,29 @@ start)
 	if [ ! -e /run/bluez ]; then
 		mkdir -p /run/bluez
 	fi
-        $SSD --start --background --make-pidfile --pidfile $PID \
+	$SSD --start --background --make-pidfile --pidfile $PID \
 		--exec $PROG -- $OPTS
-        ;;
+	;;
 stop)
-        $SSD --stop --remove-pidfile --pidfile $PID --retry 10 \
+	$SSD --stop --remove-pidfile --pidfile $PID --retry 10 \
 		--exec $PROG
-        ;;
+	;;
 restart)
-        $0 stop
-        $0 start
-        ;;
+	$0 stop
+	$0 start
+	;;
 status)
-        $SSD --status --pidfile $PID --exec $PROG
-        case $? in
-        0) echo "$PROG is running with pid $(cat $PID)" ;;
-        1) echo "$PROG is not running but the pid file $PID exists" ;;
-        3) echo "$PROG is not running" ;;
-        4) echo "Unable to determine the program status" ;;
-        esac
-        ;;
+	$SSD --status --pidfile $PID --exec $PROG
+	case $? in
+	0) echo "$PROG is running with pid $(cat $PID)" ;;
+	1) echo "$PROG is not running but the pid file $PID exists" ;;
+	3) echo "$PROG is not running" ;;
+	4) echo "Unable to determine the program status" ;;
+	esac
+	;;
 *)
-        echo "usage: $0 [start|stop|restart|status]"
-        ;;
+	echo "usage: $0 [start|stop|restart|status]"
+	;;
 esac
 
 # End of file.

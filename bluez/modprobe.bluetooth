@@ -1,9 +1,0 @@
-#
-# /etc/modprobe.d/bluetooth: modprobe options for bluetooth
-#
-
-# Use "reset=1" as default, since it should be safe for recent
-# devices and solves all kind of problems.
-options btusb reset=1
-
-# End of file.
