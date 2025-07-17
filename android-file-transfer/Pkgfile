@@ -1,16 +1,15 @@
 # Description: Android MTP client
 # URL:         https://whoozle.github.io/android-file-transfer-linux
-# Depends on:  fuse2 qt5 taglib xorg-libxkbfile
+# Depends on:  fuse scdoc qt5 taglib xorg-libxkbfile
 
 name=android-file-transfer
-version=4.5-a1963af
+version=4.6-d5c1882
 release=1
 source="https://github.com/whoozle/$name-linux/archive/${version#*-}/$name-$version.tar.gz
 	use_system_icons.patch
-	aft-mtp-cli.1.pod
-	aft-mtp-mount.1.pod
-	android-file-transfer.1.pod
-	pod2man.Makefile"
+	aft-mtp-cli.1.scdoc
+	aft-mtp-mount.1.scdoc
+	android-file-transfer.1.scdoc"
 
 build() {
 	patch -d $name-linux-* -Np1 -i $SRC/use_system_icons.patch
@@ -20,11 +19,17 @@ build() {
 	cmake -S $name-linux-* -B build -G Ninja  \
 		-D CMAKE_INSTALL_PREFIX=/usr      \
 		-D CMAKE_BUILD_TYPE=None          \
+		-D BUILD_PYTHON=OFF               \
 
 	ninja -C build -j ${JOBS:-1} -v
 	DESTDIR=$PKG ninja -C build install
 
 	# build and install man pages
-	make -C $SRC -f pod2man.Makefile  \
-		VERSION=$version MANPREFIX=/usr/share/man DESTDIR=$PKG install
+	mkdir -p $PKG/usr/share/man/man1
+	for f in aft-mtp-cli aft-mtp-mount android-file-transfer; do
+		scdoc < $SRC/$f.1.scdoc > $PKG/usr/share/man/man1/$f.1
+	done
+
+	# remove freedesktop.org appstream
+	rm -r $PKG/usr/share/metainfo
 }
