@@ -2,7 +2,7 @@
 # URL:         https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR
 
 name=nspr
-version=4.36
+version=4.37
 release=1
 source=https://ftp.mozilla.org/pub/nspr/releases/v$version/src/nspr-$version.tar.gz
 
