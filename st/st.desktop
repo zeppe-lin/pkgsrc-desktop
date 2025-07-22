@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Suckless Terminal Emulator
-Comment=Terminal emulator for X
-Exec=st
-Terminal=false
-Type=Application
-Icon=terminal
-Categories=System;TerminalEmulator;
