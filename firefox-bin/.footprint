@@ -48,7 +48,6 @@ drwxr-xr-x	root/root	opt/firefox/icons/
 -rwxr-xr-x	root/root	opt/firefox/libnspr4.so
 -rwxr-xr-x	root/root	opt/firefox/libnss3.so
 -rwxr-xr-x	root/root	opt/firefox/libnssutil3.so
--rwxr-xr-x	root/root	opt/firefox/libonnxruntime.so
 -rwxr-xr-x	root/root	opt/firefox/libplc4.so
 -rwxr-xr-x	root/root	opt/firefox/libplds4.so
 -rwxr-xr-x	root/root	opt/firefox/libsmime3.so
