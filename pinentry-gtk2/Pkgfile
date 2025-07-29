@@ -3,13 +3,13 @@
 # Depends on:  gtk libpcre2 pinentry
 
 name=pinentry-gtk2
-version=1.3.1
+version=1.3.2
 release=1
 source="https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-$version.tar.bz2
 	pinentry-gtk-2.c-fontfix.patch"
 
 build() {
-	patch -p1 -d pinentry-$version -i $SRC/pinentry-gtk-2.c-fontfix.patch
+	patch -d pinentry-$version -Np1 -i $SRC/pinentry-gtk-2.c-fontfix.patch
 
 	mkdir build; cd build
 
