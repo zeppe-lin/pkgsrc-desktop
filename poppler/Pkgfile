@@ -1,14 +1,14 @@
 # Description: PDF rendering library based on xpdf 3.0
-# URL:         https://poppler.freedesktop.org/
+# URL:         https://gitlab.freedesktop.org/poppler/poppler/
 # Depends on:  curl gpgme harfbuzz libjpeg-turbo nss
 
 name=poppler
 version=25.07.0
 release=1
-source=https://$name.freedesktop.org/$name-$version.tar.xz
+source=https://gitlab.freedesktop.org/$name/$name/-/archive/$name-$version/$name-$name-$version.tar.gz
 
 build() {
-	cmake -S $name-$version -B build -G Ninja       \
+	cmake -S $name-$name-$version -B build -G Ninja \
 		-D CMAKE_INSTALL_PREFIX=/usr            \
 		-D CMAKE_INSTALL_LIBDIR=/usr/lib        \
 		-D CMAKE_BUILD_TYPE=Release             \
