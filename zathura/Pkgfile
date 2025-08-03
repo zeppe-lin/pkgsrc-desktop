@@ -4,7 +4,7 @@
 
 name=zathura
 version=0.5.12
-release=1
+release=2
 source="$name-$version.tar.gz::https://github.com/pwmt/$name/archive/refs/tags/$version.tar.gz
 	remove_gettext.patch"
 
@@ -28,6 +28,7 @@ build() {
 		-D b_pie=true             \
 		-D synctex=disabled       \
 		-D seccomp=disabled       \
+		-D landlock=disabled      \
 		-D tests=disabled         \
 		-D manpages=disabled      \
 		-D convert-icon=disabled  \
