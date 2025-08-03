@@ -5,7 +5,6 @@ name=papirus-icon-theme
 version=20250501
 release=1
 source="https://github.com/PapirusDevelopmentTeam/$name/archive/$version/$name-$version.tar.gz
-	ePapirus.cache
 	Papirus.cache
 	Papirus-Dark.cache
 	Papirus-Light.cache"
