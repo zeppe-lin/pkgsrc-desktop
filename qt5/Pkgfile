@@ -5,7 +5,7 @@
 
 name=qt5
 version=5.15.14
-release=1
+release=2
 source="https://download.qt.io/archive/qt/5.15/$version/single/qt-everywhere-opensource-src-$version.tar.xz
 
 	0d9987b43e695f5202c5d69a5e42ab70a678b04f.patch
@@ -117,7 +117,7 @@ build() {
 		-skip qtwebengine                             \
 		QMAKE_CFLAGS_RELEASE="$CFLAGS"                \
 		QMAKE_CXXFLAGS_RELEASE="$CXXFLAGS"            \
-		QMAKE_LFLAGS_RELEASE="$LDFLAGS -fuse-ld=gold" \
+		QMAKE_LFLAGS_RELEASE="$LDFLAGS -fuse-ld=bfd"  \
 
 	make V=1
 	make -j1 INSTALL_ROOT=$PKG install
