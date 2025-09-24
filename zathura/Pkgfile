@@ -3,8 +3,8 @@
 # Depends on:  girara json-glib
 
 name=zathura
-version=0.5.12
-release=2
+version=0.5.13
+release=1
 source="$name-$version.tar.gz::https://github.com/pwmt/$name/archive/refs/tags/$version.tar.gz
 	remove_gettext.patch"
 
