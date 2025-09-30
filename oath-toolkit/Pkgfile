@@ -1,9 +1,9 @@
 # Description: OATH one-time password toolkit
-# URL:         https://www.nongnu.org/oath-toolkit/
+# URL:         https://oath-toolkit.codeberg.page/
 # Depends on:  linux-pam xmlsec
 
 name=oath-toolkit
-version=2.6.12
+version=2.6.13
 release=1
 source=https://download.savannah.nongnu.org/releases/$name/$name-$version.tar.gz
 
@@ -12,9 +12,13 @@ build() {
 
 	../$name-$version/configure  \
 		--prefix=/usr        \
+		--disable-static     \
 		--enable-pam         \
 		--enable-pskc        \
 
 	make V=1
 	make DESTDIR=$PKG install
+
+	# remove junk
+	rm $PKG/usr/lib/*.la
 }
