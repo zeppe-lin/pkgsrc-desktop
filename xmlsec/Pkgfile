@@ -1,29 +1,32 @@
-# Description: Library/tools for XML Digital Signature and XML Encryption
+# Description: Toolkit for XML Digital Signature and Encryption
 # URL:         https://www.aleksey.com/xmlsec/index.html
 # Depends on:  gnutls libgcrypt libtool libxslt nss openssl
 
 name=xmlsec
 version=1.3.7
 _version=$(echo $version | tr . _)
-release=1
+release=2
 source="https://github.com/lsh123/$name/archive/refs/tags/xmlsec_$_version.tar.gz
 	xmlsec-1.3.0-optimisation.patch"
 
 build() {
 	cd xmlsec-xmlsec_$_version
 
-	patch -p1 -i $SRC/xmlsec-1.3.0-optimisation.patch
+	patch -Np1 -i $SRC/xmlsec-1.3.0-optimisation.patch
 
 	# Test failure (silent) with dash as /bin/sh.
 	# https://bugs.gentoo.org/721128
-	CONFIG_SHELL=/bin/bash           \
-	./autogen.sh                     \
-		--prefix=/usr            \
-		--enable-static-linking  \
-		--disable-docs           \
+	CONFIG_SHELL=/bin/bash            \
+	./autogen.sh                      \
+		--prefix=/usr             \
+		--disable-static-linking  \
+		--disable-docs            \
 
 	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
 
 	make V=1
 	make DESTDIR=$PKG install
+
+	# remove junk
+	rm $PKG/usr/lib/*.la
 }
