@@ -4,7 +4,7 @@
 
 name=imagemagick
 version=7.1.2-3
-release=1
+release=2
 source=$name-$version.tar.gz::https://github.com/ImageMagick/ImageMagick/archive/refs/tags/$version.tar.gz
 
 build() {
@@ -13,6 +13,7 @@ build() {
 	../ImageMagick-$version/configure  \
 		--prefix=/usr              \
 		--enable-shared            \
+		--disable-static           \
 		--with-modules             \
 		--with-perl=yes            \
 		--with-lcms=no             \
@@ -32,18 +33,21 @@ build() {
 	make V=1
 	make DESTDIR=$PKG install
 
-	# remove bogus workdir rpath from perl modules
+	# Strip build-time rpath from Perl modules.
 	find $PKG/usr/lib/perl5 -name '*.so' -exec chrpath -d {} +
 
-	# remove junk
+	# Preserve *.la files required by module loader, drop others.
+	rm $PKG/usr/lib/*.la
+
+	# Prune junk.
 	rm -r $PKG/usr/share/doc
 	find $PKG -depth \
-		-type f \( -name perllocal.pod  \
+		\( -type f -name perllocal.pod  \
 			-o -name \*.bs          \
 			-o -name .packlist      \
 			-o -name ChangeLog      \
 			-o -name LICENSE        \
 			-o -name NEWS.txt       \
-			\) -delete ,            \
-		-type d -empty -delete
+		\) -delete                      \
+		-o -type d -empty -delete
 }
