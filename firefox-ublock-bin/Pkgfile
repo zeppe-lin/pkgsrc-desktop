@@ -3,7 +3,7 @@
 # Depends on:  firefox-bin
 
 name=firefox-ublock-bin
-version=1.66.0
+version=1.66.4
 release=1
 source=https://github.com/gorhill/uBlock/releases/download/$version/uBlock0_$version.firefox.signed.xpi
 
