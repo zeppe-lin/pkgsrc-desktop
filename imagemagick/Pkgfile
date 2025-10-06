@@ -3,8 +3,8 @@
 # Depends on:  chrpath libjpeg-turbo libpng libtool libxml2 perl xorg-libxext xorg-libxt
 
 name=imagemagick
-version=7.1.2-3
-release=2
+version=7.1.2-4
+release=1
 source=$name-$version.tar.gz::https://github.com/ImageMagick/ImageMagick/archive/refs/tags/$version.tar.gz
 
 build() {
@@ -33,13 +33,13 @@ build() {
 	make V=1
 	make DESTDIR=$PKG install
 
-	# Strip build-time rpath from Perl modules.
+	# Strip build-time rpath from Perl modules
 	find $PKG/usr/lib/perl5 -name '*.so' -exec chrpath -d {} +
 
-	# Preserve *.la files required by module loader, drop others.
+	# Preserve *.la files required by module loader, drop others
 	rm $PKG/usr/lib/*.la
 
-	# Prune junk.
+	# Prune junk
 	rm -r $PKG/usr/share/doc
 	find $PKG -depth \
 		\( -type f -name perllocal.pod  \
