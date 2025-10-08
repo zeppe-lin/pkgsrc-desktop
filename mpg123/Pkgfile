@@ -3,16 +3,16 @@
 # Depends on:  alsa-lib
 
 name=mpg123
-version=1.33.2
+version=1.33.3
 release=1
 source=https://www.mpg123.de/download/$name-$version.tar.bz2
 
 build() {
 	mkdir build; cd build
 
-	../$name-$version/configure  \
-		--prefix=/usr        \
-		--with-audio=alsa    \
+	../$name-$version/configure \
+		--prefix=/usr \
+		--with-audio=alsa \
 
 	make V=1
 	make DESTDIR=$PKG install
