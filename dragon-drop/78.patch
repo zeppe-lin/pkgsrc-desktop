@@ -1,0 +1,43 @@
+From 355523ade462ce146d1c3696171336e3201aaa93 Mon Sep 17 00:00:00 2001
+From: Nguyen Dinh Dang Duong <dangduong31205@gmail.com>
+Date: Mon, 4 Aug 2025 14:37:19 +0700
+Subject: [PATCH 1/2] Update .gitignore
+
+---
+ .gitignore | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/.gitignore b/.gitignore
+index 8e045db..11438c9 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1 +1,7 @@
+ dragon
++
++# clangd
++.cache
++
++# bear -- make
++compile_commands.json
+
+From 0e1c62e7edb53038eb49bd1d8321abf2c097463d Mon Sep 17 00:00:00 2001
+From: Nguyen Dinh Dang Duong <dangduong31205@gmail.com>
+Date: Mon, 4 Aug 2025 14:49:40 +0700
+Subject: [PATCH 2/2] Fix small window issue because of option --target
+
+---
+ dragon.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/dragon.c b/dragon.c
+index dca827e..194d990 100644
+--- a/dragon.c
++++ b/dragon.c
+@@ -419,6 +419,7 @@ void add_target_button() {
+ 
+ void target_mode() {
+     add_target_button();
++    gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(panel), GTK_POLICY_NEVER, GTK_POLICY_NEVER);
+     gtk_widget_show_all(window);
+     gtk_main();
+ }

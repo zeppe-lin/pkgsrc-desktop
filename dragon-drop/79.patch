@@ -1,0 +1,65 @@
+From c0e757735cdc9c86dbfa26e3b0dc1d31c4db2440 Mon Sep 17 00:00:00 2001
+From: Nguyen Dinh Dang Duong <dangduong31205@gmail.com>
+Date: Mon, 4 Aug 2025 17:00:17 +0700
+Subject: [PATCH 1/2] Change GTK_CFLAGS, GTK_LDLIBS to DEPS_CFLAGS, DEPS_LDLIBS
+
+---
+ Makefile | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index d99d9ae..cdabcf0 100644
+--- a/Makefile
++++ b/Makefile
+@@ -3,13 +3,13 @@ MANPREFIX = $(PREFIX)/share/man
+ BASHCOMPLETIONPREFIX = $(PREFIX)/share/bash-completion/completions/
+ NAME = dragon
+ 
+-GTK_CFLAGS = `pkg-config --cflags gtk+-3.0`
+-GTK_LDLIBS = `pkg-config --libs gtk+-3.0`
++DEPS_CFLAGS = `pkg-config --cflags gtk+-3.0 fontconfig`
++DEPS_LDLIBS = `pkg-config --libs gtk+-3.0 fontconfig`
+ 
+ all: $(NAME)
+ 
+ $(NAME): dragon.c Makefile
+-	$(CC) --std=c99 -Wall $(DEFINES) dragon.c -o $(NAME) $(GTK_CFLAGS) $(CFLAGS) $(LDFLAGS) $(GTK_LDLIBS)
++	$(CC) --std=c99 -Wall $(DEFINES) dragon.c -o $(NAME) $(DEPS_CFLAGS) $(CFLAGS) $(LDFLAGS) $(DEPS_LDLIBS)
+ 
+ install: $(NAME)
+ 	mkdir -p $(DESTDIR)$(PREFIX)/bin
+
+From 3def309e2600a1530ba5b9a89a3fb06b7c15bb30 Mon Sep 17 00:00:00 2001
+From: Nguyen Dinh Dang Duong <dangduong31205@gmail.com>
+Date: Mon, 4 Aug 2025 17:02:02 +0700
+Subject: [PATCH 2/2] Call FcInit function at the start of program
+
+Fontconfig 2.17.1 warn `Fontconfig warning: using without calling
+FcInit()` if the program render text without call the function.
+---
+ dragon.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/dragon.c b/dragon.c
+index dca827e..9b8b28e 100644
+--- a/dragon.c
++++ b/dragon.c
+@@ -15,6 +15,7 @@
+ // along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ #define _POSIX_C_SOURCE 200809L
+ #define _XOPEN_SOURCE 500
++#include <fontconfig/fontconfig.h>
+ #include <gtk/gtk.h>
+ #include <gdk/gdk.h>
+ #include <gdk/gdkkeysyms.h>
+@@ -605,6 +606,10 @@ int main (int argc, char **argv) {
+     GtkAccelGroup *accelgroup;
+     GClosure *closure;
+ 
++    if (!FcInit()) {
++        fprintf(stderr, "%s: FcInit failed.\n", progname);
++        exit(1);
++    }
+     gtk_init(&argc, &argv);
+ 
+     icon_theme = gtk_icon_theme_get_default();
