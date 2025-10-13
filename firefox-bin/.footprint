@@ -42,6 +42,7 @@ drwxr-xr-x	root/root	opt/firefox/icons/
 -rwxr-xr-x	root/root	opt/firefox/libmozavcodec.so
 -rwxr-xr-x	root/root	opt/firefox/libmozavutil.so
 -rwxr-xr-x	root/root	opt/firefox/libmozgtk.so
+-rwxr-xr-x	root/root	opt/firefox/libmozinference.so
 -rwxr-xr-x	root/root	opt/firefox/libmozsandbox.so
 -rwxr-xr-x	root/root	opt/firefox/libmozsqlite3.so
 -rwxr-xr-x	root/root	opt/firefox/libmozwayland.so
