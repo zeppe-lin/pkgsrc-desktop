@@ -3,9 +3,9 @@
 # Depends on:  gnutls libgcrypt libtool libxslt nss openssl
 
 name=xmlsec
-version=1.3.7
+version=1.3.8
 _version=$(echo $version | tr . _)
-release=2
+release=1
 source="https://github.com/lsh123/$name/archive/refs/tags/xmlsec_$_version.tar.gz
 	xmlsec-1.3.0-optimisation.patch"
 
@@ -16,11 +16,11 @@ build() {
 
 	# Test failure (silent) with dash as /bin/sh.
 	# https://bugs.gentoo.org/721128
-	CONFIG_SHELL=/bin/bash            \
-	./autogen.sh                      \
-		--prefix=/usr             \
-		--disable-static-linking  \
-		--disable-docs            \
+	CONFIG_SHELL=/bin/bash \
+	./autogen.sh \
+		--prefix=/usr \
+		--disable-static-linking \
+		--disable-docs \
 
 	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
 
