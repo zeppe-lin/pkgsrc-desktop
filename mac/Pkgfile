@@ -2,7 +2,7 @@
 # URL:         https://www.monkeysaudio.com/index.html
 
 name=mac
-version=11.20
+version=11.62
 release=1
 source="https://monkeysaudio.com/files/MAC_$(echo $version | tr -d .)_SDK.zip
 	mac-10.18-linux.patch"
@@ -10,10 +10,10 @@ source="https://monkeysaudio.com/files/MAC_$(echo $version | tr -d .)_SDK.zip
 build() {
 	patch -Np1 -i $SRC/mac-10.18-linux.patch
 
-	cmake -S . -B build -G Ninja          \
-		-D CMAKE_BUILD_TYPE=None      \
-		-D CMAKE_INSTALL_PREFIX=/usr  \
-		-D CMAKE_INSTALL_LIBDIR=lib   \
+	cmake -S . -B build -G Ninja \
+		-D CMAKE_BUILD_TYPE=None \
+		-D CMAKE_INSTALL_PREFIX=/usr \
+		-D CMAKE_INSTALL_LIBDIR=lib \
 		-Wno-dev
 
 	ninja -C build -j ${JOBS:-1} -v
