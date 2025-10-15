@@ -4,7 +4,7 @@
 
 name=android-file-transfer
 version=4.6-d5c1882
-release=1
+release=2
 source="https://github.com/whoozle/$name-linux/archive/${version#*-}/$name-$version.tar.gz
 	use_system_icons.patch
 	aft-mtp-cli.1.scdoc
@@ -16,10 +16,10 @@ build() {
 
 	export CXXFLAGS="$CXXFLAGS -ffat-lto-objects"
 
-	cmake -S $name-linux-* -B build -G Ninja  \
-		-D CMAKE_INSTALL_PREFIX=/usr      \
-		-D CMAKE_BUILD_TYPE=None          \
-		-D BUILD_PYTHON=OFF               \
+	cmake -S $name-linux-* -B build -G Ninja \
+		-D CMAKE_INSTALL_PREFIX=/usr \
+		-D CMAKE_BUILD_TYPE=None \
+		-D BUILD_PYTHON=OFF \
 
 	ninja -C build -j ${JOBS:-1} -v
 	DESTDIR=$PKG ninja -C build install
@@ -30,6 +30,6 @@ build() {
 		scdoc < $SRC/$f.1.scdoc > $PKG/usr/share/man/man1/$f.1
 	done
 
-	# remove freedesktop.org appstream
+	# remove freedesktop.org appstream metadata
 	rm -r $PKG/usr/share/metainfo
 }

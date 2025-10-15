@@ -2,7 +2,7 @@ ANDROID-FILE-TRANSFER(1)
 
 # NAME
 
-android-file-transfer - reliable MTP client with minimalistic UI
+android-file-transfer - MTP client with FUSE support and Qt UI
 
 # SYNOPSIS
 
@@ -10,28 +10,18 @@ android-file-transfer - reliable MTP client with minimalistic UI
 
 # DESCRIPTION
 
-*android-file-transfer* is a reliable MTP client with minimalistic UI.
+*android-file-transfer* is a reliable MTP client with a minimal Qt UI
+and FUSE integration.
 
-Its features are:
-
-- Simple Qt UI with progress dialogs.
-
-- FUSE  wrapper,  supporting  partial  read/writes, allowing instant
-access to your files.
-
-- No file size limits.
-
-- Automatically renames album cover to make it visible from media
-player.
-
-- Supports Zune and Zune HD.
-
-- USB Zerocopy <https://docs.kernel.org/networking/msg_zerocopy.html>
-support found in recent Linux kernel (no user/kernel data copying).
-
-- No extra dependencies (e.g., *libptp*/*libmtp*).
-
-- Command line tool (*aft-mtp-cli*(1)).
+Features:
+- Qt interface with progress dialogs
+- FUSE wrapper with partial read/write support
+- No file size limits
+- Album cover auto-renaming for media player visibility
+- Zune and Zune HD support
+- USB Zerocopy support (Linux 5.4+)
+- No external dependencies (*libptp*, *libmtp* not required)
+- CLI companion: *aft-mtp-cli*(1)
 
 # OPTIONS
 
@@ -43,32 +33,40 @@ support found in recent Linux kernel (no user/kernel data copying).
 
 # SEE ALSO
 
-FAQ:
-	<https://whoozle.github.io/android-file-transfer-linux/FAQ.html>
+*aft-mtp-cli*(1),
+*aft-mtp-mount*(1)
 
-Issues:
-	<https://github.com/whoozle/android-file-transfer-linux/issues>
+USB Zerocopy:++
+https://docs.kernel.org/networking/msg_zerocopy.html
 
-Homepage:
-	<https://whoozle.github.io/android-file-transfer-linux/>
+# RESOURCES
+
+FAQ:++
+https://whoozle.github.io/android-file-transfer-linux/FAQ.html
+
+Issues:++
+https://github.com/whoozle/android-file-transfer-linux/issues
+
+Homepage:++
+https://whoozle.github.io/android-file-transfer-linux/
 
 # AUTHOR
 
-*android-file-transfer* was written by Vladimir Menshakov
-<vladimir.menshakov@gmail.com>.
+Written by Vladimir Menshakov <vladimir.menshakov@gmail.com>.
+
+This manual page was written for Zeppe-Lin project by Alexandr Savca
+<alexandr.savca89@gmail.com>.
 
 # CAVEATS
 
-- Samsung removed Android extensions from MTP, so FUSE will be
-available read-only, sorry.  Feel free to post your complaints to
-<https://forum.developer.samsung.com/>.
+Samsung devices lack Android MTP extensions; FUSE will be read-only.
 
-- Sometimes downloading fails with a USB timeout, after which the
-phone becomes unresponsive: Android bug#75259
-<https://code.google.com/p/android/issues/detail?id=75259>.
+USB timeouts may cause device lockups.++
+See Android bug #75259:++
+https://code.google.com/p/android/issues/detail?id=75259
 
-- Objects created in the UI will not show up in the FUSE filesystem:
-Android bug #169547
-<https://code.google.com/p/android/issues/detail?id=169547>.
+Files created via UI may not appear in FUSE.++
+See Android bug #169547:++
+https://code.google.com/p/android/issues/detail?id=169547
 
 ; vim: ft=scdoc cc=72 tw=70
