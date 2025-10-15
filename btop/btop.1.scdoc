@@ -6,53 +6,37 @@ btop - usage and stats for processor, gpu, memory, disks, network, and processes
 
 # SYNOPSIS
 
-*btop* \
-[*-c* _cfgfile_] \
-[*-lc*] \
-[*-t* | *+t*] \
-[*-p* _id_] \
-[*-u* _ms_] \
-[*--utf-force*] \
-[*--debug*] \
-[{*-h* | *--help*} | {*-v* | *--version*}]
+*btop* [_options_]
 
 # DESCRIPTION
 
-*btop* is a program that shows usage and stats for processor, gpu,
-memory, disks, network, and processes.
+*btop* is a terminal-based resource monitor that displays usage and
+statistics for CPU, GPU, memory, disks, network, and processes.
 
-# OPTIONS
+The options are as follows:
 
-The program follows the usual GNU command line syntax, with long
-options starting with two dashes ('*-*').
-
-A summary of options is included below.
-
-*-c* _cfgfile_, *--config* _cfgfile_
-	Path to an alternate config file instead of the default
+*-c* _config-file_, *--config* _config-file_
+	Use an alternate configuration file instead of
 	~/.config/btop/btop.conf.
 
 *-f* _filter_, *--filter* _filter_
 	Set an initial process filter.
 
 *-l*, *--low-color*
-	Disable truecolor, converts 24-bit colors to 256-color.
+	Disable truecolor; convert 24-bit colors to 256-color.
 
 *-t*, *--tty*
-	Force (ON) tty mode, max 16 colors and tty-friendly graph
-	symbols.  tty mode can't be set twice.
+	Force tty mode: max 16 colors and tty-friendly graph symbols.
+	tty mode can't be set twice.
 
-*--no-tty*
-	OFF tty mode.
-
-*+t*, *--tty_off*
-	Force (OFF) tty mode.
+*--no-tty*, *+t*, *--tty_off*
+	Disable tty mode.
 
 *-p* _id_, *--preset* _id_
 	Start with preset, integer value between 0-9.
 
 *-u* _ms_, *--update* _ms_
-	Set the program update rate in milliseconds.
+	Set update rate in milliseconds.
 
 *--force-utf*
 	Force start even if no UTF-8 locale was detected.
@@ -62,14 +46,15 @@ A summary of options is included below.
 	collect and screen draw functions and sets loglevel to DEBUG.
 
 *-h*, *--help*
-	Show summary of options.
+	Show help and exit.
 
 *-v*, *-V*, *--version*
-	Show version of program.
+	Show version and exit.
 
 # BUGS
-	The upstream bug tracker can be found at
-	<https://github.com/aristocratos/btop/issues>.
+
+Report issues at
+<https://github.com/aristocratos/btop/issues>.
 
 # SEE ALSO
 
@@ -78,6 +63,9 @@ A summary of options is included below.
 
 # AUTHOR
 
-btop was written by Jakob P. Liljenberg a.k.a. "Aristocratos".
+*btop* is written by Jakob P. Liljenberg a.k.a. "Aristocratos".
+
+This manual page was written for Zeppe-Lin by Alexandr Savca
+<alexandr.savca89@gmail.com>.
 
 ; vim: ft=scdoc cc=72 tw=70
