@@ -6,33 +6,53 @@ README ffmpeg
 REQUIREMENTS
 ============
 
-Optional
---------
+This package builds FFmpeg with support for a wide range of codecs,
+formats, and hardware acceleration.  Feature selection is governed by
+three sources:
 
-Optional software for special features:
+Required dependencies
+---------------------
 
-* `alsa-lib`:          Support sound recording and playback using ALSA.
-* `cuda`:              NVIDIA hardware accelerated CUDA based image scaling.
-* `dav1d`:             AV1 decoder support.
-* `fdk-aac`:           Support for AAC encoding using the Frauenhofer AAC Codec
-                       library, makes the resulting binary non-redistributable.
-* `ffnvcodec-headers`: Required to interface with Nvidias codec APIs.
-* `gnutls`:            Use GnuTLS as the SSL provider.
-* `gsm`:               Support for GSM codec (audi), mainly for telephony.
-* `lame`:              MP3 encoder support.
-* `libass`:            ASS/SSA subtitles support.
-* `libsdl2`:           Support output through SDL.
-* `libtheora`:         Support encoding using the Theora video compression
-                       codec.
-* `libva`:             Enable hardware accelerated video decode/encode.
-* `libvdpau`:          Enable VDPAU hardware accelerated video decoding.
-* `libvorbis`:         OggVorbis audio codec support.
-* `libvpx`:            Enable support for VP7/VP8/VP9 de/encoding.
-* `libwebp`:           WebP encoding.
-* `opus`:              Opus de/encoding.
-* `pulseaudio`:        Pulseaudio capture support.
-* `x264`:              Enable H.264 encoding.
-* `x265`:              Enable H.265/HEVC encoding.
+Packages listed in the `Pkgfile` `Depends on:` field are installed
+before build and always enabled.  These form the baseline feature set.
+
+Optional features
+-----------------
+
+Additional packages are listed in `ffmpeg.enabled`.  If present at
+build time, they are enabled via `--enable-*` flags.  Each entry
+follows this format:
+
+    description
+    pkgname: --enable-flag(s)
+
+Explicitly disabled features
+----------------------------
+
+Packages listed in `ffmpeg.disabled` are always disabled via
+`--disable-*`, regardless of presence.  This avoids unwanted
+dependencies or licensing issues.  Each entry follows the same format:
+
+    description
+    pkgname: --disable-flag(s)
+
+To customize the build, edit `ffmpeg.enabled` and `ffmpeg.disabled`
+directly.
+
+
+CAUTION
+=======
+
+Enabling `fdk-aac` or `openssl` triggers `--enable-nonfree`, which
+makes the resulting binary non-redistributable under GPL terms.  Use
+with care if packaging for redistribution.
+
+
+REFERENCES
+==========
+
+* https://ffmpeg.org/documentation.html
+* https://trac.ffmpeg.org/wiki/CompilationGuide
 
 
 ---

@@ -1,0 +1,30 @@
+# SDL2 playback window
+libsdl2: --disable-ffplay
+
+# CELT audio codec (experimental)
+libcelt: --disable-libcelt
+
+# Font discovery for drawtext
+fontconfig: --disable-libfontconfig
+
+# Font rendering for subtitles
+freetype: --disable-libfreetype
+
+# Bidirectional text (Arabic, Hebrew)
+fribidi: --disable-libfribidi
+
+# Incompatible with librsvg-compat, requires rust-crap
+librsvg: --disable-librsvg
+
+# X11 screen capture
+xorg-libxcb: --disable-libxcb
+
+# X11 shape extension
+xorg-libxcb: --disable-libxcb-shape
+
+# X11 shared memory
+xorg-libxcb: --disable-libxcb-shm
+
+# X11 fix extension
+xorg-libxcb: --disable-libxcb-xfixes
+

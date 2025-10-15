@@ -1,0 +1,138 @@
+# ALSA sound input/output
+alsa-lib: --enable-alsa
+
+# AMD AMF hardware acceleration
+amf-headers: --enable-amf
+
+# AV1 codec via libaom
+aom: --enable-aom
+
+# Audio fingerprinting
+chromaprint: --enable-chromaprint
+
+# AV1 decoder
+dav1d: --enable-libdav1d
+
+# Fraunhofer AAC encoder (non-free)
+fdk-aac: --enable-libfdk-aac --enable-nonfree
+
+# NVIDIA codec API (nvdec/nvenc)
+ffnvcodec-headers: --enable-nvdec --enable-nvenc
+
+# GnuTLS SSL provider
+gnutls: --enable-gnutls
+
+# GSM audio codec (telephony)
+gsm: --enable-libgsm
+
+# JACK audio backend
+jack: --enable-libjack
+
+# LADSPA plugin support
+ladspa: --enable-ladspa
+
+# MP3 encoder
+lame: --enable-libmp3lame
+
+# Color management
+lcms2: --enable-lcms2
+
+# Lens correction
+lensfun: --enable-liblensfun
+
+# ASS/SSA subtitle rendering
+libass: --enable-libass
+
+# Binaural audio filter
+libbs2b: --enable-libbs2b
+
+# ASCII art video output
+libcaca: --enable-libcaca
+
+# CD audio input
+libcdio-paranoia: --enable-libcdio
+
+# Direct Rendering Manager
+libdrm: --enable-libdrm
+
+# Module audio formats
+libmodplug: --enable-libmodplug
+
+# Vulkan-based rendering
+libplacebo: --enable-libplacebo
+
+# High-quality resampling
+libsoxr: --enable-libsoxr
+
+# SFTP input/output
+libssh: --enable-libssh
+
+# Theora video encoder
+libtheora: --enable-libtheora
+
+# VAAPI hardware acceleration
+libva: --enable-vaapi
+
+# VDPAU hardware acceleration
+libvdpau: --enable-vdpau
+
+# Ogg Vorbis codec
+libvorbis: --enable-libvorbis
+
+# VP7/VP8/VP9 codec support
+libvpx: --enable-libvpx
+
+# WebP image encoding
+libwebp: --enable-libwebp
+
+# XML parsing
+libxml2: --enable-libxml2
+
+# LV2 plugin support
+lv2: --enable-lv2
+
+# H.264 encoder (Cisco)
+openh264: --enable-libopenh264
+
+# JPEG 2000 codec
+openjpeg2: --enable-libopenjpeg2
+
+# OpenAL audio backend
+openal: --enable-openal
+
+# Opus codec support
+opus: --enable-libopus
+
+# PulseAudio capture
+pulseaudio: --enable-libpulse
+
+# RTMP streaming
+rtmpdump: --enable-librtmp
+
+# AV1 encoder
+rav1e: --enable-librav1e
+
+# Time-stretching filter
+rubberband: --enable-librubberband
+
+# SPIR-V shader compilation
+shaderc: --enable-libshaderc
+
+# Snappy compression
+snappy: --enable-libsnappy
+
+# Speex codec support
+speex: --enable-libspeex
+
+# AV1 encoder via SVT
+svt-av1: --enable-libsvtav1
+
+# V4L2 input/output
+v4l-utils: --enable-libv4l2
+
+# H.264 encoder
+x264: --enable-libx264
+
+# H.265 encoder
+x265: --enable-libx265
+

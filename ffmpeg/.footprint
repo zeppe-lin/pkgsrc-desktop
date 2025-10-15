@@ -215,6 +215,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/ffmpeg-resampler.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/ffmpeg-scaler.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/ffmpeg-utils.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/ffmpeg-x264-10bit.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/ffmpeg.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/ffprobe-all.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/ffprobe.1.gz

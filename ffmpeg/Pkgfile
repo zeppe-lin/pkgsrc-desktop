@@ -4,257 +4,58 @@
 
 name=ffmpeg
 version=7.1.2
-release=1
+release=2
 source="https://ffmpeg.org/releases/$name-$version.tar.bz2
 	gcc-14.patch
-	ffmpeg-x264-10bit.sh"
+	ffmpeg.enabled
+	ffmpeg.disabled
+	ffmpeg-x264-10bit.sh
+	ffmpeg-x264-10bit.1.scdoc"
 
 build() {
-	patch -d $name-$version -Np1 -i $SRC/gcc-14.patch
-
-	if pkgman isinst amf-headers >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-amf"
-	fi
-
-	if pkgman isinst aom >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-aom"
-	fi
-
-	if pkgman isinst chromaprint >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-chromaprint"
-	fi
-
-	if pkgman isinst dav1d >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libdav1d"
-	fi
-
-	if pkgman isinst fdk-aac >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libfdk-aac --enable-nonfree"
-	fi
-
-	if pkgman isinst ffnvcodec-headers >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-nvdec --enable-nvenc"
-	fi
-
-	# disabled by default
-	#if pkgman isinst fontconfig >/dev/null 2>&1; then
-	#	PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-fontconfig"
-	#fi
-
-	# disabled by default
-	#if pkgman isinst freetype >/dev/null 2>&1; then
-	#	PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libfreetype"
-	#fi
-
-	# disabled by default
-	#if pkgman isinst fribidi >/dev/null 2>&1; then
-	#	PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-fribidi"
-	#else
-	#	PKGMK_FFMPEG="$PKGMK_FFMPEG --disable-fribidi"
-	#fi
-
-	if pkgman isinst gnutls >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-gnutls"
-	else
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-openssl --enable-nonfree"
-	fi
-
-	if pkgman isinst gsm >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libgsm"
-	fi
-
-	if pkgman isinst jack >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libjack"
-	fi
-
-	if pkgman isinst ladspa >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-ladspa"
-	fi
-
-	if pkgman isinst lame >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libmp3lame"
-	fi
-
-	if pkgman isinst lcms2 >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-lcms2"
-	fi
-
-	if pkgman isinst lensfun >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-liblensfun"
-	fi
-
-	if pkgman isinst libass >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libass"
-	fi
-
-	if pkgman isinst libbs2b >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libbs2b"
-	fi
-
-	if pkgman isinst libcaca >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libcaca"
-	fi
-
-	if pkgman isinst libcdio-paranoia >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libcdio"
-	fi
-
-	if pkgman isinst libdrm >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libdrm"
-	fi
-
-	if pkgman isinst libmodplug >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libmodplug"
-	fi
-
-	if pkgman isinst libplacebo >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libplacebo"
-	fi
-
-	# incompatible with librsvg-compat, requires rust-crap
-	#if pkgman isinst librsvg >/dev/null 2>&1; then
-	#	PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-librsvg"
-	#fi
-
-	if pkgman isinst libsoxr >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libsoxr"
-	fi
-
-	if pkgman isinst libssh >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libssh"
-	fi
-
-	if pkgman isinst libtheora >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libtheora"
-	fi
-
-	if pkgman isinst libvdpau >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-vdpau"
-	fi
-
-	if pkgman isinst libvorbis >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libvorbis"
-	fi
-
-	if pkgman isinst libvpx >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libvpx"
-	fi
-
-	if pkgman isinst libwebp >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libwebp"
-	fi
-
-	if pkgman isinst libxml2 >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libxml2"
-	fi
-
-	if pkgman isinst lv2 >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-lv2"
-	fi
-
-	if pkgman isinst opus >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libopus"
-	fi
-
-	if pkgman isinst openh264 >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libopenh264"
-	fi
-
-	if pkgman isinst openjpeg2 >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libopenjpeg2"
-	fi
-
-	if pkgman isinst openal >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-openal"
-	fi
-
-	#if pkgman isinst opencv >/dev/null 2>&1; then
-	#	PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libopencv"
-	#fi
-
-	if pkgman isinst pulseaudio >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libpulse"
-	fi
-
-	if pkgman isinst rtmpdump >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-librtmp"
-	fi
-
-	if pkgman isinst rav1e >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-librav1e"
-	fi
-
-	if pkgman isinst rubberband >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-librubberband"
-	fi
-
-	if pkgman isinst shaderc >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libshaderc"
-	fi
-
-	if pkgman isinst snappy >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libsnappy"
-	fi
-
-	if pkgman isinst speex >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libspeex"
-	fi
-
-	if pkgman isinst svt-av1 >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libsvtav1"
-	fi
-
-	if pkgman isinst v4l-utils >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libv4l2"
-	fi
-
-	if pkgman isinst x264 >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libx264"
-	fi
-
-	if pkgman isinst x265 >/dev/null 2>&1; then
-		PKGMK_FFMPEG="$PKGMK_FFMPEG --enable-libx265"
-	fi
-
-	mkdir build; cd build
-
+	# Ensure LTO objects for optimal performance
 	CFLAGS="$CFLAGS -ffat-lto-objects"
 	CXXFLAGS="$CXXFLAGS -ffat-lto-objects"
 
-	# --disable-ffplay: otherwise requires libsdl2
-	../$name-$version/configure      \
-		--prefix=/usr            \
-		--disable-debug          \
-		--disable-doc            \
-		--disable-ffplay         \
-		--disable-libcelt        \
-		--disable-libfontconfig  \
-		--disable-libfreetype    \
-		--disable-libfribidi     \
-		--disable-libxcb         \
-		--disable-libxcb-shape   \
-		--disable-libxcb-shm     \
-		--disable-libxcb-xfixes  \
-		--disable-stripping      \
-		--enable-avfilter        \
-		--enable-gpl             \
-		--enable-lto             \
-		--enable-pic             \
-		--enable-postproc        \
-		--enable-pthreads        \
-		--enable-shared          \
-		--enable-swresample      \
-		--enable-version3        \
-		$PKGMK_FFMPEG            \
+	# Fix build under GCC 14 (remove when upstreamed)
+	patch -d $name-$version -Np1 -i $SRC/gcc-14.patch
+
+	mkdir build; cd build
+
+	# NOTE: gnutls is required dependency
+	# For OpenSSL fallback, add: --enable-openssl --enable-nonfree
+	# Feature flags parsed from ffmpeg.{enabled,disabled}, see README.md
+	../$name-$version/configure \
+		--prefix=/usr \
+		--disable-debug \
+		--disable-doc \
+		--disable-stripping \
+		--enable-avfilter \
+		--enable-gpl \
+		--enable-lto \
+		--enable-pic \
+		--enable-postproc \
+		--enable-pthreads \
+		--enable-shared \
+		--enable-swresample \
+		--enable-version3 \
+		$(awk -F: '!/^($|#)/ {
+		if (system("pkgman isinst " $1 " >/dev/null 2>&1") == 0)
+			print $2
+		}' $SRC/ffmpeg.enabled) \
+		$(awk -F: '!/^($|#)/ { print $2 }' $SRC/ffmpeg.disabled)
 
 	make V=1
 	make DESTDIR=$PKG install install-man
 
+	# Install optional x264 10-bit wrapper
 	if pkgman isinst x264 >/dev/null 2>&1; then
 		install -m 0755 -D $SRC/ffmpeg-x264-10bit.sh \
 			$PKG/usr/bin/ffmpeg-x264-10bit
+		scdoc < $SRC/ffmpeg-x264-10bit.1.scdoc > \
+			$PKG/usr/share/man/man1/ffmpeg-x264-10bit.1
 	fi
 
-	# remove junk
+	# Remove bundled examples
 	rm -r $PKG/usr/share/ffmpeg/examples
 }

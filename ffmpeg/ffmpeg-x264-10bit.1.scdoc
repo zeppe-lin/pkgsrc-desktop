@@ -1,0 +1,61 @@
+FFMPEG-X264-10BIT(1)
+
+# NAME
+
+ffmpeg-x264-10bit - run ffmpeg(1) with 10-bit x264 encoder
+
+# SYNOPSIS
+
+*ffmpeg-x264-10bit* [_ffmpeg-args_ ...]
+
+# DESCRIPTION
+
+*ffmpeg-x264-10bit* is a simple wrapper around *ffmpeg*(1) that
+forces the dynamic linker to load the 10-bit variant of the *x264*
+library located under _/usr/lib/libx264-10bit_.
+
+It is useful when both 8-bit and 10-bit x264 libraries are installed
+on the system and the user explicitly wants to encode video using
+the 10-bit encoder.
+
+All arguments are passed directly to *ffmpeg*(1).
+
+# FILES
+
+_/usr/lib/libx264-10bit/_
+	Directory containing the 10-bit variant of the *x264* library.
+
+# EXAMPLES
+
+Encode a 10-bit H.264 video:
+
+```
+ffmpeg-x264-10bit -i input.y4m -c:v libx264 -crf 18 \\
+    -pix_fmt yuv420p10le output.mkv
+```
+
+Inspect the resulting bit depth:
+
+```
+ffprobe -v error -select_streams v:0 \\
+    -show_entries stream=bits_per_raw_sample output.mkv
+```
+
+
+# SEE ALSO
+
+*ffmpeg*(1), *x264*(1)
+
+# AUTHORS
+
+Written for Zeppe-Lin Linux by Alexandr Savca and contributors.
+
+# CAVEATS
+
+The wrapper depends on *ffmpeg*(1) and *libx264* being installed with
+a separate 10-bit library tree at _/usr/lib/libx264-10bit/_.
+
+The 10-bit encoder produces H.264 video with higher color precision,
+but may not be supported by all decoders or players.
+
+; vim: ft=scdoc cc=72 tw=70

@@ -1,3 +1,6 @@
 caa8a4ae2fce02469260b3e0246cfdb6  ffmpeg-7.1.2.tar.bz2
-dae0c10c99399580c929fc100e79faef  ffmpeg-x264-10bit.sh
+7982e684556bb90a2abcf84bde4546bb  ffmpeg-x264-10bit.1.scdoc
+a46d0da78bed9ac8a3cb757083777b02  ffmpeg-x264-10bit.sh
+599568fa5f1af061136964f1d2130b85  ffmpeg.disabled
+b259007e6a0ef60fdf056bf66753a0f1  ffmpeg.enabled
 d8600a89b5a5475bd6ee134e9ab61cb7  gcc-14.patch
