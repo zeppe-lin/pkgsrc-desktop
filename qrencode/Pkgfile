@@ -1,6 +1,6 @@
 # Description: C library for encoding data in a QR Code symbol
 # URL:         https://github.com/fukuchi/libqrencode
-# Depends:     libpng
+# Depends:     libpng scdoc
 
 name=qrencode
 version=4.1.1
