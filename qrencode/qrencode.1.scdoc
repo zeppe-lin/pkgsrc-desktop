@@ -1,0 +1,190 @@
+QRENCODE(1)
+
+# NAME
+
+qrencode - encode data into QR Code symbols and save as image files
+
+# SYNOPSIS
+
+*qrencode* [*-o* _FILENAME_] [_OPTION_]...  [_STRING_]
+
+# DESCRIPTION
+
+The *qrencode* utility encodes input data into a QR Code or Micro QR
+Code symbol and saves it as an image file.
+
+It uses libqrencode a library for generating QR Code symbols -
+two-dimensional barcodes that can be scanned by mobile devices and
+other optical readers.
+The capacity of QR Code is up to 7000 digits or 4000 characters, and
+has high robustness.
+
+If no _STRING_ is given, data is read from standard input.
+
+# OPTIONS
+
+## General options
+
+*-h*, *--help*
+	Display a help message and exit.
+
+*-V*, *--version*
+	Display the version number and copyrights of the *qrencode*,
+	then exit.
+
+*--verbose*
+	Display verbose information to stderr.
+
+## Input and output
+
+*-r* _FILENAME_, *--read-from*=_FILENAME_
+	Read input data from _FILENAME_ instead of standard input.
+
+*-o* _FILENAME_, *--output*=_FILENAME_
+	Write the output image to file.
+	If '*-*' is given, write to standard output.
+	If *-S* is given, structured symbols are written to
+	_FILENAME_-01.png, _FILENAME_-02.png, ... (suffix is removed
+	from _FILENAME_, if specified).
+
+*-t* _TYPE_, *--type* _TYPE_
+	Set output type of the generated image (default: 'PNG').
+
+	Available types:
+	- PNG
+	- PNG32
+	- EPS
+	- SVG
+	- XPM
+	- ANSI
+	- ANSI256
+	- ASCII
+	- ASCIIi
+	- UTF8
+	- UTF8i
+	- ANSIUTF8
+	- ANSIUTF8i
+	- ANSI256UTF8
+
+*-d* _NUMBER_, *--dpi*=_NUMBER_
+	Specify the DPI of the generated PNG (default: 72).
+
+*-s* _NUMBER_, *--size*=_NUMBER_
+	Specify the size of dot (pixel) (default: 3).
+
+*-m* _NUMBER_, *--margin*=_NUMBER_
+	Specify the width of margin (default: 4).
+
+## Color options
+
+*--foreground*=RRGGBB[AA]++
+*--background*=RRGGBB[AA]
+	Specify foreground/background color in hexadecimal notation.
+	6-digit (RGB) or 8-digit (RGBA) form are supported.
+
+	Color output support available only in PNG, EPS and SVG.
+
+## Encoding options
+
+*-l* {L,M,Q,H}, *--level*={L,M,Q,H}
+	Specify error correction level from L (lowest) to H (highest)
+	(default: L).
+
+*-v* _NUMBER_, *--symversion*=_NUMBER_
+	Specify the minimum version of the symbol (default: auto).
+
+	See *SYMBOL VERSIONS* for more information.
+
+*-M*, *--micro*
+	Encode in a Micro QR Code.
+
+	See *MICRO QR CODE* for more information.
+
+*-S*, *--structured*
+	Make structured symbols.
+	Version number must be specified with *-v*.
+
+*--strict-version*
+	Disable automatic version number adjustment.
+	If the input data is too large for the specified version,
+	*qrencode* exits with status 1.
+
+## Character encoding
+
+*-k*, *--kanji*
+	Assume input text contains Kanji (Shift-JIS).
+
+*-c*, *--casesensitive*
+	Encode lower-case alphabet characters in 8-bit mode (default).
+
+*-i*, *--ignorecase*
+	Ignore case distinctions and use only upper-case characters.
+
+*-8*, *--8bit*
+	Encode entire data in 8-bit mode.
+	Other text modes (*-k*, *-c* and *-i*) will be ignored.
+
+## SVG-specific options
+
+*--rle*
+	Enable run-length encoding compression for SVG.
+
+*--svg-path*
+	Use single path to draw modules for SVG.
+
+*--inline*
+	Only useful for SVG output, generates an SVG without the XML
+	tag.
+
+# SYMBOL VERSIONS
+
+The symbol versions of QR Code range from Version 1 to Version 40.
+Each version has a different module configuration or number of
+modules, ranging from Version 1 (21 x 21 modules) up to Version 40
+(177 x 177 modules).
+Each higher version number comprises 4 additional modules per side by
+default.
+
+See <http://www.qrcode.com/en/about/version.html> for a detailed
+version list.
+
+# MICRO QR CODE
+
+With Micro QR Code, you can embed data in a smaller area than with QR
+Code, but the data capacity is strongly limited.
+The symbol versions range from Version 1 to 4.
+
+# EXAMPLES
+
+Encode into a symbol version 1, level L:
+```
+qrencode -l L -v 1 -o output.png 'Hello, world!'
+```
+
+Read standard input and encode it into a structured-appended symbols
+in case-insensitive mode:
+```
+qrencode -iSv 1 --output=output.png
+```
+
+Read input data from 'bigfile.txt' and encode into a symbol version
+40, level L:
+```
+qrencode -S -v 40 -l L -r bigfile.txt -o output.png
+```
+
+# AUTHOR
+
+Written by Kentaro Fukuchi.
+
+# RESOURCES
+
+Main Web Site: https://fukuchi.org/works/qrencode/
+
+Source code repository: https://github.com/fukuchi/libqrencode/
+
+# COPYRIGHT
+
+Copyright (C) 2006-2018 Kentaro Fukuchi.
+
+; vim: ft=scdoc cc=72 tw=70

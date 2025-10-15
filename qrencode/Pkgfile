@@ -4,25 +4,22 @@
 
 name=qrencode
 version=4.1.1
-release=2
-source=https://github.com/fukuchi/libqrencode/archive/v$version/$name-$version.tar.gz
+release=3
+source="https://github.com/fukuchi/libqrencode/archive/v$version/$name-$version.tar.gz
+	qrencode.1.scdoc"
 
 build() {
-	for d in shared static; do
-		case ${d} in
-		shared) PKGMK_QRENCODE_SHARED="ON"  ;;
-		static) PKGMK_QRENCODE_SHARED="OFF" ;;
-		esac
+	cmake -S libqrencode-$version -B build -G Ninja \
+		-D CMAKE_INSTALL_PREFIX=/usr \
+		-D CMAKE_INSTALL_LIBDIR=lib \
+		-D CMAKE_BUILD_TYPE=Release \
+		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+		-D BUILD_SHARED_LIBS=ON \
+		-Wno-dev
 
-		cmake -S libqrencode-$version -B build-${d} -G Ninja  \
-			-D CMAKE_INSTALL_PREFIX=/usr                  \
-			-D CMAKE_INSTALL_LIBDIR=lib                   \
-			-D CMAKE_BUILD_TYPE=Release                   \
-			-D CMAKE_C_FLAGS_RELEASE="$CFLAGS"            \
-			-D BUILD_SHARED_LIBS=$PKGMK_QRENCODE_SHARED   \
-			-W no-dev
+	ninja -C build -j ${JOBS:-1} -v
+	DESTDIR=$PKG ninja -C build install
 
-		ninja -C build-${d} -j ${JOBS:-1} -v
-		DESTDIR=$PKG ninja -C build-${d} install
-	done
+	# install custom man page (upstream version is ugly as f*ck)
+	scdoc < $SRC/qrencode.1.scdoc > $PKG/usr/share/man/man1/qrencode.1
 }
