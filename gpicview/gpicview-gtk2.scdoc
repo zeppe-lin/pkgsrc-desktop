@@ -1,0 +1,64 @@
+GPICVIEW(1)
+
+# NAME
+
+gpicview - lightweight image viewer
+
+# SYNOPSIS
+
+*gpicview* [_OPTION_ ...] [_FILE_]
+
+# DESCRIPTION
+
+*gpicview* is a lightweight GTK+ 2.x based image viewer.
+
+# OPTIONS
+
+## Application Options
+
+*-v*, *--version*
+	Print version and exit.
+
+*--slideshow*
+	Start slideshow.
+
+*--display*=_DISPLAY_
+	X display to use.
+
+## GTK+ Options
+
+*--class*=_CLASS_
+	Program class as used by the window manager.
+
+*--name*=_NAME_
+	Program name as used by the window manager.
+
+*--screen*=_SCREEN_
+	X screen to use.
+
+*--sync*
+	Make X calls synchronous.
+
+*--gtk-module*=_MODULES_
+	Load additional GTK+ modules.
+
+*--g-fatal-warnings*
+	Make all warnings fatal.
+
+## Help Options
+
+*-h*, *--help*
+	Show help options and exit.
+
+*--help-all*
+	Show all help options and exit.
+
+*--help-gtk*
+	Show GTK+ options and exit.
+
+# HISTORY
+
+This manual page was written for Zeppe-Lin project by Alexandr
+Savca <alexandr.savca89@gmail.com>.
+
+; vim: ft=scdoc cc=72 tw=70
