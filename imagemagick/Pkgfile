@@ -3,32 +3,32 @@
 # Depends on:  chrpath libjpeg-turbo libpng libtool libxml2 perl xorg-libxext xorg-libxt
 
 name=imagemagick
-version=7.1.2-6
+version=7.1.2-7
 release=1
 source=$name-$version.tar.gz::https://github.com/ImageMagick/ImageMagick/archive/refs/tags/$version.tar.gz
 
 build() {
 	mkdir build; cd build
 
-	../ImageMagick-$version/configure  \
-		--prefix=/usr              \
-		--enable-shared            \
-		--disable-static           \
-		--with-modules             \
-		--with-perl=yes            \
-		--with-lcms=no             \
-		--without-pango            \
-		--without-fontconfig       \
-		--without-freetype         \
-		--without-raqm             \
-		--without-zstd             \
-		--without-tiff             \
-		--without-webp             \
-		--without-djvu             \
-		--without-fpx              \
-		--without-gdi32            \
-		--without-dps              \
-		--without-flif             \
+	../ImageMagick-$version/configure \
+		--prefix=/usr \
+		--enable-shared \
+		--disable-static \
+		--with-modules \
+		--with-perl=yes \
+		--with-lcms=no \
+		--without-djvu \
+		--without-dps \
+		--without-flif \
+		--without-fontconfig \
+		--without-fpx \
+		--without-freetype \
+		--without-gdi32 \
+		--without-pango \
+		--without-raqm \
+		--without-tiff \
+		--without-webp \
+		--without-zstd \
 
 	make V=1
 	make DESTDIR=$PKG install
@@ -42,12 +42,12 @@ build() {
 	# Prune junk
 	rm -r $PKG/usr/share/doc
 	find $PKG -depth \
-		\( -type f -name perllocal.pod  \
-			-o -name \*.bs          \
-			-o -name .packlist      \
-			-o -name ChangeLog      \
-			-o -name LICENSE        \
-			-o -name NEWS.txt       \
-		\) -delete                      \
+		\( -type f -name perllocal.pod \
+			-o -name \*.bs \
+			-o -name .packlist \
+			-o -name ChangeLog \
+			-o -name LICENSE \
+			-o -name NEWS.txt \
+		\) -delete \
 		-o -type d -empty -delete
 }
