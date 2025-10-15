@@ -1,0 +1,188 @@
+UDEVIL(1)
+
+# NAME
+
+udevil - mount, unmount, and monitor devices as a normal user
+
+# SYNOPSIS
+
+*udevil* [_options_] _command_ [_command-options_] [_command-arguments_]
+
+# DESCRIPTION
+
+*udevil* mounts and unmounts removable devices and networks without a
+password (set suid), shows device info, monitors device changes.
+Emulates mount's and udisks's command line usage and udisks v1's
+output.
+Includes the *devmon*(1) automounting daemon.
+
+## Options
+
+*--verbose*
+	Print details.
+
+*--quiet*
+	Minimal output.
+
+## Commands
+
+*mount* | *--mount* [_mount-options_] [[*-b* | *--block-device*] _device_] [_dir_]
+	Mount _device_ to mount point _dir_ with specified
+	_mount-options_.
+
+	Mount options:
+
+	*-t* | *--types* | *--filesystem-type* | *--mount-fstype* _type_
+		See *mount*(1).
+
+	*-o* | *--options* | *--mount-options* _opt_[,...]
+		See *mount*(1).
+
+	*--no-user-interaction*
+		Ignored (for compatibility).
+
+*umount* | *unmount* | *--umount* | *--unmount* [_unmount-options_] \
+        {[*-b* | *--block-device*] _device_} | _dir_
+	Unmount _device_ or _dir_ with _unmount-options_.
+
+	Unmount options:
+
+	*-l*
+		Lazy unmount.
+		See *umount*(1).
+
+	*-f*
+		Force unmount.
+		See *umount*(1).
+
+	*--no-user-interaction*
+		Ignored (for compatibility).
+
+*info* | *--show-info* | *--info* [*-b* | *--block-device*] _device_
+	Show information about _device_ emulating udisks v1 output.
+
+*monitor* | *--monitor*
+	Display device events emulating udisks v1 output.
+
+*clean*
+	Remove unmounted udevil-created mount dirs in media dirs.
+
+*help* | *--help* | *-h*
+	Show help message.
+
+# EXAMPLES
+
+## Mount
+
+Generic:
+```
+udevil mount /dev/sdd1
+udevil mount -o ro,noatime /dev/sdd1
+udevil mount -o ro,noatime /dev/sdd1 /media/usbdrive
+```
+
+ISO file:
+```
+udevil mount /tmp/example.iso
+```
+
+FTP site (requires curlftpfs or ftpfs):
+```
+udevil mount ftp://sys.domain
+```
+
+FTP share with user and password:
+```
+udevil mount ftp://user:pass@sys.domain/share
+```
+
+FTP share with port, user and password:
+```
+udevil mount ftp://user:pass@sys.domain:21/share
+```
+
+FTP site with ftpfs:
+```
+udevil mount -t ftpfs sys.domain
+```
+
+FTP site with curl:
+```
+udevil mount -t curlftpfs sys.domain
+```
+
+FTP site with curl user and password:
+```
+udevil mount -t curlftpfs user:pass@sys.domain
+```
+
+NFS share:
+```
+udevil mount nfs://sys.domain:/share
+udevil mount sys.domain:/share
+```
+
+SAMBA share with cifs:
+```
+udevil mount smb://sys.domain/share
+udevil mount //sys.domain/share
+```
+
+SAMBA share with port, user and password:
+```
+udevil mount smb://user:pass@10.0.0.1:50/share
+```
+
+SAMBA share with workgroup:
+```
+udevil mount smb://WORKGROUP/user@sys.domain
+```
+
+SAMBA share with smbfs:
+```
+udevil mount //sys.domain/share -t smbfs
+```
+
+SSH with user (requires sshfs):
+```
+udevil mount ssh://user@sys.domain
+udevil mount -t sshfs user@sys.domain
+```
+
+WebDAV (requires davfs2):
+```
+udevil mount http://sys.domain/dav/
+```
+
+Make a RAM drive:
+```
+udevil mount tmpfs
+```
+
+*Warning*:
+	A password on the command line is *unsafe* - see filesystem
+	docs.
+
+## Unmount
+
+Generic:
+```
+udevil umount /dev/sdd1
+udevil umount /media/disk
+udevil umount -l /media/disk
+udevil umount /tmp/example.iso
+```
+
+# SEE ALSO
+
+*devmon*(1)
+
+Homepage:++
+http://ignorantguru.github.io/udevil/>
+
+# AUTHORS
+
+This manual page was written for Zeppe-Lin by Alexandr Savca
+<alexandr.savca89@gmail.com> and can be used by other projects.
+
+; vim: ft=scdoc cc=72 tw=70

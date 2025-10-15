@@ -1,0 +1,151 @@
+DEVMON(1)
+
+# NAME
+
+devmon - automounts and unmounts optical and removable drives
+
+# SYNOPSIS
+
+## Run as daemon to automount
+
+*devmon* [_generic-options_] [_automount-options_]
+
+## Run as client to manually un/mount
+
+*devmon* [_generic-options_] [_mount-options_]
+
+# DESCRIPTION
+
+*devmon* is a configuration-less bash daemon script which automounts
+optical discs and removable drives.
+It can also selectively autostart apps or execute commands after
+mounting, ignore specified devices and volume labels, and manually
+mount and unmount devices.
+
+## Generic options
+
+These can be used in both daemon and client modes:
+
+*--ignore-device* _device_
+	Ignore _device_ (e.g., _/dev/sdd1_).
+
+*--ignore-label* "_label_"
+	Ignore volume with _label_.
+
+*-s*, *--sync*
+	Add sync mount option for ext[2-4], ntfs, ufs, or flush for
+	fat & vfat (slower writing but safer).
+
+*--internal*
+	Also attempt to un/mount internal system drives (this is
+	mostly a fix for esata issues).
+
+*--always-exec*
+	Also run *--exec-on-*_XXX_ commands during startup or with
+	*--mount-all*.
+
+*-g*, *--no-gui*
+	Do not show spacefm/zenity pop-up dialogs.
+
+## Automount options
+
+These can be used only in daemon mode:
+
+*--exec-on-device* _device_ "_command_"
+	Execute _command_ after mounting _device_.
+
+*--exec-on-label* "_label_" "_command_"
+	Execute _command_ after mounting _label_.
+
+*--exec-on-video* "_command_"
+	Execute _command_ after video DVD mount.
+
+*--exec-on-audio* "_command_"
+	Execute _command_ after audio CD insertion.
+
+*--exec-on-disc* "_command_"
+	Execute _command_ after data CD/DVD mount.
+
+*--exec-on-drive* "_command_"
+	Execute _command_ after drive mount.
+
+*--exec-on-unmount* "_command_"
+	Execute _command_ after unmount.
+
+*--exec-on-remove* "_command_"
+	Execute _command_ after drive removal.
+
+	Where the following in _command_ will be replaced with:
+
+	%d
+		mount point directory (e.g. _/media/cd_)
+	%f
+		device name (e.g. _/dev/sdd1_)
+	%l
+		label of mounted volume
+
+Multiple *--exec-on-*_XXX_ options may be used to execute multiple
+commands.
+Other *--exec-on-*_XXX_ commands are ignored if *--exec-on-device* or
+*--exec-on-label* executed.
+
+*--mount-options* "_options_"
+	Default: noexec,nosuid,nodev,noatime
+
+*--info-on-mount*
+	Show mounted drive info in a popup dialog.
+
+*--no-mount*
+	Don't mount anything, just exec (disables *--exec-on-video*).
+
+*--no-unmount*
+	Don't unmount all removable drives on exit.
+
+## Mount options
+
+These can be used only in client mode:
+
+*-r*, *--unmount-removable*
+	Sync and unmount all removable drives and show pop-up dialog
+	(spacefm or zenity required).
+
+*-c*, *--unmount-recent*
+	Unmount most recently mounted removable drive.
+
+*-o*, *--unmount-optical*
+	Unmount all optical drives (error pop-up only).
+
+*-u*, *--unmount-all*
+	Same as *--unmount-removable* *--unmount-optical*.
+
+*--unmount* _dir_ | _device_
+	Unmount _device_ or mount point _dir_.
+
+*--eject* _dir_ | _device_
+	Unmount and eject _device_ or mount point _dir_.
+
+*-a*, *--mount-all*
+	Mount all removable and optical drives.
+
+*--mount* _device_
+	Mount _device_.
+
+*--mount-options* | *--mount-fstype* | *--eject-options* _options_
+	These options will be passed to mount or eject.
+
+*--enumerate-device-files*
+	List known devices.
+
+# SEE ALSO
+
+*udevil*(1)
+
+Instruction and updates:++
+http://igurublog.wordpress.com/downloads/script-devmon/
+
+# AUTHORS
+
+This manual page was written by for Zeppe-Lin by Alexandr Savca
+<alexandr.savca89@gmail.com> and can be used by other projects.
+
+; vim: ft=scdoc cc=72 tw=70

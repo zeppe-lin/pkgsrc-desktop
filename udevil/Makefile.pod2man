@@ -1,9 +1,0 @@
-all: devmon.1 udevil.1
-
-%: %.pod
-	pod2man -r "udevil ${VERSION}" -c "" \
-		-n $(basename $@) -s $(subst .,,$(suffix $@)) $< > $@
-
-install: all
-	mkdir -p ${DESTDIR}${MANPREFIX}/man1
-	cp -f devmon.1 udevil.1 ${DESTDIR}${MANPREFIX}/man1/
