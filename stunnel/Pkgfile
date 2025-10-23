@@ -3,7 +3,7 @@
 # Depends on:  libnsl openssl zlib
 
 name=stunnel
-version=5.75
+version=5.76
 release=1
 source="https://ftp.nluug.nl/pub/networking/$name/archive/${version%%.*}.x/$name-$version.tar.gz
 	$name.conf
@@ -12,21 +12,21 @@ source="https://ftp.nluug.nl/pub/networking/$name/archive/${version%%.*}.x/$name
 build() {
 	mkdir build; cd build
 
-	../$name-$version/configure    \
-		--prefix=/usr          \
-		--bindir=/usr/sbin     \
-		--sysconfdir=/etc      \
-		--localstatedir=/var   \
-		--runstatedir=/run     \
-		--with-ssl=/usr        \
-		--disable-fips         \
-		--disable-systemd      \
-		--disable-libwrap      \
-		--enable-ipv6          \
+	../$name-$version/configure \
+		--prefix=/usr \
+		--bindir=/usr/sbin \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--runstatedir=/run \
+		--with-ssl=/usr \
+		--disable-fips \
+		--disable-systemd \
+		--disable-libwrap \
+		--enable-ipv6 \
 
 	make V=1
 	make DESTDIR=$PKG install
-	
+
 	# config
 	install -m 0644 -Dt $PKG/etc/stunnel $SRC/$name.conf
 
