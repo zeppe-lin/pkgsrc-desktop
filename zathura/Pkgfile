@@ -1,44 +1,45 @@
 # Description: Highly customizable and functional document viewer
 # URL:         https://pwmt.org/projects/zathura
-# Depends on:  girara json-glib
+# Depends on:  girara json-glib sqlite3
 
 name=zathura
-version=0.5.13
+version=0.5.14
 release=1
 source="$name-$version.tar.gz::https://github.com/pwmt/$name/archive/refs/tags/$version.tar.gz
-	remove_gettext.patch"
+	no-gettext.patch"
 
 build() {
-	# remove gettext dependency
-	patch -d $name-$version -p0 -i $SRC/remove_gettext.patch
+	# Remove gettext dependency
+	patch -d $name-$version -Np0 -i $SRC/no-gettext.patch
 
-	# disable building doc and tests
-	sed -e "/^subdir('doc')/d"        \
-	    -e "/^subdir('tests')/d"      \
+	# Disable building docs and tests
+	sed -e "/^subdir('doc')/d" \
+	    -e "/^subdir('tests')/d" \
 	    -i $name-$version/meson.build
 
-	# -D manpages=disabled: otherwise requires sphinx
-	# -D convert-icon=disabled: otherwise requires librsvg-compat
-	meson setup build $name-$version  \
-		--prefix=/usr             \
-		--sysconfdir=/usr/etc     \
-		--buildtype=plain         \
-		--wrap-mode=nodownload    \
-		-D b_lto=true             \
-		-D b_pie=true             \
-		-D synctex=disabled       \
-		-D seccomp=disabled       \
-		-D landlock=disabled      \
-		-D tests=disabled         \
-		-D manpages=disabled      \
-		-D convert-icon=disabled  \
+	# Build flags:
+	# manpages=disabled - otherwise requires sphinx
+	# convert-icon=disabled - otherwise requires librsvg-compat
+	meson setup build $name-$version \
+		--prefix=/usr \
+		--sysconfdir=/usr/etc \
+		--buildtype=plain \
+		--wrap-mode=nodownload \
+		-D b_lto=true \
+		-D b_pie=true \
+		-D synctex=disabled \
+		-D seccomp=disabled \
+		-D landlock=disabled \
+		-D tests=disabled \
+		-D manpages=disabled \
+		-D convert-icon=disabled \
 
 	ninja -C build -j ${JOBS:-1} -v
 	DESTDIR=$PKG ninja -C build install
 
-	# remove fish and zsh completion
+	# Remove fish and zsh completion
 	rm -r $PKG/usr/share/fish $PKG/usr/share/zsh
 
-	# remove unnecessary dbus junk and icons for desktop file
+	# Remove unnecessary dbus junk and icons for desktop file
 	#rm -r $PKG/usr/share/dbus-1 $PKG/usr/share/icons
 }

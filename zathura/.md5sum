@@ -1,2 +1,2 @@
-e193051e1ad92e9fba66d0f79f2db2bc  remove_gettext.patch
-1b406020465a7264cd0d379d50c4fb99  zathura-0.5.13.tar.gz
+e193051e1ad92e9fba66d0f79f2db2bc  no-gettext.patch
+53e5ea55724ad0b2a092c96c85148d4e  zathura-0.5.14.tar.gz
