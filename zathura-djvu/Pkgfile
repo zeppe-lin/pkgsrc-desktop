@@ -3,21 +3,25 @@
 # Depends on:  desktop-file-utils djvulibre zathura
 
 name=zathura-djvu
-version=0.2.10
-release=2
+version=0.2.11
+release=1
 source=https://pwmt.org/projects/$name/download/$name-$version.tar.xz
 
 build() {
-	meson setup build $name-$version  \
-		--prefix=/usr             \
-		--sysconfdir=/usr/etc     \
-		--buildtype=plain         \
-		--wrap-mode=nodownload    \
-		-D b_lto=true             \
-		-D b_pie=true             \
+	meson setup build $name-$version \
+		--prefix=/usr \
+		--sysconfdir=/usr/etc \
+		--buildtype=plain \
+		--wrap-mode=nodownload \
+		-D b_lto=true \
+		-D b_pie=true \
 
 	ninja -C build -j ${JOBS:-1} -v
 	DESTDIR=$PKG ninja -C build install
 
+	# fix perms
 	find $PKG -perm /go+w -exec chmod go-w {} \;
+
+	# remove junk
+	rm -r $PKG/usr/share/metainfo
 }
