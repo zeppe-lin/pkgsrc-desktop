@@ -4,7 +4,7 @@
 # Optional:    avahi qt5 sane
 
 name=libreoffice-bin
-version=25.2.4
+version=25.8.2
 release=1
 source=https://mirrors.hostico.ro/tdf/libreoffice/stable/$version/rpm/x86_64/LibreOffice_${version}_Linux_x86-64_rpm.tar.gz
 
@@ -13,21 +13,21 @@ build() {
 
 	for RPM in *.rpm; do
 		case $RPM in
-		           *-firebird-*)  ;;
-		     *-report-builder-*)  ;;
-		          *-mediawiki-*)  ;;
-		       *-onlineupdate-*)  ;;
-		    *-kde-integration-*)  ;;
-		         *-postgresql-*)  ;;
-		          *-nlpsolver-*)  ;;
-		           *-ooofonts-*)  ;;
-		      *-ooolinguistic-*)  ;;
-		           *-ogltrans-*)  ;;
-		         *-javascript-*)  ;;
-		          *-beanshell-*)  ;;
-		            *-dict-es-*)  ;;
-		            *-dict-fr-*)  ;;
-		          *-dict-en-*|*)  bsdtar -p -C $PKG -xf "$RPM"  ;;
+		           *-firebird-*) ;;
+		     *-report-builder-*) ;;
+		          *-mediawiki-*) ;;
+		       *-onlineupdate-*) ;;
+		    *-kde-integration-*) ;;
+		         *-postgresql-*) ;;
+		          *-nlpsolver-*) ;;
+		           *-ooofonts-*) ;;
+		      *-ooolinguistic-*) ;;
+		           *-ogltrans-*) ;;
+		         *-javascript-*) ;;
+		          *-beanshell-*) ;;
+		            *-dict-es-*) ;;
+		            *-dict-fr-*) ;;
+		          *-dict-en-*|*) bsdtar -p -C $PKG -xf "$RPM" ;;
 		esac
 	done
 
@@ -43,11 +43,11 @@ build() {
 
 	# remove junk files
 	rm -rf $PKG/opt/libreoffice7.6/readmes
-	find $PKG -type f \(         \
-		   -name "README*"   \
-		-o -name "LICENSE*"  \
-		-o -name "NOTICE*"   \
-		-o -name "COPYING*"  \
+	find $PKG \( -type f \
+		   -name 'README*' \
+		-o -name 'LICENSE*' \
+		-o -name 'NOTICE*' \
+		-o -name 'COPYING*' \
+		-o -name 'wininst*.exe' \
 		\) -delete
-	find $PKG -name "wininst*.exe" -delete
 }
