@@ -92,8 +92,8 @@ drwxr-xr-x	root/root	usr/lib/cmake/crengine-ng/
 -rw-r--r--	root/root	usr/lib/cmake/crengine-ng/crengine-ng-targets-release.cmake
 -rw-r--r--	root/root	usr/lib/cmake/crengine-ng/crengine-ng-targets.cmake
 lrwxrwxrwx	root/root	usr/lib/libcrengine-ng.so -> libcrengine-ng.so.7
--rwxr-xr-x	root/root	usr/lib/libcrengine-ng.so.0.9.12
-lrwxrwxrwx	root/root	usr/lib/libcrengine-ng.so.7 -> libcrengine-ng.so.0.9.12
+-rwxr-xr-x	root/root	usr/lib/libcrengine-ng.so.0.9.13
+lrwxrwxrwx	root/root	usr/lib/libcrengine-ng.so.7 -> libcrengine-ng.so.0.9.13
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/crengine-ng.pc
 drwxr-xr-x	root/root	usr/share/
