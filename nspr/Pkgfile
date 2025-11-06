@@ -2,20 +2,20 @@
 # URL:         https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR
 
 name=nspr
-version=4.37
+version=4.38
 release=1
 source=https://ftp.mozilla.org/pub/nspr/releases/v$version/src/nspr-$version.tar.gz
 
 build() {
 	cd nspr-$version/nspr
 
-	./configure                             \
-		--prefix=/usr                   \
-		--libdir=/usr/lib               \
-		--includedir=/usr/include/nspr  \
-		--enable-optimize="$CFLAGS"     \
-		--enable-64bit                  \
-		--disable-debug                 \
+	./configure \
+		--prefix=/usr \
+		--libdir=/usr/lib \
+		--includedir=/usr/include/nspr \
+		--enable-optimize="$CFLAGS" \
+		--enable-64bit \
+		--disable-debug \
 
 	make V=1
 	make DESTDIR=$PKG install
@@ -35,7 +35,7 @@ Cflags: $(./config/nspr-config --cflags)
 EOF
 
 	# remove junk
-	rm -r $PKG/usr/bin/compile-et.pl     \
-	      $PKG/usr/bin/prerr.properties  \
+	rm -r $PKG/usr/bin/compile-et.pl \
+	      $PKG/usr/bin/prerr.properties \
 	      $PKG/usr/include/nspr/md
 }
