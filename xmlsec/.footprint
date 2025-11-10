@@ -2,6 +2,7 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/xmlsec1
 -rwxr-xr-x	root/root	usr/bin/xmlsec1-config
+-rwxr-xr-x	root/root	usr/bin/xmlsec_unit_tests
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/xmlsec1/
 drwxr-xr-x	root/root	usr/include/xmlsec1/xmlsec/
@@ -54,21 +55,21 @@ drwxr-xr-x	root/root	usr/include/xmlsec1/xmlsec/openssl/
 -rw-r--r--	root/root	usr/include/xmlsec1/xmlsec/xmltree.h
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libxmlsec1-gnutls.a
-lrwxrwxrwx	root/root	usr/lib/libxmlsec1-gnutls.so -> libxmlsec1-gnutls.so.1.3.8
-lrwxrwxrwx	root/root	usr/lib/libxmlsec1-gnutls.so.1 -> libxmlsec1-gnutls.so.1.3.8
--rwxr-xr-x	root/root	usr/lib/libxmlsec1-gnutls.so.1.3.8
+lrwxrwxrwx	root/root	usr/lib/libxmlsec1-gnutls.so -> libxmlsec1-gnutls.so.1.3.9
+lrwxrwxrwx	root/root	usr/lib/libxmlsec1-gnutls.so.1 -> libxmlsec1-gnutls.so.1.3.9
+-rwxr-xr-x	root/root	usr/lib/libxmlsec1-gnutls.so.1.3.9
 -rw-r--r--	root/root	usr/lib/libxmlsec1-nss.a
-lrwxrwxrwx	root/root	usr/lib/libxmlsec1-nss.so -> libxmlsec1-nss.so.1.3.8
-lrwxrwxrwx	root/root	usr/lib/libxmlsec1-nss.so.1 -> libxmlsec1-nss.so.1.3.8
--rwxr-xr-x	root/root	usr/lib/libxmlsec1-nss.so.1.3.8
+lrwxrwxrwx	root/root	usr/lib/libxmlsec1-nss.so -> libxmlsec1-nss.so.1.3.9
+lrwxrwxrwx	root/root	usr/lib/libxmlsec1-nss.so.1 -> libxmlsec1-nss.so.1.3.9
+-rwxr-xr-x	root/root	usr/lib/libxmlsec1-nss.so.1.3.9
 -rw-r--r--	root/root	usr/lib/libxmlsec1-openssl.a
-lrwxrwxrwx	root/root	usr/lib/libxmlsec1-openssl.so -> libxmlsec1-openssl.so.1.3.8
-lrwxrwxrwx	root/root	usr/lib/libxmlsec1-openssl.so.1 -> libxmlsec1-openssl.so.1.3.8
--rwxr-xr-x	root/root	usr/lib/libxmlsec1-openssl.so.1.3.8
+lrwxrwxrwx	root/root	usr/lib/libxmlsec1-openssl.so -> libxmlsec1-openssl.so.1.3.9
+lrwxrwxrwx	root/root	usr/lib/libxmlsec1-openssl.so.1 -> libxmlsec1-openssl.so.1.3.9
+-rwxr-xr-x	root/root	usr/lib/libxmlsec1-openssl.so.1.3.9
 -rw-r--r--	root/root	usr/lib/libxmlsec1.a
-lrwxrwxrwx	root/root	usr/lib/libxmlsec1.so -> libxmlsec1.so.1.3.8
-lrwxrwxrwx	root/root	usr/lib/libxmlsec1.so.1 -> libxmlsec1.so.1.3.8
--rwxr-xr-x	root/root	usr/lib/libxmlsec1.so.1.3.8
+lrwxrwxrwx	root/root	usr/lib/libxmlsec1.so -> libxmlsec1.so.1.3.9
+lrwxrwxrwx	root/root	usr/lib/libxmlsec1.so.1 -> libxmlsec1.so.1.3.9
+-rwxr-xr-x	root/root	usr/lib/libxmlsec1.so.1.3.9
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/xmlsec1-gnutls.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/xmlsec1-nss.pc
