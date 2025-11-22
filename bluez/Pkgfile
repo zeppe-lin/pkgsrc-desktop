@@ -4,7 +4,7 @@
 # Optional:    alsa-lib cups docutils json-c libical
 
 name=bluez
-version=5.84
+version=5.85
 release=1
 source="https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-$version.tar.xz
   	rc.bluetoothd
@@ -17,20 +17,20 @@ build() {
 	# --disable-manpages: otherwise requires docutils, pygments
 	# --enable-obex:      requires libical
 	# --enable-mesh:      requires json-c
-	../bluez-$version/configure    \
-		--prefix=/usr          \
-		--sysconfdir=/etc      \
-		--localstatedir=/var   \
-		--libexecdir=/usr/lib  \
-		--disable-cups         \
-		--disable-manpages     \
-		--disable-systemd      \
-		--enable-a2dp          \
-		--enable-experimental  \
-		--enable-library       \
-		--enable-midi          \
-		--enable-obex          \
-		--enable-tools         \
+	../bluez-$version/configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--libexecdir=/usr/lib \
+		--disable-cups \
+		--disable-manpages \
+		--disable-systemd \
+		--enable-a2dp \
+		--enable-experimental \
+		--enable-library \
+		--enable-midi \
+		--enable-obex \
+		--enable-tools \
 
 	make V=1
 	make DESTDIR=$PKG install
