@@ -3,8 +3,8 @@
 # Depends on:  alsa-lib dav1d fdk-aac gnutls gsm lame libass libtheora libva libvdpau opus x264 xorg-libxv
 
 name=ffmpeg
-version=7.1.2
-release=2
+version=7.1.3
+release=1
 source="https://ffmpeg.org/releases/$name-$version.tar.bz2
 	gcc-14.patch
 	ffmpeg.enabled
@@ -39,10 +39,8 @@ build() {
 		--enable-shared \
 		--enable-swresample \
 		--enable-version3 \
-		$(awk -F: '!/^($|#)/ {
-		if (system("pkgman isinst " $1 " >/dev/null 2>&1") == 0)
-			print $2
-		}' $SRC/ffmpeg.enabled) \
+		$(awk -F: '!/^($|#)/ && !system("pkgman isinst -- " $1 \
+		" >/dev/null 2>&1") { print $2 }' $SRC/ffmpeg.enabled) \
 		$(awk -F: '!/^($|#)/ { print $2 }' $SRC/ffmpeg.disabled)
 
 	make V=1
