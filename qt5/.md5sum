@@ -6,7 +6,8 @@
 00684445d97a2d82430bc9b3c14d1eee  qt-everywhere-opensource-src-5.15.11-kf5-1.patch
 0ab2115819f80e2c85bdea7d162df852  qt-everywhere-opensource-src-5.15.12-kf5-1.patch
 c897367a2e1ba01a68af10860cd64022  qt-everywhere-opensource-src-5.15.14-kf5-1.patch
-0265e7988790d8845441558130d59311  qt-everywhere-opensource-src-5.15.14.tar.xz
+1b9a3e209c8bf3685d60948e366694f0  qt-everywhere-opensource-src-5.15.17-kf5-1.patch
+5f212232bbc41f2eabbdee4fcbc4040e  qt-everywhere-opensource-src-5.15.17.tar.xz
 0d23ebc79edb4f53d154dc4b3f1c0402  qt-everywhere-opensource-src-5.15.7-kf5-1.patch
 cee71cc8d3e84232f6d03fd0f4c6865e  qt-everywhere-opensource-src-5.15.8-kf5-1.patch
 bfc114bfc210c5b5996941f7e186f8b3  qt5-cflags.patch

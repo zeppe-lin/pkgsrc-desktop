@@ -4,10 +4,9 @@
 # Optional:    bluez postgresql mysql
 
 name=qt5
-version=5.15.14
-release=2
+version=5.15.17
+release=1
 source="https://download.qt.io/archive/qt/5.15/$version/single/qt-everywhere-opensource-src-$version.tar.xz
-
 	0d9987b43e695f5202c5d69a5e42ab70a678b04f.patch
 	35d566724c48180c9a372c2ed50a253871a51574.patch
 	5a07e1967dcc925d9def47accadae991436b9686.patch
@@ -19,31 +18,39 @@ source="https://download.qt.io/archive/qt/5.15/$version/single/qt-everywhere-ope
 	qtbase-everywhere-src-5.14.2-no_relocatable.patch
 	qtbase-everywhere-src-5.15.2-libglvnd.patch
 	qtbase-use-wayland-on-gnome.patch
+	qt-everywhere-opensource-src-$version-kf5-1.patch
 	qt-everywhere-opensource-src-5.15.11-kf5-1.patch
 	qt-everywhere-opensource-src-5.15.12-kf5-1.patch
 	qt-everywhere-opensource-src-5.15.14-kf5-1.patch
 	qt-everywhere-opensource-src-5.15.7-kf5-1.patch
 	qt-everywhere-opensource-src-5.15.8-kf5-1.patch
 	qtlocation-fix-rapidjson-build.patch
-
 	qt5-logo.png"
 
 build() {
+	# Warn if xkbcommon hasn’t been built with X11 support
 	if [ ! -e /usr/include/xkbcommon/xkbcommon-x11.h ]; then
-		printf '\e[31m%s\e[m\n' "libxkbcommon is not built with x11 support!"
-		printf '\e[31m%s\e[m\n' "qtx11extras will not be built!"
-		printf '\e[33m%s\e[m\n' "Install xkeyboard-config and rebuild libxkbcommon if you need that"
+		printf '\e[31m%s\e[m\n' \
+			"libxkbcommon is not built with x11 support!"
+		printf '\e[31m%s\e[m\n' \
+			"qtx11extras will not be built!"
+		printf '\e[33m%s\e[m\n' \
+			"Install xkeyboard-config and rebuild libxkbcommon if you need that"
 	fi
 
 	cd qt-everywhere-src-$version
 
+	# Apply core KF5 patch first
 	patch -p1 -i $SRC/qt-everywhere-opensource-src-$version-kf5-1.patch
 
+	# QtBase patches
 	patch -d qtbase -p1 -i $SRC/qt5-cflags.patch
 	patch -d qtbase -p1 -i $SRC/qtbase-everywhere-src-5.14.2-no_relocatable.patch
 	patch -d qtbase -p1 -i $SRC/qtbase-everywhere-src-5.15.2-libglvnd.patch
 	patch -d qtbase -p1 -i $SRC/qtbase-use-wayland-on-gnome.patch
 	patch -d qtbase -p1 -i $SRC/qtbase-5.15.8-fix-missing-qtsan-include.patch
+
+	# QtLocation + Mapbox
 	patch -d qtlocation -p1 -i $SRC/qtlocation-fix-rapidjson-build.patch
 	patch -d qtlocation/src/3rdparty/mapbox-gl-native -p1 -i $SRC/d8054f1efa0b97b291a6f8c7fff9090b0fd4328e.patch
 	patch -d qtlocation/src/3rdparty/mapbox-gl-native -p1 -i $SRC/5a07e1967dcc925d9def47accadae991436b9686.patch
@@ -73,70 +80,77 @@ build() {
 		patch -d qtquick3d -p1 -i $SRC/qt5-quick3d-assimp-5.1.patch
 	fi
 
-	sed -i '/utility/a     #include <limits>' qtbase/src/corelib/global/qglobal.h
-	sed -i '/string/a      #include <limits>' qtbase/src/corelib/global/qfloat16.h
-	sed -i '/qbytearray/a  #include <limits>' qtbase/src/corelib/text/qbytearraymatcher.h
-	sed -i '/type_traits/a #include <limits>' qtdeclarative/src/qmldebug/qqmlprofilerevent_p.h
+	# Fix missing <limits> includes
+	sed -i '/utility/a     #include <limits>' \
+		qtbase/src/corelib/global/qglobal.h
+	sed -i '/string/a      #include <limits>' \
+		qtbase/src/corelib/global/qfloat16.h
+	sed -i '/qbytearray/a  #include <limits>' \
+		qtbase/src/corelib/text/qbytearraymatcher.h
+	sed -i '/type_traits/a #include <limits>' \
+		qtdeclarative/src/qmldebug/qqmlprofilerevent_p.h
 
-	./configure $PKGMK_QT5                                \
-		-prefix /usr/                                 \
-		-archdatadir /usr/lib/qt5                     \
-		-bindir /usr/lib/qt5/bin                      \
-		-plugindir /usr/lib/qt5/plugins               \
-		-importdir /usr/lib/qt5/imports               \
-		-datadir /usr/share/qt5                       \
-		-docdir /usr/share/doc/qt5                    \
-		-translationdir /usr/share/qt5/translations   \
-		-examplesdir /usr/share/doc/qt5/examples      \
-		-headerdir /usr/include/qt5                   \
-		-libdir /usr/lib                              \
-		-sysconfdir /etc/xdg                          \
-		-confirm-license                              \
-		-nomake examples                              \
-		-no-pch                                       \
-		-no-feature-relocatable                       \
-		-no-rpath                                     \
-		-no-separate-debug-info                       \
-		-no-strip                                     \
-		-no-cups                                      \
-		-no-gstreamer                                 \
-		-opengl desktop                               \
-		-opensource                                   \
-		-openssl-linked                               \
-		-optimized-qmake                              \
-		-reduce-relocations                           \
-		-release                                      \
-		-shared                                       \
-		-qt-sqlite                                    \
-		-dbus-linked                                  \
-		-system-harfbuzz                              \
-		-system-libjpeg                               \
-		-system-libpng                                \
-		-system-pcre                                  \
-		-system-zlib                                  \
-		-skip qtwebengine                             \
-		QMAKE_CFLAGS_RELEASE="$CFLAGS"                \
-		QMAKE_CXXFLAGS_RELEASE="$CXXFLAGS"            \
-		QMAKE_LFLAGS_RELEASE="$LDFLAGS -fuse-ld=bfd"  \
+	./configure $PKGMK_QT5 \
+		-prefix /usr/ \
+		-archdatadir /usr/lib/qt5 \
+		-bindir /usr/lib/qt5/bin \
+		-plugindir /usr/lib/qt5/plugins \
+		-importdir /usr/lib/qt5/imports \
+		-datadir /usr/share/qt5 \
+		-docdir /usr/share/doc/qt5 \
+		-translationdir /usr/share/qt5/translations \
+		-examplesdir /usr/share/doc/qt5/examples \
+		-headerdir /usr/include/qt5 \
+		-libdir /usr/lib \
+		-sysconfdir /etc/xdg \
+		-confirm-license \
+		-nomake examples \
+		-no-pch \
+		-no-feature-relocatable \
+		-no-rpath \
+		-no-separate-debug-info \
+		-no-strip \
+		-no-cups \
+		-no-gstreamer \
+		-opengl desktop \
+		-opensource \
+		-openssl-linked \
+		-optimized-qmake \
+		-reduce-relocations \
+		-release \
+		-shared \
+		-qt-sqlite \
+		-dbus-linked \
+		-system-harfbuzz \
+		-system-libjpeg \
+		-system-libpng \
+		-system-pcre \
+		-system-zlib \
+		-skip qtwebengine \
+		QMAKE_CFLAGS_RELEASE="$CFLAGS" \
+		QMAKE_CXXFLAGS_RELEASE="$CXXFLAGS" \
+		QMAKE_LFLAGS_RELEASE="$LDFLAGS -fuse-ld=bfd" \
 
 	make V=1
 	make -j1 INSTALL_ROOT=$PKG install
 
-	# fix paths
+	# Strip paths from .prl files
 	find "$PKG/usr/lib" -type f -name '*.prl' -exec \
 		sed -e '/^QMAKE_PRL_BUILD_DIR/d' -i {} \;
 
+	# Fix build path in private PRI
 	sed -e "s|$PWD/qtbase|/usr/lib/qt5|g" -i \
 		$PKG/usr/lib/qt5/mkspecs/modules/qt_lib_bootstrap_private.pri
 
-	# install useful symlinks
+	# Symlink binaries to /usr/bin
 	mkdir -p $PKG/usr/bin
 	for f in $PKG/usr/lib/qt5/bin/*; do
-		ln -s ../lib/qt5/bin/"$(basename $f)" $PKG/usr/bin/"$(basename $f)-qt5"
-		ln -s ../lib/qt5/bin/"$(basename $f)" $PKG/usr/bin/"$(basename $f)"
+		ln -s ../lib/qt5/bin/"$(basename $f)" \
+			$PKG/usr/bin/"$(basename $f)-qt5"
+		ln -s ../lib/qt5/bin/"$(basename $f)" \
+			$PKG/usr/bin/"$(basename $f)"
 	done
 
-	mkdir -p $PKG/usr/share/applications
 
 	# Qt5 logo (requires imagemagick)
 	#convert qtdoc/doc/src/images/qt-logo.png -resize 48x48 \
@@ -151,6 +165,11 @@ build() {
 		$PKG/usr/share/icons/hicolor/32x32/apps/qt5-assistant.png
 	install -m 0644 -D qttools/src/assistant/assistant/images/assistant-128.png \
 		$PKG/usr/share/icons/hicolor/128x128/apps/qt5-assistant.png
+
+	# Desktop files follow...
+
+	mkdir -p $PKG/usr/share/applications
+
 	cat <<EOF > $PKG/usr/share/applications/qt5-assistant.desktop
 [Desktop Entry]
 Name=Qt5 Assistant
@@ -215,6 +234,6 @@ Type=Application
 Categories=Qt;Development;
 EOF
 
-	# remove junk
+	# Remove junk
 	rm -rf  $PKG/usr/share/doc
 }
