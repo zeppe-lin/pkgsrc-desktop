@@ -4,18 +4,19 @@
 
 name=qt5-styleplugins
 version=5.0.0-335dbec
-release=3
+release=4
 source="https://github.com/qt/qtstyleplugins/archive/${version#*-}/$name-$version.tar.gz
 	qt5.15.patch"
 
 build() {
-       cd qtstyleplugins-${version#*-}*
+	cd qtstyleplugins-${version#*-}*
 
-       patch -p1 -i $SRC/qt5.15.patch
+	patch -Np1 -i $SRC/qt5.15.patch
 
-       CCACHE_DISABLE=1 qmake-qt5 PREFIX="/usr"   \
-               QMAKE_CFLAGS_RELEASE="$CFLAGS"     \
-               QMAKE_CXXFLAGS_RELEASE="$CXXFLAGS" \
+	CCACHE_DISABLE=1 \
+		qmake-qt5 PREFIX="/usr" \
+		QMAKE_CFLAGS_RELEASE="$CFLAGS" \
+		QMAKE_CXXFLAGS_RELEASE="$CXXFLAGS" \
 
-       make INSTALL_ROOT=$PKG install
+	make INSTALL_ROOT=$PKG install
 }
