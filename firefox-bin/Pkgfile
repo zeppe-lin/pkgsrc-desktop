@@ -1,9 +1,9 @@
 # Description: Mozilla Firefox standalone web browser
 # URL:         https://www.mozilla.org/en-US/firefox/
 # Depends on:  alsa-lib dbus-glib desktop-file-utils gtk3 nss xorg-libxtst hicolor-icon-theme
-# Optional:    desktop-file-utils
 
-# NOTE: desktop-file-utils is required by post-install script
+# Maintainer notes on dependencies:
+#   desktop-file-utils: needed only by post-install script
 
 name=firefox-bin
 version=145.0.2

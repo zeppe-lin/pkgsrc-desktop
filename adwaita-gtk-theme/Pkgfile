@@ -1,7 +1,9 @@
 # Description: GTK2 theme matching the default GTK3 theme Adwaita
 # URL:         https://gitlab.gnome.org/Archive/gnome-themes-extra
 # Depends on:  gtk gtk3 intltool librsvg-compat
-# Optional:    gtk
+
+# Maintainer notes on dependencies:
+#   gtk: GTK2 engine support (enabled)
 
 name=adwaita-gtk-theme
 version=3.28
@@ -9,19 +11,23 @@ release=1
 source=https://gitlab.gnome.org/Archive/gnome-themes-extra/-/archive/$version/gnome-themes-extra-$version.tar.gz
 
 build() {
-	if ! pkgman isinst gtk; then
-		PKGMK_GTK_THEME_ADWAITA="$PKGMK_THEME_ADWAITA --disable-gtk2-engine"
+	# If GTK2 is not installed, disable GTK2 engine
+	if ! pkgman isinst gtk >/dev/null 2>&1; then
+		_autoconf_flags="--disable-gtk2-engine"
 	fi
 
-	sed -i 's/HighContrast//' gnome-themes-extra-$version/themes/Makefile.am
+	# Remove HighContrast theme from build
+	sed -i 's/HighContrast//' \
+		gnome-themes-extra-$version/themes/Makefile.am
 
 	mkdir build; cd build
 
-	autoreconf -fi ../gnome-themes-extra-$version
-	../gnome-themes-extra-$version/configure  \
-		--prefix=/usr                     \
-		--disable-glibtest                \
-		--disable-nls                     \
+	autoreconf -fiv ../gnome-themes-extra-$version
+	../gnome-themes-extra-$version/configure \
+		--prefix=/usr \
+		--disable-glibtest \
+		--disable-nls \
+		$_autoconf_flags \
 
 	make V=1
 	make DESTDIR=$PKG install

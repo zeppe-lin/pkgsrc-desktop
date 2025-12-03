@@ -1,7 +1,12 @@
 # Description: Multi-panel tabbed file manager
 # URL:         https://gitlab.com/skidoo/zzzfm
 # Depends on:  desktop-file-utils ffmpegthumbnailer gtk ktsuss
-# Optional:    ktsuss
+
+# Maintainer notes on dependencies:
+#   desktop-file-utils: Needed for post-install scripts (enabled)
+#   ffmpegthumbnailer: Video thumbnails support (enabled)
+#   gtk3: GTK3 GUI support (disabled by default)
+#   ktsuss: Needed to run with elevated privileges (enabled)
 
 name=zzzfm
 version=1.0.7.5-c7e340f
@@ -16,7 +21,8 @@ build() {
 	# switch from default gksu to ktsuss
 	patch -d $name-$_commit -Np1 -i $SRC/gksu-ktsuss.patch
 
-	if ! pkgman isinst ffmpegthumbnailer; then
+	# Optional feature flags
+	if ! pkgman isinst ffmpegthumbnailer >/dev/null 2>&1; then
 		PKGMK_ZZZFM="$PKGMK_ZZZFM --disable-video-thumbnails"
 	fi
 
@@ -27,15 +33,15 @@ build() {
 	mkdir build; cd build
 
 	NOCONFIGURE=1 ../$name-$_commit/autogen.sh
-	../$name-$_commit/configure  \
-		--prefix=/usr        \
-		--disable-nls        \
-		$PKGMK_ZZZFM         \
-		#--with-gtk3         \
+	../$name-$_commit/configure \
+		--prefix=/usr \
+		--disable-nls \
+		$PKGMK_ZZZFM \
+		#--with-gtk3
 
 	make V=1
 	make DESTDIR=$PKG install
 
-	# remove junk
+	# Cleanup
 	rm -r $PKG/usr/share/doc
 }

@@ -1,7 +1,12 @@
 # Description: Library for a new image format comparable to JPEG
 # URL:         https://developers.google.com/speed/webp/
 # Depends on:  giflib libjpeg-turbo libpng
-# Optional:    libjpeg-turbo libtiff freeglut libsdl
+
+# Maintainer notes on dependencies:
+#   libjpeg-turbo (enabled by default)
+#   --disable-gl or needs freeglut (disabled)
+#   --disable-sdl or needs libsdl/libsdl2 (disabled)
+#   --disable-tiff or needs libtiff (disabled)
 
 name=libwebp
 version=1.6.0
@@ -11,18 +16,15 @@ source=https://storage.googleapis.com/downloads.webmproject.org/releases/webp/$n
 build() {
 	mkdir build; cd build
 
-	# --disable-gl:   otherwise requires freeglut
-	# --disable-tiff: otherwise requires libtiff
-	# --disable-sdl:  otherwise requires libsdl or libsdl2
-	../${name%-*}-$version/configure  \
-		--prefix=/usr             \
-		--disable-gl              \
-		--disable-sdl             \
-		--disable-tiff            \
-		--enable-libwebpdecoder   \
-		--enable-libwebpdemux     \
-		--enable-libwebpmux       \
-		--enable-static           \
+	../${name%-*}-$version/configure \
+		--prefix=/usr \
+		--disable-gl \
+		--disable-sdl \
+		--disable-tiff \
+		--enable-libwebpdecoder \
+		--enable-libwebpdemux \
+		--enable-libwebpmux \
+		--enable-static \
 
 	make V=1
 	make DESTDIR=$PKG install

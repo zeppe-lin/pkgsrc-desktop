@@ -1,7 +1,11 @@
 # Description: Qt Free Edition, version 5.x
 # URL:         https://www.qt.io/
 # Depends on:  bluez gtk3 libinput libpcre2 libxkbcommon mysql postgresql xorg-libsm xorg-xcb-util-image xorg-xcb-util-keysyms xorg-xcb-util-renderutil xorg-xcb-util-wm
-# Optional:    bluez postgresql mysql
+
+# Maintainer notes on dependencies:
+#   bluez: (enabled)
+#   postgresql: (enabled)
+#   mysql: (enabled)
 
 name=qt5
 version=5.15.17

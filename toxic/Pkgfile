@@ -1,7 +1,11 @@
 # Description: CLI Tox client
 # URL:         https://github.com/JFreegman/toxic
 # Depends on:  curl libconfig toxcore xorg-libx11
-# Optional:    libnotify qrencode openal freealut python3 asciidoc
+
+# Maintainer notes on dependencies:
+#   DISABLE_QRCODE/QRPNG or needs qrencode (disabled)
+#   DISABLE_DESKTOP_NOTIFY or needs libnotify/dbus (disabled)
+#   DISABLE_AV/VI or needs libvpx/opus: Audio/Video (disabled)
 
 name=toxic
 version=0.16.1
@@ -14,6 +18,7 @@ source="https://github.com/JFreegman/$name/archive/v$version/$name-$version.tar.
 build() {
 	cd $name-$version
 
+	# Preserve user CFLAGS/LDFLAGS
 	export USER_CFLAGS="$CFLAGS"
 	export USER_LDFLAGS="$LDFLAGS -pthread"
 
@@ -21,23 +26,23 @@ build() {
 	patch -Np1 -i $SRC/no-extra-flags.patch
 	patch -Np1 -i $SRC/no-install-rebuild.patch
 
-	# set install directory to /usr, verbose build
+	# Use /usr instead of /usr/local and clean up compiler calls
 	sed -i 's|/usr/local|/usr|g' cfg/global_vars.mk
 	sed -i 's|@$(CC) |$(CC) |g'  Makefile
 
-	# disable optional features
+	# Disable optional features:
 	export DISABLE_GAMES=1           # games
-	export DISABLE_QRCODE=1          # qrcode
-	export DISABLE_QRPNG=1           # qrcode
-	export DISABLE_DESKTOP_NOTIFY=1  # dbus
-	export DISABLE_AV=1              # sound
-	export DISABLE_SOUND_NOTIFY=1    # sound
+	export DISABLE_QRCODE=1          # QR code, needs qrencode
+	export DISABLE_QRPNG=1           # QR code, needs qrencode
+	export DISABLE_DESKTOP_NOTIFY=1  # notifications, needs libnotify/dbus
+	export DISABLE_AV=1              # audio
+	export DISABLE_SOUND_NOTIFY=1    # sound notifications
 	export DISABLE_VI=1              # video
 
 	make PREFIX=/usr
 	make DESTDIR=$PKG install
 
-	# remove junk
+	# Remove junk
 	#rm -f $PKG/usr/share/toxic/toxic.conf.example
 	#rm -rf $PKG/usr/share/toxic/sounds
 	#rm -rf $PKG/usr/share/applications

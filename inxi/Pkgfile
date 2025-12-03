@@ -1,6 +1,9 @@
 # Description: System information script
 # URL:         https://codeberg.org/smxi/inxi
-# Optional:    xorg-xprop xorg-xdpyinfo xorg-xrandr lm-sensors
+
+# Maintainer notes on dependencies:
+#   xorg-xprop xorg-xdpyinfo xorg-xrandr lm-sensors:
+#     better info gathering (disabled)
 
 name=inxi
 version=3.3.40-1

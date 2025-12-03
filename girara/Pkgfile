@@ -1,7 +1,10 @@
 # Description: UI library focusing on simplicity and minimalism
 # URL:         https://pwmt.org/projects/girara
 # Depends on:  gtk3
-# Optional:    json-glib
+
+# Maintainer notes on dependencies:
+#   docs=disabled: API docs, needs doxygen (disabled)
+#   json=disabled: JSON config dumping, needs json-glib (disabled)
 
 name=girara
 version=0.4.5
@@ -9,27 +12,24 @@ release=1
 source=$name-$version.tar.gz::https://github.com/pwmt/$name/archive/refs/tags/$version.tar.gz
 
 build() {
-	# skip building tests, docs and i18n data
-	sed -e "/^subdir('tests')/d"    \
-	    -e "/^subdir('doc')/d"      \
-	    -e "/^subdir('po')/d"       \
+	# Skip tests, docs, and i18n
+	sed -e "/^subdir('tests')/d" \
+	    -e "/^subdir('doc')/d" \
+	    -e "/^subdir('po')/d" \
 	    -i $name-$version/meson.build
 
-	# -D docs=disabled: disable doxygen API docs
-	# -D json=disabled: disable dumping configuration using JSON,
-	#    requires json-glib
-	meson setup build $name-$version  \
-		--prefix=/usr             \
-		--sysconfdir=/usr/etc     \
-		--buildtype=plain         \
-		--wrap-mode=nodownload    \
-		-D b_lto=true             \
-		-D b_pie=true             \
-		-D docs=disabled          \
-		-D json=disabled          \
-		-D tests=disabled         \
+	meson setup build $name-$version \
+		--prefix=/usr \
+		--sysconfdir=/usr/etc \
+		--buildtype=plain \
+		--wrap-mode=nodownload \
+		-D b_lto=true \
+		-D b_pie=true \
+		-D docs=disabled \
+		-D json=disabled \
+		-D tests=disabled \
 
-	# remove default -pipe flag
+	# Remove default -pipe flag
 	sed -i 's, -pipe , ,g' build/compile_commands.json build/build.ninja
 
 	ninja -C build -j ${JOBS:-1} -v

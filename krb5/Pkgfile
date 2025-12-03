@@ -1,7 +1,10 @@
 # Description: Network Authentication Protocol
 # URL:         https://web.mit.edu/kerberos
 # Depends on:  e2fsprogs openssl
-# Optional:    keyutils openldap
+
+# Maintainer notes on dependencies:
+#   openldap: LDAP backend support (enabled if installed)
+#   keyutils: Kernel key support (enabled if installed)
 
 name=krb5
 version=1.21.3
@@ -15,44 +18,51 @@ source="https://kerberos.org/dist/krb5/${version%.*}/krb5-$version.tar.gz
 build() {
 	cd $name-$version/src
 
+	# Fix local path in autoconf check
 	sed -i "/KRB5ROOT=/s/\/local//" util/ac_check_krb5.m4
 
+	# Optional features
 	pkgman isinst openldap && PKGMK_KRB5="$PKGMK_KRB5 --with-ldap"
 	pkgman isinst keyutils || PKGMK_KRB5="$PKGMK_KRB5 --without-keyutils"
 
-	./configure $PKGMK_KRB5          \
-		--prefix=/usr            \
-		--localstatedir=/var     \
-		--runstatedir=/run       \
-		--enable-shared          \
-		--disable-rpath          \
-		--disable-nls            \
-		--with-system-et         \
-		--with-system-ss         \
-		--without-system-verto   \
-		--enable-dns-for-realm   \
+	./configure $PKGMK_KRB5 \
+		--prefix=/usr \
+		--localstatedir=/var \
+		--runstatedir=/run \
+		--enable-shared \
+		--disable-rpath \
+		--disable-nls \
+		--with-system-et \
+		--with-system-ss \
+		--without-system-verto \
+		--enable-dns-for-realm \
 
 	make V=1
 	make DESTDIR=$PKG install
 
-	# move essential libs and the ksu binary from /usr to /
+	# Move essential binaries and libs from /usr to root
 	mkdir -p $PKG/bin $PKG/lib
 	mv $PKG/usr/bin/ksu                   $PKG/bin
 	mv $PKG/usr/lib/libkrb5.so.3*         $PKG/lib
 	mv $PKG/usr/lib/libk5crypto.so.3*     $PKG/lib
 	mv $PKG/usr/lib/libkrb5support.so.0*  $PKG/lib
 
-	ln -sf ../../lib/$(readlink $PKG/usr/lib/libkrb5.so)        $PKG/usr/lib/libkrb5.so
-	ln -sf ../../lib/$(readlink $PKG/usr/lib/libk5crypto.so)    $PKG/usr/lib/libk5crypto.so
-	ln -sf ../../lib/$(readlink $PKG/usr/lib/libkrb5support.so) $PKG/usr/lib/libkrb5support.so
+	# Symlink for compatibility
+	ln -sf ../../lib/$(readlink $PKG/usr/lib/libkrb5.so) \
+		$PKG/usr/lib/libkrb5.so
+	ln -sf ../../lib/$(readlink $PKG/usr/lib/libk5crypto.so) \
+		$PKG/usr/lib/libk5crypto.so
+	ln -sf ../../lib/$(readlink $PKG/usr/lib/libkrb5support.so) \
+		$PKG/usr/lib/libkrb5support.so
 
+	# Install aclocal macro
 	install -m 0644 -Dt $PKG/usr/share/aclocal util/ac_check_krb5.m4
 
-	# services
+	# Install service scripts
 	for f in kadmind kpropd krb5 krb5kdc; do
 		install -m 0755 -D $SRC/rc.$f $PKG/etc/rc.d/$f
 	done
 
-	# cleanup
+	# Cleanup unnecessary files
 	rm -r $PKG/usr/share/examples $PKG/usr/share/man/cat* $PKG/run
 }

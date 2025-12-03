@@ -1,7 +1,9 @@
 # Description: Monitor configuration tool
 # URL:         https://github.com/lxde/lxrandr
 # Depends on:  gtk xorg-xrandr
-# Optional:    gtk3
+
+# Maintainer notes on dependencies:
+#   gtk3: GTK3 GUI support (disabled by default)
 
 name=lxrandr
 version=0.3.3
@@ -9,22 +11,21 @@ release=1
 source=$name-$version.tar.gz::https://github.com/lxde/$name/archive/refs/tags/$version.tar.gz
 
 build() {
-	# disable i18n
+	# Disable i18n
 	export LINGUAS=' '
 
-	# Don't place OnlyShowIn=LXDE into ~/.config/autostart/lxrandr.desktop.
-	# That allows to run autostart entries by dapper.
+	# Remove OnlyShowIn=LXDE from autostart entry (makes DE-agnostic)
 	sed -i '/g_key_file_set_string( kf, grp, "OnlyShowIn", "LXDE" )/d' \
 		$name-$version/src/lxrandr.c
 
 	mkdir build; cd build
 
-	autoreconf -fi ../$name-$version
-	../$name-$version/configure  \
-		--prefix=/usr        \
-		--sysconfdir=/etc    \
-		--disable-nls        \
-		#--enable-gtk3       \
+	autoreconf -fiv ../$name-$version
+	../$name-$version/configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--disable-nls \
+		#--enable-gtk3 \
 
 	make V=1
 	make DESTDIR=$PKG install

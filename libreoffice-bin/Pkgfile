@@ -1,7 +1,11 @@
 # Description: Office productivity suite
 # URL:         https://www.libreoffice.org/
 # Depends on:  gtk3 freetype cups nss nspr krb5
-# Optional:    avahi qt5 sane
+
+# Maintainer notes on dependencies:
+#   avahi: Discover network services (enabled if installed)
+#   qt5: KDE/Qt integration (enabled if installed)
+#   sane: Scanner support (enabled if installed)
 
 name=libreoffice-bin
 version=25.8.2
@@ -31,17 +35,17 @@ build() {
 		esac
 	done
 
-	# fix "error while loading shared libraries: libxml2.so.2"
+	# Fix "error while loading shared libraries: libxml2.so.2"
 	cd $PKG/opt/libreoffice*/program
 	ln -s ../../../usr/lib/libxml2.so libxml2.so.2
 
-	# fix perms
+	# Fix perms
 	find $PKG -type d -perm 700 -exec chmod 755 {} +
 
-	# remove i18n entries
+	# Remove i18n entries
 	sed -ri '/\[.+\]=/d' $PKG/opt/libreoffice*/share/xdg/*.desktop
 
-	# remove junk files
+	# Remove junk files
 	rm -rf $PKG/opt/libreoffice7.6/readmes
 	find $PKG \( -type f \
 		   -name 'README*' \

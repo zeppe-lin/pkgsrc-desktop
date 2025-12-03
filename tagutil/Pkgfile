@@ -1,7 +1,12 @@
 # Description: Command-line tool for editing audio file tags
 # URL:         https://github.com/kaworu/tagutil
 # Depends on:  flac libvorbis libyaml taglib zlib
-# Optional:    jansson flac libvorbis taglib
+
+# Maintainer notes on dependencies:
+#   WITH_FLAC needs flac to handle flac files (enabled)
+#   WITH_OGGVORBIS needs libvorbis to handle ogg/vorbis files (enabled)
+#   WITH_TAGLIB needs taglib as generic backed for tag editing (enabled)
+#   WITH_JSON needs jansson for JSON output format support (disabled)
 
 name=tagutil
 version=3.1
@@ -12,16 +17,17 @@ source="https://github.com/kaworu/$name/archive/v$version/$name-v$version.tar.gz
 build() {
 	patch -d $name-$version -p0 -i $SRC/cmake.patch
 
-	cmake -S $name-$version/src -B build           \
-		-D PREFIX=/usr                         \
-		-D CMAKE_BUILD_TYPE=Release            \
-		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS"     \
-		-D WITH_TAGLIB=yes                     \
-		-D WITH_FLAC=yes                       \
-		-D WITH_OGGVORBIS=yes                  \
-		-D WITH_ID3V1=yes                      \
-		-D WITH_JSON=no                        \
-		-Wno-dev                               \
+	#  WITH_ID3V1=yes: stock tag backend for Winamp extended list
+	cmake -S $name-$version/src -B build \
+		-D PREFIX=/usr \
+		-D CMAKE_BUILD_TYPE=Release \
+		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+		-D WITH_FLAC=yes \
+		-D WITH_ID3V1=yes \
+		-D WITH_OGGVORBIS=yes \
+		-D WITH_TAGLIB=yes \
+		-D WITH_JSON=no \
+		-Wno-dev
 
 	make -C build VERBOSE=1
 	make -C build DESTDIR=$PKG install

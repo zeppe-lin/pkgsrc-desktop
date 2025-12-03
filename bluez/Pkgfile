@@ -1,22 +1,24 @@
 # Description: Bluetooth libraries and utilities
 # URL:         http://www.bluez.org/
 # Depends on:  alsa-lib dbus json-c libical
-# Optional:    alsa-lib cups docutils json-c libical
+
+# Maintainer notes on dependencies:
+#   --disable-cups: CUPS printer support, needs cups (disabled)
+#   --disable-manpages: Build man pages, needs docutils+pygments (disabled)
+#   --enable-obex: OBEX profile support, needs libical (enabled)
+#   --enable-mesh: Mesh profile support, needs json-c (enabled)
+#   --enable-midi: MIDI support, needs alsa-lib (enabled)
 
 name=bluez
 version=5.85
 release=1
 source="https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-$version.tar.xz
-  	rc.bluetoothd
+	rc.bluetoothd
 	modprobe.btusb.conf"
 
 build() {
 	mkdir build; cd build
 
-	# --disable-cups:     otherwise requires cups
-	# --disable-manpages: otherwise requires docutils, pygments
-	# --enable-obex:      requires libical
-	# --enable-mesh:      requires json-c
 	../bluez-$version/configure \
 		--prefix=/usr \
 		--sysconfdir=/etc \
@@ -35,21 +37,21 @@ build() {
 	make V=1
 	make DESTDIR=$PKG install
 
-	# config
+	# Configuration file
 	install -m 0644 -D ../bluez-$version/src/main.conf \
 		$PKG/etc/bluetooth/main.conf
 
-	# service
+	# Service script
 	install -m 0755 -D $SRC/rc.bluetoothd \
 		$PKG/etc/rc.d/bluetoothd
 
-	# modprobe
+	# Modprobe configuration
 	install -m 0644 -D $SRC/modprobe.btusb.conf \
 		$PKG/lib/modprobe.d/btusb.conf
 
-	# libical-related file
+	# libical-related utility
 	install -m 0755 -Dt $PKG/usr/lib/bluetooth tools/obexctl
 
-	# remove zsh completion
+	# Remove zsh completion
 	rm -r $PKG/usr/share/zsh
 }

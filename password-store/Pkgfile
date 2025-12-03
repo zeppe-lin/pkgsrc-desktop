@@ -1,7 +1,11 @@
 # Description: Standard unix password manager
 # URL:         https://www.passwordstore.org/
 # Depends on:  git gnupg tree xclip
-# Optional:    git xclip qrencode
+
+# Maintainer notes on dependencies:
+#   git: Use password-store as the git repository (enabled)
+#   xclip: Copy to clipboard support (enabled)
+#   qrencode: Display QR code (disabled)
 
 name=password-store
 version=1.7.4
