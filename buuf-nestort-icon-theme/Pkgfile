@@ -3,14 +3,14 @@
 # Depends on:  hicolor-icon-theme gnome-icon-theme
 
 name=buuf-nestort-icon-theme
-_commit=4733a1bea3ecee0127684dcfefcb4344bbf6824f
-version=2.0-4733a1b
+_commit=04c899acb794fbaa64b5dbd7ced2a3d078a157f3
+version=2.0-04c899a
 release=1
 source="$name-$version.tar.gz::https://git.disroot.org/eudaimon/buuf-nestort/archive/$_commit.tar.gz
 	icon-theme.cache"
 
 build() {
-	# remove junk before installing
+	# Remove junk before installing
 	rm buuf-nestort/*.sh buuf-nestort/*.md buuf-nestort/.git*
 
 	mkdir -p $PKG/usr/share/icons
@@ -20,7 +20,7 @@ build() {
 	sed -i '/^Inherits=/s/oxygen,//;s/,breeze//' \
 		$PKG/usr/share/icons/Buuf-Nestort/index.theme
 
-	# fix long-long-long name
+	# Fix long-long-long name
 	sed -i 's/Name=Buuf For Many Desktops/Name=Buuf-Nestort/' \
 		$PKG/usr/share/icons/Buuf-Nestort/index.theme
 
