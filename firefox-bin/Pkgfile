@@ -6,7 +6,7 @@
 #   desktop-file-utils: needed only by post-install script
 
 name=firefox-bin
-version=145.0.2
+version=146.0
 release=1
 source="https://ftp.mozilla.org/pub/firefox/releases/$version/linux-x86_64/en-US/firefox-$version.tar.xz
 	firefox.sh
