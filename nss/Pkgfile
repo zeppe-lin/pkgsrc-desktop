@@ -3,10 +3,10 @@
 # Depends on:  nspr sqlite3
 
 name=nss
-version=3.119
+version=3.119.1
 release=1
-source="https://ftp.mozilla.org/pub/security/nss/releases/NSS_$(
-	echo $version | tr . _)_RTM/src/nss-$version.tar.gz
+_pv=$(echo $version | tr . _)
+source="https://ftp.mozilla.org/pub/security/nss/releases/NSS_${_pv}_RTM/src/nss-${_pv}.tar.gz
 	nss-3.54-standalone-2.patch
 	nss-config.in
 	nss.pc.in
@@ -14,7 +14,7 @@ source="https://ftp.mozilla.org/pub/security/nss/releases/NSS_$(
 	nss-util.pc.in"
 
 build() {
-	cd nss-$version
+	cd nss-${_pv}
 
 	patch -Np1 -i $SRC/nss-3.54-standalone-2.patch
 
