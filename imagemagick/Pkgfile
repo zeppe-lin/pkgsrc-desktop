@@ -3,7 +3,7 @@
 # Depends on:  chrpath libjpeg-turbo libpng libtool libxml2 perl xorg-libxext xorg-libxt
 
 name=imagemagick
-version=7.1.2-10
+version=7.1.2-11
 release=1
 source=$name-$version.tar.gz::https://github.com/ImageMagick/ImageMagick/archive/refs/tags/$version.tar.gz
 
