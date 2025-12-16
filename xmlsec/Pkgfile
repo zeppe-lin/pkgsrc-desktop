@@ -1,16 +1,16 @@
 # Description: Toolkit for XML Digital Signature and Encryption
 # URL:         https://www.aleksey.com/xmlsec/index.html
-# Depends on:  gnutls libgcrypt libtool libxslt nss openssl
+# Depends on:  gnutls libtool libxslt nss openssl
 
 name=xmlsec
 version=1.3.9
-_version=$(echo $version | tr . _)
 release=1
-source="https://github.com/lsh123/$name/archive/refs/tags/xmlsec_$_version.tar.gz
+_tag_version=$(printf '%s\n' "$version" | tr . _)
+source="https://github.com/lsh123/$name/archive/refs/tags/xmlsec_$_tag_version.tar.gz
 	xmlsec-1.3.0-optimisation.patch"
 
 build() {
-	cd xmlsec-xmlsec_$_version
+	cd xmlsec-xmlsec_$_tag_version
 
 	patch -Np1 -i $SRC/xmlsec-1.3.0-optimisation.patch
 
@@ -22,11 +22,12 @@ build() {
 		--disable-static-linking \
 		--disable-docs \
 
-	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+	# Ensure --as-needed is applied to shared linker invocations
+	sed -i 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
 
 	make V=1
 	make DESTDIR=$PKG install
 
-	# remove junk
+	# Remove libtool archives
 	rm $PKG/usr/lib/*.la
 }
