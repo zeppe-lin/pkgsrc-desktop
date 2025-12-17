@@ -2,65 +2,783 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/themes/
 drwxr-xr-x	root/root	usr/share/themes/Greymond/
-drwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-2.0/
-drwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-2.0/assets/
--rw-rw-r--	root/root	usr/share/themes/Greymond/gtk-2.0/assets/menubar-item-active.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-2.0/gtkrc
-drwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/
-drwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/
--rw-rw-r--	root/root	usr/share/themes/Greymond/gtk-3.0/assets/button.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/checkbox-checked-active.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/checkbox-checked-disabled.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/checkbox-checked.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/checkbox-indeterminated-active.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/checkbox-indeterminated-disabled.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/checkbox-indeterminated.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/checkbox-unchecked-active.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/checkbox-unchecked-disabled.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/checkbox-unchecked.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/color-scale-slider-horizontal.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/color-scale-slider-vertical.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/paned-separator-horizontal.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/paned-separator-vertical.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/panel.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/radio-checked-active.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/radio-checked-disabled.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/radio-checked.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/radio-unchecked-active.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/radio-unchecked-disabled.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/radio-unchecked.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/scale-slider-horizontal.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/scale-slider-vertical.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/assets/window-decoration.png
--rw-rw-r--	root/root	usr/share/themes/Greymond/gtk-3.0/colors.css
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/gtk.css
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-3.0/settings.ini
-drwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/
-drwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/checkbox-checked-active.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/checkbox-checked-disabled.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/checkbox-checked.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/checkbox-indeterminated-active.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/checkbox-indeterminated-disabled.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/checkbox-indeterminated.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/checkbox-unchecked-active.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/checkbox-unchecked-disabled.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/checkbox-unchecked.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/color-scale-slider-horizontal.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/color-scale-slider-vertical.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/combobox-arrow-separator.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/paned-separator-horizontal.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/paned-separator-vertical.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/panel.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/radio-checked-active.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/radio-checked-disabled.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/radio-checked.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/radio-unchecked-active.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/radio-unchecked-disabled.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/radio-unchecked.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/scale-slider-horizontal.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/scale-slider-vertical.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/assets/window-decoration.png
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/gtk.css
--rwxrwxr-x	root/root	usr/share/themes/Greymond/gtk-4.0/settings.ini
--rw-rw-r--	root/root	usr/share/themes/Greymond/index.theme
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Asphalt/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-2.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-2.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-2.0/assets/menubar-item-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-2.0/gtkrc
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/checkbox-checked-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/checkbox-checked-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/checkbox-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/checkbox-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/checkbox-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/checkbox-indeterminate.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/checkbox-unchecked-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/checkbox-unchecked-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/checkbox-unchecked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/color-scale-slider-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/color-scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/paned-separator-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/paned-separator-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/panel.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/radio-checked-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/radio-checked-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/radio-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/radio-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/radio-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/radio-indeterminate.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/radio-unchecked-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/radio-unchecked-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/radio-unchecked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/scale-slider-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/assets/transparent.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/colors.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/gtk.css -> ../../Greymond/.gtk-3.0/gtk.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-3.0/settings.ini -> ../../Greymond/.gtk-3.0/settings.ini
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Asphalt/gtk-4.0 -> ../Greymond/.gtk-4.0
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-2.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-2.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-2.0/assets/menubar-item-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-2.0/gtkrc
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/checkbox-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/checkbox-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/checkbox-checked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/checkbox-indeterminate-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/checkbox-indeterminate-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/checkbox-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/checkbox-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/checkbox-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/checkbox-unchecked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/color-scale-slider-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/color-scale-slider-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/paned-separator-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/paned-separator-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/panel.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/radio-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/radio-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/radio-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/radio-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/radio-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/radio-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/radio-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/radio-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/radio-unchecked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/scale-slider-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/assets/transparent.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/colors.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/gtk.css -> ../../Greymond/.gtk-3.0/gtk.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-3.0/settings.ini -> ../../Greymond/.gtk-3.0/settings.ini
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Brick/gtk-4.0 -> ../Greymond/.gtk-4.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-2.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-2.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-2.0/assets/menubar-item-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-2.0/gtkrc
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/checkbox-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/checkbox-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/checkbox-checked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/checkbox-indeterminate-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/checkbox-indeterminate-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/checkbox-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/checkbox-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/checkbox-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/checkbox-unchecked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/color-scale-slider-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/color-scale-slider-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/paned-separator-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/paned-separator-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/panel.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/radio-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/radio-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/radio-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/radio-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/radio-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/radio-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/radio-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/radio-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/radio-unchecked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/scale-slider-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/assets/transparent.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/colors.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/gtk.css -> ../../Greymond/.gtk-3.0/gtk.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-3.0/settings.ini -> ../../Greymond/.gtk-3.0/settings.ini
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Classic/gtk-4.0 -> ../Greymond/.gtk-4.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-2.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-2.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-2.0/assets/menubar-item-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-2.0/gtkrc
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/checkbox-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/checkbox-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/checkbox-checked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/checkbox-indeterminate-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/checkbox-indeterminate-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/checkbox-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/checkbox-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/checkbox-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/checkbox-unchecked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/color-scale-slider-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/color-scale-slider-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/paned-separator-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/paned-separator-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/panel.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/radio-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/radio-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/radio-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/radio-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/radio-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/radio-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/radio-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/radio-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/radio-unchecked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/scale-slider-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/assets/transparent.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/colors.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/gtk.css -> ../../Greymond/.gtk-3.0/gtk.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-3.0/settings.ini -> ../../Greymond/.gtk-3.0/settings.ini
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Concrete/gtk-4.0 -> ../Greymond/.gtk-4.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-2.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-2.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-2.0/assets/menubar-item-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-2.0/gtkrc
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/checkbox-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/checkbox-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/checkbox-checked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/checkbox-indeterminate-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/checkbox-indeterminate-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/checkbox-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/checkbox-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/checkbox-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/checkbox-unchecked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/color-scale-slider-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/color-scale-slider-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/paned-separator-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/paned-separator-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/panel.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/radio-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/radio-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/radio-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/radio-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/radio-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/radio-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/radio-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/radio-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/radio-unchecked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/scale-slider-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/assets/transparent.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/colors.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/gtk.css -> ../../Greymond/.gtk-3.0/gtk.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-3.0/settings.ini -> ../../Greymond/.gtk-3.0/settings.ini
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Desert/gtk-4.0 -> ../Greymond/.gtk-4.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-2.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-2.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-2.0/assets/menubar-item-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-2.0/gtkrc
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/checkbox-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/checkbox-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/checkbox-checked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/checkbox-indeterminate-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/checkbox-indeterminate-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/checkbox-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/checkbox-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/checkbox-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/checkbox-unchecked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/color-scale-slider-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/color-scale-slider-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/paned-separator-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/paned-separator-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/panel.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/radio-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/radio-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/radio-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/radio-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/radio-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/radio-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/radio-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/radio-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/radio-unchecked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/scale-slider-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/assets/transparent.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/colors.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/gtk.css -> ../../Greymond/.gtk-3.0/gtk.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-3.0/settings.ini -> ../../Greymond/.gtk-3.0/settings.ini
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Driftwood/gtk-4.0 -> ../Greymond/.gtk-4.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-2.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-2.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-2.0/assets/menubar-item-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-2.0/gtkrc
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/checkbox-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/checkbox-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/checkbox-checked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/checkbox-indeterminate-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/checkbox-indeterminate-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/checkbox-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/checkbox-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/checkbox-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/checkbox-unchecked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/color-scale-slider-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/color-scale-slider-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/paned-separator-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/paned-separator-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/panel.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/radio-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/radio-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/radio-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/radio-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/radio-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/radio-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/radio-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/radio-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/radio-unchecked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/scale-slider-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/assets/transparent.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/colors.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/gtk.css -> ../../Greymond/.gtk-3.0/gtk.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-3.0/settings.ini -> ../../Greymond/.gtk-3.0/settings.ini
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Eggplant/gtk-4.0 -> ../Greymond/.gtk-4.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-2.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-2.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-2.0/assets/menubar-item-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-2.0/gtkrc
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/checkbox-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/checkbox-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/checkbox-checked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/checkbox-indeterminate-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/checkbox-indeterminate-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/checkbox-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/checkbox-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/checkbox-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/checkbox-unchecked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/color-scale-slider-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/color-scale-slider-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/paned-separator-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/paned-separator-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/panel.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/radio-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/radio-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/radio-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/radio-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/radio-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/radio-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/radio-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/radio-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/radio-unchecked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/scale-slider-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/assets/transparent.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/colors.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/gtk.css -> ../../Greymond/.gtk-3.0/gtk.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-3.0/settings.ini -> ../../Greymond/.gtk-3.0/settings.ini
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Lilac/gtk-4.0 -> ../Greymond/.gtk-4.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-2.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-2.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-2.0/assets/menubar-item-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-2.0/gtkrc
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/checkbox-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/checkbox-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/checkbox-checked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/checkbox-indeterminate-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/checkbox-indeterminate-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/checkbox-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/checkbox-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/checkbox-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/checkbox-unchecked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/color-scale-slider-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/color-scale-slider-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/paned-separator-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/paned-separator-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/panel.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/radio-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/radio-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/radio-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/radio-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/radio-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/radio-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/radio-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/radio-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/radio-unchecked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/scale-slider-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/assets/transparent.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/colors.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/gtk.css -> ../../Greymond/.gtk-3.0/gtk.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-3.0/settings.ini -> ../../Greymond/.gtk-3.0/settings.ini
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Maple/gtk-4.0 -> ../Greymond/.gtk-4.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-2.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-2.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-2.0/assets/menubar-item-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-2.0/gtkrc
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/checkbox-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/checkbox-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/checkbox-checked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/checkbox-indeterminate-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/checkbox-indeterminate-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/checkbox-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/checkbox-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/checkbox-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/checkbox-unchecked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/color-scale-slider-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/color-scale-slider-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/paned-separator-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/paned-separator-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/panel.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/radio-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/radio-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/radio-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/radio-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/radio-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/radio-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/radio-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/radio-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/radio-unchecked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/scale-slider-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/assets/transparent.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/colors.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/gtk.css -> ../../Greymond/.gtk-3.0/gtk.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-3.0/settings.ini -> ../../Greymond/.gtk-3.0/settings.ini
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Marine/gtk-4.0 -> ../Greymond/.gtk-4.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-2.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-2.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-2.0/assets/menubar-item-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-2.0/gtkrc
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/checkbox-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/checkbox-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/checkbox-checked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/checkbox-indeterminate-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/checkbox-indeterminate-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/checkbox-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/checkbox-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/checkbox-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/checkbox-unchecked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/color-scale-slider-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/color-scale-slider-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/paned-separator-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/paned-separator-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/panel.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/radio-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/radio-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/radio-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/radio-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/radio-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/radio-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/radio-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/radio-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/radio-unchecked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/scale-slider-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/assets/transparent.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/colors.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/gtk.css -> ../../Greymond/.gtk-3.0/gtk.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-3.0/settings.ini -> ../../Greymond/.gtk-3.0/settings.ini
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Plum/gtk-4.0 -> ../Greymond/.gtk-4.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-2.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-2.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-2.0/assets/menubar-item-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-2.0/gtkrc
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/checkbox-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/checkbox-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/checkbox-checked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/checkbox-indeterminate-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/checkbox-indeterminate-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/checkbox-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/checkbox-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/checkbox-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/checkbox-unchecked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/color-scale-slider-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/color-scale-slider-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/paned-separator-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/paned-separator-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/panel.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/radio-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/radio-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/radio-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/radio-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/radio-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/radio-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/radio-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/radio-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/radio-unchecked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/scale-slider-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/assets/transparent.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/colors.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/gtk.css -> ../../Greymond/.gtk-3.0/gtk.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-3.0/settings.ini -> ../../Greymond/.gtk-3.0/settings.ini
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Pumpkin/gtk-4.0 -> ../Greymond/.gtk-4.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-2.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-2.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-2.0/assets/menubar-item-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-2.0/gtkrc
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/checkbox-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/checkbox-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/checkbox-checked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/checkbox-indeterminate-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/checkbox-indeterminate-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/checkbox-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/checkbox-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/checkbox-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/checkbox-unchecked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/color-scale-slider-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/color-scale-slider-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/paned-separator-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/paned-separator-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/panel.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/radio-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/radio-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/radio-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/radio-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/radio-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/radio-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/radio-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/radio-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/radio-unchecked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/scale-slider-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/assets/transparent.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/colors.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/gtk.css -> ../../Greymond/.gtk-3.0/gtk.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-3.0/settings.ini -> ../../Greymond/.gtk-3.0/settings.ini
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Rainy Day/gtk-4.0 -> ../Greymond/.gtk-4.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Redmond/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-2.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-2.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-2.0/assets/menubar-item-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-2.0/gtkrc
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/checkbox-checked-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/checkbox-checked-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/checkbox-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/checkbox-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/checkbox-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/checkbox-indeterminate.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/checkbox-unchecked-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/checkbox-unchecked-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/checkbox-unchecked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/color-scale-slider-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/color-scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/paned-separator-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/paned-separator-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/panel.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/radio-checked-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/radio-checked-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/radio-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/radio-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/radio-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/radio-indeterminate.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/radio-unchecked-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/radio-unchecked-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/radio-unchecked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/scale-slider-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/assets/transparent.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/colors.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/gtk.css -> ../../Greymond/.gtk-3.0/gtk.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-3.0/settings.ini -> ../../Greymond/.gtk-3.0/settings.ini
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Redmond/gtk-4.0 -> ../Greymond/.gtk-4.0
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-2.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-2.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-2.0/assets/menubar-item-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-2.0/gtkrc
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/checkbox-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/checkbox-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/checkbox-checked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/checkbox-indeterminate-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/checkbox-indeterminate-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/checkbox-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/checkbox-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/checkbox-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/checkbox-unchecked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/color-scale-slider-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/color-scale-slider-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/paned-separator-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/paned-separator-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/panel.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/radio-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/radio-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/radio-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/radio-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/radio-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/radio-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/radio-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/radio-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/radio-unchecked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/scale-slider-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/assets/transparent.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/colors.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/gtk.css -> ../../Greymond/.gtk-3.0/gtk.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-3.0/settings.ini -> ../../Greymond/.gtk-3.0/settings.ini
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Rose/gtk-4.0 -> ../Greymond/.gtk-4.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-2.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-2.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-2.0/assets/menubar-item-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-2.0/gtkrc
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/checkbox-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/checkbox-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/checkbox-checked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/checkbox-indeterminate-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/checkbox-indeterminate-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/checkbox-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/checkbox-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/checkbox-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/checkbox-unchecked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/color-scale-slider-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/color-scale-slider-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/paned-separator-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/paned-separator-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/panel.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/radio-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/radio-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/radio-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/radio-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/radio-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/radio-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/radio-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/radio-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/radio-unchecked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/scale-slider-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/assets/transparent.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/colors.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/gtk.css -> ../../Greymond/.gtk-3.0/gtk.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-3.0/settings.ini -> ../../Greymond/.gtk-3.0/settings.ini
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Slate/gtk-4.0 -> ../Greymond/.gtk-4.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-2.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-2.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-2.0/assets/menubar-item-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-2.0/gtkrc
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/checkbox-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/checkbox-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/checkbox-checked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/checkbox-indeterminate-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/checkbox-indeterminate-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/checkbox-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/checkbox-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/checkbox-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/checkbox-unchecked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/color-scale-slider-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/color-scale-slider-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/paned-separator-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/paned-separator-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/panel.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/radio-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/radio-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/radio-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/radio-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/radio-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/radio-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/radio-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/radio-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/radio-unchecked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/scale-slider-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/assets/transparent.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/colors.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/gtk.css -> ../../Greymond/.gtk-3.0/gtk.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-3.0/settings.ini -> ../../Greymond/.gtk-3.0/settings.ini
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Spruce/gtk-4.0 -> ../Greymond/.gtk-4.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Storm/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-2.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-2.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-2.0/assets/menubar-item-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-2.0/gtkrc
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/checkbox-checked-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/checkbox-checked-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/checkbox-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/checkbox-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/checkbox-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/checkbox-indeterminate.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/checkbox-unchecked-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/checkbox-unchecked-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/checkbox-unchecked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/color-scale-slider-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/color-scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/paned-separator-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/paned-separator-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/panel.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/radio-checked-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/radio-checked-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/radio-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/radio-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/radio-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/radio-indeterminate.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/radio-unchecked-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/radio-unchecked-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/radio-unchecked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/scale-slider-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/assets/transparent.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/colors.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/gtk.css -> ../../Greymond/.gtk-3.0/gtk.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-3.0/settings.ini -> ../../Greymond/.gtk-3.0/settings.ini
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Storm/gtk-4.0 -> ../Greymond/.gtk-4.0
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-2.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-2.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-2.0/assets/menubar-item-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-2.0/gtkrc
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/checkbox-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/checkbox-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/checkbox-checked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/checkbox-indeterminate-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/checkbox-indeterminate-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/checkbox-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/checkbox-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/checkbox-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/checkbox-unchecked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/color-scale-slider-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/color-scale-slider-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/paned-separator-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/paned-separator-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/panel.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/radio-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/radio-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/radio-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/radio-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/radio-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/radio-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/radio-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/radio-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/radio-unchecked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/scale-slider-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/assets/transparent.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/colors.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/gtk.css -> ../../Greymond/.gtk-3.0/gtk.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-3.0/settings.ini -> ../../Greymond/.gtk-3.0/settings.ini
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Teal/gtk-4.0 -> ../Greymond/.gtk-4.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-2.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-2.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-2.0/assets/menubar-item-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-2.0/gtkrc
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/checkbox-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/checkbox-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/checkbox-checked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/checkbox-indeterminate-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/checkbox-indeterminate-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/checkbox-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/checkbox-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/checkbox-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/checkbox-unchecked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/color-scale-slider-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/color-scale-slider-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/paned-separator-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/paned-separator-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/panel.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/radio-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/radio-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/radio-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/radio-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/radio-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/radio-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/radio-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/radio-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/radio-unchecked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/scale-slider-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/assets/transparent.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/colors.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/gtk.css -> ../../Greymond/.gtk-3.0/gtk.css
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-3.0/settings.ini -> ../../Greymond/.gtk-3.0/settings.ini
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond Wheat/gtk-4.0 -> ../Greymond/.gtk-4.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-2.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-2.0/assets/
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond/.gtk-2.0/assets/menubar-item-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-2.0/gtkrc
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/checkbox-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/checkbox-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/checkbox-checked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/checkbox-indeterminate-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/checkbox-indeterminate-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/checkbox-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/checkbox-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/checkbox-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/checkbox-unchecked.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/color-scale-slider-horizontal.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/color-scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/paned-separator-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/paned-separator-vertical.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/panel.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/radio-checked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/radio-checked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/radio-checked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/radio-indeterminate-active.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/radio-indeterminate-disabled.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/radio-indeterminate.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/radio-unchecked-active.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/radio-unchecked-disabled.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/radio-unchecked.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/scale-slider-horizontal.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/scale-slider-vertical.png
+-rw-rw-r--	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/assets/transparent.png
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/colors.css
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/gtk.css
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-3.0/settings.ini
+drwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-4.0/
+lrwxrwxrwx	root/root	usr/share/themes/Greymond/Greymond/.gtk-4.0/assets -> ../.gtk-3.0/assets/
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-4.0/gtk.css
+-rwxrwxr-x	root/root	usr/share/themes/Greymond/Greymond/.gtk-4.0/settings.ini

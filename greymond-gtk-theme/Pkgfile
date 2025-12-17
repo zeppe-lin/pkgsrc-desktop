@@ -2,7 +2,7 @@
 # URL:         https://github.com/parhelion22/xfce-theme-greymond
 
 name=greymond-gtk-theme
-version=1.1-241c495
+version=1.1-be2302f
 release=1
 source=https://github.com/parhelion22/xfce-theme-greymond/archive/${version#*-}/$name-$version.tar.gz
 
@@ -10,7 +10,7 @@ build() {
 	mkdir -p $PKG/usr/share/themes/Greymond
 	cp -a xfce-theme-greymond*/src/* $PKG/usr/share/themes/Greymond
 
-	# remove xfce4-related stuff
-	rm -r $PKG/usr/share/themes/Greymond/xfce* \
-	      $PKG/usr/share/themes/Greymond/xfwm4
+	# Remove xfce4-related stuff
+	cd $PKG/usr/share/themes/Greymond
+	rm -r */xfce* */xfwm4
 }
