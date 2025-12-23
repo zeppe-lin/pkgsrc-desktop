@@ -1,9 +1,6 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/mpv
-drwxr-xr-x	root/root	usr/etc/
-drwxr-xr-x	root/root	usr/etc/mpv/
--rw-r--r--	root/root	usr/etc/mpv/encoding-profiles.conf
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/mpv/
 -rw-r--r--	root/root	usr/include/mpv/client.h
@@ -45,5 +42,3 @@ drwxr-xr-x	root/root	usr/share/icons/hicolor/symbolic/apps/
 drwxr-xr-x	root/root	usr/share/man/
 drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/mpv.1.gz
-drwxr-xr-x	root/root	usr/share/metainfo/
--rw-r--r--	root/root	usr/share/metainfo/mpv.metainfo.xml
