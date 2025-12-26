@@ -3,7 +3,7 @@
 # Depends on:  adwaita-gtk-theme gtk-engine-murrine
 
 name=mint-gtk-theme
-version=2.3.5
+version=2.3.6
 release=1
 source=https://ftp5.gwdg.de/pub/linux/debian/mint/packages/pool/main/m/mint-themes/mint-themes_${version%%-*}_all.deb
 
@@ -13,7 +13,7 @@ build() {
 		--exclude usr/share/doc -C $PKG -xf data.tar.xz
 
 	# remove xfce4/metacity/cinnamon themes
-	rm -r $PKG/usr/share/themes/Mint-*/cinnamon    \
-	      $PKG/usr/share/themes/Mint-*/metacity-1  \
+	rm -r $PKG/usr/share/themes/Mint-*/cinnamon \
+	      $PKG/usr/share/themes/Mint-*/metacity-1 \
 	      $PKG/usr/share/themes/Mint-*/xfwm4
 }
