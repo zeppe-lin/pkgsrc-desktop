@@ -3,7 +3,7 @@
 # Depends on:  chrpath libjpeg-turbo libpng libtool libxml2 perl xorg-libxext xorg-libxt
 
 name=imagemagick
-version=7.1.2-11
+version=7.1.2-12
 release=1
 source=$name-$version.tar.gz::https://github.com/ImageMagick/ImageMagick/archive/refs/tags/$version.tar.gz
 
@@ -43,7 +43,7 @@ build() {
 	rm -r $PKG/usr/share/doc
 	find $PKG -depth \
 		\( -type f -name perllocal.pod \
-			-o -name \*.bs \
+			-o -name '*.bs' \
 			-o -name .packlist \
 			-o -name ChangeLog \
 			-o -name LICENSE \
