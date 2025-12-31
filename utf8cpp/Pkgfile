@@ -2,14 +2,14 @@
 # URL:         https://github.com/nemtrif/utfcpp
 
 name=utf8cpp
-version=4.0.8
+version=4.0.9
 release=1
 source=https://github.com/nemtrif/utfcpp/archive/v$version/$name-$version.tar.gz
 
 build() {
-	cmake -S utfcpp-$version -B build -G Ninja  \
-		-D CMAKE_INSTALL_PREFIX=/usr        \
-		-D CMAKE_BUILD_TYPE=None            \
+	cmake -S utfcpp-$version -B build -G Ninja \
+		-D CMAKE_INSTALL_PREFIX=/usr \
+		-D CMAKE_BUILD_TYPE=None \
 
 	ninja -C build -j ${JOBS:-1} -v
 	DESTDIR=$PKG ninja -C build install
