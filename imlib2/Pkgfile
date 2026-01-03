@@ -2,22 +2,24 @@
 # URL:         http://docs.enlightenment.org/api/imlib2/html/
 # Depends on:  giflib harfbuzz libid3tag libjpeg-turbo
 
+# Maintainer notes on dependencies:
+#   --disable-doc-build: otherwise requires doxygen
+#   --without-tiff: otherwise requires libtiff
+#   --without-webp: otherwise requires webp
+
 name=imlib2
-version=1.12.5
+version=1.12.6
 release=1
 source=https://download.sourceforge.net/enlightenment/$name-$version.tar.gz
 
 build() {
 	mkdir build; cd build
 
-	# --disable-doc-build: otherwise requires doxygen
-	# --without-tiff:      otherwise requires libtiff
-	# --without-webp:      otherwise requires webp
-	../$name-$version/configure  \
-		--prefix=/usr        \
-		--disable-doc-build  \
-		--without-tiff       \
-		--without-webp       \
+	../$name-$version/configure \
+		--prefix=/usr \
+		--disable-doc-build \
+		--without-tiff \
+		--without-webp \
 
 	make V=1
 	make DESTDIR=$PKG install
