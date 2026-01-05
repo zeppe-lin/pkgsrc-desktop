@@ -2,19 +2,19 @@
 # URL:         https://codeberg.org/pere/chrpath
 
 name=chrpath
-version=0.17
+version=0.18
 release=1
 source=$name-$version.tar.gz::https://codeberg.org/pere/$name/archive/release-$version.tar.gz
 
 build() {
-	cd $name
+	mkdir build; cd build
 
-	./bootstrap
-	./configure --prefix=/usr
+	autoreconf -fiv ../chrpath
+	../chrpath/configure --prefix=/usr
 
 	make V=1
 	make DESTDIR=$PKG install
 
-	# remove junk
+	# Remove junk
 	rm -r $PKG/usr/doc
 }
