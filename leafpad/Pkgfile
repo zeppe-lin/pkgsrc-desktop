@@ -1,23 +1,27 @@
 # Description: GTK+ based simple text editor
-# URL:         http://tarot.freeshell.org/leafpad
+# URL:         https://github.com/tarot231/leafpad
 # Depends on:  desktop-file-utils gtk
 
+# Maintainer notes on dependencies:
+#   desktop-file-utils: required only for post-install script
+
 name=leafpad
-version=0.8.19
-release=2
-source=http://savannah.nongnu.org/download/$name/$name-$version.tar.gz
+version=0.8.19-3b1a2c2
+release=1
+source=https://github.com/tarot231/$name/archive/${version#*-}/$name-$version.tar.gz
 
 build() {
 	export LINGUAS=' '
 
 	mkdir build; cd build
 
-	../$name-$version/configure  \
-		--prefix=/usr        \
-		--enable-chooser     \
-		--enable-print       \
-		--disable-nls        \
-		--disable-emacs      \
+	autoreconf -fiv ../$name-*
+	../$name-*/configure \
+		--prefix=/usr \
+		--enable-chooser \
+		--enable-print \
+		--disable-nls \
+		--disable-emacs \
 
 	make V=1
 	make DESTDIR=$PKG install
