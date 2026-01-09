@@ -1,25 +1,28 @@
 # Description: C and C++ API for GnuPG
 # URL:         https://www.gnupg.org/related_software/gpgme/
-# Depends on:  gnupg
+# Depends on:  gnupg libgpg-error
+
+# Maintainer notes on dependencies:
+#   libgpg-error: explicitly set, required to build man pages
 
 name=gpgme
 version=1.24.3
-release=1
+release=2
 source=https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-$version.tar.bz2
 
 build() {
 	mkdir build; cd build
 
-	../gpgme-$version/configure       \
-		--prefix=/usr             \
-		--disable-fd-passing      \
-		--disable-g13-test        \
-		--disable-glibtest        \
-		--disable-gpg-test        \
-		--disable-gpgconf-test    \
-		--disable-gpgsm-test      \
-		--enable-languages='cpp'  \
-		--enable-static           \
+	../gpgme-$version/configure \
+		--prefix=/usr \
+		--disable-fd-passing \
+		--disable-g13-test \
+		--disable-glibtest \
+		--disable-gpg-test \
+		--disable-gpgconf-test \
+		--disable-gpgsm-test \
+		--enable-languages='cpp' \
+		--enable-static \
 
 	make V=1
 	make DESTDIR=$PKG install
@@ -27,6 +30,6 @@ build() {
 	mkdir -p $PKG/usr/etc/gpgme
 	echo 'c cpp' > $PKG/usr/etc/gpgme/base
 
-	# remove junk
+	# Remove junk
 	rm -r $PKG/usr/share/info
 }
