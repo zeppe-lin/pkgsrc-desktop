@@ -3,17 +3,16 @@
 # Depends on:  adwaita-gtk-theme gtk-engine-murrine
 
 name=mint-gtk-theme
-version=2.3.6
+version=2.3.7
 release=1
-source=https://ftp5.gwdg.de/pub/linux/debian/mint/packages/pool/main/m/mint-themes/mint-themes_${version%%-*}_all.deb
+source=http://packages.linuxmint.com/pool/main/m/mint-themes/mint-themes_${version}_all.deb
 
 build() {
 	ar x mint-themes_${version%%-*}_all.deb
-	bsdtar -p -o --no-acls --no-xattrs --no-mac-metadata --no-fflags \
-		--exclude usr/share/doc -C $PKG -xf data.tar.xz
+	bsdtar -p -o --no-acls --no-xattrs --no-mac-metadata \
+	  --no-fflags --exclude usr/share/doc -C $PKG -xf data.tar.xz
 
-	# remove xfce4/metacity/cinnamon themes
-	rm -r $PKG/usr/share/themes/Mint-*/cinnamon \
-	      $PKG/usr/share/themes/Mint-*/metacity-1 \
-	      $PKG/usr/share/themes/Mint-*/xfwm4
+	# Remove xfce4/metacity/cinnamon themes
+	cd $PKG/usr/share/themes
+	rm -r Mint-*/cinnamon Mint-*/metacity-1 Mint-*/xfwm4
 }
