@@ -8,7 +8,7 @@
 #   sane: Scanner support (enabled if installed)
 
 name=libreoffice-bin
-version=25.8.2
+version=25.8.4
 release=1
 source=https://mirrors.hostico.ro/tdf/libreoffice/stable/$version/rpm/x86_64/LibreOffice_${version}_Linux_x86-64_rpm.tar.gz
 
@@ -47,6 +47,7 @@ build() {
 
 	# Remove junk files
 	rm -rf $PKG/opt/libreoffice7.6/readmes
+	rm -r $PKG/usr/share/metainfo
 	find $PKG \( -type f \
 		   -name 'README*' \
 		-o -name 'LICENSE*' \
