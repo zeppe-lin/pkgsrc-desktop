@@ -3,8 +3,8 @@
 # Depends on:  hicolor-icon-theme gnome-icon-theme
 
 name=buuf-nestort-icon-theme
-_commit=04c899acb794fbaa64b5dbd7ced2a3d078a157f3
-version=2.0-04c899a
+_commit=5614e2cfd7d7c09622be85cfef1d37d854568ce3
+version=2.0-5614e2c
 release=1
 source="$name-$version.tar.gz::https://git.disroot.org/eudaimon/buuf-nestort/archive/$_commit.tar.gz
 	icon-theme.cache"
@@ -16,7 +16,8 @@ build() {
 	mkdir -p $PKG/usr/share/icons
 	mv buuf-nestort $PKG/usr/share/icons/Buuf-Nestort
 
-	#sed -i '/^Inherits=.*/d' $PKG/usr/share/icons/Buuf-Nestort/index.theme
+	#sed -i '/^Inherits=.*/d' \
+	#	$PKG/usr/share/icons/Buuf-Nestort/index.theme
 	sed -i '/^Inherits=/s/oxygen,//;s/,breeze//' \
 		$PKG/usr/share/icons/Buuf-Nestort/index.theme
 
