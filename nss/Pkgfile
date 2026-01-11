@@ -3,10 +3,19 @@
 # Depends on:  nspr sqlite3
 
 name=nss
-version=3.119.1
+version=3.120
 release=1
+
+# Automation for Mozilla's naming:
+#   _pv: underscores (3_119_1) for URL paths
+#   _sv: dots (3.120) or underscores (1_119_1) for source files
 _pv=$(echo $version | tr . _)
-source="https://ftp.mozilla.org/pub/security/nss/releases/NSS_${_pv}_RTM/src/nss-${_pv}.tar.gz
+case $version in
+*.*.*) _sv=$_pv ;;
+*) _sv=$version ;;
+esac
+
+source="https://ftp.mozilla.org/pub/security/nss/releases/NSS_${_pv}_RTM/src/nss-${_sv}.tar.gz
 	nss-3.54-standalone-2.patch
 	nss-config.in
 	nss.pc.in
@@ -14,7 +23,7 @@ source="https://ftp.mozilla.org/pub/security/nss/releases/NSS_${_pv}_RTM/src/nss
 	nss-util.pc.in"
 
 build() {
-	cd nss-${_pv}
+	cd nss-${_sv}
 
 	patch -Np1 -i $SRC/nss-3.54-standalone-2.patch
 
