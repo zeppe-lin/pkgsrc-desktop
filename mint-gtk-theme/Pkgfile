@@ -3,7 +3,7 @@
 # Depends on:  adwaita-gtk-theme gtk-engine-murrine
 
 name=mint-gtk-theme
-version=2.3.7
+version=2.3.8
 release=1
 source=http://packages.linuxmint.com/pool/main/m/mint-themes/mint-themes_${version}_all.deb
 
