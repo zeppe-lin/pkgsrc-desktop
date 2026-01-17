@@ -19,58 +19,60 @@ FUSE FILESYSTEMS
 SSHFS
 -----
 
-* Install `sshfs-fuse` package.
+1. Install `sshfs-fuse` package.
 
-* Register an extension that will be used for connections over SSH.
-  The format is:
+2. Register an extension that will be used for connections over SSH.
+   The format is:
 
-  ```
-  :filetype extensions
+   ```
+   :filetype extensions
     \ FUSE_MOUNT|some_mount_command using %PARAM and %DESTINATION_DIR
-  ```
+   ```
 
-  A sample line in `~/.vifm/vifmrc` might look like this:
+   A sample line in `~/.vifm/vifmrc` might look like this:
 
-  ```
-  :filetype *.ssh FUSE_MOUNT2|sshfs %PARAM %DESTINATION_DIR
-  ```
+   ```
+   :filetype *.ssh FUSE_MOUNT2|sshfs %PARAM %DESTINATION_DIR
+   ```
 
-  `%PARAM` and `%DESTINATION_DIR` are filled in by Vifm at runtime.
-  `%PARAM` value is filled from the first line of file (whole line).
+   `%PARAM` and `%DESTINATION_DIR` are filled in by Vifm at runtime.
 
-  You can also add `%CLEAR` to clear screen before running FUSE program.
+   `%PARAM` value is filled from the first line of file (whole line).
 
-* Create a file with ssh extension that contains connection parameters in the
-  1st line.  A sample 1st line could be:
+   You can also add `%CLEAR` to clear screen before running FUSE
+   program.
 
-  ```
-  user@127.0.0.1:/
-  ```
+3. Create a file with ssh extension that contains connection
+   parameters in the 1st line.  A sample 1st line could be:
+
+   ```
+   user@127.0.0.1:/
+   ```
 
 MTPFS
 -----
 
-* Install `android-file-transfer` package.
+1. Install `android-file-transfer` package.
 
-* Register an extension that will be used for connections over MTPFS.
-  A sample line in `~/.vifm/vifmrc` might look like this:
+2. Register an extension that will be used for connections over MTPFS.
+   A sample line in `~/.vifm/vifmrc` might look like this:
 
-  ```
-  :filetype *.mtp FUSE_MOUNT2|aft-mtp-mount -D %PARAM %DESTINATION_DIR
-  ```
+   ```
+   :filetype *.mtp FUSE_MOUNT2|aft-mtp-mount -D %PARAM %DESTINATION_DIR
+   ```
 
-* Get your MTP device ID via `lsusb(8)`:
+3. Get your MTP device ID via `lsusb(8)`:
 
-  ```sh
-  lsusb
-  ```
+   ```sh
+   lsusb
+   ```
 
-* Create a file with mtp extension that contains connection parameters in the
-  1st line.  A sample 1st line could be:
+4. Create a file with mtp extension that contains connection
+   parameters in the 1st line.  A sample 1st line could be:
 
-  ```
-  22d9:2764
-  ```
+   ```
+   22d9:2764
+   ```
 
 
 ---

@@ -7,19 +7,19 @@ REQUIREMENTS
 ============
 
 * `libmad`:
-  High-quality MPEG audio decoder, used for decoding MP3.  It also contains
-  libid3tag.
+  High-quality MPEG audio decoder, used for decoding MP3.  It also
+  contains libid3tag.
 
 * `libvorbis`:
-  Fully Open, non-proprietary, patent-and-royalty-free, general-purpose
-  compressed audio format.
+  Fully Open, non-proprietary, patent-and-royalty-free,
+  general-purpose compressed audio format.
 
 * `flac`:
   Free Lossless Audio Codec.
 
 * `ffmpeg`:
-  Library for decoding various audio formats: Opus, WMA, ReadAudio, (.ra), AAC,
-  MP4.
+  Library for decoding various audio formats: Opus, WMA, ReadAudio,
+  (.ra), AAC, MP4.
 
 * `speex`:
   Patent-free audio compression format designed for speech.
@@ -34,8 +34,8 @@ REQUIREMENTS
   Library decoding MOD module files.
 
 * `wavpack`:
-  Open audio compression format providing lossless, high-quality lossy, and a
-  unique hybrid compression mode.
+  Open audio compression format providing lossless, high-quality
+  lossy, and a unique hybrid compression mode.
 
 * `faad2`:
   Open source MPEG-4 and MPEG-2 AAC decoder.

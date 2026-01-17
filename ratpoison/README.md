@@ -6,8 +6,8 @@ README ratpoison
 USE FLAGS
 =========
 
-Define `PKGMK_RATPOISON_USE` variable in `/etc/pkgmk.conf` with the following
-flags to enable or disable the build-time features:
+Define `PKGMK_RATPOISON_USE` variable in `/etc/pkgmk.conf` with the
+following flags to enable or disable the build-time features:
 
 - [+-]debug:   build with extra debugging messages
 - [+-]xft:     use Xft library (requires xorg-libxft)

@@ -3,10 +3,10 @@ README bluealsa
 ---
 
 
-ONLINE DOCUMENTATION
-====================
+REFERENCES
+==========
 
-Wiki: https://github.com/arkq/bluez-alsa/wiki/
+- https://github.com/arkq/bluez-alsa/wiki/
 
 
 ---

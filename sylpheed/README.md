@@ -6,7 +6,8 @@ README sylpheed
 TRINITY ICONS
 =============
 
-To enable trinity-like icons, add the following line to your `/etc/pkgmk.conf`:
+To enable trinity-like icons, add the following line to your
+`/etc/pkgmk.conf`:
 
 ```sh
 PKGMK_SYLPHEED="+trinityicons"
@@ -17,9 +18,9 @@ URGENT WINDOW NOTIFICATION
 ==========================
 **Requires xdotool!**
 
-Since the notifications in the Sylpheed are pretty ugly, and the current build
-is not patched for `libnotify` support, the users of tiling window managers can
-use the standard tag notifications:
+Since the notifications in the Sylpheed are pretty ugly, and the
+current build is not patched for `libnotify` support, the users of
+tiling window managers can use the standard tag notifications:
 
 ```
 Configuration
