@@ -31,7 +31,7 @@ ac_add_options --disable-webrtc
 ac_add_options --disable-gamepad
 ac_add_options --disable-necko-wifi
 ac_add_options --disable-updater
-ac_add_options --disable-gconf
+#ac_add_options --disable-gconf (unused from 34.x.x)
 ac_add_options --disable-dbus
 ac_add_options --disable-pulseaudio  
 

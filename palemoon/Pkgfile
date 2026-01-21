@@ -3,8 +3,8 @@
 # Depends on:  alsa-lib autoconf-2.13 desktop-file-utils gtk python unzip xorg-libxt yasm zip
 
 name=palemoon
-version=33.9.1
-_upxrel=20251019
+version=34.0.1
+_upxrel=20260121
 release=1
 source="https://repo.palemoon.org/MoonchildProductions/Pale-Moon/archive/${version}_Release.tar.gz
 	https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_${_upxrel}.tar.gz
@@ -12,12 +12,12 @@ source="https://repo.palemoon.org/MoonchildProductions/Pale-Moon/archive/${versi
 	mozconfig.in"
 
 build() {
-	# inject UXP sources into platform/
+	# Inject UXP sources into platform/
 	cd uxp; cp -R . $SRC/pale-moon/platform/
 	
 	cd $SRC/pale-moon
 
-	# generate mozconfig
+	# Generate mozconfig
 	sed -e "s|%SRCDIR%|$SRC|g" \
 	    -e "s|%NAME%|$name|g" \
 	    -e "s|%VERSION%|$version|g" \
@@ -33,14 +33,14 @@ build() {
 
 	install -m 0644 -Dt $PKG/usr/share/applications $SRC/palemoon.desktop
 
-	# revdep additional library directories
+	# Additional library directories for revdep
 	mkdir -p $PKG/etc/revdep.d
 	cat > $PKG/etc/revdep.d/$name <<EOF
 /usr/lib/palemoon-$version
 /usr/lib/palemoon-$version/browser/components
 EOF
 
-	# remove junk
-	rm -rf $PKG/usr/lib/$name-devel-$version # devel symlinks
-	rm -f $PKG/usr/lib/$name-$version/$name-bin # duplicate binary
+# Remove junk (devel symlinks and duplicate binary)
+	rm -rf $PKG/usr/lib/$name-devel-$version
+	rm -f $PKG/usr/lib/$name-$version/$name-bin
 }
