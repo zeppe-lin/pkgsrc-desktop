@@ -3,22 +3,22 @@
 # Depends on:  linux-pam xmlsec
 
 name=oath-toolkit
-version=2.6.13
+version=2.6.14
 release=1
 source=https://download.savannah.nongnu.org/releases/$name/$name-$version.tar.gz
 
 build() {
 	mkdir build; cd build
 
-	../$name-$version/configure  \
-		--prefix=/usr        \
-		--disable-static     \
-		--enable-pam         \
-		--enable-pskc        \
+	../$name-$version/configure \
+		--prefix=/usr \
+		--disable-static \
+		--enable-pam \
+		--enable-pskc \
 
 	make V=1
 	make DESTDIR=$PKG install
 
-	# remove junk
+	# Remove junk
 	rm $PKG/usr/lib/*.la
 }
