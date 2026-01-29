@@ -1,13 +1,14 @@
 # Description: Qemu launcher with config file support (Zeppe-Lin fork)
 # URL:         https://github.com/zeppe-lin/qemuconf
+# Depends on:  scdoc
 
 name=qemuconf
-version=0.4.4.1-44cfd75
+version=0.5-cc28490
 release=1
 source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
 
 build() {
-	# pick up system flags
+	# Pick up system flags
 	sed -ri '/^(C|LD)FLAGS/s/ = /+=/g' $name-*/config.mk
 
 	make -C $name-* PREFIX=/usr DESTDIR=$PKG install
