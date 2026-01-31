@@ -2,24 +2,25 @@
 # URL:         https://pwmt.org/projects/zathura
 # Depends on:  girara json-glib sqlite3
 
+# Maintainer notes on dependencies:
+#   manpages=disabled: otherwise requires sphinx
+#   convert-icon=disabled: otherwise requires librsvg-compat
+
 name=zathura
-version=0.5.14
+version=2026.01.30
 release=1
 source="$name-$version.tar.gz::https://github.com/pwmt/$name/archive/refs/tags/$version.tar.gz
 	no-gettext.patch"
 
 build() {
 	# Remove gettext dependency
-	patch -d $name-$version -Np0 -i $SRC/no-gettext.patch
+	patch -d $name-$version -p1 -i $SRC/no-gettext.patch
 
-	# Disable building docs and tests
+	# Disable building docs, i18n, and tests
 	sed -e "/^subdir('doc')/d" \
 	    -e "/^subdir('tests')/d" \
 	    -i $name-$version/meson.build
 
-	# Build flags:
-	# manpages=disabled - otherwise requires sphinx
-	# convert-icon=disabled - otherwise requires librsvg-compat
 	meson setup build $name-$version \
 		--prefix=/usr \
 		--sysconfdir=/usr/etc \
