@@ -7,7 +7,7 @@
 #   json=disabled: JSON config dumping, needs json-glib (disabled)
 
 name=girara
-version=0.4.5
+version=2026.01.30
 release=1
 source=$name-$version.tar.gz::https://github.com/pwmt/$name/archive/refs/tags/$version.tar.gz
 
