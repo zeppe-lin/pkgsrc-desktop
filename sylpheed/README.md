@@ -1,7 +1,6 @@
-README sylpheed
+README for sylpheed
 
 ---
-
 
 TRINITY ICONS
 =============
@@ -13,6 +12,7 @@ To enable trinity-like icons, add the following line to your
 PKGMK_SYLPHEED="+trinityicons"
 ```
 
+---
 
 URGENT WINDOW NOTIFICATION
 ==========================
@@ -29,8 +29,7 @@ Configuration
         xdotool search --name "Sylpheed 3.7.0" set_window --urgency 1
 ```
 
-See xdotool(1) or wmctrl(1).
-
+See `xdotool(1)` or `wmctrl(1)`.
 
 ---
 

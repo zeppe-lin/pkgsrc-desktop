@@ -1,7 +1,6 @@
-README ratpoison
+README for ratpoison
 
 ---
-
 
 USE FLAGS
 =========
@@ -22,7 +21,6 @@ PKGMK_RATPOISON_USE="-debug +xft +xkb -xrandr +history"
 ```
 
 The defaults are the same as in example above.
-
 
 ---
 

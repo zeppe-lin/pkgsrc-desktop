@@ -1,7 +1,6 @@
-README trinity-extra-theme
+README for trinity-extra-theme
 
 ---
-
 
 CONFIGURATION
 =============

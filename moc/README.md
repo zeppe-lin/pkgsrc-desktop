@@ -1,7 +1,6 @@
-README moc
+README for moc
 
 ---
-
 
 REQUIREMENTS
 ============
@@ -57,7 +56,6 @@ REQUIREMENTS
 
 * `librcc`:
   Library that can fix encoding of MP3 files with ID3 tags v1/1.1.
-
 
 ---
 

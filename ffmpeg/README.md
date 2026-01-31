@@ -1,44 +1,37 @@
-README ffmpeg
+README for ffmpeg
 
 ---
-
 
 REQUIREMENTS
 ============
 
-This package builds FFmpeg with support for a wide range of codecs,
-formats, and hardware acceleration.  Feature selection is governed by
-three sources:
+Feature selection is controlled by three lists:
 
-Required dependencies
----------------------
+- **Required dependencies**
+  Packages listed in the `Pkgfile` `Depends on:` field.  Always
+  installed and enabled.  Baseline feature set.
 
-Packages listed in the `Pkgfile` `Depends on:` field are installed
-before build and always enabled.  These form the baseline feature set.
+- **Optional features**
+  Packages listed in `ffmpeg.enabled`.  If present at build time, they
+  are enabled via `--enable-*`.  Format:
 
-Optional features
------------------
+  ```
+  description
+  pkgname: --enable-flag(s)
+  ```
 
-Additional packages are listed in `ffmpeg.enabled`.  If present at
-build time, they are enabled via `--enable-*` flags.  Each entry
-follows this format:
+- **Disabled features**
+  Packages listed in `ffmpeg.disabled`.  Always disabled via
+  `--disable-*`, regardless of presence.  Format:
 
-    description
-    pkgname: --enable-flag(s)
+  ```
+  description
+  pkgname: --disable-flag(s)
+  ```
 
-Explicitly disabled features
-----------------------------
+To customize the build, edit `ffmpeg.enabled` and `ffmpeg.disabled`.
 
-Packages listed in `ffmpeg.disabled` are always disabled via
-`--disable-*`, regardless of presence.  This avoids unwanted
-dependencies or licensing issues.  Each entry follows the same format:
-
-    description
-    pkgname: --disable-flag(s)
-
-To customize the build, edit `ffmpeg.enabled` and `ffmpeg.disabled`
-directly.
-
+---
 
 CAUTION
 =======
@@ -47,13 +40,13 @@ Enabling `fdk-aac` or `openssl` triggers `--enable-nonfree`, which
 makes the resulting binary non-redistributable under GPL terms.  Use
 with care if packaging for redistribution.
 
+---
 
 REFERENCES
 ==========
 
 * https://ffmpeg.org/documentation.html
 * https://trac.ffmpeg.org/wiki/CompilationGuide
-
 
 ---
 

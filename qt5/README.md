@@ -1,7 +1,6 @@
-README qt5
+README for qt5
 
 ---
-
 
 POST-INSTALL
 ============
@@ -13,18 +12,22 @@ applications:
 
 Rebuild `qt5-styleplugins` to resolve the issue.
 
+---
 
 THEME CUSTOMIZATION
 ===================
 
 To make `qt5` follow the GTK-3.0 theme, add this to your profile:
 
-    export QT_QPA_PLATFORMTHEME=gtk3
+```sh
+export QT_QPA_PLATFORMTHEME=gtk3
+```
 
 For widget styling, you can also set:
 
-    export QT_STYLE_OVERRIDE=windows
-
+```sh
+export QT_STYLE_OVERRIDE=windows
+```
 
 ---
 

@@ -1,7 +1,6 @@
-README mpv
+README for mpv
 
 ---
-
 
 REQUIREMENTS
 ============
@@ -17,7 +16,6 @@ REQUIREMENTS
 
 * For Video Decode and Presentation API for Unix acceleration
   interface, install `vdpau`.
-
 
 ---
 

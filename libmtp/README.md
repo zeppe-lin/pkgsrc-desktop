@@ -1,7 +1,6 @@
-README libmtp
+README for libmtp
 
 ---
-
 
 POST-INSTALL
 ============
@@ -13,6 +12,7 @@ need to reload rules:
 sudo udevadm control --reload-rules
 ```
 
+---
 
 RUN MTP AS A REGULAR USER
 =========================
@@ -36,7 +36,6 @@ RUN MTP AS A REGULAR USER
 
 4. Reload the udev rules, as described in the
    [POST-INSTALL](#post-install) section.
-
 
 ---
 

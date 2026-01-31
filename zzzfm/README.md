@@ -1,15 +1,15 @@
-README zzzfm
+README for zzzfm
 
 ---
-
 
 MIME TYPES
 ==========
 
 To register `zzzfm` as default application for opening folders, run:
 
-    gio mime inode/directory zzzfm-folder-handler.desktop
-
+```sh
+gio mime inode/directory zzzfm-folder-handler.desktop
+```
 
 ---
 

@@ -1,19 +1,15 @@
-README bluez
+README for bluez
 
 ---
 
+REQUIREMENTS
+============
 
-KERNEL CONFIGURATION
-====================
+Kernel Configuration
+--------------------
 
-For Mesh
---------
-
-The `linux` package ships with all required cryptographic options
-enabled for Bluetooth Mesh support.
-
-If you're building a custom kernel and Mesh cryptography fails, ensure
-the following options are enabled in your `.config`:
+**Bluetooth Mesh** requires cryptographic options in the kernel.
+If Mesh cryptography fails, ensure the following are enabled:
 
 - **Minimum kernel version**:
   - 4.9 or later
@@ -28,7 +24,6 @@ the following options are enabled in your `.config`:
   - `CONFIG_CRYPTO_CCM`
   - `CONFIG_CRYPTO_AEAD`
   - `CONFIG_CRYPTO_CMAC`
-
 
 ---
 

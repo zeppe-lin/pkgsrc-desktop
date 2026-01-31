@@ -1,7 +1,6 @@
-README jukebox
+README for jukebox
 
 ---
-
 
 REQUIREMENTS
 ============
@@ -39,7 +38,6 @@ They are not required to build or install the software.
 
 * `spek`
   Adds acoustic spectrum analyser (via context menu).
-
 
 ---
 

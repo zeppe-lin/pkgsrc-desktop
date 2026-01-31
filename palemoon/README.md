@@ -1,7 +1,6 @@
-README palemoon
+README for palemoon
 
 ---
-
 
 RUN AS DIFFERENT USER
 =====================
@@ -29,7 +28,6 @@ user ALL=(palemoon) NOPASSWD: /usr/bin/palemoon *
 ```
 
 into `/etc/sudoers.d/99_palemoon`.
-
 
 ---
 

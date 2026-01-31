@@ -1,31 +1,43 @@
-README cdrtools
+README for cdrtools
 
 ---
 
+REQUIREMENTS
+============
 
-KERNEL CONFIGURATION
-====================
+Kernel Configuration
+--------------------
 
-Configure the kernel to support the filesystems necessary for reading
-and writing ISO disks.
+Ensure the kernel supports the filesystems necessary for reading and
+writing ISO disks:
 
-    File systems  --->
-      CD-ROM/DVD Filesystems  --->
-        <*> ISO 9660 CDROM file system support
-        [*]   Microsoft Joliet CDROM extensions
-        [*]   Transparent decompression extension
-        <*> UDF file system support
+```
+File systems  --->
+  CD-ROM/DVD Filesystems  --->
+    <*> ISO 9660 CDROM file system support
+    [*]   Microsoft Joliet CDROM extensions
+    [*]   Transparent decompression extension
+    <*> UDF file system support
+```
 
+Kernel Module
+-------------
 
-KERNEL MODULE
-=============
+`cdrecord` may require SCSI support for SATA DVD-RW drives:
 
-Add the following lines to `/etc/rc.modules` to autoload module needed
-by `cdrecord`:
+```sh
+# Generic SCSI support for SATA DVD-RW
+sg
+```
 
-    # Generic SCSI support for SATA DVD-RW
-    /sbin/modprobe sg
+To auto-load, add the module name to a file such as:
 
+```
+/etc/modules-load.d/cdrtools.conf
+```
+
+This package does not install a default config, since requirements
+vary by machine.
 
 ---
 

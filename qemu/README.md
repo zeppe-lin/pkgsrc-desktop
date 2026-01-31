@@ -1,7 +1,6 @@
-README qemu
+README for qemu
 
 ---
-
 
 KVM
 ===
@@ -16,16 +15,19 @@ Make sure your user is in the `kvm` group.  Just run the following
 command and re-login:
 
 ```sh
-sudo usermod -aG kvm <USER>
+# as root
+usermod -aG kvm <USER>
 ```
 
 For brand new installs, the default permissions on `/dev/kvm` might
 not let you access it.  You can tell udev to reset ownership/perms:
 
 ```sh
-sudo udevadm trigger -c add /dev/kvm
+# as root
+udevadm trigger -c add /dev/kvm
 ```
 
+---
 
 SHARE THE DIRECTORY
 ===================
@@ -45,8 +47,9 @@ On quest machine add the following line to `/etc/fstab`:
 host0 /mnt 9p trans=virtio,access=any,version=9p2000.L 0 0
 ```
 
-**NOTE**: Your current host's `uid:gid` on quest may be different.
+**Note:** Your current host's `uid:gid` on quest may be different.
 
+---
 
 USB PASSTHROUGH
 ===============
@@ -61,6 +64,7 @@ Execute qemu with the following options:
 where `hostbus` and `hostaddr` is your device's corresponding values.
 To obtain them use `lsusb(8)`.
 
+---
 
 CLIPBOARD SUPPORT
 =================
@@ -69,7 +73,8 @@ To enable clipboard support between host and guest, firstly install
 `qemu-vdagent` on guest operating system:
 
 ```sh
-sudo apt install qemu-vdagent
+# as root
+apt install qemu-vdagent
 ```
 
 Next, start qemu with the following options:
@@ -80,7 +85,6 @@ qemu-system-x86_64 [ ... ] \
     -device virtio-serial-pci \
     -device virtserialport,chardev=ch1,id=ch1,name=com.redhat.spice.0
 ```
-
 
 ---
 

@@ -1,7 +1,6 @@
-README vifm
+README for vifm
 
 ---
-
 
 MIME TYPES
 ==========
@@ -12,6 +11,7 @@ To register `vifm` as default application for opening folders, run:
 gio mime inode/directory vifm.desktop
 ```
 
+---
 
 FUSE FILESYSTEMS
 ================
@@ -73,7 +73,6 @@ MTPFS
    ```
    22d9:2764
    ```
-
 
 ---
 
