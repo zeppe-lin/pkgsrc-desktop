@@ -3,7 +3,7 @@
 # Depends on:  desktop-file-utils djvulibre zathura
 
 name=zathura-djvu
-version=2026.01.30
+version=2026.02.03
 release=1
 source=https://pwmt.org/projects/$name/download/$name-$version.tar.xz
 
