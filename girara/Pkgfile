@@ -1,13 +1,12 @@
 # Description: UI library focusing on simplicity and minimalism
 # URL:         https://pwmt.org/projects/girara
-# Depends on:  gtk3
+# Depends on:  glib
 
 # Maintainer notes on dependencies:
 #   docs=disabled: API docs, needs doxygen (disabled)
-#   json=disabled: JSON config dumping, needs json-glib (disabled)
 
 name=girara
-version=2026.01.30
+version=2026.02.04
 release=1
 source=$name-$version.tar.gz::https://github.com/pwmt/$name/archive/refs/tags/$version.tar.gz
 
@@ -26,7 +25,6 @@ build() {
 		-D b_lto=true \
 		-D b_pie=true \
 		-D docs=disabled \
-		-D json=disabled \
 		-D tests=disabled \
 
 	# Remove default -pipe flag
