@@ -3,7 +3,7 @@
 # Depends on:  curl gpgme harfbuzz libjpeg-turbo nss
 
 name=poppler
-version=26.01.0
+version=26.02.0
 release=1
 source=https://gitlab.freedesktop.org/$name/$name/-/archive/$name-$version/$name-$name-$version.tar.gz
 
@@ -42,6 +42,6 @@ build() {
 	ninja -C build -j ${JOBS:-1} -v
 	DESTDIR=$PKG ninja -C build install
 
-	# remove junk
+	# Remove junk
 	rm -r $PKG/usr/share/locale
 }
