@@ -34,8 +34,11 @@ Load manually:
 
 Load automatically at boot:
 
-- Declarative: add `sg` to `/etc/modules-load.d/sg.conf`
-- Imperative: add `/sbin/modprobe sg` to `/etc/rc.modules`
+- Add `sg` to `/etc/modules-load.d/*.conf`, or
+- Add `/sbin/modprobe sg` to `/etc/rc.modules`
+
+This package does not install a default config; administrators should
+add modules as needed by their hardware or usage.
 
 ---
 
