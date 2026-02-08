@@ -10,9 +10,7 @@ OPTS="--experimental --kernel"
 
 case $1 in
 start)
-	if [ ! -e /run/bluez ]; then
-		mkdir -p /run/bluez
-	fi
+	[ -e /run/bluez ] || mkdir -p /run/bluez
 	$SSD --start --background --make-pidfile --pidfile $PID \
 		--exec $PROG -- $OPTS
 	;;
@@ -25,16 +23,10 @@ restart)
 	$0 start
 	;;
 status)
-	$SSD --status --pidfile $PID --exec $PROG
-	case $? in
-	0) echo "$PROG is running with pid $(cat $PID)" ;;
-	1) echo "$PROG is not running but the pid file $PID exists" ;;
-	3) echo "$PROG is not running" ;;
-	4) echo "Unable to determine the program status" ;;
-	esac
+	$SSD --status --verbose --pidfile $PID --exec $PROG
 	;;
 *)
-	echo "Usage: $0 [start|stop|restart|status]"
+	echo "Usage: $0 {start|stop|restart|status}"
 	;;
 esac
 
