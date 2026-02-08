@@ -23,21 +23,19 @@ File systems  --->
 Kernel Module
 -------------
 
-`cdrecord` may require SCSI support for SATA DVD-RW drives:
+`cdrecord` may require SCSI support for SATA DVD-RW drives.
+
+Load manually:
 
 ```sh
-# Generic SCSI support for SATA DVD-RW
-sg
+# as root
+/sbin/modprobe sg
 ```
 
-To auto-load, add the module name to a file such as:
+Load automatically at boot:
 
-```
-/etc/modules-load.d/cdrtools.conf
-```
-
-This package does not install a default config, since requirements
-vary by machine.
+- Declarative: add `sg` to `/etc/modules-load.d/sg.conf`
+- Imperative: add `/sbin/modprobe sg` to `/etc/rc.modules`
 
 ---
 
