@@ -2,16 +2,16 @@
 # URL:         http://www.bluez.org/
 
 name=sbc
-version=2.1
+version=2.2
 release=1
 source=https://www.kernel.org/pub/linux/bluetooth/sbc-$version.tar.xz
 
 build() {
 	mkdir build; cd build
 
-	../$name-$version/configure  \
-		--prefix=/usr        \
-		--disable-tester     \
+	../$name-$version/configure \
+		--prefix=/usr \
+		--disable-tester \
 
 	make V=1
 	make DESTDIR=$PKG install
