@@ -3,9 +3,11 @@
 # Depends on:  imlib2 libexif xorg-libxft
 
 name=nsxiv
-version=33
+_commit=054859b95ee195949143e70c1920c46bb2a8de3f
+version=34-054859b
 release=1
-source=nsxiv-$version.tar.gz::https://codeberg.org/nsxiv/nsxiv/archive/v$version.tar.gz
+#source=nsxiv-$version.tar.gz::https://codeberg.org/nsxiv/nsxiv/archive/v$version.tar.gz
+source=nsxiv-$version.tar.gz::https://codeberg.org/nsxiv/nsxiv/archive/$_commit.tar.gz
 
 build() {
 	make -C nsxiv CFLAGS="$CFLAGS -DNDEBUG" all
@@ -13,6 +15,6 @@ build() {
 		PREFIX=/usr DESTDIR=$PKG \
 		install install-desktop install-icon
 
-	# remove junk
+	# Remove junk
 	rm -r $PKG/usr/share/doc
 }
