@@ -1,43 +1,44 @@
-# Description: Bluetooth Audio ALSA Backend (for users in "audio" group)
+# Description: Bluetooth Audio ALSA Backend
 # URL:         https://github.com/Arkq/bluez-alsa
 # Depends on:  bluez fdk-aac lame libbsd libldac mpg123 sbc
 
+# Maintainer notes on dependencies:
+#   --enable-hcitop:   hcitop tool, requires libbsd (enabled)
+#   --enable-mp3lame:  MP3 support, requires lame (enabled)
+#   --enable-ldac:     LDAC support, requires libldac (enabled)
+#   --enable-mpg123:   MPG123 decoding support, requires mpg123 (enabled)
+#   --enable-manpages: Build man pages, requires docutils (enabled)
+
 name=bluealsa
 version=4.3.1
-release=1
+release=2
 source="https://github.com/Arkq/bluez-alsa/archive/v$version/bluez-alsa-$version.tar.gz
 	bluealsa.conf
 	rc.bluealsa"
 
 build() {
-	local _bashcompdir=/usr/share/bash-completion/completions
-
 	mkdir build; cd build
 
-	autoreconf -fis ../bluez-alsa-$version
+	autoreconf -fisv ../bluez-alsa-$version
 
-	# --enable-hcitop:   requires libbsd
-	# --enable-mp3lame:  requires lame
-	# --enable-ldac:     requires libldac
-	# --enable-mpg123:   requires mpg123
-	# --enable-manpages: requires docutils
-	../bluez-alsa-$version/configure              \
-		--prefix=/usr                         \
-		--enable-cli                          \
-		--enable-aac                          \
-		--enable-rfcomm                       \
-		--enable-a2dpconf                     \
-		--enable-ofono                        \
-		--enable-hcitop                       \
-		--enable-mp3lame                      \
-		--enable-ldac                         \
-		--enable-mpg123                       \
-		--enable-manpages                     \
-		--with-bash-completion=$_bashcompdir  \
+	../bluez-alsa-$version/configure \
+		--prefix=/usr \
+		--enable-cli \
+		--enable-aac \
+		--enable-rfcomm \
+		--enable-a2dpconf \
+		--enable-ofono \
+		--enable-hcitop \
+		--enable-mp3lame \
+		--enable-ldac \
+		--enable-mpg123 \
+		--enable-manpages \
+		--with-bash-completion=/usr/share/bash-completion/completions
 
 	make V=1 all
 	make DESTDIR=$PKG install
 
-	install -m 755 -D $SRC/rc.$name   $PKG/etc/rc.d/$name
-	install -m 644 -D $SRC/$name.conf $PKG/usr/share/dbus-1/system.d/$name.conf
+	install -m 755 -D $SRC/rc.bluealsa $PKG/etc/rc.d/bluealsa
+	install -m 644 -D $SRC/bluealsa.conf \
+		$PKG/usr/share/dbus-1/system.d/bluealsa.conf
 }
