@@ -5,10 +5,11 @@ README for firefox-bin
 REQUIREMENTS
 ============
 
-Runtime
--------
+Optional Packages
+-----------------
 
-The `apulse` or `pulseaudio` are required for audio support.
+**Runtime:**
+- `apulse` or `pulseaudio` for audio support
 
 ---
 

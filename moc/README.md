@@ -5,6 +5,9 @@ README for moc
 REQUIREMENTS
 ============
 
+Optional Packages
+-----------------
+
 * `libmad`:
   High-quality MPEG audio decoder, used for decoding MP3.  It also
   contains libid3tag.

@@ -2,8 +2,11 @@ README for vifm
 
 ---
 
-MIME TYPES
-==========
+NOTES
+=====
+
+MIME Types
+----------
 
 To register `vifm` as default application for opening folders, run:
 
@@ -11,13 +14,10 @@ To register `vifm` as default application for opening folders, run:
 gio mime inode/directory vifm.desktop
 ```
 
----
+FUSE Filesystems
+----------------
 
-FUSE FILESYSTEMS
-================
-
-SSHFS
------
+### SSHFS
 
 1. Install `sshfs-fuse` package.
 
@@ -49,8 +49,7 @@ SSHFS
    user@127.0.0.1:/
    ```
 
-MTPFS
------
+### MTPFS
 
 1. Install `android-file-transfer` package.
 

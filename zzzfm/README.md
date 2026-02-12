@@ -2,8 +2,11 @@ README for zzzfm
 
 ---
 
-MIME TYPES
-==========
+NOTES
+=====
+
+MIME Types
+----------
 
 To register `zzzfm` as default application for opening folders, run:
 

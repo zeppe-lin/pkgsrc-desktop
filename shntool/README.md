@@ -5,9 +5,12 @@ README for shntool
 REQUIREMENTS
 ============
 
-* `flac`:     (optional)  Support for flac format.
-* `mac`:      (optional)  Support for ape format.
-* `wavpack`:  (optional)  Support for wv format.
+Optional Packages
+-----------------
+
+- `flac`    - support for flac format
+- `mac`     - support for ape format
+- `wavpack` - support for wv format
 
 ---
 

@@ -2,18 +2,24 @@ README for palemoon
 
 ---
 
-RUN AS DIFFERENT USER
-=====================
+NOTES
+=====
 
-Add a new user and change its default gtk theme if needed:
+Run as Different User
+---------------------
+
+1. Create a dedicated user and adjust its GTK theme if needed:
 
 ```sh
-sudo useradd -G video,audio -U -m palemoon
+# as root
+useradd -G video,audio -U -m palemoon
+
+# as user
 xhost +SI:localuser:palemoon
 sudo -u palemoon -H lxappearance
 ```
 
-Use this wrapper as palemoon launcher:
+2. Use this wrapper script as the launcher:
 
 ```sh
 #!/bin/sh
@@ -21,13 +27,12 @@ xhost +SI:localuser:palemoon
 sudo -u palemoon -H /usr/bin/palemoon --new-tab "$@"
 ```
 
-To run this wrapper without asking the password, add
+3. To run the wrapper without password prompts, add to
+   `/etc/sudoers.d/99_palemoon`:
 
 ```
 user ALL=(palemoon) NOPASSWD: /usr/bin/palemoon *
 ```
-
-into `/etc/sudoers.d/99_palemoon`.
 
 ---
 

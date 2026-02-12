@@ -2,8 +2,11 @@ README for qemu
 
 ---
 
+CONFIGURATION
+=============
+
 KVM
-===
+---
 
 If you don't have kvm compiled into the kernel, make sure you have the
 kernel module loaded before running kvm.  The easiest way to ensure
@@ -27,10 +30,8 @@ not let you access it.  You can tell udev to reset ownership/perms:
 udevadm trigger -c add /dev/kvm
 ```
 
----
-
-SHARE THE DIRECTORY
-===================
+Share the Directory
+-------------------
 
 To share `/mnt` directory (for example), execute qemu with the
 following options:
@@ -49,10 +50,8 @@ host0 /mnt 9p trans=virtio,access=any,version=9p2000.L 0 0
 
 **Note:** Your current host's `uid:gid` on quest may be different.
 
----
-
-USB PASSTHROUGH
-===============
+USB Passthrough
+---------------
 
 Execute qemu with the following options:
 
@@ -64,10 +63,8 @@ Execute qemu with the following options:
 where `hostbus` and `hostaddr` is your device's corresponding values.
 To obtain them use `lsusb(8)`.
 
----
-
-CLIPBOARD SUPPORT
-=================
+Clipboard Support
+-----------------
 
 To enable clipboard support between host and guest, firstly install
 `qemu-vdagent` on guest operating system:

@@ -5,8 +5,8 @@ README for jukebox
 REQUIREMENTS
 ============
 
-Runtime
--------
+Optional Packages
+-----------------
 
 The following optional packages enable extra runtime features.
 They are not required to build or install the software.

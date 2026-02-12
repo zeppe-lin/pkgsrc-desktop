@@ -2,8 +2,11 @@ README for sylpheed
 
 ---
 
-TRINITY ICONS
-=============
+NOTES
+=====
+
+Trinity Icons
+-------------
 
 To enable trinity-like icons, add the following line to your
 `/etc/pkgmk.conf`:
@@ -12,11 +15,11 @@ To enable trinity-like icons, add the following line to your
 PKGMK_SYLPHEED="+trinityicons"
 ```
 
----
+Urgent Window Notification
+--------------------------
 
-URGENT WINDOW NOTIFICATION
-==========================
-**Requires xdotool!**
+**Requires:**
+- `xdotool` or `wmctrl`
 
 Since the notifications in the Sylpheed are pretty ugly, and the
 current build is not patched for `libnotify` support, the users of
@@ -28,8 +31,6 @@ Configuration
     `-- [x] Execute command when new messages arrive:
         xdotool search --name "Sylpheed 3.7.0" set_window --urgency 1
 ```
-
-See `xdotool(1)` or `wmctrl(1)`.
 
 ---
 

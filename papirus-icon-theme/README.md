@@ -2,8 +2,8 @@ README for papirus-icon-theme
 
 ---
 
-UPGRADE
-=======
+NOTES
+=====
 
 Starting with version 20250501, the ePapirus and ePapirus-Dark icon
 themes are removed from Papirus Icon Theme.

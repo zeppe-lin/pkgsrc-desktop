@@ -48,8 +48,8 @@ Use with care if packaging for redistribution.
 FURTHER READING
 ===============
 
-- https://ffmpeg.org/documentation.html
-- https://trac.ffmpeg.org/wiki/CompilationGuide
+- Documentation: <https://ffmpeg.org/documentation.html>
+- Compilation Guide: <https://trac.ffmpeg.org/wiki/CompilationGuide>
 
 ---
 

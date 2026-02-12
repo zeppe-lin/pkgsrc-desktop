@@ -2,8 +2,11 @@ README for ratpoison
 
 ---
 
-USE FLAGS
-=========
+NOTES
+=====
+
+Use Flags
+---------
 
 Define `PKGMK_RATPOISON_USE` variable in `/etc/pkgmk.conf` with the
 following flags to enable or disable the build-time features:

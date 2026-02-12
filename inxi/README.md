@@ -5,15 +5,14 @@ README for inxi
 REQUIREMENTS
 ============
 
-Runtime
--------
+Optional Packages
+-----------------
 
-Optional packages provide additional system information:
-
-* `xorg-xprop`    - Desktop data
-* `xorg-xdpyinfo` - Multi-screen resolution
-* `xorg-xrandr`   - Single screen resolution
-* `lm-sensors`    - Sensors output
+Additional **runtime** packages provide extended system information:
+- `xorg-xprop`    - desktop data
+- `xorg-xdpyinfo` - multi-screen resolution
+- `xorg-xrandr`   - single screen resolution
+- `lm-sensors`    - sensors output
 
 To list further optional requirements, run:
 

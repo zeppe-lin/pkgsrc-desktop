@@ -5,37 +5,45 @@ README for libmtp
 POST-INSTALL
 ============
 
-`libmtp` contains `/etc/udev/rules.d/69-libmtp.rules`, so there is a
-need to reload rules:
+`libmtp` installs `/etc/udev/rules.d/69-libmtp.rules`.
+Reload udev rules after installation:
 
 ```sh
-sudo udevadm control --reload-rules
+# as root
+udevadm control --reload-rules # or
+/etc/rc.d/udevd reload
 ```
 
 ---
 
-RUN MTP AS A REGULAR USER
-=========================
+NOTES
+=====
 
-1. Create the `plugdev` group and add your user name into it:
-   ```sh
-   getent group plugdev >/dev/null || sudo groupadd -r plugdev
-   sudo usermod -aG plugdev $USER
-   newgrp plugdev
-   ```
+Run MTP as a Regular User
+-------------------------
 
-2. Find your device's `VendorId:ProductId` in the `lsusb` output.
+1. Create the `plugdev` group and add your user:
 
-3. Add the following line (as one) to
-   `/etc/udev/rules.d/70-libmtp.rules`:
+```sh
+# as root
+getent group plugdev >/dev/null || groupadd -r plugdev
+usermod -aG plugdev <username>
 
-   ```sh
-   SUBSYSTEM=="usb", ATTR{idVendor}=="...", \
-   ATTR{idProduct}=="...", MODE="0666", GROUP="plugdev"
-   ```
+# as user
+newgrp plugdev
+```
 
-4. Reload the udev rules, as described in the
-   [POST-INSTALL](#post-install) section.
+2. Find your device's `VendorId:ProductId` with `lsusb`.
+
+3. Add a rule to `/etc/udev/rules.d/70-libmtp.rules`:
+
+```sh
+# one line
+SUBSYSTEM=="usb", ATTR{idVendor}=="...", ATTR{idProduct}=="...", \
+  MODE="0666", GROUP="plugdev"
+```
+
+4. Reload udev rules, as described in **POST-INSTALL**.
 
 ---
 
