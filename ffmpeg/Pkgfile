@@ -4,7 +4,7 @@
 
 name=ffmpeg
 version=7.1.3
-release=1
+release=2
 source="https://ffmpeg.org/releases/$name-$version.tar.bz2
 	gcc-14.patch
 	ffmpeg.enabled
@@ -18,7 +18,7 @@ build() {
 	CXXFLAGS="$CXXFLAGS -ffat-lto-objects"
 
 	# Fix build under GCC 14 (remove when upstreamed)
-	patch -d $name-$version -Np1 -i $SRC/gcc-14.patch
+	patch -d $name-$version -p1 -i $SRC/gcc-14.patch
 
 	mkdir build; cd build
 

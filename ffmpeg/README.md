@@ -5,6 +5,9 @@ README for ffmpeg
 REQUIREMENTS
 ============
 
+Optional Packages
+-----------------
+
 Feature selection is controlled by three lists:
 
 - **Required dependencies**
@@ -33,20 +36,20 @@ To customize the build, edit `ffmpeg.enabled` and `ffmpeg.disabled`.
 
 ---
 
-CAUTION
-=======
+NOTES
+=====
 
 Enabling `fdk-aac` or `openssl` triggers `--enable-nonfree`, which
-makes the resulting binary non-redistributable under GPL terms.  Use
-with care if packaging for redistribution.
+makes the resulting binary non-redistributable under GPL terms.
+Use with care if packaging for redistribution.
 
 ---
 
-REFERENCES
-==========
+FURTHER READING
+===============
 
-* https://ffmpeg.org/documentation.html
-* https://trac.ffmpeg.org/wiki/CompilationGuide
+- https://ffmpeg.org/documentation.html
+- https://trac.ffmpeg.org/wiki/CompilationGuide
 
 ---
 
