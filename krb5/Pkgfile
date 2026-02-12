@@ -8,7 +8,7 @@
 
 name=krb5
 version=1.21.3
-release=3
+release=4
 source="https://kerberos.org/dist/krb5/${version%.*}/krb5-$version.tar.gz
 	rc.kadmind
 	rc.kpropd
@@ -59,8 +59,8 @@ build() {
 	install -m 0644 -Dt $PKG/usr/share/aclocal util/ac_check_krb5.m4
 
 	# Install service scripts
-	for f in kadmind kpropd krb5 krb5kdc; do
-		install -m 0755 -D $SRC/rc.$f $PKG/etc/rc.d/$f
+	for f in $SRC/rc.*; do
+		install -m 0755 -D $f $PKG/etc/rc.d/${f#*.}
 	done
 
 	# Cleanup unnecessary files

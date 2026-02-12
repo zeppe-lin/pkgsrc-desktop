@@ -1,5 +1,5 @@
 beb34d1dfc72ba0571ce72bed03e06eb  krb5-1.21.3.tar.gz
-6dd2e9f47e537fdbb5966a307a175a92  rc.kadmind
-f6b968dee400c2e819ea8a03ed653503  rc.kpropd
-0f9a08cfca8eb407f4d8b19a2ae014f2  rc.krb5
-5cc66fb80a5e95ea94273eb0459bae42  rc.krb5kdc
+331326c8419326ca9168ccaab2cf6d65  rc.kadmind
+cabc3edc5e8312c2469ac2de9686034e  rc.kpropd
+e0487eaea1509013a46acb4d09190e06  rc.krb5
+6a74219ff254617c367b27cb92dd6918  rc.krb5kdc
