@@ -11,15 +11,15 @@
 #   xxhash: Faster replacement for internal siphash (enabled if installed)
 
 name=libplacebo
-version=7.351.0
-release=2
+version=7.360.0
+release=1
 source="https://github.com/haasn/$name/archive/v$version/$name-$version.tar.gz
 	libplacebo-7.349.0-glslang-1.3.296.patch
 	no-vulkan-headers.patch"
 
 build() {
 	for p in libplacebo*.patch no-vulkan-headers.patch; do
-		patch -d $name-$version -Np1 -i $SRC/${p}
+		patch -d $name-$version -p1 -i $SRC/$p
 	done
 
 	meson setup build $name-$version \
