@@ -2,15 +2,23 @@
 # URL:         https://github.com/jedisct1/libsodium
 
 name=libsodium
-version=1.0.20
+version=1.0.21
 release=1
 source=https://github.com/jedisct1/$name/archive/$version-RELEASE/$name-$version.tar.gz
 
 build() {
 	mkdir build; cd build
 
-	../$name-$version-RELEASE/configure  \
-		--prefix=/usr                \
+	case "$CFLAGS" in
+	*-march=native*|*-mtune=native*)
+		# Optimize for the native CPU, not portable
+		_flags="--enable-opt"
+		;;
+	esac
+
+	../$name-$version-RELEASE/configure \
+		--prefix=/usr \
+		$_flags
 
 	make V=1
 	make DESTDIR=$PKG install
