@@ -8,7 +8,7 @@
 #   DISABLE_AV/VI or needs libvpx/opus: Audio/Video (disabled)
 
 name=toxic
-version=0.16.1
+version=0.16.2
 release=1
 source="https://github.com/JFreegman/$name/archive/v$version/$name-$version.tar.gz
 	build-stable-c-toxcore.patch
@@ -22,9 +22,9 @@ build() {
 	export USER_CFLAGS="$CFLAGS"
 	export USER_LDFLAGS="$LDFLAGS -pthread"
 
-	patch -Np1 -i $SRC/build-stable-c-toxcore.patch
-	patch -Np1 -i $SRC/no-extra-flags.patch
-	patch -Np1 -i $SRC/no-install-rebuild.patch
+	patch -p1 -i $SRC/build-stable-c-toxcore.patch
+	patch -p1 -i $SRC/no-extra-flags.patch
+	patch -p1 -i $SRC/no-install-rebuild.patch
 
 	# Use /usr instead of /usr/local and clean up compiler calls
 	sed -i 's|/usr/local|/usr|g' cfg/global_vars.mk

@@ -1,4 +1,4 @@
 2f04dbaddadf72fa524ffbd33c52da92  build-stable-c-toxcore.patch
 211b3acffda844bbf105c0005984720a  no-extra-flags.patch
 9593054fe6e548262d3a37ea0851020d  no-install-rebuild.patch
-f016ccb2eb07bb5ed1982b79b9397841  toxic-0.16.1.tar.gz
+a0e1eec3b1fe6ae1bbfde007a13ff6f5  toxic-0.16.2.tar.gz
