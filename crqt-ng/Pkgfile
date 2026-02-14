@@ -4,21 +4,28 @@
 
 name=crqt-ng
 version=1.0.15
-release=1
+release=2
 source=https://gitlab.com/coolreader-ng/$name/-/archive/$version/$name-$version.tar.gz
 
 build() {
-	cmake -S $name-$version -B build -G Ninja       \
-		-D CMAKE_INSTALL_PREFIX=/usr            \
-		-D CMAKE_BUILD_TYPE=Release             \
-		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS"      \
-		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS"  \
-		-D USE_QT=QT5                           \
-		-Wno-dev
+	cmake -S $name-$version -B build -G Ninja \
+		-D CMAKE_INSTALL_PREFIX=/usr \
+		-D CMAKE_BUILD_TYPE=Release \
+		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+		-D USE_QT=QT5 \
+		-Wno-dev \
 
 	ninja -C build -j ${JOBS:-1} -v
 	DESTDIR=$PKG ninja -C build install
 
-	# remove i18n entries
-	sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/*.desktop
+	# Remove i18n entries
+	sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/crqt.desktop
+
+	# Add official MIME type for CHM files alongside legacy x-chm
+	sed -i 's|\(application/x-chm\)|\1;application/vnd.ms-htmlhelp|' \
+		$PKG/usr/share/applications/crqt.desktop
+
+	# Remove junk
+	rm -r $PKG/usr/share/metainfo
 }
