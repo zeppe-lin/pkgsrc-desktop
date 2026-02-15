@@ -5,7 +5,7 @@ README for libmtp
 POST-INSTALL
 ============
 
-`libmtp` installs `/etc/udev/rules.d/69-libmtp.rules`.
+`libmtp` installs `/lib/udev/rules.d/69-libmtp.rules`.
 Reload udev rules after installation:
 
 ```sh
@@ -22,7 +22,7 @@ NOTES
 Run MTP as a Regular User
 -------------------------
 
-1. Create the `plugdev` group and add your user:
+**1. Create the `plugdev` group and add your user:**
 
 ```sh
 # as root
@@ -33,17 +33,32 @@ usermod -aG plugdev <username>
 newgrp plugdev
 ```
 
-2. Find your device's `VendorId:ProductId` with `lsusb`.
+**2. Identify your device's IDs:**
 
-3. Add a rule to `/etc/udev/rules.d/70-libmtp.rules`:
+Run `lsusb` to find `VendorId:ProductId` pair.
+
+**3. Add a custom udev rule:**
+
+System packages install rules into `/lib/udev/rules.d/`.
+Local overrides and custom rules should go into
+`/etc/udev/rules.d/`.
+Create `/etc/udev/rules.d/70-mtp-local.rules` (or another
+descriptive name) with:
 
 ```sh
-# one line
+# as one line
 SUBSYSTEM=="usb", ATTR{idVendor}=="...", ATTR{idProduct}=="...", \
-  MODE="0666", GROUP="plugdev"
+MODE="0666", GROUP="plugdev"
 ```
 
-4. Reload udev rules, as described in **POST-INSTALL**.
+**Note:** Avoid naming your local file `libmtp.rules`, to prevent
+confusion with the system-installed
+`/lib/udev/rules.d/69-libmtp.rules`.  Use a distinct name like
+`70-mtp-local.rules` or `99-mtp-overrides.rules`.
+
+**4. Reload udev rules:**
+
+Follow steps in **POST-INSTALL** to reload.
 
 ---
 
