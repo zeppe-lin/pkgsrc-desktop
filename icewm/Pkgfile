@@ -1,0 +1,26 @@
+# Description: Window manager designed for speed, usability and consistency
+# URL:         https://github.com/ice-wm/icewm
+# Depends on:  imlib2 librsvg-compat libsndfile xorg-libsm xorg-libxres
+
+name=icewm
+version=4.0.0
+release=1
+source=https://github.com/ice-wm/icewm/releases/download/$version/icewm-$version.tar.lz
+
+build() {
+	cmake -S icewm-$version -B build -G Ninja \
+		-D CMAKE_BUILD_TYPE=None \
+		-D CMAKE_INSTALL_PREFIX=/usr \
+		-D CFGDIR=/etc/icewm \
+		-D BUILD_TESTING=OFF \
+		-D CONFIG_I18N=OFF \
+		-D CONFIG_IMLIB2=ON \
+		-D CONFIG_LIBRSVG=ON \
+		-D ENABLE_NLS=OFF \
+		-D ENABLE_LTO=OFF \
+		-D DOCDIR=/usr/share/icewm/icehelp \
+		-Wno-dev \
+
+	ninja -C build -j ${JOBS:-1} -v
+	DESTDIR=$PKG ninja -C build install
+}
