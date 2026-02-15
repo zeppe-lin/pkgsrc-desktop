@@ -90,8 +90,6 @@ drwxr-xr-x	root/root	usr/share/man/
 drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/simplescreenrecorder.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/ssr-glinject.1.gz
-drwxr-xr-x	root/root	usr/share/metainfo/
--rw-r--r--	root/root	usr/share/metainfo/be.maartenbaert.simplescreenrecorder.metainfo.xml
 drwxr-xr-x	root/root	usr/share/simplescreenrecorder/
 drwxr-xr-x	root/root	usr/share/simplescreenrecorder/output-profiles/
 -rw-r--r--	root/root	usr/share/simplescreenrecorder/output-profiles/High%20Quality%20Intermediate.conf
