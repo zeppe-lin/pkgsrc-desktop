@@ -6,21 +6,21 @@
 #   desktop-file-utils: needed only by post-install script
 
 name=firefox-bin
-version=147.0.3
+version=147.0.4
 release=1
 source="https://ftp.mozilla.org/pub/firefox/releases/$version/linux-x86_64/en-US/firefox-$version.tar.xz
+	policies.json
 	firefox.sh
-	firefox.1
 	firefox.desktop
-	policies.json"
+	revdep.$name"
 
 build() {
+	# Install Firefox to /opt and add launcher to /usr/bin
 	mkdir -p $PKG/opt $PKG/usr/bin
-
 	mv $SRC/firefox $PKG/opt/firefox
-	install -m 0755 -D $SRC/firefox.sh               $PKG/usr/bin/firefox
-	install -m 0644 -Dt $PKG/usr/share/man/man1      $SRC/firefox.1
-	install -m 0644 -Dt $PKG/usr/share/applications  $SRC/firefox.desktop
+	install -m 0755 -D $SRC/firefox.sh $PKG/usr/bin/firefox
+	install -m 0644 -Dt $PKG/usr/share/applications \
+		$SRC/firefox.desktop
 
 	# Install hicolor icons
 	for x in 16 32 48 64 128; do
@@ -30,9 +30,9 @@ build() {
 	done
 
 	# Disable automatic updates via policies
-	install -m 0644 -Dt $PKG/opt/firefox/distribution $SRC/policies.json
+	install -m 0644 -Dt $PKG/opt/firefox/distribution \
+		$SRC/policies.json
 
 	# Register /opt/firefox for revdep(1) library checks
-	mkdir -p $PKG/etc/revdep.d
-	echo "/opt/firefox" > $PKG/etc/revdep.d/$name
+	install -m 0644 -D $SRC/revdep.$name $PKG/etc/revdep.d/$name
 }
