@@ -23,14 +23,14 @@ start)
 	$SSD --start --pidfile $PID --exec $PROG -- $CFG
 	;;
 stop)
-	$SSD --stop  --pidfile $PID --retry 10 --name $NAME
+	$SSD --stop  --retry 10 --pidfile $PID --name $NAME
 	;;
 restart)
 	$0 stop
 	$0 start
 	;;
 status)
-	$SSD --status --verbose --name $NAME --pidfile $PID
+	$SSD --status --verbose --pidfile $PID --name $NAME
 	;;
 *)
 	echo "Usage: $0 {start|stop|restart|status}"
