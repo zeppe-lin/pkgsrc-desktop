@@ -3,7 +3,7 @@
 # Depends on:  scdoc
 
 name=qemuconf
-version=0.5-dec8dd1
+version=0.5-629b355
 release=1
 source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
 
