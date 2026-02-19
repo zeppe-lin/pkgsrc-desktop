@@ -2,25 +2,28 @@
 # URL:         https://feh.finalrewind.org/
 # Depends on:  curl imlib2 libexif xorg-libxinerama
 
+# Maintainer notes on dependencies:
+#   curl=1: enable view https:// images, needs libcurl (enabled)
+#   exif=1: builtin EXIF tag display support, needs libexif (enabled)
+#   xinerama=1: support Xinerama/XRandR multiscreen setups, needs
+#               xorg-libxinerama (enabled)
+
 name=feh
-version=3.11.2
+version=3.11.3
 release=1
 source=https://github.com/derf/feh/archive/$version/feh-$version.tar.gz
 
 build() {
-	export curl=1     # use libcurl to view https:// and similar images
-	export exif=1     # builtin EXIF tag display support
-	export help=1     # include help text (refers to man page otherwise)
-	export inotify=1  # enable inotify, needed for --auto-reload
-	export xinerama=1 # support Xinerama/XRandR multiscreen setups
-	export stat64=1   # support cifs shares from 64bit hosts on 32bit machines
+	cd feh-$version
 
-	make -C feh-$version PREFIX=/usr VERSION=$version
-	make -C feh-$version PREFIX=/usr VERSION=$version DESTDIR=$PKG install
+	export curl=1 exif=1 xinerama=1 help=1 inotify=1 stat64=1
 
-	# remove i18n entries
+	make PREFIX=/usr VERSION=$version
+	make PREFIX=/usr VERSION=$version DESTDIR=$PKG install
+
+	# Remove i18n entries
 	sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/feh.desktop
 
-	# remove junk
+	# Remove junk
 	rm -r $PKG/usr/share/doc
 }
