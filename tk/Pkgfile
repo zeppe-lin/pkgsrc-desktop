@@ -5,7 +5,7 @@
 name=tk
 version=8.6.17
 _version=$(echo $version | awk -F'.' '{if (NF <= '2') {print $0} else {print $1 "." $2 "." $3}}')
-release=1
+release=2
 source=https://downloads.sourceforge.net/project/tcl/Tcl/$_version/tk$version-src.tar.gz
 
 build() {
@@ -14,15 +14,18 @@ build() {
 
 	mkdir build; cd build
 
-	../tk$_version/unix/configure    \
-		--prefix=/usr            \
-		--mandir=/usr/share/man  \
-		--enable-gcc             \
-		--enable-shared          \
-		--enable-xft             \
+	../tk$_version/unix/configure \
+		--prefix=/usr \
+		--mandir=/usr/share/man \
+		--enable-gcc \
+		--enable-shared \
+		--enable-xft \
+		--enable-man-symlinks \
+		#--enable-man-compression=gzip \
 
 	make V=1
-	make MKLINKS_FLAGS="-s" INSTALL_ROOT=$PKG install install-private-headers
+	make MKLINKS_FLAGS="-s" INSTALL_ROOT=$PKG \
+		install install-private-headers
 
 	# install private headers
 	cp ../tk$_version/generic/*.h          $PKG/usr/include/
@@ -30,20 +33,20 @@ build() {
 	cp ../tk$_version/unix/tkUnixDefault.h $PKG/usr/include/tkDefault.h
 	cp ../tk$_version/unix/tkUnixInt.h     $PKG/usr/include/tkInt.h
 
-	# remove $SRC traces
-	sed -i  -e "s|$SRC/tk$_version/unix|/usr/lib|g"  \
-		-e "s|$SRC/tk$_version|/usr/include|g"   \
-		$PKG/usr/lib/tkConfig.sh
+	# Remove $SRC traces
+	sed -e "s|$SRC/tk$_version/unix|/usr/lib|g" \
+	    -e "s|$SRC/tk$_version|/usr/include|g" \
+	    -i $PKG/usr/lib/tkConfig.sh
 
-	# install symlink for libraries
+	# Install symlink for libraries
 	ln -s wish${_version%.*}        $PKG/usr/bin/wish
 	ln -s libtk${_version%.*}.so    $PKG/usr/lib/libtk.so
 	ln -s libtkstub${_version%.*}.a $PKG/usr/lib/libtkstub.a
 
-	# remove junk
+	# Remove junk
 	rm -r $PKG/usr/lib/tk${_version%.*}/demos
 	rm $PKG/usr/lib/tk${_version%.*}/images/README
 
-	# fix perms
+	# Fix permissions
 	chmod -R u+w $PKG/usr/share/man
 }
