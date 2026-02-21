@@ -3,7 +3,7 @@
 # Depends on:  nspr sqlite3
 
 name=nss
-version=3.120.1
+version=3.121
 release=1
 
 # Automation for Mozilla's naming:
