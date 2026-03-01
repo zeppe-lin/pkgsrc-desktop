@@ -1,5 +1,6 @@
 # Description:  GTK2/3 theme which emulates Matrix look and feel
 # URL:          https://github.com/trinity-theme/trinity-gtk-theme
+# Maintainer:   UNMAINTAINED
 # Depends on:   gtk-engine-hc
 
 name=trinity-gtk-theme
@@ -10,6 +11,6 @@ source=https://github.com/trinity-theme/$name/archive/${version#*-}/$name-$versi
 build() {
 	make -C $name-* PREFIX=/usr DESTDIR=$PKG gtk.gresource install
 
-	# remove xfwm4 theme
+	# Remove xfwm4 theme
 	rm -r $PKG/usr/share/themes/Trinity/xfwm4
 }
