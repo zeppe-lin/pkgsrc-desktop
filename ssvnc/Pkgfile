@@ -4,7 +4,7 @@
 
 name=ssvnc
 version=1.0.29
-release=3
+release=4
 source="http://downloads.sf.net/sourceforge/$name/$name-$version.src.tar.gz
 	Makefile.libvncauth
 	Makefile.vncviewer
@@ -28,7 +28,7 @@ build() {
 
 	sed -i -e "/^LIB/s:lib/:lib/:" Makefile
 
-	# disable ultraftp
+	# Disable ultraftp (requires jdk-bin)
 	sed -i Makefile -e '/^JSRC/s:=.*:=:'
 
 	sed -i -e '/^CC/s:=.*:+= $(CFLAGS) $(CPPFLAGS) $(LDFLAGS):' \
@@ -43,6 +43,6 @@ build() {
 	make JC_ARGS=' -target 6 -source 6' all
 	make DESTDIR=$PKG PREFIX=/usr install
 
-	# remove junk
-	#rm -r $PKG/usr/share/applications
+	# Clean up comments in desktop file
+	sed -i '/^#/d' $PKG/usr/share/applications/*.desktop
 }
