@@ -1,5 +1,6 @@
 # Description: Trinity icon theme
 # URL:         https://github.com/trinity-theme/trinity-icon-theme
+# Maintainer:  UNMAINTAINED
 # Depends on:  librsvg-compat hicolor-icon-theme
 
 name=trinity-icon-theme
