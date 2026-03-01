@@ -2,7 +2,7 @@
 # URL:         http://www.videolan.org/developers/x264.html
 
 name=x264
-version=20230402-a8b68eb
+version=20250831-0480cb05
 release=1
 source="https://code.videolan.org/videolan/x264/-/archive/${version#*-}/x264-$version.tar.gz
 	0002-adjust-to-sbase-od.patch"
@@ -12,32 +12,33 @@ build() {
 
 	mkdir $SRC/build-1; cd $SRC/build-1
 
-	../$name*/configure                                  \
-		--prefix=/usr                                \
-		--libdir=/usr/lib/libx264-10bit              \
-		--includedir=/usr/lib/libx264-10bit/include  \
-		--enable-pic                                 \
-		--enable-shared                              \
-		--bit-depth='10'                             \
-		--disable-cli                                \
-		--disable-interlaced                         \
-		--extra-cflags="$CFLAGS"                     \
+	../$name*/configure \
+		--prefix=/usr \
+		--libdir=/usr/lib/libx264-10bit \
+		--includedir=/usr/lib/libx264-10bit/include \
+		--enable-pic \
+		--enable-shared \
+		--bit-depth='10' \
+		--disable-cli \
+		--disable-interlaced \
+		--extra-cflags="$CFLAGS" \
 
 	make V=1
 	make DESTDIR=$PKG install-lib-shared
 
 	mkdir $SRC/build-2; cd $SRC/build-2
 
-	../$name*/configure                                  \
-		--prefix=/usr                                \
-		--enable-pic                                 \
-		--enable-shared                              \
-		--bit-depth='8'                              \
-		--disable-cli                                \
-		--extra-cflags="$CFLAGS"                     \
+	../$name*/configure \
+		--prefix=/usr \
+		--enable-pic \
+		--enable-shared \
+		--bit-depth='8' \
+		--disable-cli \
+		--extra-cflags="$CFLAGS" \
 
 	make V=1
 	make DESTDIR=$PKG install
 
+	# Fix permissions
 	chmod a-x $PKG/usr/lib/*.so $PKG/usr/lib/libx264-10bit/*.so
 }
