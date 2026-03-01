@@ -1,5 +1,6 @@
 # Description: PDF viewer
 # URL:         https://www.xpdfreader.com/
+# Maintainer:  UNMAINTAINED
 # Depends on:  desktop-file-utils qt5
 
 # Maintainer notes on dependencies:
