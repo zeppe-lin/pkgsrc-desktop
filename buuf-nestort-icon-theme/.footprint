@@ -85,7 +85,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/blueman-pair-symbolic.
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/actions/blueman-plugin.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/actions/blueman-send-file.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/blueman-send-symbolic.png -> blueman-send.png
-lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/blueman-send.png -> send-to-symbolic.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/blueman-send.png -> ../symbolic/actions/send-to-symbolic.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/blueman-trust-symbolic.png -> blueman-trust.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/blueman-trust.png -> ../status/starred.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/blueman-untrust-symbolic.png -> blueman-untrust.png
@@ -241,7 +241,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/document-save-symbolic
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/actions/document-save.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/document-send-symbolic.png -> document-send.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/actions/document-send.png
-lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/document-share.png -> send-to-symbolic.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/document-share.png -> ../symbolic/actions/send-to-symbolic.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/actions/document-sign.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/actions/document-swap.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/actions/documentation.png
@@ -734,14 +734,19 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/media-playback-start-s
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/actions/media-playback-start.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/media-playback-stop-symbolic.png -> media-playback-stop.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/actions/media-playback-stop.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/actions/media-playlist-append-next.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/actions/media-playlist-no-shuffle.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/actions/media-playlist-play.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/media-playlist-repeat-amarok.png -> amarok_playlist_refresh.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/actions/media-playlist-repeat-song.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/actions/media-playlist-repeat.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/actions/media-playlist-shuffle.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/media-random-albums-amarok.png -> media-random-albums.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/actions/media-random-albums.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/media-record-symbolic.png -> media-record.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/actions/media-record.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/media-repeat-all.png -> media-playlist-repeat.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/actions/media-repeat-none.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/media-repeat-single.png -> media-playlist-repeat-song.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/media-seek-backward-rtl-symbolic.png -> media-seek-backward-rtl.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/media-seek-backward-rtl.png -> media-seek-forward.png
@@ -751,6 +756,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/media-seek-forward-rtl
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/media-seek-forward-rtl.png -> media-seek-backward.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/media-seek-forward-symbolic.png -> media-seek-forward.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/actions/media-seek-forward.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/media-show-active-track-amarok.png -> media-show-active.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/actions/media-show-active.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/media-skip-backward-rtl-symbolic.png -> media-skip-backward-rtl.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/media-skip-backward-rtl.png -> media-skip-forward.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/media-skip-backward-symbolic.png -> media-skip-backward.png
@@ -884,6 +891,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/process-stop-symbolic.
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/actions/quickopen-file.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/actions/quickopen.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/quickview.png -> layer-visible-on.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/randomize.png -> shuffle.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/rating-unreated.png -> ../status/unstarred.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/actions/rating.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/actions/recent.png
@@ -910,7 +918,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/screensaver-unlock-sym
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/scriptnew.png -> amarok_scripts.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/scriptopen.png -> gtk-open.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/search.png -> system-search.png
-lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/send-to.png -> send-to-symbolic.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/send-to.png -> ../symbolic/actions/send-to-symbolic.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/actions/services.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/actions/setroubleshoot_icon.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/actions/settings-configure.png -> configure.png
@@ -1369,6 +1377,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/Etermutilities-terminal.p
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/FoxitReader.png -> foxitreader.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/Gish.png -> freegish.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/JUCE.png -> projucer.png
+-rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/Larrison Exantus.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/MEGAsync.png -> mega.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/ModemManager.png -> modem-manager.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/MySQLIcon_Admin_48x48.png
@@ -1384,6 +1393,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/ModemManager.png -> modem
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/Nextcloud_warn_shared.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/Notesnook.png -> notesnook.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/OpenRGB.png -> preferences-color.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/PCSX2.png -> playstation-emulator.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/QtProject-assistant.png -> qtassistant.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/QtProject-designer.png -> qtdesigner.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/QtProject-linguist.png -> qtlinguist.png
@@ -1427,13 +1437,17 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/alacritty.png -> terminal
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/alien-arena.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/alltray.png -> gnome-panel-notification-area.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/amarok.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/ambientnoise.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/amor.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/amsn.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/amule.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/amule.xpm -> amule.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/android-file-transfer.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/android.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/angelfish.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/anjuta.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/anki.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/anoise.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/anyremote.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/apacheconf.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/appimage.png
@@ -1442,6 +1456,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/appimagekit-cool-retro-te
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/appimagekit-github-desktop.png -> github-desktop.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/appimagekit-librewolf.png -> librewolf.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/appimagekit-notesnook.png -> notesnook.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/appimagekit-obsidian.png -> obsidian.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/appimagekit-standard-notes.png -> text-editor-fancy.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/applets-screenshooter-symbolic.png -> applets-screenshooter.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/applets-screenshooter.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/application-default-icon.png
@@ -1453,6 +1469,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/applications-webapps.png 
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/aqualung.png -> audacity.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/ardour.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/ardour6.png -> ardour.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/arianna.png -> bookcase.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/ark.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/armagetronad.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/arts.png
@@ -1469,6 +1486,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/atril.png -> evince.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/audex.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/audio-player.png -> rhythmbox.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/audiobook.png -> accessories-dictionary.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/autofirma.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/autoplus.png -> system-software-installer.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/avant-window-navigator-48.png -> awn-settings.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/avant-window-navigator.png -> awn-settings.png
@@ -1519,6 +1537,9 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/bonobo-component-browser.
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/bookcase.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/boot-admin.png -> boot.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/boot.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/bottles.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/bottles_winecfg.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/bottles_winetricks.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/brasero.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/brave-browser-beta.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/brave-browser-dev.png
@@ -1526,11 +1547,13 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/boot-admin.png -> boot.pn
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/brave-browser.png -> brave.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/brave-tray.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/brave.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/breeze-settings.png -> gnome-settings-theme.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/brightnesssettings.png -> gnome-brightness-applet.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/browser-help.png -> help-browser.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/browser.png -> web-browser.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/bt-logo.png -> bluetooth.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/btop.png -> gnome-monitor.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/btrfs-assistant.png -> nautilus-gdu.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/btstat-applet.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/budgie-caffeine-cup-empty.png -> caffeine-cup-empty.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/budgie-caffeine-cup-full.png -> caffeine-cup-full.png
@@ -1589,6 +1612,9 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/cinnamon-session-properti
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/cinnamon-symbolic.png -> cinnamon.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/cinnamon-virtual-keyboard.png -> keyboard.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/cinnamon.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/citra.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/clamav.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/clamtk.png -> clamav.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/clanbomber.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/claws-mail.png -> internet-mail.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/clazy.png
@@ -1617,6 +1643,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.github.Eloston.Ungoog
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.github.FontManager.FontManager.png -> fontmatrix.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.github.FontManager.FontViewer.png -> fontmatrix.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.github.GradienceTeam.Gradience.png -> oomox.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.github.efdos.mupengui.png -> nintendo-emulator.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.github.eneshecan.WhatsAppForLinux.png -> whatsapp.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/com.github.jeromerobert.pdfarranger.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.github.joseexposito.touche.png -> preferences-desktop-touchpad.png
@@ -1624,11 +1651,13 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.github.joseexposito.t
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/com.github.tchx84.Flatseal.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/com.github.themix_project.Oomox.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.github.wwmm.easyeffects.png -> gnome-mixer.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.gitlab.davem.ClamTk.png -> clamtk.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.heroicgameslauncher.hgl.png -> heroic.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.jetbrains.CLion.png -> clion.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.jetbrains.IntelliJ-IDEA-Community.png -> intellij.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.jetbrains.IntelliJ-IDEA-Ultimate.png -> intellij.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.jetbrains.PhpStorm.png -> phpstorm.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.libretro.RetroArch.png -> retroarch.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.nextcloud.desktopclient.nextcloud.png -> Nextcloud.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.notesnook.Notesnook.png -> notesnook.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.obsproject.Studio.png -> obs.png
@@ -1645,6 +1674,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.system76.CosmicPlayer
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.system76.CosmicScreenshot.png -> gnome-screenshot.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/com.system76.CosmicStore.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.system76.CosmicTerm.png -> terminal.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.usebottles.bottles-program.png -> bottles.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.usebottles.bottles.png -> bottles.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.valvesoftware.Steam.png -> steam.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.viewizard.Astromenace.png -> astromenace.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/com.viewizard.astromenace.png -> astromenace.png
@@ -1736,6 +1767,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/cups.png -> print-manager
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/cutefish-screenshot.png -> gnome-screenshot.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/cuttlefish.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/daemon.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/darkly-settings.png -> gnome-settings-theme.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/darktable-1.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/darktable-2.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/darktable-3.png
@@ -1761,6 +1793,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/desktop-effects.png -> be
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/desktop-environment-cinnamon.png -> cinnamon.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/desktop-environment-lxqt.png -> ../places/lxqt.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/dev.aunetx.deezer.png -> deezer.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/dev.lapce.lapce.png -> lapce.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/devdocs.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/devede.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/devhelp.png
@@ -1778,12 +1811,14 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/discord-ptb.png -> discor
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/display-brightness.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/display-capplet.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/display.im6.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/dk.yumex.Yumex.png -> yumex.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/dockbarx.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/docker.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/docky.png -> gnome-do.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/document.png -> ../places/folder-documents.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/dolphin-emu.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/dolphin.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/doom.png -> Doom3.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/dosbox.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/download.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/download_manager.png -> download.png
@@ -1802,6 +1837,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/easytag.png -> cowbell.pn
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/eekboard.png -> im-chooser.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/ejecter.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/ekiga.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/elder-scrolls.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/electron.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/electron25.png -> electron.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/element.png
@@ -1894,6 +1930,9 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/freecad-daily.png -> free
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/freeciv-client.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/freeciv-modpack.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/freeciv-server.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/freedoom.png -> Doom3.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/freedoom1.png -> Doom3.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/freedoom2.png -> Doom3.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/freegish.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/freetuxtv.png -> tvtime.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/frostwire.png -> bittorrent.png
@@ -1933,6 +1972,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/geary.png -> internet-mai
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/gedit-icon.png -> accessories-text-editor.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/gedit-logo.png -> accessories-text-editor.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/gedit.png -> accessories-text-editor.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/general-emulator.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/geogebra.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/gftp.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/ghex.png
@@ -2225,6 +2265,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/gwget.png -> jdownloader.
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/gwibber.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/gxine.png -> avidemux.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/gxmms_mini.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/gzdoom.png -> Doom3.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/handbrake.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/harddrake.png -> hwbrowser.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/hardinfo.png -> hwbrowser.png
@@ -2246,6 +2287,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/hotwire.png -> utilities-
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/hplip.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/htop.png -> utilities-system-monitor.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/httrack.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/httraqt.png -> download.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/hu.irl.cameractrls.png -> cameractrls.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/hugin.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/hwbrowser.png
@@ -2296,7 +2338,9 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/io.github.GnomeMpv.png ->
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/io.github.Hexchat.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/io.github.cboxdoerfer.FSearch.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/io.github.celluloid_player.Celluloid.png -> gmplayer.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/io.github.freedoom.FreeDM.png -> Doom3.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/io.github.kolunmi.Bazaar.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/io.github.martinrotter.rssguard.png -> liferea.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/io.github.mightycreak.Diffuse.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/io.github.mimbrero.WhatsAppDesktop.png -> whatsapp.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/io.github.quodlibet.ExFalso.png
@@ -2327,7 +2371,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/java17-openjdk.png -> jav
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/java18-openjdk.png -> java.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/java19-openjdk.png -> java.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/java20-openjdk.png -> java.png
-lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/java25-openjdk.png -> java
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/java25-openjdk.png -> java.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/java8-openjdk.png -> java.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/java9-openjdk.png -> java.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/javaws.png -> sun-java6.png
@@ -2346,14 +2390,17 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/kaddressbook.png -> addre
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/kaffeine-icon.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/kaffeine.png -> kaffeine-icon.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/kalarm.png -> stock_alarm.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/kalendar.png -> evolution-calendar.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/kalgebra.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/kalgebrabackend.png -> kalgebra.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/kali-wireshark.png -> wireshark.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/kalzium.png -> org.kde.kalzium.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/kamoso.org -> ../devices/camera-web.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/kanagram.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/kappfinder.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/karbon.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/kasteroids.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/kasts.png -> radio.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/kate.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/katomic.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/kaudiocreator.png -> rip.png
@@ -2446,6 +2493,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/kig.png -> kfig.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/kjobviewer.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/kjots.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/kjournal.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/klassy-settings.png -> gnome-settings-theme.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/klavaro.png -> preferences-desktop-keyboard-shortcuts.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/kleopatra.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/klettres.png
@@ -2560,6 +2608,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/kynpatic.png -> system-so
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/lancelot-start.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/lancelot.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/language-selector.png -> preferences-desktop-locale.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/lapce.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/latte-dock.png -> latte.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/latte.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/launcher-program.png
@@ -2629,6 +2678,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/lximage.png -> eog.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/lxqt-about.png -> ../places/lxqt.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/lxqt-archiver.png -> ark.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/lxterminal.png -> utilities-terminal.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/lzdoom.png -> Doom3.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/m_doom.png -> Doom3.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/mail-client.png -> internet-mail.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/mail-notification.png -> ../actions/mail-inbox.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/mail_generic.png -> internet-mail.png
@@ -2666,6 +2717,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/mate-typing-monitor.png -
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/mateconf-editor.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/math.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/maya.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/md.obsidian.Obsidian.png -> obsidian.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/mdm-login-photo.png -> ../actions/actor.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/mdm-xnest.png -> gdm-xnest.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/mdm.png -> gdm.png
@@ -2673,6 +2725,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/mdmflexiserver.png -> gdm
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/mdmsetup.png -> gdmsetup.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/me-tv.png -> tvtime.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/me.dusansimic.DynamicWallpaper.png -> background.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/me.mitya57.ReText.png -> retext.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/media-player-48.png -> gmplayer.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/media-player-banshee.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/mediacontrol.png -> preferences-desktop-multimedia.png
@@ -2680,11 +2733,14 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/mediacontrol.png -> prefe
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/mega.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/megasync.png -> mega.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/meld.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/melonDS.png -> melonds.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/melonds.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/mendeley-desktop.png -> mendeley.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/mendeley.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/mendeleydesktop.png -> mendeley.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/menu-editor.png -> alacarte.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/menulibre.png -> alacarte.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/merkuro.png -> evolution-calendar.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/meterbridge.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/meterbridge32x32.xpm -> meterbridge.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/micro.png
@@ -2705,8 +2761,11 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/miro-guide-source.png -> 
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/missioncenter.png -> conky-logomark-violet.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/mitter.png -> gwibber.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/mixxx.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/mo2.png -> preferences-plugin.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/modem-manager.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/modem.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/modorganizer.png -> preferences-plugin.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/modorganizer2.png -> preferences-plugin.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/monodevelop.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/mousepad.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/mozicon128.png -> firefox.png
@@ -2732,6 +2791,9 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/multimedia-volume-control
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/multimedia.png -> gnome-multimedia.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/muon.png -> system-software-installer.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/muondiscover.png -> plasmadiscover.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/mupen64.png -> nintendo-emulator.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/mupen64plus-qt.png -> nintendo-emulator.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/mupen64plus.png -> nintendo-emulator.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/musescore.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/music-player-banshee.png -> banshee.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/my-caffeine-off-symbolic.png -> caffeine-cup-empty.png
@@ -2748,8 +2810,10 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/nautilus-dropbox.png -> d
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/nautilus.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/nemo.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/nepomuk.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/net.kuribo64.melonDS.png -> melonds.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/net.lutris.Lutris.png -> lutris.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/net.mullvad.MullvadBrowser.png -> mullvad-browser.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/net.pcsx2.PCSX2.png -> playstation-emulator.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/net.xmind.XMind.png -> xmind.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/net.xmind.XMind10.png -> xmind.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/net.xmind.XMind8.png -> xmind.png
@@ -2761,6 +2825,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/network.cycles.wdisplays.
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/network.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/networkmanager.png -> gnome-network-preferences.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/nextcloud.png -> Nextcloud.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/nintendo-emulator.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/nl.hjdskes.gcolor3-symbolic.png -> nl.hjdskes.gcolor3.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/nl.hjdskes.gcolor3.png -> ../actions/color-picker.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/nm-adhoc.png
@@ -2824,6 +2889,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/obs-studio.png -> obs.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/obs-tray-active.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/obs-tray.png -> obs.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/obs.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/obsidian.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/octave.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/octavebackend.png -> octave.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/octopi-error.png -> octopi-red.png
@@ -2888,6 +2954,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/ooo3.0.png -> ooo-gulls.p
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/ooocalc.png -> ooo-calc.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/openbox.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/openjdk-6.png -> sun-java6.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/openmw-cs.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/openmw.png -> elder-scrolls.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/openoffice.png -> ooo-gulls.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/openoffice3.0.png -> ooo-gulls.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/openofficeorg-base.png -> ooo-base.png
@@ -2950,6 +3018,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.armagetronad.Armagetr
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.avidemux.Avidemux.png -> avidemux.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.blender.Blender.png -> blender.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.chromium.Chromium.png -> chromium.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.citra_emu.citra.png -> citra.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.claws_mail.Claws-Mail.png -> claws-mail.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.darktable.Darktable.png -> darktable.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.exaile.Exaile.png -> exaile.png
@@ -3177,6 +3246,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.inkscape.Inkscape.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.akregator.png -> liferea.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.alligator.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.amarok.png -> amarok.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.angelfish.png -> angelfish.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.arianna.png -> bookcase.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.ark.png -> ark.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.bomber.png -> clanbomber.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.calligraauthor.png -> calligraauthor.png
@@ -3201,6 +3272,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.juk.png -> juk.pn
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.kalzium.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.kamoso.png -> ../devices/camera-web.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.kapman.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.kasts.png -> radio.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.kate.png -> kate.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.katomic.png -> katomic.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.kbackup.png -> preferences-system-backup.png
@@ -3244,12 +3316,14 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.latte.analogclock
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.latte.plasmoid.png -> latte.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.latte.png -> latte.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.lokalize.png -> lokalize.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.merkuro.png -> evolution-calendar.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.neochat.png -> kde-telepathy.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.okteta.png -> ghex.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.okular.png -> okular.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.plasma.caffeine-plus.png -> caffeine.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.plasma.vault.png -> plasmavault.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.redshiftControl.png -> ../status/redshift-status-on.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.tokodon.png -> tokodon.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/org.kde.vvave.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kicad.KiCad.png -> kicad.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.kicad_pcb.KiCad.png -> kicad.png
@@ -3264,14 +3338,18 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.musescore.MuseScore.p
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.mypaint.MyPaint-symbolic.png -> mypaint.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.mypaint.MyPaint.png -> mypaint.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.onlyoffice.desktopeditors.desktop.png -> asc-de.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.openmw.OpenMW.OpenCS.png -> openmw-cs.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.openmw.OpenMW.png -> elder-scrolls.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.openrgb.OpenRGB.png -> OpenRGB.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/org.opensuse.opensuse_welcome.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.pamac.manager.png -> system-software-installer.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.ppsspp.PPSSPP.png -> playstation-emulator.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.pulseaudio.pavucontrol-qt.png -> gnome-mixer.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.pulseaudio.pavucontrol.png -> gnome-mixer.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.pwmt.zathura.png -> pdf-viewer.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.qbittorrent.qBittorrent.png -> qbittorrent.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/org.remmina.Remmina.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.standardnotes.standardnotes.png -> standard-notes.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.strawberrymusicplayer.strawberry.png -> strawberry.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.telegram.desktop.png -> telegram.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.videolan.VLC.png -> vlc.png
@@ -3326,8 +3404,10 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.xfce.workspaces.png -
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.xfce.xfdesktop.png -> background.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.xfce.xfwm4-tweaks.png -> fusion-icon.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.xfce.xfwm4.png -> preferences-system-windows.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.zdoom.GZDoom.png -> Doom3.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/org.zotero.Zotero.png -> zotero.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/oxine.png -> avidemux.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/oxygen-settings.png -> gnome-settings-theme.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/p7zip.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/pa-applet.png -> volume-knob.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/package-manager-icon.png -> system-software-installer.png
@@ -3356,6 +3436,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/pavucontrol.png -> gnome-
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/pavumeter.png -> eq.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/pcmanfm-qt.png -> system-file-manager.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/pcmanfm.png -> system-file-manager.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/pcsx2.png -> playstation-emulator.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/pdf-viewer.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/pdfarranger.png -> com.github.jeromerobert.pdfarranger.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/phatch-actionlist.png
@@ -3386,6 +3467,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/plasmagik.png -> ../actio
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/plasmashell.png -> plasma.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/plasmavault.png -> ../places/folder-locked.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/playonlinux.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/playstation-emulator.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/plv.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/podcast.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/podcat-amarok.png
@@ -3394,6 +3476,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/porthole.png -> system-so
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/postman.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/ppa.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/pppoeconf.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/ppsspp.png -> playstation-emulator.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/pragha-panel.png -> pragha.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/pragha.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/preferences-applications.png -> ../categories/applications-accessories.png
@@ -3533,7 +3616,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/preferences-wallpaper.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/preferences-web-browser-cache.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/preferences-web-browser-cookies.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/preferences-web-browser-identification.png
-lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/preferences-web-browser-shortcuts.png -> ../emblems/emblem-symbolic-link.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/preferences-web-browser-shortcuts.png -> ../symbolic/emblems/emblem-symbolic-link.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/preferences-web-browser-ssl.png -> ../emblems/emblem-locked.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/preferences-web-browser-stylesheets.png -> ../mimetypes/text-x-css.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/preferences.png
@@ -3564,6 +3647,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/qdbusviewer-qt4.png -> qt
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/qdbusviewer-qt5.png -> qtdbusviewer.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/qdbusviewer.png -> qtdbusviewer.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/qdbusviewer6.png -> qtdbusviewer.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/qdiskinfo.png -> nautilus-gdu.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/qgit.png -> git-gui.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/qjackctl.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/qlipper.png -> ../actions/edit-copy.png
@@ -3609,6 +3693,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/remmina-panel.png -> remm
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/remmina.png -> gnome-remote-desktop.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/resapplet.png -> display-capplet.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/rest.insomnia.Insomnia.png -> insomnia.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/retext.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/retroarch.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/retropie.png -> ../devices/input-gaming.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/revelation.png -> stock_keyring.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/rhythmbox-notplaying.png -> rhythmbox.png
@@ -3621,6 +3707,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/ring-kde.png -> ring.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/root.png -> gksu-root-terminal.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/rosegarden.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/rpmdrake.png -> system-software-installer.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/rssguard.png -> liferea.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/rssowl.png -> liferea.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/rygel.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/samba.png
@@ -3649,6 +3736,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/seahorse-key.png -> stock
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/seahorse-sign.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/seahorse.png -> stock_keyring.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/seahorse.xpm -> seahorse.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/selectdefaultapplication.png -> gnome-settings-default-applications.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/semn.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/serpentine.png -> gparted.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/serviceconf.png
@@ -3658,6 +3746,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/services.png -> serviceco
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/setroubleshoot_icon.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/setroubleshoot_red_icon.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/shell.png -> terminal.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/shelly.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/shotwell.png -> image-viewer.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/showfoto.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/shutter-panel.png -> shutter.png
@@ -3695,6 +3784,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/spotify-linux-512x512.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/spotify-qt.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/spotify.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/squeeze.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/standard-notes.png -> text-editor-fancy.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/stardict.png -> accessories-dictionary.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/startupmanager.png -> preferences-desktop.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/steam-icon.png -> steam.png
@@ -3820,6 +3910,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/time.png -> clock.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/timemachine-icon.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/timeshift.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/timevault.png -> preferences-system-backup.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/tokodon.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/tomboy-note.png -> gnome-sticky-notes-applet.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/tomboy.png -> gnome-sticky-notes-applet.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/toolbox.png
@@ -3847,6 +3938,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/ubuntuone-installer.png -
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/ufw-frontends.png -> preferences-system-firewall.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/un-reboot.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/unetbootin.png -> usb-creator.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/ungoogled-chromium.png -> chromium-browser-privacy.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/unknownapp.png -> gnome-other.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/update-manager.png -> system-software-update.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/update-notifier.png -> system-software-update.png
@@ -3876,6 +3968,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/vcs.png -> git.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/viewnior.png -> image-viewer.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/vim.png -> accessories-text-editor.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/vinagre.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/vinyl-settings.png -> gnome-settings-theme.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/virt-manager.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/virtualbox-ose.png -> virtualbox.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/virtualbox.png -> VBox.png
@@ -3901,6 +3994,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/vscodium.png -> com.visua
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/wallpaper.png -> background.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/waterfox-g3.png -> waterfox-g4.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/waterfox-g4.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/wayfire.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/wcm.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/web-browser-symbolic.png -> web-browser.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/web-browser.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/web-deezer.png -> deezer.png
@@ -4091,6 +4186,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/yast-users.png -> system-
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/apps/yast.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/yumex.png -> system-software-installer.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/apps/zanshin.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/zdl.png -> Doom3.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/zdoom.png -> Doom3.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/zeitgeist.png -> gnome-activity-journal.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/zen-icon.png -> system-software-update.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/apps/zenity.png -> yad.png
@@ -5998,7 +6095,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/places/gtk-directory.png -> fo
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/places/gtk-network.png -> network-workgroup.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/places/home.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/places/inode-directory.png -> folder.png
-lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/places/kde-plasma_badge-symbolic.png -> kde_badge-symbolic.png
+lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/places/kde-plasma_badge-symbolic.png -> ../symbolic/places/kde_badge-symbolic.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/places/library-music.png -> folder-music.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/places/lubuntu_badge.png -> lxqt.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/places/lxde.png
@@ -6085,7 +6182,6 @@ drwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/previews/
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/previews/preview-caja.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/previews/whisker.png
 drwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/status/
--rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/status/.directory
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/status/airplane-mode-symbolic.png -> airplane-mode.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/status/airplane-mode.png -> airplane.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/status/airplane.png
@@ -6757,11 +6853,27 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/status/network-wired-acquiring
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/status/network-wired-disconnected-symbolic.png -> network-wired-disconnected.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/status/network-wired-disconnected.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/network-wired.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-0-limited.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-0-locked.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-0.png -> network-wireless-connected-00.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-100-limited.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-100-locked.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-100.png -> network-wireless-connected-100.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-20-limited.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-20-locked.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-20.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-25.png -> network-wireless-connected-25.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-40-limited.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-40-locked.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-40.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-50.png -> network-wireless-connected-50.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-60-limited.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-60-locked.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-60.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-75.png -> network-wireless-connected-75.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-80-limited.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-80-locked.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-80.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-acquiring-symbolic.png -> network-wireless-acquiring.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-acquiring.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/status/network-wireless-connected-00.png -> ../apps/nm-signal-00.png
@@ -7020,6 +7132,8 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/status/system-file-manager-sym
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/status/system-file-progress-panel.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/status/system-restart-panel.png -> reboot-notifier.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/status/system-shutdown-restart-panel.png -> reboot-notifier.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/system-suspend-inhibited.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/system-suspend-uninhibited.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/status/system-upgrade.png -> software-update-available.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/tabletconnected.png
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/tabletdisconnected.png
@@ -7317,6 +7431,11 @@ lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/status/xfpm-ups-100-charging.p
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/status/xfpm-ups-100.png -> gpm-ups-100.png
 lrwxrwxrwx	root/root	usr/share/icons/Buuf-Nestort/status/xfpm-ups-charged.png -> gpm-ups-100-charging.png
 -rwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/status/xfpm-ups-missing.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/zero-trust-connected-exclamation.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/zero-trust-connected.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/zero-trust-disconnected.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/zero-trust-error.png
+-rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/status/zero-trust-orange.png
 drwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/symbolic/
 drwxrwxr-x	root/root	usr/share/icons/Buuf-Nestort/symbolic/actions/
 -rw-rw-r--	root/root	usr/share/icons/Buuf-Nestort/symbolic/actions/application-menu-symbolic.png

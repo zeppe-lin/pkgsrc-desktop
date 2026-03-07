@@ -3,8 +3,8 @@
 # Depends on:  hicolor-icon-theme gnome-icon-theme
 
 name=buuf-nestort-icon-theme
-_commit=5614e2cfd7d7c09622be85cfef1d37d854568ce3
-version=2.0-5614e2c
+_commit=2b8310d10bcff8783c425edf48947db3fc7c9f08
+version=2.0-2b8310d
 release=1
 source="$name-$version.tar.gz::https://git.disroot.org/eudaimon/buuf-nestort/archive/$_commit.tar.gz
 	icon-theme.cache"
@@ -16,15 +16,29 @@ build() {
 	mkdir -p $PKG/usr/share/icons
 	mv buuf-nestort $PKG/usr/share/icons/Buuf-Nestort
 
-	#sed -i '/^Inherits=.*/d' \
-	#	$PKG/usr/share/icons/Buuf-Nestort/index.theme
+	_theme_dir=$PKG/usr/share/icons/Buuf-Nestort
+
+	#sed -i '/^Inherits=.*/d' ${_theme_dir}/index.theme
 	sed -i '/^Inherits=/s/oxygen,//;s/,breeze//' \
-		$PKG/usr/share/icons/Buuf-Nestort/index.theme
+		${_theme_dir}/index.theme
 
 	# Fix long-long-long name
 	sed -i 's/Name=Buuf For Many Desktops/Name=Buuf-Nestort/' \
-		$PKG/usr/share/icons/Buuf-Nestort/index.theme
+		${_theme_dir}/index.theme
 
-	install -m 0644 -Dt $PKG/usr/share/icons/Buuf-Nestort \
-		$SRC/icon-theme.cache
+	# Fix broken links
+	ln -sf ../symbolic/actions/send-to-symbolic.png \
+		${_theme_dir}/actions/blueman-send.png
+	ln -sf ../symbolic/actions/send-to-symbolic.png \
+		${_theme_dir}/actions/document-share.png
+	ln -sf ../symbolic/actions/send-to-symbolic.png \
+		${_theme_dir}/actions/send-to.png
+	ln -sf java.png ${_theme_dir}/apps/java25-openjdk.png
+	ln -sf ../symbolic/emblems/emblem-symbolic-link.png \
+		${_theme_dir}/apps/preferences-web-browser-shortcuts.png
+	ln -sf ../symbolic/places/kde_badge-symbolic.png \
+		${_theme_dir}/places/kde-plasma_badge-symbolic.png
+
+	# Install theme cache file
+	install -m 0644 -Dt ${_theme_dir} $SRC/icon-theme.cache
 }
