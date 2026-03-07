@@ -4,26 +4,31 @@
 
 name=pinentry-gtk2
 version=1.3.2
-release=1
+release=2
 source="https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-$version.tar.bz2
 	pinentry-gtk-2.c-fontfix.patch"
 
 build() {
-	patch -d pinentry-$version -Np1 -i $SRC/pinentry-gtk-2.c-fontfix.patch
+	patch -d pinentry-$version -p1 -i $SRC/pinentry-gtk-2.c-fontfix.patch
 
 	mkdir build; cd build
 
-	../pinentry-$version/configure     \
-		--prefix=/usr              \
-		--disable-pinentry-curses  \
-		--disable-pinentry-qt      \
-		--disable-pinentry-qt5     \
-		--enable-pinentry-gtk2     \
+	../pinentry-$version/configure \
+		--prefix=/usr \
+		--disable-doc \
+		--disable-pinentry-curses \
+		--disable-pinentry-qt \
+		--disable-pinentry-qt5 \
+		--enable-pinentry-gtk2 \
 
 	make V=1
 	make DESTDIR=$PKG install
 
-	# remove junk
-	rm -rf $PKG/usr/share
-	rm $PKG/usr/bin/pinentry
+	# Remove symlink: pinentry -> pinentry-gtk-2
+	unlink $PKG/usr/bin/pinentry
+
+	# Install stub link
+	mkdir -p $PKG/usr/share/man/man1
+	echo '.so man1/pinentry.1' > \
+		$PKG/usr/share/man/man1/pinentry-gtk-2.1
 }
