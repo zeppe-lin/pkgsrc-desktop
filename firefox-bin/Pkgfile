@@ -2,11 +2,11 @@
 # URL:         https://www.mozilla.org/en-US/firefox/
 # Depends on:  alsa-lib dbus-glib desktop-file-utils gtk3 nss xorg-libxtst hicolor-icon-theme
 
-# Maintainer notes on dependencies:
+# Notes on dependencies:
 #   desktop-file-utils: needed only by post-install script
 
 name=firefox-bin
-version=148.0
+version=148.0.2
 release=1
 source="https://ftp.mozilla.org/pub/firefox/releases/$version/linux-x86_64/en-US/firefox-$version.tar.xz
 	policies.json
@@ -24,9 +24,12 @@ build() {
 
 	# Install hicolor icons
 	for x in 16 32 48 64 128; do
-		mkdir -p $PKG/usr/share/icons/hicolor/${x}x${x}/apps
-		ln -sv /opt/firefox/browser/chrome/icons/default/default${x}.png \
-			$PKG/usr/share/icons/hicolor/${x}x${x}/apps/firefox.png
+		_src_dir=/opt/firefox/browser/chrome/icons/default
+		_dst_dir=/usr/share/icons/hicolor/${x}x${x}/apps
+
+		mkdir -p $PKG/${_dst_dir}
+		ln -s ../../../../../..${_src_dir}/default${x}.png \
+			$PKG/${_dst_dir}/firefox.png
 	done
 
 	# Disable automatic updates via policies
