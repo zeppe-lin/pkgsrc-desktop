@@ -3,19 +3,19 @@
 # Depends on:  xorg-libxft xorg-libxinerama
 
 name=dmenu
-version=5.3
+version=5.4
 release=1
 source=https://dl.suckless.org/tools/$name-$version.tar.gz
 
 build() {
 	cd $name-$version
 
-	# apply user-defined configuration if exists
+	# Apply user-defined configuration if exists
 	if [ -f $PKGMK_ROOT/config.h ]; then
 		cp -v $PKGMK_ROOT/config.h .
 	fi
 
-	# pick up system flags
+	# Pick up system flags
 	sed -i "/^CFLAGS/s/-Os/$CFLAGS/" config.mk
 
 	make PREFIX=/usr DESTDIR=$PKG install
