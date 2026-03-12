@@ -1,0 +1,29 @@
+# Description: Set color temperature of display according to time of day
+# URL:         https://github.com/jonls/redshift
+# Depends on:  libdrm xorg-libxxf86vm
+
+name=redshift
+version=1.12
+release=1
+source=https://github.com/jonls/$name/releases/download/v$version/$name-$version.tar.xz
+
+build() {
+	mkdir build; cd build
+
+	../$name-$version/configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--disable-nls \
+		--disable-corelocation \
+		--disable-geoclue2 \
+		--disable-gui \
+		--disable-quartz \
+		--disable-ubuntu \
+		--disable-wingdi \
+		--enable-drm \
+		--enable-randr \
+		--enable-vidmode \
+
+	make V=1
+	make DESTDIR=$PKG install
+}
