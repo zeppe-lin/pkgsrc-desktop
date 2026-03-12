@@ -1,4 +1,4 @@
-# Description: OGG encapsulated Theora/Vorbis recording of your desktop
+# Description: OGG encapsulated Theora/Vorbis recording of desktop
 # URL:         https://github.com/Enselic/recordmydesktop/
 # Depends on:  alsa-lib libtheora popt xorg-imake xorg-libsm xorg-libxdamage xorg-libxext
 
@@ -10,10 +10,10 @@ source=https://github.com/Enselic/$name/releases/download/v$version/$name-$versi
 build() {
 	mkdir build; cd build
 
-	../$name-$version/configure  \
-		--prefix=/usr        \
-		--enable-oss=no      \
-		--enable-jack=no     \
+	../$name-$version/configure \
+		--prefix=/usr \
+		--enable-oss=no \
+		--enable-jack=no \
 
 	make V=1
 	make DESTDIR=$PKG install
