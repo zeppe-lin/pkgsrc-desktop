@@ -10,18 +10,18 @@ source=https://github.com/resurrecting-open-source-projects/scrot/archive/$versi
 build() {
 	mkdir build; cd build
 
-	autoreconf -fi ../scrot-$version
-	../scrot-$version/configure      \
-		--prefix=/usr            \
-		--mandir=/usr/share/man  \
+	autoreconf -fiv ../scrot-$version
+	../scrot-$version/configure \
+		--prefix=/usr \
+		--mandir=/usr/share/man \
 
 	make V=1
 	make DESTDIR=$PKG install
 
-	# bash completion
+	# Install bash completion
 	install -m 0644 -Dt $PKG/usr/share/bash-completion/completions \
 		../scrot-$version/etc/bash-completion/scrot
 
-	# remove junk
+	# Remove junk
 	rm -r $PKG/usr/share/doc
 }
