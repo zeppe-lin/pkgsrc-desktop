@@ -1,9 +1,9 @@
 # Description: Command-line screenshot utility for X
 # URL:         https://github.com/resurrecting-open-source-projects/scrot
-# Depends on:  autoconf-archive imlib2 xorg-libxcomposite xorg-libxinerama
+# Depends on:  autoconf-archive imlib2 xorg-libxcomposite xorg-libxrandr
 
 name=scrot
-version=1.12.1
+version=2.0.0
 release=1
 source=https://github.com/resurrecting-open-source-projects/scrot/archive/$version/scrot-$version.tar.gz
 
@@ -22,6 +22,6 @@ build() {
 	install -m 0644 -Dt $PKG/usr/share/bash-completion/completions \
 		../scrot-$version/etc/bash-completion/scrot
 
-	# Remove junk
-	rm -r $PKG/usr/share/doc
+	# Remove junk and zsh completion
+	rm -r $PKG/usr/share/doc $PKG/usr/share/zsh
 }
