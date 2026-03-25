@@ -21,6 +21,7 @@ drwxr-xr-x	root/root	opt/firefox/defaults/pref/
 -rw-r--r--	root/root	opt/firefox/defaults/pref/channel-prefs.js
 -rw-r--r--	root/root	opt/firefox/dependentlibs.list
 drwxr-xr-x	root/root	opt/firefox/distribution/
+-rw-r--r--	root/root	opt/firefox/distribution/distribution.ini
 -rw-r--r--	root/root	opt/firefox/distribution/policies.json
 -rwxr-xr-x	root/root	opt/firefox/firefox
 -rwxr-xr-x	root/root	opt/firefox/firefox-bin
