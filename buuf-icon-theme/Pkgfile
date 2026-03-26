@@ -1,4 +1,5 @@
 # Description: Buuf Deuce icon theme
+# Maintainer:  UNMAINTAINED
 # URL:         https://github.com/robson-66/Buuf
 # Depends on:  hicolor-icon-theme
 
@@ -16,7 +17,7 @@ build() {
 
 	install -m 0644 $SRC/icon-theme.cache $PKG/usr/share/icons/Buuf/
 
-	# remove junk
+	# Remove junk
 	rm $PKG/usr/share/icons/Buuf/screenshot.jpg
 	rm $PKG/usr/share/icons/Buuf/README.md
 }
