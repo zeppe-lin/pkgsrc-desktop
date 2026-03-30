@@ -4,30 +4,34 @@
 
 name=p5-gtk2
 version=1.24993
-release=2
+release=3
 source=https://www.cpan.org/modules/by-module/Gtk2/Gtk2-$version.tar.gz
 
 build() {
 	cd Gtk2-$version
 
+	if command -v finddepsdistmeta >/dev/null 2>&1; then
+		finddepsdistmeta || :
+	fi
+
 	PERL_MM_USE_DEFAULT=1 perl Makefile.PL INSTALLDIRS=vendor \
-		--without-gdkimlib    \
-		--without-gnome       \
-		--without-applets     \
-		--without-gnomeprint  \
-		--without-glade       \
+		--without-gdkimlib \
+		--without-gnome \
+		--without-applets \
+		--without-gnomeprint \
+		--without-glade \
 
 	make OPTIMIZE="$CFLAGS"
 	make install DESTDIR=$PKG
 
-	# remove junk and empty dirs
+	# Remove junk and empty dirs
 	find $PKG -depth \
-		-type f \( -name perllocal.pod  \
-			-o -name \*.bs          \
-			-o -name .packlist      \
-			\) -delete ,            \
-		-type d -empty -delete
+		\( -type f -name perllocal.pod \
+			-o -name '*.bs' \
+			-o -name .packlist \
+		\) -delete \
+		-o -type d -empty -delete
 
-	# fix perms
+	# Fix permissions
 	find $PKG -type f -a -perm -u-w | xargs chmod u+w
 }
