@@ -4,7 +4,7 @@
 
 name=irssi
 version=1.4.5
-release=2
+release=3
 source=https://github.com/irssi/irssi/releases/download/$version/irssi-$version.tar.xz
 
 build() {
@@ -12,28 +12,26 @@ build() {
 
 	mkdir build; cd build
 
-	../irssi-$version/configure   \
-		--prefix=/usr         \
-		--enable-true-color   \
-		--with-perl-lib=site  \
-		--with-proxy          \
-		--with-socks          \
-		--disable-glibtest    \
-		--disable-utf8proc    \
-		--disable-gregex      \
+	../irssi-$version/configure \
+		--prefix=/usr \
+		--enable-true-color \
+		--with-perl-lib=site \
+		--with-proxy \
+		--with-socks \
+		--disable-glibtest \
+		--disable-utf8proc \
+		--disable-gregex \
 
 	make V=1
 	make DESTDIR=$PKG install
 
-	# remove junk
+	# Remove junk and empty dirs
 	rm -r $PKG/usr/share/doc
-	find $PKG  -type f \(           \
-		   -name perllocal.pod  \
-		-o -name \*.bs          \
-		-o -name autosplit.ix   \
-		-o -name .packlist      \
-		\) -delete
-
-	# remove empty dirs
-	find $PKG -type d -empty -delete
+	find $PKG -depth \
+		\( -type f -name perllocal.pod \
+			-o -name '*.bs' \
+			-o -name autosplit.ix \
+			-o -name .packlist \
+		\) -delete \
+		-o -type d -empty -delete
 }
