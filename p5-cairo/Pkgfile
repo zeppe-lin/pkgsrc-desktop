@@ -4,25 +4,29 @@
 
 name=p5-cairo
 version=1.109
-release=2
+release=3
 source=https://search.cpan.org/CPAN/authors/id/X/XA/XAOC/Cairo-$version.tar.gz
 
 build() {
 	cd Cairo-$version
+
+	if command -v finddepsdistmeta >/dev/null 2>&1; then
+		finddepsdistmeta || :
+	fi
 
 	PERL_MM_USE_DEFAULT=1 perl Makefile.PL INSTALLDIRS=vendor
 
 	make OPTIMIZE="$CFLAGS"
 	make install DESTDIR=$PKG
 
-        # remove junk and empty dirs
+	# Remove junk and empty dirs
 	find $PKG -depth \
-		-type f \( -name perllocal.pod  \
-			-o -name \*.bs          \
-			-o -name .packlist      \
-			\) -delete ,            \
-		-type d -empty -delete
+		\( -type f -name perllocal.pod \
+			-o -name '*.bs' \
+			-o -name .packlist \
+		\) -delete \
+		-o -type d -empty -delete
 
-	# fix perms
+	# Fix permissions
 	find $PKG -type f -a -perm -u-w | xargs chmod u+w
 }
