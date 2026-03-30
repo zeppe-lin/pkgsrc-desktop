@@ -4,25 +4,29 @@
 
 name=p5-extutils-depends
 version=0.8002
-release=1
+release=2
 source=https://cpan.metacpan.org/authors/id/E/ET/ETJ/ExtUtils-Depends-$version.tar.gz
 
 build() {
 	cd ExtUtils-Depends-$version
+
+	if command -v finddepsdistmeta >/dev/null 2>&1; then
+		finddepsdistmeta || :
+	fi
 
 	PERL_MM_USE_DEFAULT=1 perl Makefile.PL INSTALLDIRS=vendor
 
 	make
 	make DESTDIR=$PKG install
 
-	# remove junk and empty dirs
+	# Remove junk and empty dirs
 	find $PKG -depth \
-		-type f \( -name perllocal.pod  \
-			-o -name \*.bs          \
-			-o -name .packlist      \
-			\) -delete ,            \
-		-type d -empty -delete
+		\( -type f -name perllocal.pod \
+			-o -name '*.bs' \
+			-o -name .packlist \
+		\) -delete \
+		-o -type d -empty -delete
 
-	# fix perms
+	# Fix permissions
 	find $PKG -type f -a ! -perm -u+w | xargs chmod u+w
 }
