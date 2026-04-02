@@ -2,14 +2,14 @@
 # URL:         https://feh.finalrewind.org/
 # Depends on:  curl imlib2 libexif xorg-libxinerama
 
-# Maintainer notes on dependencies:
+# Notes on dependencies:
 #   curl=1: enable view https:// images, needs libcurl (enabled)
 #   exif=1: builtin EXIF tag display support, needs libexif (enabled)
 #   xinerama=1: support Xinerama/XRandR multiscreen setups, needs
 #               xorg-libxinerama (enabled)
 
 name=feh
-version=3.11.3
+version=3.11.4
 release=1
 source=https://github.com/derf/feh/archive/$version/feh-$version.tar.gz
 
