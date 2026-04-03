@@ -2,12 +2,12 @@
 # URL:         https://pwmt.org/projects/zathura
 # Depends on:  girara json-glib sqlite3
 
-# Maintainer notes on dependencies:
+# Notes on dependencies:
 #   manpages=disabled: otherwise requires sphinx
 #   convert-icon=disabled: otherwise requires librsvg-compat
 
 name=zathura
-version=2026.02.22
+version=2026.03.27
 release=1
 source="$name-$version.tar.gz::https://github.com/pwmt/$name/archive/refs/tags/$version.tar.gz
 	no-gettext.patch"
