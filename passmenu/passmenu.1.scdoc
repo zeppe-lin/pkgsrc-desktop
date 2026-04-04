@@ -1,0 +1,34 @@
+PASSMENU(1)
+
+# NAME
+
+passmenu - dmenu-based interface to pass
+
+# SYNOPSIS
+
+*passmenu* [*--type*] [_dmenu-args_ ...]
+
+# DESCRIPTION
+
+*passmenu* provides a *dmenu*(1)-based interface to *pass*(1), the
+standard Unix password manager.
+It allows quick retrieval of passwords without opening a terminal
+window.
+
+By default, the selected password is copied to the clipboard.
+If the *--type* option is specified, the password is instead
+typed directly using *xdotool*(1).
+
+On systems running Wayland, *dmenu-wl* is used in place of *dmenu*(1),
+and *ydotool* is used in place of *xdotool*(1).
+Note that *ydotool* requires access to the *uinput* device; additional
+udev rules or similar configuration may be necessary to grant non-root
+users permission.
+
+# SEE ALSO
+
+*pass*(1),
+*dmenu*(1),
+*xdotool*(1)
+
+; vim: ft=scdoc cc=72 tw=70
