@@ -1,4 +1,5 @@
 # Description: Icon theme that follows the Tango visual guidelines
+# Maintainer:  UNMAINTAINED
 # URL:         http://tango.freedesktop.org/
 # Depends on:  icon-naming-utils imagemagick intltool librsvg-compat tango-icon-theme-extras
 
