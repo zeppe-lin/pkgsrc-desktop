@@ -1,0 +1,20 @@
+# Description: GNOME icon theme, symbolic icons
+# URL:         https://www.gnome.org/
+# Depends on:  gnome-icon-theme librsvg-compat
+
+name=gnome-icon-theme-symbolic
+version=3.12.0
+release=1
+source=https://download.gnome.org/sources/$name/${version%.*}/$name-$version.tar.xz
+
+build() {
+	mkdir build; cd build
+
+	GTK_UPDATE_ICON_CACHE=/bin/false \
+	../$name-$version/configure \
+		--prefix=/usr \
+		--enable-icon-mapping \
+
+	make V=1
+	make DESTDIR=$PKG install
+}
