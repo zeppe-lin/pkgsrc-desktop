@@ -1,11 +1,12 @@
 # Description: Office productivity suite
+# Maintainer:  UNMAINTAINED
 # URL:         https://www.libreoffice.org/
 # Depends on:  gtk3 freetype cups nss nspr krb5
 
-# Maintainer notes on dependencies:
+# Notes on dependencies:
 #   avahi: Discover network services (enabled if installed)
-#   qt5: KDE/Qt integration (enabled if installed)
-#   sane: Scanner support (enabled if installed)
+#   qt5:   KDE/Qt integration (enabled if installed)
+#   sane:  Scanner support (enabled if installed)
 
 name=libreoffice-bin
 version=25.8.4
