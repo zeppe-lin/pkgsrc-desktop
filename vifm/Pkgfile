@@ -10,36 +10,36 @@ source=https://github.com/vifm/vifm/releases/download/v$version/vifm-$version.ta
 build() {
 	export CFLAGS="$CFLAGS -fcommon"
 
-	# suckless patch
+	# Suckless patch
 	sed -i 's/mkdir/mkdir -p/g'       $name-$version/src/Makefile*
 	sed -i 's/mkdir -p -p/mkdir -p/g' $name-$version/src/Makefile*
 
 	mkdir build; cd build
 
-	autoreconf -fi ../$name-$version
-	CONFIG_SHELL=/bin/bash         \
-	../$name-$version/configure    \
-		--prefix=/usr          \
-		--sysconfdir=/usr/etc  \
+	autoreconf -fiv ../$name-$version
+	CONFIG_SHELL=/bin/bash \
+	../$name-$version/configure \
+		--prefix=/usr \
+		--sysconfdir=/usr/etc \
 
 	make V=1
 	make DESTDIR=$PKG install
 
 	sed -i '/^TryExec=/d' $PKG/usr/share/applications/*.desktop
 
-	# remove zsh and fish completion
+	# Remove zsh and fish completion
 	rm -r $PKG/usr/share/zsh $PKG/usr/share/fish
 
-	# remove documentation
+	# Remove documentation
 	#rm -rf $PKG/usr/share/vifm/vim-doc
 	#rm -rf $PKG/usr/share/vifm/vim/doc
 	#rm -rf $PKG/usr/share/vifm/vifm-help.txt
 
-	# remove junk
+	# Remove junk
 	rm -r $PKG/usr/share/doc/
 	rm -r $PKG/usr/etc/vifm/colors
 
-	# make colorschemes available
+	# Make colorschemes available
 	ln -s /usr/share/vifm/colors $PKG/usr/etc/vifm/colors
 	#rmdir $PKG/usr/etc/vifm $PKG/usr/etc
 }
