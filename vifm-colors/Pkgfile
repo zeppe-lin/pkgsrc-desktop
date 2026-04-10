@@ -8,8 +8,9 @@ release=1
 source=$name-$version.tar.gz::https://github.com/vifm/vifm-colors/archive/refs/tags/v$version.tar.gz
 
 build() {
-	# conflicts with vifm
+	# Conflicts with vifm
 	rm $name-$version/reicheltd-light.vifm
 
-	install -m 0644 -Dt $PKG/usr/share/vifm/colors/ $name-$version/*.vifm
+	install -m 0644 -Dt $PKG/usr/share/vifm/colors \
+		$name-$version/*.vifm
 }
