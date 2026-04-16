@@ -1,10 +1,10 @@
 # Description: CLI program to access YouTube and other data content
 # URL:         https://github.com/yt-dlp/yt-dlp
 
-name=yt-dlp
+name=yt-dlp-bin
 version=2026.03.17
 release=1
-source=$name-$version.tar.gz::https://github.com/$name/$name/releases/download/$version/$name.tar.gz
+source=$name-$version.tar.gz::https://github.com/yt-dlp/yt-dlp/releases/download/$version/yt-dlp.tar.gz
 
 build() {
 	install -m 0755 -Dt $PKG/usr/bin            yt-dlp/yt-dlp
