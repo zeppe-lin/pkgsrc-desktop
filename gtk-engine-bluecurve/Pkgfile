@@ -1,4 +1,5 @@
 # Description: Bluecurve GTK2 engine from Fedora
+# Maintainer:  UNMAINTAINED
 # URL:         https://fedoraproject.org/wiki/Design
 # Depends on:  gtk
 
@@ -15,9 +16,9 @@ build() {
 	make V=1
 	make prefix=$PKG/usr install
 
-	# provided by bluecurve-gtk-theme
+	# Provided by bluecurve-gtk-theme
 	rm -r $PKG/usr/share/themes
 
-	# remove junk
+	# Remove junk
 	rm -r $PKG/usr/share/locale
 }
