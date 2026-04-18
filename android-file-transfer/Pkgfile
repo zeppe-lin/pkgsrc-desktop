@@ -2,11 +2,11 @@
 # URL:         https://whoozle.github.io/android-file-transfer-linux
 # Depends on:  fuse scdoc qt5 taglib xorg-libxkbfile
 
-# Maintainer notes on dependencies:
+# Notes on dependencies:
 #   BUILD_TAGLIB=ON: Build with taglib support (enabled)
 
 name=android-file-transfer
-version=4.6-b1f89dc
+version=4.6-8892693
 release=1
 source="https://github.com/whoozle/$name-linux/archive/${version#*-}/$name-$version.tar.gz
 	use_system_icons.patch
