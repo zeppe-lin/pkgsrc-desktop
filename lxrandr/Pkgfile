@@ -1,13 +1,13 @@
 # Description: Monitor configuration tool
 # URL:         https://github.com/lxde/lxrandr
-# Depends on:  gtk xorg-xrandr
+# Depends on:  gtk3 xorg-xrandr
 
 # Maintainer notes on dependencies:
-#   gtk3: GTK3 GUI support (disabled by default)
+#   gtk: GTK2 GUI support (disabled by default)
 
 name=lxrandr
 version=0.3.3
-release=1
+release=2
 source=$name-$version.tar.gz::https://github.com/lxde/$name/archive/refs/tags/$version.tar.gz
 
 build() {
@@ -25,7 +25,8 @@ build() {
 		--prefix=/usr \
 		--sysconfdir=/etc \
 		--disable-nls \
-		#--enable-gtk3 \
+		--disable-gtk \
+		--enable-gtk3 \
 
 	make V=1
 	make DESTDIR=$PKG install
