@@ -1,13 +1,14 @@
 # Description: Lightweight image viewer
 # URL:         https://github.com/lxde/gpicview
-# Depends on:  desktop-file-utils gtk scdoc xdg-utils
+# Depends on:  desktop-file-utils gtk3 scdoc xdg-utils
 
-# xdg-utils          : needed by "Make GPicView the default viewer" button
-# desktop-file-utils : needed by post-install script
+# Notes on dependencies:
+#   xdg-utils: needed by "Make GPicView the default viewer" button
+#   desktop-file-utils: needed by post-install script
 
 name=gpicview
 version=0.3.1
-release=2
+release=3
 source="$name-$version.tar.gz::https://github.com/lxde/$name/archive/refs/tags/$version.tar.gz
 	copy-to-clipboard.patch
 	gpicview-gtk2.scdoc
@@ -15,24 +16,26 @@ source="$name-$version.tar.gz::https://github.com/lxde/$name/archive/refs/tags/$
 
 build() {
 	# Enable copy-to-clipboard via C-c
-	patch -d $name-$version -Np1 -i $SRC/copy-to-clipboard.patch
+	patch -d $name-$version -p1 -i $SRC/copy-to-clipboard.patch
 
 	# Disable i18n
 	export LINGUAS=' '
 
 	mkdir build; cd build
 
-	autoreconf -fi ../$name-$version
+	autoreconf -fiv ../$name-$version
 	../$name-$version/configure \
 		--prefix=/usr \
 		--sysconfdir=/etc \
 		--disable-nls \
-		#--enable-gtk3
+		--disable-gtk \
+		--enable-gtk3 \
 
 	make V=1
 	make DESTDIR=$PKG install
 
 	# Install custom man page (upstream version replaced)
 	mkdir -p $PKG/usr/share/man/man1
-	scdoc < $SRC/gpicview-gtk2.scdoc > $PKG/usr/share/man/man1/gpicview.1
+	scdoc < $SRC/gpicview-gtk3.scdoc > \
+		$PKG/usr/share/man/man1/gpicview.1
 }
