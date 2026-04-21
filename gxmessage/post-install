@@ -1,0 +1,8 @@
+#!/bin/sh -ex
+
+export PATH="/sbin:/usr/sbin:/bin:/usr/bin"
+
+# gtk3
+gtk-update-icon-cache -f -t -q /usr/share/icons/hicolor
+
+# End of file.
