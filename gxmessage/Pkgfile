@@ -1,0 +1,22 @@
+# Description: Display simple messages using GTK3
+# URL:         https://trmusson.dreamhosters.com/programs.html#gxmessage
+# Depends on:  gtk3
+
+name=gxmessage
+version=3.4.3
+release=1
+source=https://downloads.sourceforge.net/$name/$name-$version.tar.gz
+
+build() {
+	mkdir build; cd build
+
+	../$name-$version/configure \
+		--prefix=/usr \
+		--disable-nls \
+
+	make V=1
+	make DESTDIR=$PKG install
+
+	# Remove junk
+	rm -r $PKG/usr/share/info
+}
