@@ -1,4 +1,5 @@
 # Description: Graphical version of su written in C and GTK+ (gksu alternative)
+# Maintainer:  UNMAINTAINED
 # URL:         https://github.com/nomius/ktsuss
 # Depends on:  gtk
 
@@ -10,17 +11,16 @@ source="https://github.com/nomius/$name/archive/$version/$name-$version.tar.gz
 	ktsuss.1"
 
 build() {
-	# fix build with gcc 14
+	# Fix build with gcc 14
 	export CFLAGS="$CFLAGS -Wno-implicit-function-declaration"
 
-	patch -d $name-$version -Np1 \
-		-i $SRC/3584ce168196bd7262d542332d318706edc741fd.patch
+	patch -d $name-$version -p1 -i $SRC/3584ce1*.patch
 
 	mkdir build; cd build
 
-	autoreconf -fi ../$name-$version
-	../$name-$version/configure  \
-		--prefix=/usr        \
+	autoreconf -fiv ../$name-$version
+	../$name-$version/configure \
+		--prefix=/usr \
 
 	make V=1
 	make DESTDIR=$PKG install
