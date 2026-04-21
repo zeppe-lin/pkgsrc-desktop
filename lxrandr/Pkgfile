@@ -1,4 +1,5 @@
 # Description: Monitor configuration tool
+# Maintainer:  UNMAINTAINED
 # URL:         https://github.com/lxde/lxrandr
 # Depends on:  gtk xorg-xrandr
 
