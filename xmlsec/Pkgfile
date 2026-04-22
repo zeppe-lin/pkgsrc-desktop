@@ -3,7 +3,7 @@
 # Depends on:  gnutls libtool libxslt nss openssl
 
 name=xmlsec
-version=1.3.10
+version=1.3.11
 release=1
 source="https://github.com/lsh123/xmlsec/releases/download/$version/xmlsec1-$version.tar.gz
 	xmlsec-1.3.0-optimisation.patch"
@@ -26,7 +26,6 @@ build() {
 	../xmlsec1-$version/configure \
 		--prefix=/usr \
 		--disable-static \
-		--disable-docs \
 		--disable-werror \
 
 	# Ensure --as-needed is applied to shared linker invocations
@@ -37,4 +36,7 @@ build() {
 
 	# Remove libtool archives
 	rm $PKG/usr/lib/*.la
+
+	# Remove junk
+	rm -r $PKG/usr/share/doc
 }
