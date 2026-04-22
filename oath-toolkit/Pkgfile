@@ -4,7 +4,7 @@
 
 name=oath-toolkit
 version=2.6.14
-release=2
+release=3
 source=https://download.savannah.nongnu.org/releases/$name/$name-$version.tar.gz
 
 build() {
