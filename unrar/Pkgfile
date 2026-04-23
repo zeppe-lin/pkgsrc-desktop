@@ -1,4 +1,5 @@
 # Description: Extracts RAR archives
+# Maintainer:  UNMAINTAINED
 # URL:         https://www.rarlab.com/rar_add.htm
 
 name=unrar
