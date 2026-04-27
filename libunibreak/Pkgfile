@@ -2,16 +2,17 @@
 # URL:         https://github.com/adah1972/libunibreak
 
 name=libunibreak
-version=6.1
+version=7.0
 release=1
 _ver=$(echo $version | tr . _)
-source=https://github.com/adah1972/$name/archive/libunibreak_$_ver.tar.gz
+source=https://github.com/adah1972/$name/archive/${name}_$_ver.tar.gz
 
 build() {
-	cd libunibreak*$_ver
+	mkdir build; cd build
 
-	./bootstrap
-	./configure --prefix=/usr
+	NOCONFIGURE=1 ../$name*$_ver/autogen.sh
+	../$name*$_ver/configure \
+		--prefix=/usr
 
 	make V=1
 	make DESTDIR=$PKG install

@@ -11,8 +11,8 @@ drwxr-xr-x	root/root	usr/lib/
 lrwxrwxrwx	root/root	usr/lib/liblinebreak.a -> libunibreak.a
 -rw-r--r--	root/root	usr/lib/libunibreak.a
 -rwxr-xr-x	root/root	usr/lib/libunibreak.la
-lrwxrwxrwx	root/root	usr/lib/libunibreak.so -> libunibreak.so.6.0.1
-lrwxrwxrwx	root/root	usr/lib/libunibreak.so.6 -> libunibreak.so.6.0.1
--rwxr-xr-x	root/root	usr/lib/libunibreak.so.6.0.1
+lrwxrwxrwx	root/root	usr/lib/libunibreak.so -> libunibreak.so.7.0.0
+lrwxrwxrwx	root/root	usr/lib/libunibreak.so.7 -> libunibreak.so.7.0.0
+-rwxr-xr-x	root/root	usr/lib/libunibreak.so.7.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libunibreak.pc
