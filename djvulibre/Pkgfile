@@ -3,26 +3,28 @@
 # Depends on:  libjpeg-turbo
 
 name=djvulibre
-version=3.5.29
+version=3.5.30
 release=1
 source=https://download.sourceforge.net/djvu/$name-$version.tar.gz
 
 build() {
 	mkdir build; cd build
 
-	autoreconf -fi ../$name-$version
-	../$name-$version/configure  \
-		--prefix=/usr        \
-		--disable-i18n       \
-		--without-tiff       \
-		--enable-static      \
+	autoreconf -fiv ../$name-$version
+	../$name-$version/configure \
+		--prefix=/usr \
+		--disable-i18n \
+		--without-tiff \
+		--enable-static \
 
-	# remove default debug flag
-	find . -name Makefile -exec sed -ri '/C(XX)?FLAGS = /s/-g//g' {} \;
+	# Remove default debug flag
+	find . -name Makefile -exec \
+		sed -ri '/C(XX)?FLAGS = /s/-g//g' {} \;
 
 	make V=1
 	make DESTDIR=$PKG install
 
-	# remove junk
-	cd $PKG/usr/share/djvu/osi; rm -r cs de fr ja zh
+	# Remove junk
+	cd $PKG/usr/share/djvu/osi
+	rm -r cs de fr ja zh
 }
