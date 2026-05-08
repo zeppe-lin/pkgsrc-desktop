@@ -9,7 +9,7 @@
 #               xorg-libxinerama (enabled)
 
 name=feh
-version=3.12.1
+version=3.12.2
 release=1
 source=https://github.com/derf/feh/archive/$version/feh-$version.tar.gz
 
