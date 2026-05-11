@@ -2,13 +2,15 @@
 # URL:         https://pwmt.org/projects/zathura-djvu
 # Depends on:  desktop-file-utils djvulibre shared-mime-info zathura
 
-# Maintainer notes on dependencies:
-#   desktop-file-utils:  needed at post-install to update desktop entry cache
-#   shared-mime-info:    needed at post-install to update MIME type database
+# Notes on dependencies:
+#   desktop-file-utils:  needed at post-install to update desktop
+#                        entry cache
+#   shared-mime-info:    needed at post-install to update MIME type
+#                        database
 
 name=zathura-djvu
-version=2026.02.03
-release=2
+version=2026.05.10
+release=1
 source=https://pwmt.org/projects/$name/download/$name-$version.tar.xz
 
 build() {
