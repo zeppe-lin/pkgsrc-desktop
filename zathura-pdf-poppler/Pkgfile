@@ -3,7 +3,7 @@
 # Depends on:  desktop-file-utils poppler zathura
 
 name=zathura-pdf-poppler
-version=2026.02.03
+version=2026.05.10
 release=1
 source=https://pwmt.org/projects/$name/download/$name-$version.tar.xz
 
@@ -17,7 +17,8 @@ build() {
 		-D b_pie=true \
 
 	# Remove default -pipe flag
-	sed -i 's/ \-pipe/ /g' build/compile_commands.json build/build.ninja
+	sed -i 's/ \-pipe/ /g' \
+		build/compile_commands.json build/build.ninja
 
 	ninja -C build -j ${JOBS:-1} -v
 	DESTDIR=$PKG ninja -C build install
