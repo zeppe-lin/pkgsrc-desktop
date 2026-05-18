@@ -2,13 +2,13 @@
 # URL:         https://web.mit.edu/kerberos
 # Depends on:  e2fsprogs openssl
 
-# Maintainer notes on dependencies:
+# Notes on dependencies:
 #   openldap: LDAP backend support (enabled if installed)
 #   keyutils: Kernel key support (enabled if installed)
 
 name=krb5
-version=1.21.3
-release=4
+version=1.22.2
+release=1
 source="https://kerberos.org/dist/krb5/${version%.*}/krb5-$version.tar.gz
 	rc.kadmind
 	rc.kpropd
