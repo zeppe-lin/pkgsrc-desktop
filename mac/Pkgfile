@@ -2,7 +2,7 @@
 # URL:         https://www.monkeysaudio.com/index.html
 
 name=mac
-version=12.76
+version=12.95
 release=1
 source=https://monkeysaudio.com/files/MAC_$(echo $version | tr -d .)_SDK.zip
 
