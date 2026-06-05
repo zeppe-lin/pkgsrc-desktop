@@ -3,8 +3,8 @@
 
 name=libsodium
 version=1.0.22
-release=1
-source=https://github.com/jedisct1/$name/archive/$version-RELEASE/$name-$version.tar.gz
+release=2
+source=$name-$version-v2.tar.gz::https://github.com/jedisct1/$name/archive/$version-RELEASE/$name-$version.tar.gz
 
 build() {
 	mkdir build; cd build
