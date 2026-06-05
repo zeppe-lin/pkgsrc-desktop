@@ -27,12 +27,16 @@ drwxr-xr-x	root/root	usr/include/sodium/
 -rw-r--r--	root/root	usr/include/sodium/crypto_generichash_blake2b.h
 -rw-r--r--	root/root	usr/include/sodium/crypto_hash.h
 -rw-r--r--	root/root	usr/include/sodium/crypto_hash_sha256.h
+-rw-r--r--	root/root	usr/include/sodium/crypto_hash_sha3.h
 -rw-r--r--	root/root	usr/include/sodium/crypto_hash_sha512.h
 -rw-r--r--	root/root	usr/include/sodium/crypto_ipcrypt.h
 -rw-r--r--	root/root	usr/include/sodium/crypto_kdf.h
 -rw-r--r--	root/root	usr/include/sodium/crypto_kdf_blake2b.h
 -rw-r--r--	root/root	usr/include/sodium/crypto_kdf_hkdf_sha256.h
 -rw-r--r--	root/root	usr/include/sodium/crypto_kdf_hkdf_sha512.h
+-rw-r--r--	root/root	usr/include/sodium/crypto_kem.h
+-rw-r--r--	root/root	usr/include/sodium/crypto_kem_mlkem768.h
+-rw-r--r--	root/root	usr/include/sodium/crypto_kem_xwing.h
 -rw-r--r--	root/root	usr/include/sodium/crypto_kx.h
 -rw-r--r--	root/root	usr/include/sodium/crypto_onetimeauth.h
 -rw-r--r--	root/root	usr/include/sodium/crypto_onetimeauth_poly1305.h
@@ -77,8 +81,8 @@ drwxr-xr-x	root/root	usr/include/sodium/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libsodium.a
 -rwxr-xr-x	root/root	usr/lib/libsodium.la
-lrwxrwxrwx	root/root	usr/lib/libsodium.so -> libsodium.so.26.3.0
-lrwxrwxrwx	root/root	usr/lib/libsodium.so.26 -> libsodium.so.26.3.0
--rwxr-xr-x	root/root	usr/lib/libsodium.so.26.3.0
+lrwxrwxrwx	root/root	usr/lib/libsodium.so -> libsodium.so.26.4.0
+lrwxrwxrwx	root/root	usr/lib/libsodium.so.26 -> libsodium.so.26.4.0
+-rwxr-xr-x	root/root	usr/lib/libsodium.so.26.4.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libsodium.pc
