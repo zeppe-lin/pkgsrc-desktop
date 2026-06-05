@@ -2,11 +2,11 @@
 # URL:         https://github.com/TokTok/c-toxcore
 # Depends on:  libnsl libsodium
 
-# Maintainer notes on dependencies:
+# Notes on dependencies:
 #   BUILD_TOXAV needs libvpx, opus for multimedia chats (OFF by default)
 
 name=toxcore
-version=0.2.22
+version=0.2.23
 release=1
 source="https://github.com/TokTok/c-$name/archive/v$version/$name-$version.tar.gz
 	https://github.com/camgunz/cmp/archive/v20/cmp-20.tar.gz"
