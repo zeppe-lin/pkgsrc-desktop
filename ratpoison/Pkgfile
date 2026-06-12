@@ -34,7 +34,10 @@ download_git() {
 }
 
 build() {
-	download_git https://git.savannah.nongnu.org/git/ratpoison.git master
+	# XXX Unavailable upstream
+	#download_git https://git.savannah.nongnu.org/git/ratpoison.git master
+
+	download_git https://repo.or.cz/ratpoison.mirror.git master
 
 	cd ratpoison
 
