@@ -3,7 +3,7 @@
 # Depends on:  nspr sqlite3
 
 name=nss
-version=3.123.1
+version=3.125
 release=1
 
 # Automation for Mozilla's naming:
@@ -47,7 +47,7 @@ build() {
 	install -t $PKG/usr/bin *util shlibsign signtool signver ssltap
 	cd ../lib
 	install -t $PKG/usr/lib *.so
-	install -t $PKG/usr/lib -m 644 libcrmf.a libfreebl.a *.chk
+	install -t $PKG/usr/lib -m 644 libfreebl.a *.chk
 	cd ../../public/nss
 	install -t $PKG/usr/include/nss -m 644 *.h
 	cd ../../private/nss
