@@ -6,7 +6,7 @@
 #   desktop-file-utils: needed only by post-install script
 
 name=firefox-bin
-version=151.0.4
+version=152.0
 release=1
 source="https://ftp.mozilla.org/pub/firefox/releases/$version/linux-x86_64/en-US/firefox-$version.tar.xz
 	policies.json
@@ -27,9 +27,9 @@ build() {
 		_src_dir=/opt/firefox/browser/chrome/icons/default
 		_dst_dir=/usr/share/icons/hicolor/${x}x${x}/apps
 
-		mkdir -p $PKG/${_dst_dir}
+		mkdir -p $PKG${_dst_dir}
 		ln -s ../../../../../..${_src_dir}/default${x}.png \
-			$PKG/${_dst_dir}/firefox.png
+			$PKG${_dst_dir}/firefox.png
 	done
 
 	# Disable automatic updates via policies
