@@ -167,9 +167,9 @@ lrwxrwxrwx	root/root	usr/lib/libavfilter.so -> libavfilter.so.10.5.100
 lrwxrwxrwx	root/root	usr/lib/libavfilter.so.10 -> libavfilter.so.10.5.100
 -rwxr-xr-x	root/root	usr/lib/libavfilter.so.10.5.100
 -rw-r--r--	root/root	usr/lib/libavformat.a
-lrwxrwxrwx	root/root	usr/lib/libavformat.so -> libavformat.so.61.7.102
-lrwxrwxrwx	root/root	usr/lib/libavformat.so.61 -> libavformat.so.61.7.102
--rwxr-xr-x	root/root	usr/lib/libavformat.so.61.7.102
+lrwxrwxrwx	root/root	usr/lib/libavformat.so -> libavformat.so.61.7.103
+lrwxrwxrwx	root/root	usr/lib/libavformat.so.61 -> libavformat.so.61.7.103
+-rwxr-xr-x	root/root	usr/lib/libavformat.so.61.7.103
 -rw-r--r--	root/root	usr/lib/libavutil.a
 lrwxrwxrwx	root/root	usr/lib/libavutil.so -> libavutil.so.59.39.100
 lrwxrwxrwx	root/root	usr/lib/libavutil.so.59 -> libavutil.so.59.39.100
