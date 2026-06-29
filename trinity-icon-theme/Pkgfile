@@ -4,7 +4,7 @@
 # Depends on:  librsvg-compat hicolor-icon-theme
 
 name=trinity-icon-theme
-version=1.1-b75a038
+version=1.2-500322e
 release=1
 source=https://github.com/trinity-theme/$name/archive/${version#*-}/$name-$version.tar.gz
 
