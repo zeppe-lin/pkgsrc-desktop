@@ -2,115 +2,44 @@
 # URL:         https://www.nongnu.org/ratpoison/
 # Depends on:  readline bash xorg-libxft xorg-libxrandr
 
+# Notes:
+#   This recipe uses the **unofficial** GitHub mirror and applies
+#   the 'next' branch patchset (~13 commits) for modern features
+#   (gap, urgency notifications, XRandR 1.5, etc).
+
 name=ratpoison
 version=1.4.9-db94d49
-release=6
-source="0001-obeyresizehints-option-to-dis-obey-ICCCM-window-resi.patch
-	0002-fix-dedicate-frame.patch
-	0003-fix-edge-case-for-find_frame_-left-right-up-down-fun.patch
-	0004-editor-support-C-w-for-backward-kill-word.patch
-	0005-Fix-only-set-active-frame-when-needed-in-sync_wins.patch
-	0006-Fix-don-t-draw-help-window-beyond-screen-height.patch
-	0007-Fix-draw-the-license-text-centered-on-multi-screen-s.patch
-	0008-Fix-exclude-degenerate-case-from-frame-overlap.patch
-	0009-ratpoison.mdoc.1-add-missing-infofmt-description-and.patch
-	0010-Notification-on-urgency-flag.patch
-
-	ratpoison-re.pl.diff
-	genratpoison-re.pl"
-
-download_git() {
-	# arg $1: git URL
-	# arg $2: branch
-	if [ -d $PKGMK_SOURCE_DIR/$name ]; then
-		git -C $PKGMK_SOURCE_DIR/$name fetch --depth=1
-		git -C $PKGMK_SOURCE_DIR/$name clean -f
-		git -C $PKGMK_SOURCE_DIR/$name reset --hard origin/$2
-	else
-		git -C $PKGMK_SOURCE_DIR clone --depth=1 $1 -b $2 $name
-	fi
-
-	cp -r $PKGMK_SOURCE_DIR/$name $PKGMK_WORK_DIR/src/$name
-}
+release=7
+source="https://github.com/sighook/$name/archive/${version#*-}/$name-$version.tar.gz
+	next.patch"
 
 build() {
-	# XXX Unavailable upstream
-	#download_git https://git.savannah.nongnu.org/git/ratpoison.git master
-
-	download_git https://repo.or.cz/ratpoison.mirror.git master
-
-	cd ratpoison
-
-	# Switch to the latest commit on top of which we apply the patches
-	# included in this package.
-	git checkout ${version#*-}
-
-	# Ratpoison fills the system logs with
-	#   ratpoison:manage.c:236: error: XGetWMName failed
-	# this appears to be due to a dev forgetting to set it to PRINT_DEBUG
-	# rather than PRINT_ERROR.
-	sed -i 's|PRINT_ERROR (("XGetWMName|PRINT_DEBUG (("XGetWMName|' \
-		src/manage.c
-
-	for f in $SRC/00*.patch; do
-		patch -Np1 -i $f
-	done
-
-	# Needed for our genratpoison-re.pl.
-	patch -Np1 -i $SRC/ratpoison-re.pl.diff
+	# Apply consolidated patchset
+	# (git format-patch master..next, squashed into next.patch).
+	patch -d $name-* -p1 -i $SRC/next.patch
 
 	# Skip building info documentation.
 	sed -e '/^info_TEXINFOS/d' \
 	    -e 's/ fdl.text//g'    \
 	    -e 's/ texinfo.tex//g' \
-	    -i doc/Makefile.am
-
-	# custom use flags
-	for f in ${PKGMK_RATPOISON_USE:--debug +history +xft +xkb -xrandr}; do
-		case $f in
-		  -debug) PKGMK_RATPOISON="$PKGMK_RATPOISON --disable-debug"   ;;
-		  +debug) PKGMK_RATPOISON="$PKGMK_RATPOISON --enable-debug"    ;;
-		-history) PKGMK_RATPOISON="$PKGMK_RATPOISON --disable-history" ;;
-		+history) PKGMK_RATPOISON="$PKGMK_RATPOISON --enable-history"  ;;
-		    -xft) PKGMK_RATPOISON="$PKGMK_RATPOISON --without-xft"     ;;
-		    +xft) PKGMK_RATPOISON="$PKGMK_RATPOISON --with-xft"        ;;
-		    -xkb) PKGMK_RATPOISON="$PKGMK_RATPOISON --without-xkb"     ;;
-		    +xkb) PKGMK_RATPOISON="$PKGMK_RATPOISON --with-xkb"        ;;
-		 -xrandr) PKGMK_RATPOISON="$PKGMK_RATPOISON --without-xrandr"  ;;
-		 +xrandr) PKGMK_RATPOISON="$PKGMK_RATPOISON --with-xrandr"     ;;
-		       *) echo "unknown use flag '$f' in PKGMK_RATPOISON_USE" >&2
-		          exit 1 ;;
-		esac
-	done
-
-	cd -
+	    -i $name-*/doc/Makefile.am
 
 	mkdir build; cd build
 
-	autoreconf -i ../ratpoison
-	../ratpoison/configure --prefix=/usr $PKGMK_RATPOISON
+	autoreconf -fiv ../$name-*
+	../$name-*/configure \
+		--prefix=/usr \
+		--disable-debug \
+		--enable-history \
+		--with-xft \
+		--with-xkb \
+		--with-xrandr \
 
-	make MAKEINFO=: CFLAGS="$CFLAGS -DHAVE_GETLINE" V=1
+	make V=1 MAKEINFO=: CFLAGS="$CFLAGS -DHAVE_GETLINE"
 	make MAKEINFO=: DESTDIR=$PKG install
 
-	# ratpoison-re.pl
-	perl $SRC/genratpoison-re.pl         \
-	     $SRC/ratpoison/src/actions.c    \
-	   > $PKG/usr/bin/ratpoison-re.pl
-	chmod 0755 $PKG/usr/bin/ratpoison-re.pl
-
-	# ratpoison-re.pl manual page
-	pod2man -r "ratpoison-re.pl 0.1"     \
-		-c " "                       \
-		-n "ratpoison-re.pl"         \
-		-s 1                         \
-		$PKG/usr/bin/ratpoison-re.pl \
-		> $PKG/usr/share/man/man1/ratpoison-re.pl.1
-	chmod 0644 $PKG/usr/share/man/man1/ratpoison-re.pl.1
-
-	# remove junk and unused stuff
-	rm -r $PKG/usr/share/doc        \
-	      $PKG/usr/bin/rpws         \
-	      $PKG/usr/share/ratpoison  \
-	      $PKG/usr/share/emacs
+	# Remove junk and unused stuff
+	rm $PKG/usr/bin/rpws
+	cd $PKG/usr/share
+	rm -r doc ratpoison emacs
 }
