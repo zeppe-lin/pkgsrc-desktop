@@ -2,9 +2,12 @@
 # URL:         https://pwmt.org/projects/zathura
 # Depends on:  girara json-glib sqlite3
 
-# Notes on dependencies:
+# Notes:
 #   manpages=disabled: otherwise requires sphinx
 #   convert-icon=disabled: otherwise requires librsvg-compat
+#
+# Starting from 2026.07.02 zathura was ported to gtk4 with gtk3
+# dropped.
 
 name=zathura
 version=2026.05.20
