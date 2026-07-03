@@ -3,7 +3,7 @@
 # Depends on:  curl gpgme harfbuzz libjpeg-turbo nss
 
 name=poppler
-version=26.06.0
+version=26.07.0
 release=1
 source=https://gitlab.freedesktop.org/$name/$name/-/archive/$name-$version/$name-$name-$version.tar.gz
 
@@ -27,6 +27,7 @@ build() {
 		-D ENABLE_LCMS=OFF \
 		-D ENABLE_LIBOPENJPEG=none \
 		-D ENABLE_LIBTIFF=OFF \
+		-D ENABLE_LIBOPENJPEG=OFF \
 		-D ENABLE_QT5=OFF \
 		-D ENABLE_QT6=OFF \
 		-D ENABLE_SPLASH=ON \
