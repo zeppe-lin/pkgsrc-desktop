@@ -1,0 +1,1321 @@
+From 272cc1baa9fb479b289eeca726503f50c14f6a74 Mon Sep 17 00:00:00 2001
+From: Alexandr Savca <alexandr.savca89@gmail.com>
+Date: Sat, 3 Feb 2024 02:57:54 +0200
+Subject: [PATCH 01/13] obeyresizehints: toggle ICCCM resize hints
+
+Add `obeyresizehints` variable to control honoring ICCCM resize hints.
+Defaults to enabled; disabling removes gaps between terminal windows
+and frames.  Includes manual page and info page documentation.
+---
+ doc/ratpoison.mdoc.1 |  9 +++++++++
+ doc/ratpoison.texi   | 12 ++++++++++++
+ src/actions.c        | 26 ++++++++++++++++++++++++++
+ src/data.h           |  1 +
+ src/main.c           |  1 +
+ src/manage.c         |  2 +-
+ 6 files changed, 50 insertions(+), 1 deletion(-)
+
+diff --git a/doc/ratpoison.mdoc.1 b/doc/ratpoison.mdoc.1
+index 4db1a7d..c791317 100644
+--- a/doc/ratpoison.mdoc.1
++++ b/doc/ratpoison.mdoc.1
+@@ -1158,6 +1158,15 @@ been last time this window was focused, or not.
+ Default is
+ .Li 0
+ (off).
++.It Cm obeyresizehints Li 0 | 1
++Determine whether to obey resize hints from windows
++.Pq Li 1
++or not
++.Pq Li 0 .
++This typically creates a gap between term windows and the frame.
++.Pp
++Default is
++.Li 1 .
+ .It Cm rudeness Ar number
+ Show or set what kind of windows are allowed to jostle into the
+ foreground.
+diff --git a/doc/ratpoison.texi b/doc/ratpoison.texi
+index 165e715..dee9e30 100644
+--- a/doc/ratpoison.texi
++++ b/doc/ratpoison.texi
+@@ -330,6 +330,17 @@ find this counter-intuitive, set this variable to @code{0}.
+ When called with no arguments, the current setting is returned.
+ @end deffn
+ 
++@deffn Command {set obeyresizehints} @var{n}
++Obey ICCCM window resize hints. By default this variable is set
++(@code{1}) and ratpoison obeys resize hints, which can result in a
++gap between windows and the frame. Set this variable to @code{0} if
++you want to force windows to be the exact sizes of their containing
++frame. Currently this applies only to normal windows, not transient
++ones.
++
++When called with no arguments, the current setting is returned.
++@end deffn
++
+ @deffn Command {set winname} @var{name}
+ There are three resources ratpoison can get a window's name from: the
+ WMNAME hint, the res_name from the WMCLASS hint, or the res_class from
+@@ -1682,6 +1693,7 @@ Here is a list of variables that can be set:
+ @item framemsgwait
+ @item startupmessage
+ @item warp
++@item obeyresizehints
+ @end itemize
+ 
+ @end deffn
+diff --git a/src/actions.c b/src/actions.c
+index e65ca0c..b4f18a1 100644
+--- a/src/actions.c
++++ b/src/actions.c
+@@ -159,6 +159,7 @@ static cmdret * set_border (struct cmdarg **args);
+ static cmdret * set_onlyborder(struct cmdarg **args);
+ static cmdret * set_barborder (struct cmdarg **args);
+ static cmdret * set_barinpadding (struct cmdarg **args);
++static cmdret * set_obeyresizehints(struct cmdarg **args);
+ static cmdret * set_inputwidth (struct cmdarg **args);
+ static cmdret * set_waitcursor (struct cmdarg **args);
+ static cmdret * set_winfmt (struct cmdarg **args);
+@@ -362,6 +363,7 @@ init_set_vars (void)
+   add_set_var ("maxsizegravity", set_maxsizegravity, 1, "", arg_GRAVITY);
+   add_set_var ("maxundos", set_maxundos, 1, "", arg_NUMBER);
+   add_set_var ("msgwait", set_msgwait, 1, "", arg_NUMBER);
++  add_set_var ("obeyresizehints", set_obeyresizehints, 1, "", arg_NUMBER);
+   add_set_var ("padding", set_padding, 4, "", arg_NUMBER, "", arg_NUMBER, "",
+                arg_NUMBER, "", arg_NUMBER);
+   add_set_var ("resizeunit", set_resizeunit, 1, "", arg_NUMBER);
+@@ -3937,6 +3939,30 @@ cmd_msgwait (int interactive UNUSED, struct cmdarg **args)
+   return set_msgwait (args);
+ }
+ 
++static cmdret *
++set_obeyresizehints (struct cmdarg **args)
++{
++  rp_window *win;
++
++  if (args[0] == NULL)
++    return cmdret_new (RET_SUCCESS, "%d", defaults.obey_resize_hints);
++
++  if (ARG(0, number) != 0 && ARG(0, number) != 1)
++    return cmdret_new (RET_FAILURE, "set obeyresizehints: invalid argument");
++
++  defaults.obey_resize_hints = ARG(0, number);
++
++  /* Update all the visible windows. */
++  list_for_each_entry (win,&rp_mapped_window,node)
++    {
++      if (win_get_frame (win))
++        maximize (win);
++    }
++
++  return cmdret_new (RET_SUCCESS, NULL);
++}
++
++
+ static cmdret *
+ set_framemsgwait (struct cmdarg **args)
+ {
+diff --git a/src/data.h b/src/data.h
+index ac87fea..0a2b53f 100644
+--- a/src/data.h
++++ b/src/data.h
+@@ -244,6 +244,7 @@ struct rp_defaults
+   int input_window_size;
+   int window_border_width;
+   int only_border;
++  int obey_resize_hints;
+ 
+   int bar_x_padding;
+   int bar_y_padding;
+diff --git a/src/main.c b/src/main.c
+index dbd4519..0dbac74 100644
+--- a/src/main.c
++++ b/src/main.c
+@@ -228,6 +228,7 @@ init_defaults (void)
+   defaults.input_window_size   = 200;
+   defaults.window_border_width = 1;
+   defaults.only_border         = 1;
++  defaults.obey_resize_hints   = 1;
+   defaults.bar_x_padding       = 4;
+   defaults.bar_y_padding       = 0;
+   defaults.bar_location        = NorthEastGravity;
+diff --git a/src/manage.c b/src/manage.c
+index 510f730..78be591 100644
+--- a/src/manage.c
++++ b/src/manage.c
+@@ -716,7 +716,7 @@ maximize_normal (rp_window *win)
+ 
+   /* Make sure we maximize to the nearest Resize Increment specified
+      by the window */
+-  if (win->hints->flags & PResizeInc)
++  if (win->hints->flags & PResizeInc && defaults.obey_resize_hints)
+     {
+       int amount;
+       int delta;
+-- 
+2.53.0
+
+
+From 9861df1a329e47bd0fb53658d85488b42e4db387 Mon Sep 17 00:00:00 2001
+From: Alexandr Savca <alexandr.savca89@gmail.com>
+Date: Sat, 3 Feb 2024 03:01:01 +0200
+Subject: [PATCH 02/13] window: fix dedicate frame toggle
+
+Correct logic in `find_frame_non_dedicated` to properly skip current
+screen.  Restores expected promiscuous/chaste frame toggle behavior.
+---
+ src/window.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/window.c b/src/window.c
+index dd65a93..12f9f96 100644
+--- a/src/window.c
++++ b/src/window.c
+@@ -410,7 +410,7 @@ find_frame_non_dedicated(rp_screen *current_screen)
+ 
+   list_for_each_entry (screen, &rp_screens, node)
+     {
+-      if (current_screen == screen)
++      if (current_screen != screen)
+         continue;
+ 
+       list_for_each_entry (cur, &screen->frames, node)
+-- 
+2.53.0
+
+
+From 9ac7a5f32a7cb534335bbd5c473a52b814baafd7 Mon Sep 17 00:00:00 2001
+From: Alexandr Savca <alexandr.savca89@gmail.com>
+Date: Sat, 3 Feb 2024 03:05:57 +0200
+Subject: [PATCH 03/13] split: constrain directional focus to same screen
+
+Ensure `find_frame_{up,down,left,right}` only considers frames on the
+current screen.  Fixes edge case where focus jumped across identical
+multi-screen layouts.
+---
+ src/split.c | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+
+diff --git a/src/split.c b/src/split.c
+index eed0f50..a652eaf 100644
+--- a/src/split.c
++++ b/src/split.c
+@@ -1005,9 +1005,14 @@ find_frame_up (rp_frame *frame)
+ {
+   rp_screen *s;
+   rp_frame *cur;
++  rp_screen *frame_s;
++
++  frame_s = frames_screen(frame);
+ 
+   list_for_each_entry (s, &rp_screens, node)
+     {
++      if (s != frame_s)
++        continue;
+       list_for_each_entry (cur, &s->frames, node)
+         {
+           if (frame_top_abs (frame) == frame_bottom_abs (cur))
+@@ -1024,9 +1029,14 @@ find_frame_down (rp_frame *frame)
+ {
+   rp_screen *s;
+   rp_frame *cur;
++  rp_screen *frame_s;
++
++  frame_s = frames_screen(frame);
+ 
+   list_for_each_entry (s, &rp_screens, node)
+     {
++      if (s != frame_s)
++        continue;
+       list_for_each_entry (cur, &s->frames, node)
+         {
+           if (frame_bottom_abs (frame) == frame_top_abs (cur))
+@@ -1043,9 +1053,14 @@ find_frame_left (rp_frame *frame)
+ {
+   rp_screen *s;
+   rp_frame *cur;
++  rp_screen *frame_s;
++
++  frame_s = frames_screen(frame);
+ 
+   list_for_each_entry (s, &rp_screens, node)
+     {
++      if (s != frame_s)
++        continue;
+       list_for_each_entry (cur, &s->frames, node)
+         {
+           if (frame_left_abs (frame) == frame_right_abs (cur))
+@@ -1062,9 +1077,14 @@ find_frame_right (rp_frame *frame)
+ {
+   rp_screen *s;
+   rp_frame *cur;
++  rp_screen *frame_s;
++
++  frame_s = frames_screen(frame);
+ 
+   list_for_each_entry (s, &rp_screens, node)
+     {
++      if (s != frame_s)
++        continue;
+       list_for_each_entry (cur, &s->frames, node)
+         {
+           if (frame_right_abs (frame) == frame_left_abs (cur))
+-- 
+2.53.0
+
+
+From 4eaf267143d000d04e1a2c81ef4c0d5b094e9ae4 Mon Sep 17 00:00:00 2001
+From: Alexandr Savca <alexandr.savca89@gmail.com>
+Date: Sat, 3 Feb 2024 03:11:04 +0200
+Subject: [PATCH 04/13] editor: bind C-w to backward-kill-word
+
+Add `C-w` binding for `editor_backward_kill_word`.
+Documented in info page alongside `M-backspace`.
+---
+ doc/ratpoison.texi | 1 +
+ src/editor.c       | 1 +
+ 2 files changed, 2 insertions(+)
+
+diff --git a/doc/ratpoison.texi b/doc/ratpoison.texi
+index dee9e30..b5d3551 100644
+--- a/doc/ratpoison.texi
++++ b/doc/ratpoison.texi
+@@ -1776,6 +1776,7 @@ delete the word at point.
+ delete the character before the point.
+ 
+ @item M-backspace
++@itemx C-w
+ delete the word before the point.
+ 
+ @item C-k
+diff --git a/src/editor.c b/src/editor.c
+index b1beebc..45d0a3d 100644
+--- a/src/editor.c
++++ b/src/editor.c
+@@ -84,6 +84,7 @@ static edit_binding edit_bindings[] =
+      {{XK_BackSpace,    0},             editor_backward_delete_char},
+      {{XK_h,            RP_CONTROL_MASK},       editor_backward_delete_char},
+      {{XK_BackSpace,    RP_META_MASK},          editor_backward_kill_word},
++     {{XK_w,            RP_CONTROL_MASK},       editor_backward_kill_word},
+      {{XK_d,            RP_META_MASK},          editor_kill_word},
+      {{XK_k,            RP_CONTROL_MASK},       editor_kill_line},
+      {{XK_u,            RP_CONTROL_MASK},       editor_backward_kill_line},
+-- 
+2.53.0
+
+
+From 4947ebd13e10f6dcf126ae3bd67db7bc3359fd4f Mon Sep 17 00:00:00 2001
+From: Antoine Busque <antoinebusque@gmail.com>
+Date: Wed, 2 Aug 2017 01:45:58 -0400
+Subject: [PATCH 05/13] sync_wins: only reset active frame on current screen
+
+Restrict active frame reset to destroyed windows on the current
+screen.  Mirrors behavior of `unmap_notify` and `destroy_notify`.
+---
+ src/actions.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/src/actions.c b/src/actions.c
+index b4f18a1..1208902 100644
+--- a/src/actions.c
++++ b/src/actions.c
+@@ -5049,7 +5049,8 @@ sync_wins (void)
+               if (frame)
+                 {
+                   cleanup_frame (frame);
+-                  if (frame->number == win->scr->current_frame)
++                  if (frame->number == win->scr->current_frame
++                      && rp_current_screen == win->scr)
+                     set_active_frame (frame, 0);
+                 }
+               withdraw_window (win);
+-- 
+2.53.0
+
+
+From 2f3a909dd68209f5edbc3feddcb53c544a375d9b Mon Sep 17 00:00:00 2001
+From: Antoine Busque <antoinebusque@gmail.com>
+Date: Thu, 21 Sep 2017 20:01:53 -0400
+Subject: [PATCH 06/13] help: prevent drawing beyond screen height
+
+Use `s->height` instead of `s->top + s->height` when rendering help
+window.  Fixes truncated help text on multi-screen setups.
+---
+ src/actions.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/actions.c b/src/actions.c
+index 1208902..a568717 100644
+--- a/src/actions.c
++++ b/src/actions.c
+@@ -3718,7 +3718,7 @@ cmd_help (int interactive, struct cmdarg **args)
+ 
+           y += FONT_HEIGHT (s);
+           /* Make sure the next line fits entirely within the window. */
+-          if (y + FONT_HEIGHT (s) >= (s->top + s->height))
++          if (y + FONT_HEIGHT (s) >= s->height)
+             {
+               if (drawing_keys)
+                 {
+-- 
+2.53.0
+
+
+From 0617850d892d16d9e7917301b68f20c76c079cab Mon Sep 17 00:00:00 2001
+From: Antoine Busque <antoinebusque@gmail.com>
+Date: Thu, 21 Sep 2017 20:16:06 -0400
+Subject: [PATCH 07/13] license: center text relative to screen
+
+Remove `s->top` / `s->left` offsets in license rendering.
+Ensures license text is centered correctly across multi-screen setups.
+---
+ src/actions.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/actions.c b/src/actions.c
+index a568717..7e15462 100644
+--- a/src/actions.c
++++ b/src/actions.c
+@@ -3600,8 +3600,8 @@ cmd_license (int interactive UNUSED, struct cmdarg **args UNUSED)
+     }
+ 
+   /* Offset the text so its in the center. */
+-  x = s->left + (s->width - max_width) / 2;
+-  y = s->top + (s->height - i * FONT_HEIGHT (s)) / 2;
++  x = (s->width - max_width) / 2;
++  y = (s->height - i * FONT_HEIGHT (s)) / 2;
+   if (x < 0) x = 0;
+   if (y < 0) y = 0;
+ 
+-- 
+2.53.0
+
+
+From 1f3aa65a7dd529a2128c4e9790f46746df813f82 Mon Sep 17 00:00:00 2001
+From: Antoine Busque <antoinebusque@gmail.com>
+Date: Sun, 4 Feb 2018 22:08:30 -0500
+Subject: [PATCH 08/13] split: exclude degenerate one-pixel overlaps
+
+Refine frame overlap checks to ignore single-pixel adjacency.
+Fixes unreachable frames in 4-way split layouts.
+---
+ src/split.c | 30 ++++++++++++++++++++++++++----
+ 1 file changed, 26 insertions(+), 4 deletions(-)
+
+diff --git a/src/split.c b/src/split.c
+index a652eaf..27610e2 100644
+--- a/src/split.c
++++ b/src/split.c
+@@ -1000,6 +1000,28 @@ show_frame_message (char *msg)
+   sbuf_free (msgbuf);
+ }
+ 
++static int
++frames_overlap_horizontal (rp_frame *f1, rp_frame *f2)
++{
++  int f1_right = frame_right_abs (f1);
++  int f2_right = frame_right_abs (f2);
++  int f1_left = frame_left_abs (f1);
++  int f2_left = frame_left_abs (f2);
++
++  return f1_left < f2_right && f2_left < f1_right;
++}
++
++static int
++frames_overlap_vertical (rp_frame *f1, rp_frame *f2)
++{
++  int f1_bottom = frame_bottom_abs (f1);
++  int f2_bottom = frame_bottom_abs (f2);
++  int f1_top = frame_top_abs (f1);
++  int f2_top = frame_top_abs (f2);
++
++  return f1_top < f2_bottom && f2_top < f1_bottom;
++}
++
+ rp_frame *
+ find_frame_up (rp_frame *frame)
+ {
+@@ -1016,7 +1038,7 @@ find_frame_up (rp_frame *frame)
+       list_for_each_entry (cur, &s->frames, node)
+         {
+           if (frame_top_abs (frame) == frame_bottom_abs (cur))
+-            if (frame_right_abs (frame) >= frame_left_abs (cur) && frame_left_abs (frame) <= frame_right_abs (cur))
++            if (frames_overlap_horizontal (frame, cur))
+               return cur;
+         }
+     }
+@@ -1040,7 +1062,7 @@ find_frame_down (rp_frame *frame)
+       list_for_each_entry (cur, &s->frames, node)
+         {
+           if (frame_bottom_abs (frame) == frame_top_abs (cur))
+-            if (frame_right_abs (frame) >= frame_left_abs (cur) && frame_left_abs (frame) <= frame_right_abs (cur))
++            if (frames_overlap_horizontal (frame, cur))
+               return cur;
+         }
+     }
+@@ -1064,7 +1086,7 @@ find_frame_left (rp_frame *frame)
+       list_for_each_entry (cur, &s->frames, node)
+         {
+           if (frame_left_abs (frame) == frame_right_abs (cur))
+-            if (frame_bottom_abs (frame) >= frame_top_abs (cur) && frame_top_abs (frame) <= frame_bottom_abs (cur))
++            if (frames_overlap_vertical (frame, cur))
+               return cur;
+         }
+     }
+@@ -1088,7 +1110,7 @@ find_frame_right (rp_frame *frame)
+       list_for_each_entry (cur, &s->frames, node)
+         {
+           if (frame_right_abs (frame) == frame_left_abs (cur))
+-            if (frame_bottom_abs (frame) >= frame_top_abs (cur) && frame_top_abs (frame) <= frame_bottom_abs (cur))
++            if (frames_overlap_vertical (frame, cur))
+               return cur;
+         }
+     }
+-- 
+2.53.0
+
+
+From bafa64024884f2105966f66660f529d77aa256ad Mon Sep 17 00:00:00 2001
+From: Alexandr Savca <alexandr.savca89@gmail.com>
+Date: Fri, 15 Mar 2024 16:04:59 +0200
+Subject: [PATCH 09/13] manpage: add infofmt, normalize date, cleanup
+
+* Normalize `.Dd` date format to silence lint warnings.
+* Add missing `infofmt` variable description.
+* Reword `info` command docs.
+* Move format substitutions from `windows` command to `winfmt`.
+* Minor typo fixes.
+---
+ doc/ratpoison.mdoc.1 | 171 ++++++++++++++++++++++++-------------------
+ 1 file changed, 95 insertions(+), 76 deletions(-)
+
+diff --git a/doc/ratpoison.mdoc.1 b/doc/ratpoison.mdoc.1
+index c791317..72c466d 100644
+--- a/doc/ratpoison.mdoc.1
++++ b/doc/ratpoison.mdoc.1
+@@ -22,7 +22,7 @@
+ .\" [2] http://mdocml.bsd.lv/
+ .\" [3] http://mdocml.bsd.lv/mdoc.7.html
+ .\"
+-.Dd Aug 22, 2017
++.Dd March 15, 2024
+ .Dt RATPOISON 1
+ .Os
+ .Sh NAME
+@@ -470,13 +470,21 @@ but switch to the next window with the same resource class as the
+ current one.
+ (That means the next window belonging to the same application
+ as the current one.)
+-.It Ic info Pq Ic C\-t i
+-Output the current the width, height, window number and window name of
+-the current window.
+-.Po
+-What name means is chosen by
+-.Dq Ic set Ar winname .
+-.Pc
++.It Ic info Oo Ar format Oc Pq Ic C\-t i
++In interactive mode, show the information about the current window
++for the duration specified by the variable
++.Va msgwait .
++If
++.Va msgwait
++was zero, toggle between indefinitely showing and not showing.
++.Pp
++The messages are shown in the format set by
++.Ic set Ar infofmt .
++.Pp
++In non\-interactive mode, output the information about the current
++window.
++The format string can be overwritten by the optional parameter
++.Ar format .
+ .It Ic iprev
+ Like
+ .Ic prev
+@@ -855,73 +863,6 @@ The messages are shown in columns or rows depending on the value of
+ .Va winliststyle
+ in the format set by
+ .Ic set Ar winfmt .
+-The following substitutions happen in format:
+-.Pp
+-.Bl -tag -offset 2n -width 2n -compact
+-.It Li %a
+-application name (resource name)
+-.It Li %c
+-resource class
+-.It Li %f
+-frame number
+-.It Li %g
+-gravity of the window
+-.It Li %h
+-height of the window
+-.It Li %H
+-unit to resize the window vertically (height_inc)
+-.It Li %i
+-X Window ID
+-.It Li %p
+-process ID
+-.It Li %l
+-last access number
+-.It Li %M
+-string
+-.Li Maxsize ,
+-if it specifies a maximum size
+-.It Li %n
+-window number
+-.It Li %s
+-window status
+-.Po
+-.Ql *
+-is active window,
+-.Ql +
+-would be chosen by
+-.Ic other ,
+-.Ql \-
+-otherwise
+-.Pc
+-.It Li %S
+-screen number
+-.It Li %t
+-window name
+-.Po see
+-.Ic set Ar winname
+-.Pc ,
+-.It Li \&%T
+-the string
+-.Dq Li Transient ,
+-if it is a transient window
+-.It Li %w
+-width of the window
+-.It Li %W
+-unit to resize the window horizontally (width_inc)
+-.It Li %x
+-xrandr screen number
+-.It Li %%
+-litteral
+-.Ql %
+-.El
+-.Pp
+-Additionally there can be a positive decimal integer number between the
+-percent sign and the format string to specify the length this value
+-should be truncated to if longer.
+-.Po
+-For example:
+-.Li %20t
+-.Pc
+ .Pp
+ In non\-interactive mode, output the list of windows in the current group
+ line by line.
+@@ -1047,11 +988,89 @@ and
+ .Pp
+ Default is
+ .Li 1 .
++.It Ic infofmt Ar format
++Choose the default window format for the
++.Ic info
++command.
++See
++.Ic set Ar winfmt
++for accepted format characters.
++.Pp
++Default is
++.Li (%H, %W) %n(%t) .
+ .It Cm winfmt Ar format
+-Choose the default format for the the
++Choose the default format for the
+ .Ic windows
+ command.
+ .Pp
++The following substitutions happen in format:
++.Pp
++.Bl -tag -offset 2n -width 2n -compact
++.It Li %a
++application name (resource name)
++.It Li %c
++resource class
++.It Li %f
++frame number
++.It Li %g
++gravity of the window
++.It Li %h
++height of the window
++.It Li %H
++unit to resize the window vertically (height_inc)
++.It Li %i
++X Window ID
++.It Li %p
++process ID
++.It Li %l
++last access number
++.It Li %M
++string
++.Li Maxsize ,
++if it specifies a maximum size
++.It Li %n
++window number
++.It Li %s
++window status
++.Po
++.Ql *
++is active window,
++.Ql +
++would be chosen by
++.Ic other ,
++.Ql \-
++otherwise
++.Pc
++.It Li %S
++screen number
++.It Li %t
++window name
++.Po see
++.Ic set Ar winname
++.Pc ,
++.It Li \&%T
++the string
++.Dq Li Transient ,
++if it is a transient window
++.It Li %w
++width of the window
++.It Li %W
++unit to resize the window horizontally (width_inc)
++.It Li %x
++xrandr screen number
++.It Li %%
++litteral
++.Ql %
++.El
++.Pp
++Additionally there can be a positive decimal integer number between the
++percent sign and the format string to specify the length this value
++should be truncated to if longer.
++.Po
++For example:
++.Li %20t
++.Pc
++.Pp
+ Default is
+ .Li %n%s%t .
+ .It Cm winname Li title | name | class
+-- 
+2.53.0
+
+
+From 609f88cc1d571e7042c98e7a3e83709f2d237597 Mon Sep 17 00:00:00 2001
+From: Alexandr Savca <alexandr.savca89@gmail.com>
+Date: Sun, 12 May 2024 18:46:35 +0300
+Subject: [PATCH 10/13] events: notify on urgency flag
+
+Detect `XA_WM_HINTS` urgency flag and echo notification.
+Displays window ID/name when non-visible windows request attention.
+---
+ src/events.c | 20 ++++++++++++++++++++
+ src/manage.c | 16 ++++++++++++++++
+ src/manage.h |  1 +
+ 3 files changed, 37 insertions(+)
+
+diff --git a/src/events.c b/src/events.c
+index 4808d29..6409773 100644
+--- a/src/events.c
++++ b/src/events.c
+@@ -632,6 +632,26 @@ property_notify (XEvent *ev)
+             win->transient = XGetTransientForHint (dpy, win->w, &win->transient_for);
+             break;
+ 
++          case XA_WM_HINTS:
++            PRINT_DEBUG (("Additional hints\n"));
++
++            if (has_urgency_flag (win))
++              {
++                rp_group *group = groups_find_group_by_window (win);
++                rp_window_elem *win_elem;
++
++                if (group != NULL)
++                  win_elem = group_find_window (&group->mapped_windows, win);
++
++                if (!win_elem && group != NULL)
++                  win_elem = group_find_window (&group->unmapped_windows, win);
++
++                if (win_elem && group)
++                  marked_message_printf (0, 0, "Window %i (%s) in group %i wants attention",
++                                         win_elem->number, window_name (win), group->number);
++              }
++            break;
++
+           default:
+             PRINT_DEBUG (("Unhandled property notify event: %ld\n", ev->xproperty.atom));
+             break;
+diff --git a/src/manage.c b/src/manage.c
+index 78be591..06e5442 100644
+--- a/src/manage.c
++++ b/src/manage.c
+@@ -173,6 +173,22 @@ update_normal_hints (rp_window *win)
+ #endif
+ }
+ 
++/* Return non-zero if window hints have urgency flag set */
++int
++has_urgency_flag (rp_window *win)
++{
++  XWMHints *wmh;
++  int urgency_flag = 0;
++
++  if (!(wmh = XGetWMHints (dpy, win->w)))
++    return 0;
++
++  if (wmh->flags & XUrgencyHint)
++    urgency_flag = 1;
++
++  XFree (wmh);
++  return urgency_flag;
++}
+ 
+ static char *
+ get_wmname (Window w)
+diff --git a/src/manage.h b/src/manage.h
+index 8001e09..ed80179 100644
+--- a/src/manage.h
++++ b/src/manage.h
+@@ -32,6 +32,7 @@ void scanwins (void);
+ void unmanage (rp_window *w);
+ int update_window_name (rp_window *win);
+ void update_normal_hints (rp_window *win);
++int has_urgency_flag (rp_window *win);
+ void rename_current_window (void);
+ void set_state (rp_window *win, int state);
+ long get_state (rp_window *win);
+-- 
+2.53.0
+
+
+From 956592901c06f4942b6b2adaf9b6e495837cfcbe Mon Sep 17 00:00:00 2001
+From: Alexandr Savca <alexandr.savca89@gmail.com>
+Date: Fri, 3 Jul 2026 12:19:39 +0300
+Subject: [PATCH 11/13] xrandr: adopt XRandR 1.5 logical monitors
+
+Replace legacy output/CRTC probing with `XRRGetMonitors`.
+Leverage logical monitor boundaries for multi-display setups.
+Fixes ignored user-defined monitors and eliminates resource leaks.
+---
+ src/xrandr.c | 94 +++++++++++++++++++++++++---------------------------
+ 1 file changed, 45 insertions(+), 49 deletions(-)
+
+diff --git a/src/xrandr.c b/src/xrandr.c
+index 5ddf082..8ff15e7 100644
+--- a/src/xrandr.c
++++ b/src/xrandr.c
+@@ -28,7 +28,7 @@
+ static int xrandr_evbase;
+ 
+ #define XRANDR_MAJOR 1
+-#define XRANDR_MINOR 3
++#define XRANDR_MINOR 5
+ 
+ void
+ init_xrandr (void)
+@@ -58,29 +58,30 @@ init_xrandr (void)
+ int
+ xrandr_query_screen (int **outputs)
+ {
+-  XRRScreenResources *res;
+-  XRROutputInfo *outinfo;
++  int nmonitors = 0;
++  XRRMonitorInfo *monitors;
+   int *output_array;
+-  int count = 0;
+-  int i;
+-
+-  res = XRRGetScreenResources (dpy, RootWindow (dpy, DefaultScreen (dpy)));
+-  output_array = xmalloc (res->noutput * sizeof(int));
+-
+-  for (i = 0; i < res->noutput; i++) {
+-    outinfo = XRRGetOutputInfo (dpy, res, res->outputs[i]);
+-    if (!outinfo->crtc)
+-      continue;
+-
+-    output_array[count++] = res->outputs[i];
+-
+-    XRRFreeOutputInfo (outinfo);
+-  }
+-
+-  XRRFreeScreenResources (res);
+ 
+-  *outputs = output_array;
+-  return count;
++  /* Query active logical monitors instead of physical outputs */
++   monitors = XRRGetMonitors (dpy, RootWindow (dpy, DefaultScreen (dpy)), True, &nmonitors);
++   if (!monitors || nmonitors <= 0)
++     {
++       if (monitors)
++         XRRFreeMonitors (monitors);
++       *outputs = NULL;
++       return 0;
++     }
++
++   output_array = xmalloc (nmonitors * sizeof(int));
++   for (int i = 0; i < nmonitors; i++)
++     {
++       /* Map monitor indices as pseudo-output ID's to preserve ratpoison's internal arrays */
++       output_array[i] = i;
++     }
++
++   XRRFreeMonitors (monitors);
++   *outputs = output_array;
++   return nmonitors;
+ }
+ 
+ static rp_screen *
+@@ -120,40 +121,35 @@ xrandr_is_primary (rp_screen *screen)
+ void
+ xrandr_fill_screen (int rr_output, rp_screen *screen)
+ {
+-  XRRScreenResources *res;
+-  XRROutputInfo *outinfo;
+-  XRRCrtcInfo *crtinfo;
+-  RROutput primary;
++  int nmonitors = 0;
++  XRRMonitorInfo *monitors;
++  char *atom_name;
+ 
+-  res = XRRGetScreenResourcesCurrent (dpy, RootWindow (dpy, DefaultScreen (dpy)));
+-  outinfo = XRRGetOutputInfo (dpy, res, rr_output);
+-  if (!outinfo->crtc)
+-    goto free_res;
++  monitors = XRRGetMonitors (dpy, RootWindow (dpy, DefaultScreen (dpy)), True, &nmonitors);
++  if (!monitors || rr_output >= nmonitors)
++    {
++      if (monitors)
++        XRRFreeMonitors (monitors);
+ 
+-  crtinfo = XRRGetCrtcInfo (dpy, res, outinfo->crtc);
+-  if (!crtinfo)
+-    goto free_out;
++      return;
++    }
+ 
+-  primary = XRRGetOutputPrimary (dpy, RootWindow (dpy, DefaultScreen (dpy)));
+-  if (rr_output == primary)
+-    screen->xrandr.primary = 1;
+-  else
+-    screen->xrandr.primary = 0;
++  XRRMonitorInfo *mon = &monitors[rr_output];
+ 
+-  screen->xrandr.name = xstrdup (outinfo->name);
++  screen->xrandr.primary = mon->primary;
++  atom_name = XGetAtomName (dpy, mon->name);
++  screen->xrandr.name = xstrdup (atom_name ? atom_name : "N/A");
++  if (atom_name)
++    XFree (atom_name);
+   screen->xrandr.output  = rr_output;
+-  screen->xrandr.crtc    = outinfo->crtc;
++  screen->xrandr.crtc    = None; /* Logical monitors abstract away physical CRTCs */
+ 
+-  screen->left   = crtinfo->x;
+-  screen->top    = crtinfo->y;
+-  screen->width  = crtinfo->width;
+-  screen->height = crtinfo->height;
++  screen->left   = mon->x;
++  screen->top    = mon->y;
++  screen->width  = mon->width;
++  screen->height = mon->height;
+ 
+-  XRRFreeCrtcInfo (crtinfo);
+- free_out:
+-  XRRFreeOutputInfo (outinfo);
+- free_res:
+-  XRRFreeScreenResources (res);
++  XRRFreeMonitors (monitors);
+ }
+ 
+ static void
+-- 
+2.53.0
+
+
+From 927ce5d8b5a551c8b1e6e7e95c29d997026da8f0 Mon Sep 17 00:00:00 2001
+From: Alexandr Savca <alexandr.savca89@gmail.com>
+Date: Fri, 3 Jul 2026 14:08:01 +0300
+Subject: [PATCH 12/13] globals: publish _NET_ACTIVE_WINDOW on focus
+
+Expose `_NET_ACTIVE_WINDOW` atom when changing focus.
+
+This aligns ratpoison with EWMH conventions, allowing external tools
+and pagers to track the currently focused window reliably.
+---
+ src/globals.c | 3 +++
+ src/globals.h | 1 +
+ src/main.c    | 1 +
+ 3 files changed, 5 insertions(+)
+
+diff --git a/src/globals.c b/src/globals.c
+index 55f97b9..497afba 100644
+--- a/src/globals.c
++++ b/src/globals.c
+@@ -75,6 +75,7 @@ Atom xa_utf8_string;
+ /* netwm atoms */
+ Atom _net_wm_pid;
+ Atom _net_supported;
++Atom _net_active_window;
+ Atom _net_wm_window_type;
+ Atom _net_wm_window_type_dialog;
+ Atom _net_wm_name;
+@@ -284,6 +285,8 @@ set_rp_window_focus (rp_window *win)
+   PRINT_DEBUG (("Giving focus to '%s'\n", window_name (win)));
+   XSetInputFocus (dpy, win->w,
+                   RevertToPointerRoot, CurrentTime);
++  XChangeProperty (dpy, win->scr->root, _net_active_window, XA_WINDOW, 32,
++                   PropModeReplace, (unsigned char *)&win->w, 1);
+ }
+ 
+ void
+diff --git a/src/globals.h b/src/globals.h
+index 4f96667..226f124 100644
+--- a/src/globals.h
++++ b/src/globals.h
+@@ -136,6 +136,7 @@ extern Atom xa_utf8_string;
+ /* netwm atoms. */
+ extern Atom _net_wm_pid;
+ extern Atom _net_supported;
++extern Atom _net_active_window;
+ extern Atom _net_wm_window_type;
+ extern Atom _net_wm_window_type_dialog;
+ extern Atom _net_wm_name;
+diff --git a/src/main.c b/src/main.c
+index 0dbac74..af76509 100644
+--- a/src/main.c
++++ b/src/main.c
+@@ -401,6 +401,7 @@ main (int argc, char *argv[])
+   PRINT_DEBUG (("_NET_WM_PID = %ld\n", _net_wm_pid));
+   _net_supported = XInternAtom(dpy, "_NET_SUPPORTED", False);
+   PRINT_DEBUG (("_NET_SUPPORTED = %ld\n", _net_supported));
++  _net_active_window = XInternAtom(dpy, "_NET_ACTIVE_WINDOW", False);
+   _net_wm_window_type = XInternAtom(dpy, "_NET_WM_WINDOW_TYPE", False);
+   _net_wm_window_type_dialog = XInternAtom(dpy, "_NET_WM_WINDOW_TYPE_DIALOG", False);
+   _net_wm_name = XInternAtom(dpy, "_NET_WM_NAME", False);
+-- 
+2.53.0
+
+
+From 5582705832c0f5da7f4a9ad5c6bc13b954b49a3a Mon Sep 17 00:00:00 2001
+From: Alexandr Savca <alexandr.savca89@gmail.com>
+Date: Fri, 3 Jul 2026 14:25:17 +0300
+Subject: [PATCH 13/13] gap: add configurable window spacing and document it
+
+Introduce a new `gap` variable to control uniform spacing (in pixels)
+between windows and their containing frames.
+
+* Core: add `gap` field to `rp_defaults`, initialize to 0, and
+  integrate into frame sizing, window placement, and maximize logic.
+* Commands: add `set gap` handler with validation and runtime update
+  of visible windows.
+* Layout: adjust frame resize functions to respect `gap` in minimum
+  size checks.
+* Docs: update `ratpoison.mdoc.1` and `ratpoison.texi` to describe the
+  `gap` variable, its usage, and default value.
+
+This feature enables "window gaps" similar to other tiling managers,
+providing visual separation between tiled windows while remaining
+configurable.
+---
+ doc/ratpoison.mdoc.1 | 11 +++++++++++
+ doc/ratpoison.texi   | 10 ++++++++++
+ src/actions.c        | 27 ++++++++++++++++++++++++++
+ src/data.h           |  1 +
+ src/frame.c          |  8 ++++----
+ src/main.c           |  1 +
+ src/manage.c         | 45 +++++++++++++++++++++++++++++++++-----------
+ src/split.c          | 10 +++++-----
+ 8 files changed, 93 insertions(+), 20 deletions(-)
+
+diff --git a/doc/ratpoison.mdoc.1 b/doc/ratpoison.mdoc.1
+index 72c466d..e4a42df 100644
+--- a/doc/ratpoison.mdoc.1
++++ b/doc/ratpoison.mdoc.1
+@@ -1177,6 +1177,17 @@ been last time this window was focused, or not.
+ Default is
+ .Li 0
+ (off).
++.It Cm gap Ar number
++Set the gap (in pixels) between windows and their containing frames.
++.Pp
++This value is applied uniformly around all sides of a window.
++It can be used to create visual separation between tiled windows,
++similar to
++.Dq window gaps
++in other tiling managers.
++.Pp
++Default is
++.Li 0 .
+ .It Cm obeyresizehints Li 0 | 1
+ Determine whether to obey resize hints from windows
+ .Pq Li 1
+diff --git a/doc/ratpoison.texi b/doc/ratpoison.texi
+index b5d3551..ec6e4aa 100644
+--- a/doc/ratpoison.texi
++++ b/doc/ratpoison.texi
+@@ -330,6 +330,15 @@ find this counter-intuitive, set this variable to @code{0}.
+ When called with no arguments, the current setting is returned.
+ @end deffn
+ 
++@deffn Command {set gap} @var{n}
++Set the gap (in pixels) between windows and their containing frames.
++By default this variable is set to @code{0}, meaning no gap.
++Increasing the value adds uniform spacing around all sides of tiled
++windows, useful for creating visual separation.
++
++When called with no arguments, the current setting is returned.
++@end deffn
++
+ @deffn Command {set obeyresizehints} @var{n}
+ Obey ICCCM window resize hints. By default this variable is set
+ (@code{1}) and ratpoison obeys resize hints, which can result in a
+@@ -1693,6 +1702,7 @@ Here is a list of variables that can be set:
+ @item framemsgwait
+ @item startupmessage
+ @item warp
++@item gap
+ @item obeyresizehints
+ @end itemize
+ 
+diff --git a/src/actions.c b/src/actions.c
+index 7e15462..68f7de6 100644
+--- a/src/actions.c
++++ b/src/actions.c
+@@ -183,6 +183,7 @@ static cmdret * set_framemsgwait(struct cmdarg **args);
+ static cmdret * set_startupmessage(struct cmdarg **args);
+ static cmdret * set_warp(struct cmdarg **args);
+ static cmdret * set_rudeness(struct cmdarg **args);
++static cmdret * set_gap(struct cmdarg **args);
+ 
+ /* command function prototypes. */
+ static cmdret *cmd_abort (int interactive, struct cmdarg **args);
+@@ -355,6 +356,7 @@ init_set_vars (void)
+   add_set_var ("framemsgwait", set_framemsgwait, 1, "", arg_NUMBER);
+   add_set_var ("framesels", set_framesels, 1, "", arg_STRING);
+   add_set_var ("fwcolor", set_fwcolor, 1, "", arg_STRING);
++  add_set_var ("gap", set_gap, 1, "", arg_NUMBER);
+   add_set_var ("historycompaction", set_historycompaction, 1, "", arg_NUMBER);
+   add_set_var ("historyexpansion", set_historyexpansion, 1, "", arg_NUMBER);
+   add_set_var ("historysize", set_historysize, 1, "", arg_NUMBER);
+@@ -3829,6 +3831,31 @@ cmd_rudeness (int interactive UNUSED, struct cmdarg **args)
+   return set_rudeness (args);
+ }
+ 
++cmdret *
++set_gap (struct cmdarg **args)
++{
++  rp_window *win;
++  int num;
++
++  if (args[0] == NULL)
++    return cmdret_new (RET_SUCCESS, "%d", defaults.gap);
++
++  num = ARG(0,number);
++  if (num < 0)
++    return cmdret_new (RET_FAILURE, "gap: invalid argument '%s'", ARG_STRING(0));
++
++  defaults.gap = num;
++
++  /* Update all the visible windows. */
++  list_for_each_entry (win,&rp_mapped_window,node)
++    {
++      if (win_get_frame (win))
++        maximize (win);
++    }
++
++  return cmdret_new (RET_SUCCESS, NULL);
++}
++
+ char *
+ wingravity_to_string (int g)
+ {
+diff --git a/src/data.h b/src/data.h
+index 0a2b53f..9ba2cdc 100644
+--- a/src/data.h
++++ b/src/data.h
+@@ -244,6 +244,7 @@ struct rp_defaults
+   int input_window_size;
+   int window_border_width;
+   int only_border;
++  int gap;
+   int obey_resize_hints;
+ 
+   int bar_x_padding;
+diff --git a/src/frame.c b/src/frame.c
+index 9ba7178..1e9db00 100644
+--- a/src/frame.c
++++ b/src/frame.c
+@@ -285,10 +285,10 @@ frame_read (char *str, rp_screen *screen)
+     f->x = 0;
+   if (f->y <= 0)
+     f->y = 0;
+-  if (f->width <= defaults.window_border_width*2)
+-    f->width = defaults.window_border_width*2 + 1;
+-  if (f->height <= defaults.window_border_width*2)
+-    f->height = defaults.window_border_width*2 + 1;
++  if (f->width <= defaults.window_border_width*2 + defaults.gap*2)
++    f->width = defaults.window_border_width*2 + defaults.gap*2 + 1;
++  if (f->height <= defaults.window_border_width*2 + defaults.gap*2)
++    f->height = defaults.window_border_width*2 + defaults.gap*2 + 1;
+   if (f->last_access < 0)
+     f->last_access = 0;
+ 
+diff --git a/src/main.c b/src/main.c
+index af76509..7ac43c8 100644
+--- a/src/main.c
++++ b/src/main.c
+@@ -228,6 +228,7 @@ init_defaults (void)
+   defaults.input_window_size   = 200;
+   defaults.window_border_width = 1;
+   defaults.only_border         = 1;
++  defaults.gap                 = 0;
+   defaults.obey_resize_hints   = 1;
+   defaults.bar_x_padding       = 4;
+   defaults.bar_y_padding       = 0;
+diff --git a/src/manage.c b/src/manage.c
+index 06e5442..1533f26 100644
+--- a/src/manage.c
++++ b/src/manage.c
+@@ -567,17 +567,17 @@ move_window (rp_window *win)
+     case NorthWestGravity:
+     case WestGravity:
+     case SouthWestGravity:
+-      win->x = frame->x;
++      win->x = frame->x + defaults.gap;
+       break;
+     case NorthGravity:
+     case CenterGravity:
+     case SouthGravity:
+-      win->x = frame->x + (frame->width - win->border * 2) / 2 - win->width / 2;
++      win->x = frame->x + (frame->width - win->border*2 - defaults.gap*2)/2 - win->width/2;
+       break;
+     case NorthEastGravity:
+     case EastGravity:
+     case SouthEastGravity:
+-      win->x = frame->x + frame->width - win->width - win->border;
++      win->x = frame->x + frame->width - win->width - win->border - defaults.gap;
+       break;
+     }
+ 
+@@ -587,19 +587,30 @@ move_window (rp_window *win)
+     case NorthEastGravity:
+     case NorthGravity:
+     case NorthWestGravity:
+-      win->y = frame->y;
++      win->y = frame->y + defaults.gap;
+       break;
+     case EastGravity:
+     case CenterGravity:
+     case WestGravity:
+-      win->y = frame->y + (frame->height - win->border * 2) / 2 - win->height / 2;
++      win->y = frame->y + (frame->height - win->border*2 - defaults.gap*2)/2 - win->height/2;
+       break;
+     case SouthEastGravity:
+     case SouthGravity:
+     case SouthWestGravity:
+-      win->y = frame->y + frame->height - win->height - win->border;
++      win->y = frame->y + frame->height - win->height - win->border - defaults.gap;
+       break;
+     }
++
++
++  if (win->x < frame->x + defaults.gap)
++    win->x = frame->x + defaults.gap;
++  if (win->y < frame->y + defaults.gap)
++    win->y = frame->y + defaults.gap;
++
++  if (frame->x == defaults.padding_left)
++    win->x += defaults.gap;
++  if (frame->y == defaults.padding_top)
++    win->y += defaults.gap;
+ }
+ 
+ /* Set a transient window's x,y,width,height fields to maximize the
+@@ -673,7 +684,7 @@ static void
+ maximize_normal (rp_window *win)
+ {
+   rp_frame *frame;
+-  int maxx, maxy;
++  int maxx, maxy, gapx, gapy;
+ 
+   frame = win_get_frame (win);
+ 
+@@ -697,8 +708,8 @@ maximize_normal (rp_window *win)
+     }
+   else
+     {
+-      maxx = frame->width - win->border * 2;
+-      maxy = frame->height - win->border * 2;
++      maxx = frame->width - win->border*2 - defaults.gap*2;
++      maxy = frame->height - win->border*2 - defaults.gap*2;
+     }
+ 
+   /* Honour the window's aspect ratio. */
+@@ -726,8 +737,20 @@ maximize_normal (rp_window *win)
+       PRINT_DEBUG (("frame width=%d height=%d\n",
+                    frame->width, frame->height));
+ 
+-      if (maxx > frame->width) maxx = frame->width - win->border * 2;
+-      if (maxy > frame->height) maxy = frame->height - win->border * 2;
++      gapx = gapy = 2;
++      if (frame->x == defaults.padding_left)
++        gapx++;
++      if (frame->x + frame->width == win->scr->width - defaults.padding_right)
++        gapx++;
++      if (frame->y == defaults.padding_top)
++        gapy++;
++      if (frame->y + frame->height == win->scr->height - defaults.padding_bottom)
++        gapy++;
++
++      if (maxx > frame->width - win->border*2 - defaults.gap*gapx)
++        maxx = frame->width - win->border*2 - defaults.gap*gapx;
++      if (maxy > frame->height - win->border*2 - defaults.gap*gapy)
++        maxy = frame->height - win->border*2 - defaults.gap*gapy;
+     }
+ 
+   /* Make sure we maximize to the nearest Resize Increment specified
+diff --git a/src/split.c b/src/split.c
+index 27610e2..3cfd21a 100644
+--- a/src/split.c
++++ b/src/split.c
+@@ -412,8 +412,8 @@ resize_shrink_to_window (rp_frame *frame)
+ 
+   win = find_window_number (frame->win_number);
+ 
+-  resize_frame_horizontally (frame, win->width + win->border*2 - frame->width);
+-  resize_frame_vertically (frame, win->height + win->border*2 - frame->height);
++  resize_frame_horizontally (frame, win->width + win->border*2 - defaults.gap*2 - frame->width);
++  resize_frame_vertically (frame, win->height + win->border*2 - defaults.gap*2 - frame->height);
+ }
+ 
+ /* resize_frame is a generic frame resizer that can resize vertically,
+@@ -442,7 +442,7 @@ resize_frame (rp_frame *frame, rp_frame *pusher, int diff,
+         {
+           /* If the frame can't get any smaller, then fail. */
+           if (diff > 0
+-              && abs ((*c3)(cur) - (*c1)(cur)) - diff <= defaults.window_border_width * 2)
++              && abs ((*c3)(cur) - (*c1)(cur)) - diff <= defaults.gap*2 + defaults.window_border_width*2)
+             return -1;
+           /* Test for this circumstance:
+              --+
+@@ -539,7 +539,7 @@ resize_frame_horizontally (rp_frame *frame, int diff)
+   if (num_frames (s) < 2 || diff == 0)
+     return;
+ 
+-  if (frame_width (frame) + diff <= defaults.window_border_width * 2)
++  if (frame_width (frame) + diff <= defaults.gap*2 + defaults.window_border_width*2)
+     return;
+ 
+   /* Find out which resize function to use. */
+@@ -585,7 +585,7 @@ resize_frame_vertically (rp_frame *frame, int diff)
+   if (num_frames (s) < 2 || diff == 0)
+     return;
+ 
+-  if (frame_height (frame) + diff <= defaults.window_border_width * 2)
++  if (frame_height (frame) + diff <= defaults.gap*2 + defaults.window_border_width*2)
+     return;
+ 
+   /* Find out which resize function to use. */
+-- 
+2.53.0
+

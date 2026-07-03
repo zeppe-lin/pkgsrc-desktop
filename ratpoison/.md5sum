@@ -1,12 +1,2 @@
-821f32204e6a7daf6a072be24ea84505  0001-obeyresizehints-option-to-dis-obey-ICCCM-window-resi.patch
-ea7a0ab470771db8d8366a743a89f59b  0002-fix-dedicate-frame.patch
-da19b555ab7fbfc0e5a4f58e1350dfd2  0003-fix-edge-case-for-find_frame_-left-right-up-down-fun.patch
-560db84df2fe9f705949642a8c8d3010  0004-editor-support-C-w-for-backward-kill-word.patch
-40e48f49a1533261aa205a393992902a  0005-Fix-only-set-active-frame-when-needed-in-sync_wins.patch
-a8da2c3fa7027924308ff32015c39e17  0006-Fix-don-t-draw-help-window-beyond-screen-height.patch
-4e5e803df9eae0683cec89182e6c46cf  0007-Fix-draw-the-license-text-centered-on-multi-screen-s.patch
-be4ad9e2d3afbe4f1b7e7ce336b05a3b  0008-Fix-exclude-degenerate-case-from-frame-overlap.patch
-21b1fb165c64945114bbfb2dfa76e425  0009-ratpoison.mdoc.1-add-missing-infofmt-description-and.patch
-15c53d4657b83cc7d12d9f81ca754a32  0010-Notification-on-urgency-flag.patch
-63afedddd7897bb248cf6eea2b7f560e  genratpoison-re.pl
-de38668b1fa3d65821c1da2e35c52cd3  ratpoison-re.pl.diff
+24bf4226f8fcba676d0d69870fbfa963  next.patch
+cf357966d346f3656e9d31d9dbea6114  ratpoison-1.4.9-db94d49.tar.gz
