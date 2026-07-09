@@ -3,22 +3,27 @@
 # Depends on:  ncurses
 
 name=lame
-version=3.100
+version=3.101
 release=1
 source=https://downloads.sourceforge.net/project/lame/lame/$version/lame-$version.tar.gz
 
 build() {
+	export CFLAGS="$CFLAGS \
+		-Wno-incompatible-pointer-types \
+		-Wno-implicit-function-declaration"
+
 	mkdir build; cd build
 
-	../lame-$version/configure        \
-		--prefix=/usr             \
-		--disable-analyzer-hooks  \
-		--disable-gtktest         \
-		--enable-nasm             \
+	../lame-$version/configure \
+		--prefix=/usr \
+		--disable-analyzer-hooks \
+		--disable-gtktest \
+		--disable-rpath \
+		--enable-nasm \
 
 	make V=1
 	make DESTDIR=$PKG install
 
-	# remove junk
+	# Remove junk
 	rm -r $PKG/usr/share/doc
 }
