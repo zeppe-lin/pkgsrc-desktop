@@ -1,6 +1,6 @@
 # Description: MP3 encoder
 # URL:         https://lame.sourceforge.io/
-# Depends on:  ncurses
+# Depends on:  mpg123 ncurses
 
 name=lame
 version=3.101
