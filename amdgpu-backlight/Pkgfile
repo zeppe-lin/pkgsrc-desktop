@@ -1,0 +1,16 @@
+# Description: Control AMDGPU native display backlight brightness
+# URL:         https://github.com/zeppe-lin/amdgpu-backlight
+
+name=amdgpu-backlight
+version=0.1.0-eba8c49
+release=1
+source=https://github.com/zeppe-lin/$name/archive/${version#*-}/$name-$version.tar.gz
+
+build() {
+	cd $name-*
+
+	make PREFIX=/usr all
+	make PREFIX=/usr DESTDIR=$PKG install
+
+	install -m 0644 -Dt $PKG/lib/udev/rules.d/ contrib/*.rules
+}
