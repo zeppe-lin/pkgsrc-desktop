@@ -1,0 +1,5 @@
+4bdac39a13edbff09d66959f94cccaed  ClipIt-1.4.5.tar.gz
+2a08bb2ae86a5bce55ffb296a10d70c7  clipit-1.4.5-force-gdk_backend-x11.patch
+c73c6fa49f7d59cc59c213ff4cca5a16  incompatible-pointer-types-2.patch
+9f716c90e50fe597dc4f47ba91e6cfd1  incompatible-pointer-types.patch
+4a231a9ea7c437af1210f2cd459670c3  missing-prototypes.patch

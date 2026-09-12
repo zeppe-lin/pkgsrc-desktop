@@ -1,0 +1,37 @@
+# Description: Lightweight GTK+ clipboard manager
+# URL:         https://github.com/CristianHenzel/ClipIt
+# Depends on:  intltool gtk3 xdotool
+
+# Notes on dependencies:
+#   xdotool: to autopaste selected value (enabled explicitly)
+
+name=clipit
+version=1.4.5
+release=1
+source="ClipIt-$version.tar.gz::https://github.com/CristianHenzel/ClipIt/archive/v$version.tar.gz
+	clipit-1.4.5-force-gdk_backend-x11.patch
+	incompatible-pointer-types-2.patch
+	incompatible-pointer-types.patch
+	missing-prototypes.patch"
+
+build() {
+	export LINGUAS=' '
+
+	for f in $SRC/*.patch; do
+		patch -d ClipIt-$version -p1 -i $f
+	done
+
+	mkdir build; cd build
+
+	autoreconf -fiv ../ClipIt-$version
+	../ClipIt-$version/configure \
+		--prefix=/usr \
+		--disable-nls \
+		--with-gtk3 \
+		--disable-rpath \
+		--enable-appindicator=no \
+		--disable-glibtest \
+
+	make V=1
+	make DESTDIR=$PKG install
+}
