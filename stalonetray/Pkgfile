@@ -1,0 +1,30 @@
+# Description: STAnd aLONE TRAY (notification area) implementation for X11
+# URL:         https://github.com/d3adb5/stalonetray/
+# Depends on:  xorg-libxinerama xorg-libxpm xorg-libxrandr
+
+name=stalonetray
+version=1.5.0-23be0ee
+release=1
+source=https://github.com/d3adb5/$name/archive/${version#*-}/$name-$version.tar.gz
+
+build() {
+	# Disable man page generation, requires docbook-shit
+	sed -i '/# == Documentation =/,/# == Sample Configuration =/d' \
+		$name-*/meson.build
+
+	meson setup build $name-* \
+		--prefix=/usr \
+		--sysconfdir=/usr/etc \
+		--buildtype=plain \
+		--wrap-mode=nodownload \
+		-D b_lto=true \
+		-D b_pie=true \
+		-D xinerama=enabled \
+		-D randr=enabled \
+		-D xpm=enabled \
+		-D native_kde=enabled \
+		-D tests=disabled \
+
+	ninja -C build -j ${JOBS:-1} -v
+	DESTDIR=$PKG ninja -C build install
+}
