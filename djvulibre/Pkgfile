@@ -2,9 +2,13 @@
 # URL:         https://djvu.sourceforge.net/
 # Depends on:  libjpeg-turbo
 
+# Notes on dependencies:
+#   --disable-desktopfiles: otherwise requires librsvg-compat/rsvg-convert(1)
+#     we install all desktop files by hand
+
 name=djvulibre
 version=3.5.30
-release=1
+release=2
 source=https://download.sourceforge.net/djvu/$name-$version.tar.gz
 
 build() {
@@ -13,9 +17,10 @@ build() {
 	autoreconf -fiv ../$name-$version
 	../$name-$version/configure \
 		--prefix=/usr \
+		--disable-desktopfiles \
 		--disable-i18n \
-		--without-tiff \
 		--enable-static \
+		--without-tiff \
 
 	# Remove default debug flag
 	find . -name Makefile -exec \
@@ -23,6 +28,19 @@ build() {
 
 	make V=1
 	make DESTDIR=$PKG install
+
+	# Install desktop files
+	_srcdir=../$name-$version/desktopfiles
+	for x in 16 20 22 24 32 48 64 72 96 128 256; do
+		_iconsdir=usr/share/icons/hicolor/${x}x${x}/mimetypes
+		install -m 0644 -D $_srcdir/prebuilt-hi${x}-djvu.png \
+			$PKG/$_iconsdir/image-vnd.djvu.png
+	done
+	_iconsdir=usr/share/icons/hicolor/scalable/mimetypes
+	install -m 0644 -D $_srcdir/djvu.svg \
+		$PKG/$_iconsdir/image-vnd.djvu.svg
+	install -m 0644 -Dt $PKG/usr/share/mime/packages \
+		$_srcdir/djvulibre-mime.xml
 
 	# Remove junk
 	cd $PKG/usr/share/djvu/osi
