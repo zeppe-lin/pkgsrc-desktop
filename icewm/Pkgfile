@@ -3,7 +3,7 @@
 # Depends on:  imlib2 librsvg-compat libsndfile xorg-libsm xorg-libxres
 
 name=icewm
-version=4.0.0
+version=4.1.0
 release=1
 source=https://github.com/ice-wm/icewm/releases/download/$version/icewm-$version.tar.lz
 
