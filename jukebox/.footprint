@@ -88,7 +88,6 @@ drwxr-xr-x	root/root	usr/share/jukebox/pix/Papirus-Light/
 -rw-r--r--	root/root	usr/share/jukebox/pix/Papirus-Light/stars3.png
 -rw-r--r--	root/root	usr/share/jukebox/pix/Papirus-Light/stars4.png
 -rw-r--r--	root/root	usr/share/jukebox/pix/Papirus-Light/stars5.png
--rw-r--r--	root/root	usr/share/jukebox/pix/Papirus-Light/trayicon.png
 drwxr-xr-x	root/root	usr/share/jukebox/pix/Trinity/
 -rw-r--r--	root/root	usr/share/jukebox/pix/Trinity/gmb-album.svg
 -rw-r--r--	root/root	usr/share/jukebox/pix/Trinity/gmb-artist.svg
@@ -133,7 +132,6 @@ drwxr-xr-x	root/root	usr/share/jukebox/pix/Trinity/
 -rw-r--r--	root/root	usr/share/jukebox/pix/Trinity/stars3.png
 -rw-r--r--	root/root	usr/share/jukebox/pix/Trinity/stars4.png
 -rw-r--r--	root/root	usr/share/jukebox/pix/Trinity/stars5.png
--rw-r--r--	root/root	usr/share/jukebox/pix/Trinity/trayicon.png
 -rw-r--r--	root/root	usr/share/jukebox/pix/gmb-album.svg
 -rw-r--r--	root/root	usr/share/jukebox/pix/gmb-artist.svg
 -rw-r--r--	root/root	usr/share/jukebox/pix/gmb-breadcrumb.svg
@@ -176,7 +174,6 @@ drwxr-xr-x	root/root	usr/share/jukebox/pix/Trinity/
 -rw-r--r--	root/root	usr/share/jukebox/pix/stars3.png
 -rw-r--r--	root/root	usr/share/jukebox/pix/stars4.png
 -rw-r--r--	root/root	usr/share/jukebox/pix/stars5.png
--rw-r--r--	root/root	usr/share/jukebox/pix/trayicon.png
 drwxr-xr-x	root/root	usr/share/jukebox/plugins/
 -rw-r--r--	root/root	usr/share/jukebox/plugins/albuminfo.pm
 -rw-r--r--	root/root	usr/share/jukebox/plugins/appindicator.pm
