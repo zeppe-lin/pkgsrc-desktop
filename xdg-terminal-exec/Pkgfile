@@ -1,0 +1,14 @@
+# Description: Proposed standard to launching desktop apps with Terminal=true
+# URL:         https://gitlab.freedesktop.org/Vladimir-csp/xdg-terminal-exec
+# Depends on:  scdoc
+
+name=xdg-terminal-exec
+version=0.14.3
+release=1
+source=https://gitlab.freedesktop.org/Vladimir-csp/$name/-/archive/v$version/$name-v$version.tar.gz
+
+build() {
+	cd $name-v$version
+
+	make prefix=$PKG/usr install
+}
