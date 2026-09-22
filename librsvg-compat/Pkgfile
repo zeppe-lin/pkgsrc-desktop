@@ -1,39 +1,28 @@
 # Description: Legacy SVG rendering library with cairo backend
 # URL:         https://wiki.gnome.org/LibRsvg
-# Depends on:  gtk3 libcroco libxml2-2.13
+# Depends on:  gtk3 libcroco libxml2
 
 name=librsvg-compat
 version=2.40.21
-release=1
-source=https://download.gnome.org/sources/librsvg/${version%.*}/librsvg-$version.tar.xz
+release=2
+source="https://download.gnome.org/sources/librsvg/${version%.*}/librsvg-$version.tar.xz
+	librsvg-2.40.21-libxml2-modern.patch"
 
 build() {
-	# Workaround for GCC 14 compatibility
-	export CFLAGS="$CFLAGS -Wno-incompatible-pointer-types -fno-tree-vrp"
+	patch -d librsvg-$version -p1 -i $SRC/librsvg-2.40.21-libxml2-modern.patch
 
 	mkdir build; cd build
 
-	LIBRSVG_CFLAGS="-L/usr/lib/libxml2-2.13              \
-			-I/usr/include/libxml2-2.13/libxml2  \
-			-I/usr/include/glib-2.0              \
-			-I/usr/include/glib-2.0/include      \
-			-I/usr/lib/glib-2.0/include          \
-			-I/usr/include/cairo                 \
-			-I/usr/include/gdk-pixbuf-2.0        \
-			-I/usr/include/pango-1.0             \
-			-I/usr/include/harfbuzz              \
-			-I/usr/include/libcroco-0.6          \
-			-I/usr/include/freetype2"            \
-	../librsvg-$version/configure                        \
-		--prefix=/usr                                \
-		--disable-static                             \
-		--enable-gtk-doc=no                          \
-		--enable-vala=no                             \
-		--enable-introspection=no                    \
+	../librsvg-$version/configure \
+		--prefix=/usr \
+		--disable-static \
+		--enable-gtk-doc=no \
+		--enable-vala=no \
+		--enable-introspection=no \
 
 	make V=1
 	make DESTDIR=$PKG install
 
-	# remove junk
+	# Remove junk
 	rm $PKG/usr/lib/*.la
 }

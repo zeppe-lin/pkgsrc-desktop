@@ -1,0 +1,79 @@
+diff --git a/rsvg-base.c b/rsvg-base.c
+index 756f149..87ab337 100644
+--- a/rsvg-base.c
++++ b/rsvg-base.c
+@@ -1197,7 +1197,7 @@ rsvg_error_quark (void)
+ static void
+ rsvg_set_error (GError **error, xmlParserCtxtPtr ctxt)
+ {
+-    xmlErrorPtr xerr;
++    const xmlError *xerr;
+ 
+     xerr = xmlCtxtGetLastError (ctxt);
+     if (xerr) {
+diff --git a/rsvg-css.c b/rsvg-css.c
+index 5b359a2..ed5daaf 100644
+--- a/rsvg-css.c
++++ b/rsvg-css.c
+@@ -40,6 +40,7 @@
+ #include <math.h>
+ 
+ #include <libxml/parser.h>
++#include <libxml/SAX2.h>
+ 
+ #include <libcroco/libcroco.h>
+ 
+@@ -838,8 +839,14 @@ rsvg_css_parse_overflow (const char *str, gboolean * inherit)
+     return 0;
+ }
+ 
++#if LIBXML_VERSION >= 21200
++typedef const xmlError *RsvgXmlErrorPtr;
++#else
++typedef xmlErrorPtr RsvgXmlErrorPtr;
++#endif
++
+ static void
+-rsvg_xml_noerror (void *data, xmlErrorPtr error)
++rsvg_xml_noerror (void *data, RsvgXmlErrorPtr error)
+ {
+ }
+ 
+diff --git a/rsvg-mask.h b/rsvg-mask.h
+index bb6e4e2..fae1862 100644
+--- a/rsvg-mask.h
++++ b/rsvg-mask.h
+@@ -31,7 +31,6 @@
+ #include "rsvg-css.h"
+ #include "rsvg-styles.h"
+ #include "rsvg-shapes.h"
+-#include <libxml/SAX.h>
+ 
+ G_BEGIN_DECLS 
+ 
+diff --git a/rsvg-private.h b/rsvg-private.h
+index 82157bc..6cca57e 100644
+--- a/rsvg-private.h
++++ b/rsvg-private.h
+@@ -31,7 +31,8 @@
+ 
+ #include "rsvg.h"
+ 
+-#include <libxml/SAX.h>
++#include <libxml/parser.h>
++#include <libxml/tree.h>
+ #include <libxml/xmlmemory.h>
+ #include <pango/pango.h>
+ #include <glib.h>
+diff --git a/rsvg-styles.h b/rsvg-styles.h
+index a044d3f..82f1254 100644
+--- a/rsvg-styles.h
++++ b/rsvg-styles.h
+@@ -31,7 +31,6 @@
+ #include "rsvg.h"
+ #include "rsvg-paint-server.h"
+ 
+-#include <libxml/SAX.h>
+ #include <pango/pango.h>
+ 
+ G_BEGIN_DECLS 
