@@ -1,0 +1,20 @@
+# Description: Inter font family
+# URL:         https://github.com/rsms/inter
+# Depends on:  fontconfig xorg-mkfontscale
+
+# Notes on dependencies:
+#   fontconfig: required post-install to run fc-cache
+#   xorg-mkfontscale: required post-install to run mkfontscale/mkfontdir
+
+name=ttf-otf-font-inter
+version=4.1
+release=1
+source=https://github.com/rsms/inter/releases/download/v$version/Inter-$version.zip
+
+build() {
+	mkdir -p $PKG/usr/share/fonts/TTF
+	mkdir -p $PKG/usr/share/fonts/OTF
+	cp -a extras/ttf/*.ttf $PKG/usr/share/fonts/TTF
+	cp -a extras/otf/*.otf $PKG/usr/share/fonts/OTF
+	cp -a *.ttf $PKG/usr/share/fonts/TTF
+}
