@@ -3,26 +3,17 @@
 # Depends on:  p5-gtk2 p5-net-dbus
 
 name=jukebox
-version=1.1.16-1-2350b5f
+version=1.1.15.3-718d1a7
 release=1
 source=https://github.com/jukebox-sound/$name/archive/${version##*-}/$name-$version.tar.gz
 
 build() {
-	mkdir -p $PKG/usr/bin
-	mkdir -p $PKG/usr/share
-	mkdir -p $PKG/usr/share/pixmaps
-	cp -Pr $name-${version##*-}* $PKG/usr/share/jukebox
-	ln -s /usr/share/jukebox/jukebox.pl   $PKG/usr/bin/jukebox
-	ln -s /usr/share/jukebox/iceserver.pl $PKG/usr/bin/iceserver
-	ln -s /usr/share/jukebox/pix/jukebox.svg $PKG/usr/share/pixmaps/jukebox.svg
+	cd jukebox-*
 
-	cd $PKG/usr/share/jukebox
-
-	mkdir -p $PKG/usr/share/man/man1 $PKG/usr/share/applications
-	mv jukebox.1       $PKG/usr/share/man/man1/
-	mv jukebox.desktop $PKG/usr/share/applications/
+	make PREFIX=/usr DESTDIR=$PKG install
 
 	# Remove junk
-	rm COPYING COPYRIGHT README.md TODO.md Makefile \
-		pix/LICENSE pix/README layout_doc.mkd .perltidyrc
+	rm -r $PKG/usr/share/doc
+	rm $PKG/usr/share/jukebox/pix/LICENSE \
+	   $PKG/usr/share/jukebox/pix/README
 }

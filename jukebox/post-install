@@ -2,7 +2,12 @@
 
 export PATH="/sbin:/usr/sbin:/bin:/usr/bin"
 
-# Updating Gtk icon cache.
-gtk-update-icon-cache -f -t /usr/share/icons/hicolor/
+if command -v gtk-update-icon-cache >/dev/null 2>&1; then
+	gtk-update-icon-cache -f -t -q /usr/share/icons/hicolor/
+fi
+
+if command -v update-desktop-database >/dev/null 2>&1; then
+	update-desktop-database -q
+fi
 
 # End of file.
