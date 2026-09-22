@@ -2,20 +2,15 @@
 # URL:         https://gitlab.gnome.org/Archive/gnome-themes-extra
 # Depends on:  gtk gtk3 intltool librsvg-compat
 
-# Maintainer notes on dependencies:
-#   gtk: GTK2 engine support (enabled)
+# Notes on dependencies:
+#   --enable-gtk2-engine: GTK-2.0 engine support, needs gtk
 
-name=adwaita-gtk-theme
+name=gtk-theme-adwaita
 version=3.28
 release=1
 source=https://gitlab.gnome.org/Archive/gnome-themes-extra/-/archive/$version/gnome-themes-extra-$version.tar.gz
 
 build() {
-	# If GTK2 is not installed, disable GTK2 engine
-	if ! pkgman isinst gtk >/dev/null 2>&1; then
-		_autoconf_flags="--disable-gtk2-engine"
-	fi
-
 	# Remove HighContrast theme from build
 	sed -i 's/HighContrast//' \
 		gnome-themes-extra-$version/themes/Makefile.am
@@ -27,7 +22,7 @@ build() {
 		--prefix=/usr \
 		--disable-glibtest \
 		--disable-nls \
-		$_autoconf_flags \
+		--enable-gtk2-engine \
 
 	make V=1
 	make DESTDIR=$PKG install
