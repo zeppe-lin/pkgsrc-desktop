@@ -1,0 +1,19 @@
+# Description: Gruvbox light and dark gtk themes using themix
+# URL:         https://github.com/esmaeilytabar/gruvbox-full-gtk
+# Depends on:  gtk-engine-clearlooks gtk-engine-murrine
+
+name=gtk-theme-gruvbox
+version=0.1-8ac9d8e
+release=1
+source=https://github.com/esmaeilytabar/gruvbox-full-gtk/archive/${version#*-}/$name-$version.tar.gz
+
+build() {
+	cd gruvbox-full-gtk-*
+
+	# Fix symlinks
+	ln -sf ../gtk-3.0/assets gruvbox-dark/gtk-3.20/assets
+	ln -sf ../gtk-3.0/assets gruvbox-light/gtk-3.20/assets
+
+	mkdir -p $PKG/usr/share/themes
+	cp -r gruvbox-* $PKG/usr/share/themes/
+}
