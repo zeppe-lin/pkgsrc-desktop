@@ -4,8 +4,9 @@
 
 name=gtk-theme-gruvbox
 version=0.1-8ac9d8e
-release=1
-source=https://github.com/esmaeilytabar/gruvbox-full-gtk/archive/${version#*-}/$name-$version.tar.gz
+release=2
+source="https://github.com/esmaeilytabar/gruvbox-full-gtk/archive/${version#*-}/$name-$version.tar.gz
+	qt5ct-scrollbar-gruvbox.qss"
 
 build() {
 	cd gruvbox-full-gtk-*
@@ -16,4 +17,7 @@ build() {
 
 	mkdir -p $PKG/usr/share/themes
 	cp -r gruvbox-* $PKG/usr/share/themes/
+
+	install -m 0644 -D $SRC/qt5ct-scrollbar-gruvbox.qss \
+		$PKG/usr/share/qt5ct/qss/scrollbar-gruvbox.qss
 }

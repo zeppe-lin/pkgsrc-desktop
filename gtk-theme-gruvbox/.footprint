@@ -1,5 +1,8 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/qt5ct/
+drwxr-xr-x	root/root	usr/share/qt5ct/qss/
+-rw-r--r--	root/root	usr/share/qt5ct/qss/scrollbar-gruvbox.qss
 drwxr-xr-x	root/root	usr/share/themes/
 drwxr-xr-x	root/root	usr/share/themes/gruvbox-dark/
 drwxr-xr-x	root/root	usr/share/themes/gruvbox-dark/gtk-2.0/

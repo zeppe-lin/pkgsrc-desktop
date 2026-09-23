@@ -1,0 +1,61 @@
+/*
+ * Name:        Gruvbox Minimal Scrollbars
+ * File:        /usr/share/qt5ct/qss/scrollbar-gruvbox.qss
+ * Description: Minimalist scrollbar stylesheet tailored for Gruvbox GTK themes.
+ *              Removes legacy arrow buttons and aligns Qt scrollbars with modern
+ *              flat GTK aesthetic.
+ *
+ * Notice:      In Qt Style Sheets, overriding a single subcontrol requires
+ *              explicitly declaring all related subcontrols to maintain layout.
+ */
+
+/* Track Background */
+QScrollBar {
+    background: palette(base);
+}
+
+QScrollBar:horizontal {
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar:vertical {
+    margin: 0px 0px 0px 0px;
+}
+
+/* Scrollbar Handle */
+QScrollBar::handle {
+    background: palette(alternate-base);
+    border: 1px solid transparent;
+    border-radius: 1px;
+}
+
+QScrollBar::handle:hover,
+QScrollBar::add-line:hover,
+QScrollBar::sub-line:hover {
+    background: palette(highlight);
+}
+
+QScrollBar::handle:pressed {
+    background: palette(highlight);
+}
+
+/* Disable Arrow Buttons & Page Tracks */
+QScrollBar::add-line,
+QScrollBar::sub-line {
+    subcontrol-origin: none;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+QScrollBar::add-page,
+QScrollBar::sub-page {
+    background: none;
+}
