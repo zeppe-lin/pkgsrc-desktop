@@ -12,15 +12,16 @@
 name=zzzfm
 version=1.0.7.5-c7e340f
 _commit=c7e340fdeafc64229d5a6113ffbb27dad03efaa7
-release=4
+release=5
 source="$name-$version.tar.gz::https://gitlab.com/skidoo/zzzfm/-/archive/$_commit/zzzfm-$_commit.tar.gz
 	fix-crash-on-umount.patch
-	gksu-ktsuss.patch"
+	gksu-ktsuss.patch
+	c23-compat.patch"
 
 build() {
-	patch -d $name-$_commit -Np1 -i $SRC/fix-crash-on-umount.patch
-	# switch from default gksu to ktsuss
-	patch -d $name-$_commit -Np1 -i $SRC/gksu-ktsuss.patch
+	patch -d $name-$_commit -p1 -i $SRC/fix-crash-on-umount.patch
+	patch -d $name-$_commit -p1 -i $SRC/gksu-ktsuss.patch
+	patch -d $name-$_commit -p1 -i $SRC/c23-compat.patch
 
 	# Optional feature flags
 	if ! pkgman isinst ffmpegthumbnailer >/dev/null 2>&1; then
@@ -38,7 +39,7 @@ build() {
 		--prefix=/usr \
 		--disable-nls \
 		$PKGMK_ZZZFM \
-		#--with-gtk3
+		--with-gtk3 \
 
 	make V=1
 	make DESTDIR=$PKG install
