@@ -1,0 +1,15 @@
+# Description: Comix Cursors
+# URL:         https://gitlab.com/limitland/comixcursors/
+# Depends on:  librsvg-compat xorg-xcursorgen
+
+name=xcursor-theme-comix
+version=0.10.1
+release=1
+source=https://gitlab.com/limitland/comixcursors/-/archive/$version/comixcursors-$version.tar.gz
+
+build() {
+	cd comixcursors-$version
+
+	mkdir -p $PKG/usr/share/icons
+	ICONSDIR=$PKG/usr/share/icons ./install-all -v
+}
