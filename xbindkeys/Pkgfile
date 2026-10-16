@@ -1,5 +1,6 @@
 # Description:  Bind keys to shell scripts in X (no-tk, no-guile)
 # URL:          https://www.nongnu.org/xbindkeys/xbindkeys.html
+# Maintainer:   UNMAINTAINED
 # Depends on:   xorg-libx11
 
 name=xbindkeys
