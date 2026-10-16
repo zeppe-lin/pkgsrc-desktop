@@ -1,0 +1,31 @@
+# Description: Lightweight volume control that sits in your systray
+# URL:         https://github.com/Maato/volumeicon
+# Depends on:  alsa-lib libnotify
+
+# Notes on dependencies:
+#   --enable-notify: dbus notifications, requires libnotify
+
+name=volumeicon
+version=0.5.1-b034dd1
+release=1
+source=https://github.com/Maato/$name/archive/${version#*-}/$name-$version.tar.gz
+
+build() {
+	# Build in separate dir is broken: skips install /usr/share data
+	cd $name-*
+
+	# Disable i18n
+	sed -i '/^SUBDIRS/s/ po$//' Makefile.am
+
+	#./autogen.sh
+	autoreconf -fiv
+
+	./configure \
+		--prefix=/usr \
+		--disable-oss \
+		--enable-notify \
+		#--with-default-mixerapp=
+
+	make V=1
+	make DESTDIR=$PKG install
+}
