@@ -1,0 +1,15 @@
+drwxr-xr-x	root/root	etc/
+-rw-r--r--	root/root	etc/rawmdm.conf
+drwxr-xr-x	root/root	etc/rc.d/
+-rwxr-xr-x	root/root	etc/rc.d/rawmdm
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/lib/
+drwxr-xr-x	root/root	usr/lib/rawmdm/
+-rwxr-xr-x	root/root	usr/lib/rawmdm/rawmdm-greeter
+drwxr-xr-x	root/root	usr/sbin/
+-rwxr-xr-x	root/root	usr/sbin/rawmdm
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/man/
+drwxr-xr-x	root/root	usr/share/man/man8/
+-rw-r--r--	root/root	usr/share/man/man8/rawmdm-greeter.8.gz
+-rw-r--r--	root/root	usr/share/man/man8/rawmdm.8.gz

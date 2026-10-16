@@ -1,0 +1,85 @@
+#!/bin/sh
+#
+# /etc/rc.d/rawmdm: start/stop rawmdm(8) display manager
+#
+
+SSD=/sbin/start-stop-daemon
+PROG=/usr/sbin/rawmdm
+GREETER=/usr/lib/rawmdm/rawmdm-greeter
+CONF=/etc/rawmdm.conf
+RUNTIME=/run/rawmdm
+PID=$RUNTIME/rawmdm.pid
+LOG=/var/log/rawmdm.log
+
+load_config()
+{
+	if [ ! -r "$CONF" ]; then
+		echo "rawmdm: cannot read $CONF" >&2
+		return 1
+	fi
+
+	. "$CONF"
+}
+
+prepare_runtime()
+{
+	install -d -o root -g root -m 0711 "$RUNTIME" "$RUNTIME/auth" &&
+		install -d -o root -g root -m 0700 "$RUNTIME/seat"
+}
+
+preflight()
+{
+	load_config || return 1
+	prepare_runtime || return 1
+
+	"$PROG" --check \
+		--vt "$RAWMDM_VT" \
+		--greeter-user "$RAWMDM_GREETER_USER" \
+		--runtime-dir "$RUNTIME" \
+		--x-server "$RAWMDM_X_SERVER" \
+		--greeter "$GREETER" \
+		--session "$RAWMDM_SESSION"
+}
+
+start_service()
+{
+	preflight || return 1
+
+	(
+		umask 027
+		$SSD --start --background --make-pidfile \
+			--pidfile "$PID" --exec "$PROG" --output "$LOG" -- \
+			--vt "$RAWMDM_VT" \
+			--greeter-user "$RAWMDM_GREETER_USER" \
+			--runtime-dir "$RUNTIME" \
+			--x-server "$RAWMDM_X_SERVER" \
+			--greeter "$GREETER" \
+			--session "$RAWMDM_SESSION"
+	)
+}
+
+case ${1:-} in
+start)
+	start_service
+	;;
+stop)
+	$SSD --stop --remove-pidfile --pidfile "$PID" --exec "$PROG" \
+		--retry TERM/10/KILL/5
+	;;
+restart)
+	$0 stop || exit $?
+	$0 start
+	;;
+status)
+	$SSD --status --verbose --pidfile "$PID" --exec $PROG
+	;;
+configtest)
+	preflight
+	;;
+*)
+	echo "Usage: $0 {start|stop|restart|status|configtest}" >&2
+	exit 2
+	;;
+esac
+
+# End of file.
