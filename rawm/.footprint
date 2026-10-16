@@ -1,0 +1,12 @@
+drwxr-xr-x	root/root	etc/
+drwxr-xr-x	root/root	etc/rawm/
+-rw-r--r--	root/root	etc/rawm/rawm.conf
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/rawm
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/man/
+drwxr-xr-x	root/root	usr/share/man/man1/
+-rw-r--r--	root/root	usr/share/man/man1/rawm.1.gz
+drwxr-xr-x	root/root	usr/share/man/man5/
+-rw-r--r--	root/root	usr/share/man/man5/rawm.conf.5.gz

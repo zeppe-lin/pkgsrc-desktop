@@ -1,0 +1,22 @@
+# Description: Compact X11 window manager
+# URL:         https://github.com/rawmkit/rawm
+# Depends on:  libconfig xorg-libxinerama xorg-libxrender
+
+name=rawm
+version=7.0.0-d52f924
+release=1
+source=https://github.com/rawmkit/rawm/archive/${version#*-}/rawm-$version.tar.gz
+
+build() {
+	meson setup build rawm-* \
+		--prefix=/usr \
+		--buildtype=plain \
+		--wrap-mode=nodownload \
+		-D b_pie=true \
+		-D b_lto=true \
+		-D b_ndebug=true \
+		-D xinerama=enabled \
+
+	ninja -C build -j ${JOBS:-1} -v
+	DESTDIR=$PKG ninja -C build install
+}
