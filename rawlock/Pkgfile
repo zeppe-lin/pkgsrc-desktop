@@ -1,0 +1,22 @@
+# Description: Privileged X11 screen-locking component of the rawmkit
+# URL:         https://github.com/rawmkit/rawlock
+# Depends on:  libxcrypt xorg-libxrandr
+
+name=rawlock
+version=2.0.0-eee63d2
+release=1
+source=https://github.com/rawmkit/$name/archive/${version#*-}/$name-$version.tar.gz
+
+build() {
+	meson setup build $name-* \
+		--prefix=/usr \
+		--buildtype=plain \
+		--wrap-mode=nodownload \
+		-D b_pie=true \
+		-D b_lto=true \
+		-D b_ndebug=true \
+		-D drop_user=nobody \
+
+	ninja -C build -j ${JOBS:-1} -v
+	DESTDIR=$PKG ninja -C build install
+}
