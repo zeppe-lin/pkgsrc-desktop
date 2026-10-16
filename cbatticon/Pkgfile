@@ -1,5 +1,6 @@
 # Description: Lightweight battery icon for the system tray
 # URL:         https://github.com/valr/cbatticon
+# Maintainer:  UNMAINTAINED
 # Depends on:  libnotify gettext-tiny gtk3
 
 name=cbatticon
