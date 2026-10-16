@@ -1,5 +1,6 @@
 # Description: Lightweight GTK+ clipboard manager
 # URL:         https://github.com/CristianHenzel/ClipIt
+# Maintainer:  UNMAINTAINED
 # Depends on:  intltool gtk3 xdotool
 
 # Notes on dependencies:
