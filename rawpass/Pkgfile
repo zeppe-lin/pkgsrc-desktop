@@ -1,0 +1,28 @@
+# Description: Small password-store frontend for the rawmkit
+# URL:         https://github.com/rawmkit/rawpass
+# Depends on:  openssl xorg-libx11 gnupg rawmenu
+
+# Notes on dependencies:
+#   gnupg: required at runtime
+#   rawmenu: required for interactive selection
+
+name=rawpass
+version=1.1.0-e7fcdf5
+release=1
+source=https://github.com/rawmkit/$name/archive/${version#*-}/$name-$version.tar.gz
+
+build() {
+	meson setup build $name-* \
+		--prefix=/usr \
+		--buildtype=plain \
+		--wrap-mode=nodownload \
+		-D b_pie=true \
+		-D b_lto=true \
+		-D b_ndebug=true \
+
+	ninja -C build -j ${JOBS:-1} -v
+	DESTDIR=$PKG ninja -C build install
+
+	# Remove junk
+	rm -r $PKG/usr/share/doc
+}
