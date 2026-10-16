@@ -1,0 +1,11 @@
+# Description: RawmKit Desktop Suit (meta package)
+# URL:         https://github.com/rawmkit
+# Depends on:  rawclip rawctl rawkeys rawlock rawm rawmdm rawmenu rawosd rawpanel rawpass rawsession rawwin
+
+name=rawmkit
+version=0.1
+release=1
+
+build() {
+	mkdir -p $PKG/etc
+}
