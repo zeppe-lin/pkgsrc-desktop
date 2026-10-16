@@ -1,0 +1,14 @@
+drwxr-xr-x	root/root	etc/
+drwxr-xr-x	root/root	etc/rawclip/
+-rw-r--r--	root/root	etc/rawclip/rawclip.conf
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/rawclip
+-rwxr-xr-x	root/root	usr/bin/rawclipd
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/man/
+drwxr-xr-x	root/root	usr/share/man/1/
+-rw-r--r--	root/root	usr/share/man/1/rawclip.1
+-rw-r--r--	root/root	usr/share/man/1/rawclipd.1
+drwxr-xr-x	root/root	usr/share/man/conf/
+-rw-r--r--	root/root	usr/share/man/conf/rawclip.conf.5
