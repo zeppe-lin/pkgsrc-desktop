@@ -1,5 +1,6 @@
 # Description: STAnd aLONE TRAY (notification area) implementation for X11
 # URL:         https://github.com/d3adb5/stalonetray/
+# Maintainer:  UNMAINTAINED
 # Depends on:  xorg-libxinerama xorg-libxpm xorg-libxrandr
 
 name=stalonetray
