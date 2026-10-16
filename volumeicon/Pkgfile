@@ -1,5 +1,6 @@
 # Description: Lightweight volume control that sits in your systray
 # URL:         https://github.com/Maato/volumeicon
+# Maintainer:  UNMAINTAINED
 # Depends on:  alsa-lib libnotify
 
 # Notes on dependencies:
