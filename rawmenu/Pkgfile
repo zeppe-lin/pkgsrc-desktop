@@ -1,0 +1,36 @@
+# Description: Small dynamic menu for X11
+# URL:         https://github.com/rawmkit/rawmenu
+# Depends on:  libassuan libconfig xorg-libxft xorg-libxinerama
+
+# Notes on dependencies:
+#   -D xinerama=enabled:
+#      Enable Xinerama monitor selection support, requires xorg-libxinerama.
+#   -D pinentry=enabled:
+#      Build the pinentry-rawmenu Assuan frontend, requires libassuan and
+#      libgpg-error
+#   -D apps=enabled:
+#      Build the GIO desktop application launcher, requires glib.
+
+name=rawmenu
+version=0.5.0-b74ecc4
+release=1
+source=https://github.com/rawmkit/$name/archive/${version#*-}/$name-$version.tar.gz
+
+build() {
+	meson setup build $name-* \
+		--prefix=/usr \
+		--buildtype=plain \
+		--wrap-mode=nodownload \
+		-D b_pie=true \
+		-D b_lto=true \
+		-D b_ndebug=true \
+		-D xinerama=enabled \
+		-D pinentry=enabled \
+		-D apps=enabled \
+
+	ninja -C build -j ${JOBS:-1} -v
+	DESTDIR=$PKG ninja -C build install
+
+	# Remove junk
+	rm -r $PKG/usr/share/licenses $PKG/usr/share/doc
+}
