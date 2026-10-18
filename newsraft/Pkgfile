@@ -1,0 +1,17 @@
+# Description: Feed reader with ncurses user interface
+# URL:         https://codeberg.org/newsraft/newsraft
+# Depends on:  curl expat gumbo-parser sqlite3
+
+name=newsraft
+_commit=4bea6eed0566c070dd44981c66d0ce8f0fbc4915
+version=0.38-4bea6ee
+release=1
+source=$name-$version.tar.gz::https://codeberg.org/$name/$name/archive/$_commit.tar.gz
+
+build() {
+	cd $name
+
+	make CFLAGS="$CFLAGS" PREFIX=/usr
+	make PREFIX=/usr DESTDIR=$PKG \
+		install-newsraft install-man
+}
