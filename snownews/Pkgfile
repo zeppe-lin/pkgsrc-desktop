@@ -1,5 +1,6 @@
 # Description: RSS feed reader for the command-line
 # URL:         https://sourceforge.net/projects/snownews
+# Maintainer:  UNMAINTAINED
 # Depends on:  curl libxml2 ncurses
 
 name=snownews
