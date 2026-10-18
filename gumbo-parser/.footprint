@@ -1,0 +1,11 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/include/
+-rw-r--r--	root/root	usr/include/gumbo.h
+-rw-r--r--	root/root	usr/include/tag_enum.h
+drwxr-xr-x	root/root	usr/lib/
+-rw-r--r--	root/root	usr/lib/libgumbo.a
+lrwxrwxrwx	root/root	usr/lib/libgumbo.so -> libgumbo.so.4
+lrwxrwxrwx	root/root	usr/lib/libgumbo.so.4 -> libgumbo.so.4.0.1
+-rwxr-xr-x	root/root	usr/lib/libgumbo.so.4.0.1
+drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rw-r--r--	root/root	usr/lib/pkgconfig/gumbo.pc
